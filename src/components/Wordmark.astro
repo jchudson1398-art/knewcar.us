@@ -1,11 +1,17 @@
 ---
+// The KnewCar wordmark. The K is the logo's own letter: white with the green check (cut from the logo file,
+// knewcar-mobile design/references/logos/knewcar-logo.png), followed by "new" in white and "Car" in mint.
 interface Props { size?: number }
 const { size = 26 } = Astro.props;
 ---
 
-<span class="wordmark" style={`font-size:${size}px`}>Knew<span>Car</span></span>
+<span class="wordmark" style={`font-size:${size}px`} role="img" aria-label="KnewCar">
+  <img src="/img/logo-k-letter.png" alt="" width="163" height="160" /><span aria-hidden="true">new<span class="car">Car</span></span>
+</span>
 
 <style>
-  .wordmark { font-weight: 800; letter-spacing: -0.03em; color: var(--text); line-height: 1; }
-  .wordmark span { color: var(--mint); }
+  .wordmark { display: inline-flex; align-items: baseline; font-weight: 800; letter-spacing: -0.03em; color: var(--text); line-height: 1; }
+  /* Sized to the capital height of the text and sitting on the same baseline. */
+  .wordmark img { height: 0.8em; width: auto; margin-right: 0; align-self: baseline; transform: translateY(0.035em); }
+  .car { color: var(--mint); }
 </style>
