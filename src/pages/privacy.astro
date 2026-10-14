@@ -1,0 +1,101 @@
+---
+import Base from "../layouts/Base.astro";
+import { CONTACT_EMAIL } from "../site";
+const updated = "October 14, 2026";
+---
+
+<Base title="Privacy Policy" description="What KnewCar collects, why, and the choices you have.">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Legal</p>
+      <h1>Privacy Policy</h1>
+      <p class="lead">Last updated {updated}</p>
+      <p class="note">Draft for review. This policy must be reviewed by a qualified attorney before the site goes live.</p>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap prose">
+      <p>
+        KnewCar ("KnewCar", "we", "us") helps people understand new-car manufacturer programs and estimated payments
+        before they visit a dealership. This policy explains what information we collect through the KnewCar app and
+        website, how we use it, and the choices you have.
+      </p>
+
+      <h2>The short version</h2>
+      <ul>
+        <li>We collect what we need to show you cars and payment estimates that fit your budget.</li>
+        <li>We don't run a credit check. Your exact credit score stays on your phone and is never sent to our servers.</li>
+        <li>We don't sell your personal information or share it with dealers or lenders without your permission.</li>
+        <li>You can delete your account and saved data at any time in the app.</li>
+      </ul>
+
+      <h2>Information we collect</h2>
+      <h3>Information you give us</h3>
+      <ul>
+        <li><strong>Account details:</strong> your first name, email address, and password (stored by our authentication provider in protected form).</li>
+        <li><strong>Shopping preferences:</strong> payment range, down payment, trade-in details and any amount still owed, finance or lease preference, yearly mileage, and ZIP code.</li>
+        <li><strong>Saved vehicles:</strong> cars you save and the payment setup shown when you saved them.</li>
+        <li><strong>Waitlist sign-ups:</strong> your email address and, if you choose, your ZIP code.</li>
+        <li><strong>Messages:</strong> anything you send when you contact us.</li>
+      </ul>
+      <h3>Information that stays on your device</h3>
+      <ul>
+        <li><strong>Credit score estimate:</strong> if you set an estimated credit score, it is stored only in your phone's secure storage and used on your phone to estimate payments.</li>
+        <li><strong>Pre-approval rate:</strong> if you enter a rate from a lender, it is kept only while the app is open and is not saved or sent to us.</li>
+      </ul>
+      <h3>Information collected automatically</h3>
+      <p>
+        Like most online services, our servers receive basic technical information when the app or website connects to
+        them, such as IP address, device and browser type, and request logs. We use this to run, secure, and fix the
+        service.
+      </p>
+
+      <h2>How we use information</h2>
+      <ul>
+        <li>To provide the service: matching vehicles and manufacturer programs to your preferences and ZIP code, and calculating estimates.</li>
+        <li>To keep your account, settings, and saved vehicles available when you return.</li>
+        <li>To send account emails, such as confirming your email or resetting your password, and beta invitations if you joined the waitlist.</li>
+        <li>To keep KnewCar secure and prevent abuse.</li>
+        <li>To understand and improve the product.</li>
+      </ul>
+
+      <h2>How we share information</h2>
+      <p>We share information only with service providers that help us run KnewCar, under agreements that limit their use of it, including:</p>
+      <ul>
+        <li>Hosting, database, and sign-in services.</li>
+        <li>Email delivery services.</li>
+        <li>Payment processing, when paid plans are available (we don't store full card numbers).</li>
+      </ul>
+      <p>
+        We may also disclose information if required by law, to protect the rights and safety of our users or others, or
+        as part of a merger, acquisition, or sale of assets, in which case this policy will continue to apply. We do not
+        sell your personal information, and we don't share it with dealers or lenders unless you ask us to.
+      </p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li><strong>Update your preferences</strong> at any time in the app.</li>
+        <li><strong>Delete your account</strong> from the Profile screen. This removes your account, preferences, and saved vehicles.</li>
+        <li><strong>Unsubscribe</strong> from waitlist and product emails using the link in any email.</li>
+        <li><strong>Ask us</strong> to access, correct, or delete your information by emailing <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Depending on where you live, you may have additional rights under state privacy laws.</li>
+      </ul>
+
+      <h2>Data retention and security</h2>
+      <p>
+        We keep your information while your account is active and delete it when you delete your account, except where
+        we need to keep limited records for legal, security, or accounting reasons. We use industry-standard safeguards,
+        including encryption in transit and access controls, but no system is perfectly secure.
+      </p>
+
+      <h2>Children</h2>
+      <p>KnewCar is intended for adults and is not directed to children under 18. We don't knowingly collect information from children.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If we make material changes, we'll update the date above and let you know in the app or by email.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about privacy? Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    </div>
+  </section>
+</Base>

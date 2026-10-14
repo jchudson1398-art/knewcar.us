@@ -1,0 +1,78 @@
+---
+import { SUPABASE_PUBLISHABLE_KEY, WAITLIST_ENDPOINT } from "../site";
+interface Props { id?: string; compact?: boolean }
+const { id = "waitlist-form", compact = false } = Astro.props;
+---
+
+<form class:list={["waitlist", { compact }]} id={id} data-endpoint={WAITLIST_ENDPOINT} data-key={SUPABASE_PUBLISHABLE_KEY} novalidate>
+  <div class="fields">
+    <label class="sr" for={`${id}-email`}>Email address</label>
+    <input id={`${id}-email`} name="email" type="email" inputmode="email" autocomplete="email" placeholder="Your email" required />
+    <label class="sr" for={`${id}-zip`}>ZIP code (optional)</label>
+    <input id={`${id}-zip`} name="zip" class="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="ZIP (optional)" />
+    <button class="btn btn-primary" type="submit">Join the beta</button>
+    <!-- Left empty by people; bots that fill every field are ignored. -->
+    <input class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+  </div>
+  <p class="msg" role="status" aria-live="polite"></p>
+  <p class="fine">We'll email you when your beta spot opens. No spam, and you can unsubscribe any time.</p>
+</form>
+
+<script>
+  for (const form of document.querySelectorAll<HTMLFormElement>("form.waitlist")) {
+    const msg = form.querySelector<HTMLParagraphElement>(".msg")!;
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const email = String(data.get("email") ?? "").trim();
+      const zip = String(data.get("zip") ?? "").trim();
+      msg.className = "msg";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { msg.textContent = "Enter a valid email address."; msg.classList.add("bad"); return; }
+      if (zip && !/^\d{5}$/.test(zip)) { msg.textContent = "ZIP codes have 5 digits."; msg.classList.add("bad"); return; }
+      const endpoint = form.dataset.endpoint;
+      if (!endpoint) { msg.textContent = "The waitlist isn't connected yet. Please check back soon."; msg.classList.add("bad"); return; }
+      if (String(data.get("company") ?? "")) { form.reset(); msg.textContent = "You're on the list. Thanks for joining!"; msg.classList.add("good"); return; }
+      const button = form.querySelector("button")!;
+      button.disabled = true;
+      try {
+        const res = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", apikey: form.dataset.key ?? "" },
+          body: JSON.stringify({ p_email: email, p_zip: zip || null, p_source: "website" }),
+        });
+        if (!res.ok) throw new Error(String(res.status));
+        form.reset();
+        msg.textContent = "You're on the list. Thanks for joining!";
+        msg.classList.add("good");
+      } catch {
+        msg.textContent = "That didn't go through. Check your connection and try again.";
+        msg.classList.add("bad");
+      } finally {
+        button.disabled = false;
+      }
+    });
+  }
+</script>
+
+<style>
+  .waitlist { width: 100%; max-width: 620px; }
+  .fields { display: flex; gap: 10px; padding: 8px; border-radius: 18px; background: rgba(255, 255, 255, 0.06); border: 1px solid var(--edge); }
+  input {
+    flex: 1; min-width: 0; height: 54px; border-radius: 12px; border: 0; padding: 0 18px;
+    background: #fff; color: #0b1a14; font: 500 17px var(--font);
+  }
+  input.zip { flex: 0 0 150px; }
+  input::placeholder { color: #7d8a85; }
+  .msg { min-height: 1.4em; margin: 10px 4px 0; font-size: 15px; font-weight: 600; }
+  .msg.good { color: var(--mint); }
+  .msg.bad { color: #ffb4a8; }
+  .fine { margin: 2px 4px 0; color: var(--faint); font-size: 13px; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  @media (max-width: 640px) {
+    .fields { flex-wrap: wrap; }
+    input { flex: 1 1 100%; }
+    input.zip { flex: 1 1 100%; }
+    .fields .btn { width: 100%; }
+  }
+</style>

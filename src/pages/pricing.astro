@@ -1,0 +1,79 @@
+---
+import Base from "../layouts/Base.astro";
+import Icon from "../components/Icon.astro";
+import { PRICES } from "../site";
+
+const plans = [
+  { name: "Monthly", price: PRICES.monthly, per: "/month", billing: `${PRICES.monthly} per month. Renews monthly until canceled.`, note: "Flexible access while you shop." },
+  { name: "3-Month Shopper Pass", price: PRICES.pass, per: " one time", billing: `${PRICES.pass} once for 3 months of access. No recurring fees, ever.`, note: "Pay once, shop for 3 months, and it simply ends. Nothing to cancel.", featured: true },
+  { name: "Yearly", price: PRICES.yearly, per: "/year", billing: `${PRICES.yearly} per year. Renews yearly until canceled.`, note: "For longer searches or keeping an eye on offers." },
+];
+const included = [
+  "Budget-first search across included brands",
+  "Estimates based on your credit range",
+  "Current manufacturer cash, lease, and finance programs",
+  "Browse and Swipe",
+  "Saved cars with their exact payment setup",
+  "Full breakdown of every estimate",
+];
+---
+
+<Base title="Pricing" description={`Start with a ${PRICES.trialDays}-day free trial of KnewCar, then choose monthly, a 3-month Shopper Pass, or yearly access.`}>
+  <section class="page-head">
+    <div class="wrap center">
+      <p class="eyebrow">Pricing</p>
+      <h1>Simple, upfront pricing.</h1>
+      <p class="lead">Start with a {PRICES.trialDays}-day free trial of the full product. Then choose the option that fits how long you're shopping.</p>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap">
+      <div class="grid grid-3 plans">
+        {plans.map((p) => (
+          <article class:list={["card", "plan", { featured: p.featured }]}>
+            {p.featured && <span class="badge">No recurring fees</span>}
+            <h3>{p.name}</h3>
+            <p class="price"><span>{p.price}</span>{p.per}</p>
+            <p class="billing">{p.billing}</p>
+            <p class="plan-note">{p.note}</p>
+          </article>
+        ))}
+      </div>
+      <div class="card pass-callout">
+        <h3>Why the Shopper Pass?</h3>
+        <p>
+          Most people shop for a car over a few weeks to a few months. The 3-Month Shopper Pass covers that whole window
+          for one payment of {PRICES.pass}. It never renews and never charges you again, so there's no subscription to
+          remember to cancel.
+        </p>
+      </div>
+      <div class="card included">
+        <h3>Every option includes</h3>
+        <ul>
+          {included.map((i) => <li><Icon name="check" size={20} /> {i}</li>)}
+        </ul>
+      </div>
+      <p class="center fine">Prices in USD. Sales tax may apply.</p>
+      <p class="center"><a class="btn btn-primary" href="/#waitlist">Join the beta</a></p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .plans { align-items: stretch; }
+  .plan { position: relative; display: flex; flex-direction: column; }
+  .plan.featured { border-color: var(--mint); box-shadow: 0 0 40px rgba(92, 235, 196, 0.16); }
+  .badge { position: absolute; top: -13px; left: 28px; background: var(--mint); color: var(--mint-ink); font-size: 12px; font-weight: 800; padding: 5px 12px; border-radius: 999px; letter-spacing: .02em; }
+  .price { color: var(--sub) !important; margin-top: 18px !important; font-size: 18px; }
+  .price span { color: var(--text); font-size: 46px; font-weight: 800; letter-spacing: -0.02em; margin-right: 4px; }
+  .billing { color: var(--text) !important; font-weight: 600; font-size: 15px; }
+  .plan-note { font-size: 15px; }
+  .pass-callout { margin-top: 24px; border-color: rgba(92, 235, 196, 0.45); background: linear-gradient(135deg, rgba(92, 235, 196, 0.12), rgba(14, 40, 33, 0.72)); }
+  .included { margin-top: 24px; }
+  .included ul { list-style: none; padding: 0; margin: 18px 0 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 28px; color: var(--sub); }
+  .included li { display: flex; gap: 10px; align-items: center; }
+  .included :global(svg) { color: var(--mint); flex: none; }
+  .fine { color: var(--faint); font-size: 14px; margin: 28px 0; }
+  @media (max-width: 720px) { .included ul { grid-template-columns: 1fr; } }
+</style>

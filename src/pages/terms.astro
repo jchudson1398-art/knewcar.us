@@ -1,0 +1,102 @@
+---
+import Base from "../layouts/Base.astro";
+import { CONTACT_EMAIL, PRICES } from "../site";
+const updated = "October 14, 2026";
+---
+
+<Base title="Terms of Service" description="The terms for using the KnewCar app and website.">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Legal</p>
+      <h1>Terms of Service</h1>
+      <p class="lead">Last updated {updated}</p>
+      <p class="note">Draft for review. These terms must be reviewed by a qualified attorney before the site goes live.</p>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap prose">
+      <p>
+        These terms govern your use of the KnewCar app and website (the "Service"). By creating an account or using the
+        Service, you agree to these terms.
+      </p>
+
+      <h2>What KnewCar is, and isn't</h2>
+      <p>
+        KnewCar is an informational tool that helps you understand new-car manufacturer programs and estimate monthly
+        payments. <strong>KnewCar is not a dealer, broker, lender, or financial advisor.</strong> We don't sell vehicles,
+        arrange or offer financing, or guarantee any price, rate, payment, or eligibility.
+      </p>
+
+      <h2>Estimates are estimates</h2>
+      <p>
+        Payments and offers shown in KnewCar are estimates based on the information you enter and the manufacturer
+        programs available to us at the time. Manufacturer programs change, may have eligibility rules, and may end
+        without notice. The final price, rate, term, taxes, fees, and eligibility are determined by the dealer and
+        lender. Always confirm details with them before you sign anything.
+      </p>
+      <p>
+        KnewCar is independent and is not affiliated with, sponsored by, or endorsed by any vehicle manufacturer unless
+        we clearly say so. Manufacturer names and trademarks belong to their owners and are used only to identify their
+        vehicles and programs.
+      </p>
+
+      <h2>Your account</h2>
+      <ul>
+        <li>You must be at least 18 years old to use KnewCar.</li>
+        <li>Give accurate information and keep your password secure. You're responsible for activity on your account.</li>
+        <li>You can delete your account at any time from the Profile screen in the app.</li>
+      </ul>
+
+      <h2>Free trial and paid plans</h2>
+      <p>
+        When paid plans are available, new accounts may start with a {PRICES.trialDays}-day free trial. After the trial,
+        continued access requires a paid plan. Each plan's price, length, and whether it renews automatically will be
+        shown clearly before you buy. Plans that renew continue until you cancel; you can cancel at any time, and access
+        continues until the end of the period you paid for. Purchases made through an app store are also subject to that
+        store's terms and refund policies.
+      </p>
+
+      <h2>Acceptable use</h2>
+      <p>Don't misuse the Service. For example, don't:</p>
+      <ul>
+        <li>Copy, scrape, resell, or redistribute KnewCar data or content.</li>
+        <li>Interfere with, overload, or try to gain unauthorized access to the Service.</li>
+        <li>Use the Service for anything unlawful.</li>
+      </ul>
+
+      <h2>Our content</h2>
+      <p>
+        The Service, including its design, software, and the way we organize and present information, belongs to
+        KnewCar and is protected by law. We give you a personal, non-transferable right to use it under these terms.
+      </p>
+
+      <h2>Disclaimers</h2>
+      <p>
+        The Service is provided "as is" and "as available." To the fullest extent allowed by law, we disclaim all
+        warranties, express or implied, including accuracy, completeness, fitness for a particular purpose, and
+        non-infringement. We work to keep information current, but we can't guarantee it is error-free.
+      </p>
+
+      <h2>Limitation of liability</h2>
+      <p>
+        To the fullest extent allowed by law, KnewCar won't be liable for indirect, incidental, special, consequential, or
+        punitive damages, or for any loss arising from a vehicle purchase, lease, or financing decision. Our total
+        liability for any claim related to the Service is limited to the amount you paid us in the 12 months before the
+        claim.
+      </p>
+
+      <h2>Ending your use</h2>
+      <p>You can stop using KnewCar at any time. We may suspend or end access if these terms are violated or to protect the Service or other users.</p>
+
+      <h2>Changes to these terms</h2>
+      <p>If we make material changes, we'll update the date above and let you know in the app or by email. Continuing to use KnewCar after that means you accept the updated terms.</p>
+
+      <h2>Governing law</h2>
+      <p>These terms are governed by the laws of the State of Texas and applicable U.S. federal law, without regard to conflict-of-law rules.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about these terms? Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    </div>
+  </section>
+</Base>

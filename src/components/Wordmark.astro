@@ -1,0 +1,11 @@
+---
+interface Props { size?: number }
+const { size = 26 } = Astro.props;
+---
+
+<span class="wordmark" style={`font-size:${size}px`}>Knew<span>Car</span></span>
+
+<style>
+  .wordmark { font-weight: 800; letter-spacing: -0.03em; color: var(--text); line-height: 1; }
+  .wordmark span { color: var(--mint); }
+</style>

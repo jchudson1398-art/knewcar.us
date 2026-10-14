@@ -1,0 +1,47 @@
+---
+import { CONTACT_EMAIL } from "../site";
+import Wordmark from "./Wordmark.astro";
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="wrap cols">
+    <div class="brand">
+      <Wordmark size={24} />
+      <p>The independent new-car incentive and payment reference to check before you go to the dealership.</p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <a href="/how-it-works">How it works</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/how-it-works#faq">FAQ</a>
+      <a href="/#waitlist">Join the beta</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href={`mailto:${CONTACT_EMAIL}`}>Contact</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </div>
+  </div>
+  <div class="wrap legal">
+    <p>
+      Payment figures in KnewCar are estimates based on the information you enter and current manufacturer programs.
+      Final price, rate, and eligibility are set by the dealer and lender. KnewCar is not a dealer or a lender and is
+      not affiliated with or endorsed by any vehicle manufacturer.
+    </p>
+    <p>© {year} KnewCar. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  footer { border-top: 1px solid var(--edge); background: #031009; padding: 64px 0 40px; margin-top: 40px; }
+  .cols { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+  .brand p { color: var(--sub); max-width: 360px; margin: 16px 0 0; font-size: 15px; }
+  h4 { margin: 0 0 14px; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); }
+  .cols a { display: block; color: var(--sub); margin: 0 0 10px; font-size: 15px; }
+  .cols a:hover { color: var(--text); }
+  .legal { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(160, 230, 205, 0.08); }
+  .legal p { color: var(--faint); font-size: 13px; margin: 0 0 8px; max-width: 900px; }
+  @media (max-width: 720px) { .cols { grid-template-columns: 1fr 1fr; } .brand { grid-column: 1 / -1; } }
+</style>

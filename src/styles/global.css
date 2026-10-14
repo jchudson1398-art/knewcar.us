@@ -1,0 +1,88 @@
+/* KnewCar website: the app's Hybrid Mint look (night emerald, mint accent, translucent cards). */
+:root {
+  --ground: #04140f;
+  --ground-2: #071d17;
+  --card: rgba(14, 40, 33, 0.72);
+  --card-solid: #0c2620;
+  --edge: rgba(160, 230, 205, 0.16);
+  --mint: #5cebc4;
+  --mint-ink: #062a20;
+  --mint-soft: rgba(92, 235, 196, 0.12);
+  --text: #ffffff;
+  --sub: rgba(232, 243, 238, 0.76);
+  --faint: rgba(232, 243, 238, 0.5);
+  --radius: 18px;
+  --max: 1160px;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--mint); text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; border-radius: 6px; }
+
+.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.section { padding: 96px 0; }
+.section.tight { padding: 64px 0; }
+.eyebrow { color: var(--mint); font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 14px; }
+h1, h2, h3 { margin: 0; line-height: 1.12; letter-spacing: -0.02em; }
+h1 { font-size: clamp(40px, 6vw, 66px); font-weight: 800; }
+h2 { font-size: clamp(30px, 4vw, 44px); font-weight: 800; }
+h3 { font-size: 21px; font-weight: 700; letter-spacing: -0.01em; }
+.lead { color: var(--sub); font-size: clamp(18px, 2vw, 21px); margin: 20px 0 0; max-width: 620px; }
+.mint { color: var(--mint); }
+.center { text-align: center; }
+.center .lead { margin-left: auto; margin-right: auto; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 54px; padding: 0 26px; border-radius: 14px; border: 0;
+  font: 700 17px/1 var(--font); cursor: pointer; text-decoration: none !important; white-space: nowrap;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn-primary { background: var(--mint); color: var(--mint-ink); box-shadow: 0 0 24px rgba(92, 235, 196, 0.28); }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 0 32px rgba(92, 235, 196, 0.42); }
+.btn-ghost { background: rgba(5, 20, 15, 0.55); color: var(--text); border: 1.5px solid rgba(92, 235, 196, 0.5); }
+.btn-ghost:hover { background: rgba(92, 235, 196, 0.1); }
+.btn-sm { height: 42px; padding: 0 18px; font-size: 15px; border-radius: 12px; }
+
+/* Cards */
+.card { background: var(--card); border: 1px solid var(--edge); border-radius: var(--radius); padding: 28px; backdrop-filter: blur(8px); }
+.grid { display: grid; gap: 20px; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 900px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } .section { padding: 72px 0; } }
+
+.icon-badge {
+  width: 48px; height: 48px; border-radius: 14px; background: var(--mint-soft); border: 1px solid rgba(92, 235, 196, 0.3);
+  display: grid; place-items: center; color: var(--mint); margin-bottom: 18px;
+}
+.card p { color: var(--sub); margin: 10px 0 0; }
+
+/* Prose pages (Privacy, Terms) */
+.prose { max-width: 760px; }
+.prose h2 { font-size: 26px; margin: 44px 0 12px; }
+.prose h3 { font-size: 19px; margin: 28px 0 8px; }
+.prose p, .prose li { color: var(--sub); }
+.prose ul { padding-left: 22px; }
+.prose strong { color: var(--text); }
+.note {
+  border: 1px solid rgba(255, 196, 92, 0.45); background: rgba(255, 196, 92, 0.08); color: #ffe2a8;
+  border-radius: 14px; padding: 14px 18px; font-size: 15px; margin: 24px 0 0;
+}
+
+/* Page header band for inner pages */
+.page-head { padding: 150px 0 40px; background: radial-gradient(1200px 400px at 20% 0%, rgba(92, 235, 196, 0.10), transparent 70%); }

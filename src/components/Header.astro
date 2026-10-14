@@ -1,0 +1,31 @@
+---
+import { NAV } from "../site";
+import Wordmark from "./Wordmark.astro";
+---
+
+<header class="top">
+  <div class="wrap bar">
+    <a href="/" class="home" aria-label="KnewCar home"><Wordmark /></a>
+    <nav aria-label="Main">
+      {NAV.map((n) => <a href={n.href}>{n.label}</a>)}
+    </nav>
+    <a href="/#waitlist" class="btn btn-primary btn-sm">Join the beta</a>
+  </div>
+</header>
+
+<style>
+  .top {
+    position: fixed; inset: 0 0 auto 0; z-index: 50;
+    background: rgba(4, 20, 15, 0.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(160, 230, 205, 0.1);
+  }
+  .bar { display: flex; align-items: center; gap: 32px; height: 72px; }
+  .home { display: flex; text-decoration: none; }
+  nav { display: flex; gap: 28px; margin-left: auto; }
+  nav a { color: var(--sub); font-weight: 500; font-size: 15px; }
+  nav a:hover { color: var(--text); text-decoration: none; }
+  @media (max-width: 720px) {
+    nav { display: none; }
+    .bar { justify-content: space-between; gap: 12px; height: 64px; }
+  }
+</style>

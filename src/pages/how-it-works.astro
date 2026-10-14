@@ -1,0 +1,138 @@
+---
+import Base from "../layouts/Base.astro";
+import Icon from "../components/Icon.astro";
+import { PRICES } from "../site";
+
+const faqs = [
+  {
+    q: "Why shop by payment instead of by car?",
+    a: "Because the monthly payment is what you actually live with. Starting with your budget means every car you look at already fits it, instead of falling for a car and then trying to make the numbers work.",
+  },
+  {
+    q: "Why does my credit range matter so much?",
+    a: "Your credit range is one of the biggest factors in the interest rate a lender offers, and the rate can change the payment on the same car by $100 a month or more. KnewCar uses the range you choose so your estimates are realistic for you, not a best-case rate.",
+  },
+  {
+    q: "Is KnewCar a dealer or a lender?",
+    a: "No. KnewCar doesn't sell cars or make loans. We help you understand current manufacturer programs and estimated payments before you talk to a dealer.",
+  },
+  {
+    q: "Does using KnewCar affect my credit?",
+    a: "No. There's no credit check. You choose an estimated credit range on a slider, or tell us you're not sure. Your exact score stays on your phone and is never sent to our servers.",
+  },
+  {
+    q: "Where do the offers come from?",
+    a: "From manufacturers' own published cash, lease, and finance programs for your area. We check them regularly and show when an offer may not apply to you.",
+  },
+  {
+    q: "Will the dealer give me the exact payment KnewCar shows?",
+    a: "Not necessarily. KnewCar shows an estimate based on what you entered and the current manufacturer programs. The final price, rate, fees, taxes, and eligibility are set by the dealer and lender. Every estimate lists what still needs to be confirmed.",
+  },
+  {
+    q: "Which brands are included?",
+    a: "We're starting with a set of major brands and adding more as we confirm their programs. You'll see which brands are covered inside the app.",
+  },
+  {
+    q: "What does KnewCar cost?",
+    a: `You'll get a ${PRICES.trialDays}-day free trial with the full product. After that, you can choose a paid option. See the Pricing page for details.`,
+  },
+  {
+    q: "Can I delete my account?",
+    a: "Yes. You can delete your account and saved data at any time from the Profile screen in the app.",
+  },
+];
+---
+
+<Base title="How it works" description="How KnewCar estimates new-car payments from manufacturer cash, lease, and finance programs, and what the dealer still needs to confirm.">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h1>Payment first. <span class="mint">Assumptions shown.</span></h1>
+      <p class="lead">KnewCar starts with your monthly budget and credit range, then works backward to the new cars that fit, including any manufacturer offers that may help.</p>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap steps">
+      <div class="step">
+        <div class="icon-badge"><Icon name="wallet" /></div>
+        <div>
+          <h3>1. Tell us your budget</h3>
+          <p>A few quick questions: the monthly range you're comfortable with, your estimated credit range, down payment, trade-in and what you still owe on it, finance or lease, yearly mileage, and your ZIP code.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="icon-badge"><Icon name="tag" /></div>
+        <div>
+          <h3>2. We estimate a realistic payment</h3>
+          <p>We use a rate that matches your credit range, then check manufacturers' current cash, special APR, and lease programs for your ZIP code and apply the ones that may fit what you told us.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="icon-badge"><Icon name="car" /></div>
+        <div>
+          <h3>3. See only cars that fit your budget</h3>
+          <p>Browse or swipe through the new vehicles whose estimated payment lands in your range. Save the ones you like. Each saved car keeps the exact payment setup you saw.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="icon-badge"><Icon name="list" /></div>
+        <div>
+          <h3>4. Walk in prepared</h3>
+          <p>Every estimate shows how it was calculated: price, offers applied, rate or money factor, term, taxes and fees assumed, and what the dealer and lender still need to confirm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap">
+      <div class="card example">
+        <p class="eyebrow">What an estimate looks like</p>
+        <p class="big">Estimated at <strong>$512/month</strong> using the assumptions below.</p>
+        <ul>
+          <li>Includes a manufacturer cash offer listed for your ZIP code.</li>
+          <li>Uses a rate based on the credit range you chose.</li>
+          <li>We couldn't verify a dealer discount, so this estimate doesn't include one.</li>
+          <li>To confirm at the dealership: final price, rate approval, taxes, and fees.</li>
+        </ul>
+        <p class="fineprint">Example for illustration only.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap faq">
+      <p class="eyebrow">FAQ</p>
+      <h2>Questions, answered.</h2>
+      <div class="list">
+        {faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .steps { display: grid; gap: 18px; max-width: 860px; }
+  .step { display: flex; gap: 22px; align-items: flex-start; padding: 26px 28px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--edge); }
+  .step .icon-badge { margin: 0; flex: none; }
+  .step p { color: var(--sub); margin: 8px 0 0; }
+  .example { max-width: 860px; }
+  .example .big { font-size: 24px; margin: 0; }
+  .example strong { color: var(--mint); }
+  .example ul { color: var(--sub); margin: 18px 0 0; padding-left: 22px; display: grid; gap: 6px; }
+  .fineprint { color: var(--faint) !important; font-size: 13px; margin-top: 16px !important; }
+  .faq { max-width: 860px; }
+  .list { margin-top: 32px; display: grid; gap: 12px; }
+  details { border-radius: 16px; background: var(--card); border: 1px solid var(--edge); padding: 0 24px; }
+  summary { cursor: pointer; list-style: none; padding: 22px 0; font-weight: 700; font-size: 18px; display: flex; justify-content: space-between; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--mint); font-size: 24px; line-height: 1; }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--sub); margin: 0 0 22px; }
+</style>
