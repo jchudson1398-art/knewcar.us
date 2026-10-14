@@ -1,4 +1,4 @@
-# KnewCar website
+# knewcar.us — KnewCar website
 
 The public site for knewcar.us: Home, How it works + FAQ, Pricing, Privacy, Terms. Built with Astro as a static site.
 
