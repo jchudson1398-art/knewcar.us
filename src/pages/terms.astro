@@ -1,6 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
-import { CONTACT_EMAIL, PRICES } from "../site";
+import { CONTACT_EMAIL } from "../site";
 const updated = "October 14, 2026";
 ---
 
@@ -50,11 +50,21 @@ const updated = "October 14, 2026";
 
       <h2>Free trial and paid plans</h2>
       <p>
-        When paid plans are available, new accounts may start with a {PRICES.trialDays}-day free trial. After the trial,
-        continued access requires a paid plan. Each plan's price, length, and whether it renews automatically will be
-        shown clearly before you buy. Plans that renew continue until you cancel; you can cancel at any time, and access
-        continues until the end of the period you paid for. Purchases made through an app store are also subject to that
-        store's terms and refund policies.
+        New accounts can use KnewCar free for a limited preview. After the preview, continued access requires a paid
+        plan. Each plan's price, length, and whether it renews automatically are shown clearly before you buy.
+      </p>
+      <ul>
+        <li><strong>Monthly and Yearly</strong> plans renew automatically at the end of each period until you cancel.</li>
+        <li><strong>The 3-Month Shopper Pass</strong> is a one-time purchase. It does not renew and is never charged again.</li>
+        <li>Purchases in the iPhone app are charged to your Apple ID when you confirm the purchase. A renewing plan is
+          charged again within 24 hours before the current period ends unless you turn off auto-renew at least 24 hours
+          before then. You can manage or cancel in your Apple ID's subscription settings. Access continues until the
+          end of the period you paid for.</li>
+        <li>Refunds for app purchases are handled by Apple under its policies.</li>
+      </ul>
+      <p>
+        Prices may change. If the price of a renewing plan changes, you'll be told in advance as required by the app
+        store, and you can cancel before the new price applies.
       </p>
 
       <h2>Acceptable use</h2>

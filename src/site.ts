@@ -15,7 +15,6 @@ export const CONTACT_EMAIL = "jake@knewcar.us";
 
 /** Launch prices (owner, 2026-10-14). */
 export const PRICES = {
-  trialDays: 3,
   monthly: "$19.99",
   pass: "$44.99",
   yearly: "$99.99",
