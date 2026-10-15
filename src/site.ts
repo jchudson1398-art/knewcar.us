@@ -4,7 +4,8 @@
  * Waitlist sign-ups go to Supabase: the form calls public.join_waitlist(email, zip, source), which is the only
  * thing this public key can do with the waitlist (vehicle-intelligence-platform
  * supabase/migrations/20261014200000_website_waitlist.sql). The publishable key is meant to be public.
- * Currently the Zone 2 SANDBOX project; switch both values to production when Jacob approves.
+ * This is the launch environment (vehicle-intelligence-platform-sandbox, Jacob 2026-10-15): there is no separate
+ * production project to switch to.
  */
 export const SUPABASE_URL = "https://fmuyjfhucjtjzkweeqyd.supabase.co";
 export const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_UJp_9QSmhxb6jnk5U68TRQ_Zd17Doyk";
