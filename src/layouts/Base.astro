@@ -8,7 +8,7 @@ interface Props {
   description: string;
 }
 const { title, description } = Astro.props;
-const fullTitle = title === "KnewCar" ? "KnewCar — Know the payment before the dealership" : `${title} · KnewCar`;
+const fullTitle = title === "KnewCar" ? "KnewCar — Your payment-first new car shopping tool" : `${title} · KnewCar`;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
