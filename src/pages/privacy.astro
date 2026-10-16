@@ -1,7 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import { CONTACT_EMAIL } from "../site";
-const updated = "October 14, 2026";
+const updated = "October 16, 2026";
 ---
 
 <Base title="Privacy Policy" description="What KnewCar collects, why, and the choices you have.">
@@ -10,7 +10,6 @@ const updated = "October 14, 2026";
       <p class="eyebrow">Legal</p>
       <h1>Privacy Policy</h1>
       <p class="lead">Last updated {updated}</p>
-      <p class="note">Draft for review. This policy must be reviewed by a qualified attorney before the site goes live.</p>
     </div>
   </section>
 
@@ -25,7 +24,7 @@ const updated = "October 14, 2026";
       <h2>The short version</h2>
       <ul>
         <li>We collect what we need to show you cars and payment estimates that fit your budget.</li>
-        <li>We don't run a credit check. Your exact credit score stays on your phone and is never sent to our servers.</li>
+        <li>We don't run a credit check. Your estimated credit score is saved only on your phone. It is sent to our pricing service only to calculate your estimates, and is never stored or logged there.</li>
         <li>We don't sell your personal information or share it with dealers or lenders without your permission.</li>
         <li>You can delete your account and saved data at any time in the app.</li>
       </ul>
@@ -33,16 +32,19 @@ const updated = "October 14, 2026";
       <h2>Information we collect</h2>
       <h3>Information you give us</h3>
       <ul>
-        <li><strong>Account details:</strong> your first name, email address, and password (stored by our authentication provider in protected form).</li>
+        <li><strong>Account details:</strong> your name, email address, and password (stored by our authentication provider in protected form).</li>
         <li><strong>Shopping preferences:</strong> payment range, down payment, trade-in details and any amount still owed, finance or lease preference, yearly mileage, and ZIP code.</li>
-        <li><strong>Saved vehicles:</strong> cars you save and the payment setup shown when you saved them.</li>
+        <li><strong>Saved vehicles:</strong> cars you save and the payment setup shown when you saved them, including whether a pre-approval rate or military status was used.</li>
+        <li><strong>Military status:</strong> only if you tell us you are or were in the military, so we can show military offers.</li>
+        <li><strong>Purchases:</strong> which KnewCar plan you have and when it started or ends. Payment itself is handled by Apple; we never see your card details.</li>
+        <li><strong>Free-preview time:</strong> how much of the free preview your account has used, so the preview works across your devices.</li>
         <li><strong>Waitlist sign-ups:</strong> your email address and, if you choose, your ZIP code.</li>
         <li><strong>Messages:</strong> anything you send when you contact us.</li>
       </ul>
-      <h3>Information that stays on your device</h3>
+      <h3>Information we use but don't store</h3>
       <ul>
-        <li><strong>Credit score estimate:</strong> if you set an estimated credit score, it is stored only in your phone's secure storage and used on your phone to estimate payments.</li>
-        <li><strong>Pre-approval rate:</strong> if you enter a rate from a lender, it is kept only while the app is open and is not saved or sent to us.</li>
+        <li><strong>Credit score estimate:</strong> if you set an estimated credit score, it is saved only in your phone's secure storage. Each time you look up payments it is sent, encrypted, to our pricing service to calculate the estimate, and it is not stored or logged on our servers.</li>
+        <li><strong>Pre-approval rate:</strong> if you enter a rate from a lender, it is sent with your payment lookups to calculate estimates and is not stored on our servers.</li>
       </ul>
       <h3>Information collected automatically</h3>
       <p>
@@ -61,12 +63,17 @@ const updated = "October 14, 2026";
       </ul>
 
       <h2>How we share information</h2>
-      <p>We share information only with service providers that help us run KnewCar, under agreements that limit their use of it, including:</p>
+      <p>We share information only with service providers that help us run KnewCar, and only what each one needs to do its job:</p>
       <ul>
-        <li>Hosting, database, and sign-in services.</li>
-        <li>Email delivery services.</li>
-        <li>Payment processing, when paid plans are available (we don't store full card numbers).</li>
+        <li><strong>Supabase</strong> (hosting, database, and sign-in).</li>
+        <li><strong>Expo</strong> (delivering app updates).</li>
+        <li><strong>Apple</strong> (App Store purchases and payment) and <strong>RevenueCat</strong> (keeping track of which plan your account has; it receives your KnewCar account ID and your purchase history, not your card details).</li>
+        <li>Email delivery services, for account and waitlist emails.</li>
       </ul>
+      <p>
+        These providers are contractually required to use your information only to provide their services to us and to
+        protect it with the same or equal protection as described in this policy.
+      </p>
       <p>
         We may also disclose information if required by law, to protect the rights and safety of our users or others, or
         as part of a merger, acquisition, or sale of assets, in which case this policy will continue to apply. We do not
@@ -76,7 +83,8 @@ const updated = "October 14, 2026";
       <h2>Your choices</h2>
       <ul>
         <li><strong>Update your preferences</strong> at any time in the app.</li>
-        <li><strong>Delete your account</strong> from the Profile screen. This removes your account, preferences, and saved vehicles.</li>
+        <li><strong>Delete your account</strong> in the app at any time (Profile, then Delete account). This permanently removes your account, preferences, saved vehicles, and free-preview record.</li>
+        <li><strong>Withdraw your consent</strong> at any time by deleting your account or emailing us. Deleting the app alone doesn't delete your account. Canceling a subscription is done in your Apple ID settings, not by deleting your account.</li>
         <li><strong>Unsubscribe</strong> from waitlist and product emails using the link in any email.</li>
         <li><strong>Ask us</strong> to access, correct, or delete your information by emailing <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. Depending on where you live, you may have additional rights under state privacy laws.</li>
       </ul>
@@ -84,7 +92,8 @@ const updated = "October 14, 2026";
       <h2>Data retention and security</h2>
       <p>
         We keep your information while your account is active and delete it when you delete your account, except where
-        we need to keep limited records for legal, security, or accounting reasons. We use industry-standard safeguards,
+        we need to keep limited records for legal, security, or accounting reasons. Purchase records are also kept by
+        Apple and RevenueCat under their own policies; email us if you want RevenueCat's copy deleted too. We use industry-standard safeguards,
         including encryption in transit and access controls, but no system is perfectly secure.
       </p>
 

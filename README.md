@@ -26,5 +26,5 @@ switch `SUPABASE_URL` and `SUPABASE_PUBLISHABLE_KEY` in `src/site.ts` to product
 
 ## Before going live
 
-- Privacy and Terms are drafts and must be reviewed by an attorney; then remove the "Draft for review" notes.
+- Privacy and Terms are live without draft notes (Jacob, 2026-10-16); an attorney review is still owed.
 - Apply the waitlist migration to production and point `src/site.ts` at it.
