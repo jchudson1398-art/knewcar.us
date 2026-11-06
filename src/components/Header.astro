@@ -1,5 +1,5 @@
 ---
-import { NAV } from "../site";
+import { APP_STORE_URL, NAV } from "../site";
 import Wordmark from "./Wordmark.astro";
 ---
 
@@ -9,7 +9,7 @@ import Wordmark from "./Wordmark.astro";
     <nav aria-label="Main">
       {NAV.map((n) => <a href={n.href}>{n.label}</a>)}
     </nav>
-    <a href="/#waitlist" class="btn btn-primary btn-sm">Join the beta</a>
+    <a href={APP_STORE_URL} class="btn btn-primary btn-sm">Download now</a>
   </div>
 </header>
 
