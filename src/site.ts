@@ -11,6 +11,9 @@ export const SUPABASE_URL = "https://fmuyjfhucjtjzkweeqyd.supabase.co";
 export const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_UJp_9QSmhxb6jnk5U68TRQ_Zd17Doyk";
 export const WAITLIST_ENDPOINT = `${SUPABASE_URL}/rest/v1/rpc/join_waitlist`;
 
+/** KnewCar on the App Store (live 2026-11-06). */
+export const APP_STORE_URL = "https://apps.apple.com/us/app/knewcar/id6822044416";
+
 /** Public contact address shown in the footer, Privacy and Terms. */
 export const CONTACT_EMAIL = "jake@knewcar.us";
 

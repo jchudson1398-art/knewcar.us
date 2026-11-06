@@ -1,9 +1,8 @@
 ---
 import Base from "../layouts/Base.astro";
 import Phone from "../components/Phone.astro";
-import Waitlist from "../components/Waitlist.astro";
 import Icon from "../components/Icon.astro";
-import { PRICES } from "../site";
+import { APP_STORE_URL, PRICES } from "../site";
 ---
 
 <Base title="KnewCar" description="Shop new cars by the monthly payment that fits your budget. See realistic estimated payments for your credit range, with current manufacturer offers and every assumption shown, before you go to the dealership.">
@@ -18,13 +17,13 @@ import { PRICES } from "../site";
           Your budget. Your credit range. Your next car. KnewCar brings them together with realistic payment estimates
           and the details behind every number.
         </p>
-        <div id="waitlist" class="hero-form">
-          <Waitlist id="hero-waitlist" />
+        <div id="download" class="hero-form">
+          <a class="btn btn-primary" href={APP_STORE_URL}>Download now on the App Store</a>
         </div>
         <ul class="ticks">
           <li><Icon name="check" size={18} /> No credit check</li>
           <li><Icon name="check" size={18} /> Not a dealer or a lender</li>
-          <li><Icon name="check" size={18} /> Free preview at launch</li>
+          <li><Icon name="check" size={18} /> Free preview</li>
         </ul>
       </div>
       <div class="hero-phones">
@@ -211,10 +210,10 @@ import { PRICES } from "../site";
   <!-- CTA -->
   <section class="section cta">
     <div class="wrap center">
-      <h2>Be one of the first to try KnewCar.</h2>
-      <p class="lead">Join the beta and we'll email you when your spot opens.</p>
-      <div class="cta-form"><Waitlist id="footer-waitlist" /></div>
-      <p class="price-line">At launch: a free preview, then from {PRICES.monthly}/month, or a {PRICES.pass} 3-Month Shopper Pass with no recurring fees. <a href="/pricing">See pricing</a></p>
+      <h2>KnewCar is on the App Store.</h2>
+      <p class="lead">Download it for iPhone and start shopping by payment today.</p>
+      <div class="cta-form"><a class="btn btn-primary" href={APP_STORE_URL}>Download now</a></div>
+      <p class="price-line">Start with a free preview, then from {PRICES.monthly}/month, or a {PRICES.pass} 3-Month Shopper Pass with no recurring fees. <a href="/pricing">See pricing</a></p>
     </div>
   </section>
 </Base>

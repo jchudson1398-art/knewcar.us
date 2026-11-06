@@ -1,7 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import Icon from "../components/Icon.astro";
-import { PRICES } from "../site";
+import { APP_STORE_URL, PRICES } from "../site";
 
 const plans = [
   { name: "Monthly", price: PRICES.monthly, per: "/month", billing: `${PRICES.monthly} per month. Renews monthly until canceled.`, note: "Flexible access while you shop." },
@@ -55,7 +55,7 @@ const included = [
         </ul>
       </div>
       <p class="center fine">Prices in USD. Sales tax may apply.</p>
-      <p class="center"><a class="btn btn-primary" href="/#waitlist">Join the beta</a></p>
+      <p class="center"><a class="btn btn-primary" href={APP_STORE_URL}>Download now</a></p>
     </div>
   </section>
 </Base>

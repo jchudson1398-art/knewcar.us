@@ -1,5 +1,5 @@
 ---
-import { CONTACT_EMAIL } from "../site";
+import { APP_STORE_URL, CONTACT_EMAIL } from "../site";
 import Wordmark from "./Wordmark.astro";
 const year = new Date().getFullYear();
 ---
@@ -15,7 +15,7 @@ const year = new Date().getFullYear();
       <a href="/how-it-works">How it works</a>
       <a href="/pricing">Pricing</a>
       <a href="/how-it-works#faq">FAQ</a>
-      <a href="/#waitlist">Join the beta</a>
+      <a href={APP_STORE_URL}>Download on the App Store</a>
     </div>
     <div>
       <h4>Company</h4>
