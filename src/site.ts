@@ -25,6 +25,7 @@ export const PRICES = {
 } as const;
 
 export const NAV = [
+  { href: "/explore", label: "Explore" },
   { href: "/how-it-works", label: "How it works" },
   { href: "/pricing", label: "Pricing" },
   { href: "/how-it-works#faq", label: "FAQ" },

@@ -1,0 +1,1307 @@
+[
+ {
+  "key": "chevrolet-blazer",
+  "make": "Chevrolet",
+  "model": "Blazer",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 3
+ },
+ {
+  "key": "chevrolet-blazer-ev",
+  "make": "Chevrolet",
+  "model": "Blazer EV",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 3
+ },
+ {
+  "key": "chevrolet-bolt",
+  "make": "Chevrolet",
+  "model": "Bolt",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 2
+ },
+ {
+  "key": "chevrolet-colorado",
+  "make": "Chevrolet",
+  "model": "Colorado",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": null,
+  "trims": 6
+ },
+ {
+  "key": "chevrolet-corvette-grand-sport",
+  "make": "Chevrolet",
+  "model": "Corvette Grand Sport",
+  "year": 2027,
+  "type": "Convertible",
+  "fuel": null,
+  "trims": 2
+ },
+ {
+  "key": "chevrolet-corvette-stingray",
+  "make": "Chevrolet",
+  "model": "Corvette Stingray",
+  "year": 2027,
+  "type": "Convertible",
+  "fuel": null,
+  "trims": 2
+ },
+ {
+  "key": "chevrolet-equinox",
+  "make": "Chevrolet",
+  "model": "Equinox",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 3
+ },
+ {
+  "key": "chevrolet-equinox-ev",
+  "make": "Chevrolet",
+  "model": "Equinox EV",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 3
+ },
+ {
+  "key": "chevrolet-express-cargo",
+  "make": "Chevrolet",
+  "model": "Express Cargo",
+  "year": 2026,
+  "type": "Van",
+  "fuel": null,
+  "trims": 1
+ },
+ {
+  "key": "chevrolet-express-passenger",
+  "make": "Chevrolet",
+  "model": "Express Passenger",
+  "year": 2026,
+  "type": "Van",
+  "fuel": null,
+  "trims": 2
+ },
+ {
+  "key": "chevrolet-silverado-1500",
+  "make": "Chevrolet",
+  "model": "Silverado 1500",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": null,
+  "trims": 9
+ },
+ {
+  "key": "chevrolet-silverado-2500-hd",
+  "make": "Chevrolet",
+  "model": "Silverado 2500 HD",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": null,
+  "trims": 6
+ },
+ {
+  "key": "chevrolet-silverado-3500-hd",
+  "make": "Chevrolet",
+  "model": "Silverado 3500 HD",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": null,
+  "trims": 4
+ },
+ {
+  "key": "chevrolet-silverado-ev",
+  "make": "Chevrolet",
+  "model": "Silverado EV",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": "Electric",
+  "trims": 8
+ },
+ {
+  "key": "chevrolet-suburban",
+  "make": "Chevrolet",
+  "model": "Suburban",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 6
+ },
+ {
+  "key": "chevrolet-tahoe",
+  "make": "Chevrolet",
+  "model": "Tahoe",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 6
+ },
+ {
+  "key": "chevrolet-trailblazer",
+  "make": "Chevrolet",
+  "model": "Trailblazer",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 4
+ },
+ {
+  "key": "chevrolet-traverse",
+  "make": "Chevrolet",
+  "model": "Traverse",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 4
+ },
+ {
+  "key": "chevrolet-trax",
+  "make": "Chevrolet",
+  "model": "Trax",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 5
+ },
+ {
+  "key": "ford-bronco",
+  "make": "Ford",
+  "model": "Bronco",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 7
+ },
+ {
+  "key": "ford-bronco-sport",
+  "make": "Ford",
+  "model": "Bronco Sport",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 4
+ },
+ {
+  "key": "ford-expedition",
+  "make": "Ford",
+  "model": "Expedition",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 4
+ },
+ {
+  "key": "ford-explorer",
+  "make": "Ford",
+  "model": "Explorer",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 6
+ },
+ {
+  "key": "ford-f-150",
+  "make": "Ford",
+  "model": "F-150",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": null,
+  "trims": 8
+ },
+ {
+  "key": "ford-maverick",
+  "make": "Ford",
+  "model": "Maverick",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": "Hybrid available",
+  "trims": 5
+ },
+ {
+  "key": "ford-mustang",
+  "make": "Ford",
+  "model": "Mustang",
+  "year": 2026,
+  "type": "Coupe",
+  "fuel": null,
+  "trims": 7
+ },
+ {
+  "key": "ford-mustang-mach-e",
+  "make": "Ford",
+  "model": "Mustang Mach-E",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 4
+ },
+ {
+  "key": "ford-ranger",
+  "make": "Ford",
+  "model": "Ranger",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": null,
+  "trims": 4
+ },
+ {
+  "key": "ford-super-duty",
+  "make": "Ford",
+  "model": "Super Duty",
+  "year": 2027,
+  "type": "Truck",
+  "fuel": null,
+  "trims": 15
+ },
+ {
+  "key": "ford-transit",
+  "make": "Ford",
+  "model": "Transit",
+  "year": 2027,
+  "type": "Van",
+  "fuel": null,
+  "trims": 2
+ },
+ {
+  "key": "honda-accord",
+  "make": "Honda",
+  "model": "Accord",
+  "year": 2026,
+  "type": "Sedan",
+  "fuel": "Hybrid available",
+  "trims": 6
+ },
+ {
+  "key": "honda-civic",
+  "make": "Honda",
+  "model": "Civic",
+  "year": 2026,
+  "type": "Sedan",
+  "fuel": "Hybrid available",
+  "trims": 6
+ },
+ {
+  "key": "honda-cr-v",
+  "make": "Honda",
+  "model": "CR-V",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Hybrid available",
+  "trims": 7
+ },
+ {
+  "key": "honda-hr-v",
+  "make": "Honda",
+  "model": "HR-V",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 3
+ },
+ {
+  "key": "honda-odyssey",
+  "make": "Honda",
+  "model": "Odyssey",
+  "year": 2027,
+  "type": "Minivan",
+  "fuel": null,
+  "trims": 4
+ },
+ {
+  "key": "honda-passport",
+  "make": "Honda",
+  "model": "Passport",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 7
+ },
+ {
+  "key": "honda-pilot",
+  "make": "Honda",
+  "model": "Pilot",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 7
+ },
+ {
+  "key": "honda-prelude",
+  "make": "Honda",
+  "model": "Prelude",
+  "year": 2027,
+  "type": "Coupe",
+  "fuel": "Hybrid",
+  "trims": 2
+ },
+ {
+  "key": "honda-prologue",
+  "make": "Honda",
+  "model": "Prologue",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 3
+ },
+ {
+  "key": "honda-ridgeline",
+  "make": "Honda",
+  "model": "Ridgeline",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": null,
+  "trims": 6
+ },
+ {
+  "key": "hyundai-elantra",
+  "make": "Hyundai",
+  "model": "ELANTRA",
+  "year": 2026,
+  "type": "Sedan",
+  "fuel": null,
+  "trims": 7
+ },
+ {
+  "key": "hyundai-elantra-hybrid",
+  "make": "Hyundai",
+  "model": "ELANTRA Hybrid",
+  "year": 2026,
+  "type": "Sedan",
+  "fuel": "Hybrid",
+  "trims": 3
+ },
+ {
+  "key": "hyundai-ioniq-5",
+  "make": "Hyundai",
+  "model": "IONIQ 5",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 5
+ },
+ {
+  "key": "hyundai-ioniq-5-n",
+  "make": "Hyundai",
+  "model": "IONIQ 5 N",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 1
+ },
+ {
+  "key": "hyundai-ioniq-9",
+  "make": "Hyundai",
+  "model": "IONIQ 9",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 6
+ },
+ {
+  "key": "hyundai-kona",
+  "make": "Hyundai",
+  "model": "KONA",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 4
+ },
+ {
+  "key": "hyundai-palisade",
+  "make": "Hyundai",
+  "model": "PALISADE",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 7
+ },
+ {
+  "key": "hyundai-palisade-hybrid",
+  "make": "Hyundai",
+  "model": "PALISADE Hybrid",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 5
+ },
+ {
+  "key": "hyundai-santa-cruz",
+  "make": "Hyundai",
+  "model": "SANTA CRUZ",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 5
+ },
+ {
+  "key": "hyundai-santa-fe",
+  "make": "Hyundai",
+  "model": "SANTA FE",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 5
+ },
+ {
+  "key": "hyundai-santa-fe-hybrid",
+  "make": "Hyundai",
+  "model": "SANTA FE Hybrid",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 4
+ },
+ {
+  "key": "hyundai-tucson",
+  "make": "Hyundai",
+  "model": "TUCSON",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 7
+ },
+ {
+  "key": "hyundai-tucson-hybrid",
+  "make": "Hyundai",
+  "model": "TUCSON Hybrid",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 6
+ },
+ {
+  "key": "hyundai-tucson-plug-in-hybrid",
+  "make": "Hyundai",
+  "model": "TUCSON Plug-in Hybrid",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 2
+ },
+ {
+  "key": "hyundai-venue",
+  "make": "Hyundai",
+  "model": "VENUE",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 4
+ },
+ {
+  "key": "jeep-cherokee",
+  "make": "Jeep",
+  "model": "Cherokee",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 6
+ },
+ {
+  "key": "jeep-compass",
+  "make": "Jeep",
+  "model": "Compass",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 6
+ },
+ {
+  "key": "jeep-gladiator",
+  "make": "Jeep",
+  "model": "Gladiator",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": null,
+  "trims": 13
+ },
+ {
+  "key": "jeep-grand-cherokee",
+  "make": "Jeep",
+  "model": "Grand Cherokee",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 22
+ },
+ {
+  "key": "jeep-grand-wagoneer",
+  "make": "Jeep",
+  "model": "Grand Wagoneer",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 19
+ },
+ {
+  "key": "jeep-jeep-recon",
+  "make": "Jeep",
+  "model": "Recon",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 1
+ },
+ {
+  "key": "jeep-wrangler",
+  "make": "Jeep",
+  "model": "Wrangler",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 16
+ },
+ {
+  "key": "kia-carnival-mpv",
+  "make": "Kia",
+  "model": "Carnival MPV",
+  "year": 2027,
+  "type": "Minivan",
+  "fuel": null,
+  "trims": 5
+ },
+ {
+  "key": "kia-carnival-mpv-hybrid",
+  "make": "Kia",
+  "model": "Carnival MPV Hybrid",
+  "year": 2027,
+  "type": "Minivan",
+  "fuel": "Hybrid",
+  "trims": 4
+ },
+ {
+  "key": "kia-ev3",
+  "make": "Kia",
+  "model": "EV3",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 5
+ },
+ {
+  "key": "kia-ev6",
+  "make": "Kia",
+  "model": "EV6",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 4
+ },
+ {
+  "key": "kia-ev9",
+  "make": "Kia",
+  "model": "EV9",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 5
+ },
+ {
+  "key": "kia-k4",
+  "make": "Kia",
+  "model": "K4",
+  "year": 2026,
+  "type": "Sedan",
+  "fuel": null,
+  "trims": 5
+ },
+ {
+  "key": "kia-k4-hatchback",
+  "make": "Kia",
+  "model": "K4 Hatchback",
+  "year": 2026,
+  "type": "Hatchback",
+  "fuel": null,
+  "trims": 3
+ },
+ {
+  "key": "kia-k5",
+  "make": "Kia",
+  "model": "K5",
+  "year": 2027,
+  "type": "Sedan",
+  "fuel": null,
+  "trims": 3
+ },
+ {
+  "key": "kia-niro",
+  "make": "Kia",
+  "model": "Niro",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 5
+ },
+ {
+  "key": "kia-niro-ev",
+  "make": "Kia",
+  "model": "Niro EV",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 2
+ },
+ {
+  "key": "kia-seltos",
+  "make": "Kia",
+  "model": "Seltos",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 5
+ },
+ {
+  "key": "kia-sorento",
+  "make": "Kia",
+  "model": "Sorento",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 8
+ },
+ {
+  "key": "kia-sorento-hybrid",
+  "make": "Kia",
+  "model": "Sorento Hybrid",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 3
+ },
+ {
+  "key": "kia-sorento-plug-in-hybrid",
+  "make": "Kia",
+  "model": "Sorento Plug-in Hybrid",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 2
+ },
+ {
+  "key": "kia-sportage",
+  "make": "Kia",
+  "model": "Sportage",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 6
+ },
+ {
+  "key": "kia-sportage-hybrid",
+  "make": "Kia",
+  "model": "Sportage Hybrid",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 5
+ },
+ {
+  "key": "kia-sportage-plug-in-hybrid",
+  "make": "Kia",
+  "model": "Sportage Plug-in Hybrid",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 2
+ },
+ {
+  "key": "kia-telluride",
+  "make": "Kia",
+  "model": "Telluride",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 10
+ },
+ {
+  "key": "kia-telluride-hybrid",
+  "make": "Kia",
+  "model": "Telluride Hybrid",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 5
+ },
+ {
+  "key": "mazda-cx-30",
+  "make": "Mazda",
+  "model": "CX-30",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 8
+ },
+ {
+  "key": "mazda-cx-5",
+  "make": "Mazda",
+  "model": "CX-5",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 5
+ },
+ {
+  "key": "mazda-cx-50",
+  "make": "Mazda",
+  "model": "CX-50",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid available",
+  "trims": 10
+ },
+ {
+  "key": "mazda-cx-70",
+  "make": "Mazda",
+  "model": "CX-70",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid available",
+  "trims": 7
+ },
+ {
+  "key": "mazda-cx-90",
+  "make": "Mazda",
+  "model": "CX-90",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid available",
+  "trims": 9
+ },
+ {
+  "key": "mazda-mazda3",
+  "make": "Mazda",
+  "model": "Mazda3",
+  "year": 2026,
+  "type": "Sedan",
+  "fuel": null,
+  "trims": 6
+ },
+ {
+  "key": "mazda-mx-5-miata",
+  "make": "Mazda",
+  "model": "MX-5 Miata",
+  "year": 2026,
+  "type": "Convertible",
+  "fuel": null,
+  "trims": 3
+ },
+ {
+  "key": "nissan-altima",
+  "make": "Nissan",
+  "model": "Altima",
+  "year": 2026,
+  "type": "Sedan",
+  "fuel": null,
+  "trims": 8
+ },
+ {
+  "key": "nissan-armada",
+  "make": "Nissan",
+  "model": "Armada",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 10
+ },
+ {
+  "key": "nissan-frontier",
+  "make": "Nissan",
+  "model": "Frontier",
+  "year": 2027,
+  "type": "Truck",
+  "fuel": null,
+  "trims": 17
+ },
+ {
+  "key": "nissan-kicks",
+  "make": "Nissan",
+  "model": "Kicks",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 7
+ },
+ {
+  "key": "nissan-murano",
+  "make": "Nissan",
+  "model": "Murano",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 4
+ },
+ {
+  "key": "nissan-nissan-leaf",
+  "make": "Nissan",
+  "model": "LEAF",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 3
+ },
+ {
+  "key": "nissan-nissan-z",
+  "make": "Nissan",
+  "model": "Z",
+  "year": 2027,
+  "type": "Coupe",
+  "fuel": null,
+  "trims": 8
+ },
+ {
+  "key": "nissan-pathfinder",
+  "make": "Nissan",
+  "model": "Pathfinder",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 7
+ },
+ {
+  "key": "nissan-rogue",
+  "make": "Nissan",
+  "model": "Rogue",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 8
+ },
+ {
+  "key": "nissan-rogue-plug-in-hybrid",
+  "make": "Nissan",
+  "model": "Rogue Plug-in Hybrid",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 2
+ },
+ {
+  "key": "nissan-sentra",
+  "make": "Nissan",
+  "model": "Sentra",
+  "year": 2027,
+  "type": "Sedan",
+  "fuel": null,
+  "trims": 5
+ },
+ {
+  "key": "subaru-ascent",
+  "make": "Subaru",
+  "model": "Ascent",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 7
+ },
+ {
+  "key": "subaru-brz",
+  "make": "Subaru",
+  "model": "BRZ",
+  "year": 2027,
+  "type": "Coupe",
+  "fuel": null,
+  "trims": 2
+ },
+ {
+  "key": "subaru-crosstrek",
+  "make": "Subaru",
+  "model": "Crosstrek",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 7
+ },
+ {
+  "key": "subaru-forester",
+  "make": "Subaru",
+  "model": "Forester",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 10
+ },
+ {
+  "key": "subaru-impreza",
+  "make": "Subaru",
+  "model": "Impreza",
+  "year": 2026,
+  "type": "Hatchback",
+  "fuel": null,
+  "trims": 3
+ },
+ {
+  "key": "subaru-outback",
+  "make": "Subaru",
+  "model": "Outback",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 9
+ },
+ {
+  "key": "subaru-solterra",
+  "make": "Subaru",
+  "model": "Solterra",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 5
+ },
+ {
+  "key": "subaru-trailseeker",
+  "make": "Subaru",
+  "model": "Trailseeker",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 4
+ },
+ {
+  "key": "subaru-uncharted",
+  "make": "Subaru",
+  "model": "Uncharted",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 3
+ },
+ {
+  "key": "subaru-wrx",
+  "make": "Subaru",
+  "model": "WRX",
+  "year": 2026,
+  "type": "Sedan",
+  "fuel": null,
+  "trims": 5
+ },
+ {
+  "key": "toyota-4runner",
+  "make": "Toyota",
+  "model": "4Runner",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid available",
+  "trims": 12
+ },
+ {
+  "key": "toyota-bz",
+  "make": "Toyota",
+  "model": "bZ",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 2
+ },
+ {
+  "key": "toyota-bz-woodland",
+  "make": "Toyota",
+  "model": "bZ Woodland",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 2
+ },
+ {
+  "key": "toyota-c-hr",
+  "make": "Toyota",
+  "model": "C-HR",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 2
+ },
+ {
+  "key": "toyota-camry",
+  "make": "Toyota",
+  "model": "Camry",
+  "year": 2026,
+  "type": "Sedan",
+  "fuel": "Hybrid",
+  "trims": 5
+ },
+ {
+  "key": "toyota-corolla",
+  "make": "Toyota",
+  "model": "Corolla",
+  "year": 2027,
+  "type": "Sedan",
+  "fuel": "Hybrid available",
+  "trims": 6
+ },
+ {
+  "key": "toyota-corolla-cross",
+  "make": "Toyota",
+  "model": "Corolla Cross",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid available",
+  "trims": 5
+ },
+ {
+  "key": "toyota-corolla-cross-hybrid",
+  "make": "Toyota",
+  "model": "Corolla Cross Hybrid",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 1
+ },
+ {
+  "key": "toyota-corolla-hatchback",
+  "make": "Toyota",
+  "model": "Corolla Hatchback",
+  "year": 2027,
+  "type": "Hatchback",
+  "fuel": null,
+  "trims": 3
+ },
+ {
+  "key": "toyota-gr-corolla",
+  "make": "Toyota",
+  "model": "GR Corolla",
+  "year": 2026,
+  "type": "Hatchback",
+  "fuel": null,
+  "trims": 3
+ },
+ {
+  "key": "toyota-gr-supra",
+  "make": "Toyota",
+  "model": "GR Supra",
+  "year": 2026,
+  "type": "Coupe",
+  "fuel": null,
+  "trims": 3
+ },
+ {
+  "key": "toyota-gr86",
+  "make": "Toyota",
+  "model": "GR86",
+  "year": 2027,
+  "type": "Coupe",
+  "fuel": null,
+  "trims": 3
+ },
+ {
+  "key": "toyota-grand-highlander",
+  "make": "Toyota",
+  "model": "Grand Highlander",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid available",
+  "trims": 10
+ },
+ {
+  "key": "toyota-highlander",
+  "make": "Toyota",
+  "model": "Highlander",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid available",
+  "trims": 7
+ },
+ {
+  "key": "toyota-land-cruiser",
+  "make": "Toyota",
+  "model": "Land Cruiser",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 2
+ },
+ {
+  "key": "toyota-prius",
+  "make": "Toyota",
+  "model": "Prius",
+  "year": 2027,
+  "type": "Hatchback",
+  "fuel": "Hybrid",
+  "trims": 10
+ },
+ {
+  "key": "toyota-prius-plug-in-hybrid",
+  "make": "Toyota",
+  "model": "Prius Plug-in Hybrid",
+  "year": 2027,
+  "type": "Hatchback",
+  "fuel": "Hybrid",
+  "trims": 5
+ },
+ {
+  "key": "toyota-rav4",
+  "make": "Toyota",
+  "model": "RAV4",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 6
+ },
+ {
+  "key": "toyota-rav4-plug-in-hybrid",
+  "make": "Toyota",
+  "model": "RAV4 Plug-in Hybrid",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 4
+ },
+ {
+  "key": "toyota-sequoia",
+  "make": "Toyota",
+  "model": "Sequoia",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 6
+ },
+ {
+  "key": "toyota-sienna",
+  "make": "Toyota",
+  "model": "Sienna",
+  "year": 2026,
+  "type": "Minivan",
+  "fuel": "Hybrid",
+  "trims": 6
+ },
+ {
+  "key": "toyota-tacoma",
+  "make": "Toyota",
+  "model": "Tacoma",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": "Hybrid available",
+  "trims": 10
+ },
+ {
+  "key": "toyota-tacoma-i-force-max",
+  "make": "Toyota",
+  "model": "Tacoma i-Force MAX",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": "Hybrid",
+  "trims": 1
+ },
+ {
+  "key": "toyota-toyota-crown",
+  "make": "Toyota",
+  "model": "Crown",
+  "year": 2027,
+  "type": "Sedan",
+  "fuel": "Hybrid",
+  "trims": 4
+ },
+ {
+  "key": "toyota-toyota-crown-signia",
+  "make": "Toyota",
+  "model": "Crown Signia",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Hybrid",
+  "trims": 2
+ },
+ {
+  "key": "toyota-tundra",
+  "make": "Toyota",
+  "model": "Tundra",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": "Hybrid available",
+  "trims": 6
+ },
+ {
+  "key": "toyota-tundra-i-force-max",
+  "make": "Toyota",
+  "model": "Tundra i-FORCE MAX",
+  "year": 2026,
+  "type": "Truck",
+  "fuel": "Hybrid",
+  "trims": 4
+ },
+ {
+  "key": "volkswagen-atlas",
+  "make": "Volkswagen",
+  "model": "Atlas",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 5
+ },
+ {
+  "key": "volkswagen-atlas-cross-sport",
+  "make": "Volkswagen",
+  "model": "Atlas Cross Sport",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 5
+ },
+ {
+  "key": "volkswagen-golf-gti",
+  "make": "Volkswagen",
+  "model": "Golf GTI",
+  "year": 2026,
+  "type": "Hatchback",
+  "fuel": null,
+  "trims": 3
+ },
+ {
+  "key": "volkswagen-golf-r",
+  "make": "Volkswagen",
+  "model": "Golf R",
+  "year": 2026,
+  "type": "Hatchback",
+  "fuel": null,
+  "trims": 1
+ },
+ {
+  "key": "volkswagen-id-4",
+  "make": "Volkswagen",
+  "model": "ID.4",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": "Electric",
+  "trims": 5
+ },
+ {
+  "key": "volkswagen-jetta",
+  "make": "Volkswagen",
+  "model": "Jetta",
+  "year": 2027,
+  "type": "Sedan",
+  "fuel": null,
+  "trims": 4
+ },
+ {
+  "key": "volkswagen-jetta-gli",
+  "make": "Volkswagen",
+  "model": "Jetta GLI",
+  "year": 2027,
+  "type": "Sedan",
+  "fuel": null,
+  "trims": 1
+ },
+ {
+  "key": "volkswagen-taos",
+  "make": "Volkswagen",
+  "model": "Taos",
+  "year": 2027,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 5
+ },
+ {
+  "key": "volkswagen-tiguan",
+  "make": "Volkswagen",
+  "model": "Tiguan",
+  "year": 2026,
+  "type": "SUV",
+  "fuel": null,
+  "trims": 4
+ }
+]

@@ -1,0 +1,133 @@
+---
+import Base from "../layouts/Base.astro";
+import CarTile from "../components/CarTile.astro";
+import SearchBar from "../components/SearchBar.astro";
+import { CATALOG, FILTERS } from "../lib/catalog";
+import { APP_STORE_URL } from "../site";
+
+const cars = [...CATALOG].sort((a, b) => a.make.localeCompare(b.make) || a.model.localeCompare(b.model));
+const brands = new Set(cars.map((c) => c.make)).size;
+---
+
+<Base title="Explore all your options" description={`Browse and search ${cars.length} new models from ${brands} brands in one place. Trucks, SUVs, sedans, hybrids and electric cars.`}>
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">{cars.length} models · {brands} brands</p>
+      <h1>Explore <span class="mint">all your options.</span></h1>
+    </div>
+  </section>
+
+  <section class="wrap results" data-explore>
+    <SearchBar />
+
+    <div class="chips" role="group" aria-label="Filter by type">
+      {FILTERS.map((f) => (
+        <button type="button" class="chip" data-chip={f} aria-pressed={f === "All" ? "true" : "false"}>{f}</button>
+      ))}
+    </div>
+
+    <div class="status">
+      <p aria-live="polite" data-count>All {cars.length} models</p>
+      <button type="button" class="clear" data-clear hidden>Clear search</button>
+    </div>
+
+    <div class="car-grid">
+      {cars.map((car, i) => <CarTile car={car} eager={i < 8} />)}
+    </div>
+
+    <div class="empty" data-empty hidden>
+      <h2>No matches for that search yet</h2>
+      <p>Try a make, a model, or a type like truck, SUV, sedan, hybrid or electric.</p>
+      <button type="button" class="btn btn-primary" data-clear>Show all models</button>
+    </div>
+
+    <div class="card app-note">
+      <div>
+        <h2>Live in Texas? <span class="mint">See the numbers in the app.</span></h2>
+        <p>Offers, incentives, special rates and rebates for each of these cars, based on your situation.</p>
+      </div>
+      <a class="btn btn-primary" href={APP_STORE_URL}>Download on the App Store</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .results { display: flex; flex-direction: column; gap: 22px; padding-top: 8px; padding-bottom: 72px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid rgba(232, 243, 238, 0.22); background: transparent;
+    color: var(--text); font: 500 15px var(--font); cursor: pointer;
+  }
+  .chip:hover { border-color: rgba(92, 235, 196, 0.6); }
+  .chip[aria-pressed="true"] { background: var(--mint); border-color: var(--mint); color: var(--mint-ink); font-weight: 700; box-shadow: 0 0 24px rgba(92, 235, 196, 0.4); }
+  .status { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; min-height: 44px; }
+  .status p { margin: 0; color: var(--sub); font-size: 16px; }
+  .clear { background: none; border: 0; color: var(--mint); font: 600 15px var(--font); cursor: pointer; padding: 10px 0; }
+  .clear:hover { text-decoration: underline; }
+  .car-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 20px; }
+  @media (max-width: 1000px) { .car-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 720px) { .car-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px; } }
+  @media (max-width: 420px) { .car-grid { grid-template-columns: 1fr; } }
+  .empty { text-align: center; padding: 48px 24px; border: 1px dashed rgba(160, 230, 205, 0.28); border-radius: 20px; }
+  .empty[hidden] { display: none; }
+  .empty h2 { font-size: 24px; }
+  .empty p { color: var(--sub); margin: 10px 0 20px; }
+  .app-note { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; margin-top: 32px; }
+  .app-note h2 { font-size: clamp(24px, 3vw, 32px); }
+  .app-note p { max-width: 560px; }
+</style>
+
+<script>
+  // Search and type filters for the Explore page. The page works without this script: every car is listed.
+  const root = document.querySelector<HTMLElement>("[data-explore]");
+  if (root) {
+    const tiles = [...root.querySelectorAll<HTMLElement>("[data-tile]")];
+    const input = root.querySelector<HTMLInputElement>("input[name=q]")!;
+    const form = root.querySelector<HTMLFormElement>("[data-search]")!;
+    const chips = [...root.querySelectorAll<HTMLButtonElement>("[data-chip]")];
+    const count = root.querySelector<HTMLElement>("[data-count]")!;
+    const empty = root.querySelector<HTMLElement>("[data-empty]")!;
+    const clears = [...root.querySelectorAll<HTMLButtonElement>("[data-clear]")];
+    const params = new URLSearchParams(location.search);
+    let query = (params.get("q") ?? "").trim();
+    let type = chips.some((c) => c.dataset.chip === params.get("type")) ? params.get("type")! : "All";
+
+    const matchesType = (t: HTMLElement) =>
+      type === "All" ||
+      t.dataset.type === type ||
+      (type === "Electric" && t.dataset.fuel === "Electric") ||
+      (type === "Hybrid" && (t.dataset.fuel ?? "").startsWith("Hybrid"));
+
+    function apply(updateUrl = true) {
+      // "trucks" should find "truck": drop a trailing s from each word before matching.
+      const words = query.toLowerCase().split(/\s+/).filter(Boolean).map((w) => (w.length > 3 ? w.replace(/s$/, "") : w));
+      let shown = 0;
+      for (const t of tiles) {
+        const ok = matchesType(t) && words.every((w) => (t.dataset.text ?? "").includes(w));
+        t.hidden = !ok;
+        if (ok) shown++;
+      }
+      chips.forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.chip === type)));
+      const what = type === "All" ? "models" : `${type} models`;
+      count.textContent = query
+        ? `${shown} ${shown === 1 ? "result" : "results"} for “${query}”${type === "All" ? "" : ` in ${type}`}`
+        : type === "All" ? `All ${shown} models` : `${shown} ${what}`;
+      empty.hidden = shown !== 0;
+      clears[0].hidden = !query && type === "All";
+      if (updateUrl) {
+        const next = new URLSearchParams();
+        if (query) next.set("q", query);
+        if (type !== "All") next.set("type", type);
+        const qs = next.toString();
+        history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
+      }
+    }
+
+    input.value = query;
+    input.addEventListener("input", () => { query = input.value.trim(); apply(); });
+    form.addEventListener("submit", (e) => { e.preventDefault(); query = input.value.trim(); apply(); input.blur(); });
+    chips.forEach((c) => c.addEventListener("click", () => { type = c.dataset.chip!; apply(); }));
+    clears.forEach((b) => b.addEventListener("click", () => { query = ""; type = "All"; input.value = ""; apply(); }));
+    apply(false);
+  }
+</script>

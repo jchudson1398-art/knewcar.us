@@ -1,0 +1,28 @@
+---
+// The search bar that sits right above a car grid. Submitting it opens /explore with the results loaded.
+interface Props { value?: string; id?: string }
+const { value = "", id = "car-search" } = Astro.props;
+---
+
+<form class="search" role="search" action="/explore" method="get" data-search>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+  <label class="sr" for={id}>Search cars</label>
+  <input id={id} type="search" name="q" value={value} placeholder="Search make, model or type, like “truck” or “hybrid SUV”" autocomplete="off" enterkeyhint="search" />
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<style>
+  .search {
+    display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 8px 8px 22px; border-radius: 999px;
+    border: 1px solid rgba(92, 235, 196, 0.4); background: rgba(12, 38, 32, 0.9); color: var(--mint);
+    box-shadow: 0 0 0 1px rgba(92, 235, 196, 0.25), 0 0 40px rgba(92, 235, 196, 0.16), 0 24px 60px rgba(0, 0, 0, 0.45);
+  }
+  .search:focus-within { box-shadow: 0 0 0 2px var(--mint), 0 0 50px rgba(92, 235, 196, 0.3), 0 24px 60px rgba(0, 0, 0, 0.45); }
+  .search svg { flex: none; }
+  input { flex: 1; min-width: 0; height: 48px; border: 0; background: transparent; color: var(--text); font: 500 17px var(--font); }
+  input::placeholder { color: var(--faint); }
+  input:focus { outline: none; }
+  .btn { height: 50px; border-radius: 999px; flex: none; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  @media (max-width: 520px) { .search { padding-left: 16px; } .btn { padding: 0 18px; } }
+</style>

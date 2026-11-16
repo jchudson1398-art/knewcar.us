@@ -1,6 +1,6 @@
 # knewcar.us — KnewCar website
 
-The public site for knewcar.us: Home, How it works + FAQ, Pricing, Privacy, Terms. Built with Astro as a static site.
+The public site for knewcar.us: Home, Explore (search every model), How it works + FAQ, Pricing, Privacy, Terms. Built with Astro as a static site.
 
 ## Run it locally
 
@@ -16,6 +16,17 @@ npm run build    # static files in dist/
 - `src/pages/`: one file per page.
 - `src/components/`: header, footer, phone frame, waitlist form, icons.
 - `public/img/`: app screenshots, the mountain photo, and the social share image.
+- `public/img/cars/`, `src/data/catalog.json`: the car snapshot the Home and Explore grids use (below).
+- `public/img/app/`, `public/video/`: the app screens in the home slider and the launch video.
+
+## Car catalog snapshot
+
+Home and Explore list one card per model from a snapshot, not a live query: the catalog tables are not readable
+by logged-out visitors. `src/data/catalog.json` holds make, model, latest model year, body type and powertrain for
+the eleven brands the app shows; `public/img/cars/<key>.webp` is each model's published card photo at 560px. The
+site shows no prices, payments or offers. To refresh after the catalog changes, export the rows and body categories
+again and run `python3 scripts/build-catalog.py rows.txt categories.json` (the script's header explains the input),
+then replace the photos.
 
 ## Waitlist
 

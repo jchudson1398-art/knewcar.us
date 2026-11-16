@@ -1,0 +1,49 @@
+---
+// One car in the grid: photo, make and year, model. No prices or payments on the website.
+import { APP_STORE_URL } from "../site";
+import { carImage, carName, carSearchText, type Car } from "../lib/catalog";
+interface Props { car: Car; eager?: boolean }
+const { car, eager = false } = Astro.props;
+---
+
+<article class="tile" data-tile data-text={carSearchText(car)} data-type={car.type ?? ""} data-fuel={car.fuel ?? ""}>
+  <a class="frame" href={APP_STORE_URL} aria-label={`${carName(car)}: see it in the KnewCar app`} data-link>
+    <img src={carImage(car)} alt={carName(car)} width="560" height="420" loading={eager ? "eager" : "lazy"} decoding="async" data-img />
+    <span class="tag" data-tag hidden={!car.type}>{car.type}</span>
+    <span class="fuel" data-fuel-tag hidden={!car.fuel}>{car.fuel}</span>
+    <span class="open" aria-hidden="true">See it in the app</span>
+  </a>
+  <div class="info">
+    <p class="meta" data-meta>{car.make} · {car.year}</p>
+    <h3 data-name>{car.model}</h3>
+  </div>
+</article>
+
+<style>
+  .tile { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .tile[hidden] { display: none; }
+  .frame {
+    position: relative; display: block; padding: 22px 20px; border-radius: 20px; overflow: hidden;
+    background: #0b221c; border: 1px solid rgba(160, 230, 205, 0.1);
+    transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+  }
+  .frame img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; box-shadow: 0 18px 36px rgba(0, 0, 0, 0.45); transition: transform .5s ease; }
+  .frame:hover, .frame:focus-visible { border-color: rgba(92, 235, 196, 0.55); box-shadow: 0 0 0 1px rgba(92, 235, 196, 0.25), 0 24px 60px rgba(92, 235, 196, 0.14); transform: translateY(-3px); text-decoration: none; }
+  .frame:hover img { transform: scale(1.03); }
+  .tag, .fuel {
+    position: absolute; top: 10px; font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px;
+    background: rgba(4, 20, 15, 0.78); border: 1px solid rgba(160, 230, 205, 0.18); color: rgba(232, 243, 238, 0.92);
+  }
+  .tag { left: 12px; }
+  .fuel { right: 12px; color: var(--mint); border-color: rgba(92, 235, 196, 0.35); }
+  .open {
+    position: absolute; left: 50%; bottom: 32px; transform: translate(-50%, 8px); opacity: 0; white-space: nowrap;
+    font-size: 13px; font-weight: 700; padding: 10px 16px; border-radius: 999px; background: var(--mint); color: var(--mint-ink);
+    transition: opacity .2s ease, transform .2s ease;
+  }
+  .frame:hover .open, .frame:focus-visible .open { opacity: 1; transform: translate(-50%, 0); }
+  .info { padding: 0 4px; }
+  .meta { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+  h3 { margin-top: 4px; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; overflow-wrap: anywhere; }
+  @media (prefers-reduced-motion: reduce) { .frame, .frame img, .open { transition: none; } }
+</style>
