@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import CarTile from "../components/CarTile.astro";
 import SearchBar from "../components/SearchBar.astro";
-import { CATALOG, carImage } from "../lib/catalog";
+import { CATALOG, CONFIG_TOTAL, carImage } from "../lib/catalog";
 import { APP_STORE_URL } from "../site";
 
 // The home grid shows 8 rows of 4. Which 32 is reshuffled in the browser on every visit (script below); this
@@ -71,7 +71,10 @@ const steps = [
   <section class="wrap listings" id="cars">
     <SearchBar />
     <div class="list-head">
-      <h2>Available <span class="mint">now</span></h2>
+      <div>
+        <h2>Available <span class="mint">now</span></h2>
+        <p class="tally">{CONFIG_TOTAL.toLocaleString("en-US")} configurations across {CATALOG.length} models, all in the app.</p>
+      </div>
       <a class="btn btn-primary" href="/explore">Explore all your options <span aria-hidden="true">→</span></a>
     </div>
     <div class="car-grid" data-home-grid>
@@ -80,7 +83,7 @@ const steps = [
     <div class="more">
       <a class="btn btn-ghost" href="/explore">See all {CATALOG.length} models</a>
     </div>
-    <script type="application/json" id="catalog-data" set:html={JSON.stringify(CATALOG.map((c) => [c.key, c.make, c.model, c.year, c.type, c.fuel]))} />
+    <script type="application/json" id="catalog-data" set:html={JSON.stringify(CATALOG.map((c) => [c.key, c.make, c.model, c.year, c.type, c.fuel, c.configs]))} />
   </section>
 
   <!-- The app: a slider that walks through the real screens -->
@@ -197,6 +200,7 @@ const steps = [
   .listings { display: flex; flex-direction: column; gap: 22px; padding-top: 8px; padding-bottom: 40px; scroll-margin-top: 90px; }
   .list-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
   .list-head h2 { font-size: clamp(26px, 3vw, 34px); }
+  .tally { margin: 6px 0 0; color: var(--sub); font-size: 15px; }
   .list-head .btn { height: 48px; border-radius: 999px; }
   .car-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 20px; }
   .more { display: flex; justify-content: center; padding-top: 12px; }
@@ -252,7 +256,7 @@ const steps = [
   const grid = document.querySelector<HTMLElement>("[data-home-grid]");
   const raw = document.getElementById("catalog-data")?.textContent;
   if (grid && raw) {
-    type Row = [key: string, make: string, model: string, year: number, type: string | null, fuel: string | null];
+    type Row = [key: string, make: string, model: string, year: number, type: string | null, fuel: string | null, configs: number];
     const all = JSON.parse(raw) as Row[];
     for (let i = all.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -261,12 +265,16 @@ const steps = [
     grid.querySelectorAll<HTMLElement>("[data-tile]").forEach((tile, i) => {
       const row = all[i];
       if (!row) return;
-      const [key, make, model, year, type, fuel] = row;
+      const [key, make, model, year, type, fuel, configs] = row;
       const name = `${year} ${make} ${model}`;
       const img = tile.querySelector<HTMLImageElement>("[data-img]")!;
       img.src = `/img/cars/${key}.webp`;
       img.alt = name;
-      tile.querySelector("[data-link]")!.setAttribute("aria-label", `${name}: see it in the KnewCar app`);
+      const link = tile.querySelector<HTMLAnchorElement>("[data-link]")!;
+      link.href = `/cars/${key}/`;
+      link.setAttribute("aria-label", `${name}: see all trims`);
+      tile.querySelector<HTMLAnchorElement>("[data-link2]")!.href = `/cars/${key}/`;
+      tile.querySelector("[data-configs]")!.textContent = `${configs} ${configs === 1 ? "configuration" : "configurations"} in the app`;
       tile.querySelector("[data-meta]")!.textContent = `${make} · ${year}`;
       tile.querySelector("[data-name]")!.textContent = model;
       const tag = tile.querySelector<HTMLElement>("[data-tag]")!;

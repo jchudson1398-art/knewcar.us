@@ -1,6 +1,6 @@
 # knewcar.us — KnewCar website
 
-The public site for knewcar.us: Home, Explore (search every model), How it works + FAQ, Pricing, Privacy, Terms. Built with Astro as a static site.
+The public site for knewcar.us: Home, Explore (search every model), a page per car with its trims, How it works + FAQ, Pricing, Privacy, Terms. Built with Astro as a static site.
 
 ## Run it locally
 
@@ -21,12 +21,15 @@ npm run build    # static files in dist/
 
 ## Car catalog snapshot
 
-Home and Explore list one card per model from a snapshot, not a live query: the catalog tables are not readable
-by logged-out visitors. `src/data/catalog.json` holds make, model, latest model year, body type and powertrain for
-the eleven brands the app shows; `public/img/cars/<key>.webp` is each model's published card photo at 560px. The
-site shows no prices, payments or offers. To refresh after the catalog changes, export the rows and body categories
-again and run `python3 scripts/build-catalog.py rows.txt categories.json` (the script's header explains the input),
-then replace the photos.
+Home, Explore and the car pages (`/cars/<make-model>/`) come from a snapshot, not a live query: the catalog tables
+are not readable by logged-out visitors. `src/data/catalog.json` holds, for the eleven brands the app shows, each
+model's make, latest model year, body type, powertrain, the trims of that year with their drivetrains, and how many
+configurations the app has for the model. `public/img/cars/<key>.webp` is each model's published card photo at
+560px. The site shows no prices, payments or offers.
+
+To refresh after the catalog changes, re-export `scripts/catalog-rows.txt`, `scripts/catalog-categories.json` and
+`scripts/trims.txt` (formats are in each file and in the script header), run
+`python3 scripts/build-catalog.py scripts/catalog-rows.txt scripts/catalog-categories.json`, and replace the photos.
 
 ## Waitlist
 

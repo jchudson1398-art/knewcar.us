@@ -5,6 +5,8 @@ Input: a rows file exported from the catalog (one line per model, latest model y
 with the app's own rule (vehicle-intelligence-platform supabase/functions/_shared/catalog/body_category.ts).
 Photos are saved separately as public/img/cars/<key>.webp. No prices, payments or offers are exported.
 
+Trims and the number of configurations the app has for each model come from scripts/trims.txt (same export).
+
 usage: python3 scripts/build-catalog.py rows.txt categories.json
 """
 import json, re, sys
@@ -32,10 +34,18 @@ def fuel(make, model):
     if full in HYBRID_AVAILABLE: return "Hybrid available"
     return None
 
+DT = {"a": "AWD", "f": "FWD", "r": "RWD", "4": "4WD"}
+trims = {}
+for l in open("scripts/trims.txt").read().strip().split("\n"):
+    if l.startswith("#"): continue
+    mk, md, total, years, ts = l.split("|")
+    trims[(mk, md)] = {"configs": int(total), "years": [int(y) for y in years.split(",")],
+                       "trims": [{"name": t.split("~")[0], "drive": [DT[c] for c in t.split("~")[1]]} for t in ts.split(";")]}
+
 out = []
 for (make, model, year, _bs, ntrims, *_), cat in zip(rows, cats):
     display = model[len(make) + 1:] if model.lower().startswith(make.lower() + " ") else model
     out.append({"key": f"{slug(make)}-{slug(model)}", "make": make, "model": display, "year": int(year),
-                "type": cat, "fuel": fuel(make, model), "trims": int(ntrims)})
+                "type": cat, "fuel": fuel(make, model), **trims[(make, model)]})
 json.dump(out, open("src/data/catalog.json", "w"), indent=1)
-print(len(out), "models;", sorted({c["type"] or "none" for c in out}))
+print(sum(c["configs"] for c in out), "configurations;", len(out), "models;", sorted({c["type"] or "none" for c in out}))

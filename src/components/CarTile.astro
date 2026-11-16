@@ -1,21 +1,22 @@
 ---
-// One car in the grid: photo, make and year, model. No prices or payments on the website.
-import { APP_STORE_URL } from "../site";
-import { carImage, carName, carSearchText, type Car } from "../lib/catalog";
+// One car in the grid: photo, make and year, model, and how many configurations the app has. It opens the
+// car's page with every trim. No prices or payments on the website.
+import { carImage, carName, carSearchText, carUrl, configsLabel, type Car } from "../lib/catalog";
 interface Props { car: Car; eager?: boolean }
 const { car, eager = false } = Astro.props;
 ---
 
 <article class="tile" data-tile data-text={carSearchText(car)} data-type={car.type ?? ""} data-fuel={car.fuel ?? ""}>
-  <a class="frame" href={APP_STORE_URL} aria-label={`${carName(car)}: see it in the KnewCar app`} data-link>
+  <a class="frame" href={carUrl(car)} aria-label={`${carName(car)}: see all trims`} data-link>
     <img src={carImage(car)} alt={carName(car)} width="560" height="420" loading={eager ? "eager" : "lazy"} decoding="async" data-img />
     <span class="tag" data-tag hidden={!car.type}>{car.type}</span>
     <span class="fuel" data-fuel-tag hidden={!car.fuel}>{car.fuel}</span>
-    <span class="open" aria-hidden="true">See it in the app</span>
+    <span class="open" aria-hidden="true">See all trims</span>
   </a>
   <div class="info">
     <p class="meta" data-meta>{car.make} · {car.year}</p>
-    <h3 data-name>{car.model}</h3>
+    <h3><a href={carUrl(car)} data-name data-link2>{car.model}</a></h3>
+    <p class="configs" data-configs>{configsLabel(car.configs)}</p>
   </div>
 </article>
 
@@ -44,6 +45,8 @@ const { car, eager = false } = Astro.props;
   .frame:hover .open, .frame:focus-visible .open { opacity: 1; transform: translate(-50%, 0); }
   .info { padding: 0 4px; }
   .meta { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+  h3 a { color: var(--text); }
+  .configs { margin: 4px 0 0; font-size: 13px; font-weight: 600; color: var(--mint); }
   h3 { margin-top: 4px; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; overflow-wrap: anywhere; }
   @media (prefers-reduced-motion: reduce) { .frame, .frame img, .open { transition: none; } }
 </style>

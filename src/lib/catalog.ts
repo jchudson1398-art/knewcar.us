@@ -9,12 +9,20 @@ export interface Car {
   year: number;
   type: string | null;
   fuel: string | null;
-  trims: number;
+  /** How many configurations (trim, drivetrain, body) of this model the app has, across its model years. */
+  configs: number;
+  /** Model years in the app, newest first. */
+  years: number[];
+  /** Trims of the newest model year, with the drivetrains each comes in when the catalog records them. */
+  trims: { name: string; drive: string[] }[];
 }
 
 export const CATALOG = data as Car[];
 
 export const carName = (c: Car) => `${c.year} ${c.make} ${c.model}`;
+export const CONFIG_TOTAL = CATALOG.reduce((n, c) => n + c.configs, 0);
+export const carUrl = (c: Car) => `/cars/${c.key}/`;
+export const configsLabel = (n: number) => `${n} ${n === 1 ? "configuration" : "configurations"} in the app`;
 export const carImage = (c: Car) => `/img/cars/${c.key}.webp`;
 
 /** Words a shopper might type for each kind of car, added to what search matches. */

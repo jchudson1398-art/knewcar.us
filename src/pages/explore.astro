@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import CarTile from "../components/CarTile.astro";
 import SearchBar from "../components/SearchBar.astro";
-import { CATALOG, FILTERS } from "../lib/catalog";
+import { CATALOG, CONFIG_TOTAL, FILTERS } from "../lib/catalog";
 import { APP_STORE_URL } from "../site";
 
 const cars = [...CATALOG].sort((a, b) => a.make.localeCompare(b.make) || a.model.localeCompare(b.model));
@@ -12,7 +12,7 @@ const brands = new Set(cars.map((c) => c.make)).size;
 <Base title="Explore all your options" description={`Browse and search ${cars.length} new models from ${brands} brands in one place. Trucks, SUVs, sedans, hybrids and electric cars.`}>
   <section class="page-head">
     <div class="wrap">
-      <p class="eyebrow">{cars.length} models · {brands} brands</p>
+      <p class="eyebrow">{cars.length} models · {brands} brands · {CONFIG_TOTAL.toLocaleString("en-US")} configurations in the app</p>
       <h1>Explore <span class="mint">all your options.</span></h1>
     </div>
   </section>

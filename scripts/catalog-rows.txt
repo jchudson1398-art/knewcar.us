@@ -1,0 +1,145 @@
+Chevrolet|Blazer|2026||3|150f311e-035c-50fa-a153-9a246b2639e4|2026_chevrolet_blazer_2lt_awd_480349_lsy_hero_v1.png
+Chevrolet|Blazer EV|2027||3|37c5ae61-1f52-5b6f-b94a-940e2d1e0f11|2027_chevrolet_blazer_ev_lt_fwd_484975_en0_hero_v1.png
+Chevrolet|Bolt|2027||2|254aca67-d81b-51dc-8f44-5789f0481fad|2027_chevrolet_bolt_lt_fwd_481899_en0_hero_v1.png
+Chevrolet|Colorado|2026||6|7c2bdaaa-64b1-5ffc-85fd-235d6e05d97e|2026_chevrolet_colorado_custom_4wd_483306_l3b_hero_v1.png
+Chevrolet|Corvette Grand Sport|2027|Convertible|2|7f8881cd-8d7e-4142-9367-69f6de6b9870|2027_chevrolet_corvette_grand_sport_convertible_g484942_hero_v1.png
+Chevrolet|Corvette Stingray|2027|Convertible|2|89b6f5df-13f8-4341-b5a8-cd4ef7bfaccb|2027_chevrolet_corvette_stingray_convertible_g484926_hero_v1.png
+Chevrolet|Equinox|2027||3|401b94f4-75e1-5cc0-b5c1-92aa0d6d7454|2027_chevrolet_equinox_activ_awd_483493_lsd_hero_v1.png
+Chevrolet|Equinox EV|2027||3|da0f96b4-4f6a-5381-9a78-dca52f5a30d3|2027_chevrolet_equinox_ev_lt_1_awd_485857_en0_hero_v1.png
+Chevrolet|Express Cargo|2026||1|bca577a4-f7d1-445c-9e62-b1330fb073b6|2026_chevrolet_express_cargo_wt_g480779_hero_v1.png
+Chevrolet|Express Passenger|2026||2|5d04fb03-9947-49d4-b2cd-81a08dbd2090|2026_chevrolet_express_passenger_ls_g480995_hero_v1.png
+Chevrolet|Silverado 1500|2026||9|8fab5a8e-e763-463c-a248-2f28d732379d|2026_chevrolet_silverado_1500_custom_g474886_hero_v1.png
+Chevrolet|Silverado 2500 HD|2026||6|29855a03-6af0-4900-a547-c684d2f0f5ba|2026_chevrolet_silverado_2500_hd_custom_g476270_hero_v1.png
+Chevrolet|Silverado 3500 HD|2026||4|3e7cd884-cc7e-40ca-9c34-0e63d67d038a|2026_chevrolet_silverado_3500_hd_high_country_g477097_hero_v1.png
+Chevrolet|Silverado EV|2026||8|2d7826b1-83f3-55ca-8805-bcdbd18d4ac0|2026_chevrolet_silverado_ev_custom_standard_range_4wd_471782_en0_hero_v1.png
+Chevrolet|Suburban|2027||6|6fda933c-056c-4d0c-990d-3dc6aeb618f2|2027_chevrolet_suburban_high_country_g487617_hero_v1.png
+Chevrolet|Tahoe|2027||6|70bba7e2-8856-40c6-baa6-e6e597f857bc|2027_chevrolet_tahoe_high_country_g487607_hero_v1.png
+Chevrolet|Trailblazer|2026||4|b50c771e-ea35-583e-95b6-0be30f7ef608|2026_chevrolet_trailblazer_activ_awd_469988_l3t_hero_v1.png
+Chevrolet|Traverse|2027||4|0a889219-e884-53d5-b67a-4e3b6852703d|2027_chevrolet_traverse_high_country_fwd_484886_lk0_hero_v1.png
+Chevrolet|Trax|2026||5|dac4a12a-c870-592a-ab77-fb24d8bb8cab|2026_chevrolet_trax_1rs_fwd_473886_lbp_hero_v1.png
+Ford|Bronco|2026|2 Door|7|bde34262-01db-5b04-8d60-5f1f1d9193e5|2026_ford_bronco_badlands_2_door_hero_v1.png
+Ford|Bronco Sport|2026||4|f00f6e9e-de76-51d9-92e6-a3aed1f29eac|2026_ford_bronco_sport_badlands_hero_v1.png
+Ford|Expedition|2027||4|cf66f733-66d4-5ee1-a067-845109e204aa|2027_ford_expedition_active_hero_v1.png
+Ford|Explorer|2027||6|68c0b081-3a95-53c0-9a6d-8bba645dbc8b|2027_ford_explorer_active_hero_v1.png
+Ford|F-150|2026||8|581f6e32-41fa-5b19-8649-bf47beb84f70|2026_ford_f_150_king_ranch_hero_v1.png
+Ford|Maverick|2026||5|c57ad93e-f440-5c1a-b7c3-321ce7a7f2d9|2026_ford_maverick_lariat_hero_v1.png
+Ford|Mustang|2026||7|cf710440-d72b-5ad5-a009-b808c03ddff0|2026_ford_mustang_dark_horse_hero_v1.png
+Ford|Mustang Mach-E|2026||4|987b888a-f298-58dc-86b7-3e0db251166c|2026_ford_mustang_mach_e_gt_hero_v1.png
+Ford|Ranger|2026||4|d5f0bd6d-535e-59a5-bbef-c9e308bbd6c1|2026_ford_ranger_lariat_hero_v1.png
+Ford|Super Duty|2027||15|33ba7cc4-9b94-5246-8ce4-85680c1435fb|2027_ford_super_duty_f_250_king_ranch_hero_v1.png
+Ford|Transit|2027||2|3c677b2f-a8d0-5569-af96-81a78530cb63|2027_ford_transit_passenger_van_xl_hero_v1.png
+Honda|Accord|2026|Sedan|6|3018c716-e818-560b-af4a-69ec4075d563|2026_honda_accord_ex_l_hybrid_fwd_hero_v1.png
+Honda|Civic|2026|Sedan|6|a4d3a8c2-9127-5e3f-8eb4-e4e58a734bea|2026_honda_civic_sedan_lx_hero_v1.png
+Honda|CR-V|2027|SUV|7|851a771a-1d6b-5fef-baf7-eedfb1e4e8d0|2027_honda_crv_ex_awd_hero_v1.png
+Honda|HR-V|2027|SUV|3|dc066f6e-7da2-51fb-8292-81985467667f|2027_honda_hrv_ex_l_awd_hero_v1.png
+Honda|Odyssey|2027|Minivan|4|49d4520c-cd15-543c-a169-1eee7550797d|2027_honda_odyssey_elite_fwd_hero_v1.png
+Honda|Passport|2027|SUV|7|9e6d8395-28ce-5591-beae-07fb3a798a81|2027_honda_passport_rtl_awd_hero_v1.png
+Honda|Pilot|2026|SUV|7|93fdee80-9d63-5eb8-aa28-c509c991fb34|2026_honda_pilot_black_edition_awd_hero_v1.png
+Honda|Prelude|2027|Coupe|2|6adc3f5e-51d5-5a37-9c5a-1a6bc821e06e|2027_honda_prelude_hybrid_fwd_hero_v1.png
+Honda|Prologue|2026|SUV|3|0a5ad500-5c9e-599a-9535-bddab2c90c79|2026_honda_prologue_elite_awd_hero_v1.png
+Honda|Ridgeline|2026|Truck|6|4e9dae78-2d87-517a-aac7-4eab7751ed26|2026_honda_ridgeline_black_edition_awd_hero_v1.png
+Hyundai|ELANTRA|2026||7|0bd8aa54-8277-55f6-9ea8-feda0bf63676|2026_hyundai_elantra_limited_fwd_494m2f4s_hero_v1.png
+Hyundai|ELANTRA Hybrid|2026||3|020bb4b0-1b30-539c-9782-c31c139b9e98|2026_hyundai_elantra_hybrid_blue_fwd_494c2fbs_hero_v1.png
+Hyundai|IONIQ 5|2027||5|aab3572a-48fd-5c91-a93b-e3d1f18fe390|2027_hyundai_ioniq_5_limited_awd_i56aayczw5az_hero_v1.png
+Hyundai|IONIQ 5 N|2026||1|6d4e79da-6e59-5c06-b6b6-6d0ec50fceee|2026_hyundai_ioniq_5_n_n_awd_5n4a2aez_hero_v1.png
+Hyundai|IONIQ 9|2026||6|1ab48bd0-ca85-5b8c-932e-8e55fec7b51e|2026_hyundai_ioniq_9_calligraphy_awd_74492aez_hero_v1.png
+Hyundai|KONA|2027||4|76192a05-01bb-52f6-8682-f9571128d21c|2027_hyundai_kona_limited_awd_knnaad5gw5a5_hero_v1.png
+Hyundai|PALISADE|2027||7|a99e09cd-87f0-521e-8d8e-fdbaa04233d8|2027_hyundai_palisade_calligraphy_fwd_pltafj9aw7a5_hero_v1.png
+Hyundai|PALISADE Hybrid|2027||5|309e399c-3d2b-5ec1-8cd8-8688fa03c67b|2027_hyundai_palisade_hybrid_calligraphy_awd_plhaal9gw7as_hero_v1.png
+Hyundai|SANTA CRUZ|2026||5|013c4d9d-4b02-590b-91ba-7cccad566cf1|2026_hyundai_santa_cruz_limited_awd_90472at5_hero_v1.png
+Hyundai|SANTA FE|2027||5|6dacb56d-ae92-59f1-87a8-6a505452600c|2027_hyundai_santa_fe_calligraphy_awd_sfcaal9gw6a5_hero_v1.png
+Hyundai|SANTA FE Hybrid|2027||4|752709e7-61cd-5d9e-9f14-62d7cba24667|2027_hyundai_santa_fe_hybrid_calligraphy_awd_sfmaad5gw6as_hero_v1.png
+Hyundai|TUCSON|2026||7|5401cd24-dcf5-5c8a-bde9-f8df4f0549c0|2026_hyundai_tucson_limited_awd_85472a4s_hero_v1.png
+Hyundai|TUCSON Hybrid|2026||6|06ba1f70-0e41-529d-b230-0ddf7166d568|2026_hyundai_tucson_hybrid_limited_awd_854e2abs_hero_v1.png
+Hyundai|TUCSON Plug-in Hybrid|2026||2|d01eb94f-3dad-5cec-a707-77b5068d88ea|2026_hyundai_tucson_plug_in_hybrid_limited_awd_854k2apt_hero_v1.png
+Hyundai|VENUE|2026||4|90004fd3-96c2-525a-a749-e55ef81deef1|2026_hyundai_venue_se_fwd_30402f45_hero_v1.png
+Jeep|Cherokee|2026||6|bb4fa5fb-11cb-5310-ae81-d555b45c3fd9|2026_jeep_cherokee_4x4_cuj202600kmjl74a_hero_v1.png
+Jeep|Compass|2026||6|3776eb74-a54e-55d4-8cc1-38ed907d8aca|2026_jeep_compass_85th_anniversary_edition_4x4_cuj202614mpjm74f_hero_v1.png
+Jeep|Gladiator|2026||13|1919997e-0a6f-52c1-a64a-afbb7f3a6b84|2026_jeep_gladiator_85th_anniversary_edition_4x4_cuj202611jtjl98c_hero_v1.png
+Jeep|Grand Cherokee|2026||22|4c92c3d1-6ec3-53e2-a26c-2dd14b382e34|2026_jeep_grand_cherokee_85th_anniversary_edition_4x4_cuj202620wljp74c_hero_v1.png
+Jeep|Grand Wagoneer|2026||19|21d9fa27-904a-5160-a3a2-a41d729e00f6|2026_jeep_grand_wagoneer_4x2_cuj202616wstm75a_hero_v1.png
+Jeep|Jeep Recon|2026||1|1199d6a2-4678-5374-a5ef-5a8892e50aa4|2026_jeep_recon_moab_cuj202622ejxh74a_hero_v1.png
+Jeep|Wrangler|2026||16|79a4ddcc-05c6-5510-9ded-2f484204e210|2026_jeep_wrangler_2_door_rubicon_cuj202610jljs72a_hero_v1.png
+Kia|Carnival MPV|2027||5|2860ae3f-f942-560e-9e5f-ebc18163c205|2027_kia_carnival_ex_fwd_mac4245_hero_v1.png
+Kia|Carnival MPV Hybrid|2027||4|83ac046a-4a1a-5eb4-9aa6-07fdae7227f5|2027_kia_carnival_hybrid_ex_fwd_mah4245_hero_v1.png
+Kia|EV3|2027||5|3c7bf68d-eb87-599c-8883-2bb5572af6af|2027_kia_ev3_gt_awd_9ae5485_hero_v1.png
+Kia|EV6|2026||4|22fd0ba8-297e-5fe0-bca9-5b6f2a2ac5cf|2026_kia_ev6_gt_line_awd_nae5465_hero_v1.png
+Kia|EV9|2026||5|b3b6c792-d1a5-5de6-b43e-b9a57c5822fc|2026_kia_ev9_gt_line_awd_pae5475_hero_v1.png
+Kia|K4|2026||5|46381b8a-f4ec-5f1e-a477-d4f06a22e3f7|2026_kia_k4_ex_fwd_2ac3244_hero_v1.png
+Kia|K4 Hatchback|2026||3|593bf434-3ff1-5b34-b545-67b53b2e83fc|2026_kia_k4_hatchback_ex_fwd_2ac3245_hero_v1.png
+Kia|K5|2027||3|8d49c7ae-9012-5048-8e5a-f81940d0431c|2027_kia_k5_gt_fwd_lac6284_hero_v1.png
+Kia|Niro|2027||5|8ba2b269-6d25-5d95-873e-a34d25766ffd|2027_kia_niro_ex_fwd_gah4245_hero_v1.png
+Kia|Niro EV|2026||2|b1dc70ad-8e15-591b-a1ee-a5788914b0e6|2026_kia_niro_ev_wave_fwd_gae1285_hero_v1.png
+Kia|Seltos|2027||5|7193e526-121a-5b6a-8d51-06ba4aed12fc|2027_kia_seltos_ex_fwd_kac2255_hero_v1.png
+Kia|Sorento|2026||8|e552a347-8399-5d4f-9834-f8ec37884387|2026_kia_sorento_ex_awd_7ac6455_hero_v1.png
+Kia|Sorento Hybrid|2026||3|896fec67-dc6e-5f08-b597-46add391464a|2026_kia_sorento_hybrid_ex_awd_7ah4445_hero_v1.png
+Kia|Sorento Plug-in Hybrid|2026||2|9151d0d1-8f81-5e55-89b3-c8e2fdc744b1|2026_kia_sorento_plug_in_hybrid_ex_awd_7ap4445_hero_v1.png
+Kia|Sportage|2027||6|d4f2aa59-1ec0-5066-ae49-5a933a3ce8b8|2027_kia_sportage_ex_awd_4ac2445_hero_v1.png
+Kia|Sportage Hybrid|2027||5|f8468ecd-d1b5-5775-997d-6a2c1f4385a0|2027_kia_sportage_hybrid_ex_fwd_4ah4245_hero_v1.png
+Kia|Sportage Plug-in Hybrid|2027||2|ff381f66-b9f2-5534-a92d-fbed10126ed3|2027_kia_sportage_plug_in_hybrid_x_line_awd_4ap4455_hero_v1.png
+Kia|Telluride|2027||10|45f58597-d540-5613-8926-172079085b81|2027_kia_telluride_ex_awd_jac4445_hero_v1.png
+Kia|Telluride Hybrid|2027||5|0f3d860d-d71c-5b73-960d-f5baf3da6148|2027_kia_telluride_hybrid_ex_awd_jah4445_hero_v1.png
+Mazda|CX-30|2026||8|e77d2e9a-b5dd-418a-b449-05e2ab3c8ca6|2026_mazda_cx_30_2_5_s_hero_v1.png
+Mazda|CX-5|2026||5|211aa750-b24b-4587-bdfe-3b6ef213706c|2026_mazda_cx_5_2_5_s_hero_v1.png
+Mazda|CX-50|2026||10|ce7f3a6f-edaf-4f7b-86fb-1e2613e40cde|2026_mazda_cx_50_2_5_s_meridian_edition_hero_v1.png
+Mazda|CX-70|2026||7|1e49cb9f-a4a9-46c9-a6be-618984f45075|2026_mazda_cx_70_3_3_turbo_preferred_hero_v1.png
+Mazda|CX-90|2026||9|47e4e587-1ce3-4ec9-b705-eb428c9c1291|2026_mazda_cx_90_3_3_turbo_preferred_hero_v1.png
+Mazda|Mazda3|2026|Sedan|6|8a4fa405-5919-4655-92af-5ac04ac1703c|2026_mazda_mazda3_sedan_2_5_s_hero_v1.png
+Mazda|MX-5 Miata|2026|Soft Top|3|f845b73e-f52c-49a7-b089-bf73003cea94|2026_mazda_mx_5_miata_soft_top_club_hero_v1.png
+Nissan|Altima|2026||8|50a67e0d-d039-5011-bf0f-1726485c831b|2026_nissan_altima_sr_fwd_13516_hero_v1.png
+Nissan|Armada|2027||10|1fa97a60-e25c-5c92-af7c-0df558124fcb|2027_nissan_armada_nismo_intelligent_4wd_29017_hero_v1.png
+Nissan|Frontier|2027||17|608fd6bf-a008-5d6a-8c40-5f8c65ec1ad4|2027_nissan_frontier_crew_cab_dark_armor_4x2_k05_32317_hero_v1.png
+Nissan|Kicks|2027||7|4b9d0234-3502-5a96-89f1-b37bde5cb9bb|2027_nissan_kicks_rock_creek_intelligent_awd_k01_21217_hero_v1.png
+Nissan|Murano|2027||4|8bc46235-80dc-5268-a350-b69a7bb40498|2027_nissan_murano_dark_armor_intelligent_awd_23317_hero_v1.png
+Nissan|Nissan LEAF|2026||3|5873aee9-6936-56d7-b602-7bdafdb89a25|2026_nissan_leaf_platinum_75_kwh_lithium_ion_battery_fwd_17316_hero_v1.png
+Nissan|Nissan Z|2027||8|0f79f1cc-a6fd-5885-8913-9bdc8652fe8e|2027_nissan_z_nismo_automatic_transmission_rwd_41217_hero_v1.png
+Nissan|Pathfinder|2026||7|245b272d-1c71-512a-9a95-a58706be8696|2026_nissan_pathfinder_platinum_2wd_52716_hero_v1.png
+Nissan|Rogue|2027||8|a781f963-d392-5d18-a35a-ed46e76bf733|2027_nissan_rogue_dark_armor_fwd_22517_hero_v1.png
+Nissan|Rogue Plug-in Hybrid|2026||2|aa726c13-2f80-5694-8ef6-fef00aa7cc13|2026_nissan_rogue_plug_in_hybrid_platinum_intelligent_awd_51216_hero_v1.png
+Nissan|Sentra|2027||5|ac1a0e7d-8cfd-54c0-b096-a83cdde5ef1e|2027_nissan_sentra_s_xtronic_cvt_fwd_12017_hero_v1.png
+Subaru|Ascent|2027||7|53a2fd05-4bdf-57fc-a6df-49bf8dca2fbd|2027_subaru_ascent_limited_7_passenger_vcl_cvt_hero_v1.png
+Subaru|BRZ|2027||2|39a555c9-0b1f-5d77-8059-408a668360ab|2027_subaru_brz_limited_vze_6mt_hero_v1.png
+Subaru|Crosstrek|2026||7|d3cc4f72-1483-5cb9-83a6-309f00b1aa2c|2026_subaru_crosstrek_base_tra_cvt_hero_v1.png
+Subaru|Forester|2026||10|f887d2bb-425b-5063-b0ee-79ac0309f069|2026_subaru_forester_base_tfb_cvt_hero_v1.png
+Subaru|Impreza|2026||3|8f6397e3-ba05-5d45-bd76-741135cd8a89|2026_subaru_impreza_rs_tlg_cvt_hero_v1.png
+Subaru|Outback|2026||9|e8b81cf7-5e92-50ae-81b1-59cc045e34d3|2026_subaru_outback_limited_tdf_cvt_hero_v1.png
+Subaru|Solterra|2026||5|77977f5e-28fe-5222-ac15-f2f840169e1d|2026_subaru_solterra_limited_teg_sst_hero_v1.png
+Subaru|Trailseeker|2027||4|9f8d12b2-364a-5260-8097-98673f326f74|2027_subaru_trailseeker_limited_vtf_sst_hero_v1.png
+Subaru|Uncharted|2027||3|61f17427-e558-5594-8fdd-4ae8ffb81736|2027_subaru_uncharted_gt_vwg_sst_hero_v1.png
+Subaru|WRX|2026||5|b5b7174f-f0f4-5d36-8ae6-f6fc36b5dd22|2026_subaru_wrx_base_tua_6mt_hero_v1.png
+Toyota|4Runner|2026||12|c3077206-d0f2-49a6-8ea5-920701fc88a6|2026_toyota_4runner_limited_rwd_8648_hero_v1.png
+Toyota|bZ|2027||2|a651cc5d-893d-4976-9c4a-d2f57a1632e1|2027_toyota_bz_limited_fwd_2880_hero_v1.png
+Toyota|bZ Woodland|2027||2|c2633d84-51f4-4cf3-90e5-0e1b5ec86e02|2027_toyota_bz_woodland_bz_woodland_awd_2860_hero_v1.png
+Toyota|C-HR|2027||2|f67bedae-1dee-4e74-b437-2357844d583a|2027_toyota_c_hr_se_awd_2416_hero_v1.png
+Toyota|Camry|2026||5|27954458-f4a0-4007-ae1c-9caf5f04b821|2026_toyota_camry_le_fwd_2559_hero_v1.png
+Toyota|Corolla|2027||6|288a07ce-f80e-488f-a399-36df53f25556|2027_toyota_corolla_hybrid_se_fwd_1886_hero_v1.png
+Toyota|Corolla Cross|2026||5|313bb5db-0106-4cd2-96e0-1ec451d68c9a|2026_toyota_corolla_cross_hybrid_se_awd_6314_hero_v1.png
+Toyota|Corolla Cross Hybrid|2026||1|c23937c3-a44b-46ac-b5be-0cacdc355851|2026_toyota_corolla_cross_hybrid_hybrid_s_awd_6312_hero_v1.png
+Toyota|Corolla Hatchback|2027||3|fc92b160-3b4c-4796-b65b-1ee60bcb4666|2027_toyota_corolla_hatchback_se_fwd_6272_hero_v1.png
+Toyota|GR Corolla|2026||3|bc79c26a-50b7-4cde-88da-9fea13ec7aa2|2026_toyota_gr_corolla_gr_corolla_awd_6281_hero_v1.png
+Toyota|GR Supra|2026||3|7ab46e13-b812-42af-93b8-ffb5fc5513bb|2026_toyota_gr_supra_3_0_rwd_2372_hero_v1.png
+Toyota|GR86|2027||3|2efd1651-1c0a-497e-9087-a6d517b73d3e|2027_toyota_gr86_gr86_rwd_6253_hero_v1.png
+Toyota|Grand Highlander|2026||10|10f4efd7-c230-4399-ab4f-278b3bde1d01|2026_toyota_grand_highlander_hybrid_limited_awd_6724_hero_v1.png
+Toyota|Highlander|2026||7|035b795e-8dcc-40d0-a935-69e2a50e6d2e|2026_toyota_highlander_hybrid_limited_awd_6966_hero_v1.png
+Toyota|Land Cruiser|2027||2|869dacba-b8ec-45d3-b806-615e868874e6|2027_toyota_land_cruiser_land_cruiser_4wd_6167_hero_v1.png
+Toyota|Prius|2027||10|32fb2b58-d899-4512-91cf-ab0c5b2b28db|2027_toyota_prius_le_fwd_1223_hero_v1.png
+Toyota|Prius Plug-in Hybrid|2027||5|c4a4e952-56ce-4b56-8ecd-e6e0b647445d|2027_toyota_prius_plug_in_hybrid_nightshade_fwd_1233_hero_v1.png
+Toyota|RAV4|2026||6|44f8a841-0a4f-4bb1-9564-6643b1bc2ca7|2026_toyota_rav4_le_fwd_4521_hero_v1.png
+Toyota|RAV4 Plug-in Hybrid|2026||4|56942e9b-02cb-431c-8faf-25b4e15ab1ed|2026_toyota_rav4_plug_in_hybrid_gr_sport_awd_4538_hero_v1.png
+Toyota|Sequoia|2026||6|5bc4b457-d34c-4948-ab3c-fcc48553835c|2026_toyota_sequoia_1794_edition_4wd_7957_hero_v1.png
+Toyota|Sienna|2026||6|f70bdec0-417e-40cc-8c57-805a59b8ac3a|2026_toyota_sienna_le_fwd_5402_hero_v1.png
+Toyota|Tacoma|2026||10|abc592db-7a71-4aa5-9bb7-590adcc082b6|2026_toyota_tacoma_limited_4wd_7582_hero_v1.png
+Toyota|Tacoma i-Force MAX|2026||1|a25af6a5-cd78-4105-99fb-886524edc1b0|2026_toyota_tacoma_i_force_max_trd_off_road_i_force_max_4wd_7532_hero_v1.png
+Toyota|Toyota Crown|2027||4|a57db6ae-63a5-475e-9bb5-b2578f743ca8|2027_toyota_toyota_crown_limited_awd_4020_hero_v1.png
+Toyota|Toyota Crown Signia|2026||2|a2b56d88-f2aa-43f6-8bfd-fedffc3f233e|2026_toyota_toyota_crown_signia_limited_awd_4041_hero_v1.png
+Toyota|Tundra|2026||6|9433c51f-c55d-4f47-9a22-a78966ed7479|2026_toyota_tundra_1794_edition_rwd_8276_hero_v1.png
+Toyota|Tundra i-FORCE MAX|2026||4|2e7be5e8-dadb-46ad-a497-3be713eb2682|2026_toyota_tundra_i_force_max_1794_edition_i_force_max_4wd_8423_hero_v1.png
+Volkswagen|Atlas|2026||5|859f0573-5382-52fe-9b3a-850e2e7a208a|2026_volkswagen_atlas_peak_edition_awd_ca37pr_maaue2v_gwa3wa3_hero_v1.png
+Volkswagen|Atlas Cross Sport|2026||5|8d4d716b-5741-5283-b675-5e7525f98092|2026_volkswagen_atlas_cross_sport_se_awd_cmd3pr_hero_v1.png
+Volkswagen|Golf GTI|2026||3|3a26a902-452e-5996-bdf7-627471fc3435|2026_volkswagen_golf_gti_autobahn_fwd_da19uz_gwogwog_hero_v1.png
+Volkswagen|Golf R|2026||1|0d0d2d41-a63a-544c-9abf-a9d47014772d|2026_volkswagen_golf_r_golf_r_awd_da1rpt_hero_v1.png
+Volkswagen|ID.4|2026||5|bee047a9-3217-5745-82a8-7951ef958c00|2026_volkswagen_id_4_awd_pro_awd_e813vn_hero_v1.png
+Volkswagen|Jetta|2027||4|cf9a06a2-4f84-5ddd-ad92-622ca7326656|2027_volkswagen_jetta_s_fwd_bu51rs_mrelv1q_hero_v1.png
+Volkswagen|Jetta GLI|2027||1|3c3ce2e3-917f-5460-a10e-be25c0be3043|2027_volkswagen_jetta_gli_autobahn_fwd_bu59vz_hero_v1.png
+Volkswagen|Taos|2027||5|79992fda-4517-5bf7-ab3a-945008895d42|2027_volkswagen_taos_s_awd_cl22sr_hero_v1.png
+Volkswagen|Tiguan|2026||4|25325abf-b952-58b1-be48-a67d80fc8f19|2026_volkswagen_tiguan_s_fwd_rm12ps_hero_v1.png

@@ -6,7 +6,33 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 3
+  "configs": 8,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "2LT",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "3LT",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "RS",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "chevrolet-blazer-ev",
@@ -15,7 +41,33 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 3
+  "configs": 10,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "LT",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "RS",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SS",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "chevrolet-bolt",
@@ -24,7 +76,24 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "LT",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "RS",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "chevrolet-colorado",
@@ -33,7 +102,48 @@
   "year": 2026,
   "type": "Truck",
   "fuel": null,
-  "trims": 6
+  "configs": 9,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Custom",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "LT",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "Trail Boss",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "WT",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "Z71",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "ZR2",
+    "drive": [
+     "4WD"
+    ]
+   }
+  ]
  },
  {
   "key": "chevrolet-corvette-grand-sport",
@@ -42,7 +152,20 @@
   "year": 2027,
   "type": "Convertible",
   "fuel": null,
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "Convertible",
+    "drive": []
+   },
+   {
+    "name": "Coupe",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "chevrolet-corvette-stingray",
@@ -51,7 +174,21 @@
   "year": 2027,
   "type": "Convertible",
   "fuel": null,
-  "trims": 2
+  "configs": 4,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Convertible",
+    "drive": []
+   },
+   {
+    "name": "Coupe",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "chevrolet-equinox",
@@ -60,7 +197,34 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 3
+  "configs": 12,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "ACTIV",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "LT",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "RS",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "chevrolet-equinox-ev",
@@ -69,7 +233,34 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 3
+  "configs": 12,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "LT 1",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "LT 2",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "RS",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "chevrolet-express-cargo",
@@ -78,7 +269,16 @@
   "year": 2026,
   "type": "Van",
   "fuel": null,
-  "trims": 1
+  "configs": 1,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "WT",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "chevrolet-express-passenger",
@@ -87,7 +287,20 @@
   "year": 2026,
   "type": "Van",
   "fuel": null,
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "LS",
+    "drive": []
+   },
+   {
+    "name": "LT",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "chevrolet-silverado-1500",
@@ -96,7 +309,48 @@
   "year": 2026,
   "type": "Truck",
   "fuel": null,
-  "trims": 9
+  "configs": 9,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Custom",
+    "drive": []
+   },
+   {
+    "name": "Custom Trail Boss",
+    "drive": []
+   },
+   {
+    "name": "High Country",
+    "drive": []
+   },
+   {
+    "name": "LT",
+    "drive": []
+   },
+   {
+    "name": "LT Trail Boss",
+    "drive": []
+   },
+   {
+    "name": "LTZ",
+    "drive": []
+   },
+   {
+    "name": "RST",
+    "drive": []
+   },
+   {
+    "name": "WT",
+    "drive": []
+   },
+   {
+    "name": "ZR2",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "chevrolet-silverado-2500-hd",
@@ -105,7 +359,36 @@
   "year": 2026,
   "type": "Truck",
   "fuel": null,
-  "trims": 6
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Custom",
+    "drive": []
+   },
+   {
+    "name": "High Country",
+    "drive": []
+   },
+   {
+    "name": "LT",
+    "drive": []
+   },
+   {
+    "name": "LTZ",
+    "drive": []
+   },
+   {
+    "name": "WT",
+    "drive": []
+   },
+   {
+    "name": "ZR2",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "chevrolet-silverado-3500-hd",
@@ -114,7 +397,28 @@
   "year": 2026,
   "type": "Truck",
   "fuel": null,
-  "trims": 4
+  "configs": 4,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "High Country",
+    "drive": []
+   },
+   {
+    "name": "LT",
+    "drive": []
+   },
+   {
+    "name": "LTZ",
+    "drive": []
+   },
+   {
+    "name": "WT",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "chevrolet-silverado-ev",
@@ -123,7 +427,60 @@
   "year": 2026,
   "type": "Truck",
   "fuel": "Electric",
-  "trims": 8
+  "configs": 8,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Custom - Standard Range",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "LT - Extended Range",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "LT - Max Range",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "LT - Standard Range",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "RST Stars and Steel Edition - Extended Range",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "RST Stars and Steel Edition - Max Range",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "Trail Boss - Extended Range",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "Trail Boss - Max Range",
+    "drive": [
+     "4WD"
+    ]
+   }
+  ]
  },
  {
   "key": "chevrolet-suburban",
@@ -132,7 +489,37 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 6
+  "configs": 12,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "High Country",
+    "drive": []
+   },
+   {
+    "name": "LS",
+    "drive": []
+   },
+   {
+    "name": "LT",
+    "drive": []
+   },
+   {
+    "name": "Premier",
+    "drive": []
+   },
+   {
+    "name": "RST",
+    "drive": []
+   },
+   {
+    "name": "Z71",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "chevrolet-tahoe",
@@ -141,7 +528,37 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 6
+  "configs": 12,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "High Country",
+    "drive": []
+   },
+   {
+    "name": "LS",
+    "drive": []
+   },
+   {
+    "name": "LT",
+    "drive": []
+   },
+   {
+    "name": "Premier",
+    "drive": []
+   },
+   {
+    "name": "RST",
+    "drive": []
+   },
+   {
+    "name": "Z71",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "chevrolet-trailblazer",
@@ -150,7 +567,38 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 4
+  "configs": 8,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "ACTIV",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "LS",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "LT",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "RS",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "chevrolet-traverse",
@@ -159,7 +607,40 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 4
+  "configs": 14,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "High Country",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "LT",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "RS",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "Z71",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "chevrolet-trax",
@@ -168,7 +649,42 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 5
+  "configs": 5,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "1RS",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "2RS",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "ACTIV",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "LS",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "LT",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "ford-bronco",
@@ -177,7 +693,40 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 7
+  "configs": 7,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Badlands",
+    "drive": []
+   },
+   {
+    "name": "Base",
+    "drive": []
+   },
+   {
+    "name": "Big Bend",
+    "drive": []
+   },
+   {
+    "name": "Heritage Edition",
+    "drive": []
+   },
+   {
+    "name": "Outer Banks",
+    "drive": []
+   },
+   {
+    "name": "Raptor",
+    "drive": []
+   },
+   {
+    "name": "Stroppe Edition",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "ford-bronco-sport",
@@ -186,7 +735,28 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 4
+  "configs": 4,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Badlands",
+    "drive": []
+   },
+   {
+    "name": "Big Bend",
+    "drive": []
+   },
+   {
+    "name": "Heritage",
+    "drive": []
+   },
+   {
+    "name": "Outer Banks",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "ford-expedition",
@@ -195,7 +765,29 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 4
+  "configs": 8,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Active",
+    "drive": []
+   },
+   {
+    "name": "King Ranch",
+    "drive": []
+   },
+   {
+    "name": "Platinum",
+    "drive": []
+   },
+   {
+    "name": "Tremor",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "ford-explorer",
@@ -204,7 +796,33 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 6
+  "configs": 11,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Active",
+    "drive": []
+   },
+   {
+    "name": "Platinum",
+    "drive": []
+   },
+   {
+    "name": "ST",
+    "drive": []
+   },
+   {
+    "name": "ST-Line",
+    "drive": []
+   },
+   {
+    "name": "Tremor",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "ford-f-150",
@@ -213,7 +831,44 @@
   "year": 2026,
   "type": "Truck",
   "fuel": null,
-  "trims": 8
+  "configs": 8,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "King Ranch",
+    "drive": []
+   },
+   {
+    "name": "Lariat",
+    "drive": []
+   },
+   {
+    "name": "Platinum",
+    "drive": []
+   },
+   {
+    "name": "Raptor",
+    "drive": []
+   },
+   {
+    "name": "STX",
+    "drive": []
+   },
+   {
+    "name": "Tremor",
+    "drive": []
+   },
+   {
+    "name": "XL",
+    "drive": []
+   },
+   {
+    "name": "XLT",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "ford-maverick",
@@ -222,7 +877,35 @@
   "year": 2026,
   "type": "Truck",
   "fuel": "Hybrid available",
-  "trims": 5
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Lariat",
+    "drive": []
+   },
+   {
+    "name": "Lobo",
+    "drive": []
+   },
+   {
+    "name": "Tremor",
+    "drive": []
+   },
+   {
+    "name": "XL",
+    "drive": []
+   },
+   {
+    "name": "XLT",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "ford-mustang",
@@ -231,7 +914,40 @@
   "year": 2026,
   "type": "Coupe",
   "fuel": null,
-  "trims": 7
+  "configs": 7,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Dark Horse",
+    "drive": []
+   },
+   {
+    "name": "Dark Horse Premium",
+    "drive": []
+   },
+   {
+    "name": "Dark Horse SC",
+    "drive": []
+   },
+   {
+    "name": "EcoBoost Fastback",
+    "drive": []
+   },
+   {
+    "name": "EcoBoost Premium Fastback",
+    "drive": []
+   },
+   {
+    "name": "GT Fastback",
+    "drive": []
+   },
+   {
+    "name": "GT Premium Fastback",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "ford-mustang-mach-e",
@@ -240,7 +956,28 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 4
+  "configs": 4,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "GT",
+    "drive": []
+   },
+   {
+    "name": "Premium",
+    "drive": []
+   },
+   {
+    "name": "Rally",
+    "drive": []
+   },
+   {
+    "name": "Select",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "ford-ranger",
@@ -249,7 +986,28 @@
   "year": 2026,
   "type": "Truck",
   "fuel": null,
-  "trims": 4
+  "configs": 4,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Lariat",
+    "drive": []
+   },
+   {
+    "name": "Raptor",
+    "drive": []
+   },
+   {
+    "name": "XL",
+    "drive": []
+   },
+   {
+    "name": "XLT",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "ford-super-duty",
@@ -258,7 +1016,73 @@
   "year": 2027,
   "type": "Truck",
   "fuel": null,
-  "trims": 15
+  "configs": 30,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "F-250 King Ranch",
+    "drive": []
+   },
+   {
+    "name": "F-250 Lariat",
+    "drive": []
+   },
+   {
+    "name": "F-250 Platinum",
+    "drive": []
+   },
+   {
+    "name": "F-250 XL",
+    "drive": []
+   },
+   {
+    "name": "F-250 XLT",
+    "drive": []
+   },
+   {
+    "name": "F-350 King Ranch",
+    "drive": []
+   },
+   {
+    "name": "F-350 Lariat",
+    "drive": []
+   },
+   {
+    "name": "F-350 Platinum",
+    "drive": []
+   },
+   {
+    "name": "F-350 XL",
+    "drive": []
+   },
+   {
+    "name": "F-350 XLT",
+    "drive": []
+   },
+   {
+    "name": "F-450 King Ranch",
+    "drive": []
+   },
+   {
+    "name": "F-450 Lariat",
+    "drive": []
+   },
+   {
+    "name": "F-450 Platinum",
+    "drive": []
+   },
+   {
+    "name": "F-450 XL",
+    "drive": []
+   },
+   {
+    "name": "F-450 XLT",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "ford-transit",
@@ -267,7 +1091,20 @@
   "year": 2027,
   "type": "Van",
   "fuel": null,
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "Passenger Van XL",
+    "drive": []
+   },
+   {
+    "name": "Passenger Van XLT",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "honda-accord",
@@ -276,7 +1113,48 @@
   "year": 2026,
   "type": "Sedan",
   "fuel": "Hybrid available",
-  "trims": 6
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "EX-L Hybrid",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "LX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Sport Hybrid",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Sport-L Hybrid",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Touring Hybrid",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "honda-civic",
@@ -285,7 +1163,48 @@
   "year": 2026,
   "type": "Sedan",
   "fuel": "Hybrid available",
-  "trims": 6
+  "configs": 9,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "LX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Si",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Sport",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Sport Hybrid",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Sport Touring Hybrid",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Type R",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "honda-cr-v",
@@ -294,7 +1213,60 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Hybrid available",
-  "trims": 7
+  "configs": 19,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "EX",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "EX-L",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "LX",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "Sport Hybrid",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "Sport Touring Hybrid",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Sport-L Hybrid",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "TrailSport Hybrid",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "honda-hr-v",
@@ -303,7 +1275,33 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 3
+  "configs": 6,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "EX-L",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "LX",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "Sport",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "honda-odyssey",
@@ -312,7 +1310,37 @@
   "year": 2027,
   "type": "Minivan",
   "fuel": null,
-  "trims": 4
+  "configs": 7,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Elite",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "EX-L",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Sport-L",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Touring",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "honda-passport",
@@ -321,7 +1349,49 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 7
+  "configs": 13,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "RTL",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "RTL Towing",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "TrailSport",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "TrailSport Blackout",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "TrailSport Elite",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "TrailSport Elite Blackout",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "honda-pilot",
@@ -330,7 +1400,56 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 7
+  "configs": 9,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Black Edition",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Elite",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "EX-L",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "Sport",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "Touring",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Touring Blackout",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "TrailSport",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "honda-prelude",
@@ -339,7 +1458,24 @@
   "year": 2027,
   "type": "Coupe",
   "fuel": "Hybrid",
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "Hybrid",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Hybrid Two-Tone",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "honda-prologue",
@@ -348,7 +1484,32 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 3
+  "configs": 5,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Elite",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "EX",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "Touring",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "honda-ridgeline",
@@ -357,7 +1518,48 @@
   "year": 2026,
   "type": "Truck",
   "fuel": null,
-  "trims": 6
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Black Edition",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Black Edition Two-Tone",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "RTL",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Sport",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "TrailSport",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "TrailSport+HPD Wheels",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-elantra",
@@ -366,7 +1568,48 @@
   "year": 2026,
   "type": "Sedan",
   "fuel": null,
-  "trims": 7
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "N Line",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL Sport",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL Sport Plus",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL Sport Premium",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-elantra-hybrid",
@@ -375,7 +1618,30 @@
   "year": 2026,
   "type": "Sedan",
   "fuel": "Hybrid",
-  "trims": 3
+  "configs": 3,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Blue",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL Sport",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-ioniq-5",
@@ -384,7 +1650,45 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 5
+  "configs": 8,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD",
+     "RWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "AWD",
+     "RWD"
+    ]
+   },
+   {
+    "name": "SE Standard Range",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "AWD",
+     "RWD"
+    ]
+   },
+   {
+    "name": "XRT",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-ioniq-5-n",
@@ -393,7 +1697,18 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 1
+  "configs": 1,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "N",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-ioniq-9",
@@ -402,7 +1717,48 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 6
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Calligraphy",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Calligraphy Design",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "S",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-kona",
@@ -411,7 +1767,25 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 4
+  "configs": 6,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SEL Premium",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-palisade",
@@ -420,7 +1794,54 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 7
+  "configs": 24,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Calligraphy",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL Premium",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "XRT PRO",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-palisade-hybrid",
@@ -429,7 +1850,48 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 5
+  "configs": 18,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Calligraphy",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "Calligraphy Black Ink",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL Premium",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-santa-cruz",
@@ -438,7 +1900,39 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 5
+  "configs": 7,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL Activity",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-santa-fe",
@@ -447,7 +1941,43 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 5
+  "configs": 13,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Calligraphy",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "XRT",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-santa-fe-hybrid",
@@ -456,7 +1986,37 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 4
+  "configs": 12,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Calligraphy",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-tucson",
@@ -465,7 +2025,53 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 7
+  "configs": 11,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL Plus",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL Premium",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "XRT",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-tucson-hybrid",
@@ -474,7 +2080,38 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 6
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL Convenience",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-tucson-plug-in-hybrid",
@@ -483,7 +2120,24 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "hyundai-venue",
@@ -492,7 +2146,30 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 4
+  "configs": 3,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "SE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL w/ 2-Tone Roof",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "jeep-cherokee",
@@ -501,7 +2178,36 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 6
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Cherokee 4x4",
+    "drive": []
+   },
+   {
+    "name": "85th Anniversary Edition 4x4",
+    "drive": []
+   },
+   {
+    "name": "Laredo 4x4",
+    "drive": []
+   },
+   {
+    "name": "Limited 4x4",
+    "drive": []
+   },
+   {
+    "name": "Limited Altitude 4x4",
+    "drive": []
+   },
+   {
+    "name": "Overland 4x4",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "jeep-compass",
@@ -510,7 +2216,36 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 6
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "85th Anniversary Edition 4x4",
+    "drive": []
+   },
+   {
+    "name": "Latitude 4x4",
+    "drive": []
+   },
+   {
+    "name": "Latitude Altitude 4x4",
+    "drive": []
+   },
+   {
+    "name": "Limited 4x4",
+    "drive": []
+   },
+   {
+    "name": "Limited Altitude 4x4",
+    "drive": []
+   },
+   {
+    "name": "Trailhawk 4x4",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "jeep-gladiator",
@@ -519,7 +2254,64 @@
   "year": 2026,
   "type": "Truck",
   "fuel": null,
-  "trims": 13
+  "configs": 13,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "85th Anniversary Edition 4x4",
+    "drive": []
+   },
+   {
+    "name": "Mojave 4x4",
+    "drive": []
+   },
+   {
+    "name": "Mojave X 4x4",
+    "drive": []
+   },
+   {
+    "name": "Rewind 4x4",
+    "drive": []
+   },
+   {
+    "name": "Rubicon 4x4",
+    "drive": []
+   },
+   {
+    "name": "Rubicon X 4x4",
+    "drive": []
+   },
+   {
+    "name": "Sahara 4x4",
+    "drive": []
+   },
+   {
+    "name": "Shadow Ops 4x4",
+    "drive": []
+   },
+   {
+    "name": "Sport 4x4",
+    "drive": []
+   },
+   {
+    "name": "Sport S 4x4",
+    "drive": []
+   },
+   {
+    "name": "Texas Trail 4x4",
+    "drive": []
+   },
+   {
+    "name": "Willys '41 4x4",
+    "drive": []
+   },
+   {
+    "name": "Willys 4x4",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "jeep-grand-cherokee",
@@ -528,7 +2320,100 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 22
+  "configs": 22,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "85th Anniversary Edition 4x4",
+    "drive": []
+   },
+   {
+    "name": "L 85th Anniversary Edition 4x4",
+    "drive": []
+   },
+   {
+    "name": "L Laredo 4x2",
+    "drive": []
+   },
+   {
+    "name": "L Laredo 4x4",
+    "drive": []
+   },
+   {
+    "name": "L Laredo Altitude 4x2",
+    "drive": []
+   },
+   {
+    "name": "L Laredo Altitude 4x4",
+    "drive": []
+   },
+   {
+    "name": "L Laredo X 4x2",
+    "drive": []
+   },
+   {
+    "name": "L Laredo X 4x4",
+    "drive": []
+   },
+   {
+    "name": "L Limited 4x2",
+    "drive": []
+   },
+   {
+    "name": "L Limited 4x4",
+    "drive": []
+   },
+   {
+    "name": "L Limited Reserve 4x4",
+    "drive": []
+   },
+   {
+    "name": "L Summit 4x4",
+    "drive": []
+   },
+   {
+    "name": "Laredo 4x2",
+    "drive": []
+   },
+   {
+    "name": "Laredo 4x4",
+    "drive": []
+   },
+   {
+    "name": "Laredo Altitude 4x2",
+    "drive": []
+   },
+   {
+    "name": "Laredo Altitude 4x4",
+    "drive": []
+   },
+   {
+    "name": "Laredo X 4x2",
+    "drive": []
+   },
+   {
+    "name": "Laredo X 4x4",
+    "drive": []
+   },
+   {
+    "name": "Limited 4x2",
+    "drive": []
+   },
+   {
+    "name": "Limited 4x4",
+    "drive": []
+   },
+   {
+    "name": "Limited Reserve 4x4",
+    "drive": []
+   },
+   {
+    "name": "Summit 4x4",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "jeep-grand-wagoneer",
@@ -537,7 +2422,88 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 19
+  "configs": 19,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Grand Wagoneer 4x2",
+    "drive": []
+   },
+   {
+    "name": "Grand Wagoneer 4x4",
+    "drive": []
+   },
+   {
+    "name": "85th Anniversary Edition 4x4",
+    "drive": []
+   },
+   {
+    "name": "L 4x2",
+    "drive": []
+   },
+   {
+    "name": "L 4x4",
+    "drive": []
+   },
+   {
+    "name": "L 85th Anniversary Edition 4x4",
+    "drive": []
+   },
+   {
+    "name": "L Limited 4x4",
+    "drive": []
+   },
+   {
+    "name": "L Limited Altitude 4x4",
+    "drive": []
+   },
+   {
+    "name": "L Limited Reserve 4x4",
+    "drive": []
+   },
+   {
+    "name": "L Summit 4x4",
+    "drive": []
+   },
+   {
+    "name": "L Summit Obsidian 4x4",
+    "drive": []
+   },
+   {
+    "name": "L Summit Reserve 4x4",
+    "drive": []
+   },
+   {
+    "name": "Limited 4x4",
+    "drive": []
+   },
+   {
+    "name": "Limited Altitude 4x4",
+    "drive": []
+   },
+   {
+    "name": "Limited Reserve 4x4",
+    "drive": []
+   },
+   {
+    "name": "Summit 4x4",
+    "drive": []
+   },
+   {
+    "name": "Summit Obsidian 4x4",
+    "drive": []
+   },
+   {
+    "name": "Summit Reserve 4x4",
+    "drive": []
+   },
+   {
+    "name": "Upland 4x4",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "jeep-jeep-recon",
@@ -546,7 +2512,16 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 1
+  "configs": 1,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Moab",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "jeep-wrangler",
@@ -555,7 +2530,76 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 16
+  "configs": 16,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "2-Door Rubicon",
+    "drive": []
+   },
+   {
+    "name": "2-Door Rubicon X",
+    "drive": []
+   },
+   {
+    "name": "2-Door Sport",
+    "drive": []
+   },
+   {
+    "name": "2-Door Sport S",
+    "drive": []
+   },
+   {
+    "name": "2-Door Willys",
+    "drive": []
+   },
+   {
+    "name": "4-Door 85th Anniversary Edition",
+    "drive": []
+   },
+   {
+    "name": "4-Door Moab 392",
+    "drive": []
+   },
+   {
+    "name": "4-Door Rewind",
+    "drive": []
+   },
+   {
+    "name": "4-Door Rubicon",
+    "drive": []
+   },
+   {
+    "name": "4-Door Rubicon X",
+    "drive": []
+   },
+   {
+    "name": "4-Door Sahara",
+    "drive": []
+   },
+   {
+    "name": "4-Door Sport",
+    "drive": []
+   },
+   {
+    "name": "4-Door Sport S",
+    "drive": []
+   },
+   {
+    "name": "4-Door Willys",
+    "drive": []
+   },
+   {
+    "name": "4-Door Willys '41",
+    "drive": []
+   },
+   {
+    "name": "4-Door Willys 392",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "kia-carnival-mpv",
@@ -564,7 +2608,42 @@
   "year": 2027,
   "type": "Minivan",
   "fuel": null,
-  "trims": 5
+  "configs": 5,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "EX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "LX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "LXS",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX Prestige",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-carnival-mpv-hybrid",
@@ -573,7 +2652,36 @@
   "year": 2027,
   "type": "Minivan",
   "fuel": "Hybrid",
-  "trims": 4
+  "configs": 4,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "EX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "LXS",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX Prestige",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-ev3",
@@ -582,7 +2690,44 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 5
+  "configs": 7,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "GT",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "GT-Line",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Land",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "Light",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Wind",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-ev6",
@@ -591,7 +2736,39 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 4
+  "configs": 7,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "GT-Line",
+    "drive": [
+     "AWD",
+     "RWD"
+    ]
+   },
+   {
+    "name": "Light",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "Light Long Range",
+    "drive": [
+     "AWD",
+     "RWD"
+    ]
+   },
+   {
+    "name": "Wind",
+    "drive": [
+     "AWD",
+     "RWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-ev9",
@@ -600,7 +2777,42 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 5
+  "configs": 5,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "GT-Line AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Land AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Light Long Range RWD",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "Light RWD",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "Wind AWD",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-k4",
@@ -609,7 +2821,42 @@
   "year": 2026,
   "type": "Sedan",
   "fuel": null,
-  "trims": 5
+  "configs": 5,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "EX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "GT-Line",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "GT-Line Turbo",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "LX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "LXS",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-k4-hatchback",
@@ -618,7 +2865,30 @@
   "year": 2026,
   "type": "Hatchback",
   "fuel": null,
-  "trims": 3
+  "configs": 3,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "EX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "GT-Line",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "GT-Line Turbo",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-k5",
@@ -627,7 +2897,31 @@
   "year": 2027,
   "type": "Sedan",
   "fuel": null,
-  "trims": 3
+  "configs": 4,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "GT",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "GT-Line",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "LXS",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-niro",
@@ -636,7 +2930,42 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 5
+  "configs": 5,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "EX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "LX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "S",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX Touring",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-niro-ev",
@@ -645,7 +2974,24 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Wave",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Wind",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-seltos",
@@ -654,7 +3000,45 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 5
+  "configs": 8,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "EX",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "LX",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "S",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "X-Line S",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Line SX",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-sorento",
@@ -663,7 +3047,62 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 8
+  "configs": 10,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "EX",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "LX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "S",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "X-Line EX AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Line SX AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Line SX Prestige AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Pro SX Prestige AWD",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-sorento-hybrid",
@@ -672,7 +3111,25 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 3
+  "configs": 3,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "EX",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "X-Line SX Prestige AWD",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-sorento-plug-in-hybrid",
@@ -681,7 +3138,24 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "EX AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Line SX Prestige AWD",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-sportage",
@@ -690,7 +3164,51 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 6
+  "configs": 9,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "EX",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "LX",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX Prestige",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "X-Line",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Pro Prestige",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-sportage-hybrid",
@@ -699,7 +3217,44 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 5
+  "configs": 7,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "EX",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "LX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "S",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX Prestige",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Line",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-sportage-plug-in-hybrid",
@@ -708,7 +3263,24 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "X-Line",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Line Prestige",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-telluride",
@@ -717,7 +3289,74 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 10
+  "configs": 12,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "EX",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "LX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "S",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX Prestige",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Line EX",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Line SX",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Line SX Prestige",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Pro SX",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Pro SX Prestige",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "kia-telluride-hybrid",
@@ -726,7 +3365,43 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 5
+  "configs": 6,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "EX",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SX Prestige",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Line SX",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "X-Line SX Prestige",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "mazda-cx-30",
@@ -735,7 +3410,44 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 8
+  "configs": 8,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "2.5 S",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Aire Edition",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Carbon Edition",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Preferred",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Premium",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Select Sport",
+    "drive": []
+   },
+   {
+    "name": "2.5 Turbo Aire Edition",
+    "drive": []
+   },
+   {
+    "name": "2.5 Turbo Premium Plus",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "mazda-cx-5",
@@ -744,7 +3456,34 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 5
+  "configs": 5,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "2.5 S",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "2.5 S Preferred",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Premium",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Premium Plus",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Select",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "mazda-cx-50",
@@ -753,7 +3492,52 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid available",
-  "trims": 10
+  "configs": 10,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "2.5 S Meridian Edition",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Preferred",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Premium",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Select",
+    "drive": []
+   },
+   {
+    "name": "2.5 Turbo",
+    "drive": []
+   },
+   {
+    "name": "2.5 Turbo Meridian Edition",
+    "drive": []
+   },
+   {
+    "name": "2.5 Turbo Premium Plus",
+    "drive": []
+   },
+   {
+    "name": "Hybrid Preferred",
+    "drive": []
+   },
+   {
+    "name": "Hybrid Premium",
+    "drive": []
+   },
+   {
+    "name": "Hybrid Premium Plus",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "mazda-cx-70",
@@ -762,7 +3546,44 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid available",
-  "trims": 7
+  "configs": 7,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "3.3 Turbo Preferred",
+    "drive": []
+   },
+   {
+    "name": "3.3 Turbo Premium",
+    "drive": []
+   },
+   {
+    "name": "3.3 Turbo Premium Plus",
+    "drive": []
+   },
+   {
+    "name": "3.3 Turbo S Premium",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "3.3 Turbo S Premium Plus",
+    "drive": []
+   },
+   {
+    "name": "PHEV SC",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "PHEV SC Plus",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "mazda-cx-90",
@@ -771,7 +3592,54 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid available",
-  "trims": 9
+  "configs": 9,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "3.3 Turbo Preferred",
+    "drive": []
+   },
+   {
+    "name": "3.3 Turbo Premium Plus",
+    "drive": []
+   },
+   {
+    "name": "3.3 Turbo Premium Sport",
+    "drive": []
+   },
+   {
+    "name": "3.3 Turbo S Premium Plus",
+    "drive": []
+   },
+   {
+    "name": "3.3 Turbo S Premium Sport",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "3.3 Turbo Select",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "PHEV Preferred",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "PHEV Premium Plus",
+    "drive": []
+   },
+   {
+    "name": "PHEV Premium Sport",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "mazda-mazda3",
@@ -780,7 +3648,40 @@
   "year": 2026,
   "type": "Sedan",
   "fuel": null,
-  "trims": 6
+  "configs": 11,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "2.5 S",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Carbon Edition",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "2.5 S Preferred",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Premium",
+    "drive": []
+   },
+   {
+    "name": "2.5 S Select Sport",
+    "drive": []
+   },
+   {
+    "name": "2.5 Turbo Premium Plus",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "mazda-mx-5-miata",
@@ -789,7 +3690,24 @@
   "year": 2026,
   "type": "Convertible",
   "fuel": null,
-  "trims": 3
+  "configs": 5,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Club",
+    "drive": []
+   },
+   {
+    "name": "Grand Touring",
+    "drive": []
+   },
+   {
+    "name": "Sport",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "nissan-altima",
@@ -798,7 +3716,60 @@
   "year": 2026,
   "type": "Sedan",
   "fuel": null,
-  "trims": 8
+  "configs": 8,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "SR FWD",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SR Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SR Midnight Edition FWD",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SR Midnight Edition Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SV FWD",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SV Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SV Special Edition FWD",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SV Special Edition Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "nissan-armada",
@@ -807,7 +3778,47 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 10
+  "configs": 15,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "NISMO Intelligent 4WD",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "Platinum Intelligent 4WD",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "Platinum Reserve Intelligent 4WD",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "PRO-4X Premium Intelligent 4WD",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "SL 4x2",
+    "drive": []
+   },
+   {
+    "name": "SL Intelligent 4WD",
+    "drive": [
+     "4WD"
+    ]
+   }
+  ]
  },
  {
   "key": "nissan-frontier",
@@ -816,7 +3827,81 @@
   "year": 2027,
   "type": "Truck",
   "fuel": null,
-  "trims": 17
+  "configs": 32,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Crew Cab Dark Armor 4x2",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab Dark Armor 4x4",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab Dark Armor Long Bed 4x2",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab Dark Armor Long Bed 4x4",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab PRO-4X 4x4",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab PRO-4X Long Bed 4x4",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab PRO-X 4x2",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab S 4x2",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab S 4x4",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab Sport Edition 4x2",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab Sport Edition 4x4",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab SV 4x2",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab SV 4x4",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab SV Long Bed 4x2",
+    "drive": []
+   },
+   {
+    "name": "Crew Cab SV Long Bed 4x4",
+    "drive": []
+   },
+   {
+    "name": "King Cab S 4x2",
+    "drive": []
+   },
+   {
+    "name": "King Cab S 4x4",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "nissan-kicks",
@@ -825,7 +3910,49 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 7
+  "configs": 12,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Rock Creek Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "S FWD",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SR FWD",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SR Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SV FWD",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SV Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "nissan-murano",
@@ -834,7 +3961,31 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 4
+  "configs": 6,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Dark Armor Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Platinum Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SL Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "nissan-nissan-leaf",
@@ -843,7 +3994,30 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 3
+  "configs": 3,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Platinum+ 75 kWh lithium-ion battery",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "S+ 75 kWh lithium-ion battery",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SV+ 75 kWh lithium-ion battery",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "nissan-nissan-z",
@@ -852,7 +4026,49 @@
   "year": 2027,
   "type": "Coupe",
   "fuel": null,
-  "trims": 8
+  "configs": 13,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "NISMO Automatic Transmission",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "NISMO Manual Transmission",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "Performance Automatic Transmission",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "Performance Manual Transmission",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "Sport Automatic Transmission",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "Sport Manual Transmission",
+    "drive": [
+     "RWD"
+    ]
+   }
+  ]
  },
  {
   "key": "nissan-pathfinder",
@@ -861,7 +4077,48 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 7
+  "configs": 7,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Platinum 2WD",
+    "drive": []
+   },
+   {
+    "name": "Platinum 4WD",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "Rock Creek 4WD",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "SL 2WD",
+    "drive": []
+   },
+   {
+    "name": "SL 4WD",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "SV 2WD",
+    "drive": []
+   },
+   {
+    "name": "SV 4WD",
+    "drive": [
+     "4WD"
+    ]
+   }
+  ]
  },
  {
   "key": "nissan-rogue",
@@ -870,7 +4127,60 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 8
+  "configs": 8,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "Dark Armor FWD",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Dark Armor Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Platinum Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Rock Creek Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "S FWD",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "S Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SV FWD",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SV Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "nissan-rogue-plug-in-hybrid",
@@ -879,7 +4189,24 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Platinum Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SL Intelligent AWD",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "nissan-sentra",
@@ -888,7 +4215,43 @@
   "year": 2027,
   "type": "Sedan",
   "fuel": null,
-  "trims": 5
+  "configs": 9,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "S Xtronic CVT",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SL Xtronic CVT",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SR Midnight Edition Xtronic CVT",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SR Xtronic CVT",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SV Xtronic CVT",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "subaru-ascent",
@@ -897,7 +4260,41 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 7
+  "configs": 14,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited 7-Passenger",
+    "drive": []
+   },
+   {
+    "name": "Limited 8-Passenger",
+    "drive": []
+   },
+   {
+    "name": "Limited Bronze Edition 7-Passenger",
+    "drive": []
+   },
+   {
+    "name": "Onyx Edition Touring 7-Passenger",
+    "drive": []
+   },
+   {
+    "name": "Premium 7-Passenger",
+    "drive": []
+   },
+   {
+    "name": "Premium 8-Passenger",
+    "drive": []
+   },
+   {
+    "name": "Touring 7-Passenger",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "subaru-brz",
@@ -906,7 +4303,21 @@
   "year": 2027,
   "type": "Coupe",
   "fuel": null,
-  "trims": 2
+  "configs": 6,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": []
+   },
+   {
+    "name": "tS",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "subaru-crosstrek",
@@ -915,7 +4326,54 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 7
+  "configs": 7,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Base",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Limited Hybrid",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Premium",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Sport",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Sport Hybrid",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Wilderness",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "subaru-forester",
@@ -924,7 +4382,72 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 10
+  "configs": 10,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Base",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Limited Hybrid",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Premium",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Premium Hybrid",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Sport",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Sport Hybrid",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Touring",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Touring Hybrid",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Wilderness",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "subaru-impreza",
@@ -933,7 +4456,24 @@
   "year": 2026,
   "type": "Hatchback",
   "fuel": null,
-  "trims": 3
+  "configs": 2,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "RS",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Sport",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "subaru-outback",
@@ -942,7 +4482,36 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 9
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": []
+   },
+   {
+    "name": "Limited XT",
+    "drive": []
+   },
+   {
+    "name": "Premium",
+    "drive": []
+   },
+   {
+    "name": "Touring",
+    "drive": []
+   },
+   {
+    "name": "Touring XT",
+    "drive": []
+   },
+   {
+    "name": "Wilderness",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "subaru-solterra",
@@ -951,7 +4520,32 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 5
+  "configs": 5,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": []
+   },
+   {
+    "name": "Limited XT",
+    "drive": []
+   },
+   {
+    "name": "Premium",
+    "drive": []
+   },
+   {
+    "name": "Touring XT",
+    "drive": []
+   },
+   {
+    "name": "Touring XT Leather",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "subaru-trailseeker",
@@ -960,7 +4554,29 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 4
+  "configs": 8,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": []
+   },
+   {
+    "name": "Premium",
+    "drive": []
+   },
+   {
+    "name": "Touring",
+    "drive": []
+   },
+   {
+    "name": "Touring Leather",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "subaru-uncharted",
@@ -969,7 +4585,27 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 3
+  "configs": 6,
+  "years": [
+   2027,
+   2026
+  ],
+  "trims": [
+   {
+    "name": "GT",
+    "drive": []
+   },
+   {
+    "name": "Premium FWD",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Sport",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "subaru-wrx",
@@ -978,7 +4614,32 @@
   "year": 2026,
   "type": "Sedan",
   "fuel": null,
-  "trims": 5
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Base",
+    "drive": []
+   },
+   {
+    "name": "GT",
+    "drive": []
+   },
+   {
+    "name": "Limited",
+    "drive": []
+   },
+   {
+    "name": "Premium",
+    "drive": []
+   },
+   {
+    "name": "tS",
+    "drive": []
+   }
+  ]
  },
  {
   "key": "toyota-4runner",
@@ -987,7 +4648,72 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid available",
-  "trims": 12
+  "configs": 10,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "SR5",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "Trailhunter",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "TRD Off-Road",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "TRD Off-Road i-FORCE MAX",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "TRD Off-Road Premium",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "TRD Off-Road Premium i-FORCE MAX",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "TRD Pro",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "TRD Sport",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "TRD Sport Premium",
+    "drive": [
+     "RWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-bz",
@@ -996,7 +4722,18 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 2
+  "configs": 1,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-bz-woodland",
@@ -1005,7 +4742,24 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "bZ Woodland",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "bZ Woodland Premium",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-c-hr",
@@ -1014,7 +4768,24 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "SE",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "XSE",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-camry",
@@ -1023,7 +4794,45 @@
   "year": 2026,
   "type": "Sedan",
   "fuel": "Hybrid",
-  "trims": 5
+  "configs": 8,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "LE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Nightshade",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "XLE",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "XSE",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-corolla",
@@ -1032,7 +4841,30 @@
   "year": 2027,
   "type": "Sedan",
   "fuel": "Hybrid available",
-  "trims": 6
+  "configs": 3,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "Hybrid SE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "LE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "XSE",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-corolla-cross",
@@ -1041,7 +4873,42 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid available",
-  "trims": 5
+  "configs": 5,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Hybrid SE",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Hybrid XSE",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "L",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "LE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "XLE",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-corolla-cross-hybrid",
@@ -1050,7 +4917,18 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 1
+  "configs": 1,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Hybrid S",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-corolla-hatchback",
@@ -1059,7 +4937,24 @@
   "year": 2027,
   "type": "Hatchback",
   "fuel": null,
-  "trims": 3
+  "configs": 2,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "SE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "XSE",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-gr-corolla",
@@ -1068,7 +4963,30 @@
   "year": 2026,
   "type": "Hatchback",
   "fuel": null,
-  "trims": 3
+  "configs": 3,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "GR Corolla",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "GR Corolla Premium Plus",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "GRMN Corolla",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-gr-supra",
@@ -1077,7 +4995,30 @@
   "year": 2026,
   "type": "Coupe",
   "fuel": null,
-  "trims": 3
+  "configs": 4,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "3.0",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "3.0 Premium",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "MkV Final Edition",
+    "drive": [
+     "RWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-gr86",
@@ -1086,7 +5027,24 @@
   "year": 2027,
   "type": "Coupe",
   "fuel": null,
-  "trims": 3
+  "configs": 2,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "GR86",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "GR86 Premium",
+    "drive": [
+     "RWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-grand-highlander",
@@ -1095,7 +5053,60 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid available",
-  "trims": 10
+  "configs": 8,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Hybrid Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Hybrid MAX Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Hybrid MAX Platinum",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Hybrid Nightshade",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "LE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Platinum",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "XLE",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-highlander",
@@ -1104,7 +5115,54 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid available",
-  "trims": 7
+  "configs": 7,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Hybrid Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Hybrid Platinum",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Hybrid XLE",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Platinum",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "XLE",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "XSE",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-land-cruiser",
@@ -1113,7 +5171,24 @@
   "year": 2027,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "Land Cruiser",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "Land Cruiser 1958",
+    "drive": [
+     "4WD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-prius",
@@ -1122,7 +5197,36 @@
   "year": 2027,
   "type": "Hatchback",
   "fuel": "Hybrid",
-  "trims": 10
+  "configs": 4,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "LE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Nightshade",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "XLE",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-prius-plug-in-hybrid",
@@ -1131,7 +5235,36 @@
   "year": 2027,
   "type": "Hatchback",
   "fuel": "Hybrid",
-  "trims": 5
+  "configs": 4,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "Nightshade",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "XSE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "XSE Premium",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-rav4",
@@ -1140,7 +5273,48 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 6
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "LE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Woodland",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "XLE Premium",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "XSE",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-rav4-plug-in-hybrid",
@@ -1149,7 +5323,36 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 4
+  "configs": 4,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "GR SPORT",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Woodland",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "XSE",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-sequoia",
@@ -1158,7 +5361,48 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 6
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "1794 Edition",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "Capstone",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "Platinum",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "SR5",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "TRD Pro",
+    "drive": [
+     "4WD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-sienna",
@@ -1167,7 +5411,48 @@
   "year": 2026,
   "type": "Minivan",
   "fuel": "Hybrid",
-  "trims": 6
+  "configs": 6,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "LE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Platinum",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Woodland Edition",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "XLE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "XSE",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-tacoma",
@@ -1176,7 +5461,67 @@
   "year": 2026,
   "type": "Truck",
   "fuel": "Hybrid available",
-  "trims": 10
+  "configs": 11,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "Limited i-FORCE MAX",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "SR",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "SR5",
+    "drive": [
+     "4WD",
+     "RWD"
+    ]
+   },
+   {
+    "name": "TRD Off-Road",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "TRD PreRunner",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "TRD Pro",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "TRD Sport",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "TRD Sport i-FORCE MAX",
+    "drive": [
+     "4WD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-tacoma-i-force-max",
@@ -1185,7 +5530,18 @@
   "year": 2026,
   "type": "Truck",
   "fuel": "Hybrid",
-  "trims": 1
+  "configs": 1,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "TRD Off-Road i-FORCE MAX",
+    "drive": [
+     "4WD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-toyota-crown",
@@ -1194,7 +5550,30 @@
   "year": 2027,
   "type": "Sedan",
   "fuel": "Hybrid",
-  "trims": 4
+  "configs": 3,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Platinum",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "XLE",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-toyota-crown-signia",
@@ -1203,7 +5582,24 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Hybrid",
-  "trims": 2
+  "configs": 2,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Limited",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "XLE",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-tundra",
@@ -1212,7 +5608,50 @@
   "year": 2026,
   "type": "Truck",
   "fuel": "Hybrid available",
-  "trims": 6
+  "configs": 8,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "1794 Edition",
+    "drive": [
+     "4WD",
+     "RWD"
+    ]
+   },
+   {
+    "name": "Limited",
+    "drive": [
+     "4WD",
+     "RWD"
+    ]
+   },
+   {
+    "name": "Platinum",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "SR",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "SR5",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "TRD Pro",
+    "drive": [
+     "4WD"
+    ]
+   }
+  ]
  },
  {
   "key": "toyota-tundra-i-force-max",
@@ -1221,7 +5660,36 @@
   "year": 2026,
   "type": "Truck",
   "fuel": "Hybrid",
-  "trims": 4
+  "configs": 4,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "1794 Edition i-FORCE MAX",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "Capstone",
+    "drive": [
+     "4WD"
+    ]
+   },
+   {
+    "name": "Limited i-FORCE MAX",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "Platinum i-FORCE MAX",
+    "drive": [
+     "4WD"
+    ]
+   }
+  ]
  },
  {
   "key": "volkswagen-atlas",
@@ -1230,7 +5698,44 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 5
+  "configs": 7,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Peak Edition",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE with Technology",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SEL Premium R-Line",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "volkswagen-atlas-cross-sport",
@@ -1239,7 +5744,44 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 5
+  "configs": 7,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "SE",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE with Technology",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SEL Premium R-Line",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "SEL R-Line Black",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "volkswagen-golf-gti",
@@ -1248,7 +5790,30 @@
   "year": 2026,
   "type": "Hatchback",
   "fuel": null,
-  "trims": 3
+  "configs": 3,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Autobahn",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "S",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "volkswagen-golf-r",
@@ -1257,7 +5822,18 @@
   "year": 2026,
   "type": "Hatchback",
   "fuel": null,
-  "trims": 1
+  "configs": 1,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "Golf R",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  },
  {
   "key": "volkswagen-id-4",
@@ -1266,7 +5842,42 @@
   "year": 2026,
   "type": "SUV",
   "fuel": "Electric",
-  "trims": 5
+  "configs": 5,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "AWD Pro",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "AWD Pro S",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "AWD Pro S Plus",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Pro",
+    "drive": [
+     "RWD"
+    ]
+   },
+   {
+    "name": "Pro S",
+    "drive": [
+     "RWD"
+    ]
+   }
+  ]
  },
  {
   "key": "volkswagen-jetta",
@@ -1275,7 +5886,36 @@
   "year": 2027,
   "type": "Sedan",
   "fuel": null,
-  "trims": 4
+  "configs": 4,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "S",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "FWD"
+    ]
+   },
+   {
+    "name": "Sport",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "volkswagen-jetta-gli",
@@ -1284,7 +5924,18 @@
   "year": 2027,
   "type": "Sedan",
   "fuel": null,
-  "trims": 1
+  "configs": 1,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "Autobahn",
+    "drive": [
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "volkswagen-taos",
@@ -1293,7 +5944,46 @@
   "year": 2027,
   "type": "SUV",
   "fuel": null,
-  "trims": 5
+  "configs": 9,
+  "years": [
+   2027
+  ],
+  "trims": [
+   {
+    "name": "S",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE Black",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL",
+    "drive": [
+     "AWD"
+    ]
+   },
+   {
+    "name": "Sport",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   }
+  ]
  },
  {
   "key": "volkswagen-tiguan",
@@ -1302,6 +5992,38 @@
   "year": 2026,
   "type": "SUV",
   "fuel": null,
-  "trims": 4
+  "configs": 7,
+  "years": [
+   2026
+  ],
+  "trims": [
+   {
+    "name": "S",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SE R-Line Black",
+    "drive": [
+     "AWD",
+     "FWD"
+    ]
+   },
+   {
+    "name": "SEL R-Line Turbo",
+    "drive": [
+     "AWD"
+    ]
+   }
+  ]
  }
 ]

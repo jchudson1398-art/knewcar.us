@@ -1,0 +1,146 @@
+# make|model|configurations in the app|model years|trims of the latest year (trim~drivetrains: a=AWD f=FWD r=RWD 4=4WD)
+Chevrolet|Blazer|8|2026|2LT~af;3LT~af;RS~af
+Chevrolet|Blazer EV|10|2027,2026|LT~af;RS~af;SS~a
+Chevrolet|Bolt|2|2027|LT~f;RS~f
+Chevrolet|Colorado|9|2026|Custom~4;LT~4;Trail Boss~4;WT~4;Z71~4;ZR2~4
+Chevrolet|Corvette Grand Sport|2|2027|Convertible~;Coupe~
+Chevrolet|Corvette Stingray|4|2027,2026|Convertible~;Coupe~
+Chevrolet|Equinox|12|2027,2026|ACTIV~af;LT~af;RS~af
+Chevrolet|Equinox EV|12|2027,2026|LT 1~af;LT 2~af;RS~af
+Chevrolet|Express Cargo|1|2026|WT~
+Chevrolet|Express Passenger|2|2026|LS~;LT~
+Chevrolet|Silverado 1500|9|2026|Custom~;Custom Trail Boss~;High Country~;LT~;LT Trail Boss~;LTZ~;RST~;WT~;ZR2~
+Chevrolet|Silverado 2500 HD|6|2026|Custom~;High Country~;LT~;LTZ~;WT~;ZR2~
+Chevrolet|Silverado 3500 HD|4|2026|High Country~;LT~;LTZ~;WT~
+Chevrolet|Silverado EV|8|2026|Custom - Standard Range~4;LT - Extended Range~4;LT - Max Range~4;LT - Standard Range~4;RST Stars and Steel Edition - Extended Range~4;RST Stars and Steel Edition - Max Range~4;Trail Boss - Extended Range~4;Trail Boss - Max Range~4
+Chevrolet|Suburban|12|2027,2026|High Country~;LS~;LT~;Premier~;RST~;Z71~
+Chevrolet|Tahoe|12|2027,2026|High Country~;LS~;LT~;Premier~;RST~;Z71~
+Chevrolet|Trailblazer|8|2026|ACTIV~af;LS~a;LT~a;RS~af
+Chevrolet|Traverse|14|2027,2026|High Country~af;LT~af;RS~af;Z71~a
+Chevrolet|Trax|5|2026|1RS~f;2RS~f;ACTIV~f;LS~f;LT~f
+Ford|Bronco|7|2026|Badlands~;Base~;Big Bend~;Heritage Edition~;Outer Banks~;Raptor~;Stroppe Edition~
+Ford|Bronco Sport|4|2026|Badlands~;Big Bend~;Heritage~;Outer Banks~
+Ford|Expedition|8|2027,2026|Active~;King Ranch~;Platinum~;Tremor~
+Ford|Explorer|11|2027,2026|Active~;Platinum~;ST~;ST-Line~;Tremor~
+Ford|F-150|8|2026|King Ranch~;Lariat~;Platinum~;Raptor~;STX~;Tremor~;XL~;XLT~
+Ford|Maverick|6|2026|Lariat~;Lobo~;Tremor~;XL~;XLT~af
+Ford|Mustang|7|2026|Dark Horse~;Dark Horse Premium~;Dark Horse SC~;EcoBoost Fastback~;EcoBoost Premium Fastback~;GT Fastback~;GT Premium Fastback~
+Ford|Mustang Mach-E|4|2026|GT~;Premium~;Rally~;Select~
+Ford|Ranger|4|2026|Lariat~;Raptor~;XL~;XLT~
+Ford|Super Duty|30|2027,2026|F-250 King Ranch~;F-250 Lariat~;F-250 Platinum~;F-250 XL~;F-250 XLT~;F-350 King Ranch~;F-350 Lariat~;F-350 Platinum~;F-350 XL~;F-350 XLT~;F-450 King Ranch~;F-450 Lariat~;F-450 Platinum~;F-450 XL~;F-450 XLT~
+Ford|Transit|2|2027|Passenger Van XL~;Passenger Van XLT~
+Honda|Accord|6|2026|EX-L Hybrid~f;LX~f;SE~f;Sport Hybrid~f;Sport-L Hybrid~f;Touring Hybrid~f
+Honda|Civic|9|2026|LX~f;Si~f;Sport~f;Sport Hybrid~f;Sport Touring Hybrid~f;Type R~f
+Honda|CR-V|19|2027,2026|EX~af;EX-L~af;LX~af;Sport Hybrid~af;Sport Touring Hybrid~a;Sport-L Hybrid~af;TrailSport Hybrid~a
+Honda|HR-V|6|2027|EX-L~af;LX~af;Sport~af
+Honda|Odyssey|7|2027,2026|Elite~f;EX-L~f;Sport-L~f;Touring~f
+Honda|Passport|13|2027,2026|RTL~a;RTL Towing~a;TrailSport~a;TrailSport Blackout~a;TrailSport Elite~a;TrailSport Elite Blackout~a
+Honda|Pilot|9|2026|Black Edition~a;Elite~a;EX-L~af;Sport~af;Touring~a;Touring Blackout~a;TrailSport~a
+Honda|Prelude|2|2027|Hybrid~f;Hybrid Two-Tone~f
+Honda|Prologue|5|2026|Elite~a;EX~af;Touring~af
+Honda|Ridgeline|6|2026|Black Edition~a;Black Edition Two-Tone~a;RTL~a;Sport~a;TrailSport~a;TrailSport+HPD Wheels~a
+Hyundai|ELANTRA|6|2026|Limited~f;N Line~f;SE~f;SEL Sport~f;SEL Sport Plus~f;SEL Sport Premium~f
+Hyundai|ELANTRA Hybrid|3|2026|Blue~f;Limited~f;SEL Sport~f
+Hyundai|IONIQ 5|8|2027|Limited~ar;SE~ar;SE Standard Range~r;SEL~ar;XRT~a
+Hyundai|IONIQ 5 N|1|2026|N~a
+Hyundai|IONIQ 9|6|2026|Calligraphy~a;Calligraphy Design~a;Limited~a;S~r;SE~a;SEL~a
+Hyundai|KONA|6|2027,2026|Limited~a;SEL Premium~a
+Hyundai|PALISADE|24|2027,2026|Calligraphy~af;Limited~af;SE~af;SEL~af;SEL Premium~af;XRT PRO~a
+Hyundai|PALISADE Hybrid|18|2027,2026|Calligraphy~af;Calligraphy Black Ink~af;Limited~af;SEL~af;SEL Premium~af
+Hyundai|SANTA CRUZ|7|2026|Limited~a;SE~af;SEL~af;SEL Activity~af
+Hyundai|SANTA FE|13|2027,2026|Calligraphy~a;Limited~a;SE~a;SEL~a;XRT~a
+Hyundai|SANTA FE Hybrid|12|2027,2026|Calligraphy~a;Limited~a;SE~a;SEL~a
+Hyundai|TUCSON|11|2026|Limited~af;SE~af;SEL~af;SEL Plus~af;SEL Premium~af;XRT~a
+Hyundai|TUCSON Hybrid|6|2026|Limited~a;SE~af;SEL~af;SEL Convenience~a
+Hyundai|TUCSON Plug-in Hybrid|2|2026|Limited~a;SEL~a
+Hyundai|VENUE|3|2026|SE~f;SEL~f;SEL w/ 2-Tone Roof~f
+Jeep|Cherokee|6|2026|Cherokee 4x4~;85th Anniversary Edition 4x4~;Laredo 4x4~;Limited 4x4~;Limited Altitude 4x4~;Overland 4x4~
+Jeep|Compass|6|2026|85th Anniversary Edition 4x4~;Latitude 4x4~;Latitude Altitude 4x4~;Limited 4x4~;Limited Altitude 4x4~;Trailhawk 4x4~
+Jeep|Gladiator|13|2026|85th Anniversary Edition 4x4~;Mojave 4x4~;Mojave X 4x4~;Rewind 4x4~;Rubicon 4x4~;Rubicon X 4x4~;Sahara 4x4~;Shadow Ops 4x4~;Sport 4x4~;Sport S 4x4~;Texas Trail 4x4~;Willys '41 4x4~;Willys 4x4~
+Jeep|Grand Cherokee|22|2026|85th Anniversary Edition 4x4~;L 85th Anniversary Edition 4x4~;L Laredo 4x2~;L Laredo 4x4~;L Laredo Altitude 4x2~;L Laredo Altitude 4x4~;L Laredo X 4x2~;L Laredo X 4x4~;L Limited 4x2~;L Limited 4x4~;L Limited Reserve 4x4~;L Summit 4x4~;Laredo 4x2~;Laredo 4x4~;Laredo Altitude 4x2~;Laredo Altitude 4x4~;Laredo X 4x2~;Laredo X 4x4~;Limited 4x2~;Limited 4x4~;Limited Reserve 4x4~;Summit 4x4~
+Jeep|Grand Wagoneer|19|2026|Grand Wagoneer 4x2~;Grand Wagoneer 4x4~;85th Anniversary Edition 4x4~;L 4x2~;L 4x4~;L 85th Anniversary Edition 4x4~;L Limited 4x4~;L Limited Altitude 4x4~;L Limited Reserve 4x4~;L Summit 4x4~;L Summit Obsidian 4x4~;L Summit Reserve 4x4~;Limited 4x4~;Limited Altitude 4x4~;Limited Reserve 4x4~;Summit 4x4~;Summit Obsidian 4x4~;Summit Reserve 4x4~;Upland 4x4~
+Jeep|Jeep Recon|1|2026|Moab~
+Jeep|Wrangler|16|2026|2-Door Rubicon~;2-Door Rubicon X~;2-Door Sport~;2-Door Sport S~;2-Door Willys~;4-Door 85th Anniversary Edition~;4-Door Moab 392~;4-Door Rewind~;4-Door Rubicon~;4-Door Rubicon X~;4-Door Sahara~;4-Door Sport~;4-Door Sport S~;4-Door Willys~;4-Door Willys '41~;4-Door Willys 392~
+Kia|Carnival MPV|5|2027|EX~f;LX~f;LXS~f;SX~f;SX Prestige~f
+Kia|Carnival MPV Hybrid|4|2027|EX~f;LXS~f;SX~f;SX Prestige~f
+Kia|EV3|7|2027|GT~a;GT-Line~a;Land~af;Light~f;Wind~af
+Kia|EV6|7|2026|GT-Line~ar;Light~r;Light Long Range~ar;Wind~ar
+Kia|EV9|5|2026|GT-Line AWD~a;Land AWD~a;Light Long Range RWD~r;Light RWD~r;Wind AWD~a
+Kia|K4|5|2026|EX~f;GT-Line~f;GT-Line Turbo~f;LX~f;LXS~f
+Kia|K4 Hatchback|3|2026|EX~f;GT-Line~f;GT-Line Turbo~f
+Kia|K5|4|2027|GT~f;GT-Line~af;LXS~f
+Kia|Niro|5|2027|EX~f;LX~f;S~f;SX~f;SX Touring~f
+Kia|Niro EV|2|2026|Wave~f;Wind~f
+Kia|Seltos|8|2027|EX~af;LX~af;S~af;X-Line S~a;X-Line SX~a
+Kia|Sorento|10|2026|EX~af;LX~f;S~af;SX~f;X-Line EX AWD~a;X-Line SX AWD~a;X-Line SX Prestige AWD~a;X-Pro SX Prestige AWD~a
+Kia|Sorento Hybrid|3|2026|EX~af;X-Line SX Prestige AWD~a
+Kia|Sorento Plug-in Hybrid|2|2026|EX AWD~a;X-Line SX Prestige AWD~a
+Kia|Sportage|9|2027|EX~af;LX~af;SX~f;SX Prestige~af;X-Line~a;X-Pro Prestige~a
+Kia|Sportage Hybrid|7|2027|EX~af;LX~f;S~af;SX Prestige~a;X-Line~a
+Kia|Sportage Plug-in Hybrid|2|2027|X-Line~a;X-Line Prestige~a
+Kia|Telluride|12|2027|EX~af;LX~f;S~af;SX~f;SX Prestige~a;X-Line EX~a;X-Line SX~a;X-Line SX Prestige~a;X-Pro SX~a;X-Pro SX Prestige~a
+Kia|Telluride Hybrid|6|2027|EX~af;SX~f;SX Prestige~a;X-Line SX~a;X-Line SX Prestige~a
+Mazda|CX-30|8|2026|2.5 S~;2.5 S Aire Edition~;2.5 S Carbon Edition~;2.5 S Preferred~;2.5 S Premium~;2.5 S Select Sport~;2.5 Turbo Aire Edition~;2.5 Turbo Premium Plus~
+Mazda|CX-5|5|2026|2.5 S~a;2.5 S Preferred~;2.5 S Premium~;2.5 S Premium Plus~;2.5 S Select~
+Mazda|CX-50|10|2026|2.5 S Meridian Edition~;2.5 S Preferred~;2.5 S Premium~;2.5 S Select~;2.5 Turbo~;2.5 Turbo Meridian Edition~;2.5 Turbo Premium Plus~;Hybrid Preferred~;Hybrid Premium~;Hybrid Premium Plus~
+Mazda|CX-70|7|2026|3.3 Turbo Preferred~;3.3 Turbo Premium~;3.3 Turbo Premium Plus~;3.3 Turbo S Premium~a;3.3 Turbo S Premium Plus~;PHEV SC~a;PHEV SC Plus~
+Mazda|CX-90|9|2026|3.3 Turbo Preferred~;3.3 Turbo Premium Plus~;3.3 Turbo Premium Sport~;3.3 Turbo S Premium Plus~;3.3 Turbo S Premium Sport~a;3.3 Turbo Select~a;PHEV Preferred~a;PHEV Premium Plus~;PHEV Premium Sport~
+Mazda|Mazda3|11|2026|2.5 S~;2.5 S Carbon Edition~a;2.5 S Preferred~;2.5 S Premium~;2.5 S Select Sport~;2.5 Turbo Premium Plus~a
+Mazda|MX-5 Miata|5|2026|Club~;Grand Touring~;Sport~
+Nissan|Altima|8|2026|SR FWD~f;SR Intelligent AWD~a;SR Midnight Edition FWD~f;SR Midnight Edition Intelligent AWD~a;SV FWD~f;SV Intelligent AWD~a;SV Special Edition FWD~f;SV Special Edition Intelligent AWD~a
+Nissan|Armada|15|2027,2026|NISMO Intelligent 4WD~4;Platinum Intelligent 4WD~4;Platinum Reserve Intelligent 4WD~4;PRO-4X Premium Intelligent 4WD~4;SL 4x2~;SL Intelligent 4WD~4
+Nissan|Frontier|32|2027,2026|Crew Cab Dark Armor 4x2~;Crew Cab Dark Armor 4x4~;Crew Cab Dark Armor Long Bed 4x2~;Crew Cab Dark Armor Long Bed 4x4~;Crew Cab PRO-4X 4x4~;Crew Cab PRO-4X Long Bed 4x4~;Crew Cab PRO-X 4x2~;Crew Cab S 4x2~;Crew Cab S 4x4~;Crew Cab Sport Edition 4x2~;Crew Cab Sport Edition 4x4~;Crew Cab SV 4x2~;Crew Cab SV 4x4~;Crew Cab SV Long Bed 4x2~;Crew Cab SV Long Bed 4x4~;King Cab S 4x2~;King Cab S 4x4~
+Nissan|Kicks|12|2027,2026|Rock Creek Intelligent AWD~a;S FWD~f;SR FWD~f;SR Intelligent AWD~a;SV FWD~f;SV Intelligent AWD~a
+Nissan|Murano|6|2027,2026|Dark Armor Intelligent AWD~a;Platinum Intelligent AWD~a;SL Intelligent AWD~a
+Nissan|Nissan LEAF|3|2026|Platinum+ 75 kWh lithium-ion battery~f;S+ 75 kWh lithium-ion battery~f;SV+ 75 kWh lithium-ion battery~f
+Nissan|Nissan Z|13|2027,2026|NISMO Automatic Transmission~r;NISMO Manual Transmission~r;Performance Automatic Transmission~r;Performance Manual Transmission~r;Sport Automatic Transmission~r;Sport Manual Transmission~r
+Nissan|Pathfinder|7|2026|Platinum 2WD~;Platinum 4WD~4;Rock Creek 4WD~4;SL 2WD~;SL 4WD~4;SV 2WD~;SV 4WD~4
+Nissan|Rogue|8|2027|Dark Armor FWD~f;Dark Armor Intelligent AWD~a;Platinum Intelligent AWD~a;Rock Creek Intelligent AWD~a;S FWD~f;S Intelligent AWD~a;SV FWD~f;SV Intelligent AWD~a
+Nissan|Rogue Plug-in Hybrid|2|2026|Platinum Intelligent AWD~a;SL Intelligent AWD~a
+Nissan|Sentra|9|2027,2026|S Xtronic CVT~f;SL Xtronic CVT~f;SR Midnight Edition Xtronic CVT~f;SR Xtronic CVT~f;SV Xtronic CVT~f
+Subaru|Ascent|14|2027,2026|Limited 7-Passenger~;Limited 8-Passenger~;Limited Bronze Edition 7-Passenger~;Onyx Edition Touring 7-Passenger~;Premium 7-Passenger~;Premium 8-Passenger~;Touring 7-Passenger~
+Subaru|BRZ|6|2027,2026|Limited~;tS~
+Subaru|Crosstrek|7|2026|Base~a;Limited~a;Limited Hybrid~a;Premium~a;Sport~a;Sport Hybrid~a;Wilderness~a
+Subaru|Forester|10|2026|Base~a;Limited~a;Limited Hybrid~a;Premium~a;Premium Hybrid~a;Sport~a;Sport Hybrid~a;Touring~a;Touring Hybrid~a;Wilderness~a
+Subaru|Impreza|2|2026|RS~a;Sport~a
+Subaru|Outback|6|2026|Limited~;Limited XT~;Premium~;Touring~;Touring XT~;Wilderness~
+Subaru|Solterra|5|2026|Limited~;Limited XT~;Premium~;Touring XT~;Touring XT Leather~
+Subaru|Trailseeker|8|2027,2026|Limited~;Premium~;Touring~;Touring Leather~
+Subaru|Uncharted|6|2027,2026|GT~;Premium FWD~f;Sport~
+Subaru|WRX|6|2026|Base~;GT~;Limited~;Premium~;tS~
+Toyota|4Runner|10|2026|Limited~r;SR5~r;Trailhunter~4;TRD Off-Road~4;TRD Off-Road i-FORCE MAX~4;TRD Off-Road Premium~4;TRD Off-Road Premium i-FORCE MAX~4;TRD Pro~4;TRD Sport~r;TRD Sport Premium~r
+Toyota|bZ|1|2027|Limited~f
+Toyota|bZ Woodland|2|2027|bZ Woodland~a;bZ Woodland Premium~a
+Toyota|C-HR|2|2027|SE~a;XSE~a
+Toyota|Camry|8|2026|LE~f;Nightshade~af;SE~f;XLE~af;XSE~af
+Toyota|Corolla|3|2027|Hybrid SE~f;LE~f;XSE~f
+Toyota|Corolla Cross|5|2026|Hybrid SE~a;Hybrid XSE~a;L~f;LE~f;XLE~f
+Toyota|Corolla Cross Hybrid|1|2026|Hybrid S~a
+Toyota|Corolla Hatchback|2|2027|SE~f;XSE~f
+Toyota|GR Corolla|3|2026|GR Corolla~a;GR Corolla Premium Plus~a;GRMN Corolla~a
+Toyota|GR Supra|4|2026|3.0~r;3.0 Premium~r;MkV Final Edition~r
+Toyota|GR86|2|2027|GR86~r;GR86 Premium~r
+Toyota|Grand Highlander|8|2026|Hybrid Limited~a;Hybrid MAX Limited~a;Hybrid MAX Platinum~a;Hybrid Nightshade~a;LE~f;Limited~f;Platinum~a;XLE~f
+Toyota|Highlander|7|2026|Hybrid Limited~a;Hybrid Platinum~a;Hybrid XLE~a;Limited~a;Platinum~a;XLE~a;XSE~a
+Toyota|Land Cruiser|2|2027|Land Cruiser~4;Land Cruiser 1958~4
+Toyota|Prius|4|2027|LE~f;Limited~f;Nightshade~f;XLE~f
+Toyota|Prius Plug-in Hybrid|4|2027|Nightshade~f;SE~f;XSE~f;XSE Premium~f
+Toyota|RAV4|6|2026|LE~f;Limited~a;SE~f;Woodland~a;XLE Premium~f;XSE~a
+Toyota|RAV4 Plug-in Hybrid|4|2026|GR SPORT~a;SE~a;Woodland~a;XSE~a
+Toyota|Sequoia|6|2026|1794 Edition~4;Capstone~4;Limited~r;Platinum~4;SR5~r;TRD Pro~4
+Toyota|Sienna|6|2026|LE~f;Limited~f;Platinum~a;Woodland Edition~a;XLE~f;XSE~f
+Toyota|Tacoma|11|2026|Limited~4;Limited i-FORCE MAX~4;SR~r;SR5~4r;TRD Off-Road~4;TRD PreRunner~r;TRD Pro~4;TRD Sport~r;TRD Sport i-FORCE MAX~4
+Toyota|Tacoma i-Force MAX|1|2026|TRD Off-Road i-FORCE MAX~4
+Toyota|Toyota Crown|3|2027|Limited~a;Platinum~a;XLE~a
+Toyota|Toyota Crown Signia|2|2026|Limited~a;XLE~a
+Toyota|Tundra|8|2026|1794 Edition~4r;Limited~4r;Platinum~r;SR~r;SR5~r;TRD Pro~4
+Toyota|Tundra i-FORCE MAX|4|2026|1794 Edition i-FORCE MAX~4;Capstone~4;Limited i-FORCE MAX~r;Platinum i-FORCE MAX~4
+Volkswagen|Atlas|7|2026|Peak Edition~a;SE~af;SE with Technology~af;SEL~a;SEL Premium R-Line~a
+Volkswagen|Atlas Cross Sport|7|2026|SE~af;SE with Technology~af;SEL~a;SEL Premium R-Line~a;SEL R-Line Black~a
+Volkswagen|Golf GTI|3|2026|Autobahn~f;S~f;SE~f
+Volkswagen|Golf R|1|2026|Golf R~a
+Volkswagen|ID.4|5|2026|AWD Pro~a;AWD Pro S~a;AWD Pro S Plus~a;Pro~r;Pro S~r
+Volkswagen|Jetta|4|2027|S~f;SE~f;SEL~f;Sport~f
+Volkswagen|Jetta GLI|1|2027|Autobahn~f
+Volkswagen|Taos|9|2027|S~af;SE~af;SE Black~af;SEL~a;Sport~af
+Volkswagen|Tiguan|7|2026|S~af;SE~af;SE R-Line Black~af;SEL R-Line Turbo~a

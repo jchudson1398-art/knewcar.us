@@ -1,0 +1,92 @@
+---
+// One page per model: its photo and every trim of the newest model year. No prices or payments.
+import Base from "../../layouts/Base.astro";
+import CarTile from "../../components/CarTile.astro";
+import { CATALOG, carImage, carName, configsLabel, type Car } from "../../lib/catalog";
+import { APP_STORE_URL } from "../../site";
+
+export function getStaticPaths() {
+  return CATALOG.map((car) => ({ params: { key: car.key }, props: { car } }));
+}
+interface Props { car: Car }
+const { car } = Astro.props;
+const name = carName(car);
+const olderYears = car.years.filter((y) => y !== car.year);
+const related = CATALOG.filter((c) => c.key !== car.key && c.make === car.make && c.type === car.type).slice(0, 4);
+const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car.key && c.make === car.make).slice(0, 4);
+---
+
+<Base title={`${name} trims`} description={`Every ${name} trim in one place: ${car.trims.slice(0, 5).map((t) => t.name).join(", ")}${car.trims.length > 5 ? " and more" : ""}. ${configsLabel(car.configs)}.`}>
+  <section class="page-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/explore">Explore</a> / <a href={`/explore?q=${encodeURIComponent(car.make)}`}>{car.make}</a> / {car.model}</nav>
+    </div>
+  </section>
+
+  <section class="wrap top">
+    <div class="photo"><img src={carImage(car)} alt={name} width="560" height="420" /></div>
+    <div class="facts">
+      <p class="eyebrow">{car.make} · {car.year}</p>
+      <h1>{car.model}</h1>
+      <div class="tags">
+        {car.type && <span>{car.type}</span>}
+        {car.fuel && <span class="fuel">{car.fuel}</span>}
+        <span>{car.trims.length} {car.trims.length === 1 ? "trim" : "trims"}</span>
+      </div>
+      <p class="count"><strong>{car.configs}</strong> {car.configs === 1 ? "configuration" : "configurations"} in the app</p>
+      <p class="sub">
+        A configuration is one exact build: a trim with its drivetrain and body.
+        {olderYears.length > 0 && ` The app also has the ${olderYears.join(" and ")} ${car.model}.`}
+      </p>
+      <a class="btn btn-primary" href={APP_STORE_URL}>See offers and payments in the app</a>
+      <p class="fine">Offers in the app are for Texas shoppers. Payments are estimates.</p>
+    </div>
+  </section>
+
+  <section class="wrap trims">
+    <h2>{car.year} {car.model} <span class="mint">trims</span></h2>
+    <ul>
+      {car.trims.map((t) => (
+        <li>
+          <strong>{t.name}</strong>
+          <span class="drive">{t.drive.length > 0 ? t.drive.map((d) => <i>{d}</i>) : <em>Drivetrain shown in the app</em>}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  {more.length > 0 && (
+    <section class="wrap moregrid">
+      <h2>More from <span class="mint">{car.make}</span></h2>
+      <div class="car-grid">{more.map((c) => <CarTile car={c} />)}</div>
+    </section>
+  )}
+</Base>
+
+<style>
+  .page-head { padding-bottom: 8px; }
+  .crumbs { color: var(--faint); font-size: 15px; }
+  .top { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: center; padding-top: 16px; padding-bottom: 56px; }
+  .photo { padding: 28px; border-radius: 24px; background: #0b221c; border: 1px solid rgba(160, 230, 205, 0.12); box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5), 0 0 80px rgba(92, 235, 196, 0.08); }
+  .photo img { width: 100%; height: auto; border-radius: 14px; }
+  h1 { font-size: clamp(38px, 5vw, 60px); letter-spacing: -0.03em; overflow-wrap: anywhere; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .tags span { font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(160, 230, 205, 0.22); color: var(--sub); }
+  .tags .fuel { color: var(--mint); border-color: rgba(92, 235, 196, 0.4); }
+  .count { margin: 24px 0 0; font-size: 20px; font-weight: 600; }
+  .count strong { font-size: 44px; font-weight: 800; color: var(--mint); letter-spacing: -0.03em; margin-right: 6px; }
+  .sub { color: var(--sub); margin: 6px 0 24px; max-width: 460px; font-size: 16px; }
+  .fine { color: var(--faint); font-size: 13px; margin: 12px 0 0; }
+  .trims { padding-bottom: 64px; }
+  .trims h2, .moregrid h2 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 20px; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+  li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 18px; border-radius: 14px; background: var(--card); border: 1px solid var(--edge); }
+  li strong { font-size: 16px; font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
+  .drive { display: flex; gap: 6px; flex: none; }
+  .drive i { font-style: normal; font-size: 12px; font-weight: 700; padding: 4px 8px; border-radius: 6px; background: var(--mint-soft); color: var(--mint); }
+  .drive em { font-style: normal; font-size: 12px; color: var(--faint); }
+  .moregrid { padding-bottom: 72px; }
+  .car-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 20px; }
+  @media (max-width: 900px) { .top { grid-template-columns: 1fr; gap: 28px; } .car-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 420px) { .car-grid { grid-template-columns: 1fr; } li { flex-wrap: wrap; } }
+</style>
