@@ -24,9 +24,15 @@ export const PRICES = {
   yearly: "$99.99",
 } as const;
 
+/** Website upgrade plan (owner, 2026-11-16). Separate from the app's plans in PRICES. */
+export const WEB_PLAN = { monthly: "$2.99", yearly: "$9.99" } as const;
+/** False until RevenueCat web checkout is connected: the upgrade page then offers a test unlock, no charge. */
+export const PAYMENTS_LIVE = false;
+
 export const NAV = [
   { href: "/explore", label: "Explore" },
   { href: "/how-it-works", label: "How it works" },
-  { href: "/pricing", label: "Pricing" },
+  { href: "/upgrade", label: "Upgrade" },
+  { href: "/pricing", label: "App pricing" },
   { href: "/how-it-works#faq", label: "FAQ" },
 ] as const;

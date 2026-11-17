@@ -73,7 +73,7 @@ const steps = [
     <div class="list-head">
       <div>
         <h2>Available <span class="mint">now</span></h2>
-        <p class="tally">{CONFIG_TOTAL.toLocaleString("en-US")} configurations across {CATALOG.length} models, all in the app.</p>
+        <p class="tally">{CONFIG_TOTAL.toLocaleString("en-US")} configurations across {CATALOG.length} models, all in the app. MSRP excludes destination, taxes and fees.</p>
       </div>
       <a class="btn btn-primary" href="/explore">Explore all your options <span aria-hidden="true">→</span></a>
     </div>
@@ -83,7 +83,7 @@ const steps = [
     <div class="more">
       <a class="btn btn-ghost" href="/explore">See all {CATALOG.length} models</a>
     </div>
-    <script type="application/json" id="catalog-data" set:html={JSON.stringify(CATALOG.map((c) => [c.key, c.make, c.model, c.year, c.type, c.fuel, c.configs]))} />
+    <script type="application/json" id="catalog-data" set:html={JSON.stringify(CATALOG.map((c) => [c.key, c.make, c.model, c.year, c.type, c.fuel, c.configs, c.msrpFrom]))} />
   </section>
 
   <!-- The app: a slider that walks through the real screens -->
@@ -256,7 +256,7 @@ const steps = [
   const grid = document.querySelector<HTMLElement>("[data-home-grid]");
   const raw = document.getElementById("catalog-data")?.textContent;
   if (grid && raw) {
-    type Row = [key: string, make: string, model: string, year: number, type: string | null, fuel: string | null, configs: number];
+    type Row = [key: string, make: string, model: string, year: number, type: string | null, fuel: string | null, configs: number, msrpFrom: number | null];
     const all = JSON.parse(raw) as Row[];
     for (let i = all.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -265,7 +265,7 @@ const steps = [
     grid.querySelectorAll<HTMLElement>("[data-tile]").forEach((tile, i) => {
       const row = all[i];
       if (!row) return;
-      const [key, make, model, year, type, fuel, configs] = row;
+      const [key, make, model, year, type, fuel, configs, msrpFrom] = row;
       const name = `${year} ${make} ${model}`;
       const img = tile.querySelector<HTMLImageElement>("[data-img]")!;
       img.src = `/img/cars/${key}.webp`;
@@ -274,6 +274,10 @@ const steps = [
       link.href = `/cars/${key}/`;
       link.setAttribute("aria-label", `${name}: see all trims`);
       tile.querySelector<HTMLAnchorElement>("[data-link2]")!.href = `/cars/${key}/`;
+      tile.querySelector("[data-price-label]")!.textContent = msrpFrom ? `From $${msrpFrom.toLocaleString("en-US")} MSRP` : "MSRP in the app";
+      const save = tile.querySelector<HTMLElement>("[data-save]")!;
+      save.dataset.save = key;
+      save.setAttribute("aria-label", `Save ${name}`);
       tile.querySelector("[data-configs]")!.textContent = `${configs} ${configs === 1 ? "configuration" : "configurations"} in the app`;
       tile.querySelector("[data-meta]")!.textContent = `${make} · ${year}`;
       tile.querySelector("[data-name]")!.textContent = model;

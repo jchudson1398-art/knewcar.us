@@ -1,0 +1,82 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Saved cars" description="Your saved KnewCar shortlist.">
+  <section class="page-head"><div class="wrap"><h1>Saved <span class="mint">cars</span></h1><p class="lead">Your shortlist, kept in this browser.</p></div></section>
+  <section class="wrap list">
+    <div class="rows" data-rows></div>
+    <div class="empty card" data-empty hidden>
+      <h2>Nothing saved yet</h2>
+      <p>Tap the heart on any car to keep it here.</p>
+      <a class="btn btn-primary" href="/explore">Explore all your options</a>
+    </div>
+    <div class="bar" data-bar hidden>
+      <a class="btn btn-primary" href="/compare">Compare selected</a>
+      <span data-count></span>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .list { padding-top: 8px; padding-bottom: 80px; display: grid; gap: 20px; }
+  .rows { display: grid; gap: 12px; }
+  [hidden] { display: none !important; }
+  .rows :global(.row) { display: grid; grid-template-columns: 150px minmax(0, 1fr) auto; gap: 16px; align-items: center; padding: 12px; border-radius: 16px; background: var(--card); border: 1px solid var(--edge); }
+  .rows :global(.row img) { width: 150px; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; }
+  .rows :global(.row h2) { font-size: 19px; }
+  .rows :global(.row h2 a) { color: inherit; }
+  .rows :global(.row p) { margin: 4px 0 0; color: var(--sub); font-size: 15px; }
+  .rows :global(.acts) { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+  .rows :global(.acts button) { height: 44px; padding: 0 14px; border-radius: 10px; border: 1px solid rgba(232, 243, 238, 0.25); background: transparent; color: var(--text); font: 600 14px var(--font); cursor: pointer; }
+  .rows :global(.acts button[aria-pressed="true"]) { background: var(--mint); color: var(--mint-ink); border-color: var(--mint); }
+  .bar { display: flex; align-items: center; gap: 14px; color: var(--sub); }
+  .empty { text-align: center; }
+  .empty .btn { margin-top: 16px; }
+  @media (max-width: 640px) {
+    .rows :global(.row) { grid-template-columns: 100px minmax(0, 1fr); }
+    .rows :global(.row img) { width: 100px; }
+    .rows :global(.acts) { grid-column: 1 / -1; justify-content: flex-start; }
+  }
+</style>
+
+<script>
+  import { compared, requirePlus, saved, toggleCompared, toggleSaved } from "../lib/plus";
+  import type { Car } from "../lib/catalog";
+
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c] ?? c);
+
+  async function start() {
+    const rows = document.querySelector<HTMLElement>("[data-rows]")!;
+    const empty = document.querySelector<HTMLElement>("[data-empty]")!;
+    const bar = document.querySelector<HTMLElement>("[data-bar]")!;
+    const count = document.querySelector<HTMLElement>("[data-count]")!;
+    const cars: Car[] = await (await fetch("/catalog.json")).json();
+    const draw = () => {
+      const cmp = compared();
+      const mine = saved().map((k) => cars.find((c) => c.key === k)).filter((c): c is Car => !!c);
+      rows.innerHTML = mine.map((c) => {
+        const name = esc(`${c.year} ${c.make} ${c.model}`);
+        const price = c.msrpFrom ? `From $${c.msrpFrom.toLocaleString("en-US")} MSRP` : "MSRP in the app";
+        const inCmp = cmp.includes(c.key);
+        return `<article class="row">
+          <a href="/cars/${c.key}/"><img src="/img/cars/${c.key}.webp" alt="${name}" width="560" height="420" loading="lazy"></a>
+          <div><h2><a href="/cars/${c.key}/">${name}</a></h2><p>${price} · ${c.trims.length} trims · ${c.configs} configurations in the app</p></div>
+          <div class="acts"><button type="button" data-cmp="${c.key}" aria-pressed="${inCmp}">${inCmp ? "In compare" : "Compare"}</button><button type="button" data-remove="${c.key}">Remove</button></div>
+        </article>`;
+      }).join("");
+      empty.hidden = mine.length > 0;
+      bar.hidden = cmp.length < 2;
+      count.textContent = `${cmp.length} selected`;
+    };
+    rows.addEventListener("click", (e) => {
+      const b = (e.target as HTMLElement).closest<HTMLElement>("button");
+      if (!b) return;
+      if (b.dataset.remove) toggleSaved(b.dataset.remove);
+      if (b.dataset.cmp) toggleCompared(b.dataset.cmp);
+      draw();
+    });
+    draw();
+  }
+  if (requirePlus("save")) start();
+</script>

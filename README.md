@@ -23,13 +23,24 @@ npm run build    # static files in dist/
 
 Home, Explore and the car pages (`/cars/<make-model>/`) come from a snapshot, not a live query: the catalog tables
 are not readable by logged-out visitors. `src/data/catalog.json` holds, for the eleven brands the app shows, each
-model's make, latest model year, body type, powertrain, the trims of that year with their drivetrains, and how many
+model's make, latest model year, body type, powertrain, the trims of that year with their drivetrains and verified MSRP (destination excluded), and how many
 configurations the app has for the model. `public/img/cars/<key>.webp` is each model's published card photo at
-560px. The site shows no prices, payments or offers.
+560px. The site shows MSRP only; no offers.
 
 To refresh after the catalog changes, re-export `scripts/catalog-rows.txt`, `scripts/catalog-categories.json` and
-`scripts/trims.txt` (formats are in each file and in the script header), run
+`scripts/trims.txt` and `scripts/msrp.txt` (formats are in each file and in the script header), run
 `python3 scripts/build-catalog.py scripts/catalog-rows.txt scripts/catalog-categories.json`, and replace the photos.
+
+## Free site and website upgrade
+
+Free: browse, search, every trim, verified MSRP and search by MSRP. Website upgrade ($2.99/mo or $9.99/yr, set in
+`src/site.ts` as `WEB_PLAN`): saved cars (`/saved`), compare (`/compare`), and the tax, fee and payment estimator
+(`/estimate`, Texas only, using the approved Texas rule: 6.25% on price less trade-in value, $225 documentary fee
+and $300 title and registration as estimates). `/sign-in` uses the same Supabase accounts as the app.
+
+**Not finished, on purpose:** `PAYMENTS_LIVE` is false. Until RevenueCat web checkout and a server-side entitlement
+check exist, the upgrade is a flag in the visitor's browser set by a "test access" button on `/upgrade`, and saved
+and compare lists live in that browser only (`src/lib/plus.ts`). Do not treat this as access control.
 
 ## Waitlist
 

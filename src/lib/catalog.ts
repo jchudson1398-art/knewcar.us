@@ -14,7 +14,10 @@ export interface Car {
   /** Model years in the app, newest first. */
   years: number[];
   /** Trims of the newest model year, with the drivetrains each comes in when the catalog records them. */
-  trims: { name: string; drive: string[] }[];
+  trims: { name: string; drive: string[]; msrp: number | null }[];
+  /** Lowest and highest verified MSRP across those trims (destination excluded); null when none is verified. */
+  msrpFrom: number | null;
+  msrpTo: number | null;
 }
 
 export const CATALOG = data as Car[];
@@ -23,6 +26,8 @@ export const carName = (c: Car) => `${c.year} ${c.make} ${c.model}`;
 export const CONFIG_TOTAL = CATALOG.reduce((n, c) => n + c.configs, 0);
 export const carUrl = (c: Car) => `/cars/${c.key}/`;
 export const configsLabel = (n: number) => `${n} ${n === 1 ? "configuration" : "configurations"} in the app`;
+export const money = (n: number) => `$${n.toLocaleString("en-US")}`;
+export const priceLabel = (c: Car) => (c.msrpFrom ? `From ${money(c.msrpFrom)} MSRP` : "MSRP in the app");
 export const carImage = (c: Car) => `/img/cars/${c.key}.webp`;
 
 /** Words a shopper might type for each kind of car, added to what search matches. */

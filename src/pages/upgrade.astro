@@ -1,0 +1,94 @@
+---
+import Base from "../layouts/Base.astro";
+import { APP_STORE_URL, PAYMENTS_LIVE, WEB_PLAN } from "../site";
+const free = ["Browse and search every model", "Every trim, with MSRP", "Search and sort by MSRP"];
+const plus = ["Save cars to your list", "Compare up to four cars side by side", "Tax, title and fee estimate for your state", "Include your trade-in", "Monthly payment estimate"];
+const app = ["Manufacturer offers and incentives", "Special rates and rebates", "Cars matched to your budget and credit", "Texas only for now"];
+---
+
+<Base title="Upgrade" description={`KnewCar website upgrade: save cars, compare, and estimate tax, fees and payments for ${WEB_PLAN.monthly} a month or ${WEB_PLAN.yearly} a year.`}>
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Website upgrade</p>
+      <h1>Keep your shortlist. <span class="mint">Know the numbers.</span></h1>
+      <p class="lead" data-why hidden></p>
+    </div>
+  </section>
+
+  <section class="wrap plans">
+    <div class="card plan">
+      <h2>Free</h2>
+      <p class="price">$0</p>
+      <ul>{free.map((f) => <li>{f}</li>)}</ul>
+      <a class="btn btn-ghost" href="/explore">Keep browsing</a>
+    </div>
+    <div class="card plan best">
+      <h2>Website upgrade</h2>
+      <p class="price">{WEB_PLAN.yearly}<span>/year</span> <em>or {WEB_PLAN.monthly}/month</em></p>
+      <ul>{plus.map((f) => <li>{f}</li>)}</ul>
+      {PAYMENTS_LIVE ? (
+        <div class="buy">
+          <button type="button" class="btn btn-primary" data-buy="yearly">Get it for {WEB_PLAN.yearly} a year</button>
+          <button type="button" class="btn btn-ghost" data-buy="monthly">{WEB_PLAN.monthly} a month</button>
+        </div>
+      ) : (
+        <div class="buy">
+          <p class="note">Checkout isn't connected yet. This button turns the upgrade on in this browser for testing. Nothing is charged.</p>
+          <button type="button" class="btn btn-primary" data-test-unlock>Turn on test access</button>
+          <button type="button" class="btn btn-ghost" data-test-lock hidden>Turn off test access</button>
+        </div>
+      )}
+      <p class="status" data-status aria-live="polite"></p>
+    </div>
+    <div class="card plan">
+      <h2>KnewCar app</h2>
+      <p class="price">iPhone</p>
+      <ul>{app.map((f) => <li>{f}</li>)}</ul>
+      <a class="btn btn-ghost" href={APP_STORE_URL}>Download on the App Store</a>
+    </div>
+  </section>
+  <p class="wrap fine">Estimates are not offers of credit. KnewCar is not a dealer or a lender. Offers and incentives are in the app, for Texas shoppers.</p>
+</Base>
+
+<style>
+  .plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; padding-top: 8px; padding-bottom: 24px; align-items: start; }
+  .plan { display: flex; flex-direction: column; gap: 14px; }
+  .plan h2 { font-size: 22px; }
+  .best { border-color: var(--mint); box-shadow: 0 0 60px rgba(92, 235, 196, 0.14); }
+  .price { margin: 0; font-size: 34px; font-weight: 800; color: var(--text) !important; }
+  .price span { font-size: 16px; font-weight: 600; color: var(--sub); }
+  .price em { display: block; font-style: normal; font-size: 15px; font-weight: 600; color: var(--sub); }
+  ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; color: var(--sub); font-size: 16px; }
+  .buy { display: flex; flex-direction: column; gap: 10px; }
+  .buy [hidden] { display: none; }
+  .note { margin: 0 !important; }
+  .status { margin: 0 !important; color: var(--mint) !important; font-weight: 600; min-height: 1.5em; }
+  .fine { color: var(--faint); font-size: 13px; padding-bottom: 72px; }
+  @media (max-width: 900px) { .plans { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  import { isPlus, setPlus } from "../lib/plus";
+  const q = new URLSearchParams(location.search);
+  const why = document.querySelector<HTMLElement>("[data-why]")!;
+  const reasons: Record<string, string> = {
+    save: "Saving cars is part of the website upgrade.",
+    compare: "Comparing cars is part of the website upgrade.",
+    estimate: "The tax, fee and payment estimator is part of the website upgrade.",
+  };
+  const reason = reasons[q.get("for") ?? ""];
+  if (reason) { why.textContent = reason; why.hidden = false; }
+  const back = (q.get("back") ?? "").startsWith("/") && !(q.get("back") ?? "").startsWith("//") ? q.get("back")! : "";
+  const status = document.querySelector<HTMLElement>("[data-status]")!;
+  const on = document.querySelector<HTMLButtonElement>("[data-test-unlock]");
+  const off = document.querySelector<HTMLButtonElement>("[data-test-lock]");
+  const paint = () => {
+    const plus = isPlus();
+    if (on) on.hidden = plus;
+    if (off) off.hidden = !plus;
+    status.textContent = plus ? "The upgrade is on in this browser." : "";
+  };
+  on?.addEventListener("click", () => { setPlus(true); if (back) location.href = back; else paint(); });
+  off?.addEventListener("click", () => { setPlus(false); paint(); });
+  paint();
+</script>

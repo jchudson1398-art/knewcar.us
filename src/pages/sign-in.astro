@@ -1,0 +1,75 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Sign in" description="Sign in to KnewCar with the same account you use in the app.">
+  <section class="page-head"><div class="wrap"><h1>Sign in</h1><p class="lead">Use the same email and password as the KnewCar app.</p></div></section>
+  <section class="wrap box">
+    <form class="card" data-auth novalidate>
+      <div class="signed" data-signed hidden>
+        <p>Signed in as <strong data-email></strong></p>
+        <button type="button" class="btn btn-ghost" data-out>Sign out</button>
+      </div>
+      <div class="fields" data-fields>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required />
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" minlength="6" required />
+        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="button" class="btn btn-ghost" data-create>Create an account</button>
+      </div>
+      <p class="msg" data-msg role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</Base>
+
+<style>
+  .box { max-width: 520px; padding-top: 8px; padding-bottom: 80px; }
+  .fields, .signed { display: grid; gap: 10px; }
+  [hidden] { display: none !important; }
+  label { font-size: 14px; font-weight: 600; color: var(--sub); margin-top: 6px; }
+  input { height: 50px; padding: 0 14px; border-radius: 12px; border: 1px solid rgba(232, 243, 238, 0.25); background: #fff; color: #0b1a15; font: 500 17px var(--font); }
+  .btn { margin-top: 8px; }
+  .msg { margin: 14px 0 0 !important; min-height: 1.5em; }
+</style>
+
+<script>
+  import { createClient } from "@supabase/supabase-js";
+  import { SUPABASE_PUBLISHABLE_KEY, SUPABASE_URL } from "../site";
+
+  const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+  const form = document.querySelector<HTMLFormElement>("[data-auth]")!;
+  const fields = form.querySelector<HTMLElement>("[data-fields]")!;
+  const signed = form.querySelector<HTMLElement>("[data-signed]")!;
+  const msg = form.querySelector<HTMLElement>("[data-msg]")!;
+  const email = form.querySelector<HTMLInputElement>("#email")!;
+  const password = form.querySelector<HTMLInputElement>("#password")!;
+
+  const paint = (address: string | null) => {
+    fields.hidden = !!address;
+    signed.hidden = !address;
+    signed.querySelector("[data-email]")!.textContent = address ?? "";
+  };
+  const ready = () => {
+    if (form.reportValidity()) return true;
+    msg.textContent = "Enter your email and a password of at least 6 characters.";
+    return false;
+  };
+  supabase.auth.getSession().then(({ data }) => paint(data.session?.user.email ?? null));
+  supabase.auth.onAuthStateChange((_e, session) => paint(session?.user.email ?? null));
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!ready()) return;
+    msg.textContent = "Signing in…";
+    const { error } = await supabase.auth.signInWithPassword({ email: email.value.trim(), password: password.value });
+    msg.textContent = error ? "That email and password didn't match. Check them and try again." : "You're signed in.";
+  });
+  form.querySelector("[data-create]")!.addEventListener("click", async () => {
+    if (!ready()) return;
+    msg.textContent = "Creating your account…";
+    const { data, error } = await supabase.auth.signUp({ email: email.value.trim(), password: password.value });
+    msg.textContent = error ? `We couldn't create the account: ${error.message}` : data.session ? "Account created. You're signed in." : "Check your email to confirm your account, then sign in.";
+  });
+  form.querySelector("[data-out]")!.addEventListener("click", async () => { await supabase.auth.signOut(); msg.textContent = "Signed out."; });
+</script>

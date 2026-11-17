@@ -2,7 +2,7 @@
 // One page per model: its photo and every trim of the newest model year. No prices or payments.
 import Base from "../../layouts/Base.astro";
 import CarTile from "../../components/CarTile.astro";
-import { CATALOG, carImage, carName, configsLabel, type Car } from "../../lib/catalog";
+import { CATALOG, carImage, carName, configsLabel, money, type Car } from "../../lib/catalog";
 import { APP_STORE_URL } from "../../site";
 
 export function getStaticPaths() {
@@ -33,13 +33,18 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
         {car.fuel && <span class="fuel">{car.fuel}</span>}
         <span>{car.trims.length} {car.trims.length === 1 ? "trim" : "trims"}</span>
       </div>
+      <p class="msrp">{car.msrpFrom ? (car.msrpFrom === car.msrpTo ? money(car.msrpFrom) : `${money(car.msrpFrom)} to ${money(car.msrpTo!)}`) : "MSRP in the app"} {car.msrpFrom && <span>MSRP</span>}</p>
       <p class="count"><strong>{car.configs}</strong> {car.configs === 1 ? "configuration" : "configurations"} in the app</p>
       <p class="sub">
         A configuration is one exact build: a trim with its drivetrain and body.
         {olderYears.length > 0 && ` The app also has the ${olderYears.join(" and ")} ${car.model}.`}
       </p>
-      <a class="btn btn-primary" href={APP_STORE_URL}>See offers and payments in the app</a>
-      <p class="fine">Offers in the app are for Texas shoppers. Payments are estimates.</p>
+      <div class="actions">
+        <button type="button" class="btn btn-primary" data-save={car.key} data-save-text aria-pressed="false">Save this car</button>
+        <button type="button" class="btn btn-ghost" data-compare={car.key} aria-pressed="false">Add to compare</button>
+      </div>
+      <p class="links"><a href={`/estimate?car=${car.key}`}>Estimate tax, fees and payment</a> · <a href={APP_STORE_URL}>See offers in the app</a></p>
+      <p class="fine">MSRP excludes destination, taxes and fees. Saving, comparing and estimates are part of the website upgrade. Offers in the app are for Texas shoppers.</p>
     </div>
   </section>
 
@@ -48,7 +53,7 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
     <ul>
       {car.trims.map((t) => (
         <li>
-          <strong>{t.name}</strong>
+          <div class="tn"><strong>{t.name}</strong><span class="tp">{t.msrp ? `${money(t.msrp)} MSRP` : "MSRP in the app"}</span></div>
           <span class="drive">{t.drive.length > 0 ? t.drive.map((d) => <i>{d}</i>) : <em>Drivetrain shown in the app</em>}</span>
         </li>
       ))}
@@ -73,7 +78,13 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
   .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
   .tags span { font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 1px solid rgba(160, 230, 205, 0.22); color: var(--sub); }
   .tags .fuel { color: var(--mint); border-color: rgba(92, 235, 196, 0.4); }
-  .count { margin: 24px 0 0; font-size: 20px; font-weight: 600; }
+  .msrp { margin: 18px 0 0; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; }
+  .msrp span { font-size: 15px; font-weight: 600; color: var(--sub); }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .links { margin: 14px 0 0; font-size: 15px; }
+  .tn { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .tp { font-size: 14px; color: var(--sub); }
+  .count { margin: 12px 0 0; font-size: 20px; font-weight: 600; }
   .count strong { font-size: 44px; font-weight: 800; color: var(--mint); letter-spacing: -0.03em; margin-right: 6px; }
   .sub { color: var(--sub); margin: 6px 0 24px; max-width: 460px; font-size: 16px; }
   .fine { color: var(--faint); font-size: 13px; margin: 12px 0 0; }

@@ -5,6 +5,7 @@ Input: a rows file exported from the catalog (one line per model, latest model y
 with the app's own rule (vehicle-intelligence-platform supabase/functions/_shared/catalog/body_category.ts).
 Photos are saved separately as public/img/cars/<key>.webp. No prices, payments or offers are exported.
 
+Verified current MSRP per trim (destination excluded) comes from scripts/msrp.txt, in the same trim order.
 Trims and the number of configurations the app has for each model come from scripts/trims.txt (same export).
 
 usage: python3 scripts/build-catalog.py rows.txt categories.json
@@ -41,6 +42,18 @@ for l in open("scripts/trims.txt").read().strip().split("\n"):
     mk, md, total, years, ts = l.split("|")
     trims[(mk, md)] = {"configs": int(total), "years": [int(y) for y in years.split(",")],
                        "trims": [{"name": t.split("~")[0], "drive": [DT[c] for c in t.split("~")[1]]} for t in ts.split(";")]}
+
+msrp = {}
+for l in open("scripts/msrp.txt").read().strip().split("\n"):
+    if l.startswith("#"): continue
+    mk, md, vals = l.split("|")
+    msrp[(mk, md)] = [int(v) if v else None for v in vals.split(",")]
+for key, t in trims.items():
+    prices = msrp[key]
+    assert len(prices) == len(t["trims"]), f"MSRP count does not match trim count for {key}"
+    for trim, price in zip(t["trims"], prices): trim["msrp"] = price
+    known = [x for x in prices if x]
+    t["msrpFrom"], t["msrpTo"] = (min(known), max(known)) if known else (None, None)
 
 out = []
 for (make, model, year, _bs, ntrims, *_), cat in zip(rows, cats):

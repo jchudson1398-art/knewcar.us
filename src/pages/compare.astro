@@ -1,0 +1,71 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Compare" description="Compare new cars side by side on KnewCar.">
+  <section class="page-head"><div class="wrap"><h1>Compare <span class="mint">side by side</span></h1><p class="lead">Up to four cars. MSRP excludes destination, taxes and fees.</p></div></section>
+  <section class="wrap cmp">
+    <div class="scroll" data-table tabindex="0" aria-label="Comparison table"></div>
+    <div class="empty card" data-empty hidden>
+      <h2>Pick at least two cars</h2>
+      <p>Open a car and choose “Add to compare”, or pick from your saved cars.</p>
+      <a class="btn btn-primary" href="/explore">Explore all your options</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .cmp { padding-top: 8px; padding-bottom: 80px; }
+  [hidden] { display: none !important; }
+  .scroll { overflow-x: auto; }
+  .scroll :global(table) { border-collapse: collapse; width: 100%; min-width: 640px; }
+  .scroll :global(th), .scroll :global(td) { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--edge); font-size: 16px; }
+  .scroll :global(th[scope="row"]) { color: var(--sub); font-weight: 600; width: 150px; }
+  .scroll :global(td img) { width: 100%; max-width: 240px; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; }
+  .scroll :global(td h2) { font-size: 18px; margin-top: 10px; }
+  .scroll :global(.best) { color: var(--mint); font-weight: 700; }
+  .scroll :global(td button) { margin-top: 8px; min-height: 44px; background: none; border: 0; padding: 0; color: var(--mint); font: 600 14px var(--font); cursor: pointer; }
+  .scroll :global(ul) { margin: 6px 0 0; padding-left: 18px; color: var(--sub); font-size: 14px; }
+  .empty { text-align: center; }
+  .empty .btn { margin-top: 16px; }
+</style>
+
+<script>
+  import { compared, requirePlus, toggleCompared } from "../lib/plus";
+  import type { Car } from "../lib/catalog";
+
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c] ?? c);
+  const usd = (n: number | null) => (n ? `$${n.toLocaleString("en-US")}` : "In the app");
+
+  async function start() {
+    const host = document.querySelector<HTMLElement>("[data-table]")!;
+    const empty = document.querySelector<HTMLElement>("[data-empty]")!;
+    const cars: Car[] = await (await fetch("/catalog.json")).json();
+    const draw = () => {
+      const mine = compared().map((k) => cars.find((c) => c.key === k)).filter((c): c is Car => !!c);
+      empty.hidden = mine.length >= 2;
+      host.hidden = mine.length < 2;
+      if (mine.length < 2) return;
+      const low = Math.min(...mine.map((c) => c.msrpFrom ?? Infinity));
+      const row = (label: string, cell: (c: Car) => string) => `<tr><th scope="row">${label}</th>${mine.map((c) => `<td>${cell(c)}</td>`).join("")}</tr>`;
+      const drives = (c: Car) => [...new Set(c.trims.flatMap((t) => t.drive))].join(", ") || "Shown in the app";
+      const trims = (c: Car) => `${c.trims.length}<ul>${c.trims.slice(0, 6).map((t) => `<li>${esc(t.name)}${t.msrp ? ` · ${usd(t.msrp)}` : ""}</li>`).join("")}${c.trims.length > 6 ? `<li>and ${c.trims.length - 6} more</li>` : ""}</ul>`;
+      const head = mine.map((c) => `<td><a href="/cars/${c.key}/"><img src="/img/cars/${c.key}.webp" alt="" width="560" height="420"></a><h2>${esc(`${c.year} ${c.make} ${c.model}`)}</h2><button type="button" data-drop="${c.key}">Remove</button></td>`).join("");
+      host.innerHTML = `<table><tr><th scope="row">Car</th>${head}</tr>${
+        row("MSRP from", (c) => `<span class="${c.msrpFrom === low ? "best" : ""}">${usd(c.msrpFrom)}</span>`) +
+        row("MSRP up to", (c) => usd(c.msrpTo)) +
+        row("Type", (c) => esc(c.type ?? "Not listed")) +
+        row("Powertrain", (c) => esc(c.fuel ?? "Not listed")) +
+        row("Drivetrains", (c) => esc(drives(c))) +
+        row("Trims", trims) +
+        row("In the app", (c) => `${c.configs} configurations`)
+      }</table>`;
+    };
+    host.addEventListener("click", (e) => {
+      const b = (e.target as HTMLElement).closest<HTMLElement>("[data-drop]");
+      if (b?.dataset.drop) { toggleCompared(b.dataset.drop); draw(); }
+    });
+    draw();
+  }
+  if (requirePlus("compare")) start();
+</script>

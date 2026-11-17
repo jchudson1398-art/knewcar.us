@@ -1,0 +1,185 @@
+---
+// Tax, fee and payment estimator (website upgrade). Texas only for now: it uses the approved Texas rule from the
+// finance contract (6.25% motor vehicle tax on price less trade-in value; $225 documentary fee and $300 combined
+// title and registration as planning estimates). Other states turn on as their rules are approved.
+import Base from "../layouts/Base.astro";
+import { APP_STORE_URL } from "../site";
+const states = [
+  ["TX", "Texas", true],
+  ["CA", "California", false],
+  ["FL", "Florida", false],
+  ["NY", "New York", false],
+  ["VA", "Virginia", false],
+] as const;
+---
+
+<Base title="Tax, fee and payment estimator" description="Estimate sales tax, title and registration, documentary fee and a monthly payment for a new car in Texas.">
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Website upgrade</p>
+      <h1>Estimate tax, fees <span class="mint">and your payment.</span></h1>
+      <p class="lead">State tax is included. These are estimates; the dealer and lender set the final numbers.</p>
+    </div>
+  </section>
+
+  <section class="wrap est" data-est hidden>
+    <form class="card" data-form novalidate>
+      <h2 data-car hidden></h2>
+      <div class="grid2">
+        <label>State
+          <select name="state">
+            {states.map(([code, name, on]) => <option value={code}>{name}{on ? "" : " (coming soon)"}</option>)}
+            <option value="other">Another state (coming soon)</option>
+          </select>
+        </label>
+        <label>Trim <select name="trim" disabled><option value="">Enter a price below</option></select></label>
+        <label>Vehicle price (MSRP or agreed price) <input name="price" inputmode="decimal" placeholder="35,000" /></label>
+        <label>Destination charge (on the window sticker) <input name="destination" inputmode="decimal" placeholder="1,395" /></label>
+        <label>Trade-in value <input name="trade" inputmode="decimal" placeholder="0" /></label>
+        <label>Still owed on the trade-in <input name="payoff" inputmode="decimal" placeholder="0" /></label>
+        <label>Down payment <input name="down" inputmode="decimal" placeholder="0" /></label>
+        <label>Interest rate (APR %) <input name="apr" inputmode="decimal" placeholder="Your rate" /></label>
+        <label>Loan length
+          <select name="term"><option value="36">36 months</option><option value="48">48 months</option><option value="60" selected>60 months</option><option value="72">72 months</option><option value="84">84 months</option></select>
+        </label>
+      </div>
+    </form>
+
+    <div class="card out" aria-live="polite">
+      <p class="hold" data-hold>Enter a price and the destination charge to see the estimate.</p>
+      <div data-result hidden>
+        <dl>
+          <div><dt>Vehicle price with destination</dt><dd data-o="gross"></dd></div>
+          <div><dt>Texas motor vehicle tax (6.25%) <span class="tag ok">State tax, included</span></dt><dd data-o="tax"></dd></div>
+          <div><dt>Local tax <span class="tag ok">None on vehicles in Texas</span></dt><dd>$0.00</dd></div>
+          <div><dt>Title and registration <span class="tag">Estimate</span></dt><dd>$300.00</dd></div>
+          <div><dt>Dealer documentary fee <span class="tag">Estimate</span></dt><dd>$225.00</dd></div>
+          <div class="total"><dt>Estimated out the door</dt><dd data-o="otd"></dd></div>
+          <div><dt>Down payment</dt><dd data-o="down"></dd></div>
+          <div><dt>Trade-in equity (value less what's owed)</dt><dd data-o="equity"></dd></div>
+          <div class="total"><dt>Estimated amount to finance</dt><dd data-o="financed"></dd></div>
+        </dl>
+        <p class="pay" data-pay></p>
+      </div>
+      <p class="hold" data-soon hidden>This state isn't available yet. We add a state only after its tax and fee rules are checked against official sources. Texas is ready today.</p>
+      <ul class="fine">
+        <li>Tax is figured on the price with destination, less your trade-in's value, as Texas does for a purchase.</li>
+        <li>Title, registration and the documentary fee are planning estimates. Your dealer's amounts may differ.</li>
+        <li>Dealer discounts, rebates, add-ons and offers aren't included. <a href={APP_STORE_URL}>Offers are in the app</a> for Texas shoppers.</li>
+        <li>The payment uses the rate you enter. It is not an offer of credit.</li>
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .est { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; padding-top: 8px; padding-bottom: 80px; align-items: start; }
+  .est[hidden], [hidden] { display: none !important; }
+  .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  h2 { font-size: 22px; margin-bottom: 16px; }
+  label { display: grid; gap: 6px; font-size: 14px; font-weight: 600; color: var(--sub); }
+  input, select { height: 48px; padding: 0 12px; border-radius: 12px; border: 1px solid rgba(232, 243, 238, 0.25); background: var(--card-solid); color: var(--text); font: 500 16px var(--font); min-width: 0; width: 100%; }
+  dl { margin: 0; display: grid; }
+  dl div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--edge); font-size: 16px; }
+  dt { color: var(--sub); }
+  dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .total dt, .total dd { color: var(--text); font-weight: 800; font-size: 18px; }
+  .tag { display: inline-block; margin-left: 6px; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; border: 1px solid rgba(255, 196, 92, 0.5); color: #ffe2a8; }
+  .tag.ok { border-color: rgba(92, 235, 196, 0.5); color: var(--mint); }
+  .pay { margin: 18px 0 0 !important; font-size: 28px; font-weight: 800; color: var(--text) !important; }
+  .pay :global(small) { font-size: 15px; font-weight: 600; color: var(--sub); }
+  .hold { margin: 0 !important; }
+  .fine { margin: 18px 0 0; padding-left: 18px; color: var(--faint); font-size: 13px; display: grid; gap: 6px; }
+  @media (max-width: 900px) { .est { grid-template-columns: 1fr; } }
+  @media (max-width: 520px) { .grid2 { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  import { requirePlus } from "../lib/plus";
+  import type { Car } from "../lib/catalog";
+
+  // Whole cents throughout, so the arithmetic is exact.
+  const cents = (s: string): number | null => {
+    const t = s.replace(/[$,\s]/g, "");
+    if (t === "") return null;
+    const n = Number(t);
+    return Number.isFinite(n) && n >= 0 ? Math.round(n * 100) : null;
+  };
+  const usd = (c: number) => `${c < 0 ? "-" : ""}$${(Math.abs(c) / 100).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  const TAX_BP = 625; // 6.25% in basis points
+  const DOC = 22500;
+  const TITLE_REG = 30000;
+
+  async function start() {
+    const root = document.querySelector<HTMLElement>("[data-est]")!;
+    root.hidden = false;
+    const form = root.querySelector<HTMLFormElement>("[data-form]")!;
+    const f = (n: string) => form.elements.namedItem(n) as HTMLInputElement | HTMLSelectElement;
+    const out = (n: string) => root.querySelector<HTMLElement>(`[data-o="${n}"]`)!;
+    const hold = root.querySelector<HTMLElement>("[data-hold]")!;
+    const result = root.querySelector<HTMLElement>("[data-result]")!;
+    const soon = root.querySelector<HTMLElement>("[data-soon]")!;
+    const pay = root.querySelector<HTMLElement>("[data-pay]")!;
+
+    const key = new URLSearchParams(location.search).get("car");
+    if (key) {
+      const cars: Car[] = await (await fetch("/catalog.json")).json();
+      const car = cars.find((c) => c.key === key);
+      if (car) {
+        const h = root.querySelector<HTMLElement>("[data-car]")!;
+        h.textContent = `${car.year} ${car.make} ${car.model}`;
+        h.hidden = false;
+        const sel = f("trim") as HTMLSelectElement;
+        const priced = car.trims.filter((t) => t.msrp);
+        if (priced.length) {
+          sel.disabled = false;
+          sel.replaceChildren(...priced.map((t) => new Option(`${t.name} · $${t.msrp!.toLocaleString("en-US")} MSRP`, String(t.msrp))));
+          f("price").value = sel.value;
+          sel.addEventListener("change", () => { f("price").value = sel.value; calc(); });
+        }
+      }
+    }
+
+    function calc() {
+      const texas = f("state").value === "TX";
+      soon.hidden = texas;
+      const price = cents(f("price").value);
+      const dest = cents(f("destination").value);
+      if (!texas || price === null || dest === null) {
+        result.hidden = true;
+        hold.hidden = !texas;
+        return;
+      }
+      const trade = cents(f("trade").value) ?? 0;
+      const payoff = cents(f("payoff").value) ?? 0;
+      const down = cents(f("down").value) ?? 0;
+      const gross = price + dest;
+      const basis = Math.max(0, gross - trade);
+      const tax = Math.round((basis * TAX_BP) / 10000);
+      const otd = gross + tax + DOC + TITLE_REG;
+      const equity = trade - payoff;
+      const financed = Math.max(0, otd - down - equity);
+      out("gross").textContent = usd(gross);
+      out("tax").textContent = usd(tax);
+      out("otd").textContent = usd(otd);
+      out("down").textContent = usd(-down);
+      out("equity").textContent = usd(-equity);
+      out("financed").textContent = usd(financed);
+      const apr = Number(f("apr").value.replace(/[%\s]/g, ""));
+      const n = Number(f("term").value);
+      if (f("apr").value.trim() === "" || !Number.isFinite(apr) || apr < 0 || apr > 100) {
+        pay.innerHTML = "<small>Enter an interest rate to see a monthly payment.</small>";
+      } else {
+        const r = apr / 100 / 12;
+        const m = r === 0 ? financed / n : (financed * r) / (1 - Math.pow(1 + r, -n));
+        pay.innerHTML = `${usd(Math.round(m))}<small> a month, estimated · ${n} months at ${apr}% APR</small>`;
+      }
+      hold.hidden = true;
+      result.hidden = false;
+    }
+    form.addEventListener("input", calc);
+    form.addEventListener("submit", (e) => e.preventDefault());
+    calc();
+  }
+  if (requirePlus("estimate")) start();
+</script>

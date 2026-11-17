@@ -1,0 +1,36 @@
+---
+// Wires every Save and Compare button on the page. Loaded once from the Base layout.
+---
+<script>
+  import { compared, isPlus, requirePlus, saved, toggleCompared, toggleSaved } from "../lib/plus";
+
+  const paint = () => {
+    const s = isPlus() ? saved() : [];
+    const c = isPlus() ? compared() : [];
+    document.querySelectorAll<HTMLElement>("[data-save]").forEach((b) => {
+      const on = s.includes(b.dataset.save ?? "");
+      b.setAttribute("aria-pressed", String(on));
+      if (b.hasAttribute("data-save-text")) b.textContent = on ? "Saved" : "Save this car";
+    });
+    document.querySelectorAll<HTMLElement>("[data-compare]").forEach((b) => {
+      const on = c.includes(b.dataset.compare ?? "");
+      b.setAttribute("aria-pressed", String(on));
+      b.textContent = on ? "In compare · view" : "Add to compare";
+    });
+  };
+  document.addEventListener("click", (e) => {
+    const t = (e.target as HTMLElement).closest<HTMLElement>("[data-save], [data-compare]");
+    if (!t) return;
+    e.preventDefault();
+    if (t.dataset.save !== undefined) {
+      if (requirePlus("save")) { toggleSaved(t.dataset.save); paint(); }
+    } else if (t.dataset.compare !== undefined) {
+      if (!requirePlus("compare")) return;
+      if (t.getAttribute("aria-pressed") === "true") location.href = "/compare";
+      else { toggleCompared(t.dataset.compare); paint(); }
+    }
+  });
+  paint();
+  // The home grid swaps its cars after load; repaint so hearts match the new cars.
+  window.addEventListener("load", paint);
+</script>

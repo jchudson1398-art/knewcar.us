@@ -16,23 +16,28 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 34300
    },
    {
     "name": "3LT",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 39700
    },
    {
     "name": "RS",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 43600
    }
-  ]
+  ],
+  "msrpFrom": 34300,
+  "msrpTo": 43600
  },
  {
   "key": "chevrolet-blazer-ev",
@@ -52,22 +57,27 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 45000
    },
    {
     "name": "RS",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 50800
    },
    {
     "name": "SS",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 60700
    }
-  ]
+  ],
+  "msrpFrom": 45000,
+  "msrpTo": 60700
  },
  {
   "key": "chevrolet-bolt",
@@ -85,15 +95,19 @@
     "name": "LT",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 27600
    },
    {
     "name": "RS",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 31600
    }
-  ]
+  ],
+  "msrpFrom": 27600,
+  "msrpTo": 31600
  },
  {
   "key": "chevrolet-colorado",
@@ -111,39 +125,47 @@
     "name": "Custom",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": null
    },
    {
     "name": "LT",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 36000
    },
    {
     "name": "Trail Boss",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 40500
    },
    {
     "name": "WT",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 32400
    },
    {
     "name": "Z71",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 44600
    },
    {
     "name": "ZR2",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 50700
    }
-  ]
+  ],
+  "msrpFrom": 32400,
+  "msrpTo": 50700
  },
  {
   "key": "chevrolet-corvette-grand-sport",
@@ -159,13 +181,17 @@
   "trims": [
    {
     "name": "Convertible",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "Coupe",
-    "drive": []
+    "drive": [],
+    "msrp": null
    }
-  ]
+  ],
+  "msrpFrom": null,
+  "msrpTo": null
  },
  {
   "key": "chevrolet-corvette-stingray",
@@ -182,13 +208,17 @@
   "trims": [
    {
     "name": "Convertible",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "Coupe",
-    "drive": []
+    "drive": [],
+    "msrp": null
    }
-  ]
+  ],
+  "msrpFrom": null,
+  "msrpTo": null
  },
  {
   "key": "chevrolet-equinox",
@@ -208,23 +238,28 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 34200
    },
    {
     "name": "LT",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 29300
    },
    {
     "name": "RS",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 34200
    }
-  ]
+  ],
+  "msrpFrom": 29300,
+  "msrpTo": 34200
  },
  {
   "key": "chevrolet-equinox-ev",
@@ -244,23 +279,28 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 34995
    },
    {
     "name": "LT 2",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 42095
    },
    {
     "name": "RS",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 44395
    }
-  ]
+  ],
+  "msrpFrom": 34995,
+  "msrpTo": 44395
  },
  {
   "key": "chevrolet-express-cargo",
@@ -276,9 +316,12 @@
   "trims": [
    {
     "name": "WT",
-    "drive": []
+    "drive": [],
+    "msrp": null
    }
-  ]
+  ],
+  "msrpFrom": null,
+  "msrpTo": null
  },
  {
   "key": "chevrolet-express-passenger",
@@ -294,13 +337,17 @@
   "trims": [
    {
     "name": "LS",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "LT",
-    "drive": []
+    "drive": [],
+    "msrp": null
    }
-  ]
+  ],
+  "msrpFrom": null,
+  "msrpTo": null
  },
  {
   "key": "chevrolet-silverado-1500",
@@ -316,41 +363,52 @@
   "trims": [
    {
     "name": "Custom",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "Custom Trail Boss",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "High Country",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "LT",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "LT Trail Boss",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "LTZ",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "RST",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "WT",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "ZR2",
-    "drive": []
+    "drive": [],
+    "msrp": null
    }
-  ]
+  ],
+  "msrpFrom": null,
+  "msrpTo": null
  },
  {
   "key": "chevrolet-silverado-2500-hd",
@@ -366,29 +424,37 @@
   "trims": [
    {
     "name": "Custom",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "High Country",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "LT",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "LTZ",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "WT",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "ZR2",
-    "drive": []
+    "drive": [],
+    "msrp": null
    }
-  ]
+  ],
+  "msrpFrom": null,
+  "msrpTo": null
  },
  {
   "key": "chevrolet-silverado-3500-hd",
@@ -404,21 +470,27 @@
   "trims": [
    {
     "name": "High Country",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "LT",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "LTZ",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "WT",
-    "drive": []
+    "drive": [],
+    "msrp": null
    }
-  ]
+  ],
+  "msrpFrom": null,
+  "msrpTo": null
  },
  {
   "key": "chevrolet-silverado-ev",
@@ -436,51 +508,61 @@
     "name": "Custom - Standard Range",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 55895
    },
    {
     "name": "LT - Extended Range",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 69100
    },
    {
     "name": "LT - Max Range",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 89200
    },
    {
     "name": "LT - Standard Range",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 60900
    },
    {
     "name": "RST Stars and Steel Edition - Extended Range",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 97350
    },
    {
     "name": "RST Stars and Steel Edition - Max Range",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 105850
    },
    {
     "name": "Trail Boss - Extended Range",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 70000
    },
    {
     "name": "Trail Boss - Max Range",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 86600
    }
-  ]
+  ],
+  "msrpFrom": 55895,
+  "msrpTo": 105850
  },
  {
   "key": "chevrolet-suburban",
@@ -497,29 +579,37 @@
   "trims": [
    {
     "name": "High Country",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "LS",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "LT",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "Premier",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "RST",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "Z71",
-    "drive": []
+    "drive": [],
+    "msrp": null
    }
-  ]
+  ],
+  "msrpFrom": null,
+  "msrpTo": null
  },
  {
   "key": "chevrolet-tahoe",
@@ -536,29 +626,37 @@
   "trims": [
    {
     "name": "High Country",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "LS",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "LT",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "Premier",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "RST",
-    "drive": []
+    "drive": [],
+    "msrp": null
    },
    {
     "name": "Z71",
-    "drive": []
+    "drive": [],
+    "msrp": null
    }
-  ]
+  ],
+  "msrpFrom": null,
+  "msrpTo": null
  },
  {
   "key": "chevrolet-trailblazer",
@@ -577,28 +675,34 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 28200
    },
    {
     "name": "LS",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 25600
    },
    {
     "name": "LT",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 26800
    },
    {
     "name": "RS",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 28200
    }
-  ]
+  ],
+  "msrpFrom": 25600,
+  "msrpTo": 28200
  },
  {
   "key": "chevrolet-traverse",
@@ -618,29 +722,35 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 56100
    },
    {
     "name": "LT",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 41100
    },
    {
     "name": "RS",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 55800
    },
    {
     "name": "Z71",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 49400
    }
-  ]
+  ],
+  "msrpFrom": 41100,
+  "msrpTo": 56100
  },
  {
   "key": "chevrolet-trax",
@@ -658,33 +768,40 @@
     "name": "1RS",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 23200
    },
    {
     "name": "2RS",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 25700
    },
    {
     "name": "ACTIV",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 25700
    },
    {
     "name": "LS",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 21700
    },
    {
     "name": "LT",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 23200
    }
-  ]
+  ],
+  "msrpFrom": 21700,
+  "msrpTo": 25700
  },
  {
   "key": "ford-bronco",
@@ -700,33 +817,42 @@
   "trims": [
    {
     "name": "Badlands",
-    "drive": []
+    "drive": [],
+    "msrp": 48890
    },
    {
     "name": "Base",
-    "drive": []
+    "drive": [],
+    "msrp": 40795
    },
    {
     "name": "Big Bend",
-    "drive": []
+    "drive": [],
+    "msrp": 41295
    },
    {
     "name": "Heritage Edition",
-    "drive": []
+    "drive": [],
+    "msrp": 51625
    },
    {
     "name": "Outer Banks",
-    "drive": []
+    "drive": [],
+    "msrp": 48190
    },
    {
     "name": "Raptor",
-    "drive": []
+    "drive": [],
+    "msrp": 79995
    },
    {
     "name": "Stroppe Edition",
-    "drive": []
+    "drive": [],
+    "msrp": 69995
    }
-  ]
+  ],
+  "msrpFrom": 40795,
+  "msrpTo": 79995
  },
  {
   "key": "ford-bronco-sport",
@@ -742,21 +868,27 @@
   "trims": [
    {
     "name": "Badlands",
-    "drive": []
+    "drive": [],
+    "msrp": 37265
    },
    {
     "name": "Big Bend",
-    "drive": []
+    "drive": [],
+    "msrp": 31845
    },
    {
     "name": "Heritage",
-    "drive": []
+    "drive": [],
+    "msrp": 33395
    },
    {
     "name": "Outer Banks",
-    "drive": []
+    "drive": [],
+    "msrp": 35145
    }
-  ]
+  ],
+  "msrpFrom": 31845,
+  "msrpTo": 37265
  },
  {
   "key": "ford-expedition",
@@ -773,21 +905,27 @@
   "trims": [
    {
     "name": "Active",
-    "drive": []
+    "drive": [],
+    "msrp": 63600
    },
    {
     "name": "King Ranch",
-    "drive": []
+    "drive": [],
+    "msrp": 82695
    },
    {
     "name": "Platinum",
-    "drive": []
+    "drive": [],
+    "msrp": 70550
    },
    {
     "name": "Tremor",
-    "drive": []
+    "drive": [],
+    "msrp": 82400
    }
-  ]
+  ],
+  "msrpFrom": 63600,
+  "msrpTo": 82695
  },
  {
   "key": "ford-explorer",
@@ -804,25 +942,32 @@
   "trims": [
    {
     "name": "Active",
-    "drive": []
+    "drive": [],
+    "msrp": 38465
    },
    {
     "name": "Platinum",
-    "drive": []
+    "drive": [],
+    "msrp": 50660
    },
    {
     "name": "ST",
-    "drive": []
+    "drive": [],
+    "msrp": 53660
    },
    {
     "name": "ST-Line",
-    "drive": []
+    "drive": [],
+    "msrp": 44200
    },
    {
     "name": "Tremor",
-    "drive": []
+    "drive": [],
+    "msrp": 49200
    }
-  ]
+  ],
+  "msrpFrom": 38465,
+  "msrpTo": 53660
  },
  {
   "key": "ford-f-150",
@@ -838,37 +983,47 @@
   "trims": [
    {
     "name": "King Ranch",
-    "drive": []
+    "drive": [],
+    "msrp": 65825
    },
    {
     "name": "Lariat",
-    "drive": []
+    "drive": [],
+    "msrp": 59560
    },
    {
     "name": "Platinum",
-    "drive": []
+    "drive": [],
+    "msrp": 68800
    },
    {
     "name": "Raptor",
-    "drive": []
+    "drive": [],
+    "msrp": 79005
    },
    {
     "name": "STX",
-    "drive": []
+    "drive": [],
+    "msrp": 44855
    },
    {
     "name": "Tremor",
-    "drive": []
+    "drive": [],
+    "msrp": 64915
    },
    {
     "name": "XL",
-    "drive": []
+    "drive": [],
+    "msrp": 37290
    },
    {
     "name": "XLT",
-    "drive": []
+    "drive": [],
+    "msrp": 45695
    }
-  ]
+  ],
+  "msrpFrom": 37290,
+  "msrpTo": 79005
  },
  {
   "key": "ford-maverick",
@@ -884,28 +1039,35 @@
   "trims": [
    {
     "name": "Lariat",
-    "drive": []
+    "drive": [],
+    "msrp": 38090
    },
    {
     "name": "Lobo",
-    "drive": []
+    "drive": [],
+    "msrp": 35930
    },
    {
     "name": "Tremor",
-    "drive": []
+    "drive": [],
+    "msrp": 40645
    },
    {
     "name": "XL",
-    "drive": []
+    "drive": [],
+    "msrp": 28145
    },
    {
     "name": "XLT",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 30645
    }
-  ]
+  ],
+  "msrpFrom": 28145,
+  "msrpTo": 40645
  },
  {
   "key": "ford-mustang",
@@ -921,33 +1083,42 @@
   "trims": [
    {
     "name": "Dark Horse",
-    "drive": []
+    "drive": [],
+    "msrp": 64080
    },
    {
     "name": "Dark Horse Premium",
-    "drive": []
+    "drive": [],
+    "msrp": 64080
    },
    {
     "name": "Dark Horse SC",
-    "drive": []
+    "drive": [],
+    "msrp": 106090
    },
    {
     "name": "EcoBoost Fastback",
-    "drive": []
+    "drive": [],
+    "msrp": 32995
    },
    {
     "name": "EcoBoost Premium Fastback",
-    "drive": []
+    "drive": [],
+    "msrp": 36345
    },
    {
     "name": "GT Fastback",
-    "drive": []
+    "drive": [],
+    "msrp": 46800
    },
    {
     "name": "GT Premium Fastback",
-    "drive": []
+    "drive": [],
+    "msrp": 51080
    }
-  ]
+  ],
+  "msrpFrom": 32995,
+  "msrpTo": 106090
  },
  {
   "key": "ford-mustang-mach-e",
@@ -963,21 +1134,27 @@
   "trims": [
    {
     "name": "GT",
-    "drive": []
+    "drive": [],
+    "msrp": 53395
    },
    {
     "name": "Premium",
-    "drive": []
+    "drive": [],
+    "msrp": 40595
    },
    {
     "name": "Rally",
-    "drive": []
+    "drive": [],
+    "msrp": 53395
    },
    {
     "name": "Select",
-    "drive": []
+    "drive": [],
+    "msrp": 37795
    }
-  ]
+  ],
+  "msrpFrom": 37795,
+  "msrpTo": 53395
  },
  {
   "key": "ford-ranger",
@@ -993,21 +1170,27 @@
   "trims": [
    {
     "name": "Lariat",
-    "drive": []
+    "drive": [],
+    "msrp": 43955
    },
    {
     "name": "Raptor",
-    "drive": []
+    "drive": [],
+    "msrp": 57270
    },
    {
     "name": "XL",
-    "drive": []
+    "drive": [],
+    "msrp": 33550
    },
    {
     "name": "XLT",
-    "drive": []
+    "drive": [],
+    "msrp": 36075
    }
-  ]
+  ],
+  "msrpFrom": 33550,
+  "msrpTo": 57270
  },
  {
   "key": "ford-super-duty",
@@ -1024,65 +1207,82 @@
   "trims": [
    {
     "name": "F-250 King Ranch",
-    "drive": []
+    "drive": [],
+    "msrp": 78575
    },
    {
     "name": "F-250 Lariat",
-    "drive": []
+    "drive": [],
+    "msrp": 62975
    },
    {
     "name": "F-250 Platinum",
-    "drive": []
+    "drive": [],
+    "msrp": 79465
    },
    {
     "name": "F-250 XL",
-    "drive": []
+    "drive": [],
+    "msrp": 45975
    },
    {
     "name": "F-250 XLT",
-    "drive": []
+    "drive": [],
+    "msrp": 49275
    },
    {
     "name": "F-350 King Ranch",
-    "drive": []
+    "drive": [],
+    "msrp": 79880
    },
    {
     "name": "F-350 Lariat",
-    "drive": []
+    "drive": [],
+    "msrp": 64280
    },
    {
     "name": "F-350 Platinum",
-    "drive": []
+    "drive": [],
+    "msrp": 80770
    },
    {
     "name": "F-350 XL",
-    "drive": []
+    "drive": [],
+    "msrp": 47280
    },
    {
     "name": "F-350 XLT",
-    "drive": []
+    "drive": [],
+    "msrp": 50580
    },
    {
     "name": "F-450 King Ranch",
-    "drive": []
+    "drive": [],
+    "msrp": 96540
    },
    {
     "name": "F-450 Lariat",
-    "drive": []
+    "drive": [],
+    "msrp": 81155
    },
    {
     "name": "F-450 Platinum",
-    "drive": []
+    "drive": [],
+    "msrp": 97985
    },
    {
     "name": "F-450 XL",
-    "drive": []
+    "drive": [],
+    "msrp": 63990
    },
    {
     "name": "F-450 XLT",
-    "drive": []
+    "drive": [],
+    "msrp": 67920
    }
-  ]
+  ],
+  "msrpFrom": 45975,
+  "msrpTo": 97985
  },
  {
   "key": "ford-transit",
@@ -1098,13 +1298,17 @@
   "trims": [
    {
     "name": "Passenger Van XL",
-    "drive": []
+    "drive": [],
+    "msrp": 59680
    },
    {
     "name": "Passenger Van XLT",
-    "drive": []
+    "drive": [],
+    "msrp": 62665
    }
-  ]
+  ],
+  "msrpFrom": 59680,
+  "msrpTo": 62665
  },
  {
   "key": "honda-accord",
@@ -1122,39 +1326,47 @@
     "name": "EX-L Hybrid",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 35095
    },
    {
     "name": "LX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 28395
    },
    {
     "name": "SE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 30695
    },
    {
     "name": "Sport Hybrid",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 33795
    },
    {
     "name": "Sport-L Hybrid",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 35495
    },
    {
     "name": "Touring Hybrid",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 39495
    }
-  ]
+  ],
+  "msrpFrom": 28395,
+  "msrpTo": 39495
  },
  {
   "key": "honda-civic",
@@ -1172,39 +1384,47 @@
     "name": "LX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 24695
    },
    {
     "name": "Si",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 31495
    },
    {
     "name": "Sport",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 26695
    },
    {
     "name": "Sport Hybrid",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 29395
    },
    {
     "name": "Sport Touring Hybrid",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 32395
    },
    {
     "name": "Type R",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 47395
    }
-  ]
+  ],
+  "msrpFrom": 24695,
+  "msrpTo": 47395
  },
  {
   "key": "honda-cr-v",
@@ -1224,49 +1444,58 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 33550
    },
    {
     "name": "EX-L",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 35800
    },
    {
     "name": "LX",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 31520
    },
    {
     "name": "Sport Hybrid",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 36030
    },
    {
     "name": "Sport Touring Hybrid",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 42950
    },
    {
     "name": "Sport-L Hybrid",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 39125
    },
    {
     "name": "TrailSport Hybrid",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 39200
    }
-  ]
+  ],
+  "msrpFrom": 31520,
+  "msrpTo": 42950
  },
  {
   "key": "honda-hr-v",
@@ -1285,23 +1514,28 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 30450
    },
    {
     "name": "LX",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 26600
    },
    {
     "name": "Sport",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 28400
    }
-  ]
+  ],
+  "msrpFrom": 26600,
+  "msrpTo": 30450
  },
  {
   "key": "honda-odyssey",
@@ -1320,27 +1554,33 @@
     "name": "Elite",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 52095
    },
    {
     "name": "EX-L",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 43195
    },
    {
     "name": "Sport-L",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 44295
    },
    {
     "name": "Touring",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 47895
    }
-  ]
+  ],
+  "msrpFrom": 43195,
+  "msrpTo": 52095
  },
  {
   "key": "honda-passport",
@@ -1359,39 +1599,47 @@
     "name": "RTL",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 45195
    },
    {
     "name": "RTL Towing",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 45895
    },
    {
     "name": "TrailSport",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 49995
    },
    {
     "name": "TrailSport Blackout",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 51495
    },
    {
     "name": "TrailSport Elite",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 53695
    },
    {
     "name": "TrailSport Elite Blackout",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 55195
    }
-  ]
+  ],
+  "msrpFrom": 45195,
+  "msrpTo": 55195
  },
  {
   "key": "honda-pilot",
@@ -1409,47 +1657,56 @@
     "name": "Black Edition",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 55195
    },
    {
     "name": "Elite",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 53695
    },
    {
     "name": "EX-L",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 44695
    },
    {
     "name": "Sport",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 42395
    },
    {
     "name": "Touring",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 51295
    },
    {
     "name": "Touring Blackout",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 52495
    },
    {
     "name": "TrailSport",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 50595
    }
-  ]
+  ],
+  "msrpFrom": 42395,
+  "msrpTo": 55195
  },
  {
   "key": "honda-prelude",
@@ -1467,15 +1724,19 @@
     "name": "Hybrid",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 42400
    },
    {
     "name": "Hybrid Two-Tone",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 42900
    }
-  ]
+  ],
+  "msrpFrom": 42400,
+  "msrpTo": 42900
  },
  {
   "key": "honda-prologue",
@@ -1493,23 +1754,28 @@
     "name": "Elite",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 50400
    },
    {
     "name": "EX",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 39900
    },
    {
     "name": "Touring",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 44200
    }
-  ]
+  ],
+  "msrpFrom": 39900,
+  "msrpTo": 50400
  },
  {
   "key": "honda-ridgeline",
@@ -1527,39 +1793,47 @@
     "name": "Black Edition",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 47395
    },
    {
     "name": "Black Edition Two-Tone",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 47895
    },
    {
     "name": "RTL",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 43595
    },
    {
     "name": "Sport",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 40795
    },
    {
     "name": "TrailSport",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 45995
    },
    {
     "name": "TrailSport+HPD Wheels",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 47195
    }
-  ]
+  ],
+  "msrpFrom": 40795,
+  "msrpTo": 47895
  },
  {
   "key": "hyundai-elantra",
@@ -1577,39 +1851,47 @@
     "name": "Limited",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 27375
    },
    {
     "name": "N Line",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 29600
    },
    {
     "name": "SE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 22825
    },
    {
     "name": "SEL Sport",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 23950
    },
    {
     "name": "SEL Sport Plus",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 24450
    },
    {
     "name": "SEL Sport Premium",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 25275
    }
-  ]
+  ],
+  "msrpFrom": 22825,
+  "msrpTo": 29600
  },
  {
   "key": "hyundai-elantra-hybrid",
@@ -1627,21 +1909,26 @@
     "name": "Blue",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 25650
    },
    {
     "name": "Limited",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 30000
    },
    {
     "name": "SEL Sport",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 27625
    }
-  ]
+  ],
+  "msrpFrom": 25650,
+  "msrpTo": 30000
  },
  {
   "key": "hyundai-ioniq-5",
@@ -1660,35 +1947,42 @@
     "drive": [
      "AWD",
      "RWD"
-    ]
+    ],
+    "msrp": 45225
    },
    {
     "name": "SE",
     "drive": [
      "AWD",
      "RWD"
-    ]
+    ],
+    "msrp": 37750
    },
    {
     "name": "SE Standard Range",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 35250
    },
    {
     "name": "SEL",
     "drive": [
      "AWD",
      "RWD"
-    ]
+    ],
+    "msrp": 40200
    },
    {
     "name": "XRT",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 46525
    }
-  ]
+  ],
+  "msrpFrom": 35250,
+  "msrpTo": 46525
  },
  {
   "key": "hyundai-ioniq-5-n",
@@ -1706,9 +2000,12 @@
     "name": "N",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 59900
    }
-  ]
+  ],
+  "msrpFrom": 59900,
+  "msrpTo": 59900
  },
  {
   "key": "hyundai-ioniq-9",
@@ -1726,39 +2023,47 @@
     "name": "Calligraphy",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 74990
    },
    {
     "name": "Calligraphy Design",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 76490
    },
    {
     "name": "Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 71250
    },
    {
     "name": "S",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 58955
    },
    {
     "name": "SE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 62765
    },
    {
     "name": "SEL",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 66320
    }
-  ]
+  ],
+  "msrpFrom": 58955,
+  "msrpTo": 76490
  },
  {
   "key": "hyundai-kona",
@@ -1777,15 +2082,19 @@
     "name": "Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 34035
    },
    {
     "name": "SEL Premium",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 29925
    }
-  ]
+  ],
+  "msrpFrom": 29925,
+  "msrpTo": 34035
  },
  {
   "key": "hyundai-palisade",
@@ -1805,43 +2114,51 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 54860
    },
    {
     "name": "Limited",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 50070
    },
    {
     "name": "SE",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 39735
    },
    {
     "name": "SEL",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 42240
    },
    {
     "name": "SEL Premium",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 45600
    },
    {
     "name": "XRT PRO",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 50170
    }
-  ]
+  ],
+  "msrpFrom": 39735,
+  "msrpTo": 54860
  },
  {
   "key": "hyundai-palisade-hybrid",
@@ -1861,37 +2178,44 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 57180
    },
    {
     "name": "Calligraphy Black Ink",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 57680
    },
    {
     "name": "Limited",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 52390
    },
    {
     "name": "SEL",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 44560
    },
    {
     "name": "SEL Premium",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 47920
    }
-  ]
+  ],
+  "msrpFrom": 44560,
+  "msrpTo": 57680
  },
  {
   "key": "hyundai-santa-cruz",
@@ -1909,30 +2233,36 @@
     "name": "Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 43700
    },
    {
     "name": "SE",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 29750
    },
    {
     "name": "SEL",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 31400
    },
    {
     "name": "SEL Activity",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 34450
    }
-  ]
+  ],
+  "msrpFrom": 29750,
+  "msrpTo": 43700
  },
  {
   "key": "hyundai-santa-fe",
@@ -1951,33 +2281,40 @@
     "name": "Calligraphy",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 49650
    },
    {
     "name": "Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 46650
    },
    {
     "name": "SE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 37100
    },
    {
     "name": "SEL",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 39640
    },
    {
     "name": "XRT",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 42290
    }
-  ]
+  ],
+  "msrpFrom": 37100,
+  "msrpTo": 49650
  },
  {
   "key": "hyundai-santa-fe-hybrid",
@@ -1996,27 +2333,33 @@
     "name": "Calligraphy",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 50750
    },
    {
     "name": "Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 47750
    },
    {
     "name": "SE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 38450
    },
    {
     "name": "SEL",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 40740
    }
-  ]
+  ],
+  "msrpFrom": 38450,
+  "msrpTo": 50750
  },
  {
   "key": "hyundai-tucson",
@@ -2035,43 +2378,51 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 39675
    },
    {
     "name": "SE",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 29700
    },
    {
     "name": "SEL",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 31050
    },
    {
     "name": "SEL Plus",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 31550
    },
    {
     "name": "SEL Premium",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 34050
    },
    {
     "name": "XRT",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 35225
    }
-  ]
+  ],
+  "msrpFrom": 29700,
+  "msrpTo": 39675
  },
  {
   "key": "hyundai-tucson-hybrid",
@@ -2089,29 +2440,35 @@
     "name": "Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 42425
    },
    {
     "name": "SE",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 31300
    },
    {
     "name": "SEL",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 32750
    },
    {
     "name": "SEL Convenience",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 35250
    }
-  ]
+  ],
+  "msrpFrom": 31300,
+  "msrpTo": 42425
  },
  {
   "key": "hyundai-tucson-plug-in-hybrid",
@@ -2129,15 +2486,19 @@
     "name": "Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 48900
    },
    {
     "name": "SEL",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 40675
    }
-  ]
+  ],
+  "msrpFrom": 40675,
+  "msrpTo": 48900
  },
  {
   "key": "hyundai-venue",
@@ -2155,21 +2516,26 @@
     "name": "SE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 20550
    },
    {
     "name": "SEL",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 22825
    },
    {
     "name": "SEL w/ 2-Tone Roof",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 22600
    }
-  ]
+  ],
+  "msrpFrom": 20550,
+  "msrpTo": 22825
  },
  {
   "key": "jeep-cherokee",
@@ -2185,29 +2551,37 @@
   "trims": [
    {
     "name": "Cherokee 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 35000
    },
    {
     "name": "85th Anniversary Edition 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 40905
    },
    {
     "name": "Laredo 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 38000
    },
    {
     "name": "Limited 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 40000
    },
    {
     "name": "Limited Altitude 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 40595
    },
    {
     "name": "Overland 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 43000
    }
-  ]
+  ],
+  "msrpFrom": 35000,
+  "msrpTo": 43000
  },
  {
   "key": "jeep-compass",
@@ -2223,29 +2597,37 @@
   "trims": [
    {
     "name": "85th Anniversary Edition 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 32345
    },
    {
     "name": "Latitude 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 29550
    },
    {
     "name": "Latitude Altitude 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 31665
    },
    {
     "name": "Limited 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 33560
    },
    {
     "name": "Limited Altitude 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 36150
    },
    {
     "name": "Trailhawk 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 34060
    }
-  ]
+  ],
+  "msrpFrom": 29550,
+  "msrpTo": 36150
  },
  {
   "key": "jeep-gladiator",
@@ -2261,57 +2643,72 @@
   "trims": [
    {
     "name": "85th Anniversary Edition 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 46810
    },
    {
     "name": "Mojave 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 53215
    },
    {
     "name": "Mojave X 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 61210
    },
    {
     "name": "Rewind 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 49245
    },
    {
     "name": "Rubicon 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 53215
    },
    {
     "name": "Rubicon X 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 61210
    },
    {
     "name": "Sahara 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 48115
    },
    {
     "name": "Shadow Ops 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 58210
    },
    {
     "name": "Sport 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 39820
    },
    {
     "name": "Sport S 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 43015
    },
    {
     "name": "Texas Trail 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 45820
    },
    {
     "name": "Willys '41 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 48955
    },
    {
     "name": "Willys 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 46445
    }
-  ]
+  ],
+  "msrpFrom": 39820,
+  "msrpTo": 61210
  },
  {
   "key": "jeep-grand-cherokee",
@@ -2327,93 +2724,117 @@
   "trims": [
    {
     "name": "85th Anniversary Edition 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 50415
    },
    {
     "name": "L 85th Anniversary Edition 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 52415
    },
    {
     "name": "L Laredo 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 40920
    },
    {
     "name": "L Laredo 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 42920
    },
    {
     "name": "L Laredo Altitude 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 46360
    },
    {
     "name": "L Laredo Altitude 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 48360
    },
    {
     "name": "L Laredo X 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 43415
    },
    {
     "name": "L Laredo X 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 45415
    },
    {
     "name": "L Limited 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 46320
    },
    {
     "name": "L Limited 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 48320
    },
    {
     "name": "L Limited Reserve 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 53915
    },
    {
     "name": "L Summit 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 62600
    },
    {
     "name": "Laredo 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 38920
    },
    {
     "name": "Laredo 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 40920
    },
    {
     "name": "Laredo Altitude 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 44360
    },
    {
     "name": "Laredo Altitude 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 46360
    },
    {
     "name": "Laredo X 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 41415
    },
    {
     "name": "Laredo X 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 43415
    },
    {
     "name": "Limited 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 44320
    },
    {
     "name": "Limited 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 46320
    },
    {
     "name": "Limited Reserve 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 51915
    },
    {
     "name": "Summit 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 60600
    }
-  ]
+  ],
+  "msrpFrom": 38920,
+  "msrpTo": 62600
  },
  {
   "key": "jeep-grand-wagoneer",
@@ -2429,81 +2850,102 @@
   "trims": [
    {
     "name": "Grand Wagoneer 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 63995
    },
    {
     "name": "Grand Wagoneer 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 66995
    },
    {
     "name": "85th Anniversary Edition 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 75990
    },
    {
     "name": "L 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 66995
    },
    {
     "name": "L 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 69995
    },
    {
     "name": "L 85th Anniversary Edition 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 78990
    },
    {
     "name": "L Limited 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 75060
    },
    {
     "name": "L Limited Altitude 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 75060
    },
    {
     "name": "L Limited Reserve 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 82960
    },
    {
     "name": "L Summit 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 97310
    },
    {
     "name": "L Summit Obsidian 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 97310
    },
    {
     "name": "L Summit Reserve 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 103310
    },
    {
     "name": "Limited 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 72060
    },
    {
     "name": "Limited Altitude 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 72060
    },
    {
     "name": "Limited Reserve 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 79960
    },
    {
     "name": "Summit 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 94310
    },
    {
     "name": "Summit Obsidian 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 94310
    },
    {
     "name": "Summit Reserve 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 100310
    },
    {
     "name": "Upland 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 73060
    }
-  ]
+  ],
+  "msrpFrom": 63995,
+  "msrpTo": 103310
  },
  {
   "key": "jeep-jeep-recon",
@@ -2519,9 +2961,12 @@
   "trims": [
    {
     "name": "Moab",
-    "drive": []
+    "drive": [],
+    "msrp": 65000
    }
-  ]
+  ],
+  "msrpFrom": 65000,
+  "msrpTo": 65000
  },
  {
   "key": "jeep-wrangler",
@@ -2537,69 +2982,87 @@
   "trims": [
    {
     "name": "2-Door Rubicon",
-    "drive": []
+    "drive": [],
+    "msrp": 46610
    },
    {
     "name": "2-Door Rubicon X",
-    "drive": []
+    "drive": [],
+    "msrp": 56560
    },
    {
     "name": "2-Door Sport",
-    "drive": []
+    "drive": [],
+    "msrp": 36035
    },
    {
     "name": "2-Door Sport S",
-    "drive": []
+    "drive": [],
+    "msrp": 39685
    },
    {
     "name": "2-Door Willys",
-    "drive": []
+    "drive": [],
+    "msrp": 43755
    },
    {
     "name": "4-Door 85th Anniversary Edition",
-    "drive": []
+    "drive": [],
+    "msrp": 47240
    },
    {
     "name": "4-Door Moab 392",
-    "drive": []
+    "drive": [],
+    "msrp": 79995
    },
    {
     "name": "4-Door Rewind",
-    "drive": []
+    "drive": [],
+    "msrp": 48435
    },
    {
     "name": "4-Door Rubicon",
-    "drive": []
+    "drive": [],
+    "msrp": 50535
    },
    {
     "name": "4-Door Rubicon X",
-    "drive": []
+    "drive": [],
+    "msrp": 61230
    },
    {
     "name": "4-Door Sahara",
-    "drive": []
+    "drive": [],
+    "msrp": 48910
    },
    {
     "name": "4-Door Sport",
-    "drive": []
+    "drive": [],
+    "msrp": 39040
    },
    {
     "name": "4-Door Sport S",
-    "drive": []
+    "drive": [],
+    "msrp": 41440
    },
    {
     "name": "4-Door Willys",
-    "drive": []
+    "drive": [],
+    "msrp": 45635
    },
    {
     "name": "4-Door Willys '41",
-    "drive": []
+    "drive": [],
+    "msrp": 49335
    },
    {
     "name": "4-Door Willys 392",
-    "drive": []
+    "drive": [],
+    "msrp": 69995
    }
-  ]
+  ],
+  "msrpFrom": 36035,
+  "msrpTo": 79995
  },
  {
   "key": "kia-carnival-mpv",
@@ -2617,33 +3080,40 @@
     "name": "EX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 41690
    },
    {
     "name": "LX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 37490
    },
    {
     "name": "LXS",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 39490
    },
    {
     "name": "SX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 46590
    },
    {
     "name": "SX Prestige",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 51590
    }
-  ]
+  ],
+  "msrpFrom": 37490,
+  "msrpTo": 51590
  },
  {
   "key": "kia-carnival-mpv-hybrid",
@@ -2661,27 +3131,33 @@
     "name": "EX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 43690
    },
    {
     "name": "LXS",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 41490
    },
    {
     "name": "SX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 48590
    },
    {
     "name": "SX Prestige",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 53590
    }
-  ]
+  ],
+  "msrpFrom": 41490,
+  "msrpTo": 53590
  },
  {
   "key": "kia-ev3",
@@ -2699,35 +3175,42 @@
     "name": "GT",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 45890
    },
    {
     "name": "GT-Line",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 43490
    },
    {
     "name": "Land",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 38490
    },
    {
     "name": "Light",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 29890
    },
    {
     "name": "Wind",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 34990
    }
-  ]
+  ],
+  "msrpFrom": 29890,
+  "msrpTo": 45890
  },
  {
   "key": "kia-ev6",
@@ -2746,29 +3229,35 @@
     "drive": [
      "AWD",
      "RWD"
-    ]
+    ],
+    "msrp": 48700
    },
    {
     "name": "Light",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 37900
    },
    {
     "name": "Light Long Range",
     "drive": [
      "AWD",
      "RWD"
-    ]
+    ],
+    "msrp": 41200
    },
    {
     "name": "Wind",
     "drive": [
      "AWD",
      "RWD"
-    ]
+    ],
+    "msrp": 44800
    }
-  ]
+  ],
+  "msrpFrom": 37900,
+  "msrpTo": 48700
  },
  {
   "key": "kia-ev9",
@@ -2786,33 +3275,40 @@
     "name": "GT-Line AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 71900
    },
    {
     "name": "Land AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 68900
    },
    {
     "name": "Light Long Range RWD",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 57900
    },
    {
     "name": "Light RWD",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 54900
    },
    {
     "name": "Wind AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 63900
    }
-  ]
+  ],
+  "msrpFrom": 54900,
+  "msrpTo": 71900
  },
  {
   "key": "kia-k4",
@@ -2830,33 +3326,40 @@
     "name": "EX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 24490
    },
    {
     "name": "GT-Line",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 25490
    },
    {
     "name": "GT-Line Turbo",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 28390
    },
    {
     "name": "LX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 22290
    },
    {
     "name": "LXS",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 23390
    }
-  ]
+  ],
+  "msrpFrom": 22290,
+  "msrpTo": 28390
  },
  {
   "key": "kia-k4-hatchback",
@@ -2874,21 +3377,26 @@
     "name": "EX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 24990
    },
    {
     "name": "GT-Line",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 25990
    },
    {
     "name": "GT-Line Turbo",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 28890
    }
-  ]
+  ],
+  "msrpFrom": 24990,
+  "msrpTo": 28890
  },
  {
   "key": "kia-k5",
@@ -2906,22 +3414,27 @@
     "name": "GT",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 33790
    },
    {
     "name": "GT-Line",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 28690
    },
    {
     "name": "LXS",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 27690
    }
-  ]
+  ],
+  "msrpFrom": 27690,
+  "msrpTo": 33790
  },
  {
   "key": "kia-niro",
@@ -2939,33 +3452,40 @@
     "name": "EX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 31390
    },
    {
     "name": "LX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 29890
    },
    {
     "name": "S",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 30590
    },
    {
     "name": "SX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 35440
    },
    {
     "name": "SX Touring",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 38990
    }
-  ]
+  ],
+  "msrpFrom": 29890,
+  "msrpTo": 38990
  },
  {
   "key": "kia-niro-ev",
@@ -2983,15 +3503,19 @@
     "name": "Wave",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 44700
    },
    {
     "name": "Wind",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 39700
    }
-  ]
+  ],
+  "msrpFrom": 39700,
+  "msrpTo": 44700
  },
  {
   "key": "kia-seltos",
@@ -3010,35 +3534,42 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 28390
    },
    {
     "name": "LX",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 24990
    },
    {
     "name": "S",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 26390
    },
    {
     "name": "X-Line S",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 28990
    },
    {
     "name": "X-Line SX",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 32790
    }
-  ]
+  ],
+  "msrpFrom": 24990,
+  "msrpTo": 32790
  },
  {
   "key": "kia-sorento",
@@ -3057,52 +3588,62 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 38490
    },
    {
     "name": "LX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 32390
    },
    {
     "name": "S",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 35290
    },
    {
     "name": "SX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 42290
    },
    {
     "name": "X-Line EX AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 42790
    },
    {
     "name": "X-Line SX AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 44090
    },
    {
     "name": "X-Line SX Prestige AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 46790
    },
    {
     "name": "X-Pro SX Prestige AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 47790
    }
-  ]
+  ],
+  "msrpFrom": 32390,
+  "msrpTo": 47790
  },
  {
   "key": "kia-sorento-hybrid",
@@ -3121,15 +3662,19 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 38890
    },
    {
     "name": "X-Line SX Prestige AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 47190
    }
-  ]
+  ],
+  "msrpFrom": 38890,
+  "msrpTo": 47190
  },
  {
   "key": "kia-sorento-plug-in-hybrid",
@@ -3147,15 +3692,19 @@
     "name": "EX AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 48290
    },
    {
     "name": "X-Line SX Prestige AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 53490
    }
-  ]
+  ],
+  "msrpFrom": 48290,
+  "msrpTo": 53490
  },
  {
   "key": "kia-sportage",
@@ -3174,41 +3723,49 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 30790
    },
    {
     "name": "LX",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 28990
    },
    {
     "name": "SX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 34590
    },
    {
     "name": "SX Prestige",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 36590
    },
    {
     "name": "X-Line",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 34790
    },
    {
     "name": "X-Pro Prestige",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 39890
    }
-  ]
+  ],
+  "msrpFrom": 28990,
+  "msrpTo": 39890
  },
  {
   "key": "kia-sportage-hybrid",
@@ -3227,34 +3784,41 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 32290
    },
    {
     "name": "LX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 30590
    },
    {
     "name": "S",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 31290
    },
    {
     "name": "SX Prestige",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 40690
    },
    {
     "name": "X-Line",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 35790
    }
-  ]
+  ],
+  "msrpFrom": 30590,
+  "msrpTo": 40690
  },
  {
   "key": "kia-sportage-plug-in-hybrid",
@@ -3272,15 +3836,19 @@
     "name": "X-Line",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 40590
    },
    {
     "name": "X-Line Prestige",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 47390
    }
-  ]
+  ],
+  "msrpFrom": 40590,
+  "msrpTo": 47390
  },
  {
   "key": "kia-telluride",
@@ -3299,64 +3867,76 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 43790
    },
    {
     "name": "LX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 39190
    },
    {
     "name": "S",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 42090
    },
    {
     "name": "SX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 48790
    },
    {
     "name": "SX Prestige",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 53890
    },
    {
     "name": "X-Line EX",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 47290
    },
    {
     "name": "X-Line SX",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 51790
    },
    {
     "name": "X-Line SX Prestige",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 54890
    },
    {
     "name": "X-Pro SX",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 53690
    },
    {
     "name": "X-Pro SX Prestige",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 56790
    }
-  ]
+  ],
+  "msrpFrom": 39190,
+  "msrpTo": 56790
  },
  {
   "key": "kia-telluride-hybrid",
@@ -3375,33 +3955,40 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 46490
    },
    {
     "name": "SX",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 51490
    },
    {
     "name": "SX Prestige",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 56590
    },
    {
     "name": "X-Line SX",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 54490
    },
    {
     "name": "X-Line SX Prestige",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 57590
    }
-  ]
+  ],
+  "msrpFrom": 46490,
+  "msrpTo": 57590
  },
  {
   "key": "mazda-cx-30",
@@ -3417,37 +4004,47 @@
   "trims": [
    {
     "name": "2.5 S",
-    "drive": []
+    "drive": [],
+    "msrp": 26375
    },
    {
     "name": "2.5 S Aire Edition",
-    "drive": []
+    "drive": [],
+    "msrp": 30250
    },
    {
     "name": "2.5 S Carbon Edition",
-    "drive": []
+    "drive": [],
+    "msrp": 31430
    },
    {
     "name": "2.5 S Preferred",
-    "drive": []
+    "drive": [],
+    "msrp": 29690
    },
    {
     "name": "2.5 S Premium",
-    "drive": []
+    "drive": [],
+    "msrp": 33640
    },
    {
     "name": "2.5 S Select Sport",
-    "drive": []
+    "drive": [],
+    "msrp": 28060
    },
    {
     "name": "2.5 Turbo Aire Edition",
-    "drive": []
+    "drive": [],
+    "msrp": 34410
    },
    {
     "name": "2.5 Turbo Premium Plus",
-    "drive": []
+    "drive": [],
+    "msrp": 37900
    }
-  ]
+  ],
+  "msrpFrom": 26375,
+  "msrpTo": 37900
  },
  {
   "key": "mazda-cx-5",
@@ -3465,25 +4062,32 @@
     "name": "2.5 S",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 29990
    },
    {
     "name": "2.5 S Preferred",
-    "drive": []
+    "drive": [],
+    "msrp": 34250
    },
    {
     "name": "2.5 S Premium",
-    "drive": []
+    "drive": [],
+    "msrp": 36900
    },
    {
     "name": "2.5 S Premium Plus",
-    "drive": []
+    "drive": [],
+    "msrp": 38990
    },
    {
     "name": "2.5 S Select",
-    "drive": []
+    "drive": [],
+    "msrp": 31990
    }
-  ]
+  ],
+  "msrpFrom": 29990,
+  "msrpTo": 38990
  },
  {
   "key": "mazda-cx-50",
@@ -3499,45 +4103,57 @@
   "trims": [
    {
     "name": "2.5 S Meridian Edition",
-    "drive": []
+    "drive": [],
+    "msrp": 33150
    },
    {
     "name": "2.5 S Preferred",
-    "drive": []
+    "drive": [],
+    "msrp": 32400
    },
    {
     "name": "2.5 S Premium",
-    "drive": []
+    "drive": [],
+    "msrp": 34900
    },
    {
     "name": "2.5 S Select",
-    "drive": []
+    "drive": [],
+    "msrp": 29900
    },
    {
     "name": "2.5 Turbo",
-    "drive": []
+    "drive": [],
+    "msrp": 37900
    },
    {
     "name": "2.5 Turbo Meridian Edition",
-    "drive": []
+    "drive": [],
+    "msrp": 40400
    },
    {
     "name": "2.5 Turbo Premium Plus",
-    "drive": []
+    "drive": [],
+    "msrp": 42900
    },
    {
     "name": "Hybrid Preferred",
-    "drive": []
+    "drive": [],
+    "msrp": 34750
    },
    {
     "name": "Hybrid Premium",
-    "drive": []
+    "drive": [],
+    "msrp": 38150
    },
    {
     "name": "Hybrid Premium Plus",
-    "drive": []
+    "drive": [],
+    "msrp": 40450
    }
-  ]
+  ],
+  "msrpFrom": 29900,
+  "msrpTo": 42900
  },
  {
   "key": "mazda-cx-70",
@@ -3553,37 +4169,46 @@
   "trims": [
    {
     "name": "3.3 Turbo Preferred",
-    "drive": []
+    "drive": [],
+    "msrp": 42750
    },
    {
     "name": "3.3 Turbo Premium",
-    "drive": []
+    "drive": [],
+    "msrp": 46780
    },
    {
     "name": "3.3 Turbo Premium Plus",
-    "drive": []
+    "drive": [],
+    "msrp": 49570
    },
    {
     "name": "3.3 Turbo S Premium",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 53440
    },
    {
     "name": "3.3 Turbo S Premium Plus",
-    "drive": []
+    "drive": [],
+    "msrp": 56870
    },
    {
     "name": "PHEV SC",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 44450
    },
    {
     "name": "PHEV SC Plus",
-    "drive": []
+    "drive": [],
+    "msrp": 47450
    }
-  ]
+  ],
+  "msrpFrom": 42750,
+  "msrpTo": 56870
  },
  {
   "key": "mazda-cx-90",
@@ -3599,47 +4224,58 @@
   "trims": [
    {
     "name": "3.3 Turbo Preferred",
-    "drive": []
+    "drive": [],
+    "msrp": 43450
    },
    {
     "name": "3.3 Turbo Premium Plus",
-    "drive": []
+    "drive": [],
+    "msrp": 50270
    },
    {
     "name": "3.3 Turbo Premium Sport",
-    "drive": []
+    "drive": [],
+    "msrp": 47480
    },
    {
     "name": "3.3 Turbo S Premium Plus",
-    "drive": []
+    "drive": [],
+    "msrp": 57570
    },
    {
     "name": "3.3 Turbo S Premium Sport",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 54140
    },
    {
     "name": "3.3 Turbo Select",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 39300
    },
    {
     "name": "PHEV Preferred",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 50695
    },
    {
     "name": "PHEV Premium Plus",
-    "drive": []
+    "drive": [],
+    "msrp": 58700
    },
    {
     "name": "PHEV Premium Sport",
-    "drive": []
+    "drive": [],
+    "msrp": 55500
    }
-  ]
+  ],
+  "msrpFrom": 39300,
+  "msrpTo": 58700
  },
  {
   "key": "mazda-mazda3",
@@ -3655,33 +4291,41 @@
   "trims": [
    {
     "name": "2.5 S",
-    "drive": []
+    "drive": [],
+    "msrp": 24650
    },
    {
     "name": "2.5 S Carbon Edition",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 29815
    },
    {
     "name": "2.5 S Preferred",
-    "drive": []
+    "drive": [],
+    "msrp": 27290
    },
    {
     "name": "2.5 S Premium",
-    "drive": []
+    "drive": [],
+    "msrp": 31650
    },
    {
     "name": "2.5 S Select Sport",
-    "drive": []
+    "drive": [],
+    "msrp": 25540
    },
    {
     "name": "2.5 Turbo Premium Plus",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 36940
    }
-  ]
+  ],
+  "msrpFrom": 24650,
+  "msrpTo": 36940
  },
  {
   "key": "mazda-mx-5-miata",
@@ -3697,17 +4341,22 @@
   "trims": [
    {
     "name": "Club",
-    "drive": []
+    "drive": [],
+    "msrp": 34230
    },
    {
     "name": "Grand Touring",
-    "drive": []
+    "drive": [],
+    "msrp": 36030
    },
    {
     "name": "Sport",
-    "drive": []
+    "drive": [],
+    "msrp": 30730
    }
-  ]
+  ],
+  "msrpFrom": 30730,
+  "msrpTo": 36030
  },
  {
   "key": "nissan-altima",
@@ -3725,51 +4374,61 @@
     "name": "SR FWD",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 28980
    },
    {
     "name": "SR Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 30480
    },
    {
     "name": "SR Midnight Edition FWD",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 30980
    },
    {
     "name": "SR Midnight Edition Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 32480
    },
    {
     "name": "SV FWD",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 27580
    },
    {
     "name": "SV Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 29080
    },
    {
     "name": "SV Special Edition FWD",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 28880
    },
    {
     "name": "SV Special Edition Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 30380
    }
-  ]
+  ],
+  "msrpFrom": 27580,
+  "msrpTo": 32480
  },
  {
   "key": "nissan-armada",
@@ -3788,37 +4447,45 @@
     "name": "NISMO Intelligent 4WD",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 80690
    },
    {
     "name": "Platinum Intelligent 4WD",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 75790
    },
    {
     "name": "Platinum Reserve Intelligent 4WD",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 84590
    },
    {
     "name": "PRO-4X Premium Intelligent 4WD",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 78990
    },
    {
     "name": "SL 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 64290
    },
    {
     "name": "SL Intelligent 4WD",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 67290
    }
-  ]
+  ],
+  "msrpFrom": 64290,
+  "msrpTo": 84590
  },
  {
   "key": "nissan-frontier",
@@ -3835,73 +4502,92 @@
   "trims": [
    {
     "name": "Crew Cab Dark Armor 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 36490
    },
    {
     "name": "Crew Cab Dark Armor 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 39790
    },
    {
     "name": "Crew Cab Dark Armor Long Bed 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 36990
    },
    {
     "name": "Crew Cab Dark Armor Long Bed 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 40290
    },
    {
     "name": "Crew Cab PRO-4X 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 42190
    },
    {
     "name": "Crew Cab PRO-4X Long Bed 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 42690
    },
    {
     "name": "Crew Cab PRO-X 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 38890
    },
    {
     "name": "Crew Cab S 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 33890
    },
    {
     "name": "Crew Cab S 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 36890
    },
    {
     "name": "Crew Cab Sport Edition 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 37480
    },
    {
     "name": "Crew Cab Sport Edition 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 40780
    },
    {
     "name": "Crew Cab SV 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 36490
    },
    {
     "name": "Crew Cab SV 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 39790
    },
    {
     "name": "Crew Cab SV Long Bed 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 36990
    },
    {
     "name": "Crew Cab SV Long Bed 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 40290
    },
    {
     "name": "King Cab S 4x2",
-    "drive": []
+    "drive": [],
+    "msrp": 32490
    },
    {
     "name": "King Cab S 4x4",
-    "drive": []
+    "drive": [],
+    "msrp": 35490
    }
-  ]
+  ],
+  "msrpFrom": 32490,
+  "msrpTo": 42690
  },
  {
   "key": "nissan-kicks",
@@ -3920,39 +4606,47 @@
     "name": "Rock Creek Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 28840
    },
    {
     "name": "S FWD",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 22790
    },
    {
     "name": "SR FWD",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 27595
    },
    {
     "name": "SR Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 29395
    },
    {
     "name": "SV FWD",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 24490
    },
    {
     "name": "SV Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 26490
    }
-  ]
+  ],
+  "msrpFrom": 22790,
+  "msrpTo": 29395
  },
  {
   "key": "nissan-murano",
@@ -3971,21 +4665,26 @@
     "name": "Dark Armor Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 46990
    },
    {
     "name": "Platinum Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 49790
    },
    {
     "name": "SL Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 43990
    }
-  ]
+  ],
+  "msrpFrom": 43990,
+  "msrpTo": 49790
  },
  {
   "key": "nissan-nissan-leaf",
@@ -4003,21 +4702,26 @@
     "name": "Platinum+ 75 kWh lithium-ion battery",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 38990
    },
    {
     "name": "S+ 75 kWh lithium-ion battery",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 29990
    },
    {
     "name": "SV+ 75 kWh lithium-ion battery",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 34230
    }
-  ]
+  ],
+  "msrpFrom": 29990,
+  "msrpTo": 38990
  },
  {
   "key": "nissan-nissan-z",
@@ -4036,39 +4740,47 @@
     "name": "NISMO Automatic Transmission",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 67260
    },
    {
     "name": "NISMO Manual Transmission",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 67260
    },
    {
     "name": "Performance Automatic Transmission",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 54480
    },
    {
     "name": "Performance Manual Transmission",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 54480
    },
    {
     "name": "Sport Automatic Transmission",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 44480
    },
    {
     "name": "Sport Manual Transmission",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 44480
    }
-  ]
+  ],
+  "msrpFrom": 44480,
+  "msrpTo": 67260
  },
  {
   "key": "nissan-pathfinder",
@@ -4084,41 +4796,50 @@
   "trims": [
    {
     "name": "Platinum 2WD",
-    "drive": []
+    "drive": [],
+    "msrp": 49790
    },
    {
     "name": "Platinum 4WD",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 51790
    },
    {
     "name": "Rock Creek 4WD",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 45090
    },
    {
     "name": "SL 2WD",
-    "drive": []
+    "drive": [],
+    "msrp": 42590
    },
    {
     "name": "SL 4WD",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 44590
    },
    {
     "name": "SV 2WD",
-    "drive": []
+    "drive": [],
+    "msrp": 39990
    },
    {
     "name": "SV 4WD",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 41990
    }
-  ]
+  ],
+  "msrpFrom": 39990,
+  "msrpTo": 51790
  },
  {
   "key": "nissan-rogue",
@@ -4136,51 +4857,61 @@
     "name": "Dark Armor FWD",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 33540
    },
    {
     "name": "Dark Armor Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 34940
    },
    {
     "name": "Platinum Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 39790
    },
    {
     "name": "Rock Creek Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 34590
    },
    {
     "name": "S FWD",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 29690
    },
    {
     "name": "S Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 31090
    },
    {
     "name": "SV FWD",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 30690
    },
    {
     "name": "SV Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 32090
    }
-  ]
+  ],
+  "msrpFrom": 29690,
+  "msrpTo": 39790
  },
  {
   "key": "nissan-rogue-plug-in-hybrid",
@@ -4198,15 +4929,19 @@
     "name": "Platinum Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 49990
    },
    {
     "name": "SL Intelligent AWD",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 45990
    }
-  ]
+  ],
+  "msrpFrom": 45990,
+  "msrpTo": 49990
  },
  {
   "key": "nissan-sentra",
@@ -4225,33 +4960,40 @@
     "name": "S Xtronic CVT",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 22990
    },
    {
     "name": "SL Xtronic CVT",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 27990
    },
    {
     "name": "SR Midnight Edition Xtronic CVT",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 25640
    },
    {
     "name": "SR Xtronic CVT",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 24990
    },
    {
     "name": "SV Xtronic CVT",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 23990
    }
-  ]
+  ],
+  "msrpFrom": 22990,
+  "msrpTo": 27990
  },
  {
   "key": "subaru-ascent",
@@ -4268,33 +5010,42 @@
   "trims": [
    {
     "name": "Limited 7-Passenger",
-    "drive": []
+    "drive": [],
+    "msrp": 47985
    },
    {
     "name": "Limited 8-Passenger",
-    "drive": []
+    "drive": [],
+    "msrp": 47985
    },
    {
     "name": "Limited Bronze Edition 7-Passenger",
-    "drive": []
+    "drive": [],
+    "msrp": 49095
    },
    {
     "name": "Onyx Edition Touring 7-Passenger",
-    "drive": []
+    "drive": [],
+    "msrp": 51995
    },
    {
     "name": "Premium 7-Passenger",
-    "drive": []
+    "drive": [],
+    "msrp": 40795
    },
    {
     "name": "Premium 8-Passenger",
-    "drive": []
+    "drive": [],
+    "msrp": 40795
    },
    {
     "name": "Touring 7-Passenger",
-    "drive": []
+    "drive": [],
+    "msrp": 51165
    }
-  ]
+  ],
+  "msrpFrom": 40795,
+  "msrpTo": 51995
  },
  {
   "key": "subaru-brz",
@@ -4311,13 +5062,17 @@
   "trims": [
    {
     "name": "Limited",
-    "drive": []
+    "drive": [],
+    "msrp": 36140
    },
    {
     "name": "tS",
-    "drive": []
+    "drive": [],
+    "msrp": 38770
    }
-  ]
+  ],
+  "msrpFrom": 36140,
+  "msrpTo": 38770
  },
  {
   "key": "subaru-crosstrek",
@@ -4335,45 +5090,54 @@
     "name": "Base",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 26995
    },
    {
     "name": "Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 32995
    },
    {
     "name": "Limited Hybrid",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 34995
    },
    {
     "name": "Premium",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 27995
    },
    {
     "name": "Sport",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 30625
    },
    {
     "name": "Sport Hybrid",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 33995
    },
    {
     "name": "Wilderness",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 33795
    }
-  ]
+  ],
+  "msrpFrom": 26995,
+  "msrpTo": 34995
  },
  {
   "key": "subaru-forester",
@@ -4391,63 +5155,75 @@
     "name": "Base",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 29995
    },
    {
     "name": "Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 35995
    },
    {
     "name": "Limited Hybrid",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 38995
    },
    {
     "name": "Premium",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 31995
    },
    {
     "name": "Premium Hybrid",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 34730
    },
    {
     "name": "Sport",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 34795
    },
    {
     "name": "Sport Hybrid",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 37930
    },
    {
     "name": "Touring",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 39995
    },
    {
     "name": "Touring Hybrid",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 41545
    },
    {
     "name": "Wilderness",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 36995
    }
-  ]
+  ],
+  "msrpFrom": 29995,
+  "msrpTo": 41545
  },
  {
   "key": "subaru-impreza",
@@ -4465,15 +5241,19 @@
     "name": "RS",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 29495
    },
    {
     "name": "Sport",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 26595
    }
-  ]
+  ],
+  "msrpFrom": 26595,
+  "msrpTo": 29495
  },
  {
   "key": "subaru-outback",
@@ -4489,29 +5269,37 @@
   "trims": [
    {
     "name": "Limited",
-    "drive": []
+    "drive": [],
+    "msrp": 41715
    },
    {
     "name": "Limited XT",
-    "drive": []
+    "drive": [],
+    "msrp": 44365
    },
    {
     "name": "Premium",
-    "drive": []
+    "drive": [],
+    "msrp": 34995
    },
    {
     "name": "Touring",
-    "drive": []
+    "drive": [],
+    "msrp": 45395
    },
    {
     "name": "Touring XT",
-    "drive": []
+    "drive": [],
+    "msrp": 47995
    },
    {
     "name": "Wilderness",
-    "drive": []
+    "drive": [],
+    "msrp": 44995
    }
-  ]
+  ],
+  "msrpFrom": 34995,
+  "msrpTo": 47995
  },
  {
   "key": "subaru-solterra",
@@ -4527,25 +5315,32 @@
   "trims": [
    {
     "name": "Limited",
-    "drive": []
+    "drive": [],
+    "msrp": 41395
    },
    {
     "name": "Limited XT",
-    "drive": []
+    "drive": [],
+    "msrp": 42895
    },
    {
     "name": "Premium",
-    "drive": []
+    "drive": [],
+    "msrp": 38495
    },
    {
     "name": "Touring XT",
-    "drive": []
+    "drive": [],
+    "msrp": 45555
    },
    {
     "name": "Touring XT Leather",
-    "drive": []
+    "drive": [],
+    "msrp": 45855
    }
-  ]
+  ],
+  "msrpFrom": 38495,
+  "msrpTo": 45855
  },
  {
   "key": "subaru-trailseeker",
@@ -4562,21 +5357,27 @@
   "trims": [
    {
     "name": "Limited",
-    "drive": []
+    "drive": [],
+    "msrp": 43995
    },
    {
     "name": "Premium",
-    "drive": []
+    "drive": [],
+    "msrp": 39995
    },
    {
     "name": "Touring",
-    "drive": []
+    "drive": [],
+    "msrp": 46555
    },
    {
     "name": "Touring Leather",
-    "drive": []
+    "drive": [],
+    "msrp": 46855
    }
-  ]
+  ],
+  "msrpFrom": 39995,
+  "msrpTo": 46855
  },
  {
   "key": "subaru-uncharted",
@@ -4593,19 +5394,24 @@
   "trims": [
    {
     "name": "GT",
-    "drive": []
+    "drive": [],
+    "msrp": 43795
    },
    {
     "name": "Premium FWD",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 34995
    },
    {
     "name": "Sport",
-    "drive": []
+    "drive": [],
+    "msrp": 39795
    }
-  ]
+  ],
+  "msrpFrom": 34995,
+  "msrpTo": 43795
  },
  {
   "key": "subaru-wrx",
@@ -4621,25 +5427,32 @@
   "trims": [
    {
     "name": "Base",
-    "drive": []
+    "drive": [],
+    "msrp": 32495
    },
    {
     "name": "GT",
-    "drive": []
+    "drive": [],
+    "msrp": 44995
    },
    {
     "name": "Limited",
-    "drive": []
+    "drive": [],
+    "msrp": 38995
    },
    {
     "name": "Premium",
-    "drive": []
+    "drive": [],
+    "msrp": 33995
    },
    {
     "name": "tS",
-    "drive": []
+    "drive": [],
+    "msrp": 44995
    }
-  ]
+  ],
+  "msrpFrom": 32495,
+  "msrpTo": 44995
  },
  {
   "key": "toyota-4runner",
@@ -4657,63 +5470,75 @@
     "name": "Limited",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 56900
    },
    {
     "name": "SR5",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 42270
    },
    {
     "name": "Trailhunter",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 68400
    },
    {
     "name": "TRD Off-Road",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 50690
    },
    {
     "name": "TRD Off-Road i-FORCE MAX",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 53490
    },
    {
     "name": "TRD Off-Road Premium",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 56470
    },
    {
     "name": "TRD Off-Road Premium i-FORCE MAX",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 59270
    },
    {
     "name": "TRD Pro",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 68600
    },
    {
     "name": "TRD Sport",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 48750
    },
    {
     "name": "TRD Sport Premium",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 54110
    }
-  ]
+  ],
+  "msrpFrom": 42270,
+  "msrpTo": 68600
  },
  {
   "key": "toyota-bz",
@@ -4731,9 +5556,12 @@
     "name": "Limited",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 43380
    }
-  ]
+  ],
+  "msrpFrom": 43380,
+  "msrpTo": 43380
  },
  {
   "key": "toyota-bz-woodland",
@@ -4751,15 +5579,19 @@
     "name": "bZ Woodland",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 45380
    },
    {
     "name": "bZ Woodland Premium",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 47480
    }
-  ]
+  ],
+  "msrpFrom": 45380,
+  "msrpTo": 47480
  },
  {
   "key": "toyota-c-hr",
@@ -4777,15 +5609,19 @@
     "name": "SE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 37080
    },
    {
     "name": "XSE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 39080
    }
-  ]
+  ],
+  "msrpFrom": 37080,
+  "msrpTo": 39080
  },
  {
   "key": "toyota-camry",
@@ -4803,36 +5639,43 @@
     "name": "LE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 29600
    },
    {
     "name": "Nightshade",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 33100
    },
    {
     "name": "SE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 32100
    },
    {
     "name": "XLE",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 34800
    },
    {
     "name": "XSE",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 36000
    }
-  ]
+  ],
+  "msrpFrom": 29600,
+  "msrpTo": 36000
  },
  {
   "key": "toyota-corolla",
@@ -4850,21 +5693,26 @@
     "name": "Hybrid SE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 27615
    },
    {
     "name": "LE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 23325
    },
    {
     "name": "XSE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 29040
    }
-  ]
+  ],
+  "msrpFrom": 23325,
+  "msrpTo": 29040
  },
  {
   "key": "toyota-corolla-cross",
@@ -4882,33 +5730,40 @@
     "name": "Hybrid SE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 31115
    },
    {
     "name": "Hybrid XSE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 33830
    },
    {
     "name": "L",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 25335
    },
    {
     "name": "LE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 27665
    },
    {
     "name": "XLE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 30260
    }
-  ]
+  ],
+  "msrpFrom": 25335,
+  "msrpTo": 33830
  },
  {
   "key": "toyota-corolla-cross-hybrid",
@@ -4926,9 +5781,12 @@
     "name": "Hybrid S",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 29795
    }
-  ]
+  ],
+  "msrpFrom": 29795,
+  "msrpTo": 29795
  },
  {
   "key": "toyota-corolla-hatchback",
@@ -4946,15 +5804,19 @@
     "name": "SE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 24780
    },
    {
     "name": "XSE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 27875
    }
-  ]
+  ],
+  "msrpFrom": 24780,
+  "msrpTo": 27875
  },
  {
   "key": "toyota-gr-corolla",
@@ -4972,21 +5834,26 @@
     "name": "GR Corolla",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 40520
    },
    {
     "name": "GR Corolla Premium Plus",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 46565
    },
    {
     "name": "GRMN Corolla",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 64360
    }
-  ]
+  ],
+  "msrpFrom": 40520,
+  "msrpTo": 64360
  },
  {
   "key": "toyota-gr-supra",
@@ -5004,21 +5871,26 @@
     "name": "3.0",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 58300
    },
    {
     "name": "3.0 Premium",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 61450
    },
    {
     "name": "MkV Final Edition",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 69350
    }
-  ]
+  ],
+  "msrpFrom": 58300,
+  "msrpTo": 69350
  },
  {
   "key": "toyota-gr86",
@@ -5036,15 +5908,19 @@
     "name": "GR86",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 31500
    },
    {
     "name": "GR86 Premium",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 34400
    }
-  ]
+  ],
+  "msrpFrom": 31500,
+  "msrpTo": 34400
  },
  {
   "key": "toyota-grand-highlander",
@@ -5062,51 +5938,61 @@
     "name": "Hybrid Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 53110
    },
    {
     "name": "Hybrid MAX Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 56090
    },
    {
     "name": "Hybrid MAX Platinum",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 60175
    },
    {
     "name": "Hybrid Nightshade",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 54090
    },
    {
     "name": "LE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 42260
    },
    {
     "name": "Limited",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 49760
    },
    {
     "name": "Platinum",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 55445
    },
    {
     "name": "XLE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 45030
    }
-  ]
+  ],
+  "msrpFrom": 42260,
+  "msrpTo": 60175
  },
  {
   "key": "toyota-highlander",
@@ -5124,45 +6010,54 @@
     "name": "Hybrid Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 52475
    },
    {
     "name": "Hybrid Platinum",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 55675
    },
    {
     "name": "Hybrid XLE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 48020
    },
    {
     "name": "Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 50725
    },
    {
     "name": "Platinum",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 53925
    },
    {
     "name": "XLE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 46270
    },
    {
     "name": "XSE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 48340
    }
-  ]
+  ],
+  "msrpFrom": 46270,
+  "msrpTo": 55675
  },
  {
   "key": "toyota-land-cruiser",
@@ -5180,15 +6075,19 @@
     "name": "Land Cruiser",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 64155
    },
    {
     "name": "Land Cruiser 1958",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 58080
    }
-  ]
+  ],
+  "msrpFrom": 58080,
+  "msrpTo": 64155
  },
  {
   "key": "toyota-prius",
@@ -5206,27 +6105,33 @@
     "name": "LE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 28755
    },
    {
     "name": "Limited",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 35770
    },
    {
     "name": "Nightshade",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 33005
    },
    {
     "name": "XLE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 32200
    }
-  ]
+  ],
+  "msrpFrom": 28755,
+  "msrpTo": 35770
  },
  {
   "key": "toyota-prius-plug-in-hybrid",
@@ -5244,27 +6149,33 @@
     "name": "Nightshade",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 38000
    },
    {
     "name": "SE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 33980
    },
    {
     "name": "XSE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 37230
    },
    {
     "name": "XSE Premium",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 40675
    }
-  ]
+  ],
+  "msrpFrom": 33980,
+  "msrpTo": 40675
  },
  {
   "key": "toyota-rav4",
@@ -5282,39 +6193,47 @@
     "name": "LE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 31900
    },
    {
     "name": "Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 43300
    },
    {
     "name": "SE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 34700
    },
    {
     "name": "Woodland",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 39900
    },
    {
     "name": "XLE Premium",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 36100
    },
    {
     "name": "XSE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 41300
    }
-  ]
+  ],
+  "msrpFrom": 31900,
+  "msrpTo": 43300
  },
  {
   "key": "toyota-rav4-plug-in-hybrid",
@@ -5332,27 +6251,33 @@
     "name": "GR SPORT",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 48500
    },
    {
     "name": "SE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 41500
    },
    {
     "name": "Woodland",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 45300
    },
    {
     "name": "XSE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 47200
    }
-  ]
+  ],
+  "msrpFrom": 41500,
+  "msrpTo": 48500
  },
  {
   "key": "toyota-sequoia",
@@ -5370,39 +6295,47 @@
     "name": "1794 Edition",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 82550
    },
    {
     "name": "Capstone",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 86135
    },
    {
     "name": "Limited",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 71495
    },
    {
     "name": "Platinum",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 81735
    },
    {
     "name": "SR5",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 65725
    },
    {
     "name": "TRD Pro",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 82465
    }
-  ]
+  ],
+  "msrpFrom": 65725,
+  "msrpTo": 86135
  },
  {
   "key": "toyota-sienna",
@@ -5420,39 +6353,47 @@
     "name": "LE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 41320
    },
    {
     "name": "Limited",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 52005
    },
    {
     "name": "Platinum",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 58710
    },
    {
     "name": "Woodland Edition",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 52100
    },
    {
     "name": "XLE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 46020
    },
    {
     "name": "XSE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 49245
    }
-  ]
+  ],
+  "msrpFrom": 41320,
+  "msrpTo": 58710
  },
  {
   "key": "toyota-tacoma",
@@ -5470,58 +6411,69 @@
     "name": "Limited",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 53570
    },
    {
     "name": "Limited i-FORCE MAX",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 56895
    },
    {
     "name": "SR",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 32545
    },
    {
     "name": "SR5",
     "drive": [
      "4WD",
      "RWD"
-    ]
+    ],
+    "msrp": 36635
    },
    {
     "name": "TRD Off-Road",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 42815
    },
    {
     "name": "TRD PreRunner",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 39135
    },
    {
     "name": "TRD Pro",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 64750
    },
    {
     "name": "TRD Sport",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 40415
    },
    {
     "name": "TRD Sport i-FORCE MAX",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 47335
    }
-  ]
+  ],
+  "msrpFrom": 32545,
+  "msrpTo": 64750
  },
  {
   "key": "toyota-tacoma-i-force-max",
@@ -5539,9 +6491,12 @@
     "name": "TRD Off-Road i-FORCE MAX",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 47635
    }
-  ]
+  ],
+  "msrpFrom": 47635,
+  "msrpTo": 47635
  },
  {
   "key": "toyota-toyota-crown",
@@ -5559,21 +6514,26 @@
     "name": "Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 49720
    },
    {
     "name": "Platinum",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 55190
    },
    {
     "name": "XLE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 41640
    }
-  ]
+  ],
+  "msrpFrom": 41640,
+  "msrpTo": 55190
  },
  {
   "key": "toyota-toyota-crown-signia",
@@ -5591,15 +6551,19 @@
     "name": "Limited",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 49090
    },
    {
     "name": "XLE",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 44690
    }
-  ]
+  ],
+  "msrpFrom": 44690,
+  "msrpTo": 49090
  },
  {
   "key": "toyota-tundra",
@@ -5618,40 +6582,48 @@
     "drive": [
      "4WD",
      "RWD"
-    ]
+    ],
+    "msrp": 64380
    },
    {
     "name": "Limited",
     "drive": [
      "4WD",
      "RWD"
-    ]
+    ],
+    "msrp": 54860
    },
    {
     "name": "Platinum",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 63695
    },
    {
     "name": "SR",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 41260
    },
    {
     "name": "SR5",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 46510
    },
    {
     "name": "TRD Pro",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 72565
    }
-  ]
+  ],
+  "msrpFrom": 41260,
+  "msrpTo": 72565
  },
  {
   "key": "toyota-tundra-i-force-max",
@@ -5669,27 +6641,33 @@
     "name": "1794 Edition i-FORCE MAX",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 71305
    },
    {
     "name": "Capstone",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 80800
    },
    {
     "name": "Limited i-FORCE MAX",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 58560
    },
    {
     "name": "Platinum i-FORCE MAX",
     "drive": [
      "4WD"
-    ]
+    ],
+    "msrp": 70605
    }
-  ]
+  ],
+  "msrpFrom": 58560,
+  "msrpTo": 80800
  },
  {
   "key": "volkswagen-atlas",
@@ -5707,35 +6685,42 @@
     "name": "Peak Edition",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 48060
    },
    {
     "name": "SE",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 39310
    },
    {
     "name": "SE with Technology",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 43730
    },
    {
     "name": "SEL",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 49620
    },
    {
     "name": "SEL Premium R-Line",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 54630
    }
-  ]
+  ],
+  "msrpFrom": 39310,
+  "msrpTo": 54630
  },
  {
   "key": "volkswagen-atlas-cross-sport",
@@ -5754,34 +6739,41 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 38300
    },
    {
     "name": "SE with Technology",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 42720
    },
    {
     "name": "SEL",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 48610
    },
    {
     "name": "SEL Premium R-Line",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 53620
    },
    {
     "name": "SEL R-Line Black",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 50560
    }
-  ]
+  ],
+  "msrpFrom": 38300,
+  "msrpTo": 53620
  },
  {
   "key": "volkswagen-golf-gti",
@@ -5799,21 +6791,26 @@
     "name": "Autobahn",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 42480
    },
    {
     "name": "S",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 34590
    },
    {
     "name": "SE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 39080
    }
-  ]
+  ],
+  "msrpFrom": 34590,
+  "msrpTo": 42480
  },
  {
   "key": "volkswagen-golf-r",
@@ -5831,9 +6828,12 @@
     "name": "Golf R",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 49455
    }
-  ]
+  ],
+  "msrpFrom": 49455,
+  "msrpTo": 49455
  },
  {
   "key": "volkswagen-id-4",
@@ -5851,33 +6851,40 @@
     "name": "AWD Pro",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 48995
    },
    {
     "name": "AWD Pro S",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 54095
    },
    {
     "name": "AWD Pro S Plus",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 57655
    },
    {
     "name": "Pro",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 45095
    },
    {
     "name": "Pro S",
     "drive": [
      "RWD"
-    ]
+    ],
+    "msrp": 50195
    }
-  ]
+  ],
+  "msrpFrom": 45095,
+  "msrpTo": 57655
  },
  {
   "key": "volkswagen-jetta",
@@ -5895,27 +6902,33 @@
     "name": "S",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 23995
    },
    {
     "name": "SE",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 26995
    },
    {
     "name": "SEL",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 29995
    },
    {
     "name": "Sport",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 25395
    }
-  ]
+  ],
+  "msrpFrom": 23995,
+  "msrpTo": 29995
  },
  {
   "key": "volkswagen-jetta-gli",
@@ -5933,9 +6946,12 @@
     "name": "Autobahn",
     "drive": [
      "FWD"
-    ]
+    ],
+    "msrp": 33795
    }
-  ]
+  ],
+  "msrpFrom": 33795,
+  "msrpTo": 33795
  },
  {
   "key": "volkswagen-taos",
@@ -5954,36 +6970,43 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 26500
    },
    {
     "name": "SE",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 29290
    },
    {
     "name": "SE Black",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 31540
    },
    {
     "name": "SEL",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 35900
    },
    {
     "name": "Sport",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 27400
    }
-  ]
+  ],
+  "msrpFrom": 26500,
+  "msrpTo": 35900
  },
  {
   "key": "volkswagen-tiguan",
@@ -6002,28 +7025,34 @@
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 30805
    },
    {
     "name": "SE",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 33605
    },
    {
     "name": "SE R-Line Black",
     "drive": [
      "AWD",
      "FWD"
-    ]
+    ],
+    "msrp": 37245
    },
    {
     "name": "SEL R-Line Turbo",
     "drive": [
      "AWD"
-    ]
+    ],
+    "msrp": 43085
    }
-  ]
+  ],
+  "msrpFrom": 30805,
+  "msrpTo": 43085
  }
 ]
