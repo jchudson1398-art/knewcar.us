@@ -33,7 +33,7 @@ To refresh after the catalog changes, re-export `scripts/catalog-rows.txt`, `scr
 
 ## Free site and website upgrade
 
-Free: browse, search, every trim, verified MSRP and search by MSRP. Website upgrade ($2.99/mo or $9.99/yr, set in
+Free: browse, search, every trim, verified MSRP and search by MSRP. Website upgrade ($2.99/mo or $19.99/yr, set in
 `src/site.ts` as `WEB_PLAN`): saved cars (`/saved`), compare (`/compare`), and the tax, fee and payment estimator
 (`/estimate`, Texas only, using the approved Texas rule: 6.25% on price less trade-in value, $225 documentary fee
 and $300 title and registration as estimates). `/sign-in` uses the same Supabase accounts as the app.
