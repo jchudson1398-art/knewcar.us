@@ -16,6 +16,7 @@ Target: free version ready Tuesday 2026-11-24.
 | F-12 | 2026-11-18 | The app's lender rate observations were last collected 2026-10-13. The app's own rule treats rates older than 14 days as too old. | Decide whether to refresh them before the website uses them. Affects the app's standard rate too. |
 | F-04 | 2026-11-18 | Terms and Privacy pages do not yet cover a website subscription. | Jacob agreed 2026-11-18: I draft the wording, his attorney reviews it before real payments are switched on. Draft not written yet. |
 | F-13 | 2026-11-18 | The launch video shows a row of car photos that appears to include a GMC. GMC is hidden in the app. | Is it fine for a GMC to appear in the video, or should I swap that photo? |
+| F-14 | 2026-11-18 | Trim photos are on the site for 4 of 11 brands (Chevrolet, Ford, Honda, Mazda: 242 trims). The other 7 brands (497 trims) are not exported yet, because a read of the sandbox database by my helper was declined at the permission prompt. | Tell me to continue the read-only export for the other 7 brands. Nothing in the database is changed. Until then those brands show the model photo on each trim. |
 
 ## Open
 

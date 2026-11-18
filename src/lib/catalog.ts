@@ -14,7 +14,7 @@ export interface Car {
   /** Model years in the app, newest first. */
   years: number[];
   /** Trims of the newest model year, with the drivetrains each comes in when the catalog records them. */
-  trims: { name: string; drive: string[]; msrp: number | null }[];
+  trims: { name: string; drive: string[]; msrp: number | null; photo?: boolean }[];
   /** Lowest and highest verified MSRP across those trims (destination excluded); null when none is verified. */
   msrpFrom: number | null;
   msrpTo: number | null;
@@ -29,6 +29,9 @@ export const configsLabel = (n: number) => `${n} ${n === 1 ? "configuration" : "
 export const money = (n: number) => `$${n.toLocaleString("en-US")}`;
 export const priceLabel = (c: Car) => (c.msrpFrom ? `From ${money(c.msrpFrom)} MSRP` : "MSRP in the app");
 export const carImage = (c: Car) => `/img/cars/${c.key}.webp`;
+const trimSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+/** The trim's own photo when one was exported, else the model's photo. */
+export const trimImage = (c: Car, t: Car["trims"][number]) => (t.photo ? `/img/trims/${c.key}--${trimSlug(t.name)}.webp` : carImage(c));
 
 /** Words a shopper might type for each kind of car, added to what search matches. */
 const ALSO: Record<string, string> = {

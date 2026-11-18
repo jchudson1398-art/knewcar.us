@@ -2,7 +2,7 @@
 // One page per model: its photo and every trim of the newest model year. No prices or payments.
 import Base from "../../layouts/Base.astro";
 import CarTile from "../../components/CarTile.astro";
-import { CATALOG, carImage, carName, configsLabel, money, type Car } from "../../lib/catalog";
+import { CATALOG, carImage, carName, configsLabel, money, trimImage, type Car } from "../../lib/catalog";
 import { APP_STORE_URL } from "../../site";
 
 export function getStaticPaths() {
@@ -53,6 +53,7 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
     <ul>
       {car.trims.map((t) => (
         <li>
+          <img src={trimImage(car, t)} alt={`${car.year} ${car.make} ${car.model} ${t.name}`} width="560" height="420" loading="lazy" />
           <div class="tn"><strong>{t.name}</strong><span class="tp">{t.msrp ? `${money(t.msrp)} MSRP` : "MSRP in the app"}</span></div>
           <span class="drive">{t.drive.length > 0 ? t.drive.map((d) => <i>{d}</i>) : <em>Drivetrain shown in the app</em>}</span>
         </li>
@@ -91,7 +92,9 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
   .trims { padding-bottom: 64px; }
   .trims h2, .moregrid h2 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 20px; }
   ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
-  li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 18px; border-radius: 14px; background: var(--card); border: 1px solid var(--edge); }
+  li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 12px 16px; border-radius: 14px; background: var(--card); border: 1px solid var(--edge); }
+  li img { flex: 0 0 100%; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px; background: #0b221c; }
+  li .tn, li .drive { padding: 0 6px; }
   li strong { font-size: 16px; font-weight: 600; min-width: 0; overflow-wrap: anywhere; }
   .drive { display: flex; gap: 6px; flex: none; }
   .drive i { font-style: normal; font-size: 12px; font-weight: 700; padding: 4px 8px; border-radius: 6px; background: var(--mint-soft); color: var(--mint); }

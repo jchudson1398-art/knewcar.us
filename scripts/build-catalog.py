@@ -55,10 +55,15 @@ for key, t in trims.items():
     known = [x for x in prices if x]
     t["msrpFrom"], t["msrpTo"] = (min(known), max(known)) if known else (None, None)
 
+import os
 out = []
 for (make, model, year, _bs, ntrims, *_), cat in zip(rows, cats):
     display = model[len(make) + 1:] if model.lower().startswith(make.lower() + " ") else model
-    out.append({"key": f"{slug(make)}-{slug(model)}", "make": make, "model": display, "year": int(year),
+    key = f"{slug(make)}-{slug(model)}"
+    # A trim has its own photo when scripts/fetch-trim-photos.py saved one for it.
+    for trim in trims[(make, model)]["trims"]:
+        trim["photo"] = os.path.exists(f"public/img/trims/{key}--{slug(trim['name'])}.webp")
+    out.append({"key": key, "make": make, "model": display, "year": int(year),
                 "type": cat, "fuel": fuel(make, model), **trims[(make, model)]})
 json.dump(out, open("src/data/catalog.json", "w"), indent=1)
 print(sum(c["configs"] for c in out), "configurations;", len(out), "models;", sorted({c["type"] or "none" for c in out}))
