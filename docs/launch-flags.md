@@ -10,11 +10,11 @@ Target: free version ready Tuesday 2026-11-24.
 
 | # | Flagged | What was flagged | What I need |
 |---|---------|------------------|-------------|
-| F-01 | 2026-11-18 | Real payments need a Stripe account connected to RevenueCat. None exists yet. | Open a Stripe account and connect it in RevenueCat. I will give exact steps. Blocks the paid upgrade only, not the free site. |
-| F-02 | 2026-11-18 | Payments and "payment search" in the upgrade need one interest rate per credit range and loan length. | The rate table (you said you will provide it). Until then the estimator uses the rate the shopper types in. |
-| F-03 | 2026-11-18 | The launch video on the home page still says "coming soon" and "in the works". | After launch that is wrong. Choose: recut the video without those words, or take the video off the home page at launch. |
-| F-04 | 2026-11-18 | Terms and Privacy pages do not yet cover a website subscription. | Wording to be drafted by me, then reviewed by your attorney before real payments are switched on. |
-| F-05 | 2026-11-18 | Per-trim photos and live prices need a new read-only view in the database. That is a database change. | Your explicit approval before it is applied. Until then the site uses a saved snapshot and one photo per model. |
+| F-01 | 2026-11-18 | Real payments need a Stripe account connected to RevenueCat. None exists yet. | Jacob (2026-11-18): no time yet, maybe tonight. Opening a Stripe account has no setup or monthly charge; Stripe keeps 2.9% + 30 cents of each card payment. Blocks the paid upgrade only, not the free site. |
+| F-02 | 2026-11-18 | Payments and "payment search" in the upgrade need one interest rate per credit range and loan length. | Jacob (2026-11-18): build the table from the rates the app already has. Proposed table sent for his choice (Experian averages by credit range, or the app's per-loan-length method). Until chosen, the estimator uses the rate the shopper types in. |
+| F-11 | 2026-11-18 | RevenueCat's own pages disagree on whether web purchases carry an extra RevenueCat charge (one says none, one says the usual 1% above $2,500 a month). | Check the charge shown in your RevenueCat account when connecting Stripe. |
+| F-12 | 2026-11-18 | The app's lender rate observations were last collected 2026-10-13. The app's own rule treats rates older than 14 days as too old. | Decide whether to refresh them before the website uses them. Affects the app's standard rate too. |
+| F-04 | 2026-11-18 | Terms and Privacy pages do not yet cover a website subscription. | Jacob agreed 2026-11-18: I draft the wording, his attorney reviews it before real payments are switched on. Draft not written yet. |
 
 ## Open
 
@@ -32,3 +32,5 @@ Target: free version ready Tuesday 2026-11-24.
 |---|---------|------------------|------------|
 | R-01 | 2026-11-18 | Home page slideshow was too tall on a phone (shopping tool was more than a full screen down). | Tightened the phone layout; search bar now starts about one screen down. |
 | R-02 | 2026-11-18 | Car cards on the "Every trim" slide overlapped and cut off car names. | Changed to a clean three-card layout with no overlap. |
+| R-03 | 2026-11-18 | F-03: the launch video said "coming soon" and "in the works". | Jacob: take it off. Reworded to "now live" in both the wide video and the reel. |
+| R-04 | 2026-11-18 | F-05: a photo for every trim seemed to need a database change. | Not needed. The photos are already public in the sandbox; the site only lacked the list of which photo belongs to which trim. That list is exported into the site's snapshot, with no change to the database. The snapshot must be re-exported when the catalog changes. |
