@@ -15,6 +15,7 @@ Target: free version ready Tuesday 2026-11-24.
 | F-11 | 2026-11-18 | RevenueCat's own pages disagree on whether web purchases carry an extra RevenueCat charge (one says none, one says the usual 1% above $2,500 a month). | Check the charge shown in your RevenueCat account when connecting Stripe. |
 | F-12 | 2026-11-18 | The app's lender rate observations were last collected 2026-10-13. The app's own rule treats rates older than 14 days as too old. | Decide whether to refresh them before the website uses them. Affects the app's standard rate too. |
 | F-04 | 2026-11-18 | Terms and Privacy pages do not yet cover a website subscription. | Jacob agreed 2026-11-18: I draft the wording, his attorney reviews it before real payments are switched on. Draft not written yet. |
+| F-13 | 2026-11-18 | The launch video shows a row of car photos that appears to include a GMC. GMC is hidden in the app. | Is it fine for a GMC to appear in the video, or should I swap that photo? |
 
 ## Open
 
