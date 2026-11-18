@@ -16,7 +16,6 @@ Target: free version ready Tuesday 2026-11-24.
 | F-12 | 2026-11-18 | The app's lender rate observations were last collected 2026-10-13. The app's own rule treats rates older than 14 days as too old. | Decide whether to refresh them before the website uses them. Affects the app's standard rate too. |
 | F-04 | 2026-11-18 | Terms and Privacy pages do not yet cover a website subscription. | Jacob agreed 2026-11-18: I draft the wording, his attorney reviews it before real payments are switched on. Draft not written yet. |
 | F-13 | 2026-11-18 | The launch video shows a row of car photos that appears to include a GMC. GMC is hidden in the app. | Is it fine for a GMC to appear in the video, or should I swap that photo? |
-| F-14 | 2026-11-18 | Trim photos are on the site for 4 of 11 brands (Chevrolet, Ford, Honda, Mazda: 242 trims). The other 7 brands (497 trims) are not exported yet, because a read of the sandbox database by my helper was declined at the permission prompt. | Tell me to continue the read-only export for the other 7 brands. Nothing in the database is changed. Until then those brands show the model photo on each trim. |
 
 ## Open
 
@@ -36,3 +35,4 @@ Target: free version ready Tuesday 2026-11-24.
 | R-02 | 2026-11-18 | Car cards on the "Every trim" slide overlapped and cut off car names. | Changed to a clean three-card layout with no overlap. |
 | R-03 | 2026-11-18 | F-03: the launch video said "coming soon" and "in the works". | Jacob: take it off. Reworded to "now live" in both the wide video and the reel. |
 | R-04 | 2026-11-18 | F-05: a photo for every trim seemed to need a database change. | Not needed. The photos are already public in the sandbox; the site only lacked the list of which photo belongs to which trim. That list is exported into the site's snapshot, with no change to the database. The snapshot must be re-exported when the catalog changes. |
+| R-05 | 2026-11-18 | F-14: trim photos were only on 4 of 11 brands. | Jacob approved the read-only export. All 739 trims across the 11 brands now have their own photo; each brand's list was checked as an exact copy. |
