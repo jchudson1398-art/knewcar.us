@@ -2,8 +2,8 @@
 import Base from "../layouts/Base.astro";
 import CarTile from "../components/CarTile.astro";
 import SearchBar from "../components/SearchBar.astro";
-import { CATALOG, CONFIG_TOTAL, carImage } from "../lib/catalog";
-import { APP_STORE_URL } from "../site";
+import { CATALOG, CONFIG_TOTAL, carImage, priceLabel } from "../lib/catalog";
+import { APP_STORE_URL, WEB_PLAN } from "../site";
 
 // The home grid shows 8 rows of 4. Which 32 is reshuffled in the browser on every visit (script below); this
 // build-time mix is what loads first and what shows without JavaScript.
@@ -12,6 +12,8 @@ const rank = (k: string) => [...k].reduce((h, ch) => (h * 31 + ch.charCodeAt(0))
 const mixed = [...CATALOG].sort((a, b) => rank(a.key) - rank(b.key));
 const first = mixed.slice(0, GRID);
 const preview = mixed.slice(GRID, GRID + 15);
+// Three priced models of different types for the MSRP slide.
+const spotlight = ["Truck", "SUV", "Sedan"].map((t) => mixed.find((c) => c.type === t && c.msrpFrom)!).filter(Boolean);
 const brands = new Set(CATALOG.map((c) => c.make)).size;
 
 const steps = [
@@ -27,41 +29,98 @@ const steps = [
 ---
 
 <Base title="KnewCar" description={`All your new car options in one easy place. Browse ${CATALOG.length} new models from ${brands} brands, then get the KnewCar app to see offers, incentives and special rates for your situation.`}>
-  <!-- Hero: headline left, a browser window scrolling through the site right -->
-  <section class="hero">
+  <!-- Hero: a slideshow. The shopping tool starts a short scroll below it. -->
+  <section class="hero" aria-roledescription="carousel" aria-label="What KnewCar does" data-hero>
     <div class="hero-bg" aria-hidden="true"></div>
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <h1>All your new car options, <span class="grad">One easy place.</span></h1>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="/explore">Explore all your options</a>
-          <a class="btn btn-ghost" href={APP_STORE_URL}>Get the app</a>
-        </div>
-      </div>
-      <div class="window" aria-hidden="true">
-        <div class="chrome">
-          <span class="dots"><i></i><i></i><i></i></span>
-          <span class="url">knewcar.us/explore</span>
-        </div>
-        <div class="viewport">
-          <div class="scroller">
-            {[0, 1].map(() => (
-              <div class="mini">
-                <div class="mini-search"><span>Search make, model or type</span><b>Search</b></div>
-                <div class="mini-grid">
-                  {preview.map((c) => (
-                    <div class="mini-tile">
-                      <div class="mini-pic"><img src={carImage(c)} alt="" width="240" height="180" loading="eager" /></div>
-                      <small>{c.make} · {c.year}</small>
-                      <strong>{c.model}</strong>
+    <div class="wrap">
+      <div class="slides">
+        <div class="slide" data-slide aria-hidden="false">
+          <div class="copy">
+            <h1>All your new car options, <span class="grad">One easy place.</span></h1>
+            <p class="lead">{CATALOG.length} new models from {brands} brands. Free to browse.</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#cars">Start shopping</a>
+              <a class="btn btn-ghost" href="/explore">Explore all your options</a>
+            </div>
+          </div>
+          <div class="window" aria-hidden="true">
+            <div class="chrome"><span class="dots"><i></i><i></i><i></i></span><span class="url">knewcar.us/explore</span></div>
+            <div class="viewport">
+              <div class="scroller">
+                {[0, 1].map(() => (
+                  <div class="mini">
+                    <div class="mini-search"><span>Search make, model or type</span><b>Search</b></div>
+                    <div class="mini-grid">
+                      {preview.map((c) => (
+                        <div class="mini-tile">
+                          <div class="mini-pic"><img src={carImage(c)} alt="" width="240" height="180" loading="eager" /></div>
+                          <small>{c.make} · {c.year}</small>
+                          <strong>{c.model}</strong>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
+              </div>
+              <div class="fade"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide" data-slide aria-hidden="true">
+          <div class="copy">
+            <h2 class="h">Every trim. <span class="grad">Real MSRP.</span></h2>
+            <p class="lead">See every trim of every model with its manufacturer price, and search by what you want to spend.</p>
+            <div class="hero-cta"><a class="btn btn-primary" href="/explore?sort=low">Search by price</a></div>
+          </div>
+          <div class="stack" aria-hidden="true">
+            {spotlight.map((c, i) => (
+              <div class={`pcard p${i}`}>
+                <img src={carImage(c)} alt="" width="560" height="420" loading="lazy" />
+                <div><strong>{c.make} {c.model}</strong><span>{priceLabel(c)} · {c.trims.length} trims</span></div>
               </div>
             ))}
           </div>
-          <div class="fade"></div>
-          <svg class="cursor" width="22" height="22" viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z" fill="#fff" stroke="#04140f" stroke-width="1.5" stroke-linejoin="round"></path></svg>
+        </div>
+
+        <div class="slide" data-slide aria-hidden="true">
+          <div class="copy">
+            <h2 class="h">Know the real cost <span class="grad">in your state.</span></h2>
+            <p class="lead">Upgrade to save cars, compare them side by side, and estimate tax, fees and your payment. {WEB_PLAN.monthly} a month or {WEB_PLAN.yearly} a year.</p>
+            <div class="hero-cta"><a class="btn btn-primary" href="/upgrade">See the upgrade</a></div>
+          </div>
+          <div class="card sample" aria-hidden="true">
+            <p class="ex">Example · Texas</p>
+            <dl>
+              <div><dt>Price with destination</dt><dd>$36,395.00</dd></div>
+              <div><dt>State tax (6.25%)</dt><dd>$1,649.69</dd></div>
+              <div><dt>Title, registration, doc fee</dt><dd>$525.00</dd></div>
+              <div class="t"><dt>Estimated out the door</dt><dd>$38,569.69</dd></div>
+            </dl>
+            <p class="ex">With a $10,000 trade-in. Fees are estimates.</p>
+          </div>
+        </div>
+
+        <div class="slide" data-slide aria-hidden="true">
+          <div class="copy">
+            <h2 class="h">Live in Texas? <span class="grad">Get the app.</span></h2>
+            <p class="lead">Browse offers, incentives, special rates and rebates before making your final decision. Find options you may not have thought you could afford.</p>
+            <div class="hero-cta"><a class="btn btn-primary" href={APP_STORE_URL}>Download on the App Store</a></div>
+          </div>
+          <div class="phones" aria-hidden="true">
+            <img class="ph back" src="/img/app/swipe.webp" alt="" width="540" height="1105" loading="lazy" />
+            <img class="ph front" src="/img/app/browse.webp" alt="" width="540" height="1105" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-nav">
+        <div class="pips" role="group" aria-label="Choose a slide">
+          {[0, 1, 2, 3].map((i) => <button type="button" data-pip={i} aria-label={`Slide ${i + 1} of 4`} aria-current={i === 0 ? "true" : "false"}></button>)}
+        </div>
+        <div class="arrows">
+          <button type="button" aria-label="Previous slide" data-hprev>‹</button>
+          <button type="button" class="next" aria-label="Next slide" data-hnext>›</button>
         </div>
       </div>
     </div>
@@ -155,8 +214,8 @@ const steps = [
 <style>
   .grad { background: linear-gradient(90deg, #5cebc4 0%, #a6f5df 55%, #ffc45c 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-  /* Hero */
-  .hero { position: relative; padding: 150px 0 64px; overflow: hidden; }
+  /* Hero slideshow */
+  .hero { position: relative; padding: 116px 0 28px; overflow: hidden; }
   .hero-bg {
     position: absolute; inset: 0; pointer-events: none;
     background:
@@ -166,10 +225,40 @@ const steps = [
     -webkit-mask-image: radial-gradient(ellipse 85% 80% at 50% 0%, #000 35%, transparent 100%);
     mask-image: radial-gradient(ellipse 85% 80% at 50% 0%, #000 35%, transparent 100%);
   }
-  .hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 56px; align-items: center; }
-  .hero h1 { font-size: clamp(44px, 6.2vw, 78px); line-height: 1; letter-spacing: -0.04em; }
-  .hero h1 .grad { display: block; }
-  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .hero .wrap { position: relative; }
+  /* Slides share one grid cell, so the hero keeps the height of the tallest slide and nothing jumps. */
+  .slides { display: grid; }
+  .slide { grid-area: 1 / 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: center; opacity: 0; visibility: hidden; transform: translateX(24px); transition: opacity .6s ease, transform .6s ease, visibility 0s .6s; }
+  .slide[aria-hidden="false"] { opacity: 1; visibility: visible; transform: none; transition: opacity .6s ease, transform .6s ease; }
+  .hero h1, .hero .h { font-size: clamp(40px, 5.4vw, 68px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 800; }
+  .hero h1 .grad, .hero .h .grad { display: block; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .hero-nav { display: flex; align-items: center; justify-content: space-between; margin-top: 22px; }
+  .pips { display: flex; gap: 4px; }
+  .pips button { width: 44px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+  .pips button::before { content: ""; width: 10px; height: 10px; border-radius: 999px; background: rgba(232, 243, 238, 0.3); transition: width .3s ease, background .3s ease; }
+  .pips button[aria-current="true"]::before { width: 30px; background: var(--mint); }
+  .arrows { display: flex; gap: 8px; }
+  .arrows button { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(160, 230, 205, 0.3); background: rgba(4, 20, 15, 0.7); color: var(--text); font-size: 24px; line-height: 1; cursor: pointer; }
+  .arrows .next { background: var(--mint); border-color: var(--mint); color: var(--mint-ink); }
+  .stack { display: grid; grid-template-columns: 1.35fr 1fr; grid-template-rows: 1fr 1fr; gap: 14px; height: 380px; }
+  .pcard { display: flex; flex-direction: column; min-height: 0; border-radius: 18px; overflow: hidden; background: #0b221c; border: 1px solid rgba(160, 230, 205, 0.2); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5); }
+  .pcard img { width: 100%; flex: 1; min-height: 0; height: auto; object-fit: cover; }
+  .pcard div { padding: 10px 14px; display: grid; gap: 2px; }
+  .pcard strong { font-size: 15px; }
+  .pcard span { font-size: 13px; color: var(--mint); font-weight: 600; }
+  .p0 { grid-row: 1 / 3; border-color: rgba(92, 235, 196, 0.5); }
+  .sample { max-width: 460px; justify-self: center; width: 100%; box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), 0 0 70px rgba(92, 235, 196, 0.12); }
+  .sample dl { margin: 6px 0; }
+  .sample dl div { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--edge); font-size: 16px; }
+  .sample dt { color: var(--sub); }
+  .sample dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .sample .t dt, .sample .t dd { color: var(--text); font-weight: 800; font-size: 18px; }
+  .sample .ex { margin: 0; font-size: 13px; color: var(--faint); }
+  .phones { position: relative; height: 400px; }
+  .ph { position: absolute; width: 190px; height: auto; border-radius: 26px; border: 6px solid #070d0b; outline: 1px solid rgba(160, 230, 205, 0.25); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55); }
+  .ph.back { left: 18%; top: 20px; transform: rotate(-6deg); opacity: .85; }
+  .ph.front { right: 18%; top: 0; }
 
   /* Browser window */
   .window { border-radius: 16px; overflow: hidden; border: 1px solid rgba(160, 230, 205, 0.22); background: var(--ground); box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6), 0 0 80px rgba(92, 235, 196, 0.12); }
@@ -179,7 +268,7 @@ const steps = [
   .dots i:nth-child(2) { background: #ffbd2e; }
   .dots i:nth-child(3) { background: #28c940; }
   .url { flex: 1; text-align: center; font-size: 12px; color: var(--sub); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 47px; }
-  .viewport { position: relative; height: 460px; overflow: hidden; }
+  .viewport { position: relative; height: 360px; overflow: hidden; }
   .scroller { animation: up 50s linear infinite; }
   .window:hover .scroller { animation-play-state: paused; }
   @keyframes up { to { transform: translateY(-50%); } }
@@ -241,17 +330,66 @@ const steps = [
 
   @media (max-width: 1000px) { .car-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (max-width: 900px) {
-    .hero { padding-top: 120px; }
-    .hero-grid, .app-grid { grid-template-columns: 1fr; gap: 40px; }
-    .viewport { height: 380px; }
+    .hero { padding-top: 96px; }
+    .slide, .app-grid { grid-template-columns: 1fr; gap: 28px; }
+    .viewport { height: 260px; }
+    .stack { height: 300px; }
+    .phones { height: 300px; }
+    .ph { width: 140px; }
+  }
+  @media (max-width: 640px) {
+    .hero { padding: 84px 0 12px; }
+    .slide { gap: 18px; align-items: start; }
+    .hero h1, .hero .h { font-size: 36px; }
+    .hero .lead { font-size: 16px; margin-top: 10px; }
+    .hero-cta { margin-top: 16px; gap: 8px; }
+    .hero-cta .btn { min-height: 44px; padding: 0 16px; font-size: 15px; }
+    .hero-nav { margin-top: 8px; }
+    .viewport { height: 170px; }
+    .stack { height: 220px; gap: 8px; }
+    .pcard div { padding: 6px 10px; }
+    .pcard strong { font-size: 13px; }
+    .pcard span { font-size: 12px; }
+    .phones { height: 225px; overflow: hidden; }
+    .ph { width: 120px; border-radius: 18px; border-width: 4px; }
+    .sample { padding: 12px 16px; }
+    .sample dl div { padding: 7px 0; font-size: 14px; }
+    .sample .t dt, .sample .t dd { font-size: 15px; }
     .copy-a, .copy-b { min-height: 0; }
   }
   @media (max-width: 720px) { .car-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px; } }
   @media (max-width: 420px) { .car-grid { grid-template-columns: 1fr; } .viewport.tall { height: 560px; } }
-  @media (prefers-reduced-motion: reduce) { .scroller, .cursor { animation: none; } .track, .shot { transition: none; } }
+  @media (prefers-reduced-motion: reduce) { .scroller, .cursor { animation: none; } .track, .shot, .slide { transition: none; } }
 </style>
 
 <script>
+  // 0) Hero slideshow: advances by itself, pauses while hovered or focused, and stops once someone picks a slide.
+  const heroEl = document.querySelector<HTMLElement>("[data-hero]");
+  if (heroEl) {
+    const slides = [...heroEl.querySelectorAll<HTMLElement>("[data-slide]")];
+    const pips = [...heroEl.querySelectorAll<HTMLButtonElement>("[data-pip]")];
+    let i = 0;
+    let hold = false;
+    let stopped = false;
+    const go = (n: number) => {
+      i = (n + slides.length) % slides.length;
+      slides.forEach((s, k) => { s.setAttribute("aria-hidden", String(k !== i)); s.toggleAttribute("inert", k !== i); });
+      pips.forEach((b, k) => b.setAttribute("aria-current", String(k === i)));
+    };
+    pips.forEach((b, k) => b.addEventListener("click", () => { stopped = true; go(k); }));
+    heroEl.querySelector("[data-hprev]")!.addEventListener("click", () => { stopped = true; go(i - 1); });
+    heroEl.querySelector("[data-hnext]")!.addEventListener("click", () => { stopped = true; go(i + 1); });
+    heroEl.addEventListener("pointerenter", () => (hold = true));
+    heroEl.addEventListener("pointerleave", () => (hold = false));
+    heroEl.addEventListener("focusin", () => (hold = true));
+    heroEl.addEventListener("focusout", () => (hold = false));
+    let x0 = 0;
+    heroEl.addEventListener("touchstart", (e) => (x0 = e.touches[0].clientX), { passive: true });
+    heroEl.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) { stopped = true; go(i + (dx < 0 ? 1 : -1)); } }, { passive: true });
+    go(0);
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => { if (!hold && !stopped && !document.hidden) go(i + 1); }, 6000);
+  }
+
   // 1) Home grid: show a different random 32 on every visit.
   const grid = document.querySelector<HTMLElement>("[data-home-grid]");
   const raw = document.getElementById("catalog-data")?.textContent;
