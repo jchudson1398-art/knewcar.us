@@ -4,6 +4,7 @@
 // title and registration as planning estimates). Other states turn on as their rules are approved.
 import Base from "../layouts/Base.astro";
 import { APP_STORE_URL } from "../site";
+import rates from "../data/rates.json";
 const states = [
   ["TX", "Texas", true],
   ["CA", "California", false],
@@ -38,6 +39,12 @@ const states = [
         <label>Trade-in value <input name="trade" inputmode="decimal" placeholder="0" /></label>
         <label>Still owed on the trade-in <input name="payoff" inputmode="decimal" placeholder="0" /></label>
         <label>Down payment <input name="down" inputmode="decimal" placeholder="0" /></label>
+        <label>Credit range
+          <select name="credit">
+            <option value="">I'll enter my own rate</option>
+            {rates.bands.map((b) => <option value={b.id}>{b.label}</option>)}
+          </select>
+        </label>
         <label>Interest rate (APR %) <input name="apr" inputmode="decimal" placeholder="Your rate" /></label>
         <label>Loan length
           <select name="term"><option value="36">36 months</option><option value="48">48 months</option><option value="60" selected>60 months</option><option value="72">72 months</option><option value="84">84 months</option></select>
@@ -66,7 +73,7 @@ const states = [
         <li>Tax is figured on the price with destination, less your trade-in's value, as Texas does for a purchase.</li>
         <li>Title, registration and the documentary fee are planning estimates. Your dealer's amounts may differ.</li>
         <li>Dealer discounts, rebates, add-ons and offers aren't included. <a href={APP_STORE_URL}>Offers are in the app</a> for Texas shoppers.</li>
-        <li>The payment uses the rate you enter. It is not an offer of credit.</li>
+        <li>If you pick a credit range, the rate is an estimate: the middle of new-car rates advertised by {rates.lenders.length} lenders on {rates.collected}, adjusted by Experian's averages for each credit range. Estimates are available for {Object.keys(rates.base).join(" and ")} month loans. You can type your own rate at any time. It is not an offer of credit.</li>
       </ul>
     </div>
   </section>
@@ -97,6 +104,7 @@ const states = [
 <script>
   import { requirePlus } from "../lib/plus";
   import type { Car } from "../lib/catalog";
+  import rates from "../data/rates.json";
 
   // Whole cents throughout, so the arithmetic is exact.
   const cents = (s: string): number | null => {
@@ -140,6 +148,25 @@ const states = [
       }
     }
 
+    // Fill the rate from the credit range when this loan length has an estimate.
+    let rateNote = "";
+    function fillRate() {
+      const band = rates.bands.find((b) => b.id === f("credit").value);
+      rateNote = "";
+      if (!band) return;
+      const base = (rates.base as Record<string, number>)[f("term").value];
+      if (base === undefined) {
+        f("apr").value = "";
+        rateNote = `No rate estimate for ${f("term").value} months yet. Type your rate, or choose ${Object.keys(rates.base).join(" or ")} months.`;
+      } else {
+        f("apr").value = (base + band.spread).toFixed(2);
+        rateNote = "estimated rate for your credit range";
+      }
+    }
+    f("credit").addEventListener("change", () => { fillRate(); calc(); });
+    f("term").addEventListener("change", () => { fillRate(); calc(); });
+    f("apr").addEventListener("input", () => { (f("credit") as HTMLSelectElement).value = ""; rateNote = ""; });
+
     function calc() {
       const texas = f("state").value === "TX";
       soon.hidden = texas;
@@ -168,11 +195,11 @@ const states = [
       const apr = Number(f("apr").value.replace(/[%\s]/g, ""));
       const n = Number(f("term").value);
       if (f("apr").value.trim() === "" || !Number.isFinite(apr) || apr < 0 || apr > 100) {
-        pay.innerHTML = "<small>Enter an interest rate to see a monthly payment.</small>";
+        pay.innerHTML = `<small>${rateNote || "Enter an interest rate, or pick a credit range, to see a monthly payment."}</small>`;
       } else {
         const r = apr / 100 / 12;
         const m = r === 0 ? financed / n : (financed * r) / (1 - Math.pow(1 + r, -n));
-        pay.innerHTML = `${usd(Math.round(m))}<small> a month, estimated · ${n} months at ${apr}% APR</small>`;
+        pay.innerHTML = `${usd(Math.round(m))}<small> a month, estimated · ${n} months at ${apr}% APR${rateNote ? `, ${rateNote}` : ""}</small>`;
       }
       hold.hidden = true;
       result.hidden = false;
