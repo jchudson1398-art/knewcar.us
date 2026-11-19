@@ -73,7 +73,7 @@ const states = [
         <li>Tax is figured on the price with destination, less your trade-in's value, as Texas does for a purchase.</li>
         <li>Title, registration and the documentary fee are planning estimates. Your dealer's amounts may differ.</li>
         <li>Dealer discounts, rebates, add-ons and offers aren't included. <a href={APP_STORE_URL}>Offers are in the app</a> for Texas shoppers.</li>
-        <li>If you pick a credit range, the rate is an estimate: the middle of new-car rates advertised by {rates.lenders.length} lenders on {rates.collected}, adjusted by Experian's averages for each credit range. Estimates are available for {Object.keys(rates.base).join(" and ")} month loans. You can type your own rate at any time. It is not an offer of credit.</li>
+        <li>If you pick a credit range, the rate is an estimate: Experian's average new-car rate for that credit range, adjusted for loan length using rates advertised by {rates.lenders.length} lenders on {rates.collected}. You can type your own rate at any time. It is not an offer of credit.</li>
       </ul>
     </div>
   </section>
@@ -154,14 +154,9 @@ const states = [
       const band = rates.bands.find((b) => b.id === f("credit").value);
       rateNote = "";
       if (!band) return;
-      const base = (rates.base as Record<string, number>)[f("term").value];
-      if (base === undefined) {
-        f("apr").value = "";
-        rateNote = `No rate estimate for ${f("term").value} months yet. Type your rate, or choose ${Object.keys(rates.base).join(" or ")} months.`;
-      } else {
-        f("apr").value = (base + band.spread).toFixed(2);
-        rateNote = "estimated rate for your credit range";
-      }
+      const adjust = (rates.termAdjust as Record<string, number>)[f("term").value] ?? 0;
+      f("apr").value = (band.rate + adjust).toFixed(2);
+      rateNote = "estimated rate for your credit range";
     }
     f("credit").addEventListener("change", () => { fillRate(); calc(); });
     f("term").addEventListener("change", () => { fillRate(); calc(); });

@@ -1,18 +1,78 @@
 {
-  "note": "Estimated new-car loan rates for the website. Method is the app's: starting rate per loan length = the middle (median) of current advertised new-car rates from official lender pages, needing at least 3 lenders; plus Experian's gap between credit ranges. A loan length with fewer than 3 lenders has no estimate and the shopper types a rate.",
+  "note": "Estimated new-car loan rates for the website (Jacob's choice, 2026-11-19): Experian's average new-car rate for each credit range, adjusted for loan length. The adjustment for a loan length is the average, across the lenders below that publish it, of how much that lender's rate differs from its own 60-month rate. Experian's average is treated as the 60-month rate.",
   "collected": "2026-11-19",
   "lenders": [
-    { "name": "Navy Federal Credit Union", "membership": true, "url": "https://www.navyfederal.org/loans-cards/auto-loans/auto-rates.html", "asOf": "Rates as of Nov 19, 2026", "rates": { "36": 4.19, "48": 5.19, "60": 5.19, "72": 5.49, "84": 6.89 } },
-    { "name": "Consumers Credit Union", "membership": true, "url": "https://www.myconsumers.org/loans/auto-loans", "asOf": "Rates effective October 12, 2026; accurate as of 11/1/2026", "rates": { "36": 4.99, "48": 4.99, "60": 4.99, "72": 5.49, "84": 6.49 } },
-    { "name": "Capital One", "membership": false, "url": "https://www.capitalone.com/cars/auto-loan-rates", "asOf": "November 2026, updated monthly", "rates": { "60": 6.14, "72": 6.00 } }
+    {
+      "name": "Navy Federal Credit Union",
+      "membership": true,
+      "url": "https://www.navyfederal.org/loans-cards/auto-loans/auto-rates.html",
+      "asOf": "Rates as of Nov 19, 2026",
+      "rates": {
+        "36": 4.19,
+        "48": 5.19,
+        "60": 5.19,
+        "72": 5.49,
+        "84": 6.89
+      }
+    },
+    {
+      "name": "Consumers Credit Union",
+      "membership": true,
+      "url": "https://www.myconsumers.org/loans/auto-loans",
+      "asOf": "Rates effective October 12, 2026; accurate as of 11/1/2026",
+      "rates": {
+        "36": 4.99,
+        "48": 4.99,
+        "60": 4.99,
+        "72": 5.49,
+        "84": 6.49
+      }
+    },
+    {
+      "name": "Capital One",
+      "membership": false,
+      "url": "https://www.capitalone.com/cars/auto-loan-rates",
+      "asOf": "November 2026, updated monthly",
+      "rates": {
+        "60": 6.14,
+        "72": 6.0
+      }
+    }
   ],
-  "base": { "60": 5.19, "72": 5.49 },
-  "spreadSource": "Experian State of the Automotive Finance Market, Q2 2026 (approved for the app 2026-08-25)",
+  "spreadSource": "Experian State of the Automotive Finance Market, Q2 2026, average new-car APR by credit range (approved source for the app, 2026-08-25)",
   "bands": [
-    { "id": "super_prime", "label": "Super prime (781+)", "spread": 0 },
-    { "id": "prime", "label": "Prime (661-780)", "spread": 1.74 },
-    { "id": "near_prime", "label": "Near prime (601-660)", "spread": 5.3 },
-    { "id": "subprime", "label": "Subprime (501-600)", "spread": 9.11 },
-    { "id": "deep_subprime", "label": "Deep subprime (300-500)", "spread": 11.7 }
-  ]
+    {
+      "id": "super_prime",
+      "label": "Super prime (781+)",
+      "rate": 4.41
+    },
+    {
+      "id": "prime",
+      "label": "Prime (661-780)",
+      "rate": 6.15
+    },
+    {
+      "id": "near_prime",
+      "label": "Near prime (601-660)",
+      "rate": 9.71
+    },
+    {
+      "id": "subprime",
+      "label": "Subprime (501-600)",
+      "rate": 13.52
+    },
+    {
+      "id": "deep_subprime",
+      "label": "Deep subprime (300-500)",
+      "rate": 16.11
+    }
+  ],
+  "anchorTerm": 60,
+  "termAdjust": {
+    "36": -0.5,
+    "48": 0.0,
+    "60": 0.0,
+    "72": 0.22,
+    "84": 1.6
+  }
 }
