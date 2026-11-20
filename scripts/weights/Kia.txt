@@ -1,0 +1,162 @@
+# Make|Model|year|Trim|drivetrain (AWD/FWD/RWD/4WD or blank if one weight covers all)|curb weight lb (integer, blank if not found)|source URL|note
+Kia|Carnival MPV|2027|EX|FWD|4678|https://www.kia.com/us/en/carnival-mpv/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 7-Passenger minimum/maximum" value "4,678 lb. / 4,678 lb." (min=max)
+Kia|Carnival MPV|2027|EX|FWD|4725|https://www.kia.com/us/en/carnival-mpv/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 8-Passenger minimum/maximum" value "4,725 lb. / 4,725 lb." (min=max)
+Kia|Carnival MPV|2027|LX|FWD|4555|https://www.kia.com/us/en/carnival-mpv/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 7-Passenger minimum/maximum" value "4,555 lb. / 4,555 lb." (min=max)
+Kia|Carnival MPV|2027|LXS|FWD|4630|https://www.kia.com/us/en/carnival-mpv/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 8-Passenger minimum/maximum" value "4,630 lb. / 4,630 lb." (min=max)
+Kia|Carnival MPV|2027|SX|FWD|4762|https://www.kia.com/us/en/carnival-mpv/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 7-Passenger minimum/maximum" value "4,762 lb. / 4,762 lb." (min=max)
+Kia|Carnival MPV|2027|SX|FWD|4810|https://www.kia.com/us/en/carnival-mpv/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 8-Passenger minimum/maximum" value "4,810 lb. / 4,824 lb."; min of range
+Kia|Carnival MPV|2027|SX|FWD|4824|https://www.kia.com/us/en/carnival-mpv/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 8-Passenger minimum/maximum" value "4,810 lb. / 4,824 lb."; max of range
+Kia|Carnival MPV|2027|SX Prestige|FWD|4771|https://www.kia.com/us/en/carnival-mpv/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 7-Passenger minimum/maximum" value "4,771 lb. / 4,771 lb." (min=max)
+Kia|Carnival MPV|2027|SX Prestige|FWD|4720|https://www.kia.com/us/en/carnival-mpv/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 8-Passenger minimum/maximum" value "4,720 lb. / 4,733 lb."; min of range
+Kia|Carnival MPV|2027|SX Prestige|FWD|4733|https://www.kia.com/us/en/carnival-mpv/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 8-Passenger minimum/maximum" value "4,720 lb. / 4,733 lb."; max of range
+Kia|Carnival MPV Hybrid|2027|EX|FWD|4804|https://www.kia.com/us/en/carnival-mpv-hybrid/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 7-Passenger minimum/maximum" value "4,804 lb. / 4,804 lb." (min=max)
+Kia|Carnival MPV Hybrid|2027|EX|FWD|4852|https://www.kia.com/us/en/carnival-mpv-hybrid/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 8-Passenger minimum/maximum" value "4,852 lb. / 4,852 lb." (min=max)
+Kia|Carnival MPV Hybrid|2027|LXS|FWD|4852|https://www.kia.com/us/en/carnival-mpv-hybrid/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 8-Passenger minimum/maximum" value "4,852 lb. / 4,852 lb." (min=max)
+Kia|Carnival MPV Hybrid|2027|SX|FWD|4804|https://www.kia.com/us/en/carnival-mpv-hybrid/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 7-Passenger minimum/maximum" value "4,804 lb. / 4,804 lb." (min=max)
+Kia|Carnival MPV Hybrid|2027|SX|FWD|4852|https://www.kia.com/us/en/carnival-mpv-hybrid/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 8-Passenger minimum/maximum" value "4,852 lb. / 4,852 lb." (min=max)
+Kia|Carnival MPV Hybrid|2027|SX Prestige|FWD|4967|https://www.kia.com/us/en/carnival-mpv-hybrid/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 7-Passenger minimum/maximum" value "4,967 lb. / 5,053 lb."; min of range
+Kia|Carnival MPV Hybrid|2027|SX Prestige|FWD|5053|https://www.kia.com/us/en/carnival-mpv-hybrid/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 7-Passenger minimum/maximum" value "4,967 lb. / 5,053 lb."; max of range
+Kia|Carnival MPV Hybrid|2027|SX Prestige|FWD|4852|https://www.kia.com/us/en/carnival-mpv-hybrid/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) 8-Passenger minimum/maximum" value "4,852 lb. / 4,852 lb." (min=max)
+Kia|EV3|2027|GT|AWD|4436|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,436 / 4,453 lb."; min of range
+Kia|EV3|2027|GT|AWD|4453|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,436 / 4,453 lb."; max of range
+Kia|EV3|2027|GT-Line|AWD|4332|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,332 / 4,453 lb."; min of range
+Kia|EV3|2027|GT-Line|AWD|4453|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,332 / 4,453 lb."; max of range
+Kia|EV3|2027|Land|FWD|4048|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum/maximum" value "4,048 / 4,195 lb."; min of range
+Kia|EV3|2027|Land|FWD|4195|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum/maximum" value "4,048 / 4,195 lb."; max of range
+Kia|EV3|2027|Land|AWD|4332|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,332 / 4,453 lb."; min of range
+Kia|EV3|2027|Land|AWD|4453|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,332 / 4,453 lb."; max of range
+Kia|EV3|2027|Light|FWD|3836|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum/maximum" value "3,836 / 4,008 lb."; min of range
+Kia|EV3|2027|Light|FWD|4008|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum/maximum" value "3,836 / 4,008 lb."; max of range
+Kia|EV3|2027|Wind|FWD|4048|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum/maximum" value "4,048 / 4,195 lb."; min of range
+Kia|EV3|2027|Wind|FWD|4195|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum/maximum" value "4,048 / 4,195 lb."; max of range
+Kia|EV3|2027|Wind|AWD|4332|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,332 / 4,453 lb."; min of range
+Kia|EV3|2027|Wind|AWD|4453|https://www.kia.com/us/en/ev3/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,332 / 4,453 lb."; max of range
+Kia|EV6|2026|GT-Line|RWD|4398|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: Rear-Wheel Drive (RWD) minimum/maximum" value "4,398 / 4,520 lb."; min of range
+Kia|EV6|2026|GT-Line|RWD|4520|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: Rear-Wheel Drive (RWD) minimum/maximum" value "4,398 / 4,520 lb."; max of range
+Kia|EV6|2026|GT-Line|AWD|4630|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,630 / 4,751 lb."; min of range
+Kia|EV6|2026|GT-Line|AWD|4751|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,630 / 4,751 lb."; max of range
+Kia|EV6|2026|Light|RWD|4132|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: Rear-Wheel Drive (RWD) minimum/maximum" value "4,132 / 4,145 lb."; min of range
+Kia|EV6|2026|Light|RWD|4145|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: Rear-Wheel Drive (RWD) minimum/maximum" value "4,132 / 4,145 lb."; max of range
+Kia|EV6|2026|Light Long Range|RWD|4398|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: Rear-Wheel Drive (RWD) minimum/maximum" value "4,398 / 4,520 lb."; min of range
+Kia|EV6|2026|Light Long Range|RWD|4520|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: Rear-Wheel Drive (RWD) minimum/maximum" value "4,398 / 4,520 lb."; max of range
+Kia|EV6|2026|Light Long Range|AWD|4630|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,630 / 4,751 lb."; min of range
+Kia|EV6|2026|Light Long Range|AWD|4751|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,630 / 4,751 lb."; max of range
+Kia|EV6|2026|Wind|RWD|4398|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: Rear-Wheel Drive (RWD) minimum/maximum" value "4,398 / 4,520 lb."; min of range
+Kia|EV6|2026|Wind|RWD|4520|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: Rear-Wheel Drive (RWD) minimum/maximum" value "4,398 / 4,520 lb."; max of range
+Kia|EV6|2026|Wind|AWD|4630|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,630 / 4,751 lb."; min of range
+Kia|EV6|2026|Wind|AWD|4751|https://www.kia.com/us/en/ev6/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "4,630 / 4,751 lb."; max of range
+Kia|EV9|2026|GT-Line AWD|||https://www.kia.com/us/en/ev9/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|EV9|2026|Land AWD|||https://www.kia.com/us/en/ev9/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|EV9|2026|Light Long Range RWD|||https://www.kia.com/us/en/ev9/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|EV9|2026|Light RWD|||https://www.kia.com/us/en/ev9/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|EV9|2026|Wind AWD|||https://www.kia.com/us/en/ev9/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|K4|2026|EX|||https://www.kia.com/us/en/k4/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|K4|2026|GT-Line|||https://www.kia.com/us/en/k4/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|K4|2026|GT-Line Turbo|||https://www.kia.com/us/en/k4/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|K4|2026|LX|||https://www.kia.com/us/en/k4/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|K4|2026|LXS|||https://www.kia.com/us/en/k4/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|K4 Hatchback|2026|EX|||https://www.kia.com/us/en/k4-hatchback/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|K4 Hatchback|2026|GT-Line|||https://www.kia.com/us/en/k4-hatchback/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|K4 Hatchback|2026|GT-Line Turbo|||https://www.kia.com/us/en/k4-hatchback/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|K5|2027|GT|FWD|3596|https://www.kia.com/us/en/k5/specs-compare|row "Curb Weight: (FWD)"
+Kia|K5|2027|GT-Line|FWD|3291|https://www.kia.com/us/en/k5/specs-compare|row "Curb Weight: (FWD)"
+Kia|K5|2027|GT-Line|AWD|3463|https://www.kia.com/us/en/k5/specs-compare|row "Curb Weight: (AWD)"
+Kia|K5|2027|LXS|FWD|3230|https://www.kia.com/us/en/k5/specs-compare|row "Curb Weight: (FWD)"
+Kia|Niro|2027|EX||3208|https://www.kia.com/us/en/niro/specs-compare|row "Curb Weight: minimum/maximum" value "3,362 / 3,208 lb."; min of range; site lists larger figure first
+Kia|Niro|2027|EX||3362|https://www.kia.com/us/en/niro/specs-compare|row "Curb Weight: minimum/maximum" value "3,362 / 3,208 lb."; max of range; site lists larger figure first
+Kia|Niro|2027|LX||3208|https://www.kia.com/us/en/niro/specs-compare|row "Curb Weight: minimum/maximum" value "3,362 / 3,208 lb."; min of range; site lists larger figure first
+Kia|Niro|2027|LX||3362|https://www.kia.com/us/en/niro/specs-compare|row "Curb Weight: minimum/maximum" value "3,362 / 3,208 lb."; max of range; site lists larger figure first
+Kia|Niro|2027|S||3208|https://www.kia.com/us/en/niro/specs-compare|row "Curb Weight: minimum/maximum" value "3,362 / 3,208 lb."; min of range; site lists larger figure first
+Kia|Niro|2027|S||3362|https://www.kia.com/us/en/niro/specs-compare|row "Curb Weight: minimum/maximum" value "3,362 / 3,208 lb."; max of range; site lists larger figure first
+Kia|Niro|2027|SX||3208|https://www.kia.com/us/en/niro/specs-compare|row "Curb Weight: minimum/maximum" value "3,362 / 3,208 lb."; min of range; site lists larger figure first
+Kia|Niro|2027|SX||3362|https://www.kia.com/us/en/niro/specs-compare|row "Curb Weight: minimum/maximum" value "3,362 / 3,208 lb."; max of range; site lists larger figure first
+Kia|Niro|2027|SX Touring||3208|https://www.kia.com/us/en/niro/specs-compare|row "Curb Weight: minimum/maximum" value "3,362 / 3,208 lb."; min of range; site lists larger figure first
+Kia|Niro|2027|SX Touring||3362|https://www.kia.com/us/en/niro/specs-compare|row "Curb Weight: minimum/maximum" value "3,362 / 3,208 lb."; max of range; site lists larger figure first
+Kia|Niro EV|2026|Wave||3721|https://www.kia.com/us/en/niro-ev/specs-compare|row "Curb Weight: minimum/maximum" value "3,721-3,803 lb."; min of range
+Kia|Niro EV|2026|Wave||3803|https://www.kia.com/us/en/niro-ev/specs-compare|row "Curb Weight: minimum/maximum" value "3,721-3,803 lb."; max of range
+Kia|Niro EV|2026|Wind||3721|https://www.kia.com/us/en/niro-ev/specs-compare|row "Curb Weight: minimum/maximum" value "3,721-3,803 lb."; min of range
+Kia|Niro EV|2026|Wind||3803|https://www.kia.com/us/en/niro-ev/specs-compare|row "Curb Weight: minimum/maximum" value "3,721-3,803 lb."; max of range
+Kia|Seltos|2027|EX|FWD|3109|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum/maximum" value "3,109 / 3,406 lb."; min of range
+Kia|Seltos|2027|EX|FWD|3406|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum/maximum" value "3,109 / 3,406 lb."; max of range
+Kia|Seltos|2027|EX|AWD|3318|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "3,318 / 3,583 lb."; min of range
+Kia|Seltos|2027|EX|AWD|3583|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "3,318 / 3,583 lb."; max of range
+Kia|Seltos|2027|LX|FWD|3109|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum/maximum" value "3,109 / 3,406 lb."; min of range
+Kia|Seltos|2027|LX|FWD|3406|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum/maximum" value "3,109 / 3,406 lb."; max of range
+Kia|Seltos|2027|LX|AWD|3318|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "3,318 / 3,583 lb."; min of range
+Kia|Seltos|2027|LX|AWD|3583|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "3,318 / 3,583 lb."; max of range
+Kia|Seltos|2027|S|FWD|3109|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum/maximum" value "3,109 / 3,406 lb."; min of range
+Kia|Seltos|2027|S|FWD|3406|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum/maximum" value "3,109 / 3,406 lb."; max of range
+Kia|Seltos|2027|S|AWD|3318|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "3,318 / 3,583 lb."; min of range
+Kia|Seltos|2027|S|AWD|3583|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "3,318 / 3,583 lb."; max of range
+Kia|Seltos|2027|X-Line S|AWD|3318|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "3,318 / 3,583 lb."; min of range
+Kia|Seltos|2027|X-Line S|AWD|3583|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "3,318 / 3,583 lb."; max of range
+Kia|Seltos|2027|X-Line SX|AWD|3549|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "3,549 / 3,715 lb."; min of range
+Kia|Seltos|2027|X-Line SX|AWD|3715|https://www.kia.com/us/en/seltos/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum/maximum" value "3,549 / 3,715 lb."; max of range
+Kia|Sorento|2026|EX|||https://www.kia.com/us/en/sorento/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|Sorento|2026|LX|||https://www.kia.com/us/en/sorento/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|Sorento|2026|S|||https://www.kia.com/us/en/sorento/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|Sorento|2026|SX|||https://www.kia.com/us/en/sorento/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|Sorento|2026|X-Line EX AWD|||https://www.kia.com/us/en/sorento/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|Sorento|2026|X-Line SX AWD|||https://www.kia.com/us/en/sorento/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|Sorento|2026|X-Line SX Prestige AWD|||https://www.kia.com/us/en/sorento/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|Sorento|2026|X-Pro SX Prestige AWD|||https://www.kia.com/us/en/sorento/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|Sorento Hybrid|2026|EX|||https://www.kia.com/us/en/sorento-hybrid/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|Sorento Hybrid|2026|X-Line SX Prestige AWD|||https://www.kia.com/us/en/sorento-hybrid/specs-compare|site shows model year 2027, not 2026; no 2026 page found on manufacturer site
+Kia|Sorento Plug-in Hybrid|2026|EX AWD|AWD|4652|https://www.kia.com/us/en/sorento-plug-in-hybrid/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) 6- passenger, minimum/maximum" value "4,652/4,652 lb." (min=max)
+Kia|Sorento Plug-in Hybrid|2026|EX AWD|AWD|4550|https://www.kia.com/us/en/sorento-plug-in-hybrid/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) 7- passenger, minimum/maximum" value "4,550/4,605 lb."; min of range
+Kia|Sorento Plug-in Hybrid|2026|EX AWD|AWD|4605|https://www.kia.com/us/en/sorento-plug-in-hybrid/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) 7- passenger, minimum/maximum" value "4,550/4,605 lb."; max of range
+Kia|Sorento Plug-in Hybrid|2026|X-Line SX Prestige AWD|AWD|4652|https://www.kia.com/us/en/sorento-plug-in-hybrid/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) 6- passenger, minimum/maximum" value "4,652/4,652 lb." (min=max)
+Kia|Sportage|2027|EX|FWD|3434|https://www.kia.com/us/en/sportage/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum"
+Kia|Sportage|2027|EX|AWD|3603|https://www.kia.com/us/en/sportage/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum"
+Kia|Sportage|2027|LX|FWD|3434|https://www.kia.com/us/en/sportage/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum"
+Kia|Sportage|2027|LX|AWD|3603|https://www.kia.com/us/en/sportage/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum"
+Kia|Sportage|2027|SX|FWD|3434|https://www.kia.com/us/en/sportage/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum"
+Kia|Sportage|2027|SX Prestige|FWD|3434|https://www.kia.com/us/en/sportage/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum"
+Kia|Sportage|2027|SX Prestige|AWD|3603|https://www.kia.com/us/en/sportage/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum"
+Kia|Sportage|2027|X-Line|AWD|3603|https://www.kia.com/us/en/sportage/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum"
+Kia|Sportage|2027|X-Pro Prestige|AWD|3603|https://www.kia.com/us/en/sportage/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum"
+Kia|Sportage Hybrid|2027|EX|FWD|3598|https://www.kia.com/us/en/sportage-hybrid/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum"
+Kia|Sportage Hybrid|2027|EX|AWD|3803|https://www.kia.com/us/en/sportage-hybrid/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum"
+Kia|Sportage Hybrid|2027|LX|FWD|3598|https://www.kia.com/us/en/sportage-hybrid/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum"
+Kia|Sportage Hybrid|2027|S|FWD|3598|https://www.kia.com/us/en/sportage-hybrid/specs-compare|row "Curb Weight: Front-Wheel Drive (FWD) minimum"
+Kia|Sportage Hybrid|2027|S|AWD|3803|https://www.kia.com/us/en/sportage-hybrid/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum"
+Kia|Sportage Hybrid|2027|SX Prestige|AWD|3803|https://www.kia.com/us/en/sportage-hybrid/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum"
+Kia|Sportage Hybrid|2027|X-Line|AWD|3803|https://www.kia.com/us/en/sportage-hybrid/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum"
+Kia|Sportage Plug-in Hybrid|2027|X-Line|AWD|4226|https://www.kia.com/us/en/sportage-plug-in-hybrid/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum"
+Kia|Sportage Plug-in Hybrid|2027|X-Line Prestige|AWD|4226|https://www.kia.com/us/en/sportage-plug-in-hybrid/specs-compare|row "Curb Weight: All-Wheel Drive (AWD) minimum"
+Kia|Telluride|2027|EX|FWD|4467|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (FWD)" value "4,467-4,506 lb."; min of range
+Kia|Telluride|2027|EX|FWD|4506|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (FWD)" value "4,467-4,506 lb."; max of range
+Kia|Telluride|2027|EX|AWD|4605|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,605-4,645 lb."; min of range
+Kia|Telluride|2027|EX|AWD|4645|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,605-4,645 lb."; max of range
+Kia|Telluride|2027|LX|FWD|4381|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (FWD)" value "4,381-4,420 lb."; min of range
+Kia|Telluride|2027|LX|FWD|4420|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (FWD)" value "4,381-4,420 lb."; max of range
+Kia|Telluride|2027|S|FWD|4433|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (FWD)" value "4,433-4,550 lb."; min of range
+Kia|Telluride|2027|S|FWD|4550|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (FWD)" value "4,433-4,550 lb."; max of range
+Kia|Telluride|2027|S|AWD|4572|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,572-4,713 lb."; min of range
+Kia|Telluride|2027|S|AWD|4713|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,572-4,713 lb."; max of range
+Kia|Telluride|2027|SX|FWD|4433|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (FWD)" value "4,433-4,550 lb."; min of range
+Kia|Telluride|2027|SX|FWD|4550|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (FWD)" value "4,433-4,550 lb."; max of range
+Kia|Telluride|2027|SX Prestige|AWD|4572|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,572-4,713 lb."; min of range
+Kia|Telluride|2027|SX Prestige|AWD|4713|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,572-4,713 lb."; max of range
+Kia|Telluride|2027|X-Line EX|AWD|4619|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,619-4,744 lb."; min of range
+Kia|Telluride|2027|X-Line EX|AWD|4744|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,619-4,744 lb."; max of range
+Kia|Telluride|2027|X-Line SX|AWD|4619|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,619-4,744 lb."; min of range
+Kia|Telluride|2027|X-Line SX|AWD|4744|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,619-4,744 lb."; max of range
+Kia|Telluride|2027|X-Line SX Prestige|AWD|4619|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,619-4,744 lb."; min of range
+Kia|Telluride|2027|X-Line SX Prestige|AWD|4744|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,619-4,744 lb."; max of range
+Kia|Telluride|2027|X-Pro SX|AWD|4729|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,729-4,736 lb."; min of range
+Kia|Telluride|2027|X-Pro SX|AWD|4736|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,729-4,736 lb."; max of range
+Kia|Telluride|2027|X-Pro SX Prestige|AWD|4729|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,729-4,736 lb."; min of range
+Kia|Telluride|2027|X-Pro SX Prestige|AWD|4736|https://www.kia.com/us/en/telluride/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,729-4,736 lb."; max of range
+Kia|Telluride Hybrid|2027|EX|FWD|4661|https://www.kia.com/us/en/telluride-hybrid/specs-compare|row "Curb Weight: minimum/maximum (FWD)" value "4,661-4,700 lb."; min of range
+Kia|Telluride Hybrid|2027|EX|FWD|4700|https://www.kia.com/us/en/telluride-hybrid/specs-compare|row "Curb Weight: minimum/maximum (FWD)" value "4,661-4,700 lb."; max of range
+Kia|Telluride Hybrid|2027|EX|AWD|4806|https://www.kia.com/us/en/telluride-hybrid/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,806-4,846 lb."; min of range
+Kia|Telluride Hybrid|2027|EX|AWD|4846|https://www.kia.com/us/en/telluride-hybrid/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,806-4,846 lb."; max of range
+Kia|Telluride Hybrid|2027|SX|FWD|4747|https://www.kia.com/us/en/telluride-hybrid/specs-compare|row "Curb Weight: minimum/maximum (FWD)" value "4,747-4,786 lb."; min of range
+Kia|Telluride Hybrid|2027|SX|FWD|4786|https://www.kia.com/us/en/telluride-hybrid/specs-compare|row "Curb Weight: minimum/maximum (FWD)" value "4,747-4,786 lb."; max of range
+Kia|Telluride Hybrid|2027|SX Prestige|AWD|4923|https://www.kia.com/us/en/telluride-hybrid/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,923-5,042 lb."; min of range
+Kia|Telluride Hybrid|2027|SX Prestige|AWD|5042|https://www.kia.com/us/en/telluride-hybrid/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,923-5,042 lb."; max of range
+Kia|Telluride Hybrid|2027|X-Line SX|AWD|4912|https://www.kia.com/us/en/telluride-hybrid/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,912-5,062 lb."; min of range
+Kia|Telluride Hybrid|2027|X-Line SX|AWD|5062|https://www.kia.com/us/en/telluride-hybrid/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,912-5,062 lb."; max of range
+Kia|Telluride Hybrid|2027|X-Line SX Prestige|AWD|4912|https://www.kia.com/us/en/telluride-hybrid/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,912-5,062 lb."; min of range
+Kia|Telluride Hybrid|2027|X-Line SX Prestige|AWD|5062|https://www.kia.com/us/en/telluride-hybrid/specs-compare|row "Curb Weight: minimum/maximum (AWD)" value "4,912-5,062 lb."; max of range

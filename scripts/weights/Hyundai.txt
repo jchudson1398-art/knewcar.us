@@ -1,0 +1,109 @@
+# Make|Model|year|Trim|drivetrain (AWD/FWD/RWD/4WD or blank if one weight covers all)|curb weight lb (integer, blank if not found)|source URL|note
+Hyundai|ELANTRA|2026|Limited||2725|https://www.hyundaiusa.com/us/en/vehicles/elantra/compare-specs|row "Curb weight (lbs.)" value "2,725-2,868"; min of range
+Hyundai|ELANTRA|2026|Limited||2868|https://www.hyundaiusa.com/us/en/vehicles/elantra/compare-specs|row "Curb weight (lbs.)" value "2,725-2,868"; max of range
+Hyundai|ELANTRA|2026|N Line||2954|https://www.hyundaiusa.com/us/en/vehicles/elantra/compare-specs|row "Curb weight (lbs.)" value "2,954-3,020"; min of range
+Hyundai|ELANTRA|2026|N Line||3020|https://www.hyundaiusa.com/us/en/vehicles/elantra/compare-specs|row "Curb weight (lbs.)" value "2,954-3,020"; max of range
+Hyundai|ELANTRA|2026|SE||2725|https://www.hyundaiusa.com/us/en/vehicles/elantra/compare-specs|row "Curb weight (lbs.)" value "2,725-2,868"; min of range
+Hyundai|ELANTRA|2026|SE||2868|https://www.hyundaiusa.com/us/en/vehicles/elantra/compare-specs|row "Curb weight (lbs.)" value "2,725-2,868"; max of range
+Hyundai|ELANTRA|2026|SEL Sport||2725|https://www.hyundaiusa.com/us/en/vehicles/elantra/compare-specs|row "Curb weight (lbs.)" value "2,725-2,868"; min of range
+Hyundai|ELANTRA|2026|SEL Sport||2868|https://www.hyundaiusa.com/us/en/vehicles/elantra/compare-specs|row "Curb weight (lbs.)" value "2,725-2,868"; max of range
+Hyundai|ELANTRA|2026|SEL Sport Plus||2725|https://www.hyundaiusa.com/us/en/vehicles/elantra/compare-specs|row "Curb weight (lbs.)" value "2,725-2,868"; min of range
+Hyundai|ELANTRA|2026|SEL Sport Plus||2868|https://www.hyundaiusa.com/us/en/vehicles/elantra/compare-specs|row "Curb weight (lbs.)" value "2,725-2,868"; max of range
+Hyundai|ELANTRA|2026|SEL Sport Premium||2725|https://www.hyundaiusa.com/us/en/vehicles/elantra/compare-specs|row "Curb weight (lbs.)" value "2,725-2,868"; min of range
+Hyundai|ELANTRA|2026|SEL Sport Premium||2868|https://www.hyundaiusa.com/us/en/vehicles/elantra/compare-specs|row "Curb weight (lbs.)" value "2,725-2,868"; max of range
+Hyundai|ELANTRA Hybrid|2026|Blue||2965|https://www.hyundaiusa.com/us/en/vehicles/elantra-hybrid/compare-specs|row "Curb weight (lbs.)"
+Hyundai|ELANTRA Hybrid|2026|Limited||3069|https://www.hyundaiusa.com/us/en/vehicles/elantra-hybrid/compare-specs|row "Curb weight (lbs.)"
+Hyundai|ELANTRA Hybrid|2026|SEL Sport||3069|https://www.hyundaiusa.com/us/en/vehicles/elantra-hybrid/compare-specs|row "Curb weight (lbs.)"
+Hyundai|IONIQ 5|2027|Limited|RWD|4557|https://www.hyundaiusa.com/us/en/vehicles/ioniq-5/compare-specs|row "Curb weight (lbs.) (RWD)"
+Hyundai|IONIQ 5|2027|Limited|AWD|4806|https://www.hyundaiusa.com/us/en/vehicles/ioniq-5/compare-specs|row "Curb weight (lbs.) (AWD)"
+Hyundai|IONIQ 5|2027|SE|RWD|4376|https://www.hyundaiusa.com/us/en/vehicles/ioniq-5/compare-specs|row "Curb weight (lbs.) (RWD)"
+Hyundai|IONIQ 5|2027|SE|AWD|4608|https://www.hyundaiusa.com/us/en/vehicles/ioniq-5/compare-specs|row "Curb weight (lbs.) (AWD)"
+Hyundai|IONIQ 5|2027|SE Standard Range|RWD|4145|https://www.hyundaiusa.com/us/en/vehicles/ioniq-5/compare-specs|row "Curb weight (lbs.) (RWD)"
+Hyundai|IONIQ 5|2027|SEL|RWD|4409|https://www.hyundaiusa.com/us/en/vehicles/ioniq-5/compare-specs|row "Curb weight (lbs.) (RWD)"
+Hyundai|IONIQ 5|2027|SEL|AWD|4641|https://www.hyundaiusa.com/us/en/vehicles/ioniq-5/compare-specs|row "Curb weight (lbs.) (AWD)"
+Hyundai|IONIQ 5|2027|XRT|AWD|4720|https://www.hyundaiusa.com/us/en/vehicles/ioniq-5/compare-specs|row "Curb weight (lbs.) (AWD)"
+Hyundai|IONIQ 5 N|2026|N||4861|https://www.hyundaiusa.com/us/en/vehicles/ioniq-5-n/compare-specs|row "Curb weight (lbs.)"
+Hyundai|IONIQ 9|2026|Calligraphy|AWD|6008|https://www.hyundaiusa.com/us/en/vehicles/ioniq-9/compare-specs|row "Curb weight (lbs.) (AWD)"
+Hyundai|IONIQ 9|2026|Calligraphy Design|AWD|6008|https://www.hyundaiusa.com/us/en/vehicles/ioniq-9/compare-specs|row "Curb weight (lbs.) (AWD)"
+Hyundai|IONIQ 9|2026|Limited|AWD|5994|https://www.hyundaiusa.com/us/en/vehicles/ioniq-9/compare-specs|row "Curb weight (lbs.) (AWD)"
+Hyundai|IONIQ 9|2026|S|RWD|5507|https://www.hyundaiusa.com/us/en/vehicles/ioniq-9/compare-specs|row "Curb weight (lbs.) (RWD)"
+Hyundai|IONIQ 9|2026|SE|AWD|5745|https://www.hyundaiusa.com/us/en/vehicles/ioniq-9/compare-specs|row "Curb weight (lbs.) (AWD)"
+Hyundai|IONIQ 9|2026|SEL|AWD|5902|https://www.hyundaiusa.com/us/en/vehicles/ioniq-9/compare-specs|row "Curb weight (lbs.) (AWD)"
+Hyundai|KONA|2027|Limited|AWD|3505|https://www.hyundaiusa.com/us/en/vehicles/kona/compare-specs|row "Curb weight (lbs.) AWD"
+Hyundai|KONA|2027|SEL Premium|AWD|3461|https://www.hyundaiusa.com/us/en/vehicles/kona/compare-specs|row "Curb weight (lbs.) AWD"
+Hyundai|PALISADE|2027|Calligraphy|FWD|4718|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) FWD 7-passenger"
+Hyundai|PALISADE|2027|Calligraphy|AWD|4872|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) AWD 7-passenger"
+Hyundai|PALISADE|2027|Limited|FWD|4461|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) FWD 7-passenger"
+Hyundai|PALISADE|2027|Limited|AWD|4795|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) AWD 7-passenger"
+Hyundai|PALISADE|2027|Limited|FWD|4641|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) FWD 8-passenger"
+Hyundai|PALISADE|2027|Limited|AWD|4795|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) AWD 8-passenger"
+Hyundai|PALISADE|2027|SE|FWD|4420|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) FWD 8-passenger"
+Hyundai|PALISADE|2027|SE|AWD|4575|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) AWD 8-passenger"
+Hyundai|PALISADE|2027|SEL|FWD|4420|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) FWD 7-passenger"
+Hyundai|PALISADE|2027|SEL|AWD|4575|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) AWD 7-passenger"
+Hyundai|PALISADE|2027|SEL|FWD|4420|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) FWD 8-passenger"
+Hyundai|PALISADE|2027|SEL|AWD|4575|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) AWD 8-passenger"
+Hyundai|PALISADE|2027|SEL Premium|FWD|4493|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) FWD 7-passenger"
+Hyundai|PALISADE|2027|SEL Premium|AWD|4467|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) AWD 7-passenger"
+Hyundai|PALISADE|2027|SEL Premium|FWD|4493|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) FWD 8-passenger"
+Hyundai|PALISADE|2027|SEL Premium|AWD|4467|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) AWD 8-passenger"
+Hyundai|PALISADE|2027|XRT PRO|AWD|4784|https://www.hyundaiusa.com/us/en/vehicles/palisade/compare-specs|row "Curb weight (lbs.) AWD 7-passenger"
+Hyundai|PALISADE Hybrid|2027|Calligraphy|FWD|4872|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) FWD 7-passenger"
+Hyundai|PALISADE Hybrid|2027|Calligraphy|AWD|5016|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) AWD 7-passenger"
+Hyundai|PALISADE Hybrid|2027|Calligraphy Black Ink|FWD|4872|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) FWD 7-passenger"
+Hyundai|PALISADE Hybrid|2027|Calligraphy Black Ink|AWD|5016|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) AWD 7-passenger"
+Hyundai|PALISADE Hybrid|2027|Limited|FWD|4795|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) FWD 7-passenger"
+Hyundai|PALISADE Hybrid|2027|Limited|AWD|4938|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) AWD 7-passenger"
+Hyundai|PALISADE Hybrid|2027|Limited|FWD|4795|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) FWD 8-passenger"
+Hyundai|PALISADE Hybrid|2027|Limited|AWD|4938|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) AWD 8-passenger"
+Hyundai|PALISADE Hybrid|2027|SEL|FWD|4652|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) FWD 7-passenger"
+Hyundai|PALISADE Hybrid|2027|SEL|AWD|4795|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) AWD 7-passenger"
+Hyundai|PALISADE Hybrid|2027|SEL|FWD|4652|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) FWD 8-passenger"
+Hyundai|PALISADE Hybrid|2027|SEL|AWD|4795|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) AWD 8-passenger"
+Hyundai|PALISADE Hybrid|2027|SEL Premium|FWD|4652|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) FWD 7-passenger"
+Hyundai|PALISADE Hybrid|2027|SEL Premium|AWD|4795|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) AWD 7-passenger"
+Hyundai|PALISADE Hybrid|2027|SEL Premium|FWD|4652|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) FWD 8-passenger"
+Hyundai|PALISADE Hybrid|2027|SEL Premium|AWD|4795|https://www.hyundaiusa.com/us/en/vehicles/palisade-hybrid/compare-specs|row "Curb weight (lbs.) AWD 8-passenger"
+Hyundai|SANTA CRUZ|2026|Limited||4191|https://www.hyundaiusa.com/us/en/vehicles/2026-santa-cruz/compare-specs|row "Curb weight (lbs.) FWD/AWD" gives single value "4191.0" without saying which drivetrain
+Hyundai|SANTA CRUZ|2026|SE|FWD|3779|https://www.hyundaiusa.com/us/en/vehicles/2026-santa-cruz/compare-specs|row "Curb weight (lbs.) FWD/AWD" value "3,779/3,922"
+Hyundai|SANTA CRUZ|2026|SE|AWD|3922|https://www.hyundaiusa.com/us/en/vehicles/2026-santa-cruz/compare-specs|row "Curb weight (lbs.) FWD/AWD" value "3,779/3,922"
+Hyundai|SANTA CRUZ|2026|SEL|FWD|3805|https://www.hyundaiusa.com/us/en/vehicles/2026-santa-cruz/compare-specs|row "Curb weight (lbs.) FWD/AWD" value "3,805/3,948"
+Hyundai|SANTA CRUZ|2026|SEL|AWD|3948|https://www.hyundaiusa.com/us/en/vehicles/2026-santa-cruz/compare-specs|row "Curb weight (lbs.) FWD/AWD" value "3,805/3,948"
+Hyundai|SANTA CRUZ|2026|SEL Activity|FWD|3900|https://www.hyundaiusa.com/us/en/vehicles/2026-santa-cruz/compare-specs|row "Curb weight (lbs.) FWD/AWD" value "3,900/4,043"
+Hyundai|SANTA CRUZ|2026|SEL Activity|AWD|4043|https://www.hyundaiusa.com/us/en/vehicles/2026-santa-cruz/compare-specs|row "Curb weight (lbs.) FWD/AWD" value "3,900/4,043"
+Hyundai|SANTA FE|2027|Calligraphy|AWD|4486|https://www.hyundaiusa.com/us/en/vehicles/santa-fe/compare-specs|row "Curb weight (lbs., FWD/HTRAC AWD)" value "4,343 / 4,486"
+Hyundai|SANTA FE|2027|Limited|AWD|4486|https://www.hyundaiusa.com/us/en/vehicles/santa-fe/compare-specs|row "Curb weight (lbs., FWD/HTRAC AWD)" value "4,343 / 4,486"
+Hyundai|SANTA FE|2027|SE|AWD|4486|https://www.hyundaiusa.com/us/en/vehicles/santa-fe/compare-specs|row "Curb weight (lbs., FWD/HTRAC AWD)" value "4,343 / 4,486"
+Hyundai|SANTA FE|2027|SEL|AWD|4486|https://www.hyundaiusa.com/us/en/vehicles/santa-fe/compare-specs|row "Curb weight (lbs., FWD/HTRAC AWD)" value "4,343 / 4,486"
+Hyundai|SANTA FE|2027|XRT|AWD|4486|https://www.hyundaiusa.com/us/en/vehicles/santa-fe/compare-specs|row "Curb weight (lbs., FWD/HTRAC AWD)" value "Not Available / 4,486"
+Hyundai|SANTA FE Hybrid|2027|Calligraphy|AWD|4575|https://www.hyundaiusa.com/us/en/vehicles/santa-fe-hybrid/compare-specs|row "Curb weight (lbs., FWD/HTRAC AWD)" value "4,431 / 4,575"
+Hyundai|SANTA FE Hybrid|2027|Limited|AWD|4575|https://www.hyundaiusa.com/us/en/vehicles/santa-fe-hybrid/compare-specs|row "Curb weight (lbs., FWD/HTRAC AWD)" value "4,431 / 4,575"
+Hyundai|SANTA FE Hybrid|2027|SE|AWD|4575|https://www.hyundaiusa.com/us/en/vehicles/santa-fe-hybrid/compare-specs|row "Curb weight (lbs., FWD/HTRAC AWD)" value "4,431 / 4,575"
+Hyundai|SANTA FE Hybrid|2027|SEL|AWD|4575|https://www.hyundaiusa.com/us/en/vehicles/santa-fe-hybrid/compare-specs|row "Curb weight (lbs., FWD/HTRAC AWD)" value "4,431 / 4,575"
+Hyundai|TUCSON|2026|Limited|FWD|3657|https://www.hyundaiusa.com/us/en/vehicles/tucson/compare-specs|row "Curb weight (lbs., FWD/AWD)" value "3,657 / 3,800"
+Hyundai|TUCSON|2026|Limited|AWD|3800|https://www.hyundaiusa.com/us/en/vehicles/tucson/compare-specs|row "Curb weight (lbs., FWD/AWD)" value "3,657 / 3,800"
+Hyundai|TUCSON|2026|SE|FWD|3429|https://www.hyundaiusa.com/us/en/vehicles/tucson/compare-specs|row "Curb weight (lbs., FWD/AWD)" value "3,429 / 3,572"
+Hyundai|TUCSON|2026|SE|AWD|3572|https://www.hyundaiusa.com/us/en/vehicles/tucson/compare-specs|row "Curb weight (lbs., FWD/AWD)" value "3,429 / 3,572"
+Hyundai|TUCSON|2026|SEL|FWD|3494|https://www.hyundaiusa.com/us/en/vehicles/tucson/compare-specs|row "Curb weight (lbs., FWD/AWD)" value "3,494 / 3,638"
+Hyundai|TUCSON|2026|SEL|AWD|3638|https://www.hyundaiusa.com/us/en/vehicles/tucson/compare-specs|row "Curb weight (lbs., FWD/AWD)" value "3,494 / 3,638"
+Hyundai|TUCSON|2026|SEL Plus|FWD|3494|https://www.hyundaiusa.com/us/en/vehicles/tucson/compare-specs|row "Curb weight (lbs., FWD/AWD)" value "3,494 / 3,638"
+Hyundai|TUCSON|2026|SEL Plus|AWD|3638|https://www.hyundaiusa.com/us/en/vehicles/tucson/compare-specs|row "Curb weight (lbs., FWD/AWD)" value "3,494 / 3,638"
+Hyundai|TUCSON|2026|SEL Premium|FWD|3533|https://www.hyundaiusa.com/us/en/vehicles/tucson/compare-specs|row "Curb weight (lbs., FWD/AWD)" value "3,533 / 3,676"
+Hyundai|TUCSON|2026|SEL Premium|AWD|3676|https://www.hyundaiusa.com/us/en/vehicles/tucson/compare-specs|row "Curb weight (lbs., FWD/AWD)" value "3,533 / 3,676"
+Hyundai|TUCSON|2026|XRT|AWD|3713|https://www.hyundaiusa.com/us/en/vehicles/tucson/compare-specs|row "Curb weight (lbs., FWD/AWD)" value "3,526 / 3,713"
+Hyundai|TUCSON Hybrid|2026|Limited||3794|https://www.hyundaiusa.com/us/en/vehicles/tucson-hybrid/compare-specs|row "Curb weight (lbs.)" value "3,794 / 3,920"; value 1 of 2, site does not label which variant (not a stated range)
+Hyundai|TUCSON Hybrid|2026|Limited||3920|https://www.hyundaiusa.com/us/en/vehicles/tucson-hybrid/compare-specs|row "Curb weight (lbs.)" value "3,794 / 3,920"; value 2 of 2, site does not label which variant (not a stated range)
+Hyundai|TUCSON Hybrid|2026|SE||3593|https://www.hyundaiusa.com/us/en/vehicles/tucson-hybrid/compare-specs|row "Curb weight (lbs.)" value "3,593 / 3,719"; value 1 of 2, site does not label which variant (not a stated range)
+Hyundai|TUCSON Hybrid|2026|SE||3719|https://www.hyundaiusa.com/us/en/vehicles/tucson-hybrid/compare-specs|row "Curb weight (lbs.)" value "3,593 / 3,719"; value 2 of 2, site does not label which variant (not a stated range)
+Hyundai|TUCSON Hybrid|2026|SEL||3647|https://www.hyundaiusa.com/us/en/vehicles/tucson-hybrid/compare-specs|row "Curb weight (lbs.)" value "3,647 / 3,773"; value 1 of 2, site does not label which variant (not a stated range)
+Hyundai|TUCSON Hybrid|2026|SEL||3773|https://www.hyundaiusa.com/us/en/vehicles/tucson-hybrid/compare-specs|row "Curb weight (lbs.)" value "3,647 / 3,773"; value 2 of 2, site does not label which variant (not a stated range)
+Hyundai|TUCSON Hybrid|2026|SEL Convenience||3665|https://www.hyundaiusa.com/us/en/vehicles/tucson-hybrid/compare-specs|row "Curb weight (lbs.)" value "3,665 / 3,790"; value 1 of 2, site does not label which variant (not a stated range)
+Hyundai|TUCSON Hybrid|2026|SEL Convenience||3790|https://www.hyundaiusa.com/us/en/vehicles/tucson-hybrid/compare-specs|row "Curb weight (lbs.)" value "3,665 / 3,790"; value 2 of 2, site does not label which variant (not a stated range)
+Hyundai|TUCSON Plug-in Hybrid|2026|Limited||4266|https://www.hyundaiusa.com/us/en/vehicles/tucson-plug-in-hybrid/compare-specs|row "Curb weight (lbs.)"
+Hyundai|TUCSON Plug-in Hybrid|2026|SEL||4121|https://www.hyundaiusa.com/us/en/vehicles/tucson-plug-in-hybrid/compare-specs|row "Curb weight (lbs.)"
+Hyundai|VENUE|2026|SE||2612|https://www.hyundaiusa.com/us/en/vehicles/venue/compare-specs|row "Curb weight (lbs.)" value "2,612 – 2,738"; min of range
+Hyundai|VENUE|2026|SE||2738|https://www.hyundaiusa.com/us/en/vehicles/venue/compare-specs|row "Curb weight (lbs.)" value "2,612 – 2,738"; max of range
+Hyundai|VENUE|2026|SEL||2612|https://www.hyundaiusa.com/us/en/vehicles/venue/compare-specs|row "Curb weight (lbs.)" value "2,612 – 2,738"; min of range
+Hyundai|VENUE|2026|SEL||2738|https://www.hyundaiusa.com/us/en/vehicles/venue/compare-specs|row "Curb weight (lbs.)" value "2,612 – 2,738"; max of range
+Hyundai|VENUE|2026|SEL w/ 2-Tone Roof||2612|https://www.hyundaiusa.com/us/en/vehicles/venue/compare-specs|row "Curb weight (lbs.)" value "2,612 – 2,738"; min of range
+Hyundai|VENUE|2026|SEL w/ 2-Tone Roof||2738|https://www.hyundaiusa.com/us/en/vehicles/venue/compare-specs|row "Curb weight (lbs.)" value "2,612 – 2,738"; max of range
