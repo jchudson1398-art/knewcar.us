@@ -92,16 +92,10 @@ export function estimate(input: EstimateInput, fees: StateFees): Estimate {
   }
 
   if (state === "CA" || state === "VA") {
-    // Doc fee is taxed. A trade-in does not reduce the tax. Whether destination is taxed is not confirmed.
-    basis = price + doc;
-    if (destination > 0) {
-      notIncluded.push({
-        label: "Tax on the destination charge",
-        amount: null,
-        tag: "not_included",
-        note: `We have not confirmed from official sources whether ${STATE_NAMES[state]} taxes the destination charge. If it does, add about ${usd(pct(destination, input.localCombinedRate ?? rate))}.`,
-      });
-    }
+    // Doc fee is taxed. A trade-in does not reduce the tax.
+    // Destination is taxed: Jacob Hudson's ruling, 2026-11-20. The research had this as unknown for both states,
+    // so the official citation is still to be attached (flag log R-12).
+    basis = gross + doc;
     if (hasTrade) notes.push(`${STATE_NAMES[state]} does not reduce sales tax for a trade-in. Your trade-in still lowers what you finance.`);
   }
 
@@ -119,35 +113,21 @@ export function estimate(input: EstimateInput, fees: StateFees): Estimate {
   }
 
   if (state === "NY") {
-    // Destination is taxed, the doc fee is not. A trade-in is deducted, but whether a trade-in with a loan is
-    // counted at full value or at equity is not confirmed, so that case is left out.
-    const deduct = hasTrade && tradePayoff === 0 ? tradeValue : 0;
-    basis = Math.max(0, gross - deduct);
-    if (hasTrade && tradePayoff > 0) {
-      notIncluded.push({
-        label: "Tax savings from your trade-in",
-        amount: null,
-        tag: "not_included",
-        note: "New York reduces tax for a trade-in, but we have not confirmed whether a trade-in with a loan counts at its full value or only your equity. No reduction is applied, so the real tax may be lower.",
-      });
-    } else if (hasTrade) {
-      notes.push("New York taxes the price with destination, less your trade-in's value.");
-    }
+    // Destination is taxed, the doc fee is not. Tax is on the difference between the new vehicle and the
+    // trade-in's value, whether or not the trade-in has a loan: Jacob Hudson's ruling, 2026-11-20. The research
+    // had the loan case as unknown, so the official citation is still to be attached (flag log R-12).
+    basis = Math.max(0, gross - tradeValue);
+    if (hasTrade) notes.push("New York taxes the price with destination, less your trade-in's value.");
     tax.push({ label: `New York State sales tax (${rate}%)`, amount: pct(basis, rate), tag: "verified", note: "State tax, included" });
     pushLocal(tax, notIncluded, basis, rate, input.localCombinedRate, "sales tax");
   }
 
   if (state === "FL") {
-    // Destination and the doc fee are taxed. Official sources conflict on how a trade-in is measured.
-    basis = gross + doc;
-    if (hasTrade) {
-      notIncluded.push({
-        label: "Tax savings from your trade-in",
-        amount: null,
-        tag: "not_included",
-        note: "Florida reduces tax for a trade-in, but official sources disagree on how the trade-in is measured. No reduction is applied, so the real tax may be lower.",
-      });
-    }
+    // Destination and the doc fee are taxed. Tax is on the purchase price less the trade-in allowance: Jacob
+    // Hudson's ruling, 2026-11-20. The research found official wording that differs on how the trade-in is
+    // measured, so the official citation is still to be attached (flag log R-12).
+    basis = Math.max(0, gross + doc - tradeValue);
+    if (hasTrade) notes.push("Florida taxes the price less your trade-in allowance. We use the trade-in value you enter as the allowance.");
     tax.push({ label: `Florida sales tax (${rate}%)`, amount: pct(basis, rate), tag: "verified", note: "State tax, included" });
     if (input.flSurtaxRate === null) {
       notIncluded.push({ label: "County surtax", amount: null, tag: "not_included", note: "Choose your county to add it. It is at most 2% of the first $5,000, so no more than $100." });
