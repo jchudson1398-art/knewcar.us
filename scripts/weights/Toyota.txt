@@ -1,0 +1,188 @@
+# Make|Model|year|Trim|drivetrain (AWD/FWD/RWD/4WD or blank if one weight covers all)|curb weight in lb (integer, blank if not found)|source URL|note
+Toyota|4Runner|2026|Limited|4WD|4970|https://www.toyota.com/4runner/2026/features/|model code 8668; site drivetrain 4WD not in trims.txt for this trim
+Toyota|4Runner|2026|Limited|RWD|4730|https://www.toyota.com/4runner/2026/features/|model code 8648
+Toyota|4Runner|2026|SR5|4WD|4685|https://www.toyota.com/4runner/2026/features/|model code 8664; site drivetrain 4WD not in trims.txt for this trim
+Toyota|4Runner|2026|SR5|RWD|4455|https://www.toyota.com/4runner/2026/features/|model code 8642
+Toyota|4Runner|2026|Trailhunter|4WD|5500|https://www.toyota.com/4runner/2026/features/|model code 8636
+Toyota|4Runner|2026|TRD Off-Road|4WD|4850|https://www.toyota.com/4runner/2026/features/|model code 8670
+Toyota|4Runner|2026|TRD Off-Road i-FORCE MAX|4WD|5225|https://www.toyota.com/4runner/2026/features/|model code 8628
+Toyota|4Runner|2026|TRD Off-Road Premium|4WD|4850|https://www.toyota.com/4runner/2026/features/|model code 8672
+Toyota|4Runner|2026|TRD Off-Road Premium i-FORCE MAX|4WD|5225|https://www.toyota.com/4runner/2026/features/|model code 8630
+Toyota|4Runner|2026|TRD Pro|4WD|5455|https://www.toyota.com/4runner/2026/features/|model code 8634
+Toyota|4Runner|2026|TRD Sport|4WD|4850|https://www.toyota.com/4runner/2026/features/|model code 8671; site drivetrain 4WD not in trims.txt for this trim
+Toyota|4Runner|2026|TRD Sport|RWD|4610|https://www.toyota.com/4runner/2026/features/|model code 8643
+Toyota|4Runner|2026|TRD Sport Premium|4WD|4850|https://www.toyota.com/4runner/2026/features/|model code 8673; site drivetrain 4WD not in trims.txt for this trim
+Toyota|4Runner|2026|TRD Sport Premium|RWD|4610|https://www.toyota.com/4runner/2026/features/|model code 8644
+Toyota|bZ|2027|Limited|AWD|4453|https://www.toyota.com/bz/2027/features/|model code 2882; site drivetrain AWD not in trims.txt for this trim
+Toyota|bZ|2027|Limited|FWD|4233|https://www.toyota.com/bz/2027/features/|model code 2880
+Toyota|bZ Woodland|2027|bZ Woodland|AWD|4442|https://www.toyota.com/bzwoodland/2027/features/|standard tires; model code 2860
+Toyota|bZ Woodland|2027|bZ Woodland|AWD|4464|https://www.toyota.com/bzwoodland/2027/features/|with all-terrain tires; model code 2860
+Toyota|bZ Woodland|2027|bZ Woodland Premium|AWD|4497|https://www.toyota.com/bzwoodland/2027/features/|standard tires; model code 2861
+Toyota|bZ Woodland|2027|bZ Woodland Premium|AWD|4519|https://www.toyota.com/bzwoodland/2027/features/|with all-terrain tires; model code 2861
+Toyota|C-HR|2027|SE|AWD|4322|https://www.toyota.com/c-hr/2027/features/|model code 2416
+Toyota|C-HR|2027|XSE|AWD|4366|https://www.toyota.com/c-hr/2027/features/|model code 2419
+Toyota|Camry|2026|LE|AWD|3594|https://www.toyota.com/camry/2026/features/|model code 2552; site drivetrain AWD not in trims.txt for this trim
+Toyota|Camry|2026|LE|FWD|3450|https://www.toyota.com/camry/2026/features/|model code 2559
+Toyota|Camry|2026|Nightshade|AWD|3627|https://www.toyota.com/camry/2026/features/|model code 2551
+Toyota|Camry|2026|Nightshade|FWD|3494|https://www.toyota.com/camry/2026/features/|model code 2558
+Toyota|Camry|2026|SE|AWD|3627|https://www.toyota.com/camry/2026/features/|model code 2553; site drivetrain AWD not in trims.txt for this trim
+Toyota|Camry|2026|SE|FWD|3494|https://www.toyota.com/camry/2026/features/|model code 2561
+Toyota|Camry|2026|XLE|AWD|3649|https://www.toyota.com/camry/2026/features/|model code 2555
+Toyota|Camry|2026|XLE|FWD|3516|https://www.toyota.com/camry/2026/features/|model code 2560
+Toyota|Camry|2026|XSE|AWD|3682|https://www.toyota.com/camry/2026/features/|model code 2556
+Toyota|Camry|2026|XSE|FWD|3538|https://www.toyota.com/camry/2026/features/|model code 2557
+Toyota|Corolla|2027|Hybrid SE|AWD|3250|https://www.toyota.com/corolla/2027/features/|automatic transmission; model code 1887; site drivetrain AWD not in trims.txt for this trim
+Toyota|Corolla|2027|Hybrid SE|FWD|3140|https://www.toyota.com/corolla/2027/features/|automatic transmission; model code 1886
+Toyota|Corolla|2027|LE|FWD|2955|https://www.toyota.com/corolla/2027/features/|automatic transmission; model code 1852
+Toyota|Corolla|2027|XSE|FWD|3150|https://www.toyota.com/corolla/2027/features/|automatic transmission; model code 1866
+Toyota|Corolla Cross|2026|Hybrid SE|AWD|3329|https://www.toyota.com/corollacross/2026/features/|model code 6314
+Toyota|Corolla Cross|2026|Hybrid XSE|AWD|3373|https://www.toyota.com/corollacross/2026/features/|model code 6316
+Toyota|Corolla Cross|2026|L|AWD|3274|https://www.toyota.com/corollacross/2026/features/|model code 6302; site drivetrain AWD not in trims.txt for this trim
+Toyota|Corolla Cross|2026|L|FWD|3097|https://www.toyota.com/corollacross/2026/features/|model code 6301
+Toyota|Corolla Cross|2026|LE|AWD|3263|https://www.toyota.com/corollacross/2026/features/|model code 6304; site drivetrain AWD not in trims.txt for this trim
+Toyota|Corolla Cross|2026|LE|FWD|3086|https://www.toyota.com/corollacross/2026/features/|model code 6303
+Toyota|Corolla Cross|2026|XLE|AWD|3296|https://www.toyota.com/corollacross/2026/features/|model code 6306; site drivetrain AWD not in trims.txt for this trim
+Toyota|Corolla Cross|2026|XLE|FWD|3142|https://www.toyota.com/corollacross/2026/features/|model code 6305
+Toyota|Corolla Cross Hybrid|2026|Hybrid S|AWD|3340|https://www.toyota.com/corollacross/2026/features/|model code 6312
+Toyota|Corolla Hatchback|2027|SE|FWD|3060|https://www.toyota.com/corollahatchback/2027/features/|model code 6272
+Toyota|Corolla Hatchback|2027|XSE|FWD|3060|https://www.toyota.com/corollahatchback/2027/features/|model code 6274
+Toyota|GR Corolla|2026|GR Corolla|AWD|3296|https://www.toyota.com/grcorolla/2026/features/|manual transmission; model code 6281
+Toyota|GR Corolla|2026|GR Corolla|AWD|3341|https://www.toyota.com/grcorolla/2026/features/|automatic transmission; model code 6280
+Toyota|GR Corolla|2026|GR Corolla Premium Plus|AWD|3303|https://www.toyota.com/grcorolla/2026/features/|manual transmission; model code 6287
+Toyota|GR Corolla|2026|GR Corolla Premium Plus|AWD|3347|https://www.toyota.com/grcorolla/2026/features/|automatic transmission; model code 6286
+Toyota|GR Corolla|2026|GRMN Corolla|AWD|3219|https://www.toyota.com/grcorolla/2026/features/|site states 3218.7 lb, rounded to nearest integer; model code 6285
+Toyota|GR Supra|2026|3.0|||https://www.toyota.com/grsupra/2026/features/|not found: URL redirects to https://www.toyota.com/discontinued-vehicles/grsupra (legacy page with no specifications or curb weight)
+Toyota|GR Supra|2026|3.0 Premium|||https://www.toyota.com/grsupra/2026/features/|not found: URL redirects to https://www.toyota.com/discontinued-vehicles/grsupra (legacy page with no specifications or curb weight)
+Toyota|GR Supra|2026|MkV Final Edition|||https://www.toyota.com/grsupra/2026/features/|not found: URL redirects to https://www.toyota.com/discontinued-vehicles/grsupra (legacy page with no specifications or curb weight)
+Toyota|GR86|2027|GR86|RWD|2811|https://www.toyota.com/gr86/2027/features/|manual transmission; model code 6253
+Toyota|GR86|2027|GR86|RWD|2851|https://www.toyota.com/gr86/2027/features/|automatic transmission; model code 6252
+Toyota|GR86|2027|GR86 Premium|RWD|2833|https://www.toyota.com/gr86/2027/features/|manual transmission; model code 6255
+Toyota|GR86|2027|GR86 Premium|RWD|2868|https://www.toyota.com/gr86/2027/features/|automatic transmission; model code 6254
+Toyota|Grand Highlander|2026|Hybrid Limited|AWD|4620|https://www.toyota.com/grandhighlander/2026/features/|7-passenger; model code 6724
+Toyota|Grand Highlander|2026|Hybrid Limited|AWD|4640|https://www.toyota.com/grandhighlander/2026/features/|8-passenger; model code 6724
+Toyota|Grand Highlander|2026|Hybrid MAX Limited|AWD|4830|https://www.toyota.com/grandhighlander/2026/features/|model code 6730
+Toyota|Grand Highlander|2026|Hybrid MAX Platinum|AWD|4905|https://www.toyota.com/grandhighlander/2026/features/|model code 6732
+Toyota|Grand Highlander|2026|Hybrid Nightshade|AWD|4620|https://www.toyota.com/grandhighlander/2026/features/|model code 6733
+Toyota|Grand Highlander|2026|LE|AWD|4440|https://www.toyota.com/grandhighlander/2026/features/|model code 6706; site drivetrain AWD not in trims.txt for this trim
+Toyota|Grand Highlander|2026|LE|FWD|4290|https://www.toyota.com/grandhighlander/2026/features/|model code 6700
+Toyota|Grand Highlander|2026|Limited|AWD|4485|https://www.toyota.com/grandhighlander/2026/features/|7-passenger; model code 6710; site drivetrain AWD not in trims.txt for this trim
+Toyota|Grand Highlander|2026|Limited|AWD|4510|https://www.toyota.com/grandhighlander/2026/features/|8-passenger; model code 6710; site drivetrain AWD not in trims.txt for this trim
+Toyota|Grand Highlander|2026|Limited|FWD|4330|https://www.toyota.com/grandhighlander/2026/features/|7-passenger; model code 6704
+Toyota|Grand Highlander|2026|Limited|FWD|4355|https://www.toyota.com/grandhighlander/2026/features/|8-passenger; model code 6704
+Toyota|Grand Highlander|2026|Platinum|AWD|4440|https://www.toyota.com/grandhighlander/2026/features/|model code 6712
+Toyota|Grand Highlander|2026|XLE|AWD|4440|https://www.toyota.com/grandhighlander/2026/features/|7-passenger; model code 6708; site drivetrain AWD not in trims.txt for this trim
+Toyota|Grand Highlander|2026|XLE|AWD|4465|https://www.toyota.com/grandhighlander/2026/features/|8-passenger; model code 6708; site drivetrain AWD not in trims.txt for this trim
+Toyota|Grand Highlander|2026|XLE|FWD|4290|https://www.toyota.com/grandhighlander/2026/features/|7-passenger; model code 6702
+Toyota|Grand Highlander|2026|XLE|FWD|4310|https://www.toyota.com/grandhighlander/2026/features/|8-passenger; model code 6702
+Toyota|Highlander|2026|Hybrid Limited|AWD|4595|https://www.toyota.com/highlander/2026/features/|model code 6966
+Toyota|Highlander|2026|Hybrid Platinum|AWD|4595|https://www.toyota.com/highlander/2026/features/|model code 6967
+Toyota|Highlander|2026|Hybrid XLE|AWD|4515|https://www.toyota.com/highlander/2026/features/|model code 6965
+Toyota|Highlander|2026|Limited|AWD|4453|https://www.toyota.com/highlander/2026/features/|model code 6956
+Toyota|Highlander|2026|Platinum|AWD|4453|https://www.toyota.com/highlander/2026/features/|model code 6957
+Toyota|Highlander|2026|XLE|AWD|4376|https://www.toyota.com/highlander/2026/features/|model code 6953
+Toyota|Highlander|2026|XSE|AWD|4420|https://www.toyota.com/highlander/2026/features/|model code 6959
+Toyota|Land Cruiser|2027|Land Cruiser|4WD|5445|https://www.toyota.com/landcruiser/2027/features/|site labels this "Curb weight (minimum) (lb.)"; model code 6167
+Toyota|Land Cruiser|2027|Land Cruiser 1958|4WD|5360|https://www.toyota.com/landcruiser/2027/features/|site labels this "Curb weight (minimum) (lb.)"; model code 6165
+Toyota|Prius|2027|LE|AWD|3230|https://www.toyota.com/prius/2027/features/|model code 1263; site drivetrain AWD not in trims.txt for this trim
+Toyota|Prius|2027|LE|FWD|3097|https://www.toyota.com/prius/2027/features/|model code 1223
+Toyota|Prius|2027|Limited|AWD|3340|https://www.toyota.com/prius/2027/features/|model code 1268; site drivetrain AWD not in trims.txt for this trim
+Toyota|Prius|2027|Limited|FWD|3219|https://www.toyota.com/prius/2027/features/|model code 1227
+Toyota|Prius|2027|Nightshade|AWD|3285|https://www.toyota.com/prius/2027/features/|model code 1266; site drivetrain AWD not in trims.txt for this trim
+Toyota|Prius|2027|Nightshade|FWD|3164|https://www.toyota.com/prius/2027/features/|model code 1216
+Toyota|Prius|2027|XLE|AWD|3285|https://www.toyota.com/prius/2027/features/|model code 1265; site drivetrain AWD not in trims.txt for this trim
+Toyota|Prius|2027|XLE|FWD|3164|https://www.toyota.com/prius/2027/features/|model code 1225
+Toyota|Prius Plug-in Hybrid|2027|Nightshade|FWD|3516|https://www.toyota.com/priuspluginhybrid/2027/features/|model code 1233
+Toyota|Prius Plug-in Hybrid|2027|SE|FWD|3461|https://www.toyota.com/priuspluginhybrid/2027/features/|model code 1235
+Toyota|Prius Plug-in Hybrid|2027|XSE|FWD|3516|https://www.toyota.com/priuspluginhybrid/2027/features/|model code 1237
+Toyota|Prius Plug-in Hybrid|2027|XSE Premium|FWD|3571|https://www.toyota.com/priuspluginhybrid/2027/features/|model code 1239
+Toyota|RAV4|2026|LE|AWD|3715|https://www.toyota.com/rav4/2026/features/|model code 4435; site drivetrain AWD not in trims.txt for this trim
+Toyota|RAV4|2026|LE|FWD|3594|https://www.toyota.com/rav4/2026/features/|model code 4521
+Toyota|RAV4|2026|Limited|AWD|3847|https://www.toyota.com/rav4/2026/features/|model code 4534
+Toyota|RAV4|2026|SE|AWD|3737|https://www.toyota.com/rav4/2026/features/|model code 4524; site drivetrain AWD not in trims.txt for this trim
+Toyota|RAV4|2026|SE|FWD|3616|https://www.toyota.com/rav4/2026/features/|model code 4523
+Toyota|RAV4|2026|Woodland|AWD|3814|https://www.toyota.com/rav4/2026/features/|model code 4437
+Toyota|RAV4|2026|XLE Premium|AWD|3770|https://www.toyota.com/rav4/2026/features/|model code 4444; site drivetrain AWD not in trims.txt for this trim
+Toyota|RAV4|2026|XLE Premium|FWD|3616|https://www.toyota.com/rav4/2026/features/|model code 4527
+Toyota|RAV4|2026|XSE|AWD|3825|https://www.toyota.com/rav4/2026/features/|model code 4530
+Toyota|RAV4 Plug-in Hybrid|2026|GR SPORT|AWD|4430|https://www.toyota.com/rav4pluginhybrid/2026/features/|model code 4538
+Toyota|RAV4 Plug-in Hybrid|2026|SE|AWD|4435|https://www.toyota.com/rav4pluginhybrid/2026/features/|model code 4544
+Toyota|RAV4 Plug-in Hybrid|2026|Woodland|AWD|4500|https://www.toyota.com/rav4pluginhybrid/2026/features/|model code 4537
+Toyota|RAV4 Plug-in Hybrid|2026|XSE|AWD|4540|https://www.toyota.com/rav4pluginhybrid/2026/features/|model code 4550
+Toyota|Sequoia|2026|1794 Edition|4WD|6150|https://www.toyota.com/sequoia/2026/features/|site labels this "Base curb weight (lb.)"; model code 7957
+Toyota|Sequoia|2026|Capstone|4WD|6150|https://www.toyota.com/sequoia/2026/features/|site labels this "Base curb weight (lb.)"; model code 7955
+Toyota|Sequoia|2026|Limited|4WD|6185|https://www.toyota.com/sequoia/2026/features/|value 1 of 2 in site figure "6185/6155" (site does not say what the two figures refer to); site labels this "Base curb weight (lb.)"; model code 7949; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Sequoia|2026|Limited|4WD|6155|https://www.toyota.com/sequoia/2026/features/|value 2 of 2 in site figure "6185/6155" (site does not say what the two figures refer to); site labels this "Base curb weight (lb.)"; model code 7949; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Sequoia|2026|Limited|RWD|5865|https://www.toyota.com/sequoia/2026/features/|value 1 of 2 in site figure "5865/5830" (site does not say what the two figures refer to); site labels this "Base curb weight (lb.)"; model code 7948
+Toyota|Sequoia|2026|Limited|RWD|5830|https://www.toyota.com/sequoia/2026/features/|value 2 of 2 in site figure "5865/5830" (site does not say what the two figures refer to); site labels this "Base curb weight (lb.)"; model code 7948
+Toyota|Sequoia|2026|Platinum|4WD|6150|https://www.toyota.com/sequoia/2026/features/|site labels this "Base curb weight (lb.)"; model code 7951
+Toyota|Sequoia|2026|SR5|4WD|6030|https://www.toyota.com/sequoia/2026/features/|site labels this "Base curb weight (lb.)"; model code 7947; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Sequoia|2026|SR5|RWD|5635|https://www.toyota.com/sequoia/2026/features/|site labels this "Base curb weight (lb.)"; model code 7946
+Toyota|Sequoia|2026|TRD Pro|4WD|6140|https://www.toyota.com/sequoia/2026/features/|site labels this "Base curb weight (lb.)"; model code 7953
+Toyota|Sienna|2026|LE||4610|https://www.toyota.com/sienna/2026/features/|same weight for AWD/FWD; model codes 5402,5403
+Toyota|Sienna|2026|Limited||4725|https://www.toyota.com/sienna/2026/features/|same weight for AWD/FWD; model codes 5414,5415
+Toyota|Sienna|2026|Platinum|AWD|4725|https://www.toyota.com/sienna/2026/features/|model code 5419
+Toyota|Sienna|2026|Woodland Edition|AWD|4625|https://www.toyota.com/sienna/2026/features/|model code 5409
+Toyota|Sienna|2026|XLE||4625|https://www.toyota.com/sienna/2026/features/|same weight for AWD/FWD; model codes 5406,5407,5408
+Toyota|Sienna|2026|XSE||4675|https://www.toyota.com/sienna/2026/features/|same weight for AWD/FWD; model codes 5410,5411
+Toyota|Tacoma|2026|Limited|4WD|4715|https://www.toyota.com/tacoma/2026/features/|site labels this "Base curb weight (lb.)"; model code 7582
+Toyota|Tacoma|2026|Limited i-FORCE MAX|4WD|5170|https://www.toyota.com/tacoma/2026/features/|site labels this "Base curb weight (lb.)"; model code 7534
+Toyota|Tacoma|2026|SR|4WD|4485|https://www.toyota.com/tacoma/2026/features/|manual transmission, bed length 60.3 in., 5 seats; site labels this "Base curb weight (lb.)"; model code 7547; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tacoma|2026|SR|4WD|4375|https://www.toyota.com/tacoma/2026/features/|automatic transmission, bed length 73.5 in., 2 seats; site labels this "Base curb weight (lb.)"; model code 7514; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tacoma|2026|SR|4WD|4505|https://www.toyota.com/tacoma/2026/features/|automatic transmission, bed length 60.3 in., 5 seats; site labels this "Base curb weight (lb.)"; model code 7594; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tacoma|2026|SR|RWD|4145|https://www.toyota.com/tacoma/2026/features/|bed length 73.5 in., 2 seats; site labels this "Base curb weight (lb.)"; model code 7162
+Toyota|Tacoma|2026|SR|RWD|4280|https://www.toyota.com/tacoma/2026/features/|bed length 60.3 in., 5 seats; site labels this "Base curb weight (lb.)"; model code 7186
+Toyota|Tacoma|2026|SR5|4WD|4375|https://www.toyota.com/tacoma/2026/features/|bed length 73.5 in., wheelbase 131.9 in., 2 seats; site labels this "Base curb weight (lb.)"; model code 7558
+Toyota|Tacoma|2026|SR5|4WD|4500|https://www.toyota.com/tacoma/2026/features/|bed length 60.3 in., wheelbase 131.9 in., 5 seats; site labels this "Base curb weight (lb.)"; model code 7540
+Toyota|Tacoma|2026|SR5|4WD|4600|https://www.toyota.com/tacoma/2026/features/|bed length 73.5 in., wheelbase 145.1 in., 5 seats; site labels this "Base curb weight (lb.)"; model code 7570
+Toyota|Tacoma|2026|SR5|RWD|4145|https://www.toyota.com/tacoma/2026/features/|bed length 73.5 in., wheelbase 131.9 in., 2 seats; site labels this "Base curb weight (lb.)"; model code 7126
+Toyota|Tacoma|2026|SR5|RWD|4265|https://www.toyota.com/tacoma/2026/features/|bed length 60.3 in., wheelbase 131.9 in., 5 seats; site labels this "Base curb weight (lb.)"; model code 7146
+Toyota|Tacoma|2026|SR5|RWD|4365|https://www.toyota.com/tacoma/2026/features/|bed length 73.5 in., wheelbase 145.1 in., 5 seats; site labels this "Base curb weight (lb.)"; model code 7170
+Toyota|Tacoma|2026|TRD Off-Road|4WD|4650|https://www.toyota.com/tacoma/2026/features/|manual transmission, bed length 60.3 in., wheelbase 131.9 in.; site labels this "Base curb weight (lb.)"; model code 7545
+Toyota|Tacoma|2026|TRD Off-Road|4WD|4630|https://www.toyota.com/tacoma/2026/features/|automatic transmission, bed length 60.3 in., wheelbase 131.9 in.; site labels this "Base curb weight (lb.)"; model code 7544
+Toyota|Tacoma|2026|TRD Off-Road|4WD|4650|https://www.toyota.com/tacoma/2026/features/|automatic transmission, bed length 73.5 in., wheelbase 145.1 in.; site labels this "Base curb weight (lb.)"; model code 7568
+Toyota|Tacoma|2026|TRD PreRunner|RWD|4200|https://www.toyota.com/tacoma/2026/features/|site labels this "Base curb weight (lb.)"; model code 7166
+Toyota|Tacoma|2026|TRD Pro|4WD|5100|https://www.toyota.com/tacoma/2026/features/|site labels this "Base curb weight (lb.)"; model code 7598
+Toyota|Tacoma|2026|TRD Sport|4WD|4605|https://www.toyota.com/tacoma/2026/features/|manual transmission, bed length 60.3 in., wheelbase 131.9 in.; site labels this "Base curb weight (lb.)"; model code 7543; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tacoma|2026|TRD Sport|4WD|4575|https://www.toyota.com/tacoma/2026/features/|automatic transmission, bed length 60.3 in., wheelbase 131.9 in.; site labels this "Base curb weight (lb.)"; model code 7542; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tacoma|2026|TRD Sport|4WD|4600|https://www.toyota.com/tacoma/2026/features/|automatic transmission, bed length 73.5 in., wheelbase 145.1 in.; site labels this "Base curb weight (lb.)"; model code 7566; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tacoma|2026|TRD Sport|RWD|4330|https://www.toyota.com/tacoma/2026/features/|bed length 60.3 in., wheelbase 131.9 in.; site labels this "Base curb weight (lb.)"; model code 7148
+Toyota|Tacoma|2026|TRD Sport|RWD|4345|https://www.toyota.com/tacoma/2026/features/|bed length 73.5 in., wheelbase 145.1 in.; site labels this "Base curb weight (lb.)"; model code 7172
+Toyota|Tacoma|2026|TRD Sport i-FORCE MAX|4WD|5045|https://www.toyota.com/tacoma/2026/features/|site labels this "Base curb weight (lb.)"; model code 7530
+Toyota|Tacoma i-Force MAX|2026|TRD Off-Road i-FORCE MAX|4WD|5030|https://www.toyota.com/tacoma/2026/features/|site labels this "Base curb weight (lb.)"; model code 7532
+Toyota|Toyota Crown|2027|Limited|AWD|3980|https://www.toyota.com/crown/2027/features/|model code 4020
+Toyota|Toyota Crown|2027|Platinum|AWD|4343|https://www.toyota.com/crown/2027/features/|model code 4030
+Toyota|Toyota Crown|2027|XLE|AWD|3980|https://www.toyota.com/crown/2027/features/|model code 4015
+Toyota|Toyota Crown Signia|2026|Limited|AWD|4210|https://www.toyota.com/crownsignia/2026/features/|model code 4041
+Toyota|Toyota Crown Signia|2026|XLE|AWD|4210|https://www.toyota.com/crownsignia/2026/features/|model code 4040
+Toyota|Tundra|2026|1794 Edition|4WD|5730|https://www.toyota.com/tundra/2026/features/|bed length 65.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8376
+Toyota|Tundra|2026|1794 Edition|4WD|5830|https://www.toyota.com/tundra/2026/features/|bed length 77.6 in., wheelbase 157.7 in.; site labels this "Base curb weight (lb.)"; model code 8386
+Toyota|Tundra|2026|1794 Edition|RWD|5435|https://www.toyota.com/tundra/2026/features/|site labels this "Base curb weight (lb.)"; model code 8276
+Toyota|Tundra|2026|Limited|4WD|5590|https://www.toyota.com/tundra/2026/features/|bed length 65.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8372
+Toyota|Tundra|2026|Limited|4WD|5730|https://www.toyota.com/tundra/2026/features/|bed length 77.6 in., wheelbase 157.7 in.; site labels this "Base curb weight (lb.)"; model code 8382
+Toyota|Tundra|2026|Limited|RWD|5355|https://www.toyota.com/tundra/2026/features/|bed length 65.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8272
+Toyota|Tundra|2026|Limited|RWD|5480|https://www.toyota.com/tundra/2026/features/|bed length 77.6 in., wheelbase 157.7 in.; site labels this "Base curb weight (lb.)"; model code 8282
+Toyota|Tundra|2026|Platinum|4WD|5730|https://www.toyota.com/tundra/2026/features/|bed length 65.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8375; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tundra|2026|Platinum|4WD|5830|https://www.toyota.com/tundra/2026/features/|bed length 77.6 in., wheelbase 157.7 in.; site labels this "Base curb weight (lb.)"; model code 8385; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tundra|2026|Platinum|RWD|5435|https://www.toyota.com/tundra/2026/features/|site labels this "Base curb weight (lb.)"; model code 8275
+Toyota|Tundra|2026|SR|4WD|5490|https://www.toyota.com/tundra/2026/features/|bed length 77.6 in.; site labels this "Base curb weight (lb.)"; model code 8342; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tundra|2026|SR|4WD|5500|https://www.toyota.com/tundra/2026/features/|bed length 65.6 in.; site labels this "Base curb weight (lb.)"; model code 8348; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tundra|2026|SR|RWD|5205|https://www.toyota.com/tundra/2026/features/|bed length 77.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8242
+Toyota|Tundra|2026|SR|RWD|5315|https://www.toyota.com/tundra/2026/features/|bed length 96.5 in., wheelbase 164.6 in.; site labels this "Base curb weight (lb.)"; model code 8245
+Toyota|Tundra|2026|SR|RWD|5270|https://www.toyota.com/tundra/2026/features/|bed length 65.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8248
+Toyota|Tundra|2026|SR5|4WD|5490|https://www.toyota.com/tundra/2026/features/|bed length 77.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8341; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tundra|2026|SR5|4WD|5600|https://www.toyota.com/tundra/2026/features/|bed length 96.5 in., wheelbase 164.6 in.; site labels this "Base curb weight (lb.)"; model code 8346; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tundra|2026|SR5|4WD|5500|https://www.toyota.com/tundra/2026/features/|bed length 65.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8361; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tundra|2026|SR5|4WD|5645|https://www.toyota.com/tundra/2026/features/|bed length 77.7 in., wheelbase 157.7 in.; site labels this "Base curb weight (lb.)"; model code 8381; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tundra|2026|SR5|RWD|5205|https://www.toyota.com/tundra/2026/features/|bed length 77.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8241
+Toyota|Tundra|2026|SR5|RWD|5270|https://www.toyota.com/tundra/2026/features/|bed length 65.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8261
+Toyota|Tundra|2026|SR5|RWD|5390|https://www.toyota.com/tundra/2026/features/|bed length 77.6 in., wheelbase 157.7 in.; site labels this "Base curb weight (lb.)"; model code 8281
+Toyota|Tundra|2026|TRD Pro|4WD|6050|https://www.toyota.com/tundra/2026/features/|site labels this "Base curb weight (lb.)"; model code 8424
+Toyota|Tundra i-FORCE MAX|2026|1794 Edition i-FORCE MAX|4WD|6120|https://www.toyota.com/tundra/2026/features/|bed length 65.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8423
+Toyota|Tundra i-FORCE MAX|2026|1794 Edition i-FORCE MAX|4WD|6205|https://www.toyota.com/tundra/2026/features/|bed length 77.6 in., wheelbase 157.7 in.; site labels this "Base curb weight (lb.)"; model code 8433
+Toyota|Tundra i-FORCE MAX|2026|Capstone|4WD|6230|https://www.toyota.com/tundra/2026/features/|site labels this "Base curb weight (lb.)"; model code 8425
+Toyota|Tundra i-FORCE MAX|2026|Limited i-FORCE MAX|4WD|6010|https://www.toyota.com/tundra/2026/features/|bed length 65.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8421; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tundra i-FORCE MAX|2026|Limited i-FORCE MAX|4WD|6120|https://www.toyota.com/tundra/2026/features/|bed length 77.6 in., wheelbase 157.7 in.; site labels this "Base curb weight (lb.)"; model code 8431; site drivetrain 4WD not in trims.txt for this trim
+Toyota|Tundra i-FORCE MAX|2026|Limited i-FORCE MAX|RWD|5745|https://www.toyota.com/tundra/2026/features/|bed length 65.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8401
+Toyota|Tundra i-FORCE MAX|2026|Limited i-FORCE MAX|RWD|5810|https://www.toyota.com/tundra/2026/features/|bed length 77.6 in., wheelbase 157.7 in.; site labels this "Base curb weight (lb.)"; model code 8411
+Toyota|Tundra i-FORCE MAX|2026|Platinum i-FORCE MAX|4WD|6120|https://www.toyota.com/tundra/2026/features/|bed length 65.6 in., wheelbase 145.7 in.; site labels this "Base curb weight (lb.)"; model code 8422
+Toyota|Tundra i-FORCE MAX|2026|Platinum i-FORCE MAX|4WD|6205|https://www.toyota.com/tundra/2026/features/|bed length 77.6 in., wheelbase 157.7 in.; site labels this "Base curb weight (lb.)"; model code 8432
