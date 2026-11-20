@@ -1,0 +1,54 @@
+# Make|Model|year|Trim|drivetrain (AWD/FWD/RWD/4WD or blank if one weight covers all)|curb weight in lb (integer, blank if not found)|source URL|note
+Subaru|Ascent|2027|Limited 7-Passenger||4587|https://www.subaru.com/vehicles/ascent/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|Ascent|2027|Limited 8-Passenger||4603|https://www.subaru.com/vehicles/ascent/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|Ascent|2027|Limited Bronze Edition 7-Passenger||4587|https://www.subaru.com/vehicles/ascent/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|Ascent|2027|Onyx Edition Touring 7-Passenger||4595|https://www.subaru.com/vehicles/ascent/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|Ascent|2027|Premium 7-Passenger||4450|https://www.subaru.com/vehicles/ascent/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|Ascent|2027|Premium 8-Passenger||4466|https://www.subaru.com/vehicles/ascent/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|Ascent|2027|Touring 7-Passenger||4596|https://www.subaru.com/vehicles/ascent/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|BRZ|2027|Limited||2842|https://www.subaru.com/vehicles/brz/2027/specs-trim.html|site label 'Base curb weight (manual/automatic)': manual transmission value; site lists transmissions: Manual 6-speed, 6-speed Automatic
+Subaru|BRZ|2027|Limited||2886|https://www.subaru.com/vehicles/brz/2027/specs-trim.html|site label 'Base curb weight (manual/automatic)': automatic transmission value; site lists transmissions: Manual 6-speed, 6-speed Automatic
+Subaru|BRZ|2027|tS||2855|https://www.subaru.com/vehicles/brz/2027/specs-trim.html|site label 'Base curb weight (manual/automatic)': manual transmission value; site lists transmissions: Manual 6-speed
+Subaru|Crosstrek|2026|Base||3296|https://www.subaru.com/vehicles/crosstrek/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Crosstrek|2026|Limited||3349|https://www.subaru.com/vehicles/crosstrek/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Crosstrek|2026|Limited Hybrid||3662|https://www.subaru.com/vehicles/crosstrek/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Crosstrek|2026|Premium||3304|https://www.subaru.com/vehicles/crosstrek/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Crosstrek|2026|Sport||3332|https://www.subaru.com/vehicles/crosstrek/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Crosstrek|2026|Sport Hybrid||3677|https://www.subaru.com/vehicles/crosstrek/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Crosstrek|2026|Wilderness||3369|https://www.subaru.com/vehicles/crosstrek/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Forester|2026|Base||3510|https://www.subaru.com/vehicles/forester/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Forester|2026|Limited||3613|https://www.subaru.com/vehicles/forester/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Forester|2026|Limited Hybrid||3911|https://www.subaru.com/vehicles/forester/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Forester|2026|Premium||3569|https://www.subaru.com/vehicles/forester/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Forester|2026|Premium Hybrid||3873|https://www.subaru.com/vehicles/forester/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Forester|2026|Sport||3611|https://www.subaru.com/vehicles/forester/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Forester|2026|Sport Hybrid||3913|https://www.subaru.com/vehicles/forester/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Forester|2026|Touring||3664|https://www.subaru.com/vehicles/forester/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Forester|2026|Touring Hybrid||3946|https://www.subaru.com/vehicles/forester/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Forester|2026|Wilderness||3675|https://www.subaru.com/vehicles/forester/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Impreza|2026|RS||3275|https://www.subaru.com/vehicles/impreza/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Impreza|2026|Sport||3249|https://www.subaru.com/vehicles/impreza/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Outback|2026|Limited||3799|https://www.subaru.com/vehicles/outback/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Outback|2026|Limited XT||3968|https://www.subaru.com/vehicles/outback/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Outback|2026|Premium||3741|https://www.subaru.com/vehicles/outback/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Outback|2026|Touring||3812|https://www.subaru.com/vehicles/outback/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Outback|2026|Touring XT||3982|https://www.subaru.com/vehicles/outback/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Outback|2026|Wilderness||3973|https://www.subaru.com/vehicles/outback/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Solterra|2026|Limited||4475|https://www.subaru.com/vehicles/solterra/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Solterra|2026|Limited XT||4475|https://www.subaru.com/vehicles/solterra/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Solterra|2026|Premium||4395|https://www.subaru.com/vehicles/solterra/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Solterra|2026|Touring XT||4510|https://www.subaru.com/vehicles/solterra/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Solterra|2026|Touring XT Leather||4510|https://www.subaru.com/vehicles/solterra/2026/specs-trim.html|site label 'Base curb weight'
+Subaru|Trailseeker|2027|Limited||4475|https://www.subaru.com/vehicles/trailseeker/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|Trailseeker|2027|Premium||4395|https://www.subaru.com/vehicles/trailseeker/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|Trailseeker|2027|Touring||4510|https://www.subaru.com/vehicles/trailseeker/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|Trailseeker|2027|Touring Leather||4510|https://www.subaru.com/vehicles/trailseeker/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|Uncharted|2027|GT||4480|https://www.subaru.com/vehicles/uncharted/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|Uncharted|2027|Premium FWD|FWD|4145|https://www.subaru.com/vehicles/uncharted/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|Uncharted|2027|Sport||4430|https://www.subaru.com/vehicles/uncharted/2027/specs-trim.html|site label 'Base curb weight'
+Subaru|WRX|2026|Base||3348|https://www.subaru.com/vehicles/wrx/2026/specs-trim.html|site label 'Base curb weight (manual/automatic)': manual transmission value; site lists transmissions: 6-speed manual
+Subaru|WRX|2026|GT||3560|https://www.subaru.com/vehicles/wrx/2026/specs-trim.html|site label 'Base curb weight (manual/automatic)': automatic transmission value; site lists transmissions: Subaru Performance Transmission
+Subaru|WRX|2026|Limited||3419|https://www.subaru.com/vehicles/wrx/2026/specs-trim.html|site label 'Base curb weight (manual/automatic)': manual transmission value; site lists transmissions: 6-speed manual, Subaru Performance Transmission
+Subaru|WRX|2026|Limited||3554|https://www.subaru.com/vehicles/wrx/2026/specs-trim.html|site label 'Base curb weight (manual/automatic)': automatic transmission value; site lists transmissions: 6-speed manual, Subaru Performance Transmission
+Subaru|WRX|2026|Premium||3351|https://www.subaru.com/vehicles/wrx/2026/specs-trim.html|site label 'Base curb weight (manual/automatic)': manual transmission value; site lists transmissions: 6-speed manual
+Subaru|WRX|2026|tS||3430|https://www.subaru.com/vehicles/wrx/2026/specs-trim.html|site label 'Base curb weight (manual/automatic)': manual transmission value; site lists transmissions: 6-speed manual

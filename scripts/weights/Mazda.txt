@@ -1,0 +1,58 @@
+# Make|Model|year|Trim|drivetrain (AWD/FWD/RWD/4WD or blank if one weight covers all)|curb weight in lb (integer, blank if not found)|source URL|note
+Mazda|CX-30|2026|2.5 S|AWD|3395|https://www.mazdausa.com/vehicles/cx-30|site: 2026 Mazda CX-30 – Compact Crossover SUV; vehicle code 26C3025S
+Mazda|CX-30|2026|2.5 S Select Sport|AWD|3395|https://www.mazdausa.com/vehicles/cx-30|site: 2026 Mazda CX-30 – Compact Crossover SUV; vehicle code 26C30SES
+Mazda|CX-30|2026|2.5 S Preferred|AWD|3395|https://www.mazdausa.com/vehicles/cx-30|site: 2026 Mazda CX-30 – Compact Crossover SUV; vehicle code 26C30PF
+Mazda|CX-30|2026|2.5 S Aire Edition|AWD|3395|https://www.mazdausa.com/vehicles/cx-30|site: 2026 Mazda CX-30 – Compact Crossover SUV; vehicle code 26C30AE
+Mazda|CX-30|2026|2.5 S Carbon Edition|AWD|3395|https://www.mazdausa.com/vehicles/cx-30|site: 2026 Mazda CX-30 – Compact Crossover SUV; vehicle code 26C30CE
+Mazda|CX-30|2026|2.5 S Premium|AWD|3395|https://www.mazdausa.com/vehicles/cx-30|site: 2026 Mazda CX-30 – Compact Crossover SUV; vehicle code 26C30PR
+Mazda|CX-30|2026|2.5 Turbo Aire Edition|AWD|3527|https://www.mazdausa.com/vehicles/cx-30|site: 2026 Mazda CX-30 – Compact Crossover SUV; vehicle code 26C30AET
+Mazda|CX-30|2026|2.5 Turbo Premium Plus|AWD|3527|https://www.mazdausa.com/vehicles/cx-30|site: 2026 Mazda CX-30 – Compact Crossover SUV; vehicle code 26C30PPT
+Mazda|CX-5|2026|2.5 S|||https://www.mazdausa.com/vehicles/cx-5|site shows model year 2027 only, not 2026; weight not recorded
+Mazda|CX-5|2026|2.5 S Preferred|||https://www.mazdausa.com/vehicles/cx-5|site shows model year 2027 only, not 2026; weight not recorded
+Mazda|CX-5|2026|2.5 S Premium|||https://www.mazdausa.com/vehicles/cx-5|site shows model year 2027 only, not 2026; weight not recorded
+Mazda|CX-5|2026|2.5 S Premium Plus|||https://www.mazdausa.com/vehicles/cx-5|site shows model year 2027 only, not 2026; weight not recorded
+Mazda|CX-5|2026|2.5 S Select|||https://www.mazdausa.com/vehicles/cx-5|site shows model year 2027 only, not 2026; weight not recorded
+Mazda|CX-50|2026|2.5 S Select|AWD|3741|https://www.mazdausa.com/vehicles/cx-50|site: 2026 Mazda CX-50 Crossover SUV; vehicle code 26C50SE
+Mazda|CX-50|2026|2.5 S Preferred|AWD|3741|https://www.mazdausa.com/vehicles/cx-50|site: 2026 Mazda CX-50 Crossover SUV; vehicle code 26C50PF
+Mazda|CX-50|2026|2.5 S Meridian Edition|AWD|3741|https://www.mazdausa.com/vehicles/cx-50|site: 2026 Mazda CX-50 Crossover SUV; vehicle code 26C50MR
+Mazda|CX-50|2026|2.5 S Premium|AWD|3741|https://www.mazdausa.com/vehicles/cx-50|site: 2026 Mazda CX-50 Crossover SUV; vehicle code 26C50PR
+Mazda|CX-50|2026|2.5 Turbo|AWD|3915|https://www.mazdausa.com/vehicles/cx-50|site: 2026 Mazda CX-50 Crossover SUV; vehicle code 26C5025T
+Mazda|CX-50|2026|2.5 Turbo Meridian Edition|AWD|3915|https://www.mazdausa.com/vehicles/cx-50|site: 2026 Mazda CX-50 Crossover SUV; vehicle code 26C50MRT
+Mazda|CX-50|2026|2.5 Turbo Premium Plus|AWD|3915|https://www.mazdausa.com/vehicles/cx-50|site: 2026 Mazda CX-50 Crossover SUV; vehicle code 26C50PPT
+Mazda|CX-50|2026|Hybrid Preferred|AWD|4008|https://www.mazdausa.com/vehicles/cx-50-hybrid|site: 2026 Mazda CX-50 Hybrid Crossover SUV; vehicle code 2650HPF
+Mazda|CX-50|2026|Hybrid Premium|AWD|4008|https://www.mazdausa.com/vehicles/cx-50-hybrid|site: 2026 Mazda CX-50 Hybrid Crossover SUV; vehicle code 2650HPR
+Mazda|CX-50|2026|Hybrid Premium Plus|AWD|4008|https://www.mazdausa.com/vehicles/cx-50-hybrid|site: 2026 Mazda CX-50 Hybrid Crossover SUV; vehicle code 2650HPP
+Mazda|CX-70|2026|3.3 Turbo Preferred|AWD|4709|https://www.mazdausa.com/vehicles/cx-70|site: 2026 Mazda CX-70 Mild Hybrid Inline 6 2-Row SUV; vehicle code 26C70PF
+Mazda|CX-70|2026|3.3 Turbo Premium|AWD|4709|https://www.mazdausa.com/vehicles/cx-70|site: 2026 Mazda CX-70 Mild Hybrid Inline 6 2-Row SUV; vehicle code 26C70PR
+Mazda|CX-70|2026|3.3 Turbo Premium Plus|AWD|4709|https://www.mazdausa.com/vehicles/cx-70|site: 2026 Mazda CX-70 Mild Hybrid Inline 6 2-Row SUV; vehicle code 26C70PP
+Mazda|CX-70|2026|3.3 Turbo S Premium|AWD|4863|https://www.mazdausa.com/vehicles/cx-70|site: 2026 Mazda CX-70 Mild Hybrid Inline 6 2-Row SUV; vehicle code 26C70SPR
+Mazda|CX-70|2026|3.3 Turbo S Premium Plus|AWD|4863|https://www.mazdausa.com/vehicles/cx-70|site: 2026 Mazda CX-70 Mild Hybrid Inline 6 2-Row SUV; vehicle code 26C70SPP
+Mazda|CX-70|2026|PHEV SC|||https://www.mazdausa.com/vehicles/cx-70-phev|no CX-70 PHEV page on site: /vehicles/cx-70-phev redirects (301) to the homepage and /vehicles/cx-70 lists only 3.3 Turbo trims
+Mazda|CX-70|2026|PHEV SC Plus|||https://www.mazdausa.com/vehicles/cx-70-phev|no CX-70 PHEV page on site: /vehicles/cx-70-phev redirects (301) to the homepage and /vehicles/cx-70 lists only 3.3 Turbo trims
+Mazda|CX-90|2026|PHEV Preferred|AWD|5243|https://www.mazdausa.com/vehicles/cx-90-phev|site: 2026 Mazda CX-90 Plug-in Hybrid (PHEV) 3-Row SUV; vehicle code 26C9PPF
+Mazda|CX-90|2026|PHEV Premium Sport|AWD|5243|https://www.mazdausa.com/vehicles/cx-90-phev|site: 2026 Mazda CX-90 Plug-in Hybrid (PHEV) 3-Row SUV; vehicle code 26C9PPR
+Mazda|CX-90|2026|PHEV Premium Plus|AWD|5243|https://www.mazdausa.com/vehicles/cx-90-phev|site: 2026 Mazda CX-90 Plug-in Hybrid (PHEV) 3-Row SUV; vehicle code 26C9PPP
+Mazda|CX-90|2026|3.3 Turbo Preferred|||https://www.mazdausa.com/vehicles/cx-90|site shows model year 2027 only, not 2026; weight not recorded
+Mazda|CX-90|2026|3.3 Turbo Premium Plus|||https://www.mazdausa.com/vehicles/cx-90|site shows model year 2027 only, not 2026; weight not recorded
+Mazda|CX-90|2026|3.3 Turbo Premium Sport|||https://www.mazdausa.com/vehicles/cx-90|site shows model year 2027 only, not 2026; weight not recorded
+Mazda|CX-90|2026|3.3 Turbo S Premium Plus|||https://www.mazdausa.com/vehicles/cx-90|site shows model year 2027 only, not 2026; weight not recorded
+Mazda|CX-90|2026|3.3 Turbo S Premium Sport|||https://www.mazdausa.com/vehicles/cx-90|site shows model year 2027 only, not 2026; weight not recorded
+Mazda|CX-90|2026|3.3 Turbo Select|||https://www.mazdausa.com/vehicles/cx-90|site shows model year 2027 only, not 2026; weight not recorded
+Mazda|Mazda3|2026|2.5 S|FWD|3111|https://www.mazdausa.com/vehicles/mazda3-sedan|site: 2026 Mazda3 Sedan – Premium AWD Compact Car; body: Sedan; variant as stated by site: FWD; vehicle code 26M3S25S
+Mazda|Mazda3|2026|2.5 S Select Sport|FWD|3111|https://www.mazdausa.com/vehicles/mazda3-sedan|site: 2026 Mazda3 Sedan – Premium AWD Compact Car; body: Sedan; variant as stated by site: FWD; vehicle code 26M3SSES
+Mazda|Mazda3|2026|2.5 S Preferred|FWD|3111|https://www.mazdausa.com/vehicles/mazda3-sedan|site: 2026 Mazda3 Sedan – Premium AWD Compact Car; body: Sedan; variant as stated by site: FWD; vehicle code 26M3SPF
+Mazda|Mazda3|2026|2.5 S Carbon Edition|AWD|3283|https://www.mazdausa.com/vehicles/mazda3-sedan|site: 2026 Mazda3 Sedan – Premium AWD Compact Car; body: Sedan; variant as stated by site: AWD; vehicle code 26M3SCE
+Mazda|Mazda3|2026|2.5 Turbo Premium Plus|AWD|3413|https://www.mazdausa.com/vehicles/mazda3-sedan|site: 2026 Mazda3 Sedan – Premium AWD Compact Car; body: Sedan; variant as stated by site: AWD; vehicle code 26M3SPPT
+Mazda|Mazda3|2026|2.5 S|FWD|3117|https://www.mazdausa.com/vehicles/mazda3-hatchback|site: 2026 Mazda3 Hatchback – Premium AWD Compact Car; body: Hatchback; variant as stated by site: FWD; vehicle code 26M3H25S
+Mazda|Mazda3|2026|2.5 S Select Sport|FWD|3117|https://www.mazdausa.com/vehicles/mazda3-hatchback|site: 2026 Mazda3 Hatchback – Premium AWD Compact Car; body: Hatchback; variant as stated by site: FWD; vehicle code 26M3HSES
+Mazda|Mazda3|2026|2.5 S Preferred|FWD|3117|https://www.mazdausa.com/vehicles/mazda3-hatchback|site: 2026 Mazda3 Hatchback – Premium AWD Compact Car; body: Hatchback; variant as stated by site: FWD; vehicle code 26M3HPF
+Mazda|Mazda3|2026|2.5 S Carbon Edition|AWD|3247|https://www.mazdausa.com/vehicles/mazda3-hatchback|site: 2026 Mazda3 Hatchback – Premium AWD Compact Car; body: Hatchback; variant as stated by site: AWD; vehicle code 26M3HCE
+Mazda|Mazda3|2026|2.5 S Premium|FWD|3058|https://www.mazdausa.com/vehicles/mazda3-hatchback|site: 2026 Mazda3 Hatchback – Premium AWD Compact Car; body: Hatchback; variant as stated by site: MT FWD; site lists this trim only as Hatchback with manual transmission; vehicle code 26M3HPR
+Mazda|Mazda3|2026|2.5 Turbo Premium Plus|AWD|3417|https://www.mazdausa.com/vehicles/mazda3-hatchback|site: 2026 Mazda3 Hatchback – Premium AWD Compact Car; body: Hatchback; variant as stated by site: AT AWD; vehicle code 26M3HPPT
+Mazda|MX-5 Miata|2026|Sport|RWD|2366|https://www.mazdausa.com/vehicles/mx-5-miata|site: 2026 Mazda MX-5 Miata Convertible Roadster; body: soft top; variant as stated by site: MT; vehicle code 26MX5SP
+Mazda|MX-5 Miata|2026|Club|RWD|2366|https://www.mazdausa.com/vehicles/mx-5-miata|site: 2026 Mazda MX-5 Miata Convertible Roadster; body: soft top; variant as stated by site: MT; vehicle code 26MX5CL
+Mazda|MX-5 Miata|2026|Grand Touring|RWD|2366|https://www.mazdausa.com/vehicles/mx-5-miata|site: 2026 Mazda MX-5 Miata Convertible Roadster; body: soft top; variant as stated by site: MT; vehicle code 26MX5GT
+Mazda|MX-5 Miata|2026|Grand Touring|RWD|2405|https://www.mazdausa.com/vehicles/mx-5-miata|site: 2026 Mazda MX-5 Miata Convertible Roadster; body: soft top; variant as stated by site: AT; vehicle code 26MX5GT
+Mazda|MX-5 Miata|2026|Club|RWD|2467|https://www.mazdausa.com/vehicles/mx-5-miata-rf|site: 2026 Mazda MX-5 Miata RF Hard-Top Convertible; body: RF retractable hardtop; variant as stated by site: MT; vehicle code 26MXRCL
+Mazda|MX-5 Miata|2026|Grand Touring|RWD|2469|https://www.mazdausa.com/vehicles/mx-5-miata-rf|site: 2026 Mazda MX-5 Miata RF Hard-Top Convertible; body: RF retractable hardtop; variant as stated by site: MT; vehicle code 26MXRGT
+Mazda|MX-5 Miata|2026|Grand Touring|RWD|2513|https://www.mazdausa.com/vehicles/mx-5-miata-rf|site: 2026 Mazda MX-5 Miata RF Hard-Top Convertible; body: RF retractable hardtop; variant as stated by site: AT; vehicle code 26MXRGT
