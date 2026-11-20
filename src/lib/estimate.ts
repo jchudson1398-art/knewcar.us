@@ -32,6 +32,14 @@ export interface EstimateInput {
   hasPlateToTransfer: boolean;
   /** New York only: the county is in the Metropolitan Commuter Transportation District. */
   nyMctd: boolean;
+  /** Curb weight in pounds, or null when unknown. */
+  weightLb: number | null;
+  /** How sure the weight is: read from the manufacturer, from a third party or a range, or typed by the shopper. */
+  weightBasis: "manufacturer" | "approximate" | "shopper";
+  /** Pickup or van: several states register these by a different rule than cars. */
+  truck: boolean;
+  /** Sedan, hatchback, coupe or convertible. */
+  passengerCar: boolean;
 }
 
 export interface Estimate {
@@ -158,15 +166,23 @@ export function estimate(input: EstimateInput, fees: StateFees): Estimate {
 
 export interface RatesFile {
   CA: { fees: { registration: { amount: number }; chp: { amount: number }; vlfPercentOfPrice: number; transportationImprovementFee: { valueFrom: number; valueTo: number | null; fee: number }[]; smogAbatement: { amount: number }; tireFeePerTire: number; tiresCharged: number; plate: number } };
-  NY: { fees: { title: number; plates: number; tireFeePerTire: number; tiresCharged: number; mctdFeeTwoYears: number; countyUseTaxTwoYears: { county: string; amount: number; amountOver3500lb: number }[] } };
-  FL: { fees: { title: number; newPlate: number; initialRegistration: number; tempTag: number; tireFeePerTire: number } };
-  VA: { fees: { titleDmv: number; titleCode: number; highwayUseFeeEv: number } };
+  NY: { fees: { title: number; plates: number; tireFeePerTire: number; tiresCharged: number; mctdFeeTwoYears: number; registrationByWeight: WeightBand<{ twoYearFee: number }>[]; countyUseTaxTwoYears: { county: string; amount: number; amountOver3500lb: number }[] } };
+  FL: { fees: { title: number; newPlate: number; initialRegistration: number; tempTag: number; tireFeePerTire: number; registrationByWeight: WeightBand<{ annualFee: number }>[] } };
+  VA: { fees: { titleDmv: number; titleCode: number; highwayUseFeeEv: number; registrationByWeight: WeightBand<{ annualFee: number }>[] } };
+}
+
+type WeightBand<T> = { lbFrom: number; lbTo: number | null } & T;
+function band<T>(bands: WeightBand<T>[], lb: number): WeightBand<T> | undefined {
+  return bands.find((b) => lb >= b.lbFrom && (b.lbTo === null || lb <= b.lbTo));
 }
 
 export function feesFor(input: EstimateInput, data: RatesFile, county: string | null): StateFees {
   const fixed: StateFees["fixed"] = [];
   const notIncluded: StateFees["notIncluded"] = [];
   const dollars = input.price / 100;
+  const lb = input.weightLb;
+  const weightTag: Tag = input.weightBasis === "manufacturer" ? "verified" : "estimate";
+  const weightText = lb === null ? "" : `${input.weightBasis === "approximate" ? "~" : ""}${lb.toLocaleString("en-US")} lb${input.weightBasis === "shopper" ? ", as you entered" : ""}`;
 
   if (input.state === "TX") {
     fixed.push({ label: "Title and registration", amount: 300, tag: "estimate", note: "Planning estimate for both together." });
@@ -191,7 +207,9 @@ export function feesFor(input: EstimateInput, data: RatesFile, county: string | 
   if (input.state === "VA") {
     const f = data.VA.fees;
     notIncluded.push({ label: "Title fee", note: `The DMV lists $${f.titleDmv}; the Code of Virginia lists $${f.titleCode}.` });
-    notIncluded.push({ label: "Registration fee", note: "$30.75 or $35.75 a year, by vehicle weight. Higher for heavier vehicles and some pickups." });
+    const vaBand = lb !== null && !input.truck ? band(f.registrationByWeight, lb) : undefined;
+    if (vaBand) fixed.push({ label: "Registration fee, first year", amount: vaBand.annualFee, tag: weightTag, note: `By weight: ${weightText}.` });
+    else notIncluded.push({ label: "Registration fee", note: input.truck ? "Pickups and vans are charged by gross weight, which we do not have." : "$30.75 or $35.75 a year, by vehicle weight. Higher above 6,500 lb. Enter the weight to include it." });
     if (input.electric) fixed.push({ label: "Highway use fee, electric vehicle", amount: f.highwayUseFeeEv, note: "Yearly. This amount is in effect through June 30, 2027." });
     else notIncluded.push({ label: "Highway use fee", note: "Charged on fuel-efficient vehicles (25 MPG and up), by MPG." });
     notIncluded.push({ label: "Local vehicle license fee", note: "Set by your county or city." });
@@ -203,9 +221,12 @@ export function feesFor(input: EstimateInput, data: RatesFile, county: string | 
     fixed.push({ label: "License plates", amount: f.plates });
     fixed.push({ label: "Waste tire fee", amount: f.tireFeePerTire * f.tiresCharged, tag: "estimate", note: `$${f.tireFeePerTire.toFixed(2)} a tire, counting four tires and a spare.` });
     if (input.nyMctd) fixed.push({ label: "Commuter transportation district fee", amount: f.mctdFeeTwoYears, note: "For two years." });
-    notIncluded.push({ label: "Registration fee", note: "$26 to $140 for two years, by vehicle weight." });
+    const nyBand = lb !== null && !input.truck ? band(f.registrationByWeight, lb) : undefined;
+    if (nyBand) fixed.push({ label: "Registration fee, two years", amount: input.electric ? Math.max(nyBand.twoYearFee, 32.5) : nyBand.twoYearFee, tag: weightTag, note: `By weight: ${weightText}. The minimum is $32.50 for a vehicle with six or more cylinders.` });
+    else notIncluded.push({ label: "Registration fee", note: input.truck ? "By weight. Pickups and vans can be registered in a different class, which we have not confirmed." : "$26 to $140 for two years, by vehicle weight. Enter the weight to include it." });
     const use = county ? f.countyUseTaxTwoYears.find((c) => c.county === county) : undefined;
-    if (use) notIncluded.push({ label: "County vehicle use tax", note: use.amount === use.amountOver3500lb ? `$${use.amount} for two years.` : `$${use.amount} or $${use.amountOver3500lb} for two years, by vehicle weight.` });
+    if (use && lb !== null) fixed.push({ label: "County vehicle use tax, two years", amount: lb > 3500 ? use.amountOver3500lb : use.amount, tag: weightTag, note: `By weight: ${weightText}.` });
+    else if (use) notIncluded.push({ label: "County vehicle use tax", note: use.amount === use.amountOver3500lb ? `$${use.amount} for two years.` : `$${use.amount} or $${use.amountOver3500lb} for two years, by vehicle weight.` });
     else if (!county) notIncluded.push({ label: "County vehicle use tax", note: "Up to $60 for two years in some counties. Choose your county." });
     notIncluded.push({ label: "Inspection", note: "Up to $10." });
   }
@@ -218,7 +239,9 @@ export function feesFor(input: EstimateInput, data: RatesFile, county: string | 
       fixed.push({ label: "New license plate", amount: f.newPlate });
     }
     fixed.push({ label: "Temporary tag", amount: f.tempTag });
-    notIncluded.push({ label: "Registration fee", note: "$27.60 to $45.60 a year, by vehicle weight." });
+    const flBand = lb !== null && input.passengerCar ? band(f.registrationByWeight, lb) : undefined;
+    if (flBand) fixed.push({ label: "Registration fee, first year", amount: flBand.annualFee, tag: weightTag, note: `By weight: ${weightText}. Passenger car rate.` });
+    else notIncluded.push({ label: "Registration fee", note: lb !== null && !input.passengerCar ? "By weight. We have not confirmed whether Florida registers an SUV, van or pickup at the car rate or the truck rate. A car pays $27.60 to $45.60 a year." : "$27.60 to $45.60 a year for a car, by vehicle weight. Enter the weight to include it." });
     notIncluded.push({ label: "Tire fee", note: `$${f.tireFeePerTire} for each new tire.` });
   }
 

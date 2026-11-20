@@ -14,7 +14,8 @@ export interface Car {
   /** Model years in the app, newest first. */
   years: number[];
   /** Trims of the newest model year, with the drivetrains each comes in when the catalog records them. */
-  trims: { name: string; drive: string[]; msrp: number | null; photo?: boolean }[];
+  /** lbMin/lbMax: lightest and heaviest published curb weight in pounds. lbThird: from a third-party source. */
+  trims: { name: string; drive: string[]; msrp: number | null; photo?: boolean; lbMin?: number; lbMax?: number; lbThird?: boolean }[];
   /** Lowest and highest verified MSRP across those trims (destination excluded); null when none is verified. */
   msrpFrom: number | null;
   msrpTo: number | null;

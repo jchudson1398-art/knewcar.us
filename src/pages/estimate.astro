@@ -46,6 +46,7 @@ const states = Object.entries(STATE_NAMES).sort((a, b) => a[1].localeCompare(b[1
         <label>Loan length
           <select name="term"><option value="36">36 months</option><option value="48">48 months</option><option value="60" selected>60 months</option><option value="72">72 months</option><option value="84">84 months</option></select>
         </label>
+        <label>Vehicle weight in pounds (for registration) <input name="weight" inputmode="numeric" placeholder="Filled in from the trim when we have it" /></label>
       </div>
       <label class="check" data-electric-wrap><input type="checkbox" name="electric" /> This is an electric vehicle</label>
       <label class="check" data-plate-wrap hidden><input type="checkbox" name="plate" /> I have a Florida plate to transfer</label>
@@ -155,6 +156,11 @@ const states = Object.entries(STATE_NAMES).sort((a, b) => a[1].localeCompare(b[1
     const skipped = q("[data-skipped]");
     const notes = q("[data-notes]");
 
+    let truck = false;
+    let passengerCar = false;
+    let weightBasis: "manufacturer" | "approximate" | "shopper" = "shopper";
+    f("weight").addEventListener("input", () => { weightBasis = "shopper"; });
+
     const key = new URLSearchParams(location.search).get("car");
     if (key) {
       const cars: Car[] = await (await fetch("/catalog.json")).json();
@@ -166,11 +172,20 @@ const states = Object.entries(STATE_NAMES).sort((a, b) => a[1].localeCompare(b[1
         if (car.fuel === "Electric") f("electric").checked = true;
         const sel = f("trim");
         const priced = car.trims.filter((t) => t.msrp);
+        truck = car.type === "Truck" || car.type === "Van";
+        passengerCar = ["Sedan", "Hatchback", "Coupe", "Convertible"].includes(car.type ?? "");
         if (priced.length) {
           sel.disabled = false;
-          sel.replaceChildren(...priced.map((t) => new Option(`${t.name} · $${t.msrp!.toLocaleString("en-US")} MSRP`, String(t.msrp))));
-          f("price").value = sel.value;
-          sel.addEventListener("change", () => { f("price").value = sel.value; calc(); });
+          sel.replaceChildren(...priced.map((t, i) => new Option(`${t.name} · $${t.msrp!.toLocaleString("en-US")} MSRP`, String(i))));
+          // Price and curb weight follow the trim. The heaviest published weight is used, so a fee is never understated.
+          const pick = () => {
+            const t = priced[Number(sel.value)];
+            f("price").value = String(t.msrp);
+            f("weight").value = t.lbMax ? String(t.lbMax) : "";
+            weightBasis = t.lbMax && !t.lbThird && t.lbMin === t.lbMax ? "manufacturer" : "approximate";
+          };
+          pick();
+          sel.addEventListener("change", () => { pick(); calc(); });
         }
       }
     }
@@ -219,6 +234,7 @@ const states = Object.entries(STATE_NAMES).sort((a, b) => a[1].localeCompare(b[1
       const trade = cents(f("trade").value) ?? 0;
       const payoff = cents(f("payoff").value) ?? 0;
       const down = cents(f("down").value) ?? 0;
+      const weight = Math.round(Number(f("weight").value.replace(/[,\s]/g, "")));
       const input = {
         state: code,
         price,
@@ -230,6 +246,10 @@ const states = Object.entries(STATE_NAMES).sort((a, b) => a[1].localeCompare(b[1
         electric: f("electric").checked,
         hasPlateToTransfer: f("plate").checked,
         nyMctd: !!place?.mctd,
+        weightLb: weight && weight >= 1000 && weight <= 15000 ? weight : null,
+        weightBasis,
+        truck,
+        passengerCar,
       };
       const e = estimate(input, feesFor(input, stateRates as unknown as RatesFile, place?.county ?? null));
       const equity = trade - payoff;

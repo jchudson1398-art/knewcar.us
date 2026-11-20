@@ -55,7 +55,18 @@ for key, t in trims.items():
     known = [x for x in prices if x]
     t["msrpFrom"], t["msrpTo"] = (min(known), max(known)) if known else (None, None)
 
-import os
+import os, glob
+# Curb weight per trim from scripts/weights/*.txt (manufacturer sites; third-party where the manufacturer does not
+# publish one). A trim can have several published weights (drivetrain, cab, bed): the lightest and heaviest are kept.
+weights = {}
+for path in sorted(glob.glob("scripts/weights/*.txt")):
+    for l in open(path).read().strip().split("\n"):
+        if l.startswith("#") or not l.strip(): continue
+        mk, md, _yr, trim, _drive, lb, _url, note = l.split("|", 7)
+        if not lb: continue
+        w = weights.setdefault((mk, md, trim), {"lbs": [], "third": False})
+        w["lbs"].append(int(lb))
+        w["third"] = w["third"] or note.startswith("THIRD_PARTY")
 out = []
 for (make, model, year, _bs, ntrims, *_), cat in zip(rows, cats):
     display = model[len(make) + 1:] if model.lower().startswith(make.lower() + " ") else model
@@ -63,6 +74,8 @@ for (make, model, year, _bs, ntrims, *_), cat in zip(rows, cats):
     # A trim has its own photo when scripts/fetch-trim-photos.py saved one for it.
     for trim in trims[(make, model)]["trims"]:
         trim["photo"] = os.path.exists(f"public/img/trims/{key}--{slug(trim['name'])}.webp")
+        w = weights.get((make, model, trim["name"]))
+        if w: trim["lbMin"], trim["lbMax"], trim["lbThird"] = min(w["lbs"]), max(w["lbs"]), w["third"]
     out.append({"key": key, "make": make, "model": display, "year": int(year),
                 "type": cat, "fuel": fuel(make, model), **trims[(make, model)]})
 json.dump(out, open("src/data/catalog.json", "w"), indent=1)

@@ -62,7 +62,10 @@
      "FWD"
     ],
     "msrp": 45000,
-    "photo": true
+    "photo": true,
+    "lbMin": 5009,
+    "lbMax": 5163,
+    "lbThird": false
    },
    {
     "name": "RS",
@@ -71,7 +74,10 @@
      "FWD"
     ],
     "msrp": 50800,
-    "photo": true
+    "photo": true,
+    "lbMin": 5084,
+    "lbMax": 5236,
+    "lbThird": false
    },
    {
     "name": "SS",
@@ -79,7 +85,10 @@
      "AWD"
     ],
     "msrp": 60700,
-    "photo": true
+    "photo": true,
+    "lbMin": 5730,
+    "lbMax": 5730,
+    "lbThird": false
    }
   ],
   "msrpFrom": 45000,
@@ -103,7 +112,10 @@
      "FWD"
     ],
     "msrp": 27600,
-    "photo": true
+    "photo": true,
+    "lbMin": 3776,
+    "lbMax": 3776,
+    "lbThird": false
    },
    {
     "name": "RS",
@@ -111,7 +123,10 @@
      "FWD"
     ],
     "msrp": 31600,
-    "photo": true
+    "photo": true,
+    "lbMin": 3807,
+    "lbMax": 3807,
+    "lbThird": false
    }
   ],
   "msrpFrom": 27600,
@@ -135,7 +150,10 @@
      "4WD"
     ],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 4204,
+    "lbMax": 4204,
+    "lbThird": false
    },
    {
     "name": "LT",
@@ -143,7 +161,10 @@
      "4WD"
     ],
     "msrp": 36000,
-    "photo": true
+    "photo": true,
+    "lbMin": 4204,
+    "lbMax": 4204,
+    "lbThird": false
    },
    {
     "name": "Trail Boss",
@@ -151,7 +172,10 @@
      "4WD"
     ],
     "msrp": 40500,
-    "photo": true
+    "photo": true,
+    "lbMin": 4524,
+    "lbMax": 4524,
+    "lbThird": false
    },
    {
     "name": "WT",
@@ -159,7 +183,10 @@
      "4WD"
     ],
     "msrp": 32400,
-    "photo": true
+    "photo": true,
+    "lbMin": 4204,
+    "lbMax": 4204,
+    "lbThird": false
    },
    {
     "name": "Z71",
@@ -167,7 +194,10 @@
      "4WD"
     ],
     "msrp": 44600,
-    "photo": true
+    "photo": true,
+    "lbMin": 4517,
+    "lbMax": 4517,
+    "lbThird": false
    },
    {
     "name": "ZR2",
@@ -175,7 +205,10 @@
      "4WD"
     ],
     "msrp": 50700,
-    "photo": true
+    "photo": true,
+    "lbMin": 4805,
+    "lbMax": 4805,
+    "lbThird": false
    }
   ],
   "msrpFrom": 32400,
@@ -197,13 +230,19 @@
     "name": "Convertible",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 3619,
+    "lbMax": 3619,
+    "lbThird": false
    },
    {
     "name": "Coupe",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 3520,
+    "lbMax": 3520,
+    "lbThird": false
    }
   ],
   "msrpFrom": null,
@@ -226,13 +265,19 @@
     "name": "Convertible",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 3491,
+    "lbMax": 3491,
+    "lbThird": false
    },
    {
     "name": "Coupe",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 3392,
+    "lbMax": 3392,
+    "lbThird": false
    }
   ],
   "msrpFrom": null,
@@ -258,7 +303,10 @@
      "FWD"
     ],
     "msrp": 34200,
-    "photo": true
+    "photo": true,
+    "lbMin": 3452,
+    "lbMax": 3607,
+    "lbThird": false
    },
    {
     "name": "LT",
@@ -267,7 +315,10 @@
      "FWD"
     ],
     "msrp": 29300,
-    "photo": true
+    "photo": true,
+    "lbMin": 3428,
+    "lbMax": 3583,
+    "lbThird": false
    },
    {
     "name": "RS",
@@ -276,7 +327,10 @@
      "FWD"
     ],
     "msrp": 34200,
-    "photo": true
+    "photo": true,
+    "lbMin": 3474,
+    "lbMax": 3629,
+    "lbThird": false
    }
   ],
   "msrpFrom": 29300,
@@ -342,7 +396,10 @@
     "name": "WT",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5104,
+    "lbMax": 5329,
+    "lbThird": false
    }
   ],
   "msrpFrom": null,
@@ -364,13 +421,19 @@
     "name": "LS",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5844,
+    "lbMax": 6173,
+    "lbThird": false
    },
    {
     "name": "LT",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5844,
+    "lbMax": 6173,
+    "lbThird": false
    }
   ],
   "msrpFrom": null,
@@ -462,37 +525,55 @@
     "name": "Custom",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 6391,
+    "lbMax": 6918,
+    "lbThird": false
    },
    {
     "name": "High Country",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 6825,
+    "lbMax": 6918,
+    "lbThird": false
    },
    {
     "name": "LT",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 6421,
+    "lbMax": 6918,
+    "lbThird": false
    },
    {
     "name": "LTZ",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 6825,
+    "lbMax": 6918,
+    "lbThird": false
    },
    {
     "name": "WT",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 6074,
+    "lbMax": 6918,
+    "lbThird": false
    },
    {
     "name": "ZR2",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 6825,
+    "lbMax": 6825,
+    "lbThird": false
    }
   ],
   "msrpFrom": null,
@@ -514,25 +595,37 @@
     "name": "High Country",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 6960,
+    "lbMax": 7060,
+    "lbThird": false
    },
    {
     "name": "LT",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 6586,
+    "lbMax": 7060,
+    "lbThird": false
    },
    {
     "name": "LTZ",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 6960,
+    "lbMax": 7060,
+    "lbThird": false
    },
    {
     "name": "WT",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 6211,
+    "lbMax": 7060,
+    "lbThird": false
    }
   ],
   "msrpFrom": null,
@@ -635,37 +728,55 @@
     "name": "High Country",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5723,
+    "lbMax": 5723,
+    "lbThird": false
    },
    {
     "name": "LS",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5530,
+    "lbMax": 5723,
+    "lbThird": false
    },
    {
     "name": "LT",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5530,
+    "lbMax": 5723,
+    "lbThird": false
    },
    {
     "name": "Premier",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5530,
+    "lbMax": 5723,
+    "lbThird": false
    },
    {
     "name": "RST",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5530,
+    "lbMax": 5723,
+    "lbThird": false
    },
    {
     "name": "Z71",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5723,
+    "lbMax": 5723,
+    "lbThird": false
    }
   ],
   "msrpFrom": null,
@@ -688,37 +799,55 @@
     "name": "High Country",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5580,
+    "lbMax": 5580,
+    "lbThird": false
    },
    {
     "name": "LS",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5383,
+    "lbMax": 5580,
+    "lbThird": false
    },
    {
     "name": "LT",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5383,
+    "lbMax": 5580,
+    "lbThird": false
    },
    {
     "name": "Premier",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5383,
+    "lbMax": 5580,
+    "lbThird": false
    },
    {
     "name": "RST",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5383,
+    "lbMax": 5580,
+    "lbThird": false
    },
    {
     "name": "Z71",
     "drive": [],
     "msrp": null,
-    "photo": true
+    "photo": true,
+    "lbMin": 5580,
+    "lbMax": 5580,
+    "lbThird": false
    }
   ],
   "msrpFrom": null,
@@ -743,7 +872,10 @@
      "FWD"
     ],
     "msrp": 28200,
-    "photo": true
+    "photo": true,
+    "lbMin": 3029,
+    "lbMax": 3252,
+    "lbThird": false
    },
    {
     "name": "LS",
@@ -751,7 +883,10 @@
      "AWD"
     ],
     "msrp": 25600,
-    "photo": true
+    "photo": true,
+    "lbMin": 3252,
+    "lbMax": 3252,
+    "lbThird": false
    },
    {
     "name": "LT",
@@ -759,7 +894,10 @@
      "AWD"
     ],
     "msrp": 26800,
-    "photo": true
+    "photo": true,
+    "lbMin": 3252,
+    "lbMax": 3252,
+    "lbThird": false
    },
    {
     "name": "RS",
@@ -768,7 +906,10 @@
      "FWD"
     ],
     "msrp": 28200,
-    "photo": true
+    "photo": true,
+    "lbMin": 3029,
+    "lbMax": 3252,
+    "lbThird": false
    }
   ],
   "msrpFrom": 25600,
@@ -794,7 +935,10 @@
      "FWD"
     ],
     "msrp": 56100,
-    "photo": true
+    "photo": true,
+    "lbMin": 4504,
+    "lbMax": 4793,
+    "lbThird": false
    },
    {
     "name": "LT",
@@ -803,7 +947,10 @@
      "FWD"
     ],
     "msrp": 41100,
-    "photo": true
+    "photo": true,
+    "lbMin": 4504,
+    "lbMax": 4793,
+    "lbThird": false
    },
    {
     "name": "RS",
@@ -812,7 +959,10 @@
      "FWD"
     ],
     "msrp": 55800,
-    "photo": true
+    "photo": true,
+    "lbMin": 4504,
+    "lbMax": 4793,
+    "lbThird": false
    },
    {
     "name": "Z71",
@@ -820,7 +970,10 @@
      "AWD"
     ],
     "msrp": 49400,
-    "photo": true
+    "photo": true,
+    "lbMin": 4793,
+    "lbMax": 4793,
+    "lbThird": false
    }
   ],
   "msrpFrom": 41100,
@@ -844,7 +997,10 @@
      "FWD"
     ],
     "msrp": 23200,
-    "photo": true
+    "photo": true,
+    "lbMin": 3014,
+    "lbMax": 3014,
+    "lbThird": false
    },
    {
     "name": "2RS",
@@ -852,7 +1008,10 @@
      "FWD"
     ],
     "msrp": 25700,
-    "photo": true
+    "photo": true,
+    "lbMin": 3040,
+    "lbMax": 3040,
+    "lbThird": false
    },
    {
     "name": "ACTIV",
@@ -860,7 +1019,10 @@
      "FWD"
     ],
     "msrp": 25700,
-    "photo": true
+    "photo": true,
+    "lbMin": 3036,
+    "lbMax": 3036,
+    "lbThird": false
    },
    {
     "name": "LS",
@@ -868,7 +1030,10 @@
      "FWD"
     ],
     "msrp": 21700,
-    "photo": true
+    "photo": true,
+    "lbMin": 2983,
+    "lbMax": 2983,
+    "lbThird": false
    },
    {
     "name": "LT",
@@ -876,7 +1041,10 @@
      "FWD"
     ],
     "msrp": 23200,
-    "photo": true
+    "photo": true,
+    "lbMin": 2994,
+    "lbMax": 2994,
+    "lbThird": false
    }
   ],
   "msrpFrom": 21700,
@@ -898,43 +1066,64 @@
     "name": "Badlands",
     "drive": [],
     "msrp": 48890,
-    "photo": true
+    "photo": true,
+    "lbMin": 4705,
+    "lbMax": 5046,
+    "lbThird": true
    },
    {
     "name": "Base",
     "drive": [],
     "msrp": 40795,
-    "photo": true
+    "photo": true,
+    "lbMin": 4319,
+    "lbMax": 4504,
+    "lbThird": true
    },
    {
     "name": "Big Bend",
     "drive": [],
     "msrp": 41295,
-    "photo": true
+    "photo": true,
+    "lbMin": 4467,
+    "lbMax": 4523,
+    "lbThird": true
    },
    {
     "name": "Heritage Edition",
     "drive": [],
     "msrp": 51625,
-    "photo": true
+    "photo": true,
+    "lbMin": 4467,
+    "lbMax": 4871,
+    "lbThird": true
    },
    {
     "name": "Outer Banks",
     "drive": [],
     "msrp": 48190,
-    "photo": true
+    "photo": true,
+    "lbMin": 4580,
+    "lbMax": 4637,
+    "lbThird": true
    },
    {
     "name": "Raptor",
     "drive": [],
     "msrp": 79995,
-    "photo": true
+    "photo": true,
+    "lbMin": 5814,
+    "lbMax": 5814,
+    "lbThird": true
    },
    {
     "name": "Stroppe Edition",
     "drive": [],
     "msrp": 69995,
-    "photo": true
+    "photo": true,
+    "lbMin": 5334,
+    "lbMax": 5334,
+    "lbThird": true
    }
   ],
   "msrpFrom": 40795,
@@ -956,25 +1145,37 @@
     "name": "Badlands",
     "drive": [],
     "msrp": 37265,
-    "photo": true
+    "photo": true,
+    "lbMin": 3809,
+    "lbMax": 3849,
+    "lbThird": true
    },
    {
     "name": "Big Bend",
     "drive": [],
     "msrp": 31845,
-    "photo": true
+    "photo": true,
+    "lbMin": 3458,
+    "lbMax": 3467,
+    "lbThird": true
    },
    {
     "name": "Heritage",
     "drive": [],
     "msrp": 33395,
-    "photo": true
+    "photo": true,
+    "lbMin": 3458,
+    "lbMax": 3809,
+    "lbThird": true
    },
    {
     "name": "Outer Banks",
     "drive": [],
     "msrp": 35145,
-    "photo": true
+    "photo": true,
+    "lbMin": 3458,
+    "lbMax": 3729,
+    "lbThird": true
    }
   ],
   "msrpFrom": 31845,
@@ -997,25 +1198,37 @@
     "name": "Active",
     "drive": [],
     "msrp": 63600,
-    "photo": true
+    "photo": true,
+    "lbMin": 5398,
+    "lbMax": 5668,
+    "lbThird": true
    },
    {
     "name": "King Ranch",
     "drive": [],
     "msrp": 82695,
-    "photo": true
+    "photo": true,
+    "lbMin": 5398,
+    "lbMax": 5668,
+    "lbThird": true
    },
    {
     "name": "Platinum",
     "drive": [],
     "msrp": 70550,
-    "photo": true
+    "photo": true,
+    "lbMin": 5398,
+    "lbMax": 5668,
+    "lbThird": true
    },
    {
     "name": "Tremor",
     "drive": [],
     "msrp": 82400,
-    "photo": true
+    "photo": true,
+    "lbMin": 5668,
+    "lbMax": 5670,
+    "lbThird": true
    }
   ],
   "msrpFrom": 63600,
@@ -1038,31 +1251,46 @@
     "name": "Active",
     "drive": [],
     "msrp": 38465,
-    "photo": true
+    "photo": true,
+    "lbMin": 4248,
+    "lbMax": 4457,
+    "lbThird": true
    },
    {
     "name": "Platinum",
     "drive": [],
     "msrp": 50660,
-    "photo": true
+    "photo": true,
+    "lbMin": 4248,
+    "lbMax": 4360,
+    "lbThird": true
    },
    {
     "name": "ST",
     "drive": [],
     "msrp": 53660,
-    "photo": true
+    "photo": true,
+    "lbMin": 4561,
+    "lbMax": 4688,
+    "lbThird": true
    },
    {
     "name": "ST-Line",
     "drive": [],
     "msrp": 44200,
-    "photo": true
+    "photo": true,
+    "lbMin": 4360,
+    "lbMax": 4360,
+    "lbThird": true
    },
    {
     "name": "Tremor",
     "drive": [],
     "msrp": 49200,
-    "photo": true
+    "photo": true,
+    "lbMin": 4755,
+    "lbMax": 4755,
+    "lbThird": true
    }
   ],
   "msrpFrom": 38465,
@@ -1084,49 +1312,73 @@
     "name": "King Ranch",
     "drive": [],
     "msrp": 65825,
-    "photo": true
+    "photo": true,
+    "lbMin": 4844,
+    "lbMax": 4844,
+    "lbThird": true
    },
    {
     "name": "Lariat",
     "drive": [],
     "msrp": 59560,
-    "photo": true
+    "photo": true,
+    "lbMin": 4844,
+    "lbMax": 4844,
+    "lbThird": true
    },
    {
     "name": "Platinum",
     "drive": [],
     "msrp": 68800,
-    "photo": true
+    "photo": true,
+    "lbMin": 4844,
+    "lbMax": 4844,
+    "lbThird": true
    },
    {
     "name": "Raptor",
     "drive": [],
     "msrp": 79005,
-    "photo": true
+    "photo": true,
+    "lbMin": 5710,
+    "lbMax": 5710,
+    "lbThird": true
    },
    {
     "name": "STX",
     "drive": [],
     "msrp": 44855,
-    "photo": true
+    "photo": true,
+    "lbMin": 4687,
+    "lbMax": 4687,
+    "lbThird": true
    },
    {
     "name": "Tremor",
     "drive": [],
     "msrp": 64915,
-    "photo": true
+    "photo": true,
+    "lbMin": 5260,
+    "lbMax": 5260,
+    "lbThird": true
    },
    {
     "name": "XL",
     "drive": [],
     "msrp": 37290,
-    "photo": true
+    "photo": true,
+    "lbMin": 4397,
+    "lbMax": 4687,
+    "lbThird": true
    },
    {
     "name": "XLT",
     "drive": [],
     "msrp": 45695,
-    "photo": true
+    "photo": true,
+    "lbMin": 4687,
+    "lbMax": 4941,
+    "lbThird": true
    }
   ],
   "msrpFrom": 37290,
@@ -1148,25 +1400,37 @@
     "name": "Lariat",
     "drive": [],
     "msrp": 38090,
-    "photo": true
+    "photo": true,
+    "lbMin": 3652,
+    "lbMax": 3838,
+    "lbThird": true
    },
    {
     "name": "Lobo",
     "drive": [],
     "msrp": 35930,
-    "photo": true
+    "photo": true,
+    "lbMin": 3731,
+    "lbMax": 3814,
+    "lbThird": true
    },
    {
     "name": "Tremor",
     "drive": [],
     "msrp": 40645,
-    "photo": true
+    "photo": true,
+    "lbMin": 3731,
+    "lbMax": 3890,
+    "lbThird": true
    },
    {
     "name": "XL",
     "drive": [],
     "msrp": 28145,
-    "photo": true
+    "photo": true,
+    "lbMin": 3517,
+    "lbMax": 3838,
+    "lbThird": true
    },
    {
     "name": "XLT",
@@ -1175,7 +1439,10 @@
      "FWD"
     ],
     "msrp": 30645,
-    "photo": true
+    "photo": true,
+    "lbMin": 3517,
+    "lbMax": 3838,
+    "lbThird": true
    }
   ],
   "msrpFrom": 28145,
@@ -1197,43 +1464,64 @@
     "name": "Dark Horse",
     "drive": [],
     "msrp": 64080,
-    "photo": true
+    "photo": true,
+    "lbMin": 3741,
+    "lbMax": 4012,
+    "lbThird": true
    },
    {
     "name": "Dark Horse Premium",
     "drive": [],
     "msrp": 64080,
-    "photo": true
+    "photo": true,
+    "lbMin": 3968,
+    "lbMax": 4012,
+    "lbThird": true
    },
    {
     "name": "Dark Horse SC",
     "drive": [],
     "msrp": 106090,
-    "photo": true
+    "photo": true,
+    "lbMin": 4110,
+    "lbMax": 4263,
+    "lbThird": true
    },
    {
     "name": "EcoBoost Fastback",
     "drive": [],
     "msrp": 32995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3573,
+    "lbMax": 3588,
+    "lbThird": true
    },
    {
     "name": "EcoBoost Premium Fastback",
     "drive": [],
     "msrp": 36345,
-    "photo": true
+    "photo": true,
+    "lbMin": 3573,
+    "lbMax": 3588,
+    "lbThird": true
    },
    {
     "name": "GT Fastback",
     "drive": [],
     "msrp": 46800,
-    "photo": true
+    "photo": true,
+    "lbMin": 3731,
+    "lbMax": 3827,
+    "lbThird": true
    },
    {
     "name": "GT Premium Fastback",
     "drive": [],
     "msrp": 51080,
-    "photo": true
+    "photo": true,
+    "lbMin": 3731,
+    "lbMax": 3827,
+    "lbThird": true
    }
   ],
   "msrpFrom": 32995,
@@ -1255,13 +1543,19 @@
     "name": "GT",
     "drive": [],
     "msrp": 53395,
-    "photo": true
+    "photo": true,
+    "lbMin": 4798,
+    "lbMax": 4798,
+    "lbThird": true
    },
    {
     "name": "Premium",
     "drive": [],
     "msrp": 40595,
-    "photo": true
+    "photo": true,
+    "lbMin": 4806,
+    "lbMax": 4806,
+    "lbThird": true
    },
    {
     "name": "Rally",
@@ -1273,7 +1567,10 @@
     "name": "Select",
     "drive": [],
     "msrp": 37795,
-    "photo": true
+    "photo": true,
+    "lbMin": 4595,
+    "lbMax": 4806,
+    "lbThird": true
    }
   ],
   "msrpFrom": 37795,
@@ -1295,25 +1592,37 @@
     "name": "Lariat",
     "drive": [],
     "msrp": 43955,
-    "photo": true
+    "photo": true,
+    "lbMin": 4203,
+    "lbMax": 4610,
+    "lbThird": true
    },
    {
     "name": "Raptor",
     "drive": [],
     "msrp": 57270,
-    "photo": true
+    "photo": true,
+    "lbMin": 5363,
+    "lbMax": 5363,
+    "lbThird": true
    },
    {
     "name": "XL",
     "drive": [],
     "msrp": 33550,
-    "photo": true
+    "photo": true,
+    "lbMin": 4240,
+    "lbMax": 4610,
+    "lbThird": true
    },
    {
     "name": "XLT",
     "drive": [],
     "msrp": 36075,
-    "photo": true
+    "photo": true,
+    "lbMin": 4240,
+    "lbMax": 4610,
+    "lbThird": true
    }
   ],
   "msrpFrom": 33550,
@@ -1336,31 +1645,46 @@
     "name": "F-250 King Ranch",
     "drive": [],
     "msrp": 78575,
-    "photo": true
+    "photo": true,
+    "lbMin": 6480,
+    "lbMax": 6480,
+    "lbThird": true
    },
    {
     "name": "F-250 Lariat",
     "drive": [],
     "msrp": 62975,
-    "photo": true
+    "photo": true,
+    "lbMin": 6124,
+    "lbMax": 6124,
+    "lbThird": true
    },
    {
     "name": "F-250 Platinum",
     "drive": [],
     "msrp": 79465,
-    "photo": true
+    "photo": true,
+    "lbMin": 6480,
+    "lbMax": 6480,
+    "lbThird": true
    },
    {
     "name": "F-250 XL",
     "drive": [],
     "msrp": 45975,
-    "photo": true
+    "photo": true,
+    "lbMin": 5691,
+    "lbMax": 6348,
+    "lbThird": true
    },
    {
     "name": "F-250 XLT",
     "drive": [],
     "msrp": 49275,
-    "photo": true
+    "photo": true,
+    "lbMin": 6124,
+    "lbMax": 6124,
+    "lbThird": true
    },
    {
     "name": "F-350 King Ranch",
@@ -1372,7 +1696,10 @@
     "name": "F-350 Lariat",
     "drive": [],
     "msrp": 64280,
-    "photo": true
+    "photo": true,
+    "lbMin": 6393,
+    "lbMax": 6779,
+    "lbThird": true
    },
    {
     "name": "F-350 Platinum",
@@ -1384,13 +1711,19 @@
     "name": "F-350 XL",
     "drive": [],
     "msrp": 47280,
-    "photo": true
+    "photo": true,
+    "lbMin": 6335,
+    "lbMax": 6335,
+    "lbThird": true
    },
    {
     "name": "F-350 XLT",
     "drive": [],
     "msrp": 50580,
-    "photo": true
+    "photo": true,
+    "lbMin": 6393,
+    "lbMax": 6779,
+    "lbThird": true
    },
    {
     "name": "F-450 King Ranch",
@@ -1414,13 +1747,19 @@
     "name": "F-450 XL",
     "drive": [],
     "msrp": 63990,
-    "photo": true
+    "photo": true,
+    "lbMin": 6606,
+    "lbMax": 8297,
+    "lbThird": true
    },
    {
     "name": "F-450 XLT",
     "drive": [],
     "msrp": 67920,
-    "photo": true
+    "photo": true,
+    "lbMin": 7712,
+    "lbMax": 8012,
+    "lbThird": true
    }
   ],
   "msrpFrom": 45975,
@@ -1472,7 +1811,10 @@
      "FWD"
     ],
     "msrp": 35095,
-    "photo": true
+    "photo": true,
+    "lbMin": 3468,
+    "lbMax": 3468,
+    "lbThird": true
    },
    {
     "name": "LX",
@@ -1480,7 +1822,10 @@
      "FWD"
     ],
     "msrp": 28395,
-    "photo": true
+    "photo": true,
+    "lbMin": 3239,
+    "lbMax": 3239,
+    "lbThird": true
    },
    {
     "name": "SE",
@@ -1488,7 +1833,10 @@
      "FWD"
     ],
     "msrp": 30695,
-    "photo": true
+    "photo": true,
+    "lbMin": 3311,
+    "lbMax": 3311,
+    "lbThird": true
    },
    {
     "name": "Sport Hybrid",
@@ -1496,7 +1844,10 @@
      "FWD"
     ],
     "msrp": 33795,
-    "photo": true
+    "photo": true,
+    "lbMin": 3477,
+    "lbMax": 3488,
+    "lbThird": true
    },
    {
     "name": "Sport-L Hybrid",
@@ -1504,7 +1855,10 @@
      "FWD"
     ],
     "msrp": 35495,
-    "photo": true
+    "photo": true,
+    "lbMin": 3488,
+    "lbMax": 3488,
+    "lbThird": true
    },
    {
     "name": "Touring Hybrid",
@@ -1512,7 +1866,10 @@
      "FWD"
     ],
     "msrp": 39495,
-    "photo": true
+    "photo": true,
+    "lbMin": 3532,
+    "lbMax": 3532,
+    "lbThird": true
    }
   ],
   "msrpFrom": 28395,
@@ -1536,7 +1893,10 @@
      "FWD"
     ],
     "msrp": 24695,
-    "photo": true
+    "photo": true,
+    "lbMin": 2875,
+    "lbMax": 2875,
+    "lbThird": true
    },
    {
     "name": "Si",
@@ -1544,7 +1904,10 @@
      "FWD"
     ],
     "msrp": 31495,
-    "photo": true
+    "photo": true,
+    "lbMin": 2952,
+    "lbMax": 2952,
+    "lbThird": true
    },
    {
     "name": "Sport",
@@ -1552,7 +1915,10 @@
      "FWD"
     ],
     "msrp": 26695,
-    "photo": true
+    "photo": true,
+    "lbMin": 2926,
+    "lbMax": 2976,
+    "lbThird": true
    },
    {
     "name": "Sport Hybrid",
@@ -1560,7 +1926,10 @@
      "FWD"
     ],
     "msrp": 29395,
-    "photo": true
+    "photo": true,
+    "lbMin": 3208,
+    "lbMax": 3252,
+    "lbThird": true
    },
    {
     "name": "Sport Touring Hybrid",
@@ -1568,7 +1937,10 @@
      "FWD"
     ],
     "msrp": 32395,
-    "photo": true
+    "photo": true,
+    "lbMin": 3252,
+    "lbMax": 3289,
+    "lbThird": true
    },
    {
     "name": "Type R",
@@ -1576,7 +1948,10 @@
      "FWD"
     ],
     "msrp": 47395,
-    "photo": true
+    "photo": true,
+    "lbMin": 3188,
+    "lbMax": 3188,
+    "lbThird": true
    }
   ],
   "msrpFrom": 24695,
@@ -1602,7 +1977,10 @@
      "FWD"
     ],
     "msrp": 33550,
-    "photo": true
+    "photo": true,
+    "lbMin": 3497,
+    "lbMax": 3616,
+    "lbThird": true
    },
    {
     "name": "EX-L",
@@ -1611,7 +1989,10 @@
      "FWD"
     ],
     "msrp": 35800,
-    "photo": true
+    "photo": true,
+    "lbMin": 3525,
+    "lbMax": 3635,
+    "lbThird": true
    },
    {
     "name": "LX",
@@ -1620,7 +2001,10 @@
      "FWD"
     ],
     "msrp": 31520,
-    "photo": true
+    "photo": true,
+    "lbMin": 3472,
+    "lbMax": 3591,
+    "lbThird": true
    },
    {
     "name": "Sport Hybrid",
@@ -1629,7 +2013,10 @@
      "FWD"
     ],
     "msrp": 36030,
-    "photo": true
+    "photo": true,
+    "lbMin": 3752,
+    "lbMax": 3869,
+    "lbThird": true
    },
    {
     "name": "Sport Touring Hybrid",
@@ -1637,7 +2024,10 @@
      "AWD"
     ],
     "msrp": 42950,
-    "photo": true
+    "photo": true,
+    "lbMin": 3926,
+    "lbMax": 3926,
+    "lbThird": true
    },
    {
     "name": "Sport-L Hybrid",
@@ -1646,7 +2036,10 @@
      "FWD"
     ],
     "msrp": 39125,
-    "photo": true
+    "photo": true,
+    "lbMin": 3777,
+    "lbMax": 3893,
+    "lbThird": true
    },
    {
     "name": "TrailSport Hybrid",
@@ -1654,7 +2047,10 @@
      "AWD"
     ],
     "msrp": 39200,
-    "photo": true
+    "photo": true,
+    "lbMin": 3900,
+    "lbMax": 3900,
+    "lbThird": true
    }
   ],
   "msrpFrom": 31520,
@@ -1679,7 +2075,10 @@
      "FWD"
     ],
     "msrp": 30450,
-    "photo": true
+    "photo": true,
+    "lbMin": 3221,
+    "lbMax": 3336,
+    "lbThird": true
    },
    {
     "name": "LX",
@@ -1688,7 +2087,10 @@
      "FWD"
     ],
     "msrp": 26600,
-    "photo": true
+    "photo": true,
+    "lbMin": 3159,
+    "lbMax": 3276,
+    "lbThird": true
    },
    {
     "name": "Sport",
@@ -1697,7 +2099,10 @@
      "FWD"
     ],
     "msrp": 28400,
-    "photo": true
+    "photo": true,
+    "lbMin": 3197,
+    "lbMax": 3311,
+    "lbThird": true
    }
   ],
   "msrpFrom": 26600,
@@ -1722,7 +2127,10 @@
      "FWD"
     ],
     "msrp": 52095,
-    "photo": true
+    "photo": true,
+    "lbMin": 4590,
+    "lbMax": 4590,
+    "lbThird": true
    },
    {
     "name": "EX-L",
@@ -1730,7 +2138,10 @@
      "FWD"
     ],
     "msrp": 43195,
-    "photo": true
+    "photo": true,
+    "lbMin": 4526,
+    "lbMax": 4526,
+    "lbThird": true
    },
    {
     "name": "Sport-L",
@@ -1738,7 +2149,10 @@
      "FWD"
     ],
     "msrp": 44295,
-    "photo": true
+    "photo": true,
+    "lbMin": 4535,
+    "lbMax": 4535,
+    "lbThird": true
    },
    {
     "name": "Touring",
@@ -1746,7 +2160,10 @@
      "FWD"
     ],
     "msrp": 47895,
-    "photo": true
+    "photo": true,
+    "lbMin": 4559,
+    "lbMax": 4559,
+    "lbThird": true
    }
   ],
   "msrpFrom": 43195,
@@ -1771,7 +2188,10 @@
      "AWD"
     ],
     "msrp": 45195,
-    "photo": true
+    "photo": true,
+    "lbMin": 4478,
+    "lbMax": 4478,
+    "lbThird": true
    },
    {
     "name": "RTL Towing",
@@ -1779,7 +2199,10 @@
      "AWD"
     ],
     "msrp": 45895,
-    "photo": true
+    "photo": true,
+    "lbMin": 4478,
+    "lbMax": 4478,
+    "lbThird": true
    },
    {
     "name": "TrailSport",
@@ -1787,7 +2210,10 @@
      "AWD"
     ],
     "msrp": 49995,
-    "photo": true
+    "photo": true,
+    "lbMin": 4676,
+    "lbMax": 4676,
+    "lbThird": true
    },
    {
     "name": "TrailSport Blackout",
@@ -1795,7 +2221,10 @@
      "AWD"
     ],
     "msrp": 51495,
-    "photo": true
+    "photo": true,
+    "lbMin": 4676,
+    "lbMax": 4676,
+    "lbThird": true
    },
    {
     "name": "TrailSport Elite",
@@ -1803,7 +2232,10 @@
      "AWD"
     ],
     "msrp": 53695,
-    "photo": true
+    "photo": true,
+    "lbMin": 4705,
+    "lbMax": 4705,
+    "lbThird": true
    },
    {
     "name": "TrailSport Elite Blackout",
@@ -1811,7 +2243,10 @@
      "AWD"
     ],
     "msrp": 55195,
-    "photo": true
+    "photo": true,
+    "lbMin": 4705,
+    "lbMax": 4705,
+    "lbThird": true
    }
   ],
   "msrpFrom": 45195,
@@ -1835,7 +2270,10 @@
      "AWD"
     ],
     "msrp": 55195,
-    "photo": true
+    "photo": true,
+    "lbMin": 4678,
+    "lbMax": 4678,
+    "lbThird": true
    },
    {
     "name": "Elite",
@@ -1843,7 +2281,10 @@
      "AWD"
     ],
     "msrp": 53695,
-    "photo": true
+    "photo": true,
+    "lbMin": 4678,
+    "lbMax": 4678,
+    "lbThird": true
    },
    {
     "name": "EX-L",
@@ -1852,7 +2293,10 @@
      "FWD"
     ],
     "msrp": 44695,
-    "photo": true
+    "photo": true,
+    "lbMin": 4334,
+    "lbMax": 4528,
+    "lbThird": true
    },
    {
     "name": "Sport",
@@ -1861,7 +2305,10 @@
      "FWD"
     ],
     "msrp": 42395,
-    "photo": true
+    "photo": true,
+    "lbMin": 4336,
+    "lbMax": 4513,
+    "lbThird": true
    },
    {
     "name": "Touring",
@@ -1869,7 +2316,10 @@
      "AWD"
     ],
     "msrp": 51295,
-    "photo": true
+    "photo": true,
+    "lbMin": 4658,
+    "lbMax": 4658,
+    "lbThird": true
    },
    {
     "name": "Touring Blackout",
@@ -1877,7 +2327,10 @@
      "AWD"
     ],
     "msrp": 52495,
-    "photo": true
+    "photo": true,
+    "lbMin": 4658,
+    "lbMax": 4658,
+    "lbThird": true
    },
    {
     "name": "TrailSport",
@@ -1885,7 +2338,10 @@
      "AWD"
     ],
     "msrp": 50595,
-    "photo": true
+    "photo": true,
+    "lbMin": 4722,
+    "lbMax": 4722,
+    "lbThird": true
    }
   ],
   "msrpFrom": 42395,
@@ -1909,7 +2365,10 @@
      "FWD"
     ],
     "msrp": 42400,
-    "photo": true
+    "photo": true,
+    "lbMin": 3261,
+    "lbMax": 3261,
+    "lbThird": true
    },
    {
     "name": "Hybrid Two-Tone",
@@ -1917,7 +2376,10 @@
      "FWD"
     ],
     "msrp": 42900,
-    "photo": true
+    "photo": true,
+    "lbMin": 3261,
+    "lbMax": 3261,
+    "lbThird": true
    }
   ],
   "msrpFrom": 42400,
@@ -1941,7 +2403,10 @@
      "AWD"
     ],
     "msrp": 50400,
-    "photo": true
+    "photo": true,
+    "lbMin": 5273,
+    "lbMax": 5273,
+    "lbThird": true
    },
    {
     "name": "EX",
@@ -1950,7 +2415,10 @@
      "FWD"
     ],
     "msrp": 39900,
-    "photo": true
+    "photo": true,
+    "lbMin": 4932,
+    "lbMax": 5086,
+    "lbThird": true
    },
    {
     "name": "Touring",
@@ -1959,7 +2427,10 @@
      "FWD"
     ],
     "msrp": 44200,
-    "photo": true
+    "photo": true,
+    "lbMin": 5053,
+    "lbMax": 5207,
+    "lbThird": true
    }
   ],
   "msrpFrom": 39900,
@@ -1983,7 +2454,10 @@
      "AWD"
     ],
     "msrp": 47395,
-    "photo": true
+    "photo": true,
+    "lbMin": 4504,
+    "lbMax": 4504,
+    "lbThird": true
    },
    {
     "name": "Black Edition Two-Tone",
@@ -1991,7 +2465,10 @@
      "AWD"
     ],
     "msrp": 47895,
-    "photo": true
+    "photo": true,
+    "lbMin": 4504,
+    "lbMax": 4504,
+    "lbThird": true
    },
    {
     "name": "RTL",
@@ -1999,7 +2476,10 @@
      "AWD"
     ],
     "msrp": 43595,
-    "photo": true
+    "photo": true,
+    "lbMin": 4480,
+    "lbMax": 4480,
+    "lbThird": true
    },
    {
     "name": "Sport",
@@ -2007,7 +2487,10 @@
      "AWD"
     ],
     "msrp": 40795,
-    "photo": true
+    "photo": true,
+    "lbMin": 4420,
+    "lbMax": 4420,
+    "lbThird": true
    },
    {
     "name": "TrailSport",
@@ -2015,7 +2498,10 @@
      "AWD"
     ],
     "msrp": 45995,
-    "photo": true
+    "photo": true,
+    "lbMin": 4495,
+    "lbMax": 4495,
+    "lbThird": true
    },
    {
     "name": "TrailSport+HPD Wheels",
@@ -2023,7 +2509,10 @@
      "AWD"
     ],
     "msrp": 47195,
-    "photo": true
+    "photo": true,
+    "lbMin": 4495,
+    "lbMax": 4495,
+    "lbThird": true
    }
   ],
   "msrpFrom": 40795,
@@ -2047,7 +2536,10 @@
      "FWD"
     ],
     "msrp": 27375,
-    "photo": true
+    "photo": true,
+    "lbMin": 2725,
+    "lbMax": 2868,
+    "lbThird": false
    },
    {
     "name": "N Line",
@@ -2055,7 +2547,10 @@
      "FWD"
     ],
     "msrp": 29600,
-    "photo": true
+    "photo": true,
+    "lbMin": 2954,
+    "lbMax": 3020,
+    "lbThird": false
    },
    {
     "name": "SE",
@@ -2063,7 +2558,10 @@
      "FWD"
     ],
     "msrp": 22825,
-    "photo": true
+    "photo": true,
+    "lbMin": 2725,
+    "lbMax": 2868,
+    "lbThird": false
    },
    {
     "name": "SEL Sport",
@@ -2071,7 +2569,10 @@
      "FWD"
     ],
     "msrp": 23950,
-    "photo": true
+    "photo": true,
+    "lbMin": 2725,
+    "lbMax": 2868,
+    "lbThird": false
    },
    {
     "name": "SEL Sport Plus",
@@ -2079,7 +2580,10 @@
      "FWD"
     ],
     "msrp": 24450,
-    "photo": true
+    "photo": true,
+    "lbMin": 2725,
+    "lbMax": 2868,
+    "lbThird": false
    },
    {
     "name": "SEL Sport Premium",
@@ -2087,7 +2591,10 @@
      "FWD"
     ],
     "msrp": 25275,
-    "photo": true
+    "photo": true,
+    "lbMin": 2725,
+    "lbMax": 2868,
+    "lbThird": false
    }
   ],
   "msrpFrom": 22825,
@@ -2111,7 +2618,10 @@
      "FWD"
     ],
     "msrp": 25650,
-    "photo": true
+    "photo": true,
+    "lbMin": 2965,
+    "lbMax": 2965,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -2119,7 +2629,10 @@
      "FWD"
     ],
     "msrp": 30000,
-    "photo": true
+    "photo": true,
+    "lbMin": 3069,
+    "lbMax": 3069,
+    "lbThird": false
    },
    {
     "name": "SEL Sport",
@@ -2127,7 +2640,10 @@
      "FWD"
     ],
     "msrp": 27625,
-    "photo": true
+    "photo": true,
+    "lbMin": 3069,
+    "lbMax": 3069,
+    "lbThird": false
    }
   ],
   "msrpFrom": 25650,
@@ -2152,7 +2668,10 @@
      "RWD"
     ],
     "msrp": 45225,
-    "photo": true
+    "photo": true,
+    "lbMin": 4557,
+    "lbMax": 4806,
+    "lbThird": false
    },
    {
     "name": "SE",
@@ -2161,7 +2680,10 @@
      "RWD"
     ],
     "msrp": 37750,
-    "photo": true
+    "photo": true,
+    "lbMin": 4376,
+    "lbMax": 4608,
+    "lbThird": false
    },
    {
     "name": "SE Standard Range",
@@ -2169,7 +2691,10 @@
      "RWD"
     ],
     "msrp": 35250,
-    "photo": true
+    "photo": true,
+    "lbMin": 4145,
+    "lbMax": 4145,
+    "lbThird": false
    },
    {
     "name": "SEL",
@@ -2178,7 +2703,10 @@
      "RWD"
     ],
     "msrp": 40200,
-    "photo": true
+    "photo": true,
+    "lbMin": 4409,
+    "lbMax": 4641,
+    "lbThird": false
    },
    {
     "name": "XRT",
@@ -2186,7 +2714,10 @@
      "AWD"
     ],
     "msrp": 46525,
-    "photo": true
+    "photo": true,
+    "lbMin": 4720,
+    "lbMax": 4720,
+    "lbThird": false
    }
   ],
   "msrpFrom": 35250,
@@ -2210,7 +2741,10 @@
      "AWD"
     ],
     "msrp": 59900,
-    "photo": true
+    "photo": true,
+    "lbMin": 4861,
+    "lbMax": 4861,
+    "lbThird": false
    }
   ],
   "msrpFrom": 59900,
@@ -2234,7 +2768,10 @@
      "AWD"
     ],
     "msrp": 74990,
-    "photo": true
+    "photo": true,
+    "lbMin": 6008,
+    "lbMax": 6008,
+    "lbThird": false
    },
    {
     "name": "Calligraphy Design",
@@ -2242,7 +2779,10 @@
      "AWD"
     ],
     "msrp": 76490,
-    "photo": true
+    "photo": true,
+    "lbMin": 6008,
+    "lbMax": 6008,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -2250,7 +2790,10 @@
      "AWD"
     ],
     "msrp": 71250,
-    "photo": true
+    "photo": true,
+    "lbMin": 5994,
+    "lbMax": 5994,
+    "lbThird": false
    },
    {
     "name": "S",
@@ -2258,7 +2801,10 @@
      "RWD"
     ],
     "msrp": 58955,
-    "photo": true
+    "photo": true,
+    "lbMin": 5507,
+    "lbMax": 5507,
+    "lbThird": false
    },
    {
     "name": "SE",
@@ -2266,7 +2812,10 @@
      "AWD"
     ],
     "msrp": 62765,
-    "photo": true
+    "photo": true,
+    "lbMin": 5745,
+    "lbMax": 5745,
+    "lbThird": false
    },
    {
     "name": "SEL",
@@ -2274,7 +2823,10 @@
      "AWD"
     ],
     "msrp": 66320,
-    "photo": true
+    "photo": true,
+    "lbMin": 5902,
+    "lbMax": 5902,
+    "lbThird": false
    }
   ],
   "msrpFrom": 58955,
@@ -2299,7 +2851,10 @@
      "AWD"
     ],
     "msrp": 34035,
-    "photo": true
+    "photo": true,
+    "lbMin": 3505,
+    "lbMax": 3505,
+    "lbThird": false
    },
    {
     "name": "SEL Premium",
@@ -2307,7 +2862,10 @@
      "AWD"
     ],
     "msrp": 29925,
-    "photo": true
+    "photo": true,
+    "lbMin": 3461,
+    "lbMax": 3461,
+    "lbThird": false
    }
   ],
   "msrpFrom": 29925,
@@ -2333,7 +2891,10 @@
      "FWD"
     ],
     "msrp": 54860,
-    "photo": true
+    "photo": true,
+    "lbMin": 4718,
+    "lbMax": 4872,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -2342,7 +2903,10 @@
      "FWD"
     ],
     "msrp": 50070,
-    "photo": true
+    "photo": true,
+    "lbMin": 4461,
+    "lbMax": 4795,
+    "lbThird": false
    },
    {
     "name": "SE",
@@ -2351,7 +2915,10 @@
      "FWD"
     ],
     "msrp": 39735,
-    "photo": true
+    "photo": true,
+    "lbMin": 4420,
+    "lbMax": 4575,
+    "lbThird": false
    },
    {
     "name": "SEL",
@@ -2360,7 +2927,10 @@
      "FWD"
     ],
     "msrp": 42240,
-    "photo": true
+    "photo": true,
+    "lbMin": 4420,
+    "lbMax": 4575,
+    "lbThird": false
    },
    {
     "name": "SEL Premium",
@@ -2369,7 +2939,10 @@
      "FWD"
     ],
     "msrp": 45600,
-    "photo": true
+    "photo": true,
+    "lbMin": 4467,
+    "lbMax": 4493,
+    "lbThird": false
    },
    {
     "name": "XRT PRO",
@@ -2377,7 +2950,10 @@
      "AWD"
     ],
     "msrp": 50170,
-    "photo": true
+    "photo": true,
+    "lbMin": 4784,
+    "lbMax": 4784,
+    "lbThird": false
    }
   ],
   "msrpFrom": 39735,
@@ -2403,7 +2979,10 @@
      "FWD"
     ],
     "msrp": 57180,
-    "photo": true
+    "photo": true,
+    "lbMin": 4872,
+    "lbMax": 5016,
+    "lbThird": false
    },
    {
     "name": "Calligraphy Black Ink",
@@ -2412,7 +2991,10 @@
      "FWD"
     ],
     "msrp": 57680,
-    "photo": true
+    "photo": true,
+    "lbMin": 4872,
+    "lbMax": 5016,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -2421,7 +3003,10 @@
      "FWD"
     ],
     "msrp": 52390,
-    "photo": true
+    "photo": true,
+    "lbMin": 4795,
+    "lbMax": 4938,
+    "lbThird": false
    },
    {
     "name": "SEL",
@@ -2430,7 +3015,10 @@
      "FWD"
     ],
     "msrp": 44560,
-    "photo": true
+    "photo": true,
+    "lbMin": 4652,
+    "lbMax": 4795,
+    "lbThird": false
    },
    {
     "name": "SEL Premium",
@@ -2439,7 +3027,10 @@
      "FWD"
     ],
     "msrp": 47920,
-    "photo": true
+    "photo": true,
+    "lbMin": 4652,
+    "lbMax": 4795,
+    "lbThird": false
    }
   ],
   "msrpFrom": 44560,
@@ -2463,7 +3054,10 @@
      "AWD"
     ],
     "msrp": 43700,
-    "photo": true
+    "photo": true,
+    "lbMin": 4191,
+    "lbMax": 4191,
+    "lbThird": false
    },
    {
     "name": "SE",
@@ -2472,7 +3066,10 @@
      "FWD"
     ],
     "msrp": 29750,
-    "photo": true
+    "photo": true,
+    "lbMin": 3779,
+    "lbMax": 3922,
+    "lbThird": false
    },
    {
     "name": "SEL",
@@ -2481,7 +3078,10 @@
      "FWD"
     ],
     "msrp": 31400,
-    "photo": true
+    "photo": true,
+    "lbMin": 3805,
+    "lbMax": 3948,
+    "lbThird": false
    },
    {
     "name": "SEL Activity",
@@ -2490,7 +3090,10 @@
      "FWD"
     ],
     "msrp": 34450,
-    "photo": true
+    "photo": true,
+    "lbMin": 3900,
+    "lbMax": 4043,
+    "lbThird": false
    }
   ],
   "msrpFrom": 29750,
@@ -2515,7 +3118,10 @@
      "AWD"
     ],
     "msrp": 49650,
-    "photo": true
+    "photo": true,
+    "lbMin": 4486,
+    "lbMax": 4486,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -2523,7 +3129,10 @@
      "AWD"
     ],
     "msrp": 46650,
-    "photo": true
+    "photo": true,
+    "lbMin": 4486,
+    "lbMax": 4486,
+    "lbThird": false
    },
    {
     "name": "SE",
@@ -2531,7 +3140,10 @@
      "AWD"
     ],
     "msrp": 37100,
-    "photo": true
+    "photo": true,
+    "lbMin": 4486,
+    "lbMax": 4486,
+    "lbThird": false
    },
    {
     "name": "SEL",
@@ -2539,7 +3151,10 @@
      "AWD"
     ],
     "msrp": 39640,
-    "photo": true
+    "photo": true,
+    "lbMin": 4486,
+    "lbMax": 4486,
+    "lbThird": false
    },
    {
     "name": "XRT",
@@ -2547,7 +3162,10 @@
      "AWD"
     ],
     "msrp": 42290,
-    "photo": true
+    "photo": true,
+    "lbMin": 4486,
+    "lbMax": 4486,
+    "lbThird": false
    }
   ],
   "msrpFrom": 37100,
@@ -2572,7 +3190,10 @@
      "AWD"
     ],
     "msrp": 50750,
-    "photo": true
+    "photo": true,
+    "lbMin": 4575,
+    "lbMax": 4575,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -2580,7 +3201,10 @@
      "AWD"
     ],
     "msrp": 47750,
-    "photo": true
+    "photo": true,
+    "lbMin": 4575,
+    "lbMax": 4575,
+    "lbThird": false
    },
    {
     "name": "SE",
@@ -2588,7 +3212,10 @@
      "AWD"
     ],
     "msrp": 38450,
-    "photo": true
+    "photo": true,
+    "lbMin": 4575,
+    "lbMax": 4575,
+    "lbThird": false
    },
    {
     "name": "SEL",
@@ -2596,7 +3223,10 @@
      "AWD"
     ],
     "msrp": 40740,
-    "photo": true
+    "photo": true,
+    "lbMin": 4575,
+    "lbMax": 4575,
+    "lbThird": false
    }
   ],
   "msrpFrom": 38450,
@@ -2621,7 +3251,10 @@
      "FWD"
     ],
     "msrp": 39675,
-    "photo": true
+    "photo": true,
+    "lbMin": 3657,
+    "lbMax": 3800,
+    "lbThird": false
    },
    {
     "name": "SE",
@@ -2630,7 +3263,10 @@
      "FWD"
     ],
     "msrp": 29700,
-    "photo": true
+    "photo": true,
+    "lbMin": 3429,
+    "lbMax": 3572,
+    "lbThird": false
    },
    {
     "name": "SEL",
@@ -2639,7 +3275,10 @@
      "FWD"
     ],
     "msrp": 31050,
-    "photo": true
+    "photo": true,
+    "lbMin": 3494,
+    "lbMax": 3638,
+    "lbThird": false
    },
    {
     "name": "SEL Plus",
@@ -2648,7 +3287,10 @@
      "FWD"
     ],
     "msrp": 31550,
-    "photo": true
+    "photo": true,
+    "lbMin": 3494,
+    "lbMax": 3638,
+    "lbThird": false
    },
    {
     "name": "SEL Premium",
@@ -2657,7 +3299,10 @@
      "FWD"
     ],
     "msrp": 34050,
-    "photo": true
+    "photo": true,
+    "lbMin": 3533,
+    "lbMax": 3676,
+    "lbThird": false
    },
    {
     "name": "XRT",
@@ -2665,7 +3310,10 @@
      "AWD"
     ],
     "msrp": 35225,
-    "photo": true
+    "photo": true,
+    "lbMin": 3713,
+    "lbMax": 3713,
+    "lbThird": false
    }
   ],
   "msrpFrom": 29700,
@@ -2689,7 +3337,10 @@
      "AWD"
     ],
     "msrp": 42425,
-    "photo": true
+    "photo": true,
+    "lbMin": 3794,
+    "lbMax": 3920,
+    "lbThird": false
    },
    {
     "name": "SE",
@@ -2698,7 +3349,10 @@
      "FWD"
     ],
     "msrp": 31300,
-    "photo": true
+    "photo": true,
+    "lbMin": 3593,
+    "lbMax": 3719,
+    "lbThird": false
    },
    {
     "name": "SEL",
@@ -2707,7 +3361,10 @@
      "FWD"
     ],
     "msrp": 32750,
-    "photo": true
+    "photo": true,
+    "lbMin": 3647,
+    "lbMax": 3773,
+    "lbThird": false
    },
    {
     "name": "SEL Convenience",
@@ -2715,7 +3372,10 @@
      "AWD"
     ],
     "msrp": 35250,
-    "photo": true
+    "photo": true,
+    "lbMin": 3665,
+    "lbMax": 3790,
+    "lbThird": false
    }
   ],
   "msrpFrom": 31300,
@@ -2739,7 +3399,10 @@
      "AWD"
     ],
     "msrp": 48900,
-    "photo": true
+    "photo": true,
+    "lbMin": 4266,
+    "lbMax": 4266,
+    "lbThird": false
    },
    {
     "name": "SEL",
@@ -2747,7 +3410,10 @@
      "AWD"
     ],
     "msrp": 40675,
-    "photo": true
+    "photo": true,
+    "lbMin": 4121,
+    "lbMax": 4121,
+    "lbThird": false
    }
   ],
   "msrpFrom": 40675,
@@ -2771,7 +3437,10 @@
      "FWD"
     ],
     "msrp": 20550,
-    "photo": true
+    "photo": true,
+    "lbMin": 2612,
+    "lbMax": 2738,
+    "lbThird": false
    },
    {
     "name": "SEL",
@@ -2779,7 +3448,10 @@
      "FWD"
     ],
     "msrp": 22825,
-    "photo": true
+    "photo": true,
+    "lbMin": 2612,
+    "lbMax": 2738,
+    "lbThird": false
    },
    {
     "name": "SEL w/ 2-Tone Roof",
@@ -2787,7 +3459,10 @@
      "FWD"
     ],
     "msrp": 22600,
-    "photo": true
+    "photo": true,
+    "lbMin": 2612,
+    "lbMax": 2738,
+    "lbThird": false
    }
   ],
   "msrpFrom": 20550,
@@ -2809,37 +3484,55 @@
     "name": "Cherokee 4x4",
     "drive": [],
     "msrp": 35000,
-    "photo": true
+    "photo": true,
+    "lbMin": 4295,
+    "lbMax": 4295,
+    "lbThird": false
    },
    {
     "name": "85th Anniversary Edition 4x4",
     "drive": [],
     "msrp": 40905,
-    "photo": true
+    "photo": true,
+    "lbMin": 4295,
+    "lbMax": 4295,
+    "lbThird": false
    },
    {
     "name": "Laredo 4x4",
     "drive": [],
     "msrp": 38000,
-    "photo": true
+    "photo": true,
+    "lbMin": 4295,
+    "lbMax": 4295,
+    "lbThird": false
    },
    {
     "name": "Limited 4x4",
     "drive": [],
     "msrp": 40000,
-    "photo": true
+    "photo": true,
+    "lbMin": 4295,
+    "lbMax": 4295,
+    "lbThird": false
    },
    {
     "name": "Limited Altitude 4x4",
     "drive": [],
     "msrp": 40595,
-    "photo": true
+    "photo": true,
+    "lbMin": 4295,
+    "lbMax": 4295,
+    "lbThird": false
    },
    {
     "name": "Overland 4x4",
     "drive": [],
     "msrp": 43000,
-    "photo": true
+    "photo": true,
+    "lbMin": 4295,
+    "lbMax": 4295,
+    "lbThird": false
    }
   ],
   "msrpFrom": 35000,
@@ -2861,37 +3554,55 @@
     "name": "85th Anniversary Edition 4x4",
     "drive": [],
     "msrp": 32345,
-    "photo": true
+    "photo": true,
+    "lbMin": 3620,
+    "lbMax": 3620,
+    "lbThird": false
    },
    {
     "name": "Latitude 4x4",
     "drive": [],
     "msrp": 29550,
-    "photo": true
+    "photo": true,
+    "lbMin": 3620,
+    "lbMax": 3620,
+    "lbThird": false
    },
    {
     "name": "Latitude Altitude 4x4",
     "drive": [],
     "msrp": 31665,
-    "photo": true
+    "photo": true,
+    "lbMin": 3620,
+    "lbMax": 3620,
+    "lbThird": false
    },
    {
     "name": "Limited 4x4",
     "drive": [],
     "msrp": 33560,
-    "photo": true
+    "photo": true,
+    "lbMin": 3620,
+    "lbMax": 3620,
+    "lbThird": false
    },
    {
     "name": "Limited Altitude 4x4",
     "drive": [],
     "msrp": 36150,
-    "photo": true
+    "photo": true,
+    "lbMin": 3620,
+    "lbMax": 3620,
+    "lbThird": false
    },
    {
     "name": "Trailhawk 4x4",
     "drive": [],
     "msrp": 34060,
-    "photo": true
+    "photo": true,
+    "lbMin": 3840,
+    "lbMax": 3840,
+    "lbThird": false
    }
   ],
   "msrpFrom": 29550,
@@ -2913,79 +3624,118 @@
     "name": "85th Anniversary Edition 4x4",
     "drive": [],
     "msrp": 46810,
-    "photo": true
+    "photo": true,
+    "lbMin": 4695,
+    "lbMax": 4695,
+    "lbThird": false
    },
    {
     "name": "Mojave 4x4",
     "drive": [],
     "msrp": 53215,
-    "photo": true
+    "photo": true,
+    "lbMin": 5042,
+    "lbMax": 5042,
+    "lbThird": false
    },
    {
     "name": "Mojave X 4x4",
     "drive": [],
     "msrp": 61210,
-    "photo": true
+    "photo": true,
+    "lbMin": 5042,
+    "lbMax": 5042,
+    "lbThird": false
    },
    {
     "name": "Rewind 4x4",
     "drive": [],
     "msrp": 49245,
-    "photo": true
+    "photo": true,
+    "lbMin": 4695,
+    "lbMax": 4695,
+    "lbThird": false
    },
    {
     "name": "Rubicon 4x4",
     "drive": [],
     "msrp": 53215,
-    "photo": true
+    "photo": true,
+    "lbMin": 5031,
+    "lbMax": 5031,
+    "lbThird": false
    },
    {
     "name": "Rubicon X 4x4",
     "drive": [],
     "msrp": 61210,
-    "photo": true
+    "photo": true,
+    "lbMin": 5031,
+    "lbMax": 5031,
+    "lbThird": false
    },
    {
     "name": "Sahara 4x4",
     "drive": [],
     "msrp": 48115,
-    "photo": true
+    "photo": true,
+    "lbMin": 4695,
+    "lbMax": 4695,
+    "lbThird": false
    },
    {
     "name": "Shadow Ops 4x4",
     "drive": [],
     "msrp": 58210,
-    "photo": true
+    "photo": true,
+    "lbMin": 5031,
+    "lbMax": 5031,
+    "lbThird": false
    },
    {
     "name": "Sport 4x4",
     "drive": [],
     "msrp": 39820,
-    "photo": true
+    "photo": true,
+    "lbMin": 4695,
+    "lbMax": 4695,
+    "lbThird": false
    },
    {
     "name": "Sport S 4x4",
     "drive": [],
     "msrp": 43015,
-    "photo": true
+    "photo": true,
+    "lbMin": 4695,
+    "lbMax": 4695,
+    "lbThird": false
    },
    {
     "name": "Texas Trail 4x4",
     "drive": [],
     "msrp": 45820,
-    "photo": true
+    "photo": true,
+    "lbMin": 4695,
+    "lbMax": 4695,
+    "lbThird": false
    },
    {
     "name": "Willys '41 4x4",
     "drive": [],
     "msrp": 48955,
-    "photo": true
+    "photo": true,
+    "lbMin": 4860,
+    "lbMax": 4860,
+    "lbThird": false
    },
    {
     "name": "Willys 4x4",
     "drive": [],
     "msrp": 46445,
-    "photo": true
+    "photo": true,
+    "lbMin": 4860,
+    "lbMax": 4860,
+    "lbThird": false
    }
   ],
   "msrpFrom": 39820,
@@ -3007,133 +3757,199 @@
     "name": "85th Anniversary Edition 4x4",
     "drive": [],
     "msrp": 50415,
-    "photo": true
+    "photo": true,
+    "lbMin": 4413,
+    "lbMax": 4413,
+    "lbThird": false
    },
    {
     "name": "L 85th Anniversary Edition 4x4",
     "drive": [],
     "msrp": 52415,
-    "photo": true
+    "photo": true,
+    "lbMin": 4692,
+    "lbMax": 4692,
+    "lbThird": false
    },
    {
     "name": "L Laredo 4x2",
     "drive": [],
     "msrp": 40920,
-    "photo": true
+    "photo": true,
+    "lbMin": 4524,
+    "lbMax": 4524,
+    "lbThird": false
    },
    {
     "name": "L Laredo 4x4",
     "drive": [],
     "msrp": 42920,
-    "photo": true
+    "photo": true,
+    "lbMin": 4658,
+    "lbMax": 4658,
+    "lbThird": false
    },
    {
     "name": "L Laredo Altitude 4x2",
     "drive": [],
     "msrp": 46360,
-    "photo": true
+    "photo": true,
+    "lbMin": 4524,
+    "lbMax": 4524,
+    "lbThird": false
    },
    {
     "name": "L Laredo Altitude 4x4",
     "drive": [],
     "msrp": 48360,
-    "photo": true
+    "photo": true,
+    "lbMin": 4658,
+    "lbMax": 4658,
+    "lbThird": false
    },
    {
     "name": "L Laredo X 4x2",
     "drive": [],
     "msrp": 43415,
-    "photo": true
+    "photo": true,
+    "lbMin": 4524,
+    "lbMax": 4524,
+    "lbThird": false
    },
    {
     "name": "L Laredo X 4x4",
     "drive": [],
     "msrp": 45415,
-    "photo": true
+    "photo": true,
+    "lbMin": 4658,
+    "lbMax": 4658,
+    "lbThird": false
    },
    {
     "name": "L Limited 4x2",
     "drive": [],
     "msrp": 46320,
-    "photo": true
+    "photo": true,
+    "lbMin": 4541,
+    "lbMax": 4541,
+    "lbThird": false
    },
    {
     "name": "L Limited 4x4",
     "drive": [],
     "msrp": 48320,
-    "photo": true
+    "photo": true,
+    "lbMin": 4692,
+    "lbMax": 4692,
+    "lbThird": false
    },
    {
     "name": "L Limited Reserve 4x4",
     "drive": [],
     "msrp": 53915,
-    "photo": true
+    "photo": true,
+    "lbMin": 4692,
+    "lbMax": 4692,
+    "lbThird": false
    },
    {
     "name": "L Summit 4x4",
     "drive": [],
     "msrp": 62600,
-    "photo": true
+    "photo": true,
+    "lbMin": 5068,
+    "lbMax": 5068,
+    "lbThird": false
    },
    {
     "name": "Laredo 4x2",
     "drive": [],
     "msrp": 38920,
-    "photo": true
+    "photo": true,
+    "lbMin": 4238,
+    "lbMax": 4238,
+    "lbThird": false
    },
    {
     "name": "Laredo 4x4",
     "drive": [],
     "msrp": 40920,
-    "photo": true
+    "photo": true,
+    "lbMin": 4365,
+    "lbMax": 4365,
+    "lbThird": false
    },
    {
     "name": "Laredo Altitude 4x2",
     "drive": [],
     "msrp": 44360,
-    "photo": true
+    "photo": true,
+    "lbMin": 4238,
+    "lbMax": 4238,
+    "lbThird": false
    },
    {
     "name": "Laredo Altitude 4x4",
     "drive": [],
     "msrp": 46360,
-    "photo": true
+    "photo": true,
+    "lbMin": 4365,
+    "lbMax": 4365,
+    "lbThird": false
    },
    {
     "name": "Laredo X 4x2",
     "drive": [],
     "msrp": 41415,
-    "photo": true
+    "photo": true,
+    "lbMin": 4238,
+    "lbMax": 4238,
+    "lbThird": false
    },
    {
     "name": "Laredo X 4x4",
     "drive": [],
     "msrp": 43415,
-    "photo": true
+    "photo": true,
+    "lbMin": 4365,
+    "lbMax": 4365,
+    "lbThird": false
    },
    {
     "name": "Limited 4x2",
     "drive": [],
     "msrp": 44320,
-    "photo": true
+    "photo": true,
+    "lbMin": 4266,
+    "lbMax": 4266,
+    "lbThird": false
    },
    {
     "name": "Limited 4x4",
     "drive": [],
     "msrp": 46320,
-    "photo": true
+    "photo": true,
+    "lbMin": 4413,
+    "lbMax": 4413,
+    "lbThird": false
    },
    {
     "name": "Limited Reserve 4x4",
     "drive": [],
     "msrp": 51915,
-    "photo": true
+    "photo": true,
+    "lbMin": 4413,
+    "lbMax": 4413,
+    "lbThird": false
    },
    {
     "name": "Summit 4x4",
     "drive": [],
     "msrp": 60600,
-    "photo": true
+    "photo": true,
+    "lbMin": 4784,
+    "lbMax": 4784,
+    "lbThird": false
    }
   ],
   "msrpFrom": 38920,
@@ -3155,115 +3971,172 @@
     "name": "Grand Wagoneer 4x2",
     "drive": [],
     "msrp": 63995,
-    "photo": true
+    "photo": true,
+    "lbMin": 5730,
+    "lbMax": 5730,
+    "lbThird": false
    },
    {
     "name": "Grand Wagoneer 4x4",
     "drive": [],
     "msrp": 66995,
-    "photo": true
+    "photo": true,
+    "lbMin": 5940,
+    "lbMax": 5940,
+    "lbThird": false
    },
    {
     "name": "85th Anniversary Edition 4x4",
     "drive": [],
     "msrp": 75990,
-    "photo": true
+    "photo": true,
+    "lbMin": 5940,
+    "lbMax": 5940,
+    "lbThird": false
    },
    {
     "name": "L 4x2",
     "drive": [],
     "msrp": 66995,
-    "photo": true
+    "photo": true,
+    "lbMin": 5980,
+    "lbMax": 5980,
+    "lbThird": false
    },
    {
     "name": "L 4x4",
     "drive": [],
     "msrp": 69995,
-    "photo": true
+    "photo": true,
+    "lbMin": 6185,
+    "lbMax": 6185,
+    "lbThird": false
    },
    {
     "name": "L 85th Anniversary Edition 4x4",
     "drive": [],
     "msrp": 78990,
-    "photo": true
+    "photo": true,
+    "lbMin": 6185,
+    "lbMax": 6185,
+    "lbThird": false
    },
    {
     "name": "L Limited 4x4",
     "drive": [],
     "msrp": 75060,
-    "photo": true
+    "photo": true,
+    "lbMin": 6285,
+    "lbMax": 6285,
+    "lbThird": false
    },
    {
     "name": "L Limited Altitude 4x4",
     "drive": [],
     "msrp": 75060,
-    "photo": true
+    "photo": true,
+    "lbMin": 6285,
+    "lbMax": 6285,
+    "lbThird": false
    },
    {
     "name": "L Limited Reserve 4x4",
     "drive": [],
     "msrp": 82960,
-    "photo": true
+    "photo": true,
+    "lbMin": 6285,
+    "lbMax": 6285,
+    "lbThird": false
    },
    {
     "name": "L Summit 4x4",
     "drive": [],
     "msrp": 97310,
-    "photo": true
+    "photo": true,
+    "lbMin": 6444,
+    "lbMax": 6444,
+    "lbThird": false
    },
    {
     "name": "L Summit Obsidian 4x4",
     "drive": [],
     "msrp": 97310,
-    "photo": true
+    "photo": true,
+    "lbMin": 6444,
+    "lbMax": 6444,
+    "lbThird": false
    },
    {
     "name": "L Summit Reserve 4x4",
     "drive": [],
     "msrp": 103310,
-    "photo": true
+    "photo": true,
+    "lbMin": 6444,
+    "lbMax": 6444,
+    "lbThird": false
    },
    {
     "name": "Limited 4x4",
     "drive": [],
     "msrp": 72060,
-    "photo": true
+    "photo": true,
+    "lbMin": 6004,
+    "lbMax": 6004,
+    "lbThird": false
    },
    {
     "name": "Limited Altitude 4x4",
     "drive": [],
     "msrp": 72060,
-    "photo": true
+    "photo": true,
+    "lbMin": 6004,
+    "lbMax": 6004,
+    "lbThird": false
    },
    {
     "name": "Limited Reserve 4x4",
     "drive": [],
     "msrp": 79960,
-    "photo": true
+    "photo": true,
+    "lbMin": 6004,
+    "lbMax": 6004,
+    "lbThird": false
    },
    {
     "name": "Summit 4x4",
     "drive": [],
     "msrp": 94310,
-    "photo": true
+    "photo": true,
+    "lbMin": 6175,
+    "lbMax": 6175,
+    "lbThird": false
    },
    {
     "name": "Summit Obsidian 4x4",
     "drive": [],
     "msrp": 94310,
-    "photo": true
+    "photo": true,
+    "lbMin": 6175,
+    "lbMax": 6175,
+    "lbThird": false
    },
    {
     "name": "Summit Reserve 4x4",
     "drive": [],
     "msrp": 100310,
-    "photo": true
+    "photo": true,
+    "lbMin": 6175,
+    "lbMax": 6175,
+    "lbThird": false
    },
    {
     "name": "Upland 4x4",
     "drive": [],
     "msrp": 73060,
-    "photo": true
+    "photo": true,
+    "lbMin": 5940,
+    "lbMax": 5940,
+    "lbThird": false
    }
   ],
   "msrpFrom": 63995,
@@ -3285,7 +4158,10 @@
     "name": "Moab",
     "drive": [],
     "msrp": 65000,
-    "photo": true
+    "photo": true,
+    "lbMin": 6112,
+    "lbMax": 6112,
+    "lbThird": false
    }
   ],
   "msrpFrom": 65000,
@@ -3307,97 +4183,145 @@
     "name": "2-Door Rubicon",
     "drive": [],
     "msrp": 46610,
-    "photo": true
+    "photo": true,
+    "lbMin": 4246,
+    "lbMax": 4246,
+    "lbThird": false
    },
    {
     "name": "2-Door Rubicon X",
     "drive": [],
     "msrp": 56560,
-    "photo": true
+    "photo": true,
+    "lbMin": 4309,
+    "lbMax": 4309,
+    "lbThird": false
    },
    {
     "name": "2-Door Sport",
     "drive": [],
     "msrp": 36035,
-    "photo": true
+    "photo": true,
+    "lbMin": 4012,
+    "lbMax": 4012,
+    "lbThird": false
    },
    {
     "name": "2-Door Sport S",
     "drive": [],
     "msrp": 39685,
-    "photo": true
+    "photo": true,
+    "lbMin": 4012,
+    "lbMax": 4012,
+    "lbThird": false
    },
    {
     "name": "2-Door Willys",
     "drive": [],
     "msrp": 43755,
-    "photo": true
+    "photo": true,
+    "lbMin": 4012,
+    "lbMax": 4012,
+    "lbThird": false
    },
    {
     "name": "4-Door 85th Anniversary Edition",
     "drive": [],
     "msrp": 47240,
-    "photo": true
+    "photo": true,
+    "lbMin": 4297,
+    "lbMax": 4297,
+    "lbThird": false
    },
    {
     "name": "4-Door Moab 392",
     "drive": [],
     "msrp": 79995,
-    "photo": true
+    "photo": true,
+    "lbMin": 5268,
+    "lbMax": 5268,
+    "lbThird": false
    },
    {
     "name": "4-Door Rewind",
     "drive": [],
     "msrp": 48435,
-    "photo": true
+    "photo": true,
+    "lbMin": 4251,
+    "lbMax": 4251,
+    "lbThird": false
    },
    {
     "name": "4-Door Rubicon",
     "drive": [],
     "msrp": 50535,
-    "photo": true
+    "photo": true,
+    "lbMin": 4594,
+    "lbMax": 4594,
+    "lbThird": false
    },
    {
     "name": "4-Door Rubicon X",
     "drive": [],
     "msrp": 61230,
-    "photo": true
+    "photo": true,
+    "lbMin": 4594,
+    "lbMax": 4594,
+    "lbThird": false
    },
    {
     "name": "4-Door Sahara",
     "drive": [],
     "msrp": 48910,
-    "photo": true
+    "photo": true,
+    "lbMin": 4481,
+    "lbMax": 4481,
+    "lbThird": false
    },
    {
     "name": "4-Door Sport",
     "drive": [],
     "msrp": 39040,
-    "photo": true
+    "photo": true,
+    "lbMin": 4251,
+    "lbMax": 4251,
+    "lbThird": false
    },
    {
     "name": "4-Door Sport S",
     "drive": [],
     "msrp": 41440,
-    "photo": true
+    "photo": true,
+    "lbMin": 4251,
+    "lbMax": 4251,
+    "lbThird": false
    },
    {
     "name": "4-Door Willys",
     "drive": [],
     "msrp": 45635,
-    "photo": true
+    "photo": true,
+    "lbMin": 4251,
+    "lbMax": 4251,
+    "lbThird": false
    },
    {
     "name": "4-Door Willys '41",
     "drive": [],
     "msrp": 49335,
-    "photo": true
+    "photo": true,
+    "lbMin": 4280,
+    "lbMax": 4280,
+    "lbThird": false
    },
    {
     "name": "4-Door Willys 392",
     "drive": [],
     "msrp": 69995,
-    "photo": true
+    "photo": true,
+    "lbMin": 5268,
+    "lbMax": 5268,
+    "lbThird": false
    }
   ],
   "msrpFrom": 36035,
@@ -3421,7 +4345,10 @@
      "FWD"
     ],
     "msrp": 41690,
-    "photo": true
+    "photo": true,
+    "lbMin": 4678,
+    "lbMax": 4725,
+    "lbThird": false
    },
    {
     "name": "LX",
@@ -3429,7 +4356,10 @@
      "FWD"
     ],
     "msrp": 37490,
-    "photo": true
+    "photo": true,
+    "lbMin": 4555,
+    "lbMax": 4555,
+    "lbThird": false
    },
    {
     "name": "LXS",
@@ -3437,7 +4367,10 @@
      "FWD"
     ],
     "msrp": 39490,
-    "photo": true
+    "photo": true,
+    "lbMin": 4630,
+    "lbMax": 4630,
+    "lbThird": false
    },
    {
     "name": "SX",
@@ -3445,7 +4378,10 @@
      "FWD"
     ],
     "msrp": 46590,
-    "photo": true
+    "photo": true,
+    "lbMin": 4762,
+    "lbMax": 4824,
+    "lbThird": false
    },
    {
     "name": "SX Prestige",
@@ -3453,7 +4389,10 @@
      "FWD"
     ],
     "msrp": 51590,
-    "photo": true
+    "photo": true,
+    "lbMin": 4720,
+    "lbMax": 4771,
+    "lbThird": false
    }
   ],
   "msrpFrom": 37490,
@@ -3477,7 +4416,10 @@
      "FWD"
     ],
     "msrp": 43690,
-    "photo": true
+    "photo": true,
+    "lbMin": 4804,
+    "lbMax": 4852,
+    "lbThird": false
    },
    {
     "name": "LXS",
@@ -3485,7 +4427,10 @@
      "FWD"
     ],
     "msrp": 41490,
-    "photo": true
+    "photo": true,
+    "lbMin": 4852,
+    "lbMax": 4852,
+    "lbThird": false
    },
    {
     "name": "SX",
@@ -3493,7 +4438,10 @@
      "FWD"
     ],
     "msrp": 48590,
-    "photo": true
+    "photo": true,
+    "lbMin": 4804,
+    "lbMax": 4852,
+    "lbThird": false
    },
    {
     "name": "SX Prestige",
@@ -3501,7 +4449,10 @@
      "FWD"
     ],
     "msrp": 53590,
-    "photo": true
+    "photo": true,
+    "lbMin": 4852,
+    "lbMax": 5053,
+    "lbThird": false
    }
   ],
   "msrpFrom": 41490,
@@ -3525,7 +4476,10 @@
      "AWD"
     ],
     "msrp": 45890,
-    "photo": true
+    "photo": true,
+    "lbMin": 4436,
+    "lbMax": 4453,
+    "lbThird": false
    },
    {
     "name": "GT-Line",
@@ -3533,7 +4487,10 @@
      "AWD"
     ],
     "msrp": 43490,
-    "photo": true
+    "photo": true,
+    "lbMin": 4332,
+    "lbMax": 4453,
+    "lbThird": false
    },
    {
     "name": "Land",
@@ -3542,7 +4499,10 @@
      "FWD"
     ],
     "msrp": 38490,
-    "photo": true
+    "photo": true,
+    "lbMin": 4048,
+    "lbMax": 4453,
+    "lbThird": false
    },
    {
     "name": "Light",
@@ -3550,7 +4510,10 @@
      "FWD"
     ],
     "msrp": 29890,
-    "photo": true
+    "photo": true,
+    "lbMin": 3836,
+    "lbMax": 4008,
+    "lbThird": false
    },
    {
     "name": "Wind",
@@ -3559,7 +4522,10 @@
      "FWD"
     ],
     "msrp": 34990,
-    "photo": true
+    "photo": true,
+    "lbMin": 4048,
+    "lbMax": 4453,
+    "lbThird": false
    }
   ],
   "msrpFrom": 29890,
@@ -3584,7 +4550,10 @@
      "RWD"
     ],
     "msrp": 48700,
-    "photo": true
+    "photo": true,
+    "lbMin": 4398,
+    "lbMax": 4751,
+    "lbThird": false
    },
    {
     "name": "Light",
@@ -3592,7 +4561,10 @@
      "RWD"
     ],
     "msrp": 37900,
-    "photo": true
+    "photo": true,
+    "lbMin": 4132,
+    "lbMax": 4145,
+    "lbThird": false
    },
    {
     "name": "Light Long Range",
@@ -3601,7 +4573,10 @@
      "RWD"
     ],
     "msrp": 41200,
-    "photo": true
+    "photo": true,
+    "lbMin": 4398,
+    "lbMax": 4751,
+    "lbThird": false
    },
    {
     "name": "Wind",
@@ -3610,7 +4585,10 @@
      "RWD"
     ],
     "msrp": 44800,
-    "photo": true
+    "photo": true,
+    "lbMin": 4398,
+    "lbMax": 4751,
+    "lbThird": false
    }
   ],
   "msrpFrom": 37900,
@@ -3786,7 +4764,10 @@
      "FWD"
     ],
     "msrp": 33790,
-    "photo": true
+    "photo": true,
+    "lbMin": 3596,
+    "lbMax": 3596,
+    "lbThird": false
    },
    {
     "name": "GT-Line",
@@ -3795,7 +4776,10 @@
      "FWD"
     ],
     "msrp": 28690,
-    "photo": true
+    "photo": true,
+    "lbMin": 3291,
+    "lbMax": 3463,
+    "lbThird": false
    },
    {
     "name": "LXS",
@@ -3803,7 +4787,10 @@
      "FWD"
     ],
     "msrp": 27690,
-    "photo": true
+    "photo": true,
+    "lbMin": 3230,
+    "lbMax": 3230,
+    "lbThird": false
    }
   ],
   "msrpFrom": 27690,
@@ -3827,7 +4814,10 @@
      "FWD"
     ],
     "msrp": 31390,
-    "photo": true
+    "photo": true,
+    "lbMin": 3208,
+    "lbMax": 3362,
+    "lbThird": false
    },
    {
     "name": "LX",
@@ -3835,7 +4825,10 @@
      "FWD"
     ],
     "msrp": 29890,
-    "photo": true
+    "photo": true,
+    "lbMin": 3208,
+    "lbMax": 3362,
+    "lbThird": false
    },
    {
     "name": "S",
@@ -3843,7 +4836,10 @@
      "FWD"
     ],
     "msrp": 30590,
-    "photo": true
+    "photo": true,
+    "lbMin": 3208,
+    "lbMax": 3362,
+    "lbThird": false
    },
    {
     "name": "SX",
@@ -3851,7 +4847,10 @@
      "FWD"
     ],
     "msrp": 35440,
-    "photo": true
+    "photo": true,
+    "lbMin": 3208,
+    "lbMax": 3362,
+    "lbThird": false
    },
    {
     "name": "SX Touring",
@@ -3859,7 +4858,10 @@
      "FWD"
     ],
     "msrp": 38990,
-    "photo": true
+    "photo": true,
+    "lbMin": 3208,
+    "lbMax": 3362,
+    "lbThird": false
    }
   ],
   "msrpFrom": 29890,
@@ -3883,7 +4885,10 @@
      "FWD"
     ],
     "msrp": 44700,
-    "photo": true
+    "photo": true,
+    "lbMin": 3721,
+    "lbMax": 3803,
+    "lbThird": false
    },
    {
     "name": "Wind",
@@ -3891,7 +4896,10 @@
      "FWD"
     ],
     "msrp": 39700,
-    "photo": true
+    "photo": true,
+    "lbMin": 3721,
+    "lbMax": 3803,
+    "lbThird": false
    }
   ],
   "msrpFrom": 39700,
@@ -3916,7 +4924,10 @@
      "FWD"
     ],
     "msrp": 28390,
-    "photo": true
+    "photo": true,
+    "lbMin": 3109,
+    "lbMax": 3583,
+    "lbThird": false
    },
    {
     "name": "LX",
@@ -3925,7 +4936,10 @@
      "FWD"
     ],
     "msrp": 24990,
-    "photo": true
+    "photo": true,
+    "lbMin": 3109,
+    "lbMax": 3583,
+    "lbThird": false
    },
    {
     "name": "S",
@@ -3934,7 +4948,10 @@
      "FWD"
     ],
     "msrp": 26390,
-    "photo": true
+    "photo": true,
+    "lbMin": 3109,
+    "lbMax": 3583,
+    "lbThird": false
    },
    {
     "name": "X-Line S",
@@ -3942,7 +4959,10 @@
      "AWD"
     ],
     "msrp": 28990,
-    "photo": true
+    "photo": true,
+    "lbMin": 3318,
+    "lbMax": 3583,
+    "lbThird": false
    },
    {
     "name": "X-Line SX",
@@ -3950,7 +4970,10 @@
      "AWD"
     ],
     "msrp": 32790,
-    "photo": true
+    "photo": true,
+    "lbMin": 3549,
+    "lbMax": 3715,
+    "lbThird": false
    }
   ],
   "msrpFrom": 24990,
@@ -4089,7 +5112,10 @@
      "AWD"
     ],
     "msrp": 48290,
-    "photo": true
+    "photo": true,
+    "lbMin": 4550,
+    "lbMax": 4652,
+    "lbThird": false
    },
    {
     "name": "X-Line SX Prestige AWD",
@@ -4097,7 +5123,10 @@
      "AWD"
     ],
     "msrp": 53490,
-    "photo": true
+    "photo": true,
+    "lbMin": 4652,
+    "lbMax": 4652,
+    "lbThird": false
    }
   ],
   "msrpFrom": 48290,
@@ -4122,7 +5151,10 @@
      "FWD"
     ],
     "msrp": 30790,
-    "photo": true
+    "photo": true,
+    "lbMin": 3434,
+    "lbMax": 3603,
+    "lbThird": false
    },
    {
     "name": "LX",
@@ -4131,7 +5163,10 @@
      "FWD"
     ],
     "msrp": 28990,
-    "photo": true
+    "photo": true,
+    "lbMin": 3434,
+    "lbMax": 3603,
+    "lbThird": false
    },
    {
     "name": "SX",
@@ -4139,7 +5174,10 @@
      "FWD"
     ],
     "msrp": 34590,
-    "photo": true
+    "photo": true,
+    "lbMin": 3434,
+    "lbMax": 3434,
+    "lbThird": false
    },
    {
     "name": "SX Prestige",
@@ -4148,7 +5186,10 @@
      "FWD"
     ],
     "msrp": 36590,
-    "photo": true
+    "photo": true,
+    "lbMin": 3434,
+    "lbMax": 3603,
+    "lbThird": false
    },
    {
     "name": "X-Line",
@@ -4156,7 +5197,10 @@
      "AWD"
     ],
     "msrp": 34790,
-    "photo": true
+    "photo": true,
+    "lbMin": 3603,
+    "lbMax": 3603,
+    "lbThird": false
    },
    {
     "name": "X-Pro Prestige",
@@ -4164,7 +5208,10 @@
      "AWD"
     ],
     "msrp": 39890,
-    "photo": true
+    "photo": true,
+    "lbMin": 3603,
+    "lbMax": 3603,
+    "lbThird": false
    }
   ],
   "msrpFrom": 28990,
@@ -4189,7 +5236,10 @@
      "FWD"
     ],
     "msrp": 32290,
-    "photo": true
+    "photo": true,
+    "lbMin": 3598,
+    "lbMax": 3803,
+    "lbThird": false
    },
    {
     "name": "LX",
@@ -4197,7 +5247,10 @@
      "FWD"
     ],
     "msrp": 30590,
-    "photo": true
+    "photo": true,
+    "lbMin": 3598,
+    "lbMax": 3598,
+    "lbThird": false
    },
    {
     "name": "S",
@@ -4206,7 +5259,10 @@
      "FWD"
     ],
     "msrp": 31290,
-    "photo": true
+    "photo": true,
+    "lbMin": 3598,
+    "lbMax": 3803,
+    "lbThird": false
    },
    {
     "name": "SX Prestige",
@@ -4214,7 +5270,10 @@
      "AWD"
     ],
     "msrp": 40690,
-    "photo": true
+    "photo": true,
+    "lbMin": 3803,
+    "lbMax": 3803,
+    "lbThird": false
    },
    {
     "name": "X-Line",
@@ -4222,7 +5281,10 @@
      "AWD"
     ],
     "msrp": 35790,
-    "photo": true
+    "photo": true,
+    "lbMin": 3803,
+    "lbMax": 3803,
+    "lbThird": false
    }
   ],
   "msrpFrom": 30590,
@@ -4246,7 +5308,10 @@
      "AWD"
     ],
     "msrp": 40590,
-    "photo": true
+    "photo": true,
+    "lbMin": 4226,
+    "lbMax": 4226,
+    "lbThird": false
    },
    {
     "name": "X-Line Prestige",
@@ -4254,7 +5319,10 @@
      "AWD"
     ],
     "msrp": 47390,
-    "photo": true
+    "photo": true,
+    "lbMin": 4226,
+    "lbMax": 4226,
+    "lbThird": false
    }
   ],
   "msrpFrom": 40590,
@@ -4279,7 +5347,10 @@
      "FWD"
     ],
     "msrp": 43790,
-    "photo": true
+    "photo": true,
+    "lbMin": 4467,
+    "lbMax": 4645,
+    "lbThird": false
    },
    {
     "name": "LX",
@@ -4287,7 +5358,10 @@
      "FWD"
     ],
     "msrp": 39190,
-    "photo": true
+    "photo": true,
+    "lbMin": 4381,
+    "lbMax": 4420,
+    "lbThird": false
    },
    {
     "name": "S",
@@ -4296,7 +5370,10 @@
      "FWD"
     ],
     "msrp": 42090,
-    "photo": true
+    "photo": true,
+    "lbMin": 4433,
+    "lbMax": 4713,
+    "lbThird": false
    },
    {
     "name": "SX",
@@ -4304,7 +5381,10 @@
      "FWD"
     ],
     "msrp": 48790,
-    "photo": true
+    "photo": true,
+    "lbMin": 4433,
+    "lbMax": 4550,
+    "lbThird": false
    },
    {
     "name": "SX Prestige",
@@ -4312,7 +5392,10 @@
      "AWD"
     ],
     "msrp": 53890,
-    "photo": true
+    "photo": true,
+    "lbMin": 4572,
+    "lbMax": 4713,
+    "lbThird": false
    },
    {
     "name": "X-Line EX",
@@ -4320,7 +5403,10 @@
      "AWD"
     ],
     "msrp": 47290,
-    "photo": true
+    "photo": true,
+    "lbMin": 4619,
+    "lbMax": 4744,
+    "lbThird": false
    },
    {
     "name": "X-Line SX",
@@ -4328,7 +5414,10 @@
      "AWD"
     ],
     "msrp": 51790,
-    "photo": true
+    "photo": true,
+    "lbMin": 4619,
+    "lbMax": 4744,
+    "lbThird": false
    },
    {
     "name": "X-Line SX Prestige",
@@ -4336,7 +5425,10 @@
      "AWD"
     ],
     "msrp": 54890,
-    "photo": true
+    "photo": true,
+    "lbMin": 4619,
+    "lbMax": 4744,
+    "lbThird": false
    },
    {
     "name": "X-Pro SX",
@@ -4344,7 +5436,10 @@
      "AWD"
     ],
     "msrp": 53690,
-    "photo": true
+    "photo": true,
+    "lbMin": 4729,
+    "lbMax": 4736,
+    "lbThird": false
    },
    {
     "name": "X-Pro SX Prestige",
@@ -4352,7 +5447,10 @@
      "AWD"
     ],
     "msrp": 56790,
-    "photo": true
+    "photo": true,
+    "lbMin": 4729,
+    "lbMax": 4736,
+    "lbThird": false
    }
   ],
   "msrpFrom": 39190,
@@ -4377,7 +5475,10 @@
      "FWD"
     ],
     "msrp": 46490,
-    "photo": true
+    "photo": true,
+    "lbMin": 4661,
+    "lbMax": 4846,
+    "lbThird": false
    },
    {
     "name": "SX",
@@ -4385,7 +5486,10 @@
      "FWD"
     ],
     "msrp": 51490,
-    "photo": true
+    "photo": true,
+    "lbMin": 4747,
+    "lbMax": 4786,
+    "lbThird": false
    },
    {
     "name": "SX Prestige",
@@ -4393,7 +5497,10 @@
      "AWD"
     ],
     "msrp": 56590,
-    "photo": true
+    "photo": true,
+    "lbMin": 4923,
+    "lbMax": 5042,
+    "lbThird": false
    },
    {
     "name": "X-Line SX",
@@ -4401,7 +5508,10 @@
      "AWD"
     ],
     "msrp": 54490,
-    "photo": true
+    "photo": true,
+    "lbMin": 4912,
+    "lbMax": 5062,
+    "lbThird": false
    },
    {
     "name": "X-Line SX Prestige",
@@ -4409,7 +5519,10 @@
      "AWD"
     ],
     "msrp": 57590,
-    "photo": true
+    "photo": true,
+    "lbMin": 4912,
+    "lbMax": 5062,
+    "lbThird": false
    }
   ],
   "msrpFrom": 46490,
@@ -4431,49 +5544,73 @@
     "name": "2.5 S",
     "drive": [],
     "msrp": 26375,
-    "photo": true
+    "photo": true,
+    "lbMin": 3395,
+    "lbMax": 3395,
+    "lbThird": false
    },
    {
     "name": "2.5 S Aire Edition",
     "drive": [],
     "msrp": 30250,
-    "photo": true
+    "photo": true,
+    "lbMin": 3395,
+    "lbMax": 3395,
+    "lbThird": false
    },
    {
     "name": "2.5 S Carbon Edition",
     "drive": [],
     "msrp": 31430,
-    "photo": true
+    "photo": true,
+    "lbMin": 3395,
+    "lbMax": 3395,
+    "lbThird": false
    },
    {
     "name": "2.5 S Preferred",
     "drive": [],
     "msrp": 29690,
-    "photo": true
+    "photo": true,
+    "lbMin": 3395,
+    "lbMax": 3395,
+    "lbThird": false
    },
    {
     "name": "2.5 S Premium",
     "drive": [],
     "msrp": 33640,
-    "photo": true
+    "photo": true,
+    "lbMin": 3395,
+    "lbMax": 3395,
+    "lbThird": false
    },
    {
     "name": "2.5 S Select Sport",
     "drive": [],
     "msrp": 28060,
-    "photo": true
+    "photo": true,
+    "lbMin": 3395,
+    "lbMax": 3395,
+    "lbThird": false
    },
    {
     "name": "2.5 Turbo Aire Edition",
     "drive": [],
     "msrp": 34410,
-    "photo": true
+    "photo": true,
+    "lbMin": 3527,
+    "lbMax": 3527,
+    "lbThird": false
    },
    {
     "name": "2.5 Turbo Premium Plus",
     "drive": [],
     "msrp": 37900,
-    "photo": true
+    "photo": true,
+    "lbMin": 3527,
+    "lbMax": 3527,
+    "lbThird": false
    }
   ],
   "msrpFrom": 26375,
@@ -4543,61 +5680,91 @@
     "name": "2.5 S Meridian Edition",
     "drive": [],
     "msrp": 33150,
-    "photo": true
+    "photo": true,
+    "lbMin": 3741,
+    "lbMax": 3741,
+    "lbThird": false
    },
    {
     "name": "2.5 S Preferred",
     "drive": [],
     "msrp": 32400,
-    "photo": true
+    "photo": true,
+    "lbMin": 3741,
+    "lbMax": 3741,
+    "lbThird": false
    },
    {
     "name": "2.5 S Premium",
     "drive": [],
     "msrp": 34900,
-    "photo": true
+    "photo": true,
+    "lbMin": 3741,
+    "lbMax": 3741,
+    "lbThird": false
    },
    {
     "name": "2.5 S Select",
     "drive": [],
     "msrp": 29900,
-    "photo": true
+    "photo": true,
+    "lbMin": 3741,
+    "lbMax": 3741,
+    "lbThird": false
    },
    {
     "name": "2.5 Turbo",
     "drive": [],
     "msrp": 37900,
-    "photo": true
+    "photo": true,
+    "lbMin": 3915,
+    "lbMax": 3915,
+    "lbThird": false
    },
    {
     "name": "2.5 Turbo Meridian Edition",
     "drive": [],
     "msrp": 40400,
-    "photo": true
+    "photo": true,
+    "lbMin": 3915,
+    "lbMax": 3915,
+    "lbThird": false
    },
    {
     "name": "2.5 Turbo Premium Plus",
     "drive": [],
     "msrp": 42900,
-    "photo": true
+    "photo": true,
+    "lbMin": 3915,
+    "lbMax": 3915,
+    "lbThird": false
    },
    {
     "name": "Hybrid Preferred",
     "drive": [],
     "msrp": 34750,
-    "photo": true
+    "photo": true,
+    "lbMin": 4008,
+    "lbMax": 4008,
+    "lbThird": false
    },
    {
     "name": "Hybrid Premium",
     "drive": [],
     "msrp": 38150,
-    "photo": true
+    "photo": true,
+    "lbMin": 4008,
+    "lbMax": 4008,
+    "lbThird": false
    },
    {
     "name": "Hybrid Premium Plus",
     "drive": [],
     "msrp": 40450,
-    "photo": true
+    "photo": true,
+    "lbMin": 4008,
+    "lbMax": 4008,
+    "lbThird": false
    }
   ],
   "msrpFrom": 29900,
@@ -4619,19 +5786,28 @@
     "name": "3.3 Turbo Preferred",
     "drive": [],
     "msrp": 42750,
-    "photo": true
+    "photo": true,
+    "lbMin": 4709,
+    "lbMax": 4709,
+    "lbThird": false
    },
    {
     "name": "3.3 Turbo Premium",
     "drive": [],
     "msrp": 46780,
-    "photo": true
+    "photo": true,
+    "lbMin": 4709,
+    "lbMax": 4709,
+    "lbThird": false
    },
    {
     "name": "3.3 Turbo Premium Plus",
     "drive": [],
     "msrp": 49570,
-    "photo": true
+    "photo": true,
+    "lbMin": 4709,
+    "lbMax": 4709,
+    "lbThird": false
    },
    {
     "name": "3.3 Turbo S Premium",
@@ -4639,13 +5815,19 @@
      "AWD"
     ],
     "msrp": 53440,
-    "photo": true
+    "photo": true,
+    "lbMin": 4863,
+    "lbMax": 4863,
+    "lbThird": false
    },
    {
     "name": "3.3 Turbo S Premium Plus",
     "drive": [],
     "msrp": 56870,
-    "photo": true
+    "photo": true,
+    "lbMin": 4863,
+    "lbMax": 4863,
+    "lbThird": false
    },
    {
     "name": "PHEV SC",
@@ -4723,19 +5905,28 @@
      "AWD"
     ],
     "msrp": 50695,
-    "photo": true
+    "photo": true,
+    "lbMin": 5243,
+    "lbMax": 5243,
+    "lbThird": false
    },
    {
     "name": "PHEV Premium Plus",
     "drive": [],
     "msrp": 58700,
-    "photo": true
+    "photo": true,
+    "lbMin": 5243,
+    "lbMax": 5243,
+    "lbThird": false
    },
    {
     "name": "PHEV Premium Sport",
     "drive": [],
     "msrp": 55500,
-    "photo": true
+    "photo": true,
+    "lbMin": 5243,
+    "lbMax": 5243,
+    "lbThird": false
    }
   ],
   "msrpFrom": 39300,
@@ -4757,7 +5948,10 @@
     "name": "2.5 S",
     "drive": [],
     "msrp": 24650,
-    "photo": true
+    "photo": true,
+    "lbMin": 3111,
+    "lbMax": 3117,
+    "lbThird": false
    },
    {
     "name": "2.5 S Carbon Edition",
@@ -4765,25 +5959,37 @@
      "AWD"
     ],
     "msrp": 29815,
-    "photo": true
+    "photo": true,
+    "lbMin": 3247,
+    "lbMax": 3283,
+    "lbThird": false
    },
    {
     "name": "2.5 S Preferred",
     "drive": [],
     "msrp": 27290,
-    "photo": true
+    "photo": true,
+    "lbMin": 3111,
+    "lbMax": 3117,
+    "lbThird": false
    },
    {
     "name": "2.5 S Premium",
     "drive": [],
     "msrp": 31650,
-    "photo": true
+    "photo": true,
+    "lbMin": 3058,
+    "lbMax": 3058,
+    "lbThird": false
    },
    {
     "name": "2.5 S Select Sport",
     "drive": [],
     "msrp": 25540,
-    "photo": true
+    "photo": true,
+    "lbMin": 3111,
+    "lbMax": 3117,
+    "lbThird": false
    },
    {
     "name": "2.5 Turbo Premium Plus",
@@ -4791,7 +5997,10 @@
      "AWD"
     ],
     "msrp": 36940,
-    "photo": true
+    "photo": true,
+    "lbMin": 3413,
+    "lbMax": 3417,
+    "lbThird": false
    }
   ],
   "msrpFrom": 24650,
@@ -4813,19 +6022,28 @@
     "name": "Club",
     "drive": [],
     "msrp": 34230,
-    "photo": true
+    "photo": true,
+    "lbMin": 2366,
+    "lbMax": 2467,
+    "lbThird": false
    },
    {
     "name": "Grand Touring",
     "drive": [],
     "msrp": 36030,
-    "photo": true
+    "photo": true,
+    "lbMin": 2366,
+    "lbMax": 2513,
+    "lbThird": false
    },
    {
     "name": "Sport",
     "drive": [],
     "msrp": 30730,
-    "photo": true
+    "photo": true,
+    "lbMin": 2366,
+    "lbMax": 2366,
+    "lbThird": false
    }
   ],
   "msrpFrom": 30730,
@@ -4849,7 +6067,10 @@
      "FWD"
     ],
     "msrp": 28980,
-    "photo": true
+    "photo": true,
+    "lbMin": 3322,
+    "lbMax": 3322,
+    "lbThird": false
    },
    {
     "name": "SR Intelligent AWD",
@@ -4857,7 +6078,10 @@
      "AWD"
     ],
     "msrp": 30480,
-    "photo": true
+    "photo": true,
+    "lbMin": 3440,
+    "lbMax": 3440,
+    "lbThird": false
    },
    {
     "name": "SR Midnight Edition FWD",
@@ -4865,7 +6089,10 @@
      "FWD"
     ],
     "msrp": 30980,
-    "photo": true
+    "photo": true,
+    "lbMin": 3322,
+    "lbMax": 3322,
+    "lbThird": false
    },
    {
     "name": "SR Midnight Edition Intelligent AWD",
@@ -4873,7 +6100,10 @@
      "AWD"
     ],
     "msrp": 32480,
-    "photo": true
+    "photo": true,
+    "lbMin": 3440,
+    "lbMax": 3440,
+    "lbThird": false
    },
    {
     "name": "SV FWD",
@@ -4881,7 +6111,10 @@
      "FWD"
     ],
     "msrp": 27580,
-    "photo": true
+    "photo": true,
+    "lbMin": 3281,
+    "lbMax": 3281,
+    "lbThird": false
    },
    {
     "name": "SV Intelligent AWD",
@@ -4889,7 +6122,10 @@
      "AWD"
     ],
     "msrp": 29080,
-    "photo": true
+    "photo": true,
+    "lbMin": 3399,
+    "lbMax": 3399,
+    "lbThird": false
    },
    {
     "name": "SV Special Edition FWD",
@@ -4897,7 +6133,10 @@
      "FWD"
     ],
     "msrp": 28880,
-    "photo": true
+    "photo": true,
+    "lbMin": 3281,
+    "lbMax": 3281,
+    "lbThird": false
    },
    {
     "name": "SV Special Edition Intelligent AWD",
@@ -4905,7 +6144,10 @@
      "AWD"
     ],
     "msrp": 30380,
-    "photo": true
+    "photo": true,
+    "lbMin": 3399,
+    "lbMax": 3399,
+    "lbThird": false
    }
   ],
   "msrpFrom": 27580,
@@ -4930,7 +6172,10 @@
      "4WD"
     ],
     "msrp": 80690,
-    "photo": true
+    "photo": true,
+    "lbMin": 6102,
+    "lbMax": 6102,
+    "lbThird": false
    },
    {
     "name": "Platinum Intelligent 4WD",
@@ -4938,7 +6183,10 @@
      "4WD"
     ],
     "msrp": 75790,
-    "photo": true
+    "photo": true,
+    "lbMin": 6005,
+    "lbMax": 6005,
+    "lbThird": false
    },
    {
     "name": "Platinum Reserve Intelligent 4WD",
@@ -4946,7 +6194,10 @@
      "4WD"
     ],
     "msrp": 84590,
-    "photo": true
+    "photo": true,
+    "lbMin": 6076,
+    "lbMax": 6076,
+    "lbThird": false
    },
    {
     "name": "PRO-4X Premium Intelligent 4WD",
@@ -4954,13 +6205,19 @@
      "4WD"
     ],
     "msrp": 78990,
-    "photo": true
+    "photo": true,
+    "lbMin": 6019,
+    "lbMax": 6019,
+    "lbThird": false
    },
    {
     "name": "SL 4x2",
     "drive": [],
     "msrp": 64290,
-    "photo": true
+    "photo": true,
+    "lbMin": 5710,
+    "lbMax": 5710,
+    "lbThird": false
    },
    {
     "name": "SL Intelligent 4WD",
@@ -4968,7 +6225,10 @@
      "4WD"
     ],
     "msrp": 67290,
-    "photo": true
+    "photo": true,
+    "lbMin": 5922,
+    "lbMax": 5922,
+    "lbThird": false
    }
   ],
   "msrpFrom": 64290,
@@ -4991,103 +6251,154 @@
     "name": "Crew Cab Dark Armor 4x2",
     "drive": [],
     "msrp": 36490,
-    "photo": true
+    "photo": true,
+    "lbMin": 4492,
+    "lbMax": 4492,
+    "lbThird": false
    },
    {
     "name": "Crew Cab Dark Armor 4x4",
     "drive": [],
     "msrp": 39790,
-    "photo": true
+    "photo": true,
+    "lbMin": 4657,
+    "lbMax": 4657,
+    "lbThird": false
    },
    {
     "name": "Crew Cab Dark Armor Long Bed 4x2",
     "drive": [],
     "msrp": 36990,
-    "photo": true
+    "photo": true,
+    "lbMin": 4557,
+    "lbMax": 4557,
+    "lbThird": false
    },
    {
     "name": "Crew Cab Dark Armor Long Bed 4x4",
     "drive": [],
     "msrp": 40290,
-    "photo": true
+    "photo": true,
+    "lbMin": 4758,
+    "lbMax": 4758,
+    "lbThird": false
    },
    {
     "name": "Crew Cab PRO-4X 4x4",
     "drive": [],
     "msrp": 42190,
-    "photo": true
+    "photo": true,
+    "lbMin": 4763,
+    "lbMax": 4763,
+    "lbThird": false
    },
    {
     "name": "Crew Cab PRO-4X Long Bed 4x4",
     "drive": [],
     "msrp": 42690,
-    "photo": true
+    "photo": true,
+    "lbMin": 4763,
+    "lbMax": 4763,
+    "lbThird": false
    },
    {
     "name": "Crew Cab PRO-X 4x2",
     "drive": [],
     "msrp": 38890,
-    "photo": true
+    "photo": true,
+    "lbMin": 4561,
+    "lbMax": 4561,
+    "lbThird": false
    },
    {
     "name": "Crew Cab S 4x2",
     "drive": [],
     "msrp": 33890,
-    "photo": true
+    "photo": true,
+    "lbMin": 4466,
+    "lbMax": 4466,
+    "lbThird": false
    },
    {
     "name": "Crew Cab S 4x4",
     "drive": [],
     "msrp": 36890,
-    "photo": true
+    "photo": true,
+    "lbMin": 4627,
+    "lbMax": 4627,
+    "lbThird": false
    },
    {
     "name": "Crew Cab Sport Edition 4x2",
     "drive": [],
     "msrp": 37480,
-    "photo": true
+    "photo": true,
+    "lbMin": 4492,
+    "lbMax": 4492,
+    "lbThird": false
    },
    {
     "name": "Crew Cab Sport Edition 4x4",
     "drive": [],
     "msrp": 40780,
-    "photo": true
+    "photo": true,
+    "lbMin": 4657,
+    "lbMax": 4657,
+    "lbThird": false
    },
    {
     "name": "Crew Cab SV 4x2",
     "drive": [],
     "msrp": 36490,
-    "photo": true
+    "photo": true,
+    "lbMin": 4492,
+    "lbMax": 4492,
+    "lbThird": false
    },
    {
     "name": "Crew Cab SV 4x4",
     "drive": [],
     "msrp": 39790,
-    "photo": true
+    "photo": true,
+    "lbMin": 4657,
+    "lbMax": 4657,
+    "lbThird": false
    },
    {
     "name": "Crew Cab SV Long Bed 4x2",
     "drive": [],
     "msrp": 36990,
-    "photo": true
+    "photo": true,
+    "lbMin": 4557,
+    "lbMax": 4557,
+    "lbThird": false
    },
    {
     "name": "Crew Cab SV Long Bed 4x4",
     "drive": [],
     "msrp": 40290,
-    "photo": true
+    "photo": true,
+    "lbMin": 4758,
+    "lbMax": 4758,
+    "lbThird": false
    },
    {
     "name": "King Cab S 4x2",
     "drive": [],
     "msrp": 32490,
-    "photo": true
+    "photo": true,
+    "lbMin": 4385,
+    "lbMax": 4385,
+    "lbThird": false
    },
    {
     "name": "King Cab S 4x4",
     "drive": [],
     "msrp": 35490,
-    "photo": true
+    "photo": true,
+    "lbMin": 4534,
+    "lbMax": 4534,
+    "lbThird": false
    }
   ],
   "msrpFrom": 32490,
@@ -5112,7 +6423,10 @@
      "AWD"
     ],
     "msrp": 28840,
-    "photo": true
+    "photo": true,
+    "lbMin": 3226,
+    "lbMax": 3226,
+    "lbThird": false
    },
    {
     "name": "S FWD",
@@ -5120,7 +6434,10 @@
      "FWD"
     ],
     "msrp": 22790,
-    "photo": true
+    "photo": true,
+    "lbMin": 2994,
+    "lbMax": 2994,
+    "lbThird": false
    },
    {
     "name": "SR FWD",
@@ -5128,7 +6445,10 @@
      "FWD"
     ],
     "msrp": 27595,
-    "photo": true
+    "photo": true,
+    "lbMin": 3059,
+    "lbMax": 3059,
+    "lbThird": false
    },
    {
     "name": "SR Intelligent AWD",
@@ -5136,7 +6456,10 @@
      "AWD"
     ],
     "msrp": 29395,
-    "photo": true
+    "photo": true,
+    "lbMin": 3248,
+    "lbMax": 3248,
+    "lbThird": false
    },
    {
     "name": "SV FWD",
@@ -5144,7 +6467,10 @@
      "FWD"
     ],
     "msrp": 24490,
-    "photo": true
+    "photo": true,
+    "lbMin": 3017,
+    "lbMax": 3017,
+    "lbThird": false
    },
    {
     "name": "SV Intelligent AWD",
@@ -5152,7 +6478,10 @@
      "AWD"
     ],
     "msrp": 26490,
-    "photo": true
+    "photo": true,
+    "lbMin": 3226,
+    "lbMax": 3226,
+    "lbThird": false
    }
   ],
   "msrpFrom": 22790,
@@ -5177,7 +6506,10 @@
      "AWD"
     ],
     "msrp": 46990,
-    "photo": true
+    "photo": true,
+    "lbMin": 4352,
+    "lbMax": 4352,
+    "lbThird": false
    },
    {
     "name": "Platinum Intelligent AWD",
@@ -5185,7 +6517,10 @@
      "AWD"
     ],
     "msrp": 49790,
-    "photo": true
+    "photo": true,
+    "lbMin": 4386,
+    "lbMax": 4386,
+    "lbThird": false
    },
    {
     "name": "SL Intelligent AWD",
@@ -5193,7 +6528,10 @@
      "AWD"
     ],
     "msrp": 43990,
-    "photo": true
+    "photo": true,
+    "lbMin": 4290,
+    "lbMax": 4290,
+    "lbThird": false
    }
   ],
   "msrpFrom": 43990,
@@ -5217,7 +6555,10 @@
      "FWD"
     ],
     "msrp": 38990,
-    "photo": true
+    "photo": true,
+    "lbMin": 4393,
+    "lbMax": 4393,
+    "lbThird": false
    },
    {
     "name": "S+ 75 kWh lithium-ion battery",
@@ -5225,7 +6566,10 @@
      "FWD"
     ],
     "msrp": 29990,
-    "photo": true
+    "photo": true,
+    "lbMin": 4206,
+    "lbMax": 4206,
+    "lbThird": false
    },
    {
     "name": "SV+ 75 kWh lithium-ion battery",
@@ -5233,7 +6577,10 @@
      "FWD"
     ],
     "msrp": 34230,
-    "photo": true
+    "photo": true,
+    "lbMin": 4255,
+    "lbMax": 4255,
+    "lbThird": false
    }
   ],
   "msrpFrom": 29990,
@@ -5258,7 +6605,10 @@
      "RWD"
     ],
     "msrp": 67260,
-    "photo": true
+    "photo": true,
+    "lbMin": 3677,
+    "lbMax": 3677,
+    "lbThird": false
    },
    {
     "name": "NISMO Manual Transmission",
@@ -5266,7 +6616,10 @@
      "RWD"
     ],
     "msrp": 67260,
-    "photo": true
+    "photo": true,
+    "lbMin": 3624,
+    "lbMax": 3624,
+    "lbThird": false
    },
    {
     "name": "Performance Automatic Transmission",
@@ -5274,7 +6627,10 @@
      "RWD"
     ],
     "msrp": 54480,
-    "photo": true
+    "photo": true,
+    "lbMin": 3602,
+    "lbMax": 3602,
+    "lbThird": false
    },
    {
     "name": "Performance Manual Transmission",
@@ -5282,7 +6638,10 @@
      "RWD"
     ],
     "msrp": 54480,
-    "photo": true
+    "photo": true,
+    "lbMin": 3536,
+    "lbMax": 3536,
+    "lbThird": false
    },
    {
     "name": "Sport Automatic Transmission",
@@ -5290,7 +6649,10 @@
      "RWD"
     ],
     "msrp": 44480,
-    "photo": true
+    "photo": true,
+    "lbMin": 3549,
+    "lbMax": 3549,
+    "lbThird": false
    },
    {
     "name": "Sport Manual Transmission",
@@ -5298,7 +6660,10 @@
      "RWD"
     ],
     "msrp": 44480,
-    "photo": true
+    "photo": true,
+    "lbMin": 3486,
+    "lbMax": 3486,
+    "lbThird": false
    }
   ],
   "msrpFrom": 44480,
@@ -5320,7 +6685,10 @@
     "name": "Platinum 2WD",
     "drive": [],
     "msrp": 49790,
-    "photo": true
+    "photo": true,
+    "lbMin": 4489,
+    "lbMax": 4489,
+    "lbThird": false
    },
    {
     "name": "Platinum 4WD",
@@ -5328,7 +6696,10 @@
      "4WD"
     ],
     "msrp": 51790,
-    "photo": true
+    "photo": true,
+    "lbMin": 4641,
+    "lbMax": 4641,
+    "lbThird": false
    },
    {
     "name": "Rock Creek 4WD",
@@ -5336,13 +6707,19 @@
      "4WD"
     ],
     "msrp": 45090,
-    "photo": true
+    "photo": true,
+    "lbMin": 4579,
+    "lbMax": 4579,
+    "lbThird": false
    },
    {
     "name": "SL 2WD",
     "drive": [],
     "msrp": 42590,
-    "photo": true
+    "photo": true,
+    "lbMin": 4359,
+    "lbMax": 4359,
+    "lbThird": false
    },
    {
     "name": "SL 4WD",
@@ -5350,13 +6727,19 @@
      "4WD"
     ],
     "msrp": 44590,
-    "photo": true
+    "photo": true,
+    "lbMin": 4506,
+    "lbMax": 4506,
+    "lbThird": false
    },
    {
     "name": "SV 2WD",
     "drive": [],
     "msrp": 39990,
-    "photo": true
+    "photo": true,
+    "lbMin": 4348,
+    "lbMax": 4348,
+    "lbThird": false
    },
    {
     "name": "SV 4WD",
@@ -5364,7 +6747,10 @@
      "4WD"
     ],
     "msrp": 41990,
-    "photo": true
+    "photo": true,
+    "lbMin": 4495,
+    "lbMax": 4495,
+    "lbThird": false
    }
   ],
   "msrpFrom": 39990,
@@ -5388,7 +6774,10 @@
      "FWD"
     ],
     "msrp": 33540,
-    "photo": true
+    "photo": true,
+    "lbMin": 3534,
+    "lbMax": 3534,
+    "lbThird": false
    },
    {
     "name": "Dark Armor Intelligent AWD",
@@ -5396,7 +6785,10 @@
      "AWD"
     ],
     "msrp": 34940,
-    "photo": true
+    "photo": true,
+    "lbMin": 3657,
+    "lbMax": 3657,
+    "lbThird": false
    },
    {
     "name": "Platinum Intelligent AWD",
@@ -5404,7 +6796,10 @@
      "AWD"
     ],
     "msrp": 39790,
-    "photo": true
+    "photo": true,
+    "lbMin": 3691,
+    "lbMax": 3691,
+    "lbThird": false
    },
    {
     "name": "Rock Creek Intelligent AWD",
@@ -5412,7 +6807,10 @@
      "AWD"
     ],
     "msrp": 34590,
-    "photo": true
+    "photo": true,
+    "lbMin": 3652,
+    "lbMax": 3652,
+    "lbThird": false
    },
    {
     "name": "S FWD",
@@ -5420,7 +6818,10 @@
      "FWD"
     ],
     "msrp": 29690,
-    "photo": true
+    "photo": true,
+    "lbMin": 3444,
+    "lbMax": 3444,
+    "lbThird": false
    },
    {
     "name": "S Intelligent AWD",
@@ -5428,7 +6829,10 @@
      "AWD"
     ],
     "msrp": 31090,
-    "photo": true
+    "photo": true,
+    "lbMin": 3569,
+    "lbMax": 3569,
+    "lbThird": false
    },
    {
     "name": "SV FWD",
@@ -5436,7 +6840,10 @@
      "FWD"
     ],
     "msrp": 30690,
-    "photo": true
+    "photo": true,
+    "lbMin": 3478,
+    "lbMax": 3478,
+    "lbThird": false
    },
    {
     "name": "SV Intelligent AWD",
@@ -5444,7 +6851,10 @@
      "AWD"
     ],
     "msrp": 32090,
-    "photo": true
+    "photo": true,
+    "lbMin": 3601,
+    "lbMax": 3601,
+    "lbThird": false
    }
   ],
   "msrpFrom": 29690,
@@ -5468,7 +6878,10 @@
      "AWD"
     ],
     "msrp": 49990,
-    "photo": true
+    "photo": true,
+    "lbMin": 4751,
+    "lbMax": 4751,
+    "lbThird": false
    },
    {
     "name": "SL Intelligent AWD",
@@ -5476,7 +6889,10 @@
      "AWD"
     ],
     "msrp": 45990,
-    "photo": true
+    "photo": true,
+    "lbMin": 4674,
+    "lbMax": 4674,
+    "lbThird": false
    }
   ],
   "msrpFrom": 45990,
@@ -5501,7 +6917,10 @@
      "FWD"
     ],
     "msrp": 22990,
-    "photo": true
+    "photo": true,
+    "lbMin": 3097,
+    "lbMax": 3097,
+    "lbThird": false
    },
    {
     "name": "SL Xtronic CVT",
@@ -5509,7 +6928,10 @@
      "FWD"
     ],
     "msrp": 27990,
-    "photo": true
+    "photo": true,
+    "lbMin": 3177,
+    "lbMax": 3177,
+    "lbThird": false
    },
    {
     "name": "SR Midnight Edition Xtronic CVT",
@@ -5517,7 +6939,10 @@
      "FWD"
     ],
     "msrp": 25640,
-    "photo": true
+    "photo": true,
+    "lbMin": 3153,
+    "lbMax": 3153,
+    "lbThird": false
    },
    {
     "name": "SR Xtronic CVT",
@@ -5525,7 +6950,10 @@
      "FWD"
     ],
     "msrp": 24990,
-    "photo": true
+    "photo": true,
+    "lbMin": 3153,
+    "lbMax": 3153,
+    "lbThird": false
    },
    {
     "name": "SV Xtronic CVT",
@@ -5533,7 +6961,10 @@
      "FWD"
     ],
     "msrp": 23990,
-    "photo": true
+    "photo": true,
+    "lbMin": 3097,
+    "lbMax": 3097,
+    "lbThird": false
    }
   ],
   "msrpFrom": 22990,
@@ -5556,43 +6987,64 @@
     "name": "Limited 7-Passenger",
     "drive": [],
     "msrp": 47985,
-    "photo": true
+    "photo": true,
+    "lbMin": 4587,
+    "lbMax": 4587,
+    "lbThird": false
    },
    {
     "name": "Limited 8-Passenger",
     "drive": [],
     "msrp": 47985,
-    "photo": true
+    "photo": true,
+    "lbMin": 4603,
+    "lbMax": 4603,
+    "lbThird": false
    },
    {
     "name": "Limited Bronze Edition 7-Passenger",
     "drive": [],
     "msrp": 49095,
-    "photo": true
+    "photo": true,
+    "lbMin": 4587,
+    "lbMax": 4587,
+    "lbThird": false
    },
    {
     "name": "Onyx Edition Touring 7-Passenger",
     "drive": [],
     "msrp": 51995,
-    "photo": true
+    "photo": true,
+    "lbMin": 4595,
+    "lbMax": 4595,
+    "lbThird": false
    },
    {
     "name": "Premium 7-Passenger",
     "drive": [],
     "msrp": 40795,
-    "photo": true
+    "photo": true,
+    "lbMin": 4450,
+    "lbMax": 4450,
+    "lbThird": false
    },
    {
     "name": "Premium 8-Passenger",
     "drive": [],
     "msrp": 40795,
-    "photo": true
+    "photo": true,
+    "lbMin": 4466,
+    "lbMax": 4466,
+    "lbThird": false
    },
    {
     "name": "Touring 7-Passenger",
     "drive": [],
     "msrp": 51165,
-    "photo": true
+    "photo": true,
+    "lbMin": 4596,
+    "lbMax": 4596,
+    "lbThird": false
    }
   ],
   "msrpFrom": 40795,
@@ -5615,13 +7067,19 @@
     "name": "Limited",
     "drive": [],
     "msrp": 36140,
-    "photo": true
+    "photo": true,
+    "lbMin": 2842,
+    "lbMax": 2886,
+    "lbThird": false
    },
    {
     "name": "tS",
     "drive": [],
     "msrp": 38770,
-    "photo": true
+    "photo": true,
+    "lbMin": 2855,
+    "lbMax": 2855,
+    "lbThird": false
    }
   ],
   "msrpFrom": 36140,
@@ -5645,7 +7103,10 @@
      "AWD"
     ],
     "msrp": 26995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3296,
+    "lbMax": 3296,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -5653,7 +7114,10 @@
      "AWD"
     ],
     "msrp": 32995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3349,
+    "lbMax": 3349,
+    "lbThird": false
    },
    {
     "name": "Limited Hybrid",
@@ -5661,7 +7125,10 @@
      "AWD"
     ],
     "msrp": 34995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3662,
+    "lbMax": 3662,
+    "lbThird": false
    },
    {
     "name": "Premium",
@@ -5669,7 +7136,10 @@
      "AWD"
     ],
     "msrp": 27995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3304,
+    "lbMax": 3304,
+    "lbThird": false
    },
    {
     "name": "Sport",
@@ -5677,7 +7147,10 @@
      "AWD"
     ],
     "msrp": 30625,
-    "photo": true
+    "photo": true,
+    "lbMin": 3332,
+    "lbMax": 3332,
+    "lbThird": false
    },
    {
     "name": "Sport Hybrid",
@@ -5685,7 +7158,10 @@
      "AWD"
     ],
     "msrp": 33995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3677,
+    "lbMax": 3677,
+    "lbThird": false
    },
    {
     "name": "Wilderness",
@@ -5693,7 +7169,10 @@
      "AWD"
     ],
     "msrp": 33795,
-    "photo": true
+    "photo": true,
+    "lbMin": 3369,
+    "lbMax": 3369,
+    "lbThird": false
    }
   ],
   "msrpFrom": 26995,
@@ -5717,7 +7196,10 @@
      "AWD"
     ],
     "msrp": 29995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3510,
+    "lbMax": 3510,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -5725,7 +7207,10 @@
      "AWD"
     ],
     "msrp": 35995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3613,
+    "lbMax": 3613,
+    "lbThird": false
    },
    {
     "name": "Limited Hybrid",
@@ -5733,7 +7218,10 @@
      "AWD"
     ],
     "msrp": 38995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3911,
+    "lbMax": 3911,
+    "lbThird": false
    },
    {
     "name": "Premium",
@@ -5741,7 +7229,10 @@
      "AWD"
     ],
     "msrp": 31995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3569,
+    "lbMax": 3569,
+    "lbThird": false
    },
    {
     "name": "Premium Hybrid",
@@ -5749,7 +7240,10 @@
      "AWD"
     ],
     "msrp": 34730,
-    "photo": true
+    "photo": true,
+    "lbMin": 3873,
+    "lbMax": 3873,
+    "lbThird": false
    },
    {
     "name": "Sport",
@@ -5757,7 +7251,10 @@
      "AWD"
     ],
     "msrp": 34795,
-    "photo": true
+    "photo": true,
+    "lbMin": 3611,
+    "lbMax": 3611,
+    "lbThird": false
    },
    {
     "name": "Sport Hybrid",
@@ -5765,7 +7262,10 @@
      "AWD"
     ],
     "msrp": 37930,
-    "photo": true
+    "photo": true,
+    "lbMin": 3913,
+    "lbMax": 3913,
+    "lbThird": false
    },
    {
     "name": "Touring",
@@ -5773,7 +7273,10 @@
      "AWD"
     ],
     "msrp": 39995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3664,
+    "lbMax": 3664,
+    "lbThird": false
    },
    {
     "name": "Touring Hybrid",
@@ -5781,7 +7284,10 @@
      "AWD"
     ],
     "msrp": 41545,
-    "photo": true
+    "photo": true,
+    "lbMin": 3946,
+    "lbMax": 3946,
+    "lbThird": false
    },
    {
     "name": "Wilderness",
@@ -5789,7 +7295,10 @@
      "AWD"
     ],
     "msrp": 36995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3675,
+    "lbMax": 3675,
+    "lbThird": false
    }
   ],
   "msrpFrom": 29995,
@@ -5813,7 +7322,10 @@
      "AWD"
     ],
     "msrp": 29495,
-    "photo": true
+    "photo": true,
+    "lbMin": 3275,
+    "lbMax": 3275,
+    "lbThird": false
    },
    {
     "name": "Sport",
@@ -5821,7 +7333,10 @@
      "AWD"
     ],
     "msrp": 26595,
-    "photo": true
+    "photo": true,
+    "lbMin": 3249,
+    "lbMax": 3249,
+    "lbThird": false
    }
   ],
   "msrpFrom": 26595,
@@ -5843,37 +7358,55 @@
     "name": "Limited",
     "drive": [],
     "msrp": 41715,
-    "photo": true
+    "photo": true,
+    "lbMin": 3799,
+    "lbMax": 3799,
+    "lbThird": false
    },
    {
     "name": "Limited XT",
     "drive": [],
     "msrp": 44365,
-    "photo": true
+    "photo": true,
+    "lbMin": 3968,
+    "lbMax": 3968,
+    "lbThird": false
    },
    {
     "name": "Premium",
     "drive": [],
     "msrp": 34995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3741,
+    "lbMax": 3741,
+    "lbThird": false
    },
    {
     "name": "Touring",
     "drive": [],
     "msrp": 45395,
-    "photo": true
+    "photo": true,
+    "lbMin": 3812,
+    "lbMax": 3812,
+    "lbThird": false
    },
    {
     "name": "Touring XT",
     "drive": [],
     "msrp": 47995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3982,
+    "lbMax": 3982,
+    "lbThird": false
    },
    {
     "name": "Wilderness",
     "drive": [],
     "msrp": 44995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3973,
+    "lbMax": 3973,
+    "lbThird": false
    }
   ],
   "msrpFrom": 34995,
@@ -5895,31 +7428,46 @@
     "name": "Limited",
     "drive": [],
     "msrp": 41395,
-    "photo": true
+    "photo": true,
+    "lbMin": 4475,
+    "lbMax": 4475,
+    "lbThird": false
    },
    {
     "name": "Limited XT",
     "drive": [],
     "msrp": 42895,
-    "photo": true
+    "photo": true,
+    "lbMin": 4475,
+    "lbMax": 4475,
+    "lbThird": false
    },
    {
     "name": "Premium",
     "drive": [],
     "msrp": 38495,
-    "photo": true
+    "photo": true,
+    "lbMin": 4395,
+    "lbMax": 4395,
+    "lbThird": false
    },
    {
     "name": "Touring XT",
     "drive": [],
     "msrp": 45555,
-    "photo": true
+    "photo": true,
+    "lbMin": 4510,
+    "lbMax": 4510,
+    "lbThird": false
    },
    {
     "name": "Touring XT Leather",
     "drive": [],
     "msrp": 45855,
-    "photo": true
+    "photo": true,
+    "lbMin": 4510,
+    "lbMax": 4510,
+    "lbThird": false
    }
   ],
   "msrpFrom": 38495,
@@ -5942,25 +7490,37 @@
     "name": "Limited",
     "drive": [],
     "msrp": 43995,
-    "photo": true
+    "photo": true,
+    "lbMin": 4475,
+    "lbMax": 4475,
+    "lbThird": false
    },
    {
     "name": "Premium",
     "drive": [],
     "msrp": 39995,
-    "photo": true
+    "photo": true,
+    "lbMin": 4395,
+    "lbMax": 4395,
+    "lbThird": false
    },
    {
     "name": "Touring",
     "drive": [],
     "msrp": 46555,
-    "photo": true
+    "photo": true,
+    "lbMin": 4510,
+    "lbMax": 4510,
+    "lbThird": false
    },
    {
     "name": "Touring Leather",
     "drive": [],
     "msrp": 46855,
-    "photo": true
+    "photo": true,
+    "lbMin": 4510,
+    "lbMax": 4510,
+    "lbThird": false
    }
   ],
   "msrpFrom": 39995,
@@ -5983,7 +7543,10 @@
     "name": "GT",
     "drive": [],
     "msrp": 43795,
-    "photo": true
+    "photo": true,
+    "lbMin": 4480,
+    "lbMax": 4480,
+    "lbThird": false
    },
    {
     "name": "Premium FWD",
@@ -5991,13 +7554,19 @@
      "FWD"
     ],
     "msrp": 34995,
-    "photo": true
+    "photo": true,
+    "lbMin": 4145,
+    "lbMax": 4145,
+    "lbThird": false
    },
    {
     "name": "Sport",
     "drive": [],
     "msrp": 39795,
-    "photo": true
+    "photo": true,
+    "lbMin": 4430,
+    "lbMax": 4430,
+    "lbThird": false
    }
   ],
   "msrpFrom": 34995,
@@ -6019,31 +7588,46 @@
     "name": "Base",
     "drive": [],
     "msrp": 32495,
-    "photo": true
+    "photo": true,
+    "lbMin": 3348,
+    "lbMax": 3348,
+    "lbThird": false
    },
    {
     "name": "GT",
     "drive": [],
     "msrp": 44995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3560,
+    "lbMax": 3560,
+    "lbThird": false
    },
    {
     "name": "Limited",
     "drive": [],
     "msrp": 38995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3419,
+    "lbMax": 3554,
+    "lbThird": false
    },
    {
     "name": "Premium",
     "drive": [],
     "msrp": 33995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3351,
+    "lbMax": 3351,
+    "lbThird": false
    },
    {
     "name": "tS",
     "drive": [],
     "msrp": 44995,
-    "photo": true
+    "photo": true,
+    "lbMin": 3430,
+    "lbMax": 3430,
+    "lbThird": false
    }
   ],
   "msrpFrom": 32495,
@@ -6067,7 +7651,10 @@
      "RWD"
     ],
     "msrp": 56900,
-    "photo": true
+    "photo": true,
+    "lbMin": 4730,
+    "lbMax": 4970,
+    "lbThird": false
    },
    {
     "name": "SR5",
@@ -6075,7 +7662,10 @@
      "RWD"
     ],
     "msrp": 42270,
-    "photo": true
+    "photo": true,
+    "lbMin": 4455,
+    "lbMax": 4685,
+    "lbThird": false
    },
    {
     "name": "Trailhunter",
@@ -6083,7 +7673,10 @@
      "4WD"
     ],
     "msrp": 68400,
-    "photo": true
+    "photo": true,
+    "lbMin": 5500,
+    "lbMax": 5500,
+    "lbThird": false
    },
    {
     "name": "TRD Off-Road",
@@ -6091,7 +7684,10 @@
      "4WD"
     ],
     "msrp": 50690,
-    "photo": true
+    "photo": true,
+    "lbMin": 4850,
+    "lbMax": 4850,
+    "lbThird": false
    },
    {
     "name": "TRD Off-Road i-FORCE MAX",
@@ -6099,7 +7695,10 @@
      "4WD"
     ],
     "msrp": 53490,
-    "photo": true
+    "photo": true,
+    "lbMin": 5225,
+    "lbMax": 5225,
+    "lbThird": false
    },
    {
     "name": "TRD Off-Road Premium",
@@ -6107,7 +7706,10 @@
      "4WD"
     ],
     "msrp": 56470,
-    "photo": true
+    "photo": true,
+    "lbMin": 4850,
+    "lbMax": 4850,
+    "lbThird": false
    },
    {
     "name": "TRD Off-Road Premium i-FORCE MAX",
@@ -6115,7 +7717,10 @@
      "4WD"
     ],
     "msrp": 59270,
-    "photo": true
+    "photo": true,
+    "lbMin": 5225,
+    "lbMax": 5225,
+    "lbThird": false
    },
    {
     "name": "TRD Pro",
@@ -6123,7 +7728,10 @@
      "4WD"
     ],
     "msrp": 68600,
-    "photo": true
+    "photo": true,
+    "lbMin": 5455,
+    "lbMax": 5455,
+    "lbThird": false
    },
    {
     "name": "TRD Sport",
@@ -6131,7 +7739,10 @@
      "RWD"
     ],
     "msrp": 48750,
-    "photo": true
+    "photo": true,
+    "lbMin": 4610,
+    "lbMax": 4850,
+    "lbThird": false
    },
    {
     "name": "TRD Sport Premium",
@@ -6139,7 +7750,10 @@
      "RWD"
     ],
     "msrp": 54110,
-    "photo": true
+    "photo": true,
+    "lbMin": 4610,
+    "lbMax": 4850,
+    "lbThird": false
    }
   ],
   "msrpFrom": 42270,
@@ -6163,7 +7777,10 @@
      "FWD"
     ],
     "msrp": 43380,
-    "photo": true
+    "photo": true,
+    "lbMin": 4233,
+    "lbMax": 4453,
+    "lbThird": false
    }
   ],
   "msrpFrom": 43380,
@@ -6187,7 +7804,10 @@
      "AWD"
     ],
     "msrp": 45380,
-    "photo": true
+    "photo": true,
+    "lbMin": 4442,
+    "lbMax": 4464,
+    "lbThird": false
    },
    {
     "name": "bZ Woodland Premium",
@@ -6195,7 +7815,10 @@
      "AWD"
     ],
     "msrp": 47480,
-    "photo": true
+    "photo": true,
+    "lbMin": 4497,
+    "lbMax": 4519,
+    "lbThird": false
    }
   ],
   "msrpFrom": 45380,
@@ -6219,7 +7842,10 @@
      "AWD"
     ],
     "msrp": 37080,
-    "photo": true
+    "photo": true,
+    "lbMin": 4322,
+    "lbMax": 4322,
+    "lbThird": false
    },
    {
     "name": "XSE",
@@ -6227,7 +7853,10 @@
      "AWD"
     ],
     "msrp": 39080,
-    "photo": true
+    "photo": true,
+    "lbMin": 4366,
+    "lbMax": 4366,
+    "lbThird": false
    }
   ],
   "msrpFrom": 37080,
@@ -6251,7 +7880,10 @@
      "FWD"
     ],
     "msrp": 29600,
-    "photo": true
+    "photo": true,
+    "lbMin": 3450,
+    "lbMax": 3594,
+    "lbThird": false
    },
    {
     "name": "Nightshade",
@@ -6260,7 +7892,10 @@
      "FWD"
     ],
     "msrp": 33100,
-    "photo": true
+    "photo": true,
+    "lbMin": 3494,
+    "lbMax": 3627,
+    "lbThird": false
    },
    {
     "name": "SE",
@@ -6268,7 +7903,10 @@
      "FWD"
     ],
     "msrp": 32100,
-    "photo": true
+    "photo": true,
+    "lbMin": 3494,
+    "lbMax": 3627,
+    "lbThird": false
    },
    {
     "name": "XLE",
@@ -6277,7 +7915,10 @@
      "FWD"
     ],
     "msrp": 34800,
-    "photo": true
+    "photo": true,
+    "lbMin": 3516,
+    "lbMax": 3649,
+    "lbThird": false
    },
    {
     "name": "XSE",
@@ -6286,7 +7927,10 @@
      "FWD"
     ],
     "msrp": 36000,
-    "photo": true
+    "photo": true,
+    "lbMin": 3538,
+    "lbMax": 3682,
+    "lbThird": false
    }
   ],
   "msrpFrom": 29600,
@@ -6310,7 +7954,10 @@
      "FWD"
     ],
     "msrp": 27615,
-    "photo": true
+    "photo": true,
+    "lbMin": 3140,
+    "lbMax": 3250,
+    "lbThird": false
    },
    {
     "name": "LE",
@@ -6318,7 +7965,10 @@
      "FWD"
     ],
     "msrp": 23325,
-    "photo": true
+    "photo": true,
+    "lbMin": 2955,
+    "lbMax": 2955,
+    "lbThird": false
    },
    {
     "name": "XSE",
@@ -6326,7 +7976,10 @@
      "FWD"
     ],
     "msrp": 29040,
-    "photo": true
+    "photo": true,
+    "lbMin": 3150,
+    "lbMax": 3150,
+    "lbThird": false
    }
   ],
   "msrpFrom": 23325,
@@ -6350,7 +8003,10 @@
      "AWD"
     ],
     "msrp": 31115,
-    "photo": true
+    "photo": true,
+    "lbMin": 3329,
+    "lbMax": 3329,
+    "lbThird": false
    },
    {
     "name": "Hybrid XSE",
@@ -6358,7 +8014,10 @@
      "AWD"
     ],
     "msrp": 33830,
-    "photo": true
+    "photo": true,
+    "lbMin": 3373,
+    "lbMax": 3373,
+    "lbThird": false
    },
    {
     "name": "L",
@@ -6366,7 +8025,10 @@
      "FWD"
     ],
     "msrp": 25335,
-    "photo": true
+    "photo": true,
+    "lbMin": 3097,
+    "lbMax": 3274,
+    "lbThird": false
    },
    {
     "name": "LE",
@@ -6374,7 +8036,10 @@
      "FWD"
     ],
     "msrp": 27665,
-    "photo": true
+    "photo": true,
+    "lbMin": 3086,
+    "lbMax": 3263,
+    "lbThird": false
    },
    {
     "name": "XLE",
@@ -6382,7 +8047,10 @@
      "FWD"
     ],
     "msrp": 30260,
-    "photo": true
+    "photo": true,
+    "lbMin": 3142,
+    "lbMax": 3296,
+    "lbThird": false
    }
   ],
   "msrpFrom": 25335,
@@ -6406,7 +8074,10 @@
      "AWD"
     ],
     "msrp": 29795,
-    "photo": true
+    "photo": true,
+    "lbMin": 3340,
+    "lbMax": 3340,
+    "lbThird": false
    }
   ],
   "msrpFrom": 29795,
@@ -6430,7 +8101,10 @@
      "FWD"
     ],
     "msrp": 24780,
-    "photo": true
+    "photo": true,
+    "lbMin": 3060,
+    "lbMax": 3060,
+    "lbThird": false
    },
    {
     "name": "XSE",
@@ -6438,7 +8112,10 @@
      "FWD"
     ],
     "msrp": 27875,
-    "photo": true
+    "photo": true,
+    "lbMin": 3060,
+    "lbMax": 3060,
+    "lbThird": false
    }
   ],
   "msrpFrom": 24780,
@@ -6462,7 +8139,10 @@
      "AWD"
     ],
     "msrp": 40520,
-    "photo": true
+    "photo": true,
+    "lbMin": 3296,
+    "lbMax": 3341,
+    "lbThird": false
    },
    {
     "name": "GR Corolla Premium Plus",
@@ -6470,7 +8150,10 @@
      "AWD"
     ],
     "msrp": 46565,
-    "photo": true
+    "photo": true,
+    "lbMin": 3303,
+    "lbMax": 3347,
+    "lbThird": false
    },
    {
     "name": "GRMN Corolla",
@@ -6478,7 +8161,10 @@
      "AWD"
     ],
     "msrp": 64360,
-    "photo": true
+    "photo": true,
+    "lbMin": 3219,
+    "lbMax": 3219,
+    "lbThird": false
    }
   ],
   "msrpFrom": 40520,
@@ -6542,7 +8228,10 @@
      "RWD"
     ],
     "msrp": 31500,
-    "photo": true
+    "photo": true,
+    "lbMin": 2811,
+    "lbMax": 2851,
+    "lbThird": false
    },
    {
     "name": "GR86 Premium",
@@ -6550,7 +8239,10 @@
      "RWD"
     ],
     "msrp": 34400,
-    "photo": true
+    "photo": true,
+    "lbMin": 2833,
+    "lbMax": 2868,
+    "lbThird": false
    }
   ],
   "msrpFrom": 31500,
@@ -6574,7 +8266,10 @@
      "AWD"
     ],
     "msrp": 53110,
-    "photo": true
+    "photo": true,
+    "lbMin": 4620,
+    "lbMax": 4640,
+    "lbThird": false
    },
    {
     "name": "Hybrid MAX Limited",
@@ -6582,7 +8277,10 @@
      "AWD"
     ],
     "msrp": 56090,
-    "photo": true
+    "photo": true,
+    "lbMin": 4830,
+    "lbMax": 4830,
+    "lbThird": false
    },
    {
     "name": "Hybrid MAX Platinum",
@@ -6590,7 +8288,10 @@
      "AWD"
     ],
     "msrp": 60175,
-    "photo": true
+    "photo": true,
+    "lbMin": 4905,
+    "lbMax": 4905,
+    "lbThird": false
    },
    {
     "name": "Hybrid Nightshade",
@@ -6598,7 +8299,10 @@
      "AWD"
     ],
     "msrp": 54090,
-    "photo": true
+    "photo": true,
+    "lbMin": 4620,
+    "lbMax": 4620,
+    "lbThird": false
    },
    {
     "name": "LE",
@@ -6606,7 +8310,10 @@
      "FWD"
     ],
     "msrp": 42260,
-    "photo": true
+    "photo": true,
+    "lbMin": 4290,
+    "lbMax": 4440,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -6614,7 +8321,10 @@
      "FWD"
     ],
     "msrp": 49760,
-    "photo": true
+    "photo": true,
+    "lbMin": 4330,
+    "lbMax": 4510,
+    "lbThird": false
    },
    {
     "name": "Platinum",
@@ -6622,7 +8332,10 @@
      "AWD"
     ],
     "msrp": 55445,
-    "photo": true
+    "photo": true,
+    "lbMin": 4440,
+    "lbMax": 4440,
+    "lbThird": false
    },
    {
     "name": "XLE",
@@ -6630,7 +8343,10 @@
      "FWD"
     ],
     "msrp": 45030,
-    "photo": true
+    "photo": true,
+    "lbMin": 4290,
+    "lbMax": 4465,
+    "lbThird": false
    }
   ],
   "msrpFrom": 42260,
@@ -6654,7 +8370,10 @@
      "AWD"
     ],
     "msrp": 52475,
-    "photo": true
+    "photo": true,
+    "lbMin": 4595,
+    "lbMax": 4595,
+    "lbThird": false
    },
    {
     "name": "Hybrid Platinum",
@@ -6662,7 +8381,10 @@
      "AWD"
     ],
     "msrp": 55675,
-    "photo": true
+    "photo": true,
+    "lbMin": 4595,
+    "lbMax": 4595,
+    "lbThird": false
    },
    {
     "name": "Hybrid XLE",
@@ -6670,7 +8392,10 @@
      "AWD"
     ],
     "msrp": 48020,
-    "photo": true
+    "photo": true,
+    "lbMin": 4515,
+    "lbMax": 4515,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -6678,7 +8403,10 @@
      "AWD"
     ],
     "msrp": 50725,
-    "photo": true
+    "photo": true,
+    "lbMin": 4453,
+    "lbMax": 4453,
+    "lbThird": false
    },
    {
     "name": "Platinum",
@@ -6686,7 +8414,10 @@
      "AWD"
     ],
     "msrp": 53925,
-    "photo": true
+    "photo": true,
+    "lbMin": 4453,
+    "lbMax": 4453,
+    "lbThird": false
    },
    {
     "name": "XLE",
@@ -6694,7 +8425,10 @@
      "AWD"
     ],
     "msrp": 46270,
-    "photo": true
+    "photo": true,
+    "lbMin": 4376,
+    "lbMax": 4376,
+    "lbThird": false
    },
    {
     "name": "XSE",
@@ -6702,7 +8436,10 @@
      "AWD"
     ],
     "msrp": 48340,
-    "photo": true
+    "photo": true,
+    "lbMin": 4420,
+    "lbMax": 4420,
+    "lbThird": false
    }
   ],
   "msrpFrom": 46270,
@@ -6726,7 +8463,10 @@
      "4WD"
     ],
     "msrp": 64155,
-    "photo": true
+    "photo": true,
+    "lbMin": 5445,
+    "lbMax": 5445,
+    "lbThird": false
    },
    {
     "name": "Land Cruiser 1958",
@@ -6734,7 +8474,10 @@
      "4WD"
     ],
     "msrp": 58080,
-    "photo": true
+    "photo": true,
+    "lbMin": 5360,
+    "lbMax": 5360,
+    "lbThird": false
    }
   ],
   "msrpFrom": 58080,
@@ -6758,7 +8501,10 @@
      "FWD"
     ],
     "msrp": 28755,
-    "photo": true
+    "photo": true,
+    "lbMin": 3097,
+    "lbMax": 3230,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -6766,7 +8512,10 @@
      "FWD"
     ],
     "msrp": 35770,
-    "photo": true
+    "photo": true,
+    "lbMin": 3219,
+    "lbMax": 3340,
+    "lbThird": false
    },
    {
     "name": "Nightshade",
@@ -6774,7 +8523,10 @@
      "FWD"
     ],
     "msrp": 33005,
-    "photo": true
+    "photo": true,
+    "lbMin": 3164,
+    "lbMax": 3285,
+    "lbThird": false
    },
    {
     "name": "XLE",
@@ -6782,7 +8534,10 @@
      "FWD"
     ],
     "msrp": 32200,
-    "photo": true
+    "photo": true,
+    "lbMin": 3164,
+    "lbMax": 3285,
+    "lbThird": false
    }
   ],
   "msrpFrom": 28755,
@@ -6806,7 +8561,10 @@
      "FWD"
     ],
     "msrp": 38000,
-    "photo": true
+    "photo": true,
+    "lbMin": 3516,
+    "lbMax": 3516,
+    "lbThird": false
    },
    {
     "name": "SE",
@@ -6814,7 +8572,10 @@
      "FWD"
     ],
     "msrp": 33980,
-    "photo": true
+    "photo": true,
+    "lbMin": 3461,
+    "lbMax": 3461,
+    "lbThird": false
    },
    {
     "name": "XSE",
@@ -6822,7 +8583,10 @@
      "FWD"
     ],
     "msrp": 37230,
-    "photo": true
+    "photo": true,
+    "lbMin": 3516,
+    "lbMax": 3516,
+    "lbThird": false
    },
    {
     "name": "XSE Premium",
@@ -6830,7 +8594,10 @@
      "FWD"
     ],
     "msrp": 40675,
-    "photo": true
+    "photo": true,
+    "lbMin": 3571,
+    "lbMax": 3571,
+    "lbThird": false
    }
   ],
   "msrpFrom": 33980,
@@ -6854,7 +8621,10 @@
      "FWD"
     ],
     "msrp": 31900,
-    "photo": true
+    "photo": true,
+    "lbMin": 3594,
+    "lbMax": 3715,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -6862,7 +8632,10 @@
      "AWD"
     ],
     "msrp": 43300,
-    "photo": true
+    "photo": true,
+    "lbMin": 3847,
+    "lbMax": 3847,
+    "lbThird": false
    },
    {
     "name": "SE",
@@ -6870,7 +8643,10 @@
      "FWD"
     ],
     "msrp": 34700,
-    "photo": true
+    "photo": true,
+    "lbMin": 3616,
+    "lbMax": 3737,
+    "lbThird": false
    },
    {
     "name": "Woodland",
@@ -6878,7 +8654,10 @@
      "AWD"
     ],
     "msrp": 39900,
-    "photo": true
+    "photo": true,
+    "lbMin": 3814,
+    "lbMax": 3814,
+    "lbThird": false
    },
    {
     "name": "XLE Premium",
@@ -6886,7 +8665,10 @@
      "FWD"
     ],
     "msrp": 36100,
-    "photo": true
+    "photo": true,
+    "lbMin": 3616,
+    "lbMax": 3770,
+    "lbThird": false
    },
    {
     "name": "XSE",
@@ -6894,7 +8676,10 @@
      "AWD"
     ],
     "msrp": 41300,
-    "photo": true
+    "photo": true,
+    "lbMin": 3825,
+    "lbMax": 3825,
+    "lbThird": false
    }
   ],
   "msrpFrom": 31900,
@@ -6918,7 +8703,10 @@
      "AWD"
     ],
     "msrp": 48500,
-    "photo": true
+    "photo": true,
+    "lbMin": 4430,
+    "lbMax": 4430,
+    "lbThird": false
    },
    {
     "name": "SE",
@@ -6926,7 +8714,10 @@
      "AWD"
     ],
     "msrp": 41500,
-    "photo": true
+    "photo": true,
+    "lbMin": 4435,
+    "lbMax": 4435,
+    "lbThird": false
    },
    {
     "name": "Woodland",
@@ -6934,7 +8725,10 @@
      "AWD"
     ],
     "msrp": 45300,
-    "photo": true
+    "photo": true,
+    "lbMin": 4500,
+    "lbMax": 4500,
+    "lbThird": false
    },
    {
     "name": "XSE",
@@ -6942,7 +8736,10 @@
      "AWD"
     ],
     "msrp": 47200,
-    "photo": true
+    "photo": true,
+    "lbMin": 4540,
+    "lbMax": 4540,
+    "lbThird": false
    }
   ],
   "msrpFrom": 41500,
@@ -6966,7 +8763,10 @@
      "4WD"
     ],
     "msrp": 82550,
-    "photo": true
+    "photo": true,
+    "lbMin": 6150,
+    "lbMax": 6150,
+    "lbThird": false
    },
    {
     "name": "Capstone",
@@ -6974,7 +8774,10 @@
      "4WD"
     ],
     "msrp": 86135,
-    "photo": true
+    "photo": true,
+    "lbMin": 6150,
+    "lbMax": 6150,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -6982,7 +8785,10 @@
      "RWD"
     ],
     "msrp": 71495,
-    "photo": true
+    "photo": true,
+    "lbMin": 5830,
+    "lbMax": 6185,
+    "lbThird": false
    },
    {
     "name": "Platinum",
@@ -6990,7 +8796,10 @@
      "4WD"
     ],
     "msrp": 81735,
-    "photo": true
+    "photo": true,
+    "lbMin": 6150,
+    "lbMax": 6150,
+    "lbThird": false
    },
    {
     "name": "SR5",
@@ -6998,7 +8807,10 @@
      "RWD"
     ],
     "msrp": 65725,
-    "photo": true
+    "photo": true,
+    "lbMin": 5635,
+    "lbMax": 6030,
+    "lbThird": false
    },
    {
     "name": "TRD Pro",
@@ -7006,7 +8818,10 @@
      "4WD"
     ],
     "msrp": 82465,
-    "photo": true
+    "photo": true,
+    "lbMin": 6140,
+    "lbMax": 6140,
+    "lbThird": false
    }
   ],
   "msrpFrom": 65725,
@@ -7030,7 +8845,10 @@
      "FWD"
     ],
     "msrp": 41320,
-    "photo": true
+    "photo": true,
+    "lbMin": 4610,
+    "lbMax": 4610,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -7038,7 +8856,10 @@
      "FWD"
     ],
     "msrp": 52005,
-    "photo": true
+    "photo": true,
+    "lbMin": 4725,
+    "lbMax": 4725,
+    "lbThird": false
    },
    {
     "name": "Platinum",
@@ -7046,7 +8867,10 @@
      "AWD"
     ],
     "msrp": 58710,
-    "photo": true
+    "photo": true,
+    "lbMin": 4725,
+    "lbMax": 4725,
+    "lbThird": false
    },
    {
     "name": "Woodland Edition",
@@ -7054,7 +8878,10 @@
      "AWD"
     ],
     "msrp": 52100,
-    "photo": true
+    "photo": true,
+    "lbMin": 4625,
+    "lbMax": 4625,
+    "lbThird": false
    },
    {
     "name": "XLE",
@@ -7062,7 +8889,10 @@
      "FWD"
     ],
     "msrp": 46020,
-    "photo": true
+    "photo": true,
+    "lbMin": 4625,
+    "lbMax": 4625,
+    "lbThird": false
    },
    {
     "name": "XSE",
@@ -7070,7 +8900,10 @@
      "FWD"
     ],
     "msrp": 49245,
-    "photo": true
+    "photo": true,
+    "lbMin": 4675,
+    "lbMax": 4675,
+    "lbThird": false
    }
   ],
   "msrpFrom": 41320,
@@ -7094,7 +8927,10 @@
      "4WD"
     ],
     "msrp": 53570,
-    "photo": true
+    "photo": true,
+    "lbMin": 4715,
+    "lbMax": 4715,
+    "lbThird": false
    },
    {
     "name": "Limited i-FORCE MAX",
@@ -7102,7 +8938,10 @@
      "4WD"
     ],
     "msrp": 56895,
-    "photo": true
+    "photo": true,
+    "lbMin": 5170,
+    "lbMax": 5170,
+    "lbThird": false
    },
    {
     "name": "SR",
@@ -7110,7 +8949,10 @@
      "RWD"
     ],
     "msrp": 32545,
-    "photo": true
+    "photo": true,
+    "lbMin": 4145,
+    "lbMax": 4505,
+    "lbThird": false
    },
    {
     "name": "SR5",
@@ -7119,7 +8961,10 @@
      "RWD"
     ],
     "msrp": 36635,
-    "photo": true
+    "photo": true,
+    "lbMin": 4145,
+    "lbMax": 4600,
+    "lbThird": false
    },
    {
     "name": "TRD Off-Road",
@@ -7127,7 +8972,10 @@
      "4WD"
     ],
     "msrp": 42815,
-    "photo": true
+    "photo": true,
+    "lbMin": 4630,
+    "lbMax": 4650,
+    "lbThird": false
    },
    {
     "name": "TRD PreRunner",
@@ -7135,7 +8983,10 @@
      "RWD"
     ],
     "msrp": 39135,
-    "photo": true
+    "photo": true,
+    "lbMin": 4200,
+    "lbMax": 4200,
+    "lbThird": false
    },
    {
     "name": "TRD Pro",
@@ -7143,7 +8994,10 @@
      "4WD"
     ],
     "msrp": 64750,
-    "photo": true
+    "photo": true,
+    "lbMin": 5100,
+    "lbMax": 5100,
+    "lbThird": false
    },
    {
     "name": "TRD Sport",
@@ -7151,7 +9005,10 @@
      "RWD"
     ],
     "msrp": 40415,
-    "photo": true
+    "photo": true,
+    "lbMin": 4330,
+    "lbMax": 4605,
+    "lbThird": false
    },
    {
     "name": "TRD Sport i-FORCE MAX",
@@ -7159,7 +9016,10 @@
      "4WD"
     ],
     "msrp": 47335,
-    "photo": true
+    "photo": true,
+    "lbMin": 5045,
+    "lbMax": 5045,
+    "lbThird": false
    }
   ],
   "msrpFrom": 32545,
@@ -7183,7 +9043,10 @@
      "4WD"
     ],
     "msrp": 47635,
-    "photo": true
+    "photo": true,
+    "lbMin": 5030,
+    "lbMax": 5030,
+    "lbThird": false
    }
   ],
   "msrpFrom": 47635,
@@ -7207,7 +9070,10 @@
      "AWD"
     ],
     "msrp": 49720,
-    "photo": true
+    "photo": true,
+    "lbMin": 3980,
+    "lbMax": 3980,
+    "lbThird": false
    },
    {
     "name": "Platinum",
@@ -7215,7 +9081,10 @@
      "AWD"
     ],
     "msrp": 55190,
-    "photo": true
+    "photo": true,
+    "lbMin": 4343,
+    "lbMax": 4343,
+    "lbThird": false
    },
    {
     "name": "XLE",
@@ -7223,7 +9092,10 @@
      "AWD"
     ],
     "msrp": 41640,
-    "photo": true
+    "photo": true,
+    "lbMin": 3980,
+    "lbMax": 3980,
+    "lbThird": false
    }
   ],
   "msrpFrom": 41640,
@@ -7247,7 +9119,10 @@
      "AWD"
     ],
     "msrp": 49090,
-    "photo": true
+    "photo": true,
+    "lbMin": 4210,
+    "lbMax": 4210,
+    "lbThird": false
    },
    {
     "name": "XLE",
@@ -7255,7 +9130,10 @@
      "AWD"
     ],
     "msrp": 44690,
-    "photo": true
+    "photo": true,
+    "lbMin": 4210,
+    "lbMax": 4210,
+    "lbThird": false
    }
   ],
   "msrpFrom": 44690,
@@ -7280,7 +9158,10 @@
      "RWD"
     ],
     "msrp": 64380,
-    "photo": true
+    "photo": true,
+    "lbMin": 5435,
+    "lbMax": 5830,
+    "lbThird": false
    },
    {
     "name": "Limited",
@@ -7289,7 +9170,10 @@
      "RWD"
     ],
     "msrp": 54860,
-    "photo": true
+    "photo": true,
+    "lbMin": 5355,
+    "lbMax": 5730,
+    "lbThird": false
    },
    {
     "name": "Platinum",
@@ -7297,7 +9181,10 @@
      "RWD"
     ],
     "msrp": 63695,
-    "photo": true
+    "photo": true,
+    "lbMin": 5435,
+    "lbMax": 5830,
+    "lbThird": false
    },
    {
     "name": "SR",
@@ -7305,7 +9192,10 @@
      "RWD"
     ],
     "msrp": 41260,
-    "photo": true
+    "photo": true,
+    "lbMin": 5205,
+    "lbMax": 5500,
+    "lbThird": false
    },
    {
     "name": "SR5",
@@ -7313,7 +9203,10 @@
      "RWD"
     ],
     "msrp": 46510,
-    "photo": true
+    "photo": true,
+    "lbMin": 5205,
+    "lbMax": 5645,
+    "lbThird": false
    },
    {
     "name": "TRD Pro",
@@ -7321,7 +9214,10 @@
      "4WD"
     ],
     "msrp": 72565,
-    "photo": true
+    "photo": true,
+    "lbMin": 6050,
+    "lbMax": 6050,
+    "lbThird": false
    }
   ],
   "msrpFrom": 41260,
@@ -7345,7 +9241,10 @@
      "4WD"
     ],
     "msrp": 71305,
-    "photo": true
+    "photo": true,
+    "lbMin": 6120,
+    "lbMax": 6205,
+    "lbThird": false
    },
    {
     "name": "Capstone",
@@ -7353,7 +9252,10 @@
      "4WD"
     ],
     "msrp": 80800,
-    "photo": true
+    "photo": true,
+    "lbMin": 6230,
+    "lbMax": 6230,
+    "lbThird": false
    },
    {
     "name": "Limited i-FORCE MAX",
@@ -7361,7 +9263,10 @@
      "RWD"
     ],
     "msrp": 58560,
-    "photo": true
+    "photo": true,
+    "lbMin": 5745,
+    "lbMax": 6120,
+    "lbThird": false
    },
    {
     "name": "Platinum i-FORCE MAX",
@@ -7369,7 +9274,10 @@
      "4WD"
     ],
     "msrp": 70605,
-    "photo": true
+    "photo": true,
+    "lbMin": 6120,
+    "lbMax": 6205,
+    "lbThird": false
    }
   ],
   "msrpFrom": 58560,
