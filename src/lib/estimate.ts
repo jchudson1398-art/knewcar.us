@@ -67,7 +67,7 @@ const usd = (cents: number) => `$${(cents / 100).toLocaleString("en-US", { minim
 
 export interface StateFees {
   /** Fixed government fees that apply to every new purchase, in dollars. */
-  fixed: { label: string; amount: number; note?: string }[];
+  fixed: { label: string; amount: number; note?: string; tag?: Tag }[];
   /** Government fees that could not be worked out here, with the reason. */
   notIncluded: { label: string; note: string }[];
 }
@@ -134,7 +134,7 @@ export function estimate(input: EstimateInput, fees: StateFees): Estimate {
       notes.push("New York taxes the price with destination, less your trade-in's value.");
     }
     tax.push({ label: `New York State sales tax (${rate}%)`, amount: pct(basis, rate), tag: "verified", note: "State tax, included" });
-    pushLocal(tax, notIncluded, basis, rate, input.localCombinedRate, "local sales tax");
+    pushLocal(tax, notIncluded, basis, rate, input.localCombinedRate, "sales tax");
   }
 
   if (state === "FL") {
@@ -162,7 +162,7 @@ export function estimate(input: EstimateInput, fees: StateFees): Estimate {
     notes.push("Florida taxes the dealer fee, so it is part of the taxed amount.");
   }
 
-  const feeLines: Line[] = fees.fixed.map((f) => ({ label: f.label, amount: Math.round(f.amount * 100), tag: "verified" as Tag, note: f.note }));
+  const feeLines: Line[] = fees.fixed.map((f) => ({ label: f.label, amount: Math.round(f.amount * 100), tag: f.tag ?? ("verified" as Tag), note: f.note }));
   feeLines.push({ label: "Dealer documentary fee", amount: doc, tag: "estimate", note: "Planning estimate. Your dealer's fee may differ." });
   for (const f of fees.notIncluded) notIncluded.push({ label: f.label, amount: null, tag: "not_included", note: f.note });
 
@@ -170,6 +170,79 @@ export function estimate(input: EstimateInput, fees: StateFees): Estimate {
   const taxTotal = sum(tax);
   const feesTotal = sum(feeLines);
   return { gross, tax, fees: feeLines, taxTotal, feesTotal, outTheDoor: gross + taxTotal + feesTotal, notIncluded, notes };
+}
+
+// ---- Government fees -------------------------------------------------------------------------------------------
+// Amounts are read from src/data/state-rates.json (extracted from the research on 2026-11-20). A fee that depends
+// on something the website does not know yet (vehicle weight, MPG, county fee schedules) is listed as not included.
+
+export interface RatesFile {
+  CA: { fees: { registration: { amount: number }; chp: { amount: number }; vlfPercentOfPrice: number; transportationImprovementFee: { valueFrom: number; valueTo: number | null; fee: number }[]; smogAbatement: { amount: number }; tireFeePerTire: number; tiresCharged: number; plate: number } };
+  NY: { fees: { title: number; plates: number; tireFeePerTire: number; tiresCharged: number; mctdFeeTwoYears: number; countyUseTaxTwoYears: { county: string; amount: number; amountOver3500lb: number }[] } };
+  FL: { fees: { title: number; newPlate: number; initialRegistration: number; tempTag: number; tireFeePerTire: number } };
+  VA: { fees: { titleDmv: number; titleCode: number; highwayUseFeeEv: number } };
+}
+
+export function feesFor(input: EstimateInput, data: RatesFile, county: string | null): StateFees {
+  const fixed: StateFees["fixed"] = [];
+  const notIncluded: StateFees["notIncluded"] = [];
+  const dollars = input.price / 100;
+
+  if (input.state === "TX") {
+    fixed.push({ label: "Title and registration", amount: 300, tag: "estimate", note: "Planning estimate for both together." });
+  }
+
+  if (input.state === "CA") {
+    const f = data.CA.fees;
+    fixed.push({ label: "Registration fee", amount: f.registration.amount });
+    fixed.push({ label: "California Highway Patrol fee", amount: f.chp.amount });
+    fixed.push({ label: `Vehicle license fee (${f.vlfPercentOfPrice}% of the price)`, amount: Math.round(dollars * f.vlfPercentOfPrice) / 100, tag: "estimate", note: "The DMV reads this from a price table, so the exact amount may differ slightly. Charged again every year." });
+    const tier = f.transportationImprovementFee.find((t) => dollars >= t.valueFrom && (t.valueTo === null || dollars < t.valueTo + 1));
+    if (tier) fixed.push({ label: "Transportation improvement fee", amount: tier.fee, note: "Set by the vehicle's price." });
+    if (input.electric) notIncluded.push({ label: "Smog abatement fee", note: `We have not confirmed whether an electric vehicle pays the $${f.smogAbatement.amount} fee.` });
+    else fixed.push({ label: "Smog abatement fee", amount: f.smogAbatement.amount });
+    fixed.push({ label: "Tire fee", amount: f.tireFeePerTire * f.tiresCharged, tag: "estimate", note: `$${f.tireFeePerTire} a tire, counting four tires and a spare.` });
+    fixed.push({ label: "License plate fee", amount: f.plate });
+    notIncluded.push({ label: "County fees", note: "Small fees that differ by county." });
+    notIncluded.push({ label: "Title fee", note: "We have not confirmed the title fee on a new registration." });
+    notIncluded.push({ label: "Weight fee", note: "Pickups pay an extra fee by weight." });
+  }
+
+  if (input.state === "VA") {
+    const f = data.VA.fees;
+    notIncluded.push({ label: "Title fee", note: `The DMV lists $${f.titleDmv}; the Code of Virginia lists $${f.titleCode}.` });
+    notIncluded.push({ label: "Registration fee", note: "$30.75 or $35.75 a year, by vehicle weight. Higher for heavier vehicles and some pickups." });
+    if (input.electric) fixed.push({ label: "Highway use fee, electric vehicle", amount: f.highwayUseFeeEv, note: "Yearly. This amount is in effect through June 30, 2027." });
+    else notIncluded.push({ label: "Highway use fee", note: "Charged on fuel-efficient vehicles (25 MPG and up), by MPG." });
+    notIncluded.push({ label: "Local vehicle license fee", note: "Set by your county or city." });
+  }
+
+  if (input.state === "NY") {
+    const f = data.NY.fees;
+    fixed.push({ label: "Title certificate fee", amount: f.title });
+    fixed.push({ label: "License plates", amount: f.plates });
+    fixed.push({ label: "Waste tire fee", amount: f.tireFeePerTire * f.tiresCharged, tag: "estimate", note: `$${f.tireFeePerTire.toFixed(2)} a tire, counting four tires and a spare.` });
+    if (input.nyMctd) fixed.push({ label: "Commuter transportation district fee", amount: f.mctdFeeTwoYears, note: "For two years." });
+    notIncluded.push({ label: "Registration fee", note: "$26 to $140 for two years, by vehicle weight." });
+    const use = county ? f.countyUseTaxTwoYears.find((c) => c.county === county) : undefined;
+    if (use) notIncluded.push({ label: "County vehicle use tax", note: use.amount === use.amountOver3500lb ? `$${use.amount} for two years.` : `$${use.amount} or $${use.amountOver3500lb} for two years, by vehicle weight.` });
+    else if (!county) notIncluded.push({ label: "County vehicle use tax", note: "Up to $60 for two years in some counties. Choose your county." });
+    notIncluded.push({ label: "Inspection", note: "Up to $10." });
+  }
+
+  if (input.state === "FL") {
+    const f = data.FL.fees;
+    fixed.push({ label: "Title fee", amount: f.title, note: "Electronic title, no loan. Add $2 with a loan." });
+    if (!input.hasPlateToTransfer) {
+      fixed.push({ label: "Initial registration fee", amount: f.initialRegistration, note: "Charged when you have no Florida plate to transfer." });
+      fixed.push({ label: "New license plate", amount: f.newPlate });
+    }
+    fixed.push({ label: "Temporary tag", amount: f.tempTag });
+    notIncluded.push({ label: "Registration fee", note: "$27.60 to $45.60 a year, by vehicle weight." });
+    notIncluded.push({ label: "Tire fee", note: `$${f.tireFeePerTire} for each new tire.` });
+  }
+
+  return { fixed, notIncluded };
 }
 
 /** Local tax from the published combined rate for the shopper's county or city. Labeled as assumed. */

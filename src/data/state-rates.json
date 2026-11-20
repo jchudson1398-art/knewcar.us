@@ -1,0 +1,1839 @@
+{
+  "extracted": "2026-11-20",
+  "CA": {
+    "localTable": {
+      "title": "California City & County Sales & Use Tax Rates — Tax Rates Effective October 1, 2026 (CDTFA spreadsheet SalesTaxRates10-1-26.xlsx, sheet \"Effective Sales and Use Tax Rates\")",
+      "effective": "2026-10-01",
+      "sourceFile": "sources/02_cdtfa_rate_table_xlsx.md",
+      "url": "https://www.cdtfa.ca.gov/taxes-and-fees/SalesTaxRates10-1-26.xlsx"
+    },
+    "statewideBaseRate": 7.25,
+    "maxCombinedRate": 11.75,
+    "counties": [
+      {
+        "name": "Alameda",
+        "combinedRate": 10.25
+      },
+      {
+        "name": "Alpine",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Amador",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "Butte",
+        "combinedRate": 8.25
+      },
+      {
+        "name": "Calaveras",
+        "combinedRate": 8.25
+      },
+      {
+        "name": "Colusa",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "Contra Costa",
+        "combinedRate": 8.75
+      },
+      {
+        "name": "Del Norte",
+        "combinedRate": 8.25
+      },
+      {
+        "name": "El Dorado",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Fresno",
+        "combinedRate": 7.975
+      },
+      {
+        "name": "Glenn",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Humboldt",
+        "combinedRate": 8.75
+      },
+      {
+        "name": "Imperial",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "Inyo",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "Kern",
+        "combinedRate": 8.25
+      },
+      {
+        "name": "Kings",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Lake",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Lassen",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Los Angeles",
+        "combinedRate": 10.25
+      },
+      {
+        "name": "Madera",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "Marin",
+        "combinedRate": 8.25
+      },
+      {
+        "name": "Mariposa",
+        "combinedRate": 8.25
+      },
+      {
+        "name": "Mendocino",
+        "combinedRate": 7.875
+      },
+      {
+        "name": "Merced",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "Modoc",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Mono",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Monterey",
+        "combinedRate": 8.75
+      },
+      {
+        "name": "Napa",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "Nevada",
+        "combinedRate": 7.5
+      },
+      {
+        "name": "Orange",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "Placer",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Plumas",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Riverside",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "Sacramento",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "San Benito",
+        "combinedRate": 8.25
+      },
+      {
+        "name": "San Bernardino",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "San Diego",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "San Francisco",
+        "combinedRate": 8.625
+      },
+      {
+        "name": "San Joaquin",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "San Luis Obispo",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "San Mateo",
+        "combinedRate": 9.375
+      },
+      {
+        "name": "Santa Barbara",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "Santa Clara",
+        "combinedRate": 9.75
+      },
+      {
+        "name": "Santa Cruz",
+        "combinedRate": 9.5
+      },
+      {
+        "name": "Shasta",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Sierra",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Siskiyou",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Solano",
+        "combinedRate": 7.375
+      },
+      {
+        "name": "Sonoma",
+        "combinedRate": 9.25
+      },
+      {
+        "name": "Stanislaus",
+        "combinedRate": 7.875
+      },
+      {
+        "name": "Sutter",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Tehama",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Trinity",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Tulare",
+        "combinedRate": 7.75
+      },
+      {
+        "name": "Tuolumne",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Ventura",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Yolo",
+        "combinedRate": 7.25
+      },
+      {
+        "name": "Yuba",
+        "combinedRate": 8.25
+      }
+    ],
+    "fees": {
+      "registration": {
+        "amount": 73,
+        "note": "Original registration, 2026-01-01 through 2026-12-31; includes the $3 Alternative Fuel/Technology fee. Becomes 76 on 2027-01-01 (DMV memo VIN 2026-07). The DMV consumer page already shows 76 with no date."
+      },
+      "chp": {
+        "amount": 34,
+        "note": "Becomes 35 on 2027-01-01 (DMV memo VIN 2026-07)."
+      },
+      "vlfPercentOfPrice": 0.65,
+      "transportationImprovementFee": [
+        {
+          "valueFrom": 0,
+          "valueTo": 4999,
+          "fee": 33
+        },
+        {
+          "valueFrom": 5000,
+          "valueTo": 24999,
+          "fee": 66
+        },
+        {
+          "valueFrom": 25000,
+          "valueTo": 34999,
+          "fee": 132
+        },
+        {
+          "valueFrom": 35000,
+          "valueTo": 59999,
+          "fee": 198
+        },
+        {
+          "valueFrom": 60000,
+          "valueTo": null,
+          "fee": 231
+        }
+      ],
+      "smogAbatement": {
+        "amount": 20,
+        "appliesTo": "Gasoline vehicle less than 4 years old (paid instead of a smog certification). Whether an electric vehicle pays it is UNKNOWN in the evidence (CA-REG-015)."
+      },
+      "tireFeePerTire": 1.75,
+      "tiresCharged": 5,
+      "plate": 1,
+      "other": [
+        {
+          "name": "Transportation Improvement Fee from 2027-01-01, value 0-4,999",
+          "amount": 35,
+          "note": "Same value tiers as 2026; DMV memo VIN 2026-07."
+        },
+        {
+          "name": "Transportation Improvement Fee from 2027-01-01, value 5,000-24,999",
+          "amount": 69,
+          "note": "DMV memo VIN 2026-07."
+        },
+        {
+          "name": "Transportation Improvement Fee from 2027-01-01, value 25,000-34,999",
+          "amount": 138,
+          "note": "DMV memo VIN 2026-07."
+        },
+        {
+          "name": "Transportation Improvement Fee from 2027-01-01, value 35,000-59,999",
+          "amount": 208,
+          "note": "DMV memo VIN 2026-07."
+        },
+        {
+          "name": "Transportation Improvement Fee from 2027-01-01, value 60,000 or more",
+          "amount": 242,
+          "note": "DMV memo VIN 2026-07."
+        },
+        {
+          "name": "Road Improvement Fee (zero-emission vehicles, model year 2020 and later)",
+          "amount": 121,
+          "note": "NOT charged at the initial registration of a new ZEV bought from a licensed dealer; starts at renewal. 127 from 2027-01-01."
+        },
+        {
+          "name": "County/district fees",
+          "amount": null,
+          "note": "Vary by county of residence (fingerprint, auto theft, abandoned vehicle, SAFE, air quality, county transportation project). Only a few counties were read line by line in the evidence; no per-county table."
+        },
+        {
+          "name": "Title fee on a new dealer registration",
+          "amount": null,
+          "note": "UNKNOWN (CA-TITLE-001). The $28 'Title only' fee (29 from 2027-01-01) is for a title issued without registration."
+        },
+        {
+          "name": "Commercial weight fee (pickups), two axles, unladen 0-1,999 lb",
+          "amount": 8,
+          "note": "Weight fee applies to commercial vehicles, which includes pickups; not to passenger cars."
+        },
+        {
+          "name": "Commercial weight fee (pickups), two axles, unladen 2,000-2,999 lb",
+          "amount": 8,
+          "note": ""
+        },
+        {
+          "name": "Commercial weight fee (pickups), two axles, unladen 3,000-4,000 lb",
+          "amount": 24,
+          "note": ""
+        },
+        {
+          "name": "Commercial weight fee (pickups), two axles, unladen 4,001-5,000 lb",
+          "amount": 80,
+          "note": ""
+        },
+        {
+          "name": "Commercial weight fee (pickups), two axles, unladen 5,001-6,000 lb",
+          "amount": 154,
+          "note": ""
+        },
+        {
+          "name": "Commercial weight fee (pickups), two axles, unladen 6,001-7,000 lb",
+          "amount": 204,
+          "note": ""
+        },
+        {
+          "name": "Commercial weight fee (pickups), two axles, unladen 7,001-8,000 lb",
+          "amount": 257,
+          "note": ""
+        },
+        {
+          "name": "Commercial weight fee (pickups), two axles, unladen 8,001-9,000 lb",
+          "amount": 308,
+          "note": ""
+        },
+        {
+          "name": "Commercial weight fee (pickups), two axles, unladen 9,001-10,000 lb",
+          "amount": 360,
+          "note": ""
+        },
+        {
+          "name": "Electric commercial vehicle weight fee, unladen 0-5,999 lb",
+          "amount": 87,
+          "note": "Applies to electric commercial vehicles and electric passenger vehicles for hire. Whether an electric pickup uses this table or the two-axle table is not stated (CA-REG-013)."
+        },
+        {
+          "name": "Electric commercial vehicle weight fee, unladen 6,000-9,999 lb",
+          "amount": 266,
+          "note": ""
+        },
+        {
+          "name": "Electric commercial vehicle weight fee, unladen 10,000 lb or more",
+          "amount": 358,
+          "note": ""
+        }
+      ]
+    },
+    "sources": {
+      "localTable": "sources/02_cdtfa_rate_table_xlsx.md (file re-fetched 2026-11-20; SHA-256 fdf738e9... identical to the hash recorded in the evidence file); edition cross-check sources/48_cdtfa_95_rates_by_county_city_2026_10.md",
+      "statewideBaseRate": "sources/01_cdtfa_sales_use_tax_rates.md; sources/03_cdtfa_rate_breakdown.md",
+      "maxCombinedRate": "sources/02_cdtfa_rate_table_xlsx.md; sources/48_cdtfa_95_rates_by_county_city_2026_10.md",
+      "counties": "sources/02_cdtfa_rate_table_xlsx.md — the 63 rows of Type 'County' read directly from the re-fetched official spreadsheet (the evidence file holds only excerpts)",
+      "fees.registration": "sources/44_dmv_vin_2026_07_fee_increase_2027.md; sources/45_dmv_vin_2025_10_fee_increase_2026.md; sources/25_dmv_virpm_appendix_1f_fees.md",
+      "fees.chp": "sources/24_dmv_registration_fees.md; sources/25_dmv_virpm_appendix_1f_fees.md; sources/44_dmv_vin_2026_07_fee_increase_2027.md",
+      "fees.vlfPercentOfPrice": "sources/24_dmv_registration_fees.md; sources/28_dmv_virpm_3_075_vlf.md",
+      "fees.transportationImprovementFee": "sources/24_dmv_registration_fees.md; sources/25_dmv_virpm_appendix_1f_fees.md",
+      "fees.smogAbatement": "sources/24_dmv_registration_fees.md; sources/25_dmv_virpm_appendix_1f_fees.md; sources/35_dmv_registering_vehicle_purchased_from_dealer.md",
+      "fees.tireFeePerTire": "sources/16_cdtfa_special_taxes_rates_tire_fee.md; sources/17_cdtfa_prc_42885_tire_fee.md",
+      "fees.tiresCharged": "sources/18_cdtfa_pub91_tire_fee.md ('New tires (including the spare)'); the count of five is from section 5 of the proposal, not printed by CDTFA",
+      "fees.plate": "sources/24_dmv_registration_fees.md; sources/25_dmv_virpm_appendix_1f_fees.md",
+      "fees.other (2027 amounts, Road Improvement Fee)": "sources/44_dmv_vin_2026_07_fee_increase_2027.md; sources/24_dmv_registration_fees.md",
+      "fees.other (county fees)": "sources/39_dmv_virpm_appendix_1a_county_fees.md",
+      "fees.other (title)": "sources/56_dmv_virpm_11_160_title_only.md; CLAIMS.md CA-TITLE-001",
+      "fees.other (weight fees)": "sources/25_dmv_virpm_appendix_1f_fees.md; sources/57_dmv_virpm_7_020_electric_vehicles.md"
+    }
+  },
+  "NY": {
+    "localTable": {
+      "title": "Publication 718 (2/25), New York State Sales and Use Tax Rates by Jurisdiction, Effective March 1, 2025",
+      "effective": "2025-03-01",
+      "sourceFile": "sources/07_tax_pub718_rates_by_jurisdiction.md",
+      "url": "https://www.tax.ny.gov/pdf/publications/sales/pub718.pdf"
+    },
+    "stateRate": 4,
+    "maxCombinedRate": 8.875,
+    "counties": [
+      {
+        "name": "Albany",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Allegany",
+        "combinedRate": 8.5,
+        "mctd": false
+      },
+      {
+        "name": "Bronx",
+        "combinedRate": 8.875,
+        "mctd": true
+      },
+      {
+        "name": "Broome",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Cattaraugus",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Cayuga",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Chautauqua",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Chemung",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Chenango",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Clinton",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Columbia",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Cortland",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Delaware",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Dutchess",
+        "combinedRate": 8.125,
+        "mctd": true
+      },
+      {
+        "name": "Erie",
+        "combinedRate": 8.75,
+        "mctd": false
+      },
+      {
+        "name": "Essex",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Franklin",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Fulton",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Genesee",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Greene",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Hamilton",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Herkimer",
+        "combinedRate": 8.25,
+        "mctd": false
+      },
+      {
+        "name": "Jefferson",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Kings",
+        "combinedRate": 8.875,
+        "mctd": true
+      },
+      {
+        "name": "Lewis",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Livingston",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Madison",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Monroe",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Montgomery",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Nassau",
+        "combinedRate": 8.625,
+        "mctd": true
+      },
+      {
+        "name": "New York",
+        "combinedRate": 8.875,
+        "mctd": true
+      },
+      {
+        "name": "Niagara",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Oneida",
+        "combinedRate": 8.75,
+        "mctd": false
+      },
+      {
+        "name": "Onondaga",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Ontario",
+        "combinedRate": 7.5,
+        "mctd": false
+      },
+      {
+        "name": "Orange",
+        "combinedRate": 8.125,
+        "mctd": true
+      },
+      {
+        "name": "Orleans",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Oswego",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Otsego",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Putnam",
+        "combinedRate": 8.375,
+        "mctd": true
+      },
+      {
+        "name": "Queens",
+        "combinedRate": 8.875,
+        "mctd": true
+      },
+      {
+        "name": "Rensselaer",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Richmond",
+        "combinedRate": 8.875,
+        "mctd": true
+      },
+      {
+        "name": "Rockland",
+        "combinedRate": 8.375,
+        "mctd": true
+      },
+      {
+        "name": "St. Lawrence",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Saratoga",
+        "combinedRate": 7,
+        "mctd": false
+      },
+      {
+        "name": "Schenectady",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Schoharie",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Schuyler",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Seneca",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Steuben",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Suffolk",
+        "combinedRate": 8.75,
+        "mctd": true
+      },
+      {
+        "name": "Sullivan",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Tioga",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Tompkins",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Ulster",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Warren",
+        "combinedRate": 7,
+        "mctd": false
+      },
+      {
+        "name": "Washington",
+        "combinedRate": 7,
+        "mctd": false
+      },
+      {
+        "name": "Wayne",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Westchester",
+        "combinedRate": 8.375,
+        "cities": [
+          {
+            "name": "Yonkers",
+            "combinedRate": 8.875
+          }
+        ],
+        "mctd": true
+      },
+      {
+        "name": "Wyoming",
+        "combinedRate": 8,
+        "mctd": false
+      },
+      {
+        "name": "Yates",
+        "combinedRate": 8,
+        "mctd": false
+      }
+    ],
+    "fees": {
+      "title": 50,
+      "plates": 25,
+      "tireFeePerTire": 2.5,
+      "tiresCharged": 5,
+      "inspectionMax": 10,
+      "registrationByWeight": [
+        {
+          "lbFrom": 0,
+          "lbTo": 1650,
+          "twoYearFee": 26
+        },
+        {
+          "lbFrom": 1651,
+          "lbTo": 1750,
+          "twoYearFee": 27.5
+        },
+        {
+          "lbFrom": 1751,
+          "lbTo": 1850,
+          "twoYearFee": 29
+        },
+        {
+          "lbFrom": 1851,
+          "lbTo": 1950,
+          "twoYearFee": 31
+        },
+        {
+          "lbFrom": 1951,
+          "lbTo": 2050,
+          "twoYearFee": 32.5
+        },
+        {
+          "lbFrom": 2051,
+          "lbTo": 2150,
+          "twoYearFee": 34
+        },
+        {
+          "lbFrom": 2151,
+          "lbTo": 2250,
+          "twoYearFee": 35.5
+        },
+        {
+          "lbFrom": 2251,
+          "lbTo": 2350,
+          "twoYearFee": 37.5
+        },
+        {
+          "lbFrom": 2351,
+          "lbTo": 2450,
+          "twoYearFee": 39
+        },
+        {
+          "lbFrom": 2451,
+          "lbTo": 2550,
+          "twoYearFee": 40.5
+        },
+        {
+          "lbFrom": 2551,
+          "lbTo": 2650,
+          "twoYearFee": 42
+        },
+        {
+          "lbFrom": 2651,
+          "lbTo": 2750,
+          "twoYearFee": 43.5
+        },
+        {
+          "lbFrom": 2751,
+          "lbTo": 2850,
+          "twoYearFee": 45.5
+        },
+        {
+          "lbFrom": 2851,
+          "lbTo": 2950,
+          "twoYearFee": 47
+        },
+        {
+          "lbFrom": 2951,
+          "lbTo": 3050,
+          "twoYearFee": 48.5
+        },
+        {
+          "lbFrom": 3051,
+          "lbTo": 3150,
+          "twoYearFee": 50
+        },
+        {
+          "lbFrom": 3151,
+          "lbTo": 3250,
+          "twoYearFee": 52
+        },
+        {
+          "lbFrom": 3251,
+          "lbTo": 3350,
+          "twoYearFee": 53.5
+        },
+        {
+          "lbFrom": 3351,
+          "lbTo": 3450,
+          "twoYearFee": 55
+        },
+        {
+          "lbFrom": 3451,
+          "lbTo": 3550,
+          "twoYearFee": 56.5
+        },
+        {
+          "lbFrom": 3551,
+          "lbTo": 3650,
+          "twoYearFee": 59
+        },
+        {
+          "lbFrom": 3651,
+          "lbTo": 3750,
+          "twoYearFee": 61.5
+        },
+        {
+          "lbFrom": 3751,
+          "lbTo": 3850,
+          "twoYearFee": 64
+        },
+        {
+          "lbFrom": 3851,
+          "lbTo": 3950,
+          "twoYearFee": 66.5
+        },
+        {
+          "lbFrom": 3951,
+          "lbTo": 4050,
+          "twoYearFee": 69
+        },
+        {
+          "lbFrom": 4051,
+          "lbTo": 4150,
+          "twoYearFee": 71
+        },
+        {
+          "lbFrom": 4151,
+          "lbTo": 4250,
+          "twoYearFee": 73.5
+        },
+        {
+          "lbFrom": 4251,
+          "lbTo": 4350,
+          "twoYearFee": 76
+        },
+        {
+          "lbFrom": 4351,
+          "lbTo": 4450,
+          "twoYearFee": 78.5
+        },
+        {
+          "lbFrom": 4451,
+          "lbTo": 4550,
+          "twoYearFee": 81
+        },
+        {
+          "lbFrom": 4551,
+          "lbTo": 4650,
+          "twoYearFee": 83.5
+        },
+        {
+          "lbFrom": 4651,
+          "lbTo": 4750,
+          "twoYearFee": 85.5
+        },
+        {
+          "lbFrom": 4751,
+          "lbTo": 4850,
+          "twoYearFee": 88
+        },
+        {
+          "lbFrom": 4851,
+          "lbTo": 4950,
+          "twoYearFee": 90.5
+        },
+        {
+          "lbFrom": 4951,
+          "lbTo": 5050,
+          "twoYearFee": 93
+        },
+        {
+          "lbFrom": 5051,
+          "lbTo": 5150,
+          "twoYearFee": 95.5
+        },
+        {
+          "lbFrom": 5151,
+          "lbTo": 5250,
+          "twoYearFee": 98
+        },
+        {
+          "lbFrom": 5251,
+          "lbTo": 5350,
+          "twoYearFee": 100.5
+        },
+        {
+          "lbFrom": 5351,
+          "lbTo": 5450,
+          "twoYearFee": 102.5
+        },
+        {
+          "lbFrom": 5451,
+          "lbTo": 5550,
+          "twoYearFee": 105
+        },
+        {
+          "lbFrom": 5551,
+          "lbTo": 5650,
+          "twoYearFee": 107.5
+        },
+        {
+          "lbFrom": 5651,
+          "lbTo": 5750,
+          "twoYearFee": 110
+        },
+        {
+          "lbFrom": 5751,
+          "lbTo": 5850,
+          "twoYearFee": 112.5
+        },
+        {
+          "lbFrom": 5851,
+          "lbTo": 5950,
+          "twoYearFee": 115
+        },
+        {
+          "lbFrom": 5951,
+          "lbTo": 6050,
+          "twoYearFee": 117
+        },
+        {
+          "lbFrom": 6051,
+          "lbTo": 6150,
+          "twoYearFee": 119.5
+        },
+        {
+          "lbFrom": 6151,
+          "lbTo": 6250,
+          "twoYearFee": 122
+        },
+        {
+          "lbFrom": 6251,
+          "lbTo": 6350,
+          "twoYearFee": 124.5
+        },
+        {
+          "lbFrom": 6351,
+          "lbTo": 6450,
+          "twoYearFee": 127
+        },
+        {
+          "lbFrom": 6451,
+          "lbTo": 6550,
+          "twoYearFee": 129.5
+        },
+        {
+          "lbFrom": 6551,
+          "lbTo": 6650,
+          "twoYearFee": 131.5
+        },
+        {
+          "lbFrom": 6651,
+          "lbTo": 6750,
+          "twoYearFee": 134
+        },
+        {
+          "lbFrom": 6751,
+          "lbTo": 6850,
+          "twoYearFee": 136.5
+        },
+        {
+          "lbFrom": 6851,
+          "lbTo": 6950,
+          "twoYearFee": 139
+        },
+        {
+          "lbFrom": 6951,
+          "lbTo": null,
+          "twoYearFee": 140
+        }
+      ],
+      "countyUseTaxTwoYears": [
+        {
+          "county": "Albany",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Allegany",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Bronx",
+          "amount": 30,
+          "amountOver3500lb": 30
+        },
+        {
+          "county": "Broome",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Cattaraugus",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Chautauqua",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Chemung",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Chenango",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Clinton",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Cortland",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Dutchess",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Erie",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Franklin",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Genesee",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Kings",
+          "amount": 30,
+          "amountOver3500lb": 30
+        },
+        {
+          "county": "Livingston",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Madison",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Monroe",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Montgomery",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Nassau",
+          "amount": 30,
+          "amountOver3500lb": 30
+        },
+        {
+          "county": "New York",
+          "amount": 30,
+          "amountOver3500lb": 30
+        },
+        {
+          "county": "Niagara",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Oneida",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Onondaga",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Orleans",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Oswego",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Putnam",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Queens",
+          "amount": 30,
+          "amountOver3500lb": 30
+        },
+        {
+          "county": "Rensselaer",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Richmond",
+          "amount": 30,
+          "amountOver3500lb": 30
+        },
+        {
+          "county": "Schenectady",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Schuyler",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Steuben",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Suffolk",
+          "amount": 30,
+          "amountOver3500lb": 60
+        },
+        {
+          "county": "Sullivan",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Tioga",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Tompkins",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Ulster",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Warren",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Washington",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Westchester",
+          "amount": 30,
+          "amountOver3500lb": 60
+        },
+        {
+          "county": "Wyoming",
+          "amount": 10,
+          "amountOver3500lb": 20
+        },
+        {
+          "county": "Yates",
+          "amount": 10,
+          "amountOver3500lb": 20
+        }
+      ],
+      "mctdFeeTwoYears": 50,
+      "other": [
+        {
+          "name": "Minimum 2-year registration fee, vehicle with 6 or more cylinders or electric vehicle",
+          "amount": 32.5,
+          "note": "A minimum, not a surcharge: use max(weight-chart fee, 32.50). Do not add it."
+        },
+        {
+          "name": "Plate fee for a one-plate vehicle",
+          "amount": 12.5,
+          "note": "Standard two-plate fee is 25."
+        },
+        {
+          "name": "Plate transfer fee",
+          "amount": 10,
+          "note": "Transferring an existing registration and plates avoids the plate fee and the MCTD fee."
+        },
+        {
+          "name": "Electric or hybrid surcharge",
+          "amount": null,
+          "note": "UNKNOWN (NY-REG-012): none appears on the DMV pages read; not confirmed as a negative."
+        }
+      ]
+    },
+    "sources": {
+      "localTable": "sources/07_tax_pub718_rates_by_jurisdiction.md; sources/09_tax_current_rate_publication_listing.md (PDF re-fetched 2026-11-20; SHA-256 69736443... identical to the hash recorded in the evidence file)",
+      "stateRate": "sources/07_tax_pub718_rates_by_jurisdiction.md ('New York State only 4')",
+      "maxCombinedRate": "sources/07_tax_pub718_rates_by_jurisdiction.md",
+      "counties": "sources/07_tax_pub718_rates_by_jurisdiction.md — all rows read directly from the re-fetched official PDF (the evidence file transcribes only 24 rows)",
+      "counties.mctd": "sources/07_tax_pub718_rates_by_jurisdiction.md (asterisk footnote); sources/05_tax_tb_st_825_rates_additional_taxes.md",
+      "fees.title": "sources/13_dmv_passenger_registration_fees_use_taxes.md; sources/34_dmv_certificate_of_title.md",
+      "fees.plates": "sources/13_dmv_passenger_registration_fees_use_taxes.md; sources/14_dmv_estimate_registration_fees_and_taxes.md",
+      "fees.tireFeePerTire": "sources/12_tax_waste_tire_fee.md",
+      "fees.tiresCharged": "sources/12_tax_waste_tire_fee.md ('any new tires included in the sale ... This includes spare tires'); the count of five is from section 5 of the proposal, not printed by the Tax Department",
+      "fees.inspectionMax": "sources/23_dmv_vs77_inspection_fee_chart.md",
+      "fees.registrationByWeight": "sources/13_dmv_passenger_registration_fees_use_taxes.md",
+      "fees.countyUseTaxTwoYears": "sources/13_dmv_passenger_registration_fees_use_taxes.md",
+      "fees.mctdFeeTwoYears": "sources/13_dmv_passenger_registration_fees_use_taxes.md; sources/14_dmv_estimate_registration_fees_and_taxes.md",
+      "fees.other": "sources/13_dmv_passenger_registration_fees_use_taxes.md; sources/14_dmv_estimate_registration_fees_and_taxes.md; CLAIMS.md NY-REG-004, NY-REG-012"
+    }
+  },
+  "FL": {
+    "localTable": {
+      "title": "Form DR-15DSS (R. 11/25), Discretionary Sales Surtax Information for Calendar Year 2026",
+      "effective": "2026-01-01",
+      "sourceFile": "sources/15_dor_dr15dss_2026_surtax_rates.md",
+      "url": "https://floridarevenue.com/Forms_library/current/dr15dss_26.pdf"
+    },
+    "stateRate": 6,
+    "surtaxCapAmount": 5000,
+    "counties": [
+      {
+        "name": "Alachua",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Baker",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Bay",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Bradford",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Brevard",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Broward",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Calhoun",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Charlotte",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Citrus",
+        "surtaxRate": 0
+      },
+      {
+        "name": "Clay",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Collier",
+        "surtaxRate": 0
+      },
+      {
+        "name": "Columbia",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "DeSoto",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Dixie",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Duval",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Escambia",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Flagler",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Franklin",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Gadsden",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Gilchrist",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Glades",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Gulf",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Hamilton",
+        "surtaxRate": 2
+      },
+      {
+        "name": "Hardee",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Hendry",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Hernando",
+        "surtaxRate": 0.5
+      },
+      {
+        "name": "Highlands",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Hillsborough",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Holmes",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Indian River",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Jackson",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Jefferson",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Lafayette",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Lake",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Lee",
+        "surtaxRate": 0.5
+      },
+      {
+        "name": "Leon",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Levy",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Liberty",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Madison",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Manatee",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Marion",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Martin",
+        "surtaxRate": 0.5
+      },
+      {
+        "name": "Miami-Dade",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Monroe",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Nassau",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Okaloosa",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Okeechobee",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Orange",
+        "surtaxRate": 0.5
+      },
+      {
+        "name": "Osceola",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Palm Beach",
+        "surtaxRate": 0.5
+      },
+      {
+        "name": "Pasco",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Pinellas",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Polk",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Putnam",
+        "surtaxRate": 1
+      },
+      {
+        "name": "St. Johns",
+        "surtaxRate": 0.5
+      },
+      {
+        "name": "St. Lucie",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Santa Rosa",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Sarasota",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Seminole",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Sumter",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Suwannee",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Taylor",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Union",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Volusia",
+        "surtaxRate": 0.5
+      },
+      {
+        "name": "Wakulla",
+        "surtaxRate": 1.5
+      },
+      {
+        "name": "Walton",
+        "surtaxRate": 1
+      },
+      {
+        "name": "Washington",
+        "surtaxRate": 1.5
+      }
+    ],
+    "fees": {
+      "title": 77.25,
+      "newPlate": 28,
+      "initialRegistration": 225,
+      "tireFeePerTire": 1,
+      "tiresCharged": null,
+      "tempTag": 2,
+      "registrationByWeight": [
+        {
+          "lbFrom": 0,
+          "lbTo": 2499,
+          "annualFee": 27.6
+        },
+        {
+          "lbFrom": 2500,
+          "lbTo": 3499,
+          "annualFee": 35.6
+        },
+        {
+          "lbFrom": 3500,
+          "lbTo": null,
+          "annualFee": 45.6
+        }
+      ],
+      "other": [
+        {
+          "name": "Truck (class 31) annual tax and other fees, net weight through 1,999 lb",
+          "amount": 27.6,
+          "note": "Trucks use different weight breaks from automobiles. How an SUV, van or pickup is assigned to automobile vs truck class is UNKNOWN (FL-REG-016)."
+        },
+        {
+          "name": "Truck (class 31) annual tax and other fees, net weight 2,000-3,000 lb",
+          "amount": 35.6,
+          "note": ""
+        },
+        {
+          "name": "Truck (class 31) annual tax and other fees, net weight 3,001-5,000 lb",
+          "amount": 45.6,
+          "note": ""
+        },
+        {
+          "name": "Heavy truck (class 41) 12-month total, gross vehicle weight 5,001-5,999 lb",
+          "amount": 72.35,
+          "note": "Net weight over 5,000 lb; by declared gross vehicle weight. Outside the 225 initial registration fee."
+        },
+        {
+          "name": "Heavy truck (class 41) 12-month total, gross vehicle weight 6,000-7,999 lb",
+          "amount": 99.35,
+          "note": ""
+        },
+        {
+          "name": "Heavy truck (class 41) 12-month total, gross vehicle weight 8,000-9,999 lb",
+          "amount": 114.6,
+          "note": ""
+        },
+        {
+          "name": "Lemon Law fee",
+          "amount": 2,
+          "note": "ALREADY INCLUDED in title 77.25. Do not add again. HSMV 83140 lists it separately as 75.25 + 2.00."
+        },
+        {
+          "name": "Lien notation on title",
+          "amount": 2,
+          "note": "Added when a lien is recorded (financed purchase): electronic title total 79.25."
+        },
+        {
+          "name": "Paper title print",
+          "amount": 2.5,
+          "note": "Added when a paper title is printed; 77.25 is the electronic title total."
+        },
+        {
+          "name": "County branch office fee",
+          "amount": 0.5,
+          "note": "Optional, when processed through a county branch office."
+        },
+        {
+          "name": "Plate transfer fee",
+          "amount": 4.5,
+          "note": "By statute; FLHSMV worksheet shows 4.10 / 4.50. When a plate is transferred the 28 new-plate fee and the 225 initial registration fee do not apply."
+        },
+        {
+          "name": "Lead-acid battery fee",
+          "amount": 1.5,
+          "note": "Per battery; owed by the dealer, who may choose to pass it on. If separately stated it is part of the amount subject to sales tax."
+        },
+        {
+          "name": "Electric or hybrid vehicle fee",
+          "amount": null,
+          "note": "None found in the fee schedules retrieved (FL-REG-013); not proven absent in all of Florida law (FL-REG-014)."
+        }
+      ]
+    },
+    "sources": {
+      "localTable": "sources/15_dor_dr15dss_2026_surtax_rates.md (PDF re-fetched 2026-11-20; SHA-256 cd0d923b... identical to the hash recorded in the evidence file)",
+      "stateRate": "sources/01_fs_212_05_sales_use_lease_tax.md",
+      "surtaxCapAmount": "sources/03_fs_212_054_discretionary_surtax.md; sources/19_dor_rule_12A-15_004_surtax_limitation_text.md",
+      "counties": "sources/15_dor_dr15dss_2026_surtax_rates.md — all 67 rows read directly from the re-fetched official PDF (the evidence file quotes only some rows); rate counts match the evidence file (35 at 1%, 22 at 1.5%, 7 at .5%, 2 None, 1 at 2%)",
+      "fees.title": "sources/22_flhsmv_title_fee_schedule_and_fee_distribution_chart.md; sources/20_flhsmv_fees_page.md",
+      "fees.newPlate": "sources/09_fs_320_plates_service_charges_temp_tag.md; sources/21_flhsmv_hsmv83140_license_plate_rate_chart.md",
+      "fees.initialRegistration": "sources/08_fs_320_072_initial_registration_fee.md; sources/21_flhsmv_hsmv83140_license_plate_rate_chart.md",
+      "fees.tireFeePerTire": "sources/11_fs_681_117_403_718_403_7185_other_fees.md",
+      "fees.tiresCharged": "null: s. 403.718 gives no tire count. sources/28_dor_gt400400_tax_information_for_motor_vehicle_dealers_2012.md (2012 training aid) gives an example of five tires including a new spare = $5",
+      "fees.tempTag": "sources/09_fs_320_plates_service_charges_temp_tag.md; sources/22_flhsmv_title_fee_schedule_and_fee_distribution_chart.md",
+      "fees.registrationByWeight": "sources/21_flhsmv_hsmv83140_license_plate_rate_chart.md (HSMV 83140 Rev. 08/26, class 01 automobiles, 'annual tax and other fees')",
+      "fees.other": "sources/21_flhsmv_hsmv83140_license_plate_rate_chart.md; sources/22_flhsmv_title_fee_schedule_and_fee_distribution_chart.md; sources/11_fs_681_117_403_718_403_7185_other_fees.md; sources/09_fs_320_plates_service_charges_temp_tag.md; sources/28_dor_gt400400_tax_information_for_motor_vehicle_dealers_2012.md"
+    }
+  },
+  "VA": {
+    "stateRate": 4.15,
+    "minimumTax": 75,
+    "fees": {
+      "titleDmv": 15,
+      "titleCode": 10,
+      "registrationByWeight": [
+        {
+          "lbFrom": 0,
+          "lbTo": 4000,
+          "annualFee": 30.75
+        },
+        {
+          "lbFrom": 4001,
+          "lbTo": 6500,
+          "annualFee": 35.75
+        }
+      ],
+      "highwayUseFeeEv": 135.63,
+      "other": [
+        {
+          "name": "Pickup truck registration, 4,001-6,500 lb gross weight (annual)",
+          "amount": 35.75,
+          "note": "DMV 201 (08/10/2026). Pickup rows are by GROSS weight; passenger rows are by vehicle weight."
+        },
+        {
+          "name": "Pickup truck registration, 6,501-10,000 lb gross weight (annual)",
+          "amount": 44.75,
+          "note": "DMV 201 (08/10/2026)."
+        },
+        {
+          "name": "Emissions add-on at registration, Northern Virginia localities (annual)",
+          "amount": 2,
+          "note": "Vehicles garaged in Arlington, Fairfax, Loudoun, Prince William or Stafford counties, or the cities of Alexandria, Fairfax, Falls Church, Manassas or Manassas Park."
+        },
+        {
+          "name": "Highway use fee, fuel-efficient vehicle at 25 MPG combined (annual)",
+          "amount": 7.05,
+          "note": "Applies only at 25 MPG combined or greater; none below 25 MPG. Valid 2026-07-01 through 2027-06-30. Full MPG chart (25 to 100 MPG) not transcribed in the evidence."
+        },
+        {
+          "name": "Highway use fee, fuel-efficient vehicle at 40 MPG combined (annual)",
+          "amount": 55.27,
+          "note": "Valid 2026-07-01 through 2027-06-30."
+        },
+        {
+          "name": "Highway use fee, fuel-efficient vehicle at 50 MPG combined (annual)",
+          "amount": 71.34,
+          "note": "Valid 2026-07-01 through 2027-06-30."
+        },
+        {
+          "name": "Temporary plates (dealer charge, maximum)",
+          "amount": 3,
+          "note": "Dealer may issue free or charge no more than DMV charges the dealer ($3 per set)."
+        },
+        {
+          "name": "Tire recycling fee per new tire",
+          "amount": 0.5,
+          "note": "Levied on tire retailers; whether it applies to tires on a new vehicle at sale is UNKNOWN (VA-OTHER-005). Do not add to a quote without a decision."
+        },
+        {
+          "name": "Local vehicle license fee",
+          "amount": null,
+          "note": "Set by county, city or town; amounts not retrieved (VA-REG-014)."
+        }
+      ]
+    },
+    "sources": {
+      "stateRate": "sources/01_code_58.1-2402_levy.md; sources/06_dmv_fee_chart_dmv201.md",
+      "minimumTax": "sources/01_code_58.1-2402_levy.md; sources/06_dmv_fee_chart_dmv201.md",
+      "fees.titleDmv": "sources/06_dmv_fee_chart_dmv201.md; sources/12_title_fee_code_46.2-627_and_dmv_title_page.md",
+      "fees.titleCode": "sources/12_title_fee_code_46.2-627_and_dmv_title_page.md; sources/31_title_fee_search_code_46.2_ch6_art2.md",
+      "fees.registrationByWeight": "sources/06_dmv_fee_chart_dmv201.md",
+      "fees.highwayUseFeeEv": "sources/14_highway_use_fee.md; sources/06_dmv_fee_chart_dmv201.md",
+      "fees.other": "sources/06_dmv_fee_chart_dmv201.md; sources/14_highway_use_fee.md; sources/19_other_charges_tire_temp_plate_lemon.md; sources/15_local_license_fee_code_46.2-752_755.md"
+    }
+  },
+  "missing": [
+    {
+      "state": "CA",
+      "field": "fees.other: title fee on a new dealer registration",
+      "reason": "UNKNOWN in evidence (CA-TITLE-001); DMV fee calculator is behind a reCAPTCHA and was not run."
+    },
+    {
+      "state": "CA",
+      "field": "fees.other: county/district DMV fees per county",
+      "reason": "Evidence (sources/39) holds only a few example lines; no 58-county fee table was extracted. Not re-fetched: the page lists fee types with CVRA/non-CVRA variants that need interpretation, not a single amount per county."
+    },
+    {
+      "state": "CA",
+      "field": "VLF bracket tables (REG 360 / REG 365)",
+      "reason": "DMV takes the VLF from a price-bracket table, not exactly 0.65% of price; the tables were not retrieved (CA-REG-006)."
+    },
+    {
+      "state": "CA",
+      "field": "fees.smogAbatement for electric vehicles",
+      "reason": "UNKNOWN in evidence (CA-REG-015)."
+    },
+    {
+      "state": "CA",
+      "field": "city-level district rates",
+      "reason": "Out of the requested shape: only the 58 county (unincorporated) rates are stored. 483 city rows exist in the same spreadsheet and many are higher than their county."
+    },
+    {
+      "state": "NY",
+      "field": "fees.countyUseTaxTwoYears for counties not listed",
+      "reason": "The DMV chart lists 43 counties (35 at 10/20, plus the five NYC counties, Nassau, Suffolk, Westchester). The other 19, including Orange and Rockland, show no use tax row; absence is not a stated exemption (NY-REG-010)."
+    },
+    {
+      "state": "NY",
+      "field": "fees.other: electric/hybrid surcharge",
+      "reason": "UNKNOWN in evidence (NY-REG-012)."
+    },
+    {
+      "state": "FL",
+      "field": "fees.tiresCharged",
+      "reason": "The statute sets $1 per new tire but no count. Only a 2012 Department training aid gives a five-tire example (with new spare)."
+    },
+    {
+      "state": "FL",
+      "field": "county surtax rates from 2027-01-01",
+      "reason": "Not published as of 2026-11-16; dr15dss_27.pdf returned 404 (FL-DATE-003). Not re-checked on 2026-11-20."
+    },
+    {
+      "state": "VA",
+      "field": "fees.registrationByWeight above 6,500 lb (passenger) and pickup 4,000 lb or less",
+      "reason": "No such rows in the evidence transcription of DMV 201 (sources/06)."
+    },
+    {
+      "state": "VA",
+      "field": "highway use fee by MPG (full chart)",
+      "reason": "Evidence transcribes only the 25, 40 and 50 MPG rows of the DMV chart."
+    },
+    {
+      "state": "VA",
+      "field": "fees.other: local vehicle license fee",
+      "reason": "Local sources not retrieved (VA-REG-014)."
+    },
+    {
+      "state": "VA",
+      "field": "fees.other: tire recycling fee on a new vehicle",
+      "reason": "Rate verified ($0.50); application to tires on a new vehicle UNKNOWN (VA-OTHER-005)."
+    }
+  ],
+  "notes": [
+    "All rates are percent values (7.25 means 7.25%). The evidence package is marked RESEARCH, NOT APPROVED; VERIFIED means read on an official page on 2026-11-16, not approved as a rule.",
+    "County tables: the evidence files hold only excerpts, so the same three official files were re-fetched on 2026-11-20 and read by script. Each file's SHA-256 is identical to the hash recorded in the evidence on 2026-11-16.",
+    "CA counties: combinedRate is the rate on the 'County' row of the CDTFA table, which is the unincorporated-area rate. Cities inside a county often have a higher rate (up to 11.75% in Lancaster and Palmdale); a county-level estimate can understate the tax for a city address. For Del Norte, Kern, Monterey, Santa Cruz and Yuba the table has no countywide rate, only a 'County Unincorporated Area' row; that row is used.",
+    "CA county rates are effective 2026-10-01. District rates can change at any calendar-quarter start; no later change was published as of 2026-11-16.",
+    "CA: rate follows the address where the vehicle is registered, not the dealer's location.",
+    "CA DMV fees change every January 1. Registration 73 -> 76, CHP 34 -> 35, Road Improvement Fee 121 -> 127, Transportation Improvement Fee 33/66/132/198/231 -> 35/69/138/208/242 on 2027-01-01. The stored main values are the 2026 amounts and expire 2026-12-31.",
+    "CA conflict (closed in evidence): the DMV consumer page shows registration 76 with no date while Appendix 1F shows 73; DMV memo VIN 2026-07 shows 73 is current and 76 starts 2027-01-01. The DMV consumer page says use tax '7.25% - 10.25%', out of step with CDTFA's 11.75% maximum.",
+    "CA VLF: 0.65% of purchase price (trade-in and rebate not deducted; tax, doc fee and license fees excluded). DMV reads it from a price-bracket table, so price x 0.65% is an approximation.",
+    "CA tire fee: 1.75 per new tire including the spare. tiresCharged 5 assumes four tires plus a spare (proposal section 5); a vehicle sold without a spare has four. The fee is not subject to sales tax.",
+    "NY counties: combinedRate already includes the 4% state rate and, in MCTD counties, the 0.375% MCTD rate. Do not add either again.",
+    "NY: Publication 718 lists 18 cities on their own lines; only Yonkers (8.875%) differs from its county (Westchester 8.375%), so it is the only entry under 'cities'.",
+    "NY: the five New York City counties are listed in Publication 718 as 'see New York City' (8.875%). Rate follows the purchaser's residence. The Tax Department says not to use ZIP codes to pick the jurisdiction.",
+    "NY: Publication 718 effective 2025-03-01 is the edition listed as current. Many counties' additional local rates are scheduled to expire 2027-11-30 unless extended (NY-DATE-002).",
+    "NY registration fee chart is a TWO-YEAR fee by vehicle weight. A minimum of 32.50 applies to vehicles with 6 or more cylinders and to electric vehicles (a floor, not an add-on).",
+    "NY countyUseTaxTwoYears: 'amount' is the two-year tax for a vehicle of 3,500 lb or less; 'amountOver3500lb' (added key) is for 3,501 lb or more. Counties not in the list have no use tax row on the DMV chart. mctdFeeTwoYears (50) applies in the 12 counties with mctd true, in addition to any county use tax.",
+    "NY tire fee: 2.50 per new tire including spares, extended through 2027-12-31; not subject to sales tax. tiresCharged 5 assumes four tires plus a spare (proposal section 5). inspectionMax 10 is the safety inspection maximum (chart effective 2011-01-01); new vehicles are exempt from the emissions inspection.",
+    "FL surtaxRate applies only to the first surtaxCapAmount (5,000) of the sales price; the 6% state rate applies to the whole taxable amount. County is the purchaser's residence address on the title or registration.",
+    "FL surtax table is for calendar year 2026 only and expires 2026-12-31. The 2027 table was not published as of 2026-11-16. Surtaxes shown expiring 2026-12-31: Brevard (both .5% parts), Charlotte (1%), Liberty (.5% part), Santa Rosa (one .5% part); those counties' rates may be lower from 2027-01-01.",
+    "FL: use dr15dss_26.pdf. The un-suffixed dr15dss.pdf is the 2025 table.",
+    "FL title 77.25 is the electronic 'Original New, no lien' total and INCLUDES the 2.00 Lemon Law fee and 4.25 service fee (HSMV 83140 shows the same total as 75.25 + 2.00). Add 2 for a lien, 2.50 for a paper title.",
+    "FL registrationByWeight is the class 01 private automobile 'annual tax and other fees' total by net weight (HSMV 83140 Rev. 08/26), not the base tax alone (14.50/22.50/32.50). Full annual amount regardless of month. Trucks use different breaks (see other).",
+    "FL initialRegistration 225 applies only when the buyer has no Florida plate to transfer; newPlate 28 only when a new metal plate is issued. tempTag 2 is the statutory fee before the s. 320.04 service charge.",
+    "FL conflict (open): the trade-in deduction is worded three ways in official sources (credit / allowance / retail guide value). Not a number in this file.",
+    "VA: one statewide motor vehicle sales and use tax of 4.15% with a 75 minimum; no local sales tax on vehicles. The Code carries a 'contingent effective' version (3%, 35 minimum) whose trigger was not retrieved.",
+    "VA title fee conflict (open): DMV publishes and charges 15 (titleDmv); Code 46.2-627 says 10 (titleCode). The reconciling provision was not found. Use titleDmv for what a buyer is charged.",
+    "VA registrationByWeight is the annual fee from DMV 201 (08/10/2026) for passenger vehicles. highwayUseFeeEv 135.63 is annual, valid 2026-07-01 through 2027-06-30; it changes every July 1.",
+    "Doc fee caps and planning numbers are not in this file; see section 5 of the proposal."
+  ]
+}

@@ -1,25 +1,21 @@
 ---
-// Tax, fee and payment estimator (website upgrade). Texas only for now: it uses the approved Texas rule from the
-// finance contract (6.25% motor vehicle tax on price less trade-in value; $225 documentary fee and $300 combined
-// title and registration as planning estimates). Other states turn on as their rules are approved.
+// Tax, fee and payment estimator (website upgrade) for purchases in Texas, California, Virginia, New York and
+// Florida. The rules live in src/lib/estimate.ts and the county tables and fees in src/data/state-rates.json.
+// State tax is included; local tax is assumed from the shopper's county and labeled; anything not confirmed from
+// official sources is listed as not included instead of being guessed.
 import Base from "../layouts/Base.astro";
 import { APP_STORE_URL } from "../site";
 import rates from "../data/rates.json";
-const states = [
-  ["TX", "Texas", true],
-  ["CA", "California", false],
-  ["FL", "Florida", false],
-  ["NY", "New York", false],
-  ["VA", "Virginia", false],
-] as const;
+import { STATE_NAMES } from "../lib/estimate";
+const states = Object.entries(STATE_NAMES).sort((a, b) => a[1].localeCompare(b[1]));
 ---
 
-<Base title="Tax, fee and payment estimator" description="Estimate sales tax, title and registration, documentary fee and a monthly payment for a new car in Texas.">
+<Base title="Tax, fee and payment estimator" description="Estimate sales tax, government fees, the dealer documentary fee and a monthly payment for a new car in Texas, California, Virginia, New York or Florida.">
   <section class="page-head">
     <div class="wrap">
       <p class="eyebrow">Website upgrade</p>
       <h1>Estimate tax, fees <span class="mint">and your payment.</span></h1>
-      <p class="lead">State tax is included. These are estimates; the dealer and lender set the final numbers.</p>
+      <p class="lead">State tax is included. Local tax is assumed from your county, not verified. These are estimates; the dealer, the state and the lender set the final numbers.</p>
     </div>
   </section>
 
@@ -29,10 +25,11 @@ const states = [
       <div class="grid2">
         <label>State
           <select name="state">
-            {states.map(([code, name, on]) => <option value={code}>{name}{on ? "" : " (coming soon)"}</option>)}
-            <option value="other">Another state (coming soon)</option>
+            {states.map(([code, name]) => <option value={code} selected={code === "TX"}>{name}</option>)}
+            <option value="other">Another state (not available yet)</option>
           </select>
         </label>
+        <label data-county-wrap hidden>County <select name="county"><option value="">Choose your county</option></select></label>
         <label>Trim <select name="trim" disabled><option value="">Enter a price below</option></select></label>
         <label>Vehicle price (MSRP or agreed price) <input name="price" inputmode="decimal" placeholder="35,000" /></label>
         <label>Destination charge (on the window sticker) <input name="destination" inputmode="decimal" placeholder="1,395" /></label>
@@ -50,28 +47,25 @@ const states = [
           <select name="term"><option value="36">36 months</option><option value="48">48 months</option><option value="60" selected>60 months</option><option value="72">72 months</option><option value="84">84 months</option></select>
         </label>
       </div>
+      <label class="check" data-electric-wrap><input type="checkbox" name="electric" /> This is an electric vehicle</label>
+      <label class="check" data-plate-wrap hidden><input type="checkbox" name="plate" /> I have a Florida plate to transfer</label>
     </form>
 
     <div class="card out" aria-live="polite">
       <p class="hold" data-hold>Enter a price and the destination charge to see the estimate.</p>
+      <p class="hold" data-soon hidden>This state isn't available yet. We add a state only after its tax and fee rules are checked against official sources.</p>
       <div data-result hidden>
-        <dl>
-          <div><dt>Vehicle price with destination</dt><dd data-o="gross"></dd></div>
-          <div><dt>Texas motor vehicle tax (6.25%) <span class="tag ok">State tax, included</span></dt><dd data-o="tax"></dd></div>
-          <div><dt>Local tax <span class="tag ok">None on vehicles in Texas</span></dt><dd>$0.00</dd></div>
-          <div><dt>Title and registration <span class="tag">Estimate</span></dt><dd>$300.00</dd></div>
-          <div><dt>Dealer documentary fee <span class="tag">Estimate</span></dt><dd>$225.00</dd></div>
-          <div class="total"><dt>Estimated out the door</dt><dd data-o="otd"></dd></div>
-          <div><dt>Down payment</dt><dd data-o="down"></dd></div>
-          <div><dt>Trade-in equity (value less what's owed)</dt><dd data-o="equity"></dd></div>
-          <div class="total"><dt>Estimated amount to finance</dt><dd data-o="financed"></dd></div>
-        </dl>
+        <dl data-lines></dl>
         <p class="pay" data-pay></p>
+        <div data-skipped-wrap hidden>
+          <h3>Not included in this estimate</h3>
+          <ul class="skipped" data-skipped></ul>
+        </div>
       </div>
-      <p class="hold" data-soon hidden>This state isn't available yet. We add a state only after its tax and fee rules are checked against official sources. Texas is ready today.</p>
+      <ul class="fine" data-notes></ul>
       <ul class="fine">
-        <li>Tax is figured on the price with destination, less your trade-in's value, as Texas does for a purchase.</li>
-        <li>Title, registration and the documentary fee are planning estimates. Your dealer's amounts may differ.</li>
+        <li>Government fees and tax rules were read from each state's official pages in November 2026. Fees change, usually on January 1 or July 1.</li>
+        <li>The dealer documentary fee is a planning estimate. Your dealer's fee may differ.</li>
         <li>Dealer discounts, rebates, add-ons and offers aren't included. <a href={APP_STORE_URL}>Offers are in the app</a> for Texas shoppers.</li>
         <li>If you pick a credit range, the rate is an estimate: Experian's average new-car rate for that credit range, adjusted for loan length using rates advertised by {rates.lenders.length} lenders on {rates.collected}. You can type your own rate at any time. It is not an offer of credit.</li>
       </ul>
@@ -84,19 +78,26 @@ const states = [
   .est[hidden], [hidden] { display: none !important; }
   .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
   h2 { font-size: 22px; margin-bottom: 16px; }
+  h3 { font-size: 16px; margin: 22px 0 8px; }
   label { display: grid; gap: 6px; font-size: 14px; font-weight: 600; color: var(--sub); }
   input, select { height: 48px; padding: 0 12px; border-radius: 12px; border: 1px solid rgba(232, 243, 238, 0.25); background: var(--card-solid); color: var(--text); font: 500 16px var(--font); min-width: 0; width: 100%; }
+  .check { display: flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 12px; font-size: 15px; color: var(--text); cursor: pointer; }
+  .check input { width: 22px; height: 22px; flex: none; padding: 0; accent-color: var(--mint); }
   dl { margin: 0; display: grid; }
-  dl div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--edge); font-size: 16px; }
-  dt { color: var(--sub); }
-  dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .total dt, .total dd { color: var(--text); font-weight: 800; font-size: 18px; }
-  .tag { display: inline-block; margin-left: 6px; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; border: 1px solid rgba(255, 196, 92, 0.5); color: #ffe2a8; }
-  .tag.ok { border-color: rgba(92, 235, 196, 0.5); color: var(--mint); }
+  dl :global(div) { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--edge); font-size: 16px; }
+  dl :global(dt) { color: var(--sub); min-width: 0; }
+  dl :global(dt small) { display: block; margin-top: 3px; font-size: 13px; color: var(--faint); }
+  dl :global(dd) { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  dl :global(.total dt), dl :global(.total dd) { color: var(--text); font-weight: 800; font-size: 18px; }
+  dl :global(.tag) { display: inline-block; margin-left: 6px; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; border: 1px solid rgba(255, 196, 92, 0.5); color: #ffe2a8; white-space: nowrap; }
+  dl :global(.tag.ok) { border-color: rgba(92, 235, 196, 0.5); color: var(--mint); }
   .pay { margin: 18px 0 0 !important; font-size: 28px; font-weight: 800; color: var(--text) !important; }
   .pay :global(small) { font-size: 15px; font-weight: 600; color: var(--sub); }
   .hold { margin: 0 !important; }
+  .skipped { margin: 0; padding-left: 18px; color: var(--sub); font-size: 14px; display: grid; gap: 8px; }
+  .skipped :global(strong) { color: var(--text); }
   .fine { margin: 18px 0 0; padding-left: 18px; color: var(--faint); font-size: 13px; display: grid; gap: 6px; }
+  .fine:empty { display: none; }
   @media (max-width: 900px) { .est { grid-template-columns: 1fr; } }
   @media (max-width: 520px) { .grid2 { grid-template-columns: 1fr; } }
 </style>
@@ -105,6 +106,8 @@ const states = [
   import { requirePlus } from "../lib/plus";
   import type { Car } from "../lib/catalog";
   import rates from "../data/rates.json";
+  import stateRates from "../data/state-rates.json";
+  import { estimate, feesFor, STATE_NAMES, type Line, type RatesFile, type StateCode } from "../lib/estimate";
 
   // Whole cents throughout, so the arithmetic is exact.
   const cents = (s: string): number | null => {
@@ -114,30 +117,54 @@ const states = [
     return Number.isFinite(n) && n >= 0 ? Math.round(n * 100) : null;
   };
   const usd = (c: number) => `${c < 0 ? "-" : ""}$${(Math.abs(c) / 100).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-  const TAX_BP = 625; // 6.25% in basis points
-  const DOC = 22500;
-  const TITLE_REG = 30000;
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c] ?? c);
+  const TAGS: Record<Line["tag"], [string, string]> = {
+    verified: ["ok", "Verified"],
+    assumed: ["", "Assumed"],
+    estimate: ["", "Estimate"],
+    not_included: ["", "Not included"],
+  };
+
+  // County lists for the three states with a local tax on vehicles. New York lists Yonkers apart from Westchester.
+  type Place = { name: string; rate: number; county: string; mctd?: boolean };
+  const PLACES: Partial<Record<StateCode, Place[]>> = {
+    CA: stateRates.CA.counties.map((c) => ({ name: c.name, rate: c.combinedRate, county: c.name })),
+    NY: stateRates.NY.counties.flatMap((c) => [
+      { name: c.name, rate: c.combinedRate, county: c.name, mctd: c.mctd },
+      ...((c as { cities?: { name: string; combinedRate: number }[] }).cities ?? []).map((x) => ({ name: `${x.name} (city, ${c.name} County)`, rate: x.combinedRate, county: c.name, mctd: c.mctd })),
+    ]),
+    FL: stateRates.FL.counties.map((c) => ({ name: c.name, rate: c.surtaxRate, county: c.name })),
+  };
+  const LOCAL_NOTE: Partial<Record<StateCode, string>> = {
+    CA: `County rates are from the state's table in effect ${stateRates.CA.localTable.effective}, for areas outside city limits. Many cities charge more; the highest combined rate in California is ${stateRates.CA.maxCombinedRate}%.`,
+    NY: `County rates are from New York's Publication 718, in effect ${stateRates.NY.localTable.effective}. The highest combined rate in New York is ${stateRates.NY.maxCombinedRate}%.`,
+    FL: "County surtax rates are from Florida's 2026 table and apply only to the first $5,000. They change each January 1.",
+  };
 
   async function start() {
     const root = document.querySelector<HTMLElement>("[data-est]")!;
     root.hidden = false;
     const form = root.querySelector<HTMLFormElement>("[data-form]")!;
-    const f = (n: string) => form.elements.namedItem(n) as HTMLInputElement | HTMLSelectElement;
-    const out = (n: string) => root.querySelector<HTMLElement>(`[data-o="${n}"]`)!;
-    const hold = root.querySelector<HTMLElement>("[data-hold]")!;
-    const result = root.querySelector<HTMLElement>("[data-result]")!;
-    const soon = root.querySelector<HTMLElement>("[data-soon]")!;
-    const pay = root.querySelector<HTMLElement>("[data-pay]")!;
+    const f = (n: string) => form.elements.namedItem(n) as HTMLInputElement & HTMLSelectElement;
+    const q = (s: string) => root.querySelector<HTMLElement>(s)!;
+    const hold = q("[data-hold]");
+    const result = q("[data-result]");
+    const soon = q("[data-soon]");
+    const pay = q("[data-pay]");
+    const lines = q("[data-lines]");
+    const skipped = q("[data-skipped]");
+    const notes = q("[data-notes]");
 
     const key = new URLSearchParams(location.search).get("car");
     if (key) {
       const cars: Car[] = await (await fetch("/catalog.json")).json();
       const car = cars.find((c) => c.key === key);
       if (car) {
-        const h = root.querySelector<HTMLElement>("[data-car]")!;
+        const h = q("[data-car]");
         h.textContent = `${car.year} ${car.make} ${car.model}`;
         h.hidden = false;
-        const sel = f("trim") as HTMLSelectElement;
+        if (car.fuel === "Electric") f("electric").checked = true;
+        const sel = f("trim");
         const priced = car.trims.filter((t) => t.msrp);
         if (priced.length) {
           sel.disabled = false;
@@ -148,7 +175,17 @@ const states = [
       }
     }
 
-    // Fill the rate from the credit range when this loan length has an estimate.
+    // The county list follows the state.
+    function fillCounties() {
+      const places = PLACES[f("state").value as StateCode];
+      q("[data-county-wrap]").hidden = !places;
+      q("[data-plate-wrap]").hidden = f("state").value !== "FL";
+      f("county").replaceChildren(new Option("Choose your county", ""), ...(places ?? []).map((p, i) => new Option(p.name, String(i))));
+    }
+    f("state").addEventListener("change", () => { fillCounties(); calc(); });
+    fillCounties();
+
+    // Fill the rate from the credit range: Experian's average for the range, adjusted for loan length.
     let rateNote = "";
     function fillRate() {
       const band = rates.bands.find((b) => b.id === f("credit").value);
@@ -160,33 +197,58 @@ const states = [
     }
     f("credit").addEventListener("change", () => { fillRate(); calc(); });
     f("term").addEventListener("change", () => { fillRate(); calc(); });
-    f("apr").addEventListener("input", () => { (f("credit") as HTMLSelectElement).value = ""; rateNote = ""; });
+    f("apr").addEventListener("input", () => { f("credit").value = ""; rateNote = ""; });
+
+    const row = (l: Line) => `<div><dt>${esc(l.label)} <span class="tag ${TAGS[l.tag][0]}">${TAGS[l.tag][1]}</span>${l.note ? `<small>${esc(l.note)}</small>` : ""}</dt><dd>${usd(l.amount ?? 0)}</dd></div>`;
+    const plain = (label: string, amount: number, total = false) => `<div${total ? ' class="total"' : ""}><dt>${label}</dt><dd>${usd(amount)}</dd></div>`;
 
     function calc() {
-      const texas = f("state").value === "TX";
-      soon.hidden = texas;
+      const state = f("state").value;
+      const known = state in STATE_NAMES;
+      soon.hidden = known;
       const price = cents(f("price").value);
       const dest = cents(f("destination").value);
-      if (!texas || price === null || dest === null) {
+      if (!known || price === null || dest === null) {
         result.hidden = true;
-        hold.hidden = !texas;
+        hold.hidden = !known;
+        notes.replaceChildren();
         return;
       }
+      const code = state as StateCode;
+      const place = f("county").value === "" ? null : PLACES[code]?.[Number(f("county").value)] ?? null;
       const trade = cents(f("trade").value) ?? 0;
       const payoff = cents(f("payoff").value) ?? 0;
       const down = cents(f("down").value) ?? 0;
-      const gross = price + dest;
-      const basis = Math.max(0, gross - trade);
-      const tax = Math.round((basis * TAX_BP) / 10000);
-      const otd = gross + tax + DOC + TITLE_REG;
+      const input = {
+        state: code,
+        price,
+        destination: dest,
+        tradeValue: trade,
+        tradePayoff: payoff,
+        localCombinedRate: code === "CA" || code === "NY" ? place?.rate ?? null : null,
+        flSurtaxRate: code === "FL" ? place?.rate ?? null : null,
+        electric: f("electric").checked,
+        hasPlateToTransfer: f("plate").checked,
+        nyMctd: !!place?.mctd,
+      };
+      const e = estimate(input, feesFor(input, stateRates as unknown as RatesFile, place?.county ?? null));
       const equity = trade - payoff;
-      const financed = Math.max(0, otd - down - equity);
-      out("gross").textContent = usd(gross);
-      out("tax").textContent = usd(tax);
-      out("otd").textContent = usd(otd);
-      out("down").textContent = usd(-down);
-      out("equity").textContent = usd(-equity);
-      out("financed").textContent = usd(financed);
+      const financed = Math.max(0, e.outTheDoor - down - equity);
+
+      lines.innerHTML =
+        plain("Vehicle price with destination", e.gross) +
+        e.tax.map(row).join("") +
+        e.fees.map(row).join("") +
+        plain("Estimated out the door", e.outTheDoor, true) +
+        plain("Down payment", -down) +
+        plain("Trade-in equity (value less what's owed)", -equity) +
+        plain("Estimated amount to finance", financed, true);
+
+      skipped.innerHTML = e.notIncluded.map((l) => `<li><strong>${esc(l.label)}.</strong> ${esc(l.note ?? "")}</li>`).join("");
+      q("[data-skipped-wrap]").hidden = e.notIncluded.length === 0;
+      const local = place ? LOCAL_NOTE[code] : undefined;
+      notes.innerHTML = [...e.notes, ...(local ? [local] : [])].map((n) => `<li>${esc(n)}</li>`).join("");
+
       const apr = Number(f("apr").value.replace(/[%\s]/g, ""));
       const n = Number(f("term").value);
       if (f("apr").value.trim() === "" || !Number.isFinite(apr) || apr < 0 || apr > 100) {
@@ -200,7 +262,7 @@ const states = [
       result.hidden = false;
     }
     form.addEventListener("input", calc);
-    form.addEventListener("submit", (e) => e.preventDefault());
+    form.addEventListener("submit", (ev) => ev.preventDefault());
     calc();
   }
   if (requirePlus("estimate")) start();
