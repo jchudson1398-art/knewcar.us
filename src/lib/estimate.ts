@@ -239,9 +239,11 @@ export function feesFor(input: EstimateInput, data: RatesFile, county: string | 
       fixed.push({ label: "New license plate", amount: f.newPlate });
     }
     fixed.push({ label: "Temporary tag", amount: f.tempTag });
-    const flBand = lb !== null && input.passengerCar ? band(f.registrationByWeight, lb) : undefined;
-    if (flBand) fixed.push({ label: "Registration fee, first year", amount: flBand.annualFee, tag: weightTag, note: `By weight: ${weightText}. Passenger car rate.` });
-    else notIncluded.push({ label: "Registration fee", note: lb !== null && !input.passengerCar ? "By weight. We have not confirmed whether Florida registers an SUV, van or pickup at the car rate or the truck rate. A car pays $27.60 to $45.60 a year." : "$27.60 to $45.60 a year for a car, by vehicle weight. Enter the weight to include it." });
+    // SUVs and pickups are registered by weight at the same rates as cars: Jacob Hudson's ruling, 2026-11-21.
+    // The research had the class for these as unknown, so the official citation is still to be attached (R-15).
+    const flBand = lb !== null ? band(f.registrationByWeight, lb) : undefined;
+    if (flBand) fixed.push({ label: "Registration fee, first year", amount: flBand.annualFee, tag: weightTag, note: `By weight: ${weightText}.` });
+    else notIncluded.push({ label: "Registration fee", note: "$27.60 to $45.60 a year, by vehicle weight. Enter the weight to include it." });
     notIncluded.push({ label: "Tire fee", note: `$${f.tireFeePerTire} for each new tire.` });
   }
 
