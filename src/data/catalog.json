@@ -694,7 +694,10 @@
      "4WD"
     ],
     "msrp": 55895,
-    "photo": true
+    "photo": true,
+    "lbMin": 8464,
+    "lbMax": 8464,
+    "lbThird": true
    },
    {
     "name": "LT - Extended Range",
@@ -735,7 +738,10 @@
      "4WD"
     ],
     "msrp": 97350,
-    "photo": true
+    "photo": true,
+    "lbMin": 8464,
+    "lbMax": 8464,
+    "lbThird": true
    },
    {
     "name": "RST Stars and Steel Edition - Max Range",
@@ -743,7 +749,10 @@
      "4WD"
     ],
     "msrp": 105850,
-    "photo": true
+    "photo": true,
+    "lbMin": 8464,
+    "lbMax": 8464,
+    "lbThird": true
    },
    {
     "name": "Trail Boss - Extended Range",
