@@ -1,6 +1,7 @@
 // The cars the website shows: a snapshot of the KnewCar catalog (scripts/build-catalog.py). One entry per model,
 // with its body type and powertrain. No prices, payments or offers: those live in the app.
 import data from "../data/catalog.json";
+import configData from "../data/configs.json";
 
 export interface Car {
   key: string;
@@ -22,6 +23,22 @@ export interface Car {
 }
 
 export const CATALOG = data as Car[];
+
+/** One configuration the app has: a trim in a model year, with its drivetrain and body where the catalog records them. */
+export interface Config {
+  /** The model's key in CATALOG. */
+  key: string;
+  year: number;
+  trim: string;
+  drive: string | null;
+  body: string | null;
+  /** Verified current MSRP without destination, or null. */
+  msrp: number | null;
+  /** Photo id: the picture is /img/cfg/<img>.webp. Configurations that look the same share one photo. */
+  img: string;
+}
+const byKey = new Map(CATALOG.map((c) => [c.key, c]));
+export const CONFIGS = (configData as Config[]).map((config) => ({ config, car: byKey.get(config.key)! }));
 
 export const carName = (c: Car) => `${c.year} ${c.make} ${c.model}`;
 export const CONFIG_TOTAL = CATALOG.reduce((n, c) => n + c.configs, 0);

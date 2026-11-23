@@ -2,20 +2,20 @@
 import Base from "../layouts/Base.astro";
 import CarTile from "../components/CarTile.astro";
 import SearchBar from "../components/SearchBar.astro";
-import { CATALOG, FILTERS } from "../lib/catalog";
+import { CATALOG, CONFIGS, FILTERS } from "../lib/catalog";
 import { APP_STORE_URL } from "../site";
 
 const cars = [...CATALOG].sort((a, b) => a.make.localeCompare(b.make) || a.model.localeCompare(b.model));
 const makes = [...new Set(cars.map((c) => c.make))].sort();
 const brands = makes.length;
-// Every trim gets its own card; the "Models only" toggle switches to one card per model.
-const trims = cars.flatMap((car) => car.trims.map((trim) => ({ car, trim })));
+// Every configuration gets its own card; the "Models only" toggle switches to one card per model.
+const configs = [...CONFIGS].sort((a, b) => a.car.make.localeCompare(b.car.make) || a.car.model.localeCompare(b.car.model) || b.config.year - a.config.year);
 ---
 
-<Base title="Explore all your options" description={`Browse and search every trim of ${cars.length} new models from ${brands} brands in one place. Trucks, SUVs, sedans, hybrids and electric cars.`}>
+<Base title="Explore all your options" description={`Browse and search every configuration of ${cars.length} new models from ${brands} brands in one place. Trucks, SUVs, sedans, hybrids and electric cars.`}>
   <section class="page-head">
     <div class="wrap">
-      <p class="eyebrow">{trims.length} trims · {cars.length} models · {brands} brands</p>
+      <p class="eyebrow">{configs.length.toLocaleString("en-US")} configurations · {cars.length} models · {brands} brands</p>
       <h1>Explore <span class="mint">all your options.</span></h1>
     </div>
   </section>
@@ -57,12 +57,12 @@ const trims = cars.flatMap((car) => car.trims.map((trim) => ({ car, trim })));
     </div>
 
     <div class="status">
-      <p aria-live="polite" data-count>All {trims.length} trims</p>
+      <p aria-live="polite" data-count>All {configs.length.toLocaleString("en-US")} configurations</p>
       <button type="button" class="clear" data-clear hidden>Clear search</button>
     </div>
 
     <div class="car-grid">
-      {trims.map(({ car, trim }, i) => <CarTile car={car} trim={trim} eager={i < 8} />)}
+      {configs.map(({ car, config }, i) => <CarTile car={car} config={config} eager={i < 8} />)}
       {cars.map((car) => <CarTile car={car} hide />)}
     </div>
 
@@ -154,8 +154,8 @@ const trims = cars.flatMap((car) => car.trims.map((trim) => ({ car, trim })));
       // "trucks" should find "truck": drop a trailing s from each word before matching.
       const words = query.toLowerCase().split(/\s+/).filter(Boolean).map((w) => (w.length > 3 ? w.replace(/s$/, "") : w));
       let shown = 0;
-      const kind = modelsOnly.checked ? "model" : "trim";
-      const noun = kind === "model" ? "models" : "trims";
+      const kind = modelsOnly.checked ? "model" : "config";
+      const noun = kind === "model" ? "models" : "configurations";
       for (const t of tiles) {
         const price = Number(t.dataset.price) || 0;
         const ok = t.dataset.kind === kind && (!make || t.dataset.make === make) && matchesType(t) && words.every((w) => (t.dataset.text ?? "").includes(w)) && (!max || (price > 0 && price < max));
@@ -170,7 +170,7 @@ const trims = cars.flatMap((car) => car.trims.map((trim) => ({ car, trim })));
       makeChips.forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.make === make)));
       const what = [make, type === "All" ? "" : type, noun].filter(Boolean).join(" ");
       const plain = !query && type === "All" && !make && !max;
-      count.textContent = query ? `${shown} ${shown === 1 ? "result" : "results"} for “${query}”${what === noun ? "" : ` in ${what}`}` : plain ? `All ${shown} ${noun}` : `${shown} ${what}`;
+      count.textContent = query ? `${shown} ${shown === 1 ? "result" : "results"} for “${query}”${what === noun ? "" : ` in ${what}`}` : plain ? `All ${shown.toLocaleString("en-US")} ${noun}` : `${shown} ${what}`;
       if (max) count.textContent += ` under $${max.toLocaleString("en-US")} MSRP`;
       empty.hidden = shown !== 0;
       clears[0].hidden = plain;

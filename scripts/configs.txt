@@ -1,0 +1,184 @@
+# make|model|year|trim~msrp:drive:body:photo,... ; exported read-only from the catalog on 2026-11-23. See scripts/build-configs.py.
+Chevrolet|Blazer EV|2026|LT~44700:f:-:d3423e,47700:a:-:bcb757;RS~50500:f:-:6cdecf,53500:a:-:55885a;SS~60700:a:-:7e7491
+Chevrolet|Blazer EV|2027|LT~45000:f:-:37c5ae,48000:a:-:59117b;RS~50800:f:-:bdf5ca,53800:a:-:68d206;SS~60700:a:-:53385f
+Chevrolet|Blazer|2026|2LT~34300:f:-:d26be6,37000:a:-:150f31;3LT~39700:f:-:b204a5,42400:a:-:ae0278;RS~43600:f:-:a1dd4e,45250:f:-:ec9f29,46500:a:-:d3ac0c,47500:a:-:dcbe35
+Chevrolet|Bolt|2027|LT~27600:f:-:254aca;RS~31600:f:-:64779a
+Chevrolet|Colorado|2026|Custom~:-:-:1db556,:4:-:7c2bda;LT~36000:-:-:36ca80,39300:4:-:faecdf;Trail Boss~40500:4:-:169826;WT~32400:-:-:e816f8,35700:4:-:73acbe;Z71~44600:4:-:7e3d5d;ZR2~50700:4:-:f8dd61
+Chevrolet|Corvette Grand Sport|2027|Convertible~:-:v:7f8881;Coupe~:-:c:1c3c9e
+Chevrolet|Corvette Stingray|2026|Convertible~:-:v:891e01;Coupe~:-:c:0a5251
+Chevrolet|Corvette Stingray|2027|Convertible~:-:v:89b6f5;Coupe~:-:c:f2526d
+Chevrolet|Equinox EV|2026|LT 1~34995:f:-:641245,39750:a:-:42a2d8;LT 2~41795:f:-:d532fc,45095:a:-:63597e;RS~44095:f:-:0ba960,47395:a:-:28fd94
+Chevrolet|Equinox EV|2027|LT 1~:a:-:da0f96,34995:f:-:828e5d;LT 2~42095:f:-:a8a3e5,45395:a:-:37c21d;RS~44395:f:-:843e45,47695:a:-:272044
+Chevrolet|Equinox|2026|ACTIV~33600:f:-:824955,35600:a:-:38cdbd;LT~28800:f:-:b0a43a,30800:a:-:0550a1;RS~33600:f:-:ab3673,35600:a:-:626441
+Chevrolet|Equinox|2027|ACTIV~34200:f:-:683375,36200:a:-:401b94;LT~29300:f:-:c1a58f,31300:a:-:68e24f;RS~34200:f:-:a3906c,36200:a:-:8bf39d
+Chevrolet|Express Cargo|2026|WT~:-:-:bca577
+Chevrolet|Express Passenger|2026|LS~:-:-:5d04fb;LT~:-:-:e4111c
+Chevrolet|Silverado 1500|2026|Custom~:-:-:8fab5a;Custom Trail Boss~:-:-:fe68cf;High Country~:-:-:6945d0;LT~:-:-:466b59;LT Trail Boss~:-:-:9c8e5f;LTZ~:-:-:fd5ccc;RST~:-:-:21260d;WT~:-:-:57b7bd;ZR2~:-:-:65f450
+Chevrolet|Silverado 2500 HD|2026|Custom~:-:-:29855a;High Country~:-:-:c660a7;LT~:-:-:5fb829;LTZ~:-:-:488613;WT~:-:-:a1e7fd;ZR2~:-:-:1ca67e
+Chevrolet|Silverado 3500 HD|2026|High Country~:-:-:3e7cd8;LT~:-:-:828089;LTZ~:-:-:f9ff5e;WT~:-:-:ceb1c1
+Chevrolet|Silverado EV|2026|Custom - Standard Range~55895:4:-:2d7826;LT - Extended Range~69100:4:-:5724a8;LT - Max Range~89200:4:-:a1cef5;LT - Standard Range~60900:4:-:9821d8;RST Stars and Steel Edition - Extended Range~97350:4:-:de9f97;RST Stars and Steel Edition - Max Range~105850:4:-:2b55a1;Trail Boss - Extended Range~70000:4:-:0b8a3f;Trail Boss - Max Range~86600:4:-:66613d
+Chevrolet|Suburban|2026|High Country~:-:-:60dcc6;LS~:-:-:adb179;LT~:-:-:081a66;Premier~:-:-:25602d;RST~:-:-:d48bbb;Z71~:-:-:ea288c
+Chevrolet|Suburban|2027|High Country~:-:-:6fda93;LS~:-:-:f99fef;LT~:-:-:ab5d5a;Premier~:-:-:429ab9;RST~:-:-:704e8f;Z71~:-:-:33537b
+Chevrolet|Tahoe|2026|High Country~:-:-:1fa742;LS~:-:-:831679;LT~:-:-:8f9559;Premier~:-:-:100e4c;RST~:-:-:e5ecd5;Z71~:-:-:a74938
+Chevrolet|Tahoe|2027|High Country~:-:-:70bba7;LS~:-:-:6ef448;LT~:-:-:8c71bb;Premier~:-:-:643f5c;RST~:-:-:88524f;Z71~:-:-:f1bac0
+Chevrolet|Trailblazer|2026|ACTIV~28200:f:-:1ac98e,29800:a:-:b50c77;LS~:-:-:4a1db8,25600:a:-:462305;LT~:-:-:a0ed19,26800:a:-:845f83;RS~28200:f:-:f9f27b,29800:a:-:b33793
+Chevrolet|Traverse|2026|High Country~55100:f:-:96d22b,57100:a:-:d8749e;LT~40800:f:-:34f246,42800:a:-:ca915c;RS~55400:f:-:56c01a,57400:a:-:59149b;Z71~48900:a:-:a5ca9d
+Chevrolet|Traverse|2027|High Country~56100:f:-:0a8892,58100:a:-:011b9d;LT~41100:f:-:98a1b6,43100:a:-:4e1804;RS~55800:f:-:9c3b5a,57800:a:-:d74121;Z71~49400:a:-:9f8479
+Chevrolet|Trax|2026|1RS~23200:f:-:dac4a1;2RS~25700:f:-:454688;ACTIV~25700:f:-:29447a;LS~21700:f:-:04a939;LT~23200:f:-:476945
+Ford|Bronco Sport|2026|Badlands~37265:-:-:f00f6e;Big Bend~31845:-:-:8c892b;Heritage~33395:-:-:1761f3;Outer Banks~35145:-:-:898303
+Ford|Bronco|2026|Badlands~48890:-:2:bde342;Base~40795:-:2:06383a;Big Bend~41295:-:4:affb6a;Heritage Edition~51625:-:4:55dc35;Outer Banks~48190:-:4:704e92;Raptor~79995:-:4:22659f;Stroppe Edition~69995:-:4:6804fe
+Ford|Expedition|2026|Active~62700:-:-:a4bf57;King Ranch~84360:-:-:1a591b;Platinum~74250:-:-:2e36a4;Tremor~81700:-:-:34410f
+Ford|Expedition|2027|Active~63600:-:-:cf66f7;King Ranch~82695:-:-:55d78a;Platinum~70550:-:-:efa994;Tremor~82400:-:-:5eb477
+Ford|Explorer|2026|Active~40585:-:-:bfcb2f;Active 100A~38465:-:-:e9d0ff;Platinum~50965:-:-:dba02e;ST~54905:-:-:9b42b9;ST-Line~45155:-:-:1092d4;Tremor~48965:-:-:930d14
+Ford|Explorer|2027|Active~38465:-:-:68c0b0;Platinum~50660:-:-:d14dfe;ST~53660:-:-:79d790;ST-Line~44200:-:-:924af9;Tremor~49200:-:-:f81e72
+Ford|F-150|2026|King Ranch~65825:-:-:581f6e;Lariat~59560:-:-:594716;Platinum~68800:-:-:f24203;Raptor~79005:-:-:ef1a79;STX~44855:-:-:796c50;Tremor~64915:-:-:641aa4;XL~37290:-:-:d0bb10;XLT~45695:-:-:b2bbd3
+Ford|Maverick|2026|Lariat~38090:-:-:c57ad9;Lobo~35930:-:-:566223;Tremor~40645:-:-:6fca46;XL~28145:-:-:8f7c94;XLT~30645:a:-:f201a3,30645:f:-:7c7a16
+Ford|Mustang Mach-E|2026|GT~53395:-:-:987b88;Premium~40595:-:-:4e1268;Rally~53395:-:-:c2692c;Select~37795:-:-:9e8fce
+Ford|Mustang|2026|Dark Horse~65080:-:-:cf7104;Dark Horse Premium~64080:-:-:e70389;Dark Horse SC~106090:-:-:2b7abb;EcoBoost Fastback~32995:-:-:290a0a;EcoBoost Premium Fastback~36345:-:-:9ca264;GT Fastback~46800:-:-:d6857a;GT Premium Fastback~51080:-:-:1c4571
+Ford|Ranger|2026|Lariat~43955:-:-:d5f0bd;Raptor~57270:-:-:57ba46;XL~33550:-:-:9e6eee;XLT~36075:-:-:e60e30
+Ford|Super Duty|2026|F-250 King Ranch~78075:-:-:37b622;F-250 Lariat~63035:-:-:33591e;F-250 Platinum~78965:-:-:ab7e31;F-250 XL~45975:-:-:1ac4ec;F-250 XLT~49175:-:-:1681c8;F-350 King Ranch~79375:-:-:25d5b6;F-350 Lariat~64335:-:-:c3fed5;F-350 Platinum~80265:-:-:a5c23d;F-350 XL~47270:-:-:e5ff60;F-350 XLT~50475:-:-:e206b1;F-450 King Ranch~94890:-:-:4ce1b8;F-450 Lariat~79660:-:-:9a4b98;F-450 Platinum~96335:-:-:33b6db;F-450 XL~62330:-:-:0766bd;F-450 XLT~66265:-:-:6d224e
+Ford|Super Duty|2027|F-250 King Ranch~78725:-:-:33ba7c;F-250 Lariat~63125:-:-:0ce1da;F-250 Platinum~79615:-:-:fed540;F-250 XL~46125:-:-:62a2cc;F-250 XLT~49425:-:-:f363d1;F-350 King Ranch~80030:-:-:5bbfe3;F-350 Lariat~64430:-:-:c2afa9;F-350 Platinum~80920:-:-:573d3a;F-350 XL~47430:-:-:e0a0ed;F-350 XLT~50730:-:-:946be0;F-450 King Ranch~96540:-:-:bb812c;F-450 Lariat~81155:-:-:8e1025;F-450 Platinum~97985:-:-:c3e68f;F-450 XL~63990:-:-:939ce5;F-450 XLT~67920:-:-:fa3ba4
+Ford|Transit|2027|Passenger Van XL~59680:-:-:3c677b;Passenger Van XLT~62665:-:-:89f124
+Honda|Accord|2026|EX-L Hybrid~35095:f:s:3018c7;LX~28395:f:s:15af7f;SE~30695:f:s:73430f;Sport Hybrid~33795:f:s:a6c268;Sport-L Hybrid~35495:f:s:f7523c;Touring Hybrid~39495:f:s:f614d4
+Honda|Civic|2026|LX~24695:f:s:a4d3a8;Si~31495:f:s:1d0238;Sport~26695:f:s:9c215e,27895:f:h:5c5eba;Sport Hybrid~29395:f:s:4ef79d,30595:f:h:2f95f1;Sport Touring Hybrid~32395:f:s:92abcf,33595:f:h:d938be;Type R~47395:f:h:46b57f
+Honda|CR-V|2026|EX-L~36900:a:-:7d9938;LX~30920:f:-:1e43fc,32420:a:-:1a677e;Sport Hybrid~35630:f:-:dbae9a,37130:a:-:d4c9eb;Sport Touring Hybrid~42550:a:-:0af0a4;Sport-L Hybrid~40225:a:-:569485
+Honda|CR-V|2027|EX~33550:f:u:7256fc,35050:a:u:851a77;EX-L~35800:f:u:a57341,37300:a:u:8de916;LX~31520:f:u:8ac6ce,33020:a:u:21b51b;Sport Hybrid~36030:f:u:eb859a,37530:a:u:e80117;Sport Touring Hybrid~42950:a:u:d04745;Sport-L Hybrid~39125:f:u:af1d2c,40625:a:u:93c6b1;TrailSport Hybrid~39200:a:u:f4f1c0
+Honda|HR-V|2027|EX-L~30450:f:u:eb7488,31950:a:u:dc066f;LX~26600:f:u:95f0d9,28100:a:u:d9eb56;Sport~28400:f:u:4e7dbd,29900:a:u:d2fb94
+Honda|Odyssey|2026|Elite~51695:f:-:4f4fd4;EX-L~42795:f:-:f934e0;Touring~47495:f:-:8a75f1
+Honda|Odyssey|2027|Elite~52095:f:m:49d452;EX-L~43195:f:m:88ad78;Sport-L~44295:f:m:68db23;Touring~47895:f:m:e6ed6b
+Honda|Passport|2026|RTL~44950:a:u:5627c1;RTL Blackout~46150:a:u:eee0ad;RTL Towing~45650:a:u:801e42;TrailSport~48650:a:u:19fa7f;TrailSport Blackout~49850:a:u:02db04;TrailSport Elite~52650:a:u:89d808;TrailSport Elite Blackout~53850:a:u:02db8a
+Honda|Passport|2027|RTL~45195:a:u:9e6d83;RTL Towing~45895:a:u:a12c24;TrailSport~49995:a:u:cbdc39;TrailSport Blackout~51495:a:u:5d38f7;TrailSport Elite~53695:a:u:9f436a;TrailSport Elite Blackout~55195:a:u:6c3018
+Honda|Pilot|2026|Black Edition~55195:a:u:93fdee;Elite~53695:a:u:12bcf5;EX-L~44695:f:u:8409e7,46795:a:u:c7b02f;Sport~42395:f:u:f3769d,44495:a:u:76afc0;Touring~51295:a:u:d09c6e;Touring Blackout~52495:a:u:860f57;TrailSport~50595:a:u:610773
+Honda|Prelude|2027|Hybrid~42400:f:c:6adc3f;Hybrid Two-Tone~42900:f:c:044080
+Honda|Prologue|2026|Elite~50400:a:u:0a5ad5;EX~39900:f:u:0d1e55,42000:a:u:066bc7;Touring~44200:f:u:8e4cb8,47000:a:u:ef7529
+Honda|Ridgeline|2026|Black Edition~47395:a:k:4e9dae;Black Edition Two-Tone~47895:a:k:d600a3;RTL~43595:a:k:a549d0;Sport~40795:a:k:4baf59;TrailSport~45995:a:k:9b2e40;TrailSport+HPD Wheels~47195:a:k:f45509
+Hyundai|ELANTRA Hybrid|2026|Blue~25650:f:-:020bb4;Limited~30000:f:-:9f2687;SEL Sport~27625:f:-:82e35f
+Hyundai|ELANTRA|2026|Limited~27375:f:-:0bd8aa;N Line~29600:f:-:ee7739;SE~22825:f:-:260468;SEL Sport~23950:f:-:f44acb;SEL Sport Plus~24450:f:-:7589ab;SEL Sport Premium~25275:f:-:aa8810
+Hyundai|IONIQ 5 N|2026|N~59900:a:-:6d4e79
+Hyundai|IONIQ 5|2027|Limited~45225:r:-:54af1a,49125:a:-:aab357;SE~37750:r:-:15965c,41250:a:-:a2c6ab;SE Standard Range~35250:r:-:ad16ae;SEL~40200:r:-:4042dc,43700:a:-:3480b7;XRT~46525:a:-:1775b7
+Hyundai|IONIQ 9|2026|Calligraphy~74990:a:-:1ab48b;Calligraphy Design~76490:a:-:fce4bb;Limited~71250:a:-:d57c25;S~58955:r:-:947009;SE~62765:a:-:2dcd14;SEL~66320:a:-:62da36
+Hyundai|KONA|2026|Limited~32535:f:-:4beb73,34035:a:-:2c59b7;SEL Premium~28425:f:-:4aa971,29925:a:-:e5031d
+Hyundai|KONA|2027|Limited~34035:a:-:76192a;SEL Premium~29925:a:-:36499e
+Hyundai|PALISADE Hybrid|2026|Calligraphy~56780:f:-:a03dca,58780:a:-:1deccb;Limited~51990:f:-:b53fa3,53990:a:-:ea4d6b;SEL~44160:f:-:f562a8,46160:a:-:d3d3a1;SEL Premium~47520:f:-:1312f6,49520:a:-:b994c6
+Hyundai|PALISADE Hybrid|2027|Calligraphy~57180:f:-:480cd4,59180:a:-:309e39;Calligraphy Black Ink~57680:f:-:04d4bf,59680:a:-:316209;Limited~52390:f:-:b7b0a2,54390:a:-:501fc5;SEL~44560:f:-:c2da9b,46560:a:-:ebc8c3;SEL Premium~47920:f:-:03573a,49920:a:-:72c354
+Hyundai|PALISADE|2026|Calligraphy~54560:f:-:05bf0c,56560:a:-:da4971;Limited~49770:f:-:22086f,51770:a:-:88d65e;SE~39435:f:-:7cf94f,41435:a:-:308ef6;SEL~41940:f:-:dc9b89,43940:a:-:92dfea;SEL Convenience~43370:f:-:42011b,45370:a:-:a25ba8;SEL Premium~45300:f:-:661c3e,47300:a:-:7f98ae;XRT PRO~49870:a:-:aa8965
+Hyundai|PALISADE|2027|Calligraphy~54860:f:-:a99e09,56860:a:-:481e81;Limited~50070:f:-:544fcc,52070:a:-:7c19bc;SE~39735:f:-:ea8e5e,41735:a:-:5f37f6;SEL~42240:f:-:605714,44240:a:-:033f7c;SEL Premium~45600:f:-:c725f2,47600:a:-:ac28f8;XRT PRO~50170:a:-:46a450
+Hyundai|SANTA CRUZ|2026|Limited~43700:a:-:013c4d;SE~29750:f:-:e30cc2,31250:a:-:e8e11f;SEL~31400:f:-:d0ad4a,32900:a:-:e22371;SEL Activity~34450:f:-:6e2041,35950:a:-:e8cb52
+Hyundai|SANTA FE Hybrid|2026|Calligraphy~48700:f:-:587752,50500:a:-:153ad2;Limited~45700:f:-:789b31,47500:a:-:e28470;SE~36400:f:-:f6d38b,38200:a:-:4608c6;SEL~38690:f:-:c06fcc,40490:a:-:e59922
+Hyundai|SANTA FE Hybrid|2027|Calligraphy~50750:a:-:752709;Limited~47750:a:-:447d21;SE~38450:a:-:bfeed0;SEL~40740:a:-:4c50c1
+Hyundai|SANTA FE|2026|Calligraphy~47600:f:-:e6a1d0,49400:a:-:7ee31a;Limited~44600:f:-:ef9630,46400:a:-:ebb833;SE~35050:f:-:452bf8,36850:a:-:9103db;SEL~37590:f:-:796c9a,39390:a:-:5148ee
+Hyundai|SANTA FE|2027|Calligraphy~49650:a:-:6dacb5;Limited~46650:a:-:e27d96;SE~37100:a:-:14d970;SEL~39640:a:-:d8f039;XRT~42290:a:-:bd65b8
+Hyundai|TUCSON Hybrid|2026|Limited~42425:a:-:06ba1f;SE~31300:f:-:175f23,32800:a:-:002b92;SEL~32750:f:-:32c5f7,34250:a:-:f3c7c4;SEL Convenience~35250:a:-:84dab1
+Hyundai|TUCSON Plug-in Hybrid|2026|Limited~48900:a:-:d01eb9;SEL~40675:a:-:ca153f
+Hyundai|TUCSON|2026|Limited~39675:f:-:c30b4d,41175:a:-:5401cd;SE~29700:f:-:c08a40,31200:a:-:2eec71;SEL~31050:f:-:99f721,32550:a:-:331b20;SEL Plus~31550:f:-:f72098,33050:a:-:a226b8;SEL Premium~34050:f:-:f17d0a,35550:a:-:debc80;XRT~35225:a:-:6bd13b
+Hyundai|VENUE|2026|SE~20550:f:-:90004f;SEL~22825:f:-:03c436;SEL w/ 2-Tone Roof~22600:f:-:f50172
+Jeep|Cherokee|2026|CHEROKEE 4X4~35000:-:-:bb4fa5;CHEROKEE 85TH ANNIVERSARY EDITION 4X4~40905:-:-:b54c90;CHEROKEE LAREDO 4X4~38000:-:-:09ab92;CHEROKEE LIMITED 4X4~40000:-:-:13c2b2;CHEROKEE LIMITED ALTITUDE 4X4~40595:-:-:1b4fef;CHEROKEE OVERLAND 4X4~43000:-:-:de29a1
+Jeep|Cherokee|2027|CHEROKEE 4X4~35130:-:-:bb4fa5;CHEROKEE LAREDO 4X4~38130:-:-:09ab92;CHEROKEE LIMITED 4X4~40130:-:-:13c2b2;CHEROKEE LIMITED ALTITUDE 4X4~40725:-:-:1b4fef;CHEROKEE OVERLAND 4X4~43130:-:-:de29a1
+Jeep|Compass|2026|COMPASS 85TH ANNIVERSARY EDITION 4X4~32345:-:-:3776eb;COMPASS LATITUDE 4X4~29550:-:-:b3e321;COMPASS LATITUDE ALTITUDE 4X4~31665:-:-:c7fd95;COMPASS LIMITED 4X4~33560:-:-:6b9992;COMPASS LIMITED ALTITUDE 4X4~36150:-:-:d6cbe7;COMPASS TRAILHAWK® 4X4~34060:-:-:100718
+Jeep|Gladiator|2026|GLADIATOR 85TH ANNIVERSARY EDITION 4X4~46810:-:-:191999;GLADIATOR MOJAVE 4X4~53215:-:-:f3cda6;GLADIATOR MOJAVE X 4X4~61210:-:-:5e54d3;GLADIATOR REWIND 4X4~49245:-:-:d6307c;GLADIATOR RUBICON 4X4~53215:-:-:7074fb;GLADIATOR RUBICON X 4X4~61210:-:-:05c89a;GLADIATOR SAHARA 4X4~48115:-:-:1a5ea9;GLADIATOR SHADOW OPS 4X4~58210:-:-:f2d99f;GLADIATOR SPORT 4X4~39820:-:-:eedf5a;GLADIATOR SPORT S 4X4~43015:-:-:62ae8c;GLADIATOR TEXAS TRAIL 4X4~45820:-:-:0d9237;GLADIATOR WILLYS '41 4X4~48955:-:-:be034c;GLADIATOR WILLYS 4X4~46445:-:-:b0f2bb
+Jeep|Gladiator|2027|GLADIATOR MOJAVE 4X4~56200:-:-:f3cda6;GLADIATOR REWIND 4X4~51540:-:-:d6307c;GLADIATOR RUBICON 4X4~55700:-:-:7074fb;GLADIATOR WILLYS 4X4~:-:-:b0f2bb
+Jeep|Grand Cherokee|2026|GRAND CHEROKEE 85TH ANNIVERSARY EDITION 4X4~50415:-:-:4c92c3;GRAND CHEROKEE L 85TH ANNIVERSARY EDITION 4X4~52415:-:-:577005;GRAND CHEROKEE L LAREDO 4X2~40920:-:-:f0946c;GRAND CHEROKEE L LAREDO 4X4~42920:-:-:285334;GRAND CHEROKEE L LAREDO ALTITUDE 4X2~46360:-:-:61b19c;GRAND CHEROKEE L LAREDO ALTITUDE 4X4~48360:-:-:fd0b13;GRAND CHEROKEE L LAREDO X 4X2~43415:-:-:e046dd;GRAND CHEROKEE L LAREDO X 4X4~45415:-:-:07c3a1;GRAND CHEROKEE L LIMITED 4X2~46320:-:-:719724;GRAND CHEROKEE L LIMITED 4X4~48320:-:-:af9124;GRAND CHEROKEE L LIMITED RESERVE 4X4~53915:-:-:5a1cc2;GRAND CHEROKEE L SUMMIT 4X4~62600:-:-:0fbc5e;GRAND CHEROKEE LAREDO 4X2~38920:-:-:4f5584;GRAND CHEROKEE LAREDO 4X4~40920:-:-:a12bb9;GRAND CHEROKEE LAREDO ALTITUDE 4X2~44360:-:-:4c8216;GRAND CHEROKEE LAREDO ALTITUDE 4X4~46360:-:-:1b7144;GRAND CHEROKEE LAREDO X 4X2~41415:-:-:107915;GRAND CHEROKEE LAREDO X 4X4~43415:-:-:dce956;GRAND CHEROKEE LIMITED 4X2~44320:-:-:2e77b1;GRAND CHEROKEE LIMITED 4X4~46320:-:-:08ec71;GRAND CHEROKEE LIMITED RESERVE 4X4~51915:-:-:3a075d;GRAND CHEROKEE SUMMIT 4X4~60600:-:-:fa245f
+Jeep|Grand Cherokee|2027|GRAND CHEROKEE L LAREDO ALTITUDE 4X2~47170:-:-:61b19c;GRAND CHEROKEE L LAREDO ALTITUDE 4X4~49170:-:-:fd0b13;GRAND CHEROKEE L SUMMIT 4X4~63130:-:-:0fbc5e;GRAND CHEROKEE LAREDO ALTITUDE 4X2~45170:-:-:4c8216;GRAND CHEROKEE LAREDO ALTITUDE 4X4~47170:-:-:1b7144;GRAND CHEROKEE SUMMIT 4X4~61130:-:-:fa245f
+Jeep|Grand Wagoneer|2026|GRAND WAGONEER 4X2~63995:-:-:21d9fa;GRAND WAGONEER 4X4~66995:-:-:baed25;GRAND WAGONEER 85TH ANNIVERSARY EDITION 4X4~75990:-:-:3d05af;GRAND WAGONEER L 4X2~66995:-:-:f995e0;GRAND WAGONEER L 4X4~69995:-:-:8e5d9c;GRAND WAGONEER L 85TH ANNIVERSARY EDITION 4X4~78990:-:-:6fab4f;GRAND WAGONEER L LIMITED 4X4~75060:-:-:ef31b5;GRAND WAGONEER L LIMITED ALTITUDE 4X4~75060:-:-:389b60;GRAND WAGONEER L LIMITED RESERVE 4X4~82960:-:-:6b8bb6;GRAND WAGONEER L SUMMIT 4X4~97310:-:-:fd3b4b;GRAND WAGONEER L SUMMIT OBSIDIAN 4X4~97310:-:-:e3daab;GRAND WAGONEER L SUMMIT RESERVE 4X4~103310:-:-:d61729;GRAND WAGONEER LIMITED 4X4~72060:-:-:381188;GRAND WAGONEER LIMITED ALTITUDE 4X4~72060:-:-:6c5508;GRAND WAGONEER LIMITED RESERVE 4X4~79960:-:-:865c49;GRAND WAGONEER SUMMIT 4X4~94310:-:-:ccc1f9;GRAND WAGONEER SUMMIT OBSIDIAN 4X4~94310:-:-:536365;GRAND WAGONEER SUMMIT RESERVE 4X4~100310:-:-:3c7fe2;GRAND WAGONEER UPLAND 4X4~73060:-:-:a333c7
+Jeep|Grand Wagoneer|2027|GRAND WAGONEER 4X2~65000:-:-:21d9fa;GRAND WAGONEER 4X4~68000:-:-:baed25;GRAND WAGONEER LIMITED 4X4~73100:-:-:381188;GRAND WAGONEER LIMITED ALTITUDE 4X4~74095:-:-:6c5508;GRAND WAGONEER SUMMIT 4X4~95400:-:-:ccc1f9;GRAND WAGONEER SUMMIT OBSIDIAN 4X4~96395:-:-:536365;GRAND WAGONEER SUMMIT RESERVE 4X4~101400:-:-:3c7fe2;GRAND WAGONEER UPLAND 4X4~74100:-:-:a333c7
+Jeep|Jeep Recon|2026|JEEP RECON MOAB~65000:-:-:1199d6
+Jeep|Wrangler|2026|WRANGLER 2-DOOR RUBICON~46610:-:-:79a4dd;WRANGLER 2-DOOR RUBICON X~56560:-:-:968fd4;WRANGLER 2-DOOR SPORT~36035:-:-:2fbf22;WRANGLER 2-DOOR SPORT S~39685:-:-:768030;WRANGLER 2-DOOR WILLYS~43755:-:-:b36379;WRANGLER 4-DOOR 85TH ANNIVERSARY EDITION~47240:-:-:aa3ae1;WRANGLER 4-DOOR MOAB 392~79995:-:-:2d7cd4;WRANGLER 4-DOOR REWIND~48435:-:-:33105e;WRANGLER 4-DOOR RUBICON~50535:-:-:927dbc;WRANGLER 4-DOOR RUBICON X~61230:-:-:14d8f6;WRANGLER 4-DOOR SAHARA~48910:-:-:78c7dc;WRANGLER 4-DOOR SPORT~39040:-:-:ac9679;WRANGLER 4-DOOR SPORT S~41440:-:-:4f19fd;WRANGLER 4-DOOR WILLYS~45635:-:-:e25a5f;WRANGLER 4-DOOR WILLYS '41~49835:-:-:9ed364;WRANGLER 4-DOOR WILLYS 392~69995:-:-:e14a30
+Jeep|Wrangler|2027|WRANGLER 2-DOOR RUBICON~:-:-:79a4dd;WRANGLER 2-DOOR RUBICON X~57030:-:-:968fd4;WRANGLER 2-DOOR SPORT~36635:-:-:2fbf22;WRANGLER 2-DOOR SPORT S~39035:-:-:768030;WRANGLER 2-DOOR WILLYS~43230:-:-:b36379;WRANGLER 4-DOOR MOAB 392~79995:-:-:2d7cd4;WRANGLER 4-DOOR REWIND~49380:-:-:33105e;WRANGLER 4-DOOR RUBICON~:-:-:927dbc;WRANGLER 4-DOOR RUBICON X~61230:-:-:14d8f6;WRANGLER 4-DOOR SAHARA~51410:-:-:78c7dc;WRANGLER 4-DOOR SPORT~39985:-:-:ac9679;WRANGLER 4-DOOR SPORT S~42385:-:-:4f19fd;WRANGLER 4-DOOR WILLYS~46580:-:-:e25a5f
+Kia|Carnival MPV Hybrid|2027|EX~43690:f:-:83ac04;LXS~41490:f:-:7ef9af;SX~48590:f:-:79e22c;SX Prestige~53590:f:-:147c7a
+Kia|Carnival MPV|2027|EX~41690:f:-:2860ae;LX~37490:f:-:a01077;LXS~39490:f:-:1b6223;SX~46590:f:-:0c1af5;SX Prestige~51590:f:-:250ff7
+Kia|EV3|2027|GT~45890:a:-:3c7bf6;GT-Line~43490:a:-:004660;Land~38490:f:-:ed91b1,41690:a:-:7d3d88;Light~29890:f:-:b3f983;Wind~34990:f:-:3c225d,38690:a:-:efad7e
+Kia|EV6|2026|GT-Line~48700:r:-:f2e055,53000:a:-:22fd0b;Light~37900:r:-:fae6b2;Light Long Range~41200:r:-:40bf18,45200:a:-:1730c9;Wind~44800:r:-:a1fde1,48800:a:-:2763be
+Kia|EV9|2026|GT-Line AWD~71900:a:-:b3b6c7;Land AWD~68900:a:-:06f2cd;Light Long Range RWD~57900:r:-:5a0c8f;Light RWD~54900:r:-:5c62ff;Wind AWD~63900:a:-:5458c1
+Kia|K4 Hatchback|2026|EX~24990:f:-:593bf4;GT-Line~25990:f:-:d116ea;GT-Line Turbo~28890:f:-:92266d
+Kia|K4|2026|EX~24490:f:-:46381b;GT-Line~25490:f:-:f903da;GT-Line Turbo~28390:f:-:a42efc;LX~22290:f:-:ff2050;LXS~23390:f:-:ef5472
+Kia|K5|2027|GT~33790:f:-:8d49c7;GT-Line~28690:f:-:f2e40f,30290:a:-:7c9824;LXS~27690:f:-:16a2e0
+Kia|Niro EV|2026|Wave~44700:f:-:b1dc70;Wind~39700:f:-:8c6521
+Kia|Niro|2027|EX~31390:f:-:8ba2b2;LX~29890:f:-:21ab53;S~30590:f:-:a3b8e1;SX~35440:f:-:d21783;SX Touring~38990:f:-:66ff30
+Kia|Seltos|2027|EX~28390:f:-:7193e5,30090:a:-:8f120e;LX~24990:f:-:de8ffe,26690:a:-:9fc4b1;S~26390:f:-:e59374,28090:a:-:8bcb3a;X-Line S~28990:a:-:030b4e;X-Line SX~32790:a:-:dfb67f
+Kia|Sorento Hybrid|2026|EX~38890:f:-:f59e75,40690:a:-:896fec;X-Line SX Prestige AWD~47190:a:-:b77b35
+Kia|Sorento Plug-in Hybrid|2026|EX AWD~48290:a:-:9151d0;X-Line SX Prestige AWD~53490:a:-:778719
+Kia|Sorento|2026|EX~38490:f:-:ee35e9,39990:a:-:e552a3;LX~32390:f:-:21fd13;S~35290:f:-:aaf763,37290:a:-:6f9df7;SX~42290:f:-:ab07bf;X-Line EX AWD~42790:a:-:10bed2;X-Line SX AWD~44090:a:-:446dca;X-Line SX Prestige AWD~46790:a:-:07046e;X-Pro SX Prestige AWD~47790:a:-:b86584
+Kia|Sportage Hybrid|2027|EX~32290:f:-:f8468e,33890:a:-:d08908;LX~30590:f:-:f3eca9;S~31290:f:-:92c78c,32890:a:-:d3f422;SX Prestige~40690:a:-:2a02ff;X-Line~35790:a:-:4046be
+Kia|Sportage Plug-in Hybrid|2027|X-Line~40590:a:-:ff381f;X-Line Prestige~47390:a:-:34eac2
+Kia|Sportage|2027|EX~30790:f:-:b56d8b,32590:a:-:d4f2aa;LX~28990:f:-:a79d00,30790:a:-:00735d;SX~34590:f:-:51efdc;SX Prestige~36590:f:-:f5e7ea,38390:a:-:562aa1;X-Line~34790:a:-:ad7c80;X-Pro Prestige~39890:a:-:1e47b1
+Kia|Telluride Hybrid|2027|EX~46490:f:-:dba9e5,48490:a:-:0f3d86;SX~51490:f:-:aa7777;SX Prestige~56590:a:-:6d6531;X-Line SX~54490:a:-:13585a;X-Line SX Prestige~57590:a:-:5f245d
+Kia|Telluride|2027|EX~43790:f:-:9a3192,45790:a:-:45f585;LX~39190:f:-:d3ec35;S~42090:f:-:a65ff9,44090:a:-:3cf85b;SX~48790:f:-:13e3e6;SX Prestige~53890:a:-:4acad1;X-Line EX~47290:a:-:80a39e;X-Line SX~51790:a:-:329b37;X-Line SX Prestige~54890:a:-:697232;X-Pro SX~53690:a:-:81e330;X-Pro SX Prestige~56790:a:-:938599
+Mazda|CX-30|2026|2.5 S~26375:-:-:e77d2e;2.5 S AIRE EDITION~30250:-:-:b687a9;2.5 S CARBON EDITION~31430:-:-:664959;2.5 S PREFERRED~29690:-:-:f7c455;2.5 S PREMIUM~33640:-:-:de2bb4;2.5 S SELECT SPORT~28060:-:-:b0612d;2.5 TURBO AIRE EDITION~34410:-:-:d5c9e8;2.5 TURBO PREMIUM PLUS~37900:-:-:1d23de
+Mazda|CX-5|2026|2.5 S~29990:a:-:211aa7;2.5 S Preferred~34250:-:-:861f0c;2.5 S Premium~36900:-:-:38272a;2.5 S Premium Plus~38990:-:-:47b064;2.5 S Select~31990:-:-:47bf45
+Mazda|CX-50|2026|2.5 S Meridian Edition~33150:-:-:ce7f3a;2.5 S Preferred~32400:-:-:407444;2.5 S Premium~34900:-:-:af9fc5;2.5 S Select~29900:-:-:b48843;2.5 Turbo~37900:-:-:d70102;2.5 Turbo Meridian Edition~40400:-:-:7c7d11;2.5 Turbo Premium Plus~42900:-:-:f4f409;Hybrid Preferred~34750:-:-:b5bc03;Hybrid Premium~38150:-:-:f6c6fd;Hybrid Premium Plus~40450:-:-:b0379e
+Mazda|CX-70|2026|3.3 Turbo Preferred~42750:-:-:1e49cb;3.3 Turbo Premium~46780:-:-:ac785a;3.3 Turbo Premium Plus~49570:-:-:f01552;3.3 Turbo S Premium~53440:a:-:cd7ed0;3.3 Turbo S Premium Plus~56870:-:-:13e532;PHEV SC~44450:a:-:bc8214;PHEV SC Plus~47450:-:-:8cef2e
+Mazda|CX-90|2026|3.3 Turbo Preferred~43450:-:-:47e4e5;3.3 Turbo Premium Plus~50270:-:-:58268d;3.3 Turbo Premium Sport~47480:-:-:754ef5;3.3 Turbo S Premium Plus~57570:-:-:41bf0f;3.3 Turbo S Premium Sport~54140:a:-:79aa5b;3.3 Turbo Select~39300:a:-:60ceb9;PHEV Preferred~50695:a:-:e51d90;PHEV Premium Plus~58700:-:-:480773;PHEV Premium Sport~55500:-:-:b8c77a
+Mazda|Mazda3|2026|2.5 S~24650:-:s:8a4fa4,25650:-:h:3c2df3;2.5 S Carbon Edition~29815:a:s:58fd1c,30965:a:h:e011a6;2.5 S Preferred~27290:-:s:2e962d,28640:-:h:6d82f3;2.5 S Premium~31650:-:h:69b493;2.5 S Select Sport~25540:-:s:7e434c,26840:-:h:a21ae9;2.5 Turbo Premium Plus~36940:a:s:826b1c,38090:a:h:c2f894
+Mazda|MX-5 Miata|2026|Club~34230:-:t:f845b7,42200:-:R:db7a34;Grand Touring~36030:-:t:a271d8,38750:-:R:0a088b;Sport~30730:-:t:327696
+Nissan|Altima|2026|SR FWD~28980:f:-:50a67e;SR Intelligent AWD~30480:a:-:a03985;SR Midnight Edition FWD~30980:f:-:e9aa4c;SR Midnight Edition Intelligent AWD~32480:a:-:17e49a;SV FWD~27580:f:-:4adb30;SV Intelligent AWD~29080:a:-:99ab75;SV Special Edition FWD~28880:f:-:6450b7;SV Special Edition Intelligent AWD~30380:a:-:156897
+Nissan|Armada|2026|NISMO Intelligent 4WD~79530:4:-:d559fb;Platinum 4x2~70490:r:-:441c37;Platinum Intelligent 4WD~73490:4:-:04cd32;Platinum Reserve Intelligent 4WD~80550:4:-:9efafb;PRO-4X Intelligent 4WD~74300:4:-:526538;SL 4x2~63530:r:-:6944ab;SL Intelligent 4WD~66530:4:-:0e5a5d;SV 4x2~58840:r:-:23abb0;SV Intelligent 4WD~61840:4:-:9a16bc
+Nissan|Armada|2027|NISMO Intelligent 4WD~80690:4:-:1fa97a;Platinum Intelligent 4WD~75790:4:-:6e1296;Platinum Reserve Intelligent 4WD~84590:4:-:9a2085;PRO-4X Premium Intelligent 4WD~78990:4:-:6f9240;SL 4x2~64290:-:-:a7e419;SL Intelligent 4WD~67290:4:-:001caf
+Nissan|Frontier|2026|Crew Cab Dark Armor 4x2~36190:-:-:7b1506;Crew Cab Dark Armor 4x4~39490:-:-:894fb5;Crew Cab Dark Armor Long Bed 4x2~36690:-:-:b393ed;Crew Cab Dark Armor Long Bed 4x4~39990:-:-:15976b;Crew Cab PRO-4X 4x4~41870:-:-:e27e6b;Crew Cab PRO-4X Long Bed 4x4~42370:-:-:4d8497;Crew Cab PRO-X 4x2~38570:-:-:7b9f7c;Crew Cab S 4x2~33550:-:-:35ea8f;Crew Cab S 4x4~36550:-:-:05e737;Crew Cab SV 4x2~36190:-:-:324412;Crew Cab SV 4x4~39490:-:-:1039d5;Crew Cab SV Long Bed 4x2~36690:-:-:c00156;Crew Cab SV Long Bed 4x4~39990:-:-:7f17d4;King Cab S 4x2~32150:-:-:b950a3;King Cab S 4x4~35150:-:-:cbd08e
+Nissan|Frontier|2027|Crew Cab Dark Armor 4x2~36490:-:-:608fd6;Crew Cab Dark Armor 4x4~39790:-:-:2cf940;Crew Cab Dark Armor Long Bed 4x2~36990:-:-:4a4abc;Crew Cab Dark Armor Long Bed 4x4~40290:-:-:72da0b;Crew Cab PRO-4X 4x4~42190:-:-:e7e8ca;Crew Cab PRO-4X Long Bed 4x4~42690:-:-:0844e2;Crew Cab PRO-X 4x2~38890:-:-:eceb1a;Crew Cab S 4x2~33890:-:-:2ab2c6;Crew Cab S 4x4~36890:-:-:bf491c;Crew Cab Sport Edition 4x2~37480:-:-:052b76;Crew Cab Sport Edition 4x4~40780:-:-:b8138a;Crew Cab SV 4x2~36490:-:-:9e49af;Crew Cab SV 4x4~39790:-:-:868c7b;Crew Cab SV Long Bed 4x2~36990:-:-:c367eb;Crew Cab SV Long Bed 4x4~40290:-:-:e86d76;King Cab S 4x2~32490:-:-:bb475e;King Cab S 4x4~35490:-:-:514f1e
+Nissan|Kicks|2026|S FWD~22730:f:-:347987;S Intelligent AWD~24230:a:-:136ca4;SR FWD~27565:f:-:bfd730;SR Intelligent AWD~29065:a:-:387757;SV FWD~24470:f:-:5c7180;SV Intelligent AWD~26120:a:-:d90446
+Nissan|Kicks|2027|Rock Creek Intelligent AWD~28840:a:-:4b9d02;S FWD~22790:f:-:98da36;SR FWD~27595:f:-:a0df5c;SR Intelligent AWD~29395:a:-:d0aafd;SV FWD~24490:f:-:05307c;SV Intelligent AWD~26490:a:-:3ade9f
+Nissan|Murano|2026|Platinum Intelligent AWD~49800:a:-:0b0ca0;SL Intelligent AWD~46760:a:-:b021eb;SV Intelligent AWD~41670:a:-:5904f0
+Nissan|Murano|2027|Dark Armor Intelligent AWD~46990:a:-:8bc462;Platinum Intelligent AWD~49790:a:-:e35872;SL Intelligent AWD~43990:a:-:1a38d1
+Nissan|Nissan LEAF|2026|Platinum+ 75 kWh lithium-ion battery~38990:f:-:5873ae;S+ 75 kWh lithium-ion battery~29990:f:-:03a942;SV+ 75 kWh lithium-ion battery~34230:f:-:970d48
+Nissan|Nissan Z|2026|Heritage Edition (Z32 Midnight Purple) Automatic Transmission~55910:r:-:b66152;Heritage Edition (Z32 Midnight Purple) Manual Transmission~55910:r:-:a66864;NISMO Automatic Transmission~65750:r:-:445e38;Performance Automatic Transmission~52970:r:-:83f0d1;Performance Manual Transmission~52970:r:-:b99a11;Sport Automatic Transmission~42970:r:-:3dd7b8;Sport Manual Transmission~42970:r:-:762b88
+Nissan|Nissan Z|2027|NISMO Automatic Transmission~67260:r:-:0f79f1;NISMO Manual Transmission~67260:r:-:327df4;Performance Automatic Transmission~54480:r:-:38a882;Performance Manual Transmission~54480:r:-:d62255;Sport Automatic Transmission~44480:r:-:cd5af6;Sport Manual Transmission~44480:r:-:4fcc3f
+Nissan|Pathfinder|2026|Platinum 2WD~49790:-:-:245b27;Platinum 4WD~51790:4:-:5e4a22;Rock Creek 4WD~45090:4:-:c3dcb7;SL 2WD~42590:-:-:38d18b;SL 4WD~44590:4:-:db1f3f;SV 2WD~39990:-:-:30c01b;SV 4WD~41990:4:-:19f59a
+Nissan|Rogue Plug-in Hybrid|2026|Platinum Intelligent AWD~49990:a:-:aa726c;SL Intelligent AWD~45990:a:-:954b88
+Nissan|Rogue|2027|Dark Armor FWD~33540:f:-:a781f9;Dark Armor Intelligent AWD~34940:a:-:a8b392;Platinum Intelligent AWD~39790:a:-:eb684a;Rock Creek Intelligent AWD~34590:a:-:a2207e;S FWD~29690:f:-:ed24f0;S Intelligent AWD~31090:a:-:07dd00;SV FWD~30690:f:-:300804;SV Intelligent AWD~32090:a:-:e7a696
+Nissan|Sentra|2026|S Xtronic CVT®~22600:f:-:82f01f;SL Xtronic CVT®~27990:f:-:e4a081;SR Xtronic CVT®~25000:f:-:667f5a;SV Xtronic CVT®~23370:f:-:0353eb
+Nissan|Sentra|2027|S Xtronic CVT®~22990:f:-:ac1a0e;SL Xtronic CVT®~27990:f:-:a46be8;SR Midnight Edition Xtronic CVT®~25640:f:-:de29f8;SR Xtronic CVT®~24990:f:-:c02a95;SV Xtronic CVT®~23990:f:-:109f6d
+Subaru|Ascent|2026|Limited 7-Passenger~47885:-:-:bcada6;Limited 8-Passenger~47885:-:-:f2037a;Limited Bronze Edition 7-Passenger~48995:-:-:04f9bd;Onyx Edition Touring 7-Passenger~51995:-:-:b98164;Premium 7-Passenger~40795:-:-:ae4524;Premium 8-Passenger~40795:-:-:9eeba5;Touring 7-Passenger~51165:-:-:095c41
+Subaru|Ascent|2027|Limited 7-Passenger~47985:-:-:53a2fd;Limited 8-Passenger~47985:-:-:2b00db;Limited Bronze Edition 7-Passenger~49095:-:-:841fe0;Onyx Edition Touring 7-Passenger~51995:-:-:6e3907;Premium 7-Passenger~40795:-:-:bc53ec;Premium 8-Passenger~40795:-:-:54576b;Touring 7-Passenger~51165:-:-:3c4b8e
+Subaru|BRZ|2026|Limited~35860:-:-:1f8dfa,35860:-:-:660abd;tS~38360:-:-:3f9ffe
+Subaru|BRZ|2027|Limited~36140:-:-:39a555,36140:-:-:94d92f;tS~38770:-:-:dd58f8
+Subaru|Crosstrek|2026|Base~26995:a:-:d3cc4f;Limited~32995:a:-:10f151;Limited Hybrid~34995:a:-:191465;Premium~27995:a:-:d08835;Sport~30625:a:-:149cab;Sport Hybrid~33995:a:-:a6c1ae;Wilderness~33795:a:-:9ab737
+Subaru|Forester|2026|Base~29995:a:-:f887d2;Limited~35995:a:-:75b4e2;Limited Hybrid~38995:a:-:6ddc87;Premium~31995:a:-:3c10b0;Premium Hybrid~34730:a:-:f1ff3d;Sport~34795:a:-:20b26a;Sport Hybrid~37930:a:-:059068;Touring~39995:a:-:e8b596;Touring Hybrid~41545:a:-:4ce163;Wilderness~36995:a:-:5b77d2
+Subaru|Impreza|2026|RS~29495:a:-:8f6397;Sport~26595:a:-:2b1f81
+Subaru|Outback|2026|Limited~41715:-:-:e8b81c;Limited XT~44365:-:-:2e83be;Premium~34995:-:-:83df13;Touring~45395:-:-:c3d5a1;Touring XT~47995:-:-:e4f4c3;Wilderness~44995:-:-:9383ce
+Subaru|Solterra|2026|Limited~41395:-:-:77977f;Limited XT~42895:-:-:3f4932;Premium~38495:-:-:0781d0;Touring XT~45555:-:-:35fcc7;Touring XT Leather~45855:-:-:1adb53
+Subaru|Trailseeker|2026|Limited~43995:-:-:30a0c1;Premium~39995:-:-:514acc;Touring~46555:-:-:b3e9cd;Touring Leather~46855:-:-:1d7878
+Subaru|Trailseeker|2027|Limited~43995:-:-:9f8d12;Premium~39995:-:-:cb4f0b;Touring~46555:-:-:5d7662;Touring Leather~46855:-:-:bd57d9
+Subaru|Uncharted|2026|GT~43795:-:-:e5ee2f;Premium FWD~34995:f:-:ae2e30;Sport~39795:-:-:7017f8
+Subaru|Uncharted|2027|GT~43795:-:-:61f174;Premium FWD~34995:f:-:880af2;Sport~39795:-:-:142d2e
+Subaru|WRX|2026|Base~32495:-:-:b5b717;GT~44995:-:-:3a27ad;Limited~38995:-:-:a7825f,39995:-:-:328a10;Premium~33995:-:-:c8cce5;tS~44995:-:-:30583f
+Toyota|4Runner|2026|Limited~56900:r:-:c30772;SR5~42270:r:-:a63178;Trailhunter~68400:4:-:736101;TRD Off-Road~50690:4:-:096cd4;TRD Off-Road i-FORCE MAX~53490:4:-:abb51c;TRD Off-Road Premium~56470:4:-:518ccd;TRD Off-Road Premium i-FORCE MAX~59270:4:-:dac6b2;TRD Pro~68600:4:-:786cdb;TRD Sport~48750:r:-:c4a297;TRD Sport Premium~54110:r:-:007d3a
+Toyota|4Runner|2027|Limited~57090:r:-:c30772,59090:4:-:c30772;SR5~43490:r:-:a63178,45490:4:-:a63178;Trailhunter~68590:4:-:736101;TRD Off-Road~51560:4:-:096cd4;TRD Off-Road i-FORCE MAX~54360:4:-:abb51c;TRD Off-Road Premium~56660:4:-:518ccd;TRD Off-Road Premium i-FORCE MAX~59460:4:-:dac6b2;TRD Pro~68870:4:-:786cdb;TRD Sport~49620:r:-:c4a297,51620:4:-:c4a297;TRD Sport Premium~54300:r:-:007d3a,56300:4:-:007d3a
+Toyota|bZ Woodland|2027|bZ Woodland~45380:a:-:c2633d;bZ Woodland Premium~47480:a:-:b4444f
+Toyota|bZ|2027|Limited~43380:f:-:a651cc
+Toyota|C-HR|2027|SE~37080:a:-:f67bed;XSE~39080:a:-:5a7144
+Toyota|Camry|2026|LE~29600:f:-:279544;Nightshade~33100:f:-:c2ea9a,34625:a:-:1e12d1;SE~32100:f:-:878cf0;XLE~34800:f:-:57c422,36325:a:-:2949fe;XSE~36000:f:-:67dac2,37525:a:-:45c5dd
+Toyota|Camry|2027|LE~29700:f:-:279544,31225:a:-:279544;Nightshade~33200:f:-:c2ea9a,34725:a:-:1e12d1;SE~32200:f:-:878cf0,33725:a:-:878cf0;XLE~34900:f:-:57c422,36425:a:-:2949fe;XSE~36100:f:-:67dac2,37625:a:-:45c5dd
+Toyota|Corolla Cross Hybrid|2026|Hybrid S~29795:a:-:c23937
+Toyota|Corolla Cross|2026|Hybrid SE~31115:a:-:313bb5;Hybrid XSE~33830:a:-:fea18a;L~25335:f:-:a44680;LE~27665:f:-:d1d45d;XLE~30260:f:-:a40cae
+Toyota|Corolla Cross|2027|Hybrid SE~31415:a:-:313bb5;Hybrid XSE~34130:a:-:fea18a;L~25535:f:-:a44680,26835:a:-:a44680;LE~27865:f:-:d1d45d,29165:a:-:d1d45d;XLE~30460:f:-:a40cae,31910:a:-:a40cae
+Toyota|Corolla Hatchback|2027|SE~24780:f:-:fc92b1;XSE~27875:f:-:1f74b6
+Toyota|Corolla|2026|Hybrid SE~27415:f:-:288a07,28815:a:-:288a07;LE~23125:f:-:6cb543;XSE~28840:f:-:5c20dc
+Toyota|Corolla|2027|Hybrid SE~27615:f:-:288a07;LE~23325:f:-:6cb543;XSE~29040:f:-:5c20dc
+Toyota|GR Corolla|2026|GR Corolla~40520:a:-:bc79c2;GR Corolla Premium Plus~46565:a:-:0b5049;GRMN Corolla~64360:a:-:5fae54
+Toyota|GR Supra|2026|3.0~58300:r:-:23c740,58300:r:-:7ab46e;3.0 Premium~61450:r:-:2cf926;MkV Final Edition~69350:r:-:b3f38a
+Toyota|GR86|2027|GR86~31500:r:-:2efd16;GR86 Premium~34400:r:-:c2d5c3
+Toyota|Grand Highlander|2026|Hybrid Limited~53110:a:-:10f4ef;Hybrid MAX Limited~56090:a:-:c1c55c;Hybrid MAX Platinum~60175:a:-:43018e;Hybrid Nightshade~54090:a:-:fc5bb3;LE~42260:f:-:fb8715;Limited~49760:f:-:053d83;Platinum~55445:a:-:f17b71;XLE~45030:f:-:ba8dac
+Toyota|Highlander|2026|Hybrid Limited~52475:a:-:035b79;Hybrid Platinum~55675:a:-:98bfa5;Hybrid XLE~48020:a:-:4a2fc8;Limited~50725:a:-:6ca918;Platinum~53925:a:-:84b67a;XLE~46270:a:-:35f84c;XSE~48340:a:-:d320a6
+Toyota|Land Cruiser|2027|Land Cruiser~64155:4:-:869dac;Land Cruiser 1958~58080:4:-:c3f770
+Toyota|Prius Plug-in Hybrid|2026|SE~33775:f:-:1c8f95;XSE~37025:f:-:423ab9;XSE Premium~40470:f:-:3bd9d0
+Toyota|Prius Plug-in Hybrid|2027|Nightshade~38000:f:-:c4a4e9;SE~33980:f:-:1c8f95;XSE~37230:f:-:423ab9;XSE Premium~40675:f:-:3bd9d0
+Toyota|Prius|2027|LE~28755:f:-:32fb2b;Limited~35770:f:-:3a2c11;Nightshade~33005:f:-:f01f39;XLE~32200:f:-:ee771d
+Toyota|RAV4 Plug-in Hybrid|2026|GR SPORT~48500:a:-:56942e;SE~41500:a:-:2261a4;Woodland~45300:a:-:d035d1;XSE~47200:a:-:404457
+Toyota|RAV4|2026|LE~31900:f:-:44f8a8;Limited~43300:a:-:e23dbf;SE~34700:f:-:20fda5;Woodland~39900:a:-:d7c552;XLE Premium~36100:f:-:67d5da;XSE~41300:a:-:f8cec9
+Toyota|Sequoia|2026|1794 Edition~82550:4:-:5bc4b4;Capstone~86135:4:-:c50975;Limited~71495:r:-:cf33f5;Platinum~81735:4:-:2ab912;SR5~65725:r:-:89551a;TRD Pro~82465:4:-:9f732c
+Toyota|Sienna|2026|LE~41320:f:-:f70bde;Limited~52005:f:-:e0d91e;Platinum~58710:a:-:eb19fe;Woodland Edition~52100:a:-:0cede3;XLE~46020:f:-:d694d8;XSE~49245:f:-:626fe6
+Toyota|Tacoma i-Force MAX|2026|TRD Off-Road i-FORCE MAX~47635:4:-:a25af6
+Toyota|Tacoma|2026|Limited~53570:4:-:abc592;Limited i-FORCE MAX~56895:4:-:e337fd;SR~32545:r:-:c69466;SR5~36635:r:-:253a7e,39835:4:-:1f2d09;TRD Off-Road~42815:4:-:9fe4e5,43915:4:-:571a2b;TRD PreRunner~39135:r:-:3ae1fd;TRD Pro~64750:4:-:932a4d;TRD Sport~40415:r:-:d2edb9;TRD Sport i-FORCE MAX~47335:4:-:2968f5
+Toyota|Toyota Crown Signia|2026|Limited~49090:a:-:a2b56d;XLE~44690:a:-:89d40f
+Toyota|Toyota Crown|2027|Limited~49720:a:-:a57db6;Platinum~55190:a:-:b52617;XLE~41640:a:-:6bdad4
+Toyota|Tundra i-FORCE MAX|2026|1794 Edition i-FORCE MAX~71305:4:-:2e7be5;Capstone~80800:4:-:622ba1;Limited i-FORCE MAX~58560:r:-:23cfb4;Platinum i-FORCE MAX~70605:4:-:7566bc
+Toyota|Tundra|2026|1794 Edition~64380:r:-:9433c5,67710:4:-:a4cf06;Limited~54860:r:-:6fb8e8,57860:4:-:f7ae9e;Platinum~63695:r:-:eda8d1;SR~41260:r:-:355054;SR5~46510:r:-:5857d7;TRD Pro~72565:4:-:0a9520
+Volkswagen|Atlas Cross Sport|2026|SE~38300:f:-:360507,40200:a:-:8d4d71;SE with Technology~42720:f:-:6b05a1,44620:a:-:2f3c6b;SEL~48610:a:-:37d438;SEL Premium R-Line~53620:a:-:c49452;SEL R-Line Black~50560:a:-:5cd20d
+Volkswagen|Atlas|2026|Peak Edition~48060:a:-:859f05;SE~39310:f:-:4e52c4,41210:a:-:007d18;SE with Technology~43730:f:-:73935e,45630:a:-:659229;SEL~49620:a:-:34d1bb;SEL Premium R-Line~54630:a:-:2a194a
+Volkswagen|Golf GTI|2026|Autobahn~42480:f:-:3a26a9;S~34590:f:-:a6a8de;SE~39080:f:-:4a5dea
+Volkswagen|Golf R|2026|Golf R~49455:a:-:0d0d2d
+Volkswagen|ID.4|2026|AWD Pro~48995:a:-:bee047;AWD Pro S~54095:a:-:d82709;AWD Pro S Plus~57655:a:-:176382;Pro~45095:r:-:730882;Pro S~50195:r:-:14112f
+Volkswagen|Jetta GLI|2027|Autobahn~33795:f:-:3c3ce2
+Volkswagen|Jetta|2027|S~23995:f:-:cf9a06;SE~26995:f:-:31d461;SEL~29995:f:-:fef758;Sport~25395:f:-:736ba2
+Volkswagen|Taos|2027|S~26500:f:-:f50bda,28200:a:-:79992f;SE~29290:f:-:b1ae34,30990:a:-:846c94;SE Black~31540:f:-:24a6a1,33240:a:-:937596;SEL~35900:a:-:974404;Sport~27400:f:-:c3061a,29100:a:-:d4514b
+Volkswagen|Tiguan|2026|S~30805:f:-:25325a,32305:a:-:a93dfb;SE~33605:f:-:28423f,35105:a:-:6fb23f;SE R-Line Black~37245:f:-:4e93f7,38745:a:-:4255e6;SEL R-Line Turbo~43085:a:-:a6f3df

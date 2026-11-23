@@ -2,16 +2,15 @@
 import Base from "../layouts/Base.astro";
 import CarTile from "../components/CarTile.astro";
 import SearchBar from "../components/SearchBar.astro";
-import { CATALOG, carImage, carUrl, money, priceLabel } from "../lib/catalog";
+import { CATALOG, CONFIGS, carImage, carUrl, money, priceLabel } from "../lib/catalog";
 import { APP_STORE_URL, WEB_PLAN } from "../site";
 
-// The home grid shows every trim by default: four rows of four, with "Show more" for four more rows at a time.
+// The home grid shows every configuration by default: four rows of four, with "Show more" for four more rows at a time.
 // A toggle switches it to one card per model. The order is reshuffled in the browser on every visit.
 const SHOW = 16;
 const rank = (k: string) => [...k].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) % 9973, 7);
 const mixed = [...CATALOG].sort((a, b) => rank(a.key) - rank(b.key));
-const TRIMS = CATALOG.flatMap((car) => car.trims.map((trim) => ({ car, trim })));
-const trimPool = [...TRIMS].sort((a, b) => rank(a.car.key + a.trim.name) - rank(b.car.key + b.trim.name)).slice(0, 64);
+const configPool = [...CONFIGS].sort((a, b) => rank(a.config.img + a.config.year) - rank(b.config.img + b.config.year)).slice(0, 64);
 const modelPool = mixed.slice(0, 32);
 const makes = [...new Set(CATALOG.map((c) => c.make))].sort();
 // The car on the first slide.
@@ -122,12 +121,12 @@ const steps = [
     <div class="list-head">
       <div>
         <h2>Available <span class="mint">now</span></h2>
-        <p class="tally">{TRIMS.length} trims across {CATALOG.length} models. MSRP excludes destination, taxes and fees.</p>
+        <p class="tally">{CONFIGS.length.toLocaleString("en-US")} configurations across {CATALOG.length} models. MSRP excludes destination, taxes and fees.</p>
       </div>
       <label class="only-toggle"><input type="checkbox" role="switch" data-models-only /><span class="rail" aria-hidden="true"></span>Models only</label>
     </div>
     <div class="car-grid" data-home-grid>
-      {trimPool.map(({ car, trim }, i) => <CarTile car={car} trim={trim} eager={i < 4} hide={i >= SHOW} />)}
+      {configPool.map(({ car, config }, i) => <CarTile car={car} config={config} eager={i < 4} hide={i >= SHOW} />)}
       {modelPool.map((car) => <CarTile car={car} hide />)}
     </div>
     <div class="more">
@@ -402,14 +401,14 @@ const steps = [
     if (!matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => { if (!hold && !stopped && !document.hidden) go(i + 1); }, 6000);
   }
 
-  // 1) Home grid: every trim by default, or one card per model with the toggle. Shuffled on every visit; four rows
+  // 1) Home grid: every configuration by default, or one card per model with the toggle. Shuffled on every visit; four rows
   //    at a time.
   const grid = document.querySelector<HTMLElement>("[data-home-grid]");
   if (grid) {
     const PAGE = 16;
     const more = document.querySelector<HTMLButtonElement>("[data-more]")!;
     const toggle = document.querySelector<HTMLInputElement>("[data-models-only]")!;
-    const pools: Record<string, HTMLElement[]> = { trim: [], model: [] };
+    const pools: Record<string, HTMLElement[]> = { config: [], model: [] };
     grid.querySelectorAll<HTMLElement>("[data-tile]").forEach((t) => pools[t.dataset.kind!].push(t));
     for (const list of Object.values(pools)) {
       for (let i = list.length - 1; i > 0; i--) {
@@ -420,7 +419,7 @@ const steps = [
     }
     let shown = PAGE;
     const draw = () => {
-      const kind = toggle.checked ? "model" : "trim";
+      const kind = toggle.checked ? "model" : "config";
       for (const [k, list] of Object.entries(pools)) list.forEach((t, i) => (t.hidden = k !== kind || i >= shown));
       more.hidden = shown >= pools[kind].length;
     };

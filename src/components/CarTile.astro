@@ -1,27 +1,32 @@
 ---
-// One card in the grid. With a trim it shows that trim's own photo and MSRP; without one it shows the model and
-// its lowest verified MSRP. Either way it opens the model's page with every trim. No payments or offers.
-import { carImage, carName, carSearchText, carUrl, money, priceLabel, trimImage, type Car } from "../lib/catalog";
-interface Props { car: Car; trim?: Car["trims"][number]; eager?: boolean; hide?: boolean }
-const { car, trim, eager = false, hide = false } = Astro.props;
-const title = trim ? `${car.model} ${trim.name}` : car.model;
-const full = trim ? `${carName(car)} ${trim.name}` : carName(car);
-const price = trim ? trim.msrp : car.msrpFrom;
-const label = trim ? (trim.msrp ? `${money(trim.msrp)} MSRP` : "MSRP in the app") : priceLabel(car);
-const text = trim ? `${carSearchText(car)} ${trim.name.toLowerCase()} ${trim.drive.join(" ").toLowerCase()}` : carSearchText(car);
+// One card in the grid. With a configuration it shows that exact build (trim, year, drivetrain, body) with its own
+// photo and MSRP; with a trim, that trim; with neither, the model and its lowest verified MSRP. Either way it opens the model's page with every trim. No payments or offers.
+import { carImage, carName, carSearchText, carUrl, money, priceLabel, trimImage, type Car, type Config } from "../lib/catalog";
+interface Props { car: Car; trim?: Car["trims"][number]; config?: Config; eager?: boolean; hide?: boolean }
+const { car, trim, config, eager = false, hide = false } = Astro.props;
+const year = config?.year ?? car.year;
+const detail = config ? [config.drive, config.body].filter(Boolean).join(" · ") : "";
+const title = config ? `${car.model} ${config.trim}` : trim ? `${car.model} ${trim.name}` : car.model;
+const full = config ? `${year} ${car.make} ${title}${detail ? `, ${detail}` : ""}` : trim ? `${carName(car)} ${trim.name}` : carName(car);
+const price = config ? config.msrp : trim ? trim.msrp : car.msrpFrom;
+const one = config ?? trim;
+const label = one ? (one.msrp ? `${money(one.msrp)} MSRP` : "MSRP in the app") : priceLabel(car);
+const text = config ? `${carSearchText(car)} ${config.year} ${config.trim} ${config.drive ?? ""} ${config.body ?? ""}`.toLowerCase() : trim ? `${carSearchText(car)} ${trim.name.toLowerCase()} ${trim.drive.join(" ").toLowerCase()}` : carSearchText(car);
+const image = config ? `/img/cfg/${config.img}.webp` : trim ? trimImage(car, trim) : carImage(car);
 ---
 
-<article class="tile" data-tile hidden={hide} data-kind={trim ? "trim" : "model"} data-make={car.make} data-text={text} data-type={car.type ?? ""} data-fuel={car.fuel ?? ""} data-price={price ?? ""} data-name-sort={`${car.make} ${title}`}>
+<article class="tile" data-tile hidden={hide} data-kind={config ? "config" : trim ? "trim" : "model"} data-make={car.make} data-text={text} data-type={car.type ?? ""} data-fuel={car.fuel ?? ""} data-price={price ?? ""} data-name-sort={`${car.make} ${title}`}>
   <a class="frame" href={carUrl(car)} aria-label={`${full}: see all trims`}>
-    <img src={trim ? trimImage(car, trim) : carImage(car)} alt={full} width="560" height="420" loading={eager ? "eager" : "lazy"} decoding="async" />
+    <img src={image} alt={full} width="560" height="420" loading={eager ? "eager" : "lazy"} decoding="async" />
     <span class="tag" hidden={!car.type}>{car.type}</span>
     <span class="fuel" hidden={!car.fuel}>{car.fuel}</span>
     <span class="open" aria-hidden="true">See all trims</span>
   </a>
   <button type="button" class="save" data-save={car.key} aria-pressed="false" aria-label={`Save ${carName(car)}`}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg></button>
   <div class="info">
-    <p class="meta">{car.make} · {car.year}</p>
+    <p class="meta">{car.make} · {year}</p>
     <h3><a href={carUrl(car)}>{title}</a></h3>
+    {detail && <p class="detail">{detail}</p>}
     <p class="price">{label}</p>
   </div>
 </article>
@@ -53,6 +58,7 @@ const text = trim ? `${carSearchText(car)} ${trim.name.toLowerCase()} ${trim.dri
   .meta { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
   h3 a { color: var(--text); }
   .price { margin: 4px 0 0; font-size: 15px; font-weight: 700; }
+  .detail { margin: 2px 0 0; font-size: 13px; color: var(--sub); }
   .save { position: absolute; right: 10px; top: 54px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(160, 230, 205, 0.25); background: rgba(4, 20, 15, 0.8); color: var(--text); display: grid; place-items: center; cursor: pointer; }
   .save[aria-pressed="true"] { background: var(--mint); color: var(--mint-ink); border-color: var(--mint); }
   .save[aria-pressed="true"] svg { fill: currentColor; }
