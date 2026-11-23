@@ -9,17 +9,20 @@ const detail = config ? [config.drive, config.body].filter(Boolean).join(" · ")
 const title = config ? `${car.model} ${config.trim}` : trim ? `${car.model} ${trim.name}` : car.model;
 const full = config ? `${year} ${car.make} ${title}${detail ? `, ${detail}` : ""}` : trim ? `${carName(car)} ${trim.name}` : carName(car);
 const price = config ? config.msrp : trim ? trim.msrp : car.msrpFrom;
+// A model marked "Hybrid available" has hybrid and non-hybrid builds: a single build says which it is by its trim name.
+const oneName = config?.trim ?? trim?.name;
+const fuel = oneName && car.fuel === "Hybrid available" ? (/hybrid|phev|plug-in|i-force max/i.test(oneName) ? "Hybrid" : null) : car.fuel;
 const one = config ?? trim;
 const label = one ? (one.msrp ? `${money(one.msrp)} MSRP` : "MSRP in the app") : priceLabel(car);
 const text = config ? `${carSearchText(car)} ${config.year} ${config.trim} ${config.drive ?? ""} ${config.body ?? ""}`.toLowerCase() : trim ? `${carSearchText(car)} ${trim.name.toLowerCase()} ${trim.drive.join(" ").toLowerCase()}` : carSearchText(car);
 const image = config ? `/img/cfg/${config.img}.webp` : trim ? trimImage(car, trim) : carImage(car);
 ---
 
-<article class="tile" data-tile hidden={hide} data-kind={config ? "config" : trim ? "trim" : "model"} data-make={car.make} data-text={text} data-type={car.type ?? ""} data-fuel={car.fuel ?? ""} data-price={price ?? ""} data-name-sort={`${car.make} ${title}`}>
+<article class="tile" data-tile hidden={hide} data-kind={config ? "config" : trim ? "trim" : "model"} data-make={car.make} data-text={text} data-type={car.type ?? ""} data-fuel={fuel ?? ""} data-price={price ?? ""} data-name-sort={`${car.make} ${title}`}>
   <a class="frame" href={carUrl(car)} aria-label={`${full}: see all trims`}>
     <img src={image} alt={full} width="560" height="420" loading={eager ? "eager" : "lazy"} decoding="async" />
     <span class="tag" hidden={!car.type}>{car.type}</span>
-    <span class="fuel" hidden={!car.fuel}>{car.fuel}</span>
+    <span class="fuel" hidden={!fuel}>{fuel}</span>
     <span class="open" aria-hidden="true">See all trims</span>
   </a>
   <button type="button" class="save" data-save={car.key} aria-pressed="false" aria-label={`Save ${carName(car)}`}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg></button>
