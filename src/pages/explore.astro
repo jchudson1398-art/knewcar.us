@@ -2,17 +2,20 @@
 import Base from "../layouts/Base.astro";
 import CarTile from "../components/CarTile.astro";
 import SearchBar from "../components/SearchBar.astro";
-import { CATALOG, CONFIG_TOTAL, FILTERS } from "../lib/catalog";
+import { CATALOG, FILTERS } from "../lib/catalog";
 import { APP_STORE_URL } from "../site";
 
 const cars = [...CATALOG].sort((a, b) => a.make.localeCompare(b.make) || a.model.localeCompare(b.model));
-const brands = new Set(cars.map((c) => c.make)).size;
+const makes = [...new Set(cars.map((c) => c.make))].sort();
+const brands = makes.length;
+// Every trim gets its own card; the "Models only" toggle switches to one card per model.
+const trims = cars.flatMap((car) => car.trims.map((trim) => ({ car, trim })));
 ---
 
-<Base title="Explore all your options" description={`Browse and search ${cars.length} new models from ${brands} brands in one place. Trucks, SUVs, sedans, hybrids and electric cars.`}>
+<Base title="Explore all your options" description={`Browse and search every trim of ${cars.length} new models from ${brands} brands in one place. Trucks, SUVs, sedans, hybrids and electric cars.`}>
   <section class="page-head">
     <div class="wrap">
-      <p class="eyebrow">{cars.length} models · {brands} brands · {CONFIG_TOTAL.toLocaleString("en-US")} configurations in the app</p>
+      <p class="eyebrow">{trims.length} trims · {cars.length} models · {brands} brands</p>
       <h1>Explore <span class="mint">all your options.</span></h1>
     </div>
   </section>
@@ -24,6 +27,11 @@ const brands = new Set(cars.map((c) => c.make)).size;
       {FILTERS.map((f) => (
         <button type="button" class="chip" data-chip={f} aria-pressed={f === "All" ? "true" : "false"}>{f}</button>
       ))}
+    </div>
+
+    <div class="chips" role="group" aria-label="Filter by brand">
+      <button type="button" class="chip" data-make="" aria-pressed="true">All brands</button>
+      {makes.map((mk) => <button type="button" class="chip" data-make={mk} aria-pressed="false">{mk}</button>)}
     </div>
 
     <div class="tools">
@@ -45,15 +53,17 @@ const brands = new Set(cars.map((c) => c.make)).size;
           <option value="high">MSRP: high to low</option>
         </select>
       </label>
+      <label class="only-toggle"><input type="checkbox" role="switch" data-models-only /><span class="rail" aria-hidden="true"></span>Models only</label>
     </div>
 
     <div class="status">
-      <p aria-live="polite" data-count>All {cars.length} models</p>
+      <p aria-live="polite" data-count>All {trims.length} trims</p>
       <button type="button" class="clear" data-clear hidden>Clear search</button>
     </div>
 
     <div class="car-grid">
-      {cars.map((car, i) => <CarTile car={car} eager={i < 8} />)}
+      {trims.map(({ car, trim }, i) => <CarTile car={car} trim={trim} eager={i < 8} />)}
+      {cars.map((car) => <CarTile car={car} hide />)}
     </div>
 
     <div class="empty" data-empty hidden>
@@ -81,7 +91,14 @@ const brands = new Set(cars.map((c) => c.make)).size;
   }
   .chip:hover { border-color: rgba(92, 235, 196, 0.6); }
   .chip[aria-pressed="true"] { background: var(--mint); border-color: var(--mint); color: var(--mint-ink); font-weight: 700; box-shadow: 0 0 24px rgba(92, 235, 196, 0.4); }
-  .tools { display: flex; flex-wrap: wrap; gap: 14px; }
+  .tools { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .only-toggle { position: relative; flex: none; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 15px; font-weight: 600; color: var(--text); cursor: pointer; white-space: nowrap; }
+  .only-toggle input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .only-toggle .rail { position: relative; width: 46px; height: 26px; border-radius: 999px; background: rgba(232, 243, 238, 0.2); transition: background .2s ease; flex: none; }
+  .only-toggle .rail::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; transition: transform .2s ease; }
+  .only-toggle input:checked + .rail { background: var(--mint); }
+  .only-toggle input:checked + .rail::after { transform: translateX(20px); }
+  .only-toggle input:focus-visible + .rail { outline: 2px solid var(--mint); outline-offset: 3px; }
   .tools label { display: flex; align-items: center; gap: 8px; color: var(--sub); font-size: 15px; }
   .tools select { height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid rgba(232, 243, 238, 0.22); background: var(--card-solid); color: var(--text); font: 500 15px var(--font); }
   .status { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; min-height: 44px; }
@@ -91,6 +108,8 @@ const brands = new Set(cars.map((c) => c.make)).size;
   .car-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 20px; }
   @media (max-width: 1000px) { .car-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (max-width: 720px) { .car-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px; } }
+  /* On a phone each chip row is one line that scrolls sideways, so results start sooner. */
+  @media (max-width: 720px) { .chips { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 0 16px 4px; scrollbar-width: none; } .chips::-webkit-scrollbar { display: none; } .chip { flex: none; } }
   @media (max-width: 420px) { .car-grid { grid-template-columns: 1fr; } }
   .empty { text-align: center; padding: 48px 24px; border: 1px dashed rgba(160, 230, 205, 0.28); border-radius: 20px; }
   .empty[hidden] { display: none; }
@@ -109,6 +128,8 @@ const brands = new Set(cars.map((c) => c.make)).size;
     const input = root.querySelector<HTMLInputElement>("input[name=q]")!;
     const form = root.querySelector<HTMLFormElement>("[data-search]")!;
     const chips = [...root.querySelectorAll<HTMLButtonElement>("[data-chip]")];
+    const makeChips = [...root.querySelectorAll<HTMLButtonElement>("button[data-make]")];
+    const modelsOnly = root.querySelector<HTMLInputElement>("[data-models-only]")!;
     const count = root.querySelector<HTMLElement>("[data-count]")!;
     const empty = root.querySelector<HTMLElement>("[data-empty]")!;
     const clears = [...root.querySelectorAll<HTMLButtonElement>("[data-clear]")];
@@ -120,6 +141,8 @@ const brands = new Set(cars.map((c) => c.make)).size;
     let max = Number(params.get("max")) || 0;
     let sort = ["low", "high"].includes(params.get("sort") ?? "") ? params.get("sort")! : "name";
     let type = chips.some((c) => c.dataset.chip === params.get("type")) ? params.get("type")! : "All";
+    let make = makeChips.some((c) => c.dataset.make === params.get("make")) ? params.get("make")! : "";
+    modelsOnly.checked = params.get("view") === "models";
 
     const matchesType = (t: HTMLElement) =>
       type === "All" ||
@@ -131,9 +154,11 @@ const brands = new Set(cars.map((c) => c.make)).size;
       // "trucks" should find "truck": drop a trailing s from each word before matching.
       const words = query.toLowerCase().split(/\s+/).filter(Boolean).map((w) => (w.length > 3 ? w.replace(/s$/, "") : w));
       let shown = 0;
+      const kind = modelsOnly.checked ? "model" : "trim";
+      const noun = kind === "model" ? "models" : "trims";
       for (const t of tiles) {
         const price = Number(t.dataset.price) || 0;
-        const ok = matchesType(t) && words.every((w) => (t.dataset.text ?? "").includes(w)) && (!max || (price > 0 && price < max));
+        const ok = t.dataset.kind === kind && (!make || t.dataset.make === make) && matchesType(t) && words.every((w) => (t.dataset.text ?? "").includes(w)) && (!max || (price > 0 && price < max));
         t.hidden = !ok;
         if (ok) shown++;
       }
@@ -142,17 +167,19 @@ const brands = new Set(cars.map((c) => c.make)).size;
         .sort((a, b) => sort === "name" ? (a.dataset.nameSort ?? "").localeCompare(b.dataset.nameSort ?? "") : sort === "low" ? priceOf(a) - priceOf(b) : priceOf(b) - priceOf(a))
         .forEach((t) => grid.appendChild(t));
       chips.forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.chip === type)));
-      const what = type === "All" ? "models" : `${type} models`;
-      count.textContent = query
-        ? `${shown} ${shown === 1 ? "result" : "results"} for “${query}”${type === "All" ? "" : ` in ${type}`}`
-        : type === "All" && !max ? `All ${shown} models` : `${shown} ${what}`;
+      makeChips.forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.make === make)));
+      const what = [make, type === "All" ? "" : type, noun].filter(Boolean).join(" ");
+      const plain = !query && type === "All" && !make && !max;
+      count.textContent = query ? `${shown} ${shown === 1 ? "result" : "results"} for “${query}”${what === noun ? "" : ` in ${what}`}` : plain ? `All ${shown} ${noun}` : `${shown} ${what}`;
       if (max) count.textContent += ` under $${max.toLocaleString("en-US")} MSRP`;
       empty.hidden = shown !== 0;
-      clears[0].hidden = !query && type === "All" && !max;
+      clears[0].hidden = plain;
       if (updateUrl) {
         const next = new URLSearchParams();
         if (query) next.set("q", query);
         if (type !== "All") next.set("type", type);
+        if (make) next.set("make", make);
+        if (modelsOnly.checked) next.set("view", "models");
         if (max) next.set("max", String(max));
         if (sort !== "name") next.set("sort", sort);
         const qs = next.toString();
@@ -164,11 +191,13 @@ const brands = new Set(cars.map((c) => c.make)).size;
     input.addEventListener("input", () => { query = input.value.trim(); apply(); });
     form.addEventListener("submit", (e) => { e.preventDefault(); query = input.value.trim(); apply(); input.blur(); });
     chips.forEach((c) => c.addEventListener("click", () => { type = c.dataset.chip!; apply(); }));
+    makeChips.forEach((c) => c.addEventListener("click", () => { make = c.dataset.make!; apply(); }));
+    modelsOnly.addEventListener("change", () => apply());
     maxSel.value = max ? String(max) : "";
     sortSel.value = sort;
     maxSel.addEventListener("change", () => { max = Number(maxSel.value) || 0; apply(); });
     sortSel.addEventListener("change", () => { sort = sortSel.value; apply(); });
-    clears.forEach((b) => b.addEventListener("click", () => { query = ""; type = "All"; max = 0; maxSel.value = ""; input.value = ""; apply(); }));
+    clears.forEach((b) => b.addEventListener("click", () => { query = ""; type = "All"; make = ""; max = 0; maxSel.value = ""; input.value = ""; apply(); }));
     apply(false);
   }
 </script>

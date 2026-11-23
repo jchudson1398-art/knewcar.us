@@ -1,24 +1,28 @@
 ---
-// One car in the grid: photo, make and year, model, and how many configurations the app has. It opens the
-// car's page with every trim. Shows the model's lowest verified MSRP; no payments or offers.
-import { carImage, carName, carSearchText, carUrl, configsLabel, priceLabel, type Car } from "../lib/catalog";
-interface Props { car: Car; eager?: boolean }
-const { car, eager = false } = Astro.props;
+// One card in the grid. With a trim it shows that trim's own photo and MSRP; without one it shows the model and
+// its lowest verified MSRP. Either way it opens the model's page with every trim. No payments or offers.
+import { carImage, carName, carSearchText, carUrl, money, priceLabel, trimImage, type Car } from "../lib/catalog";
+interface Props { car: Car; trim?: Car["trims"][number]; eager?: boolean; hide?: boolean }
+const { car, trim, eager = false, hide = false } = Astro.props;
+const title = trim ? `${car.model} ${trim.name}` : car.model;
+const full = trim ? `${carName(car)} ${trim.name}` : carName(car);
+const price = trim ? trim.msrp : car.msrpFrom;
+const label = trim ? (trim.msrp ? `${money(trim.msrp)} MSRP` : "MSRP in the app") : priceLabel(car);
+const text = trim ? `${carSearchText(car)} ${trim.name.toLowerCase()} ${trim.drive.join(" ").toLowerCase()}` : carSearchText(car);
 ---
 
-<article class="tile" data-tile data-text={carSearchText(car)} data-type={car.type ?? ""} data-fuel={car.fuel ?? ""} data-price={car.msrpFrom ?? ""} data-name-sort={`${car.make} ${car.model}`}>
-  <a class="frame" href={carUrl(car)} aria-label={`${carName(car)}: see all trims`} data-link>
-    <img src={carImage(car)} alt={carName(car)} width="560" height="420" loading={eager ? "eager" : "lazy"} decoding="async" data-img />
-    <span class="tag" data-tag hidden={!car.type}>{car.type}</span>
-    <span class="fuel" data-fuel-tag hidden={!car.fuel}>{car.fuel}</span>
+<article class="tile" data-tile hidden={hide} data-kind={trim ? "trim" : "model"} data-make={car.make} data-text={text} data-type={car.type ?? ""} data-fuel={car.fuel ?? ""} data-price={price ?? ""} data-name-sort={`${car.make} ${title}`}>
+  <a class="frame" href={carUrl(car)} aria-label={`${full}: see all trims`}>
+    <img src={trim ? trimImage(car, trim) : carImage(car)} alt={full} width="560" height="420" loading={eager ? "eager" : "lazy"} decoding="async" />
+    <span class="tag" hidden={!car.type}>{car.type}</span>
+    <span class="fuel" hidden={!car.fuel}>{car.fuel}</span>
     <span class="open" aria-hidden="true">See all trims</span>
   </a>
   <button type="button" class="save" data-save={car.key} aria-pressed="false" aria-label={`Save ${carName(car)}`}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg></button>
   <div class="info">
-    <p class="meta" data-meta>{car.make} · {car.year}</p>
-    <h3><a href={carUrl(car)} data-name data-link2>{car.model}</a></h3>
-    <p class="price" data-price-label>{priceLabel(car)}</p>
-    <p class="configs" data-configs>{configsLabel(car.configs)}</p>
+    <p class="meta">{car.make} · {car.year}</p>
+    <h3><a href={carUrl(car)}>{title}</a></h3>
+    <p class="price">{label}</p>
   </div>
 </article>
 
@@ -52,7 +56,6 @@ const { car, eager = false } = Astro.props;
   .save { position: absolute; right: 10px; top: 54px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(160, 230, 205, 0.25); background: rgba(4, 20, 15, 0.8); color: var(--text); display: grid; place-items: center; cursor: pointer; }
   .save[aria-pressed="true"] { background: var(--mint); color: var(--mint-ink); border-color: var(--mint); }
   .save[aria-pressed="true"] svg { fill: currentColor; }
-  .configs { margin: 2px 0 0; font-size: 13px; font-weight: 600; color: var(--mint); }
   h3 { margin-top: 4px; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; overflow-wrap: anywhere; }
   @media (prefers-reduced-motion: reduce) { .frame, .frame img, .open { transition: none; } }
 </style>

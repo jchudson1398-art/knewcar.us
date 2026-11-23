@@ -2,16 +2,21 @@
 import Base from "../layouts/Base.astro";
 import CarTile from "../components/CarTile.astro";
 import SearchBar from "../components/SearchBar.astro";
-import { CATALOG, CONFIG_TOTAL, carImage, priceLabel } from "../lib/catalog";
+import { CATALOG, carImage, carUrl, money, priceLabel } from "../lib/catalog";
 import { APP_STORE_URL, WEB_PLAN } from "../site";
 
-// The home grid shows 8 rows of 4. Which 32 is reshuffled in the browser on every visit (script below); this
-// build-time mix is what loads first and what shows without JavaScript.
-const GRID = 32;
+// The home grid shows every trim by default: four rows of four, with "Show more" for four more rows at a time.
+// A toggle switches it to one card per model. The order is reshuffled in the browser on every visit.
+const SHOW = 16;
 const rank = (k: string) => [...k].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) % 9973, 7);
 const mixed = [...CATALOG].sort((a, b) => rank(a.key) - rank(b.key));
-const first = mixed.slice(0, GRID);
-const preview = mixed.slice(GRID, GRID + 15);
+const TRIMS = CATALOG.flatMap((car) => car.trims.map((trim) => ({ car, trim })));
+const trimPool = [...TRIMS].sort((a, b) => rank(a.car.key + a.trim.name) - rank(b.car.key + b.trim.name)).slice(0, 64);
+const modelPool = mixed.slice(0, 32);
+const makes = [...new Set(CATALOG.map((c) => c.make))].sort();
+// The car on the first slide.
+const heroCar = CATALOG.find((c) => c.key === "toyota-rav4")!;
+const heroTrim = heroCar.trims.find((t) => t.name === "Limited")!;
 // Three priced models of different types for the MSRP slide.
 const spotlight = ["Truck", "SUV", "Sedan"].map((t) => mixed.find((c) => c.type === t && c.msrpFrom)!).filter(Boolean);
 const brands = new Set(CATALOG.map((c) => c.make)).size;
@@ -43,28 +48,10 @@ const steps = [
               <a class="btn btn-ghost" href="/explore">Explore all your options</a>
             </div>
           </div>
-          <div class="window" aria-hidden="true">
-            <div class="chrome"><span class="dots"><i></i><i></i><i></i></span><span class="url">knewcar.us/explore</span></div>
-            <div class="viewport">
-              <div class="scroller">
-                {[0, 1].map(() => (
-                  <div class="mini">
-                    <div class="mini-search"><span>Search make, model or type</span><b>Search</b></div>
-                    <div class="mini-grid">
-                      {preview.map((c) => (
-                        <div class="mini-tile">
-                          <div class="mini-pic"><img src={carImage(c)} alt="" width="240" height="180" loading="eager" /></div>
-                          <small>{c.make} · {c.year}</small>
-                          <strong>{c.model}</strong>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div class="fade"></div>
-            </div>
-          </div>
+          <a class="hero-car" href={carUrl(heroCar)}>
+            <img src="/img/hero/toyota-rav4-limited.webp" alt={`${heroCar.year} ${heroCar.make} ${heroCar.model} ${heroTrim.name}`} width="1200" height="900" loading="eager" />
+            <span class="hero-cap"><strong>{heroCar.year} {heroCar.make} {heroCar.model} {heroTrim.name}</strong><span>{heroTrim.msrp ? `${money(heroTrim.msrp)} MSRP` : priceLabel(heroCar)} · {heroCar.trims.length} trims</span></span>
+          </a>
         </div>
 
         <div class="slide" data-slide aria-hidden="true">
@@ -129,20 +116,24 @@ const steps = [
   <!-- Search sits right on top of the listings, the same layout search results use on /explore -->
   <section class="wrap listings" id="cars">
     <SearchBar />
+    <nav class="brands" aria-label="Browse by brand">
+      {makes.map((mk) => <a class="brand" href={`/explore?make=${encodeURIComponent(mk)}`}>{mk}</a>)}
+    </nav>
     <div class="list-head">
       <div>
         <h2>Available <span class="mint">now</span></h2>
-        <p class="tally">{CONFIG_TOTAL.toLocaleString("en-US")} configurations across {CATALOG.length} models, all in the app. MSRP excludes destination, taxes and fees.</p>
+        <p class="tally">{TRIMS.length} trims across {CATALOG.length} models. MSRP excludes destination, taxes and fees.</p>
       </div>
-      <a class="btn btn-primary" href="/explore">Explore all your options <span aria-hidden="true">→</span></a>
+      <label class="only-toggle"><input type="checkbox" role="switch" data-models-only /><span class="rail" aria-hidden="true"></span>Models only</label>
     </div>
     <div class="car-grid" data-home-grid>
-      {first.map((car, i) => <CarTile car={car} eager={i < 4} />)}
+      {trimPool.map(({ car, trim }, i) => <CarTile car={car} trim={trim} eager={i < 4} hide={i >= SHOW} />)}
+      {modelPool.map((car) => <CarTile car={car} hide />)}
     </div>
     <div class="more">
-      <a class="btn btn-ghost" href="/explore">See all {CATALOG.length} models</a>
+      <button type="button" class="btn btn-ghost" data-more>Show more</button>
+      <a class="btn btn-primary" href="/explore">Explore all your options <span aria-hidden="true">→</span></a>
     </div>
-    <script type="application/json" id="catalog-data" set:html={JSON.stringify(CATALOG.map((c) => [c.key, c.make, c.model, c.year, c.type, c.fuel, c.configs, c.msrpFrom]))} />
   </section>
 
   <!-- The app: a slider that walks through the real screens -->
@@ -292,6 +283,24 @@ const steps = [
   .tally { margin: 6px 0 0; color: var(--sub); font-size: 15px; }
   .list-head .btn { height: 48px; border-radius: 999px; }
   .car-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 20px; }
+  .brands { display: flex; flex-wrap: wrap; gap: 8px; }
+  .brand { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(232, 243, 238, 0.22); color: var(--text); font-size: 15px; font-weight: 600; }
+  .brand:hover { border-color: rgba(92, 235, 196, 0.6); text-decoration: none; }
+  @media (max-width: 720px) { .brands { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 0 16px 4px; scrollbar-width: none; } .brands::-webkit-scrollbar { display: none; } .brand { flex: none; } }
+  .only-toggle { position: relative; flex: none; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 15px; font-weight: 600; color: var(--text); cursor: pointer; white-space: nowrap; }
+  .only-toggle input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .only-toggle .rail { position: relative; width: 46px; height: 26px; border-radius: 999px; background: rgba(232, 243, 238, 0.2); transition: background .2s ease; flex: none; }
+  .only-toggle .rail::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; transition: transform .2s ease; }
+  .only-toggle input:checked + .rail { background: var(--mint); }
+  .only-toggle input:checked + .rail::after { transform: translateX(20px); }
+  .only-toggle input:focus-visible + .rail { outline: 2px solid var(--mint); outline-offset: 3px; }
+  .more { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .more [hidden] { display: none; }
+  .hero-car { position: relative; display: block; border-radius: 24px; overflow: hidden; border: 1px solid rgba(160, 230, 205, 0.2); box-shadow: 0 40px 90px rgba(0, 0, 0, 0.55), 0 0 80px rgba(92, 235, 196, 0.12); }
+  .hero-car img { display: block; width: 100%; height: 400px; object-fit: cover; object-position: center 62%; }
+  .hero-cap { position: absolute; left: 16px; bottom: 16px; display: grid; gap: 2px; padding: 12px 16px; border-radius: 14px; background: rgba(4, 20, 15, 0.82); border: 1px solid rgba(160, 230, 205, 0.25); backdrop-filter: blur(6px); }
+  .hero-cap strong { font-size: 16px; color: var(--text); }
+  .hero-cap span { font-size: 14px; font-weight: 600; color: var(--mint); }
   .more { display: flex; justify-content: center; padding-top: 12px; }
 
   /* App slider */
@@ -346,6 +355,9 @@ const steps = [
     .hero-cta .btn { min-height: 44px; padding: 0 16px; font-size: 15px; }
     .hero-nav { margin-top: 8px; }
     .viewport { height: 170px; }
+    .hero-car img { height: 220px; }
+    .hero-cap { left: 10px; bottom: 10px; padding: 8px 12px; }
+    .hero-cap strong { font-size: 14px; }
     .stack { height: 220px; gap: 8px; }
     .pcard div { padding: 6px 10px; }
     .pcard strong { font-size: 13px; }
@@ -390,42 +402,31 @@ const steps = [
     if (!matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => { if (!hold && !stopped && !document.hidden) go(i + 1); }, 6000);
   }
 
-  // 1) Home grid: show a different random 32 on every visit.
+  // 1) Home grid: every trim by default, or one card per model with the toggle. Shuffled on every visit; four rows
+  //    at a time.
   const grid = document.querySelector<HTMLElement>("[data-home-grid]");
-  const raw = document.getElementById("catalog-data")?.textContent;
-  if (grid && raw) {
-    type Row = [key: string, make: string, model: string, year: number, type: string | null, fuel: string | null, configs: number, msrpFrom: number | null];
-    const all = JSON.parse(raw) as Row[];
-    for (let i = all.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [all[i], all[j]] = [all[j], all[i]];
+  if (grid) {
+    const PAGE = 16;
+    const more = document.querySelector<HTMLButtonElement>("[data-more]")!;
+    const toggle = document.querySelector<HTMLInputElement>("[data-models-only]")!;
+    const pools: Record<string, HTMLElement[]> = { trim: [], model: [] };
+    grid.querySelectorAll<HTMLElement>("[data-tile]").forEach((t) => pools[t.dataset.kind!].push(t));
+    for (const list of Object.values(pools)) {
+      for (let i = list.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [list[i], list[j]] = [list[j], list[i]];
+      }
+      list.forEach((t) => grid.appendChild(t));
     }
-    grid.querySelectorAll<HTMLElement>("[data-tile]").forEach((tile, i) => {
-      const row = all[i];
-      if (!row) return;
-      const [key, make, model, year, type, fuel, configs, msrpFrom] = row;
-      const name = `${year} ${make} ${model}`;
-      const img = tile.querySelector<HTMLImageElement>("[data-img]")!;
-      img.src = `/img/cars/${key}.webp`;
-      img.alt = name;
-      const link = tile.querySelector<HTMLAnchorElement>("[data-link]")!;
-      link.href = `/cars/${key}/`;
-      link.setAttribute("aria-label", `${name}: see all trims`);
-      tile.querySelector<HTMLAnchorElement>("[data-link2]")!.href = `/cars/${key}/`;
-      tile.querySelector("[data-price-label]")!.textContent = msrpFrom ? `From $${msrpFrom.toLocaleString("en-US")} MSRP` : "MSRP in the app";
-      const save = tile.querySelector<HTMLElement>("[data-save]")!;
-      save.dataset.save = key;
-      save.setAttribute("aria-label", `Save ${name}`);
-      tile.querySelector("[data-configs]")!.textContent = `${configs} ${configs === 1 ? "configuration" : "configurations"} in the app`;
-      tile.querySelector("[data-meta]")!.textContent = `${make} · ${year}`;
-      tile.querySelector("[data-name]")!.textContent = model;
-      const tag = tile.querySelector<HTMLElement>("[data-tag]")!;
-      tag.textContent = type ?? "";
-      tag.hidden = !type;
-      const fuelTag = tile.querySelector<HTMLElement>("[data-fuel-tag]")!;
-      fuelTag.textContent = fuel ?? "";
-      fuelTag.hidden = !fuel;
-    });
+    let shown = PAGE;
+    const draw = () => {
+      const kind = toggle.checked ? "model" : "trim";
+      for (const [k, list] of Object.entries(pools)) list.forEach((t, i) => (t.hidden = k !== kind || i >= shown));
+      more.hidden = shown >= pools[kind].length;
+    };
+    more.addEventListener("click", () => { shown += PAGE; draw(); });
+    toggle.addEventListener("change", () => { shown = PAGE; draw(); });
+    draw();
   }
 
   // 2) App slider: steps through the app screens; pauses while hovered.
