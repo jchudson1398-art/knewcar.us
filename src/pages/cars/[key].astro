@@ -1,8 +1,9 @@
 ---
-// One page per model: its photo and every trim of the newest model year. No prices or payments.
+// One page per model: its photo and every configuration the app has, grouped by model year. MSRP only; no
+// payments or offers.
 import Base from "../../layouts/Base.astro";
 import CarTile from "../../components/CarTile.astro";
-import { CATALOG, carImage, carName, configsLabel, money, trimImage, type Car } from "../../lib/catalog";
+import { CATALOG, CONFIGS, carImage, carName, configsLabel, money, type Car } from "../../lib/catalog";
 import { APP_STORE_URL } from "../../site";
 
 export function getStaticPaths() {
@@ -11,12 +12,15 @@ export function getStaticPaths() {
 interface Props { car: Car }
 const { car } = Astro.props;
 const name = carName(car);
-const olderYears = car.years.filter((y) => y !== car.year);
+// Every configuration of this model, newest model year first.
+const mine = CONFIGS.filter((c) => c.car.key === car.key).map((c) => c.config);
+const years = [...new Set(mine.map((c) => c.year))].sort((a, b) => b - a);
+const hybridOnly = (trim: string) => /hybrid|phev|plug-in|i-force max/i.test(trim);
 const related = CATALOG.filter((c) => c.key !== car.key && c.make === car.make && c.type === car.type).slice(0, 4);
 const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car.key && c.make === car.make).slice(0, 4);
 ---
 
-<Base title={`${name} trims`} description={`Every ${name} trim in one place: ${car.trims.slice(0, 5).map((t) => t.name).join(", ")}${car.trims.length > 5 ? " and more" : ""}. ${configsLabel(car.configs)}.`}>
+<Base title={`${name} trims`} description={`Every ${name} trim in one place: ${car.trims.slice(0, 5).map((t) => t.name).join(", ")}${car.trims.length > 5 ? " and more" : ""}. ${configsLabel(mine.length)}.`}>
   <section class="page-head">
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/explore">Explore</a> / <a href={`/explore?q=${encodeURIComponent(car.make)}`}>{car.make}</a> / {car.model}</nav>
@@ -34,10 +38,10 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
         <span>{car.trims.length} {car.trims.length === 1 ? "trim" : "trims"}</span>
       </div>
       <p class="msrp">{car.msrpFrom ? (car.msrpFrom === car.msrpTo ? money(car.msrpFrom) : `${money(car.msrpFrom)} to ${money(car.msrpTo!)}`) : "MSRP in the app"} {car.msrpFrom && <span>MSRP</span>}</p>
-      <p class="count"><strong>{car.configs}</strong> {car.configs === 1 ? "configuration" : "configurations"} in the app</p>
+      <p class="count"><strong>{mine.length}</strong> {mine.length === 1 ? "configuration" : "configurations"} in the app</p>
       <p class="sub">
         A configuration is one exact build: a trim with its drivetrain and body.
-        {olderYears.length > 0 && ` The app also has the ${olderYears.join(" and ")} ${car.model}.`}
+        {years.length > 1 && ` Model years ${[...years].reverse().join(" and ")} are both listed below.`}
       </p>
       <div class="actions">
         <button type="button" class="btn btn-primary" data-save={car.key} data-save-text aria-pressed="false">Save this car</button>
@@ -48,18 +52,24 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
     </div>
   </section>
 
-  <section class="wrap trims">
-    <h2>{car.year} {car.model} <span class="mint">trims</span></h2>
-    <ul>
-      {car.trims.map((t) => (
-        <li>
-          <img src={trimImage(car, t)} alt={`${car.year} ${car.make} ${car.model} ${t.name}`} width="560" height="420" loading="lazy" />
-          <div class="tn"><strong>{t.name}</strong><span class="tp">{t.msrp ? `${money(t.msrp)} MSRP` : "MSRP in the app"}</span></div>
-          <span class="drive">{t.drive.length > 0 ? t.drive.map((d) => <i>{d}</i>) : <em>Drivetrain shown in the app</em>}</span>
-        </li>
-      ))}
-    </ul>
-  </section>
+  {years.map((year) => (
+    <section class="wrap trims">
+      <h2>{year} {car.model} <span class="mint">configurations</span></h2>
+      <ul>
+        {mine.filter((c) => c.year === year).map((c) => (
+          <li>
+            <img src={`/img/cfg/${c.img}.webp`} alt={`${year} ${car.make} ${car.model} ${c.trim}${c.drive ? `, ${c.drive}` : ""}${c.body ? `, ${c.body}` : ""}`} width="560" height="420" loading="lazy" />
+            <div class="tn"><strong>{c.trim}</strong><span class="tp">{c.msrp ? `${money(c.msrp)} MSRP` : "MSRP in the app"}</span></div>
+            <span class="drive">
+              {c.drive && <i>{c.drive}</i>}
+              {c.body && <i class="alt">{c.body}</i>}
+              {car.fuel === "Hybrid available" && hybridOnly(c.trim) && <i class="alt">Hybrid</i>}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
 
   {more.length > 0 && (
     <section class="wrap moregrid">
@@ -99,6 +109,9 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
   .drive { display: flex; gap: 6px; flex: none; }
   .drive i { font-style: normal; font-size: 12px; font-weight: 700; padding: 4px 8px; border-radius: 6px; background: var(--mint-soft); color: var(--mint); }
   .drive em { font-style: normal; font-size: 12px; color: var(--faint); }
+  .drive { flex-wrap: wrap; justify-content: flex-end; }
+  .drive .alt { background: transparent; border: 1px solid rgba(160, 230, 205, 0.25); color: var(--sub); }
+  .trims + .trims { padding-top: 0; }
   .moregrid { padding-bottom: 72px; }
   .car-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 20px; }
   @media (max-width: 900px) { .top { grid-template-columns: 1fr; gap: 28px; } .car-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
