@@ -14,13 +14,10 @@ const configPool = [...CONFIGS].sort((a, b) => rank(a.config.img + a.config.year
 const modelPool = mixed.slice(0, 72);
 const makes = [...new Set(CATALOG.map((c) => c.make))].sort();
 // Hero slides: one large photo each, with the message over it.
-// The first slide plays a short video of a car, a truck and an SUV pulling in (made by Jacob, 2026-11-27). The word
-// in "Looking for a new ...?" changes as each one arrives; `at` is the second in the video when it does.
-const looking = [
-  { word: "car", at: 0 },
-  { word: "truck", at: 1.0 },
-  { word: "SUV", at: 2.1 },
-];
+// The first slide is a short video of a car, a truck and an SUV pulling in (Jacob's clip, 2026-11-27). The headline
+// is part of the picture: "Looking for a new car? truck? SUV?" on the back wall behind the cars, and "All your
+// options. One easy place." on the floor in front. The same words are in the page as a hidden heading for screen
+// readers and search engines.
 const slides = [
   { img: "rav4", car: "2026 Toyota RAV4 Limited", h: ["All your new car options,", "One easy place."], lead: `${CONFIGS.length.toLocaleString("en-US")} configurations from ${new Set(CATALOG.map((c) => c.make)).size} brands. Free to browse.`, cta: "Explore your options", href: "/explore" },
   { img: "telluride", car: "2027 Kia Telluride SX Prestige", h: ["Every trim.", "Real MSRP."], lead: "See every trim of every model with its manufacturer price, and search by what you want to spend.", cta: "Search by price", href: "/explore?sort=low" },
@@ -49,15 +46,15 @@ const steps = [
     {slides.map((s, i) => (
       <div class="slide" data-slide aria-hidden={i === 0 ? "false" : "true"}>
         {i === 0
-          ? <Fragment>
-              <img class="bg end" src="/video/intro-end.jpg" alt="A sedan, a pickup truck and an SUV parked side by side" width="1280" height="720" loading="eager" />
-              <video class="bg" data-intro data-times={JSON.stringify(looking)} muted playsinline preload="auto" poster="/video/intro-start.jpg" aria-hidden="true"><source src="/video/intro.mp4" type="video/mp4" /></video>
-            </Fragment>
+          ? <div class="intro-stage">
+              <img class="end" src="/video/intro-end.jpg" alt="A sedan, a pickup truck and an SUV parked side by side under the words: Looking for a new SUV? All your options. One easy place." width="1920" height="1080" loading="eager" />
+              <video data-intro muted playsinline preload="auto" poster="/video/intro-start.jpg" aria-hidden="true"><source src="/video/intro.mp4" type="video/mp4" /></video>
+            </div>
           : <img class="bg" src={`/img/hero/${s.img}.webp`} alt={s.car} width="1448" height="1086" loading="lazy" />}
         <div class="shade" aria-hidden="true"></div>
         <div class="wrap wide copy">
           {i === 0
-            ? <h1><span class="ask">Looking for a new <span class="pick"><span class="word" data-word>car</span>?</span></span> <span class="grad">All your options, one easy place.</span></h1>
+            ? <h1 class="sr">Looking for a new car, truck or SUV? All your options, one easy place.</h1>
             : <h2 class="h">{s.h[0]} <span class="grad">{s.h[1]}</span></h2>}
           <p class="lead">{s.lead}</p>
           <a class="btn btn-primary" href={s.href}>{s.cta} <span aria-hidden="true">→</span></a>
@@ -167,22 +164,22 @@ const steps = [
   .grad { background: linear-gradient(90deg, #5cebc4 0%, #a6f5df 55%, #ffc45c 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
   /* Hero: a full-width photo slideshow with the message over each photo */
-  .hero { position: relative; margin-top: 72px; height: clamp(380px, 46vw, 520px); overflow: hidden; background: #04140f; }
+  .hero { position: relative; margin-top: 72px; height: min(calc(100vw / 2.16 + 92px), 86vh); min-height: 300px; overflow: hidden; background: #04140f; }
   .slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .7s ease, visibility 0s .7s; }
   .slide[aria-hidden="false"] { opacity: 1; visibility: visible; transition: opacity .7s ease; }
   /* The photo fills the right two thirds and fades into the dark ground on the left, so the whole car stays in view. */
   .bg { position: absolute; top: 0; right: 0; width: 68%; height: 100%; object-fit: cover; object-position: center 60%; }
-  /* First slide: a video of the cars pulling in. Its last frame sits underneath, so there is always a picture. */
-  video.bg { background: #04140f; }
-  .slide:first-child .bg { object-position: center; }
-  .slide:first-child .shade { background: linear-gradient(90deg, #04140f 0%, #04140f 30%, rgba(4, 20, 15, 0) 40%), linear-gradient(0deg, rgba(4, 20, 15, 0.6) 0%, rgba(4, 20, 15, 0) 20%); }
-  .ask { display: block; }
-  /* The changing word sits on its own line, so the headline never re-wraps as the word changes. */
-  .pick { display: block; white-space: nowrap; }
-  .word { display: inline-block; color: var(--mint); }
-  .word.swap { animation: word-in .5s ease; }
-  @keyframes word-in { from { opacity: 0; transform: translateY(0.35em); } to { opacity: 1; transform: none; } }
-  @media (prefers-reduced-motion: reduce) { video.bg { display: none; } .word.swap { animation: none; } }
+  /* First slide: the video fills the slide, with a strip under it for the one-line pitch and the button. It is
+     cropped a little at the top and bottom on wide screens; the lettering in the video is placed inside that. */
+  .intro-stage { position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: calc(100% - 92px); aspect-ratio: 2.16; max-width: 100%; overflow: hidden; background: #000; }
+  .intro-stage img, .intro-stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .slide:first-child .shade { display: none; }
+  .slide:first-child .copy { justify-content: flex-end; flex-direction: row; align-items: flex-end; gap: 22px; padding-bottom: 20px; height: 100%; }
+  .slide:first-child .lead { padding-bottom: 14px; }
+  .slide:first-child .lead { max-width: none; margin-right: auto; }
+  .slide:first-child .btn { margin: 0; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  @media (prefers-reduced-motion: reduce) { .intro-stage video { display: none; } }
   .shade { position: absolute; inset: 0; background: linear-gradient(90deg, #04140f 0%, #04140f 32%, rgba(4, 20, 15, 0.55) 46%, rgba(4, 20, 15, 0) 62%), linear-gradient(0deg, rgba(4, 20, 15, 0.75) 0%, rgba(4, 20, 15, 0) 24%); }
   .copy { position: relative; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 14px; padding-bottom: 28px; }
   .hero h1, .hero .h { font-size: clamp(32px, 3.9vw, 52px); line-height: 1.06; letter-spacing: -0.035em; font-weight: 800; max-width: min(100%, 540px); text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5); }
@@ -193,7 +190,7 @@ const steps = [
   .arrow:hover { border-color: var(--mint); color: var(--mint); }
   .arrow.prev { left: 16px; }
   .arrow.next { right: 16px; }
-  .hero-nav { position: absolute; left: 0; right: 0; bottom: 6px; display: flex; align-items: center; justify-content: center; gap: 6px; z-index: 2; }
+  .hero-nav { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; gap: 6px; z-index: 2; }
   .pips { display: flex; }
   .pips button { width: 30px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
   .pips button::before { content: ""; width: 9px; height: 9px; border-radius: 999px; background: rgba(232, 243, 238, 0.45); transition: background .3s ease, transform .3s ease; }
@@ -301,11 +298,13 @@ const steps = [
     .ph { width: 140px; }
   }
   @media (max-width: 640px) {
-    .hero { margin-top: 64px; height: 530px; }
+    .hero { margin-top: 64px; height: calc(56.25vw + 190px); }
     .shade { background: linear-gradient(0deg, rgba(4, 20, 15, 0.95) 0%, rgba(4, 20, 15, 0.82) 46%, rgba(4, 20, 15, 0.1) 78%); }
-    .bg { width: 100%; height: 62%; object-position: center 55%; }
-    .slide:first-child .bg { height: auto; aspect-ratio: 16 / 9; top: 12px; }
-    .slide:first-child .shade { background: linear-gradient(0deg, rgba(4, 20, 15, 0.95) 0%, rgba(4, 20, 15, 0.9) 42%, rgba(4, 20, 15, 0) 56%); }
+    .bg { width: 100%; height: 56.25vw; object-position: center 55%; }
+    .intro-stage { height: auto; width: 100%; aspect-ratio: 16 / 9; }
+    .slide:first-child .copy { flex-direction: column; align-items: stretch; justify-content: flex-end; gap: 10px; padding: 0 16px 50px; }
+    .slide:first-child .lead { margin: 0; }
+    .slide:first-child .btn { justify-content: center; }
     .copy { justify-content: flex-end; padding: 0 16px 52px; gap: 8px; }
     .hero h1, .hero .h { font-size: 28px; }
     .hero .lead { font-size: 15px; }
@@ -344,23 +343,12 @@ const steps = [
     let x0 = 0;
     heroEl.addEventListener("touchstart", (e) => (x0 = e.touches[0].clientX), { passive: true });
     heroEl.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) { setStopped(true); go(i + (dx < 0 ? 1 : -1)); } }, { passive: true });
-    // First slide: the video plays once and holds on its last frame. The word follows the video.
+    // First slide: the video plays once and holds on its last frame.
     const intro = heroEl.querySelector<HTMLVideoElement>("[data-intro]")!;
-    const times = JSON.parse(intro.dataset.times!) as { word: string; at: number }[];
-    const word = heroEl.querySelector<HTMLElement>("[data-word]")!;
     const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const setWord = (w: string) => {
-      if (word.textContent === w) return;
-      word.textContent = w;
-      word.classList.remove("swap");
-      void word.offsetWidth;
-      word.classList.add("swap");
-    };
-    intro.addEventListener("timeupdate", () => setWord([...times].reverse().find((t) => intro.currentTime >= t.at)!.word));
     const playIntro = () => {
       if (still) return;
       intro.currentTime = 0;
-      setWord(times[0].word);
       intro.play().catch(() => {});
     };
     const pause = heroEl.querySelector<HTMLButtonElement>("[data-hpause]")!;
