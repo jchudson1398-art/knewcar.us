@@ -7,7 +7,8 @@ Inputs, both exported read-only from the catalog on 2026-11-23:
                              characters of the photo's id.
   scripts/config-photos.txt  photo id (six characters)|path inside the public vehicle-images bucket after hero/hero_v1/
 
-Photos are saved as public/img/cfg/<photo id>.webp (560x420). Ones already saved are skipped, so this can be re-run.
+Photos are saved as public/img/cfg/<photo id>.webp (560x420) and <photo id>-lg.webp (1040x780, for sharp screens).
+Ones already saved are skipped, so this can be re-run.
 Run scripts/build-catalog.py first: this script reads src/data/catalog.json for model keys and trim spellings.
 
 usage: python3 scripts/build-configs.py [--no-download]
@@ -55,11 +56,14 @@ for l in open("scripts/configs.txt").read().strip().split("\n"):
 def fetch(job):
     photo, path = job
     dest = f"public/img/cfg/{photo}.webp"
-    if os.path.exists(dest): return None
+    large = f"public/img/cfg/{photo}-lg.webp"  # for sharp screens and phones
+    if os.path.exists(dest) and os.path.exists(large): return None
     for attempt in range(4):
         try:
             raw = urllib.request.urlopen(BASE + path, timeout=60).read()
-            Image.open(io.BytesIO(raw)).convert("RGB").resize((560, 420), Image.LANCZOS).save(dest, "WEBP", quality=78)
+            im = Image.open(io.BytesIO(raw)).convert("RGB")
+            if not os.path.exists(dest): im.resize((560, 420), Image.LANCZOS).save(dest, "WEBP", quality=78)
+            im.resize((1040, 780), Image.LANCZOS).save(large, "WEBP", quality=74)
             return None
         except Exception as e:
             err = str(e)
@@ -68,7 +72,7 @@ def fetch(job):
 
 if "--no-download" not in sys.argv:
     os.makedirs("public/img/cfg", exist_ok=True)
-    with ThreadPoolExecutor(2) as pool:
+    with ThreadPoolExecutor(3) as pool:
         failed = [r for r in pool.map(fetch, sorted(need.items())) if r]
     print(len(need), "photos listed;", len(failed), "failed")
     for f in failed[:10]: print("FAILED", f)

@@ -17,12 +17,14 @@ const fuel = oneName && car.fuel === "Hybrid available" ? (/hybrid|phev|plug-in|
 const one = config ?? trim;
 const label = one ? (one.msrp ? `${money(one.msrp)} MSRP` : "MSRP in the app") : priceLabel(car);
 const text = config ? `${carSearchText(car)} ${config.year} ${config.trim} ${config.drive ?? ""} ${config.body ?? ""}`.toLowerCase() : trim ? `${carSearchText(car)} ${trim.name.toLowerCase()} ${trim.drive.join(" ").toLowerCase()}` : carSearchText(car);
+// Configuration photos come in two sizes; sharp screens and phones pick the larger one.
+const srcset = config ? `/img/cfg/${config.img}.webp 560w, /img/cfg/${config.img}-lg.webp 1040w` : undefined;
 const image = config ? `/img/cfg/${config.img}.webp` : trim ? trimImage(car, trim) : carImage(car);
 ---
 
 <article class="tile" data-tile hidden={hide} data-kind={config ? "config" : trim ? "trim" : "model"} data-make={car.make} data-text={text} data-type={car.type ?? ""} data-fuel={fuel ?? ""} data-drive={config?.drive ?? ""} data-price={price ?? ""} data-name-sort={`${car.make} ${car.model} ${9999 - year} ${sub}`}>
   <a class="frame" href={carUrl(car)} aria-label={`${full}: see every configuration`}>
-    <img src={image} alt={full} width="560" height="420" loading={eager ? "eager" : "lazy"} decoding="async" />
+    <img src={image} srcset={srcset} sizes={srcset ? "(max-width: 420px) 100vw, (max-width: 720px) 50vw, 390px" : undefined} alt={full} width="560" height="420" loading={eager ? "eager" : "lazy"} decoding="async" />
     {fuel && <span class="fuel">{fuel}</span>}
   </a>
   <div class="info">

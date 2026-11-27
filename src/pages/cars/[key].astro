@@ -58,7 +58,7 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
       <ul>
         {mine.filter((c) => c.year === year).map((c) => (
           <li>
-            <img src={`/img/cfg/${c.img}.webp`} alt={`${year} ${car.make} ${car.model} ${c.trim}${c.drive ? `, ${c.drive}` : ""}${c.body ? `, ${c.body}` : ""}`} width="560" height="420" loading="lazy" />
+            <img src={`/img/cfg/${c.img}.webp`} srcset={`/img/cfg/${c.img}.webp 560w, /img/cfg/${c.img}-lg.webp 1040w`} sizes="(max-width: 420px) 100vw, (max-width: 720px) 50vw, 390px" alt={`${year} ${car.make} ${car.model} ${c.trim}${c.drive ? `, ${c.drive}` : ""}${c.body ? `, ${c.body}` : ""}`} width="560" height="420" loading="lazy" />
             <div class="tn"><strong>{c.trim}</strong><span class="tp">{c.msrp ? `${money(c.msrp)} MSRP` : "MSRP in the app"}</span></div>
             <span class="drive">
               {c.drive && <i>{c.drive}</i>}
