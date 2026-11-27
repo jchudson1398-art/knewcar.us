@@ -5,9 +5,9 @@ import SearchBar from "../components/SearchBar.astro";
 import { CATALOG, CONFIGS } from "../lib/catalog";
 import { APP_STORE_URL, WEB_PLAN } from "../site";
 
-// The home grid shows every configuration by default: four rows of four, with "Show more" for four more rows at a time.
+// The home grid shows every configuration by default: five rows, with "Show more" for five more rows at a time.
 // A toggle switches it to one card per model. The order is reshuffled in the browser on every visit.
-const SHOW = 16;
+const SHOW = 20;
 const rank = (k: string) => [...k].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) % 9973, 7);
 const mixed = [...CATALOG].sort((a, b) => rank(a.key) - rank(b.key));
 const configPool = [...CONFIGS].sort((a, b) => rank(a.config.img + a.config.year) - rank(b.config.img + b.config.year)).slice(0, 96);
@@ -228,7 +228,7 @@ const steps = [
   .list-head h2 { font-size: clamp(26px, 3vw, 34px); }
   .tally { margin: 6px 0 0; color: var(--sub); font-size: 15px; }
   .list-head .btn { height: 48px; border-radius: 999px; }
-  .car-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 22px 16px; }
+  .car-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 22px 16px; }
   .brands { display: flex; flex-wrap: wrap; gap: 8px; }
   .brand { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(232, 243, 238, 0.22); color: var(--text); font-size: 15px; font-weight: 600; }
   .brand:hover { border-color: rgba(92, 235, 196, 0.6); text-decoration: none; }
@@ -370,8 +370,8 @@ const steps = [
   //    at a time.
   const grid = document.querySelector<HTMLElement>("[data-home-grid]");
   if (grid) {
-    // Four rows at a time, however many cards fit across the screen.
-    const perPage = () => getComputedStyle(grid).gridTemplateColumns.split(" ").length * 4;
+    // Five rows at a time, however many cards fit across the screen.
+    const perPage = () => getComputedStyle(grid).gridTemplateColumns.split(" ").length * 5;
     let rows = 1;
     const more = document.querySelector<HTMLButtonElement>("[data-more]")!;
     const views = [...document.querySelectorAll<HTMLButtonElement>("[data-view]")];
