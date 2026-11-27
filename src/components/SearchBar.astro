@@ -1,28 +1,43 @@
 ---
-// The search bar that sits right above a car grid. Submitting it opens /explore with the results loaded.
+// The search panel that sits right above a car grid: what to look for and the most to spend. Submitting it opens
+// /explore with the results loaded.
 interface Props { value?: string; id?: string }
 const { value = "", id = "car-search" } = Astro.props;
+const CAPS = [25000, 30000, 40000, 50000, 60000, 80000];
 ---
 
 <form class="search" role="search" action="/explore" method="get" data-search>
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
-  <label class="sr" for={id}>Search cars</label>
-  <input id={id} type="search" name="q" value={value} placeholder="Search make, model or type, like “truck” or “hybrid SUV”" autocomplete="off" enterkeyhint="search" />
+  <div class="field what">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+    <label class="sr" for={id}>Search cars</label>
+    <input id={id} type="search" name="q" value={value} placeholder="Search by make, model or trim" autocomplete="off" enterkeyhint="search" />
+  </div>
+  <label class="field cap">
+    <span>Maximum MSRP</span>
+    <select name="max" data-max>
+      <option value="">Any price</option>
+      {CAPS.map((n) => <option value={n}>Up to ${n.toLocaleString("en-US")}</option>)}
+    </select>
+  </label>
   <button type="submit" class="btn btn-primary">Search</button>
 </form>
 
 <style>
   .search {
-    display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 8px 8px 22px; border-radius: 999px;
-    border: 1px solid rgba(92, 235, 196, 0.4); background: rgba(12, 38, 32, 0.9); color: var(--mint);
-    box-shadow: 0 0 0 1px rgba(92, 235, 196, 0.25), 0 0 40px rgba(92, 235, 196, 0.16), 0 24px 60px rgba(0, 0, 0, 0.45);
+    display: grid; grid-template-columns: minmax(0, 1fr) 220px auto; gap: 12px; width: 100%; padding: 12px; border-radius: 16px;
+    background: rgba(12, 38, 32, 0.9); border: 1px solid rgba(160, 230, 205, 0.16);
   }
-  .search:focus-within { box-shadow: 0 0 0 2px var(--mint), 0 0 50px rgba(92, 235, 196, 0.3), 0 24px 60px rgba(0, 0, 0, 0.45); }
-  .search svg { flex: none; }
-  input { flex: 1; min-width: 0; height: 48px; border: 0; background: transparent; color: var(--text); font: 500 17px var(--font); }
-  input::placeholder { color: var(--faint); }
-  input:focus { outline: none; }
-  .btn { height: 50px; border-radius: 999px; flex: none; }
+  .field { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 14px; border-radius: 10px; border: 1px solid rgba(232, 243, 238, 0.28); background: rgba(4, 20, 15, 0.6); color: var(--text); }
+  .field:focus-within { border-color: var(--mint); box-shadow: 0 0 0 1px var(--mint); }
+  .what svg { flex: none; color: var(--sub); }
+  input { flex: 1; min-width: 0; height: 50px; border: 0; background: transparent; color: var(--text); font: 500 16px var(--font); }
+  input::placeholder { color: var(--sub); }
+  input:focus, select:focus { outline: none; }
+  .cap { flex-direction: column; align-items: stretch; justify-content: center; gap: 0; cursor: pointer; }
+  .cap span { font-size: 11px; font-weight: 600; color: var(--sub); line-height: 1.2; }
+  select { width: 100%; border: 0; background: transparent; color: var(--text); font: 600 16px var(--font); padding: 0; margin-left: -4px; cursor: pointer; }
+  select option { color: #04140f; }
+  .btn { min-height: 52px; border-radius: 10px; padding: 0 28px; }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-  @media (max-width: 520px) { .search { padding-left: 16px; } .btn { padding: 0 18px; } }
+  @media (max-width: 720px) { .search { grid-template-columns: minmax(0, 1fr) auto; } .what { grid-column: 1 / -1; } }
 </style>

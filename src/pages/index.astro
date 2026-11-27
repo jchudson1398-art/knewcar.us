@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import CarTile from "../components/CarTile.astro";
 import SearchBar from "../components/SearchBar.astro";
-import { CATALOG, CONFIGS, carImage, carUrl, money, priceLabel } from "../lib/catalog";
+import { CATALOG, CONFIGS } from "../lib/catalog";
 import { APP_STORE_URL, WEB_PLAN } from "../site";
 
 // The home grid shows every configuration by default: four rows of four, with "Show more" for four more rows at a time.
@@ -13,9 +13,13 @@ const mixed = [...CATALOG].sort((a, b) => rank(a.key) - rank(b.key));
 const configPool = [...CONFIGS].sort((a, b) => rank(a.config.img + a.config.year) - rank(b.config.img + b.config.year)).slice(0, 64);
 const modelPool = mixed.slice(0, 32);
 const makes = [...new Set(CATALOG.map((c) => c.make))].sort();
-// The car on the first slide.
-const heroCar = CATALOG.find((c) => c.key === "toyota-rav4")!;
-const heroTrim = heroCar.trims.find((t) => t.name === "Limited")!;
+// Hero slides: one large photo each, with the message over it.
+const slides = [
+  { img: "rav4", car: "2026 Toyota RAV4 Limited", h: ["All your new car options,", "One easy place."], lead: `${CONFIGS.length.toLocaleString("en-US")} configurations from ${new Set(CATALOG.map((c) => c.make)).size} brands. Free to browse.`, cta: "Explore your options", href: "/explore" },
+  { img: "telluride", car: "2027 Kia Telluride SX Prestige", h: ["Every trim.", "Real MSRP."], lead: "See every trim of every model with its manufacturer price, and search by what you want to spend.", cta: "Search by price", href: "/explore?sort=low" },
+  { img: "cx-50", car: "2026 Mazda CX-50 2.5 Turbo", h: ["Know the real cost", "in your state."], lead: `Upgrade to save cars, compare them side by side, and estimate tax, fees and your payment. ${WEB_PLAN.monthly} a month or ${WEB_PLAN.yearly} a year.`, cta: "See the upgrade", href: "/upgrade" },
+  { img: "f-150", car: "2026 Ford F-150 Lariat", h: ["Live in Texas?", "Get the app."], lead: "Browse offers, incentives, special rates and rebates before making your final decision. Find options you may not have thought you could afford.", cta: "Download on the App Store", href: APP_STORE_URL },
+];
 // Three priced models of different types for the MSRP slide.
 const spotlight = ["Truck", "SUV", "Sedan"].map((t) => mixed.find((c) => c.type === t && c.msrpFrom)!).filter(Boolean);
 const brands = new Set(CATALOG.map((c) => c.make)).size;
@@ -35,80 +39,24 @@ const steps = [
 <Base title="KnewCar" description={`All your new car options in one easy place. Browse ${CATALOG.length} new models from ${brands} brands, then get the KnewCar app to see offers, incentives and special rates for your situation.`}>
   <!-- Hero: a slideshow. The shopping tool starts a short scroll below it. -->
   <section class="hero" aria-roledescription="carousel" aria-label="What KnewCar does" data-hero>
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="wrap">
-      <div class="slides">
-        <div class="slide" data-slide aria-hidden="false">
-          <div class="copy">
-            <h1>All your new car options, <span class="grad">One easy place.</span></h1>
-            <p class="lead">{CATALOG.length} new models from {brands} brands. Free to browse.</p>
-            <div class="hero-cta">
-              <a class="btn btn-primary" href="#cars">Start shopping</a>
-              <a class="btn btn-ghost" href="/explore">Explore all your options</a>
-            </div>
-          </div>
-          <a class="hero-car" href={carUrl(heroCar)}>
-            <img src="/img/hero/toyota-rav4-limited.webp" alt={`${heroCar.year} ${heroCar.make} ${heroCar.model} ${heroTrim.name}`} width="1200" height="900" loading="eager" />
-            <span class="hero-cap"><strong>{heroCar.year} {heroCar.make} {heroCar.model} {heroTrim.name}</strong><span>{heroTrim.msrp ? `${money(heroTrim.msrp)} MSRP` : priceLabel(heroCar)} · {heroCar.trims.length} trims</span></span>
-          </a>
-        </div>
-
-        <div class="slide" data-slide aria-hidden="true">
-          <div class="copy">
-            <h2 class="h">Every trim. <span class="grad">Real MSRP.</span></h2>
-            <p class="lead">See every trim of every model with its manufacturer price, and search by what you want to spend.</p>
-            <div class="hero-cta"><a class="btn btn-primary" href="/explore?sort=low">Search by price</a></div>
-          </div>
-          <div class="stack" aria-hidden="true">
-            {spotlight.map((c, i) => (
-              <div class={`pcard p${i}`}>
-                <img src={carImage(c)} alt="" width="560" height="420" loading="lazy" />
-                <div><strong>{c.make} {c.model}</strong><span>{priceLabel(c)} · {c.trims.length} trims</span></div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div class="slide" data-slide aria-hidden="true">
-          <div class="copy">
-            <h2 class="h">Know the real cost <span class="grad">in your state.</span></h2>
-            <p class="lead">Upgrade to save cars, compare them side by side, and estimate tax, fees and your payment. {WEB_PLAN.monthly} a month or {WEB_PLAN.yearly} a year.</p>
-            <div class="hero-cta"><a class="btn btn-primary" href="/upgrade">See the upgrade</a></div>
-          </div>
-          <div class="card sample" aria-hidden="true">
-            <p class="ex">Example · Texas</p>
-            <dl>
-              <div><dt>Price with destination</dt><dd>$36,395.00</dd></div>
-              <div><dt>State tax (6.25%)</dt><dd>$1,649.69</dd></div>
-              <div><dt>Title, registration, doc fee</dt><dd>$525.00</dd></div>
-              <div class="t"><dt>Estimated out the door</dt><dd>$38,569.69</dd></div>
-            </dl>
-            <p class="ex">With a $10,000 trade-in. Fees are estimates.</p>
-          </div>
-        </div>
-
-        <div class="slide" data-slide aria-hidden="true">
-          <div class="copy">
-            <h2 class="h">Live in Texas? <span class="grad">Get the app.</span></h2>
-            <p class="lead">Browse offers, incentives, special rates and rebates before making your final decision. Find options you may not have thought you could afford.</p>
-            <div class="hero-cta"><a class="btn btn-primary" href={APP_STORE_URL}>Download on the App Store</a></div>
-          </div>
-          <div class="phones" aria-hidden="true">
-            <img class="ph back" src="/img/app/swipe.webp" alt="" width="540" height="1105" loading="lazy" />
-            <img class="ph front" src="/img/app/browse.webp" alt="" width="540" height="1105" loading="lazy" />
-          </div>
+    {slides.map((s, i) => (
+      <div class="slide" data-slide aria-hidden={i === 0 ? "false" : "true"}>
+        <img class="bg" src={`/img/hero/${s.img}.webp`} alt={s.car} width="1448" height="1086" loading={i === 0 ? "eager" : "lazy"} />
+        <div class="shade" aria-hidden="true"></div>
+        <div class="wrap copy">
+          {i === 0 ? <h1>{s.h[0]} <span class="grad">{s.h[1]}</span></h1> : <h2 class="h">{s.h[0]} <span class="grad">{s.h[1]}</span></h2>}
+          <p class="lead">{s.lead}</p>
+          <a class="btn btn-primary" href={s.href}>{s.cta} <span aria-hidden="true">→</span></a>
         </div>
       </div>
-
-      <div class="hero-nav">
-        <div class="pips" role="group" aria-label="Choose a slide">
-          {[0, 1, 2, 3].map((i) => <button type="button" data-pip={i} aria-label={`Slide ${i + 1} of 4`} aria-current={i === 0 ? "true" : "false"}></button>)}
-        </div>
-        <div class="arrows">
-          <button type="button" aria-label="Previous slide" data-hprev>‹</button>
-          <button type="button" class="next" aria-label="Next slide" data-hnext>›</button>
-        </div>
+    ))}
+    <button type="button" class="arrow prev" aria-label="Previous slide" data-hprev>‹</button>
+    <button type="button" class="arrow next" aria-label="Next slide" data-hnext>›</button>
+    <div class="hero-nav">
+      <div class="pips" role="group" aria-label="Choose a slide">
+        {slides.map((_, i) => <button type="button" data-pip={i} aria-label={`Slide ${i + 1} of ${slides.length}`} aria-current={i === 0 ? "true" : "false"}></button>)}
       </div>
+      <button type="button" class="pause" data-hpause aria-pressed="false" aria-label="Pause the slideshow"><span aria-hidden="true"></span></button>
     </div>
   </section>
 
@@ -123,7 +71,7 @@ const steps = [
         <h2>Available <span class="mint">now</span></h2>
         <p class="tally">{CONFIGS.length.toLocaleString("en-US")} configurations across {CATALOG.length} models. MSRP excludes destination, taxes and fees.</p>
       </div>
-      <label class="only-toggle"><input type="checkbox" role="switch" data-models-only /><span class="rail" aria-hidden="true"></span>Models only</label>
+      <div class="seg" role="group" aria-label="Show"><button type="button" data-view="config" aria-pressed="true">Configurations</button><button type="button" data-view="model" aria-pressed="false">Models</button></div>
     </div>
     <div class="car-grid" data-home-grid>
       {configPool.map(({ car, config }, i) => <CarTile car={car} config={config} eager={i < 4} hide={i >= SHOW} />)}
@@ -204,51 +152,31 @@ const steps = [
 <style>
   .grad { background: linear-gradient(90deg, #5cebc4 0%, #a6f5df 55%, #ffc45c 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-  /* Hero slideshow */
-  .hero { position: relative; padding: 116px 0 28px; overflow: hidden; }
-  .hero-bg {
-    position: absolute; inset: 0; pointer-events: none;
-    background:
-      radial-gradient(900px 480px at 50% -10%, rgba(92, 235, 196, 0.16), transparent 70%),
-      linear-gradient(rgba(160, 230, 205, 0.05) 1px, transparent 1px) 0 0 / 56px 56px,
-      linear-gradient(90deg, rgba(160, 230, 205, 0.05) 1px, transparent 1px) 0 0 / 56px 56px;
-    -webkit-mask-image: radial-gradient(ellipse 85% 80% at 50% 0%, #000 35%, transparent 100%);
-    mask-image: radial-gradient(ellipse 85% 80% at 50% 0%, #000 35%, transparent 100%);
-  }
-  .hero .wrap { position: relative; }
-  /* Slides share one grid cell, so the hero keeps the height of the tallest slide and nothing jumps. */
-  .slides { display: grid; }
-  .slide { grid-area: 1 / 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: center; opacity: 0; visibility: hidden; transform: translateX(24px); transition: opacity .6s ease, transform .6s ease, visibility 0s .6s; }
-  .slide[aria-hidden="false"] { opacity: 1; visibility: visible; transform: none; transition: opacity .6s ease, transform .6s ease; }
-  .hero h1, .hero .h { font-size: clamp(40px, 5.4vw, 68px); line-height: 1.02; letter-spacing: -0.04em; font-weight: 800; }
+  /* Hero: a full-width photo slideshow with the message over each photo */
+  .hero { position: relative; margin-top: 72px; height: clamp(380px, 46vw, 520px); overflow: hidden; background: #04140f; }
+  .slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .7s ease, visibility 0s .7s; }
+  .slide[aria-hidden="false"] { opacity: 1; visibility: visible; transition: opacity .7s ease; }
+  /* The photo fills the right two thirds and fades into the dark ground on the left, so the whole car stays in view. */
+  .bg { position: absolute; top: 0; right: 0; width: 68%; height: 100%; object-fit: cover; object-position: center 60%; }
+  .shade { position: absolute; inset: 0; background: linear-gradient(90deg, #04140f 0%, #04140f 32%, rgba(4, 20, 15, 0.55) 46%, rgba(4, 20, 15, 0) 62%), linear-gradient(0deg, rgba(4, 20, 15, 0.75) 0%, rgba(4, 20, 15, 0) 24%); }
+  .copy { position: relative; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 14px; padding-bottom: 28px; }
+  .hero h1, .hero .h { font-size: clamp(34px, 4.6vw, 60px); line-height: 1.04; letter-spacing: -0.035em; font-weight: 800; max-width: 12.5em; text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5); }
   .hero h1 .grad, .hero .h .grad { display: block; }
-  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-  .hero-nav { display: flex; align-items: center; justify-content: space-between; margin-top: 22px; }
-  .pips { display: flex; gap: 4px; }
-  .pips button { width: 44px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
-  .pips button::before { content: ""; width: 10px; height: 10px; border-radius: 999px; background: rgba(232, 243, 238, 0.3); transition: width .3s ease, background .3s ease; }
-  .pips button[aria-current="true"]::before { width: 30px; background: var(--mint); }
-  .arrows { display: flex; gap: 8px; }
-  .arrows button { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(160, 230, 205, 0.3); background: rgba(4, 20, 15, 0.7); color: var(--text); font-size: 24px; line-height: 1; cursor: pointer; }
-  .arrows .next { background: var(--mint); border-color: var(--mint); color: var(--mint-ink); }
-  .stack { display: grid; grid-template-columns: 1.35fr 1fr; grid-template-rows: 1fr 1fr; gap: 14px; height: 380px; }
-  .pcard { display: flex; flex-direction: column; min-height: 0; border-radius: 18px; overflow: hidden; background: #0b221c; border: 1px solid rgba(160, 230, 205, 0.2); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5); }
-  .pcard img { width: 100%; flex: 1; min-height: 0; height: auto; object-fit: cover; }
-  .pcard div { padding: 10px 14px; display: grid; gap: 2px; }
-  .pcard strong { font-size: 15px; }
-  .pcard span { font-size: 13px; color: var(--mint); font-weight: 600; }
-  .p0 { grid-row: 1 / 3; border-color: rgba(92, 235, 196, 0.5); }
-  .sample { max-width: 460px; justify-self: center; width: 100%; box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), 0 0 70px rgba(92, 235, 196, 0.12); }
-  .sample dl { margin: 6px 0; }
-  .sample dl div { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--edge); font-size: 16px; }
-  .sample dt { color: var(--sub); }
-  .sample dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
-  .sample .t dt, .sample .t dd { color: var(--text); font-weight: 800; font-size: 18px; }
-  .sample .ex { margin: 0; font-size: 13px; color: var(--faint); }
-  .phones { position: relative; height: 400px; }
-  .ph { position: absolute; width: 190px; height: auto; border-radius: 26px; border: 6px solid #070d0b; outline: 1px solid rgba(160, 230, 205, 0.25); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55); }
-  .ph.back { left: 18%; top: 20px; transform: rotate(-6deg); opacity: .85; }
-  .ph.front { right: 18%; top: 0; }
+  .hero .lead { max-width: 30em; margin: 0; font-size: clamp(16px, 1.5vw, 19px); color: #e8f3ee; text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6); }
+  .hero .btn { margin-top: 6px; }
+  .arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(232, 243, 238, 0.35); background: rgba(4, 20, 15, 0.7); color: var(--text); font-size: 24px; line-height: 1; cursor: pointer; z-index: 2; }
+  .arrow:hover { border-color: var(--mint); color: var(--mint); }
+  .arrow.prev { left: 16px; }
+  .arrow.next { right: 16px; }
+  .hero-nav { position: absolute; left: 0; right: 0; bottom: 6px; display: flex; align-items: center; justify-content: center; gap: 6px; z-index: 2; }
+  .pips { display: flex; }
+  .pips button { width: 30px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+  .pips button::before { content: ""; width: 9px; height: 9px; border-radius: 999px; background: rgba(232, 243, 238, 0.45); transition: background .3s ease, transform .3s ease; }
+  .pips button[aria-current="true"]::before { background: var(--mint); transform: scale(1.25); }
+  .pause { width: 44px; height: 44px; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+  .pause span { width: 12px; height: 14px; border-left: 4px solid #fff; border-right: 4px solid #fff; }
+  .pause[aria-pressed="true"] span { width: 0; height: 0; border: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 13px solid #fff; }
+  @media (max-width: 1240px) { .copy { padding-left: 72px; padding-right: 72px; } }
 
   /* Browser window */
   .window { border-radius: 16px; overflow: hidden; border: 1px solid rgba(160, 230, 205, 0.22); background: var(--ground); box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6), 0 0 80px rgba(92, 235, 196, 0.12); }
@@ -276,12 +204,12 @@ const steps = [
   @keyframes cursor { 25% { transform: translate(-160px, 60px); } 45% { transform: translate(-160px, 60px) scale(.85); } 50% { transform: translate(-160px, 60px); } 75% { transform: translate(40px, 140px); } }
 
   /* Listings */
-  .listings { display: flex; flex-direction: column; gap: 22px; padding-top: 8px; padding-bottom: 40px; scroll-margin-top: 90px; }
+  .listings { display: flex; flex-direction: column; gap: 22px; padding-top: 24px; padding-bottom: 40px; scroll-margin-top: 90px; }
   .list-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
   .list-head h2 { font-size: clamp(26px, 3vw, 34px); }
   .tally { margin: 6px 0 0; color: var(--sub); font-size: 15px; }
   .list-head .btn { height: 48px; border-radius: 999px; }
-  .car-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 20px; }
+  .car-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px 16px; }
   .brands { display: flex; flex-wrap: wrap; gap: 8px; }
   .brand { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(232, 243, 238, 0.22); color: var(--text); font-size: 15px; font-weight: 600; }
   .brand:hover { border-color: rgba(92, 235, 196, 0.6); text-decoration: none; }
@@ -293,6 +221,9 @@ const steps = [
   .only-toggle input:checked + .rail { background: var(--mint); }
   .only-toggle input:checked + .rail::after { transform: translateX(20px); }
   .only-toggle input:focus-visible + .rail { outline: 2px solid var(--mint); outline-offset: 3px; }
+  .seg { display: inline-flex; padding: 4px; border-radius: 12px; border: 1px solid rgba(232, 243, 238, 0.28); background: rgba(4, 20, 15, 0.6); }
+  .seg button { min-height: 40px; padding: 0 22px; border: 0; border-radius: 9px; background: transparent; color: var(--text); font: 600 15px var(--font); cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--mint); color: var(--mint-ink); }
   .more { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
   .more [hidden] { display: none; }
   .hero-car { position: relative; display: block; border-radius: 24px; overflow: hidden; border: 1px solid rgba(160, 230, 205, 0.2); box-shadow: 0 40px 90px rgba(0, 0, 0, 0.55), 0 0 80px rgba(92, 235, 196, 0.12); }
@@ -338,35 +269,22 @@ const steps = [
 
   @media (max-width: 1000px) { .car-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (max-width: 900px) {
-    .hero { padding-top: 96px; }
-    .slide, .app-grid { grid-template-columns: 1fr; gap: 28px; }
+    .app-grid { grid-template-columns: 1fr; gap: 28px; }
     .viewport { height: 260px; }
     .stack { height: 300px; }
     .phones { height: 300px; }
     .ph { width: 140px; }
   }
   @media (max-width: 640px) {
-    .hero { padding: 84px 0 12px; }
-    .slide { gap: 18px; align-items: start; }
-    .hero h1, .hero .h { font-size: 36px; }
-    .hero .lead { font-size: 16px; margin-top: 10px; }
-    .hero-cta { margin-top: 16px; gap: 8px; }
-    .hero-cta .btn { min-height: 44px; padding: 0 16px; font-size: 15px; }
-    .hero-nav { margin-top: 8px; }
-    .viewport { height: 170px; }
-    .hero-car img { height: 220px; }
-    .hero-cap { left: 10px; bottom: 10px; padding: 8px 12px; }
-    .hero-cap strong { font-size: 14px; }
-    .stack { height: 220px; gap: 8px; }
-    .pcard div { padding: 6px 10px; }
-    .pcard strong { font-size: 13px; }
-    .pcard span { font-size: 12px; }
-    .phones { height: 225px; overflow: hidden; }
-    .ph { width: 120px; border-radius: 18px; border-width: 4px; }
-    .sample { padding: 12px 16px; }
-    .sample dl div { padding: 7px 0; font-size: 14px; }
-    .sample .t dt, .sample .t dd { font-size: 15px; }
-    .copy-a, .copy-b { min-height: 0; }
+    .hero { margin-top: 64px; height: 440px; }
+    .shade { background: linear-gradient(0deg, rgba(4, 20, 15, 0.95) 0%, rgba(4, 20, 15, 0.82) 46%, rgba(4, 20, 15, 0.1) 78%); }
+    .bg { width: 100%; height: 62%; object-position: center 55%; }
+    .copy { justify-content: flex-end; padding: 0 16px 52px; gap: 8px; }
+    .hero h1, .hero .h { font-size: 30px; }
+    .hero .lead { font-size: 15px; }
+    .arrow { top: 28%; width: 40px; height: 40px; }
+    .arrow.prev { left: 8px; }
+    .arrow.next { right: 8px; }
   }
   @media (max-width: 720px) { .car-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px; } }
   @media (max-width: 420px) { .car-grid { grid-template-columns: 1fr; } .viewport.tall { height: 560px; } }
@@ -387,16 +305,19 @@ const steps = [
       slides.forEach((s, k) => { s.setAttribute("aria-hidden", String(k !== i)); s.toggleAttribute("inert", k !== i); });
       pips.forEach((b, k) => b.setAttribute("aria-current", String(k === i)));
     };
-    pips.forEach((b, k) => b.addEventListener("click", () => { stopped = true; go(k); }));
-    heroEl.querySelector("[data-hprev]")!.addEventListener("click", () => { stopped = true; go(i - 1); });
-    heroEl.querySelector("[data-hnext]")!.addEventListener("click", () => { stopped = true; go(i + 1); });
+    pips.forEach((b, k) => b.addEventListener("click", () => { setStopped(true); go(k); }));
+    heroEl.querySelector("[data-hprev]")!.addEventListener("click", () => { setStopped(true); go(i - 1); });
+    heroEl.querySelector("[data-hnext]")!.addEventListener("click", () => { setStopped(true); go(i + 1); });
     heroEl.addEventListener("pointerenter", () => (hold = true));
     heroEl.addEventListener("pointerleave", () => (hold = false));
     heroEl.addEventListener("focusin", () => (hold = true));
     heroEl.addEventListener("focusout", () => (hold = false));
     let x0 = 0;
     heroEl.addEventListener("touchstart", (e) => (x0 = e.touches[0].clientX), { passive: true });
-    heroEl.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) { stopped = true; go(i + (dx < 0 ? 1 : -1)); } }, { passive: true });
+    heroEl.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) { setStopped(true); go(i + (dx < 0 ? 1 : -1)); } }, { passive: true });
+    const pause = heroEl.querySelector<HTMLButtonElement>("[data-hpause]")!;
+    const setStopped = (v: boolean) => { stopped = v; pause.setAttribute("aria-pressed", String(v)); pause.setAttribute("aria-label", v ? "Play the slideshow" : "Pause the slideshow"); };
+    pause.addEventListener("click", () => setStopped(!stopped));
     go(0);
     if (!matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => { if (!hold && !stopped && !document.hidden) go(i + 1); }, 6000);
   }
@@ -407,7 +328,8 @@ const steps = [
   if (grid) {
     const PAGE = 16;
     const more = document.querySelector<HTMLButtonElement>("[data-more]")!;
-    const toggle = document.querySelector<HTMLInputElement>("[data-models-only]")!;
+    const views = [...document.querySelectorAll<HTMLButtonElement>("[data-view]")];
+    let kind = "config";
     const pools: Record<string, HTMLElement[]> = { config: [], model: [] };
     grid.querySelectorAll<HTMLElement>("[data-tile]").forEach((t) => pools[t.dataset.kind!].push(t));
     for (const list of Object.values(pools)) {
@@ -419,12 +341,11 @@ const steps = [
     }
     let shown = PAGE;
     const draw = () => {
-      const kind = toggle.checked ? "model" : "config";
       for (const [k, list] of Object.entries(pools)) list.forEach((t, i) => (t.hidden = k !== kind || i >= shown));
       more.hidden = shown >= pools[kind].length;
     };
     more.addEventListener("click", () => { shown += PAGE; draw(); });
-    toggle.addEventListener("change", () => { shown = PAGE; draw(); });
+    views.forEach((v) => v.addEventListener("click", () => { kind = v.dataset.view!; views.forEach((o) => o.setAttribute("aria-pressed", String(o === v))); shown = PAGE; draw(); }));
     draw();
   }
 

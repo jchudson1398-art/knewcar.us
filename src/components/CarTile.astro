@@ -6,8 +6,10 @@ interface Props { car: Car; trim?: Car["trims"][number]; config?: Config; eager?
 const { car, trim, config, eager = false, hide = false } = Astro.props;
 const year = config?.year ?? car.year;
 const detail = config ? [config.drive, config.body].filter(Boolean).join(" · ") : "";
-const title = config ? `${car.model} ${config.trim}` : trim ? `${car.model} ${trim.name}` : car.model;
-const full = config ? `${year} ${car.make} ${title}${detail ? `, ${detail}` : ""}` : trim ? `${carName(car)} ${trim.name}` : carName(car);
+const title = `${year} ${car.make} ${car.model}`;
+// The line under the name: the trim and build for one configuration, or how many trims for a model.
+const sub = config ? [config.trim, detail].filter(Boolean).join(" · ") : trim ? trim.name : `${car.trims.length} ${car.trims.length === 1 ? "trim" : "trims"}`;
+const full = config || trim ? `${title} ${sub}` : title;
 const price = config ? config.msrp : trim ? trim.msrp : car.msrpFrom;
 // A model marked "Hybrid available" has hybrid and non-hybrid builds: a single build says which it is by its trim name.
 const oneName = config?.trim ?? trim?.name;
@@ -18,53 +20,45 @@ const text = config ? `${carSearchText(car)} ${config.year} ${config.trim} ${con
 const image = config ? `/img/cfg/${config.img}.webp` : trim ? trimImage(car, trim) : carImage(car);
 ---
 
-<article class="tile" data-tile hidden={hide} data-kind={config ? "config" : trim ? "trim" : "model"} data-make={car.make} data-text={text} data-type={car.type ?? ""} data-fuel={fuel ?? ""} data-price={price ?? ""} data-name-sort={`${car.make} ${title}`}>
-  <a class="frame" href={carUrl(car)} aria-label={`${full}: see all trims`}>
+<article class="tile" data-tile hidden={hide} data-kind={config ? "config" : trim ? "trim" : "model"} data-make={car.make} data-text={text} data-type={car.type ?? ""} data-fuel={fuel ?? ""} data-drive={config?.drive ?? ""} data-price={price ?? ""} data-name-sort={`${car.make} ${car.model} ${9999 - year} ${sub}`}>
+  <a class="frame" href={carUrl(car)} aria-label={`${full}: see every configuration`}>
     <img src={image} alt={full} width="560" height="420" loading={eager ? "eager" : "lazy"} decoding="async" />
-    <span class="tag" hidden={!car.type}>{car.type}</span>
-    <span class="fuel" hidden={!fuel}>{fuel}</span>
-    <span class="open" aria-hidden="true">See all trims</span>
+    {fuel && <span class="fuel">{fuel}</span>}
   </a>
-  <button type="button" class="save" data-save={car.key} aria-pressed="false" aria-label={`Save ${carName(car)}`}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg></button>
   <div class="info">
-    <p class="meta">{car.make} · {year}</p>
-    <h3><a href={carUrl(car)}>{title}</a></h3>
-    {detail && <p class="detail">{detail}</p>}
-    <p class="price">{label}</p>
+    <div class="row">
+      <h3><a href={carUrl(car)}>{title}</a></h3>
+      <button type="button" class="save" data-save={car.key} aria-pressed="false" aria-label={`Save ${carName(car)}`}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg></button>
+    </div>
+    <p class="sub">{sub}</p>
+    <div class="row">
+      <p class="price">{label}</p>
+      <button type="button" class="cmp" data-compare={car.key} data-compare-short aria-pressed="false">Compare</button>
+    </div>
   </div>
 </article>
 
 <style>
-  .tile { position: relative; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .tile { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
   .tile[hidden] { display: none; }
-  .frame {
-    position: relative; display: block; padding: 22px 20px; border-radius: 20px; overflow: hidden;
-    background: #0b221c; border: 1px solid rgba(160, 230, 205, 0.1);
-    transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
-  }
-  .frame img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; box-shadow: 0 18px 36px rgba(0, 0, 0, 0.45); transition: transform .5s ease; }
-  .frame:hover, .frame:focus-visible { border-color: rgba(92, 235, 196, 0.55); box-shadow: 0 0 0 1px rgba(92, 235, 196, 0.25), 0 24px 60px rgba(92, 235, 196, 0.14); transform: translateY(-3px); text-decoration: none; }
-  .frame:hover img { transform: scale(1.03); }
-  .tag, .fuel {
-    position: absolute; top: 10px; font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 999px;
-    background: rgba(4, 20, 15, 0.78); border: 1px solid rgba(160, 230, 205, 0.18); color: rgba(232, 243, 238, 0.92);
-  }
-  .tag { left: 12px; }
-  .fuel { right: 12px; color: var(--mint); border-color: rgba(92, 235, 196, 0.35); }
-  .open {
-    position: absolute; left: 50%; bottom: 32px; transform: translate(-50%, 8px); opacity: 0; white-space: nowrap;
-    font-size: 13px; font-weight: 700; padding: 10px 16px; border-radius: 999px; background: var(--mint); color: var(--mint-ink);
-    transition: opacity .2s ease, transform .2s ease;
-  }
-  .frame:hover .open, .frame:focus-visible .open { opacity: 1; transform: translate(-50%, 0); }
-  .info { padding: 0 4px; }
-  .meta { margin: 0; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+  .frame { position: relative; display: block; border-radius: 12px; overflow: hidden; background: #0b221c; border: 1px solid rgba(160, 230, 205, 0.12); transition: border-color .2s ease, box-shadow .2s ease; }
+  .frame img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: center 58%; transition: transform .5s ease; }
+  .frame:hover, .frame:focus-visible { border-color: rgba(92, 235, 196, 0.6); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45); text-decoration: none; }
+  .frame:hover img { transform: scale(1.04); }
+  .fuel { position: absolute; left: 8px; top: 8px; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 999px; background: rgba(4, 20, 15, 0.82); color: var(--mint); }
+  .info { padding: 0 4px; display: grid; gap: 1px; }
+  .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-width: 0; }
+  h3 { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; min-width: 0; overflow-wrap: anywhere; }
   h3 a { color: var(--text); }
-  .price { margin: 4px 0 0; font-size: 15px; font-weight: 700; }
-  .detail { margin: 2px 0 0; font-size: 13px; color: var(--sub); }
-  .save { position: absolute; right: 10px; top: 54px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(160, 230, 205, 0.25); background: rgba(4, 20, 15, 0.8); color: var(--text); display: grid; place-items: center; cursor: pointer; }
-  .save[aria-pressed="true"] { background: var(--mint); color: var(--mint-ink); border-color: var(--mint); }
+  .sub { margin: 0; font-size: 13px; color: var(--sub); overflow-wrap: anywhere; }
+  .price { margin: 0; font-size: 15px; font-weight: 800; white-space: nowrap; }
+  .save, .cmp { flex: none; border: 0; background: none; color: var(--text); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+  .save { width: 44px; height: 44px; margin: -6px -12px -6px 0; }
+  .save:hover, .cmp:hover { color: var(--mint); }
+  .save[aria-pressed="true"] { color: var(--mint); }
   .save[aria-pressed="true"] svg { fill: currentColor; }
-  h3 { margin-top: 4px; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; overflow-wrap: anywhere; }
-  @media (prefers-reduced-motion: reduce) { .frame, .frame img, .open { transition: none; } }
+  .cmp { min-height: 44px; margin: -4px 0; padding: 0 0 0 8px; font: 600 12px var(--font); color: var(--sub); gap: 5px; white-space: nowrap; }
+  .cmp::before { content: "\21C6"; font-size: 13px; }
+  .cmp[aria-pressed="true"] { color: var(--mint); }
+  @media (prefers-reduced-motion: reduce) { .frame, .frame img { transition: none; } }
 </style>

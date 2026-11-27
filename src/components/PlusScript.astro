@@ -15,7 +15,7 @@
     document.querySelectorAll<HTMLElement>("[data-compare]").forEach((b) => {
       const on = c.includes(b.dataset.compare ?? "");
       b.setAttribute("aria-pressed", String(on));
-      b.textContent = on ? "In compare · view" : "Add to compare";
+      b.textContent = b.hasAttribute("data-compare-short") ? (on ? "In compare" : "Compare") : on ? "In compare · view" : "Add to compare";
     });
   };
   document.addEventListener("click", (e) => {

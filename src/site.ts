@@ -31,8 +31,7 @@ export const PAYMENTS_LIVE = false;
 
 export const NAV = [
   { href: "/explore", label: "Explore" },
-  { href: "/how-it-works", label: "How it works" },
-  { href: "/upgrade", label: "Upgrade" },
-  { href: "/pricing", label: "App pricing" },
-  { href: "/how-it-works#faq", label: "FAQ" },
+  { href: "/saved", label: "Saved" },
+  { href: "/upgrade", label: "Premium" },
+  { href: "/how-it-works", label: "The app" },
 ] as const;
