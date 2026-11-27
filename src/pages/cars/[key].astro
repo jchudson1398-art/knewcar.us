@@ -22,12 +22,12 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
 
 <Base title={`${name} trims`} description={`Every ${name} trim in one place: ${car.trims.slice(0, 5).map((t) => t.name).join(", ")}${car.trims.length > 5 ? " and more" : ""}. ${configsLabel(mine.length)}.`}>
   <section class="page-head">
-    <div class="wrap">
+    <div class="wrap wide">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/explore">Explore</a> / <a href={`/explore?q=${encodeURIComponent(car.make)}`}>{car.make}</a> / {car.model}</nav>
     </div>
   </section>
 
-  <section class="wrap top">
+  <section class="wrap wide top">
     <div class="photo"><img src={carImage(car)} alt={name} width="560" height="420" /></div>
     <div class="facts">
       <p class="eyebrow">{car.make} · {car.year}</p>
@@ -53,7 +53,7 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
   </section>
 
   {years.map((year) => (
-    <section class="wrap trims">
+    <section class="wrap wide trims">
       <h2>{year} {car.model} <span class="mint">configurations</span></h2>
       <ul>
         {mine.filter((c) => c.year === year).map((c) => (
@@ -72,7 +72,7 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
   ))}
 
   {more.length > 0 && (
-    <section class="wrap moregrid">
+    <section class="wrap wide moregrid">
       <h2>More from <span class="mint">{car.make}</span></h2>
       <div class="car-grid">{more.map((c) => <CarTile car={c} />)}</div>
     </section>
@@ -82,7 +82,7 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
 <style>
   .page-head { padding-bottom: 8px; }
   .crumbs { color: var(--faint); font-size: 15px; }
-  .top { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: center; padding-top: 16px; padding-bottom: 56px; }
+  .top { display: grid; grid-template-columns: minmax(0, 640px) minmax(0, 1fr); gap: 48px; align-items: center; padding-top: 16px; padding-bottom: 56px; }
   .photo { padding: 28px; border-radius: 24px; background: #0b221c; border: 1px solid rgba(160, 230, 205, 0.12); box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5), 0 0 80px rgba(92, 235, 196, 0.08); }
   .photo img { width: 100%; height: auto; border-radius: 14px; }
   h1 { font-size: clamp(38px, 5vw, 60px); letter-spacing: -0.03em; overflow-wrap: anywhere; }
@@ -113,7 +113,7 @@ const more = related.length >= 2 ? related : CATALOG.filter((c) => c.key !== car
   .drive .alt { background: transparent; border: 1px solid rgba(160, 230, 205, 0.25); color: var(--sub); }
   .trims + .trims { padding-top: 0; }
   .moregrid { padding-bottom: 72px; }
-  .car-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 20px; }
+  .car-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 22px 16px; }
   @media (max-width: 900px) { .top { grid-template-columns: 1fr; gap: 28px; } .car-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 420px) { .car-grid { grid-template-columns: 1fr; } li { flex-wrap: wrap; } }
 </style>

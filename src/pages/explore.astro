@@ -14,14 +14,14 @@ const configs = [...CONFIGS].sort((a, b) => a.car.make.localeCompare(b.car.make)
 
 <Base title="Explore all your options" description={`Browse and search every configuration of ${cars.length} new models from ${brands} brands in one place. Trucks, SUVs, sedans, hybrids and electric cars.`}>
   <section class="page-head">
-    <div class="wrap">
+    <div class="wrap wide">
       <p class="eyebrow">{configs.length.toLocaleString("en-US")} configurations · {cars.length} models · {brands} brands</p>
       <h1>Explore <span class="mint">your options.</span></h1>
       <p class="lead">Browse every new-car configuration and compare the ones that fit your needs and budget.</p>
     </div>
   </section>
 
-  <section class="wrap results" data-explore>
+  <section class="wrap wide results" data-explore>
     <SearchBar />
 
     <div class="chips" role="group" aria-label="Filter by type">
@@ -100,8 +100,8 @@ const configs = [...CONFIGS].sort((a, b) => a.car.make.localeCompare(b.car.make)
   .status p { margin: 0; color: var(--sub); font-size: 16px; }
   .clear { background: none; border: 0; color: var(--mint); font: 600 15px var(--font); cursor: pointer; padding: 10px 0; min-height: 44px; }
   .clear:hover { text-decoration: underline; }
-  .car-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px 16px; }
-  @media (max-width: 1000px) { .car-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .car-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 22px 16px; }
+
   @media (max-width: 720px) { .car-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px; } }
   /* On a phone each chip row is one line that scrolls sideways, so results start sooner. */
   @media (max-width: 720px) { .chips { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px; padding: 0 16px 4px; scrollbar-width: none; } .chips::-webkit-scrollbar { display: none; } .chip { flex: none; } }

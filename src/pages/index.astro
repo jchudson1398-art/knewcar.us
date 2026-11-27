@@ -10,8 +10,8 @@ import { APP_STORE_URL, WEB_PLAN } from "../site";
 const SHOW = 16;
 const rank = (k: string) => [...k].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) % 9973, 7);
 const mixed = [...CATALOG].sort((a, b) => rank(a.key) - rank(b.key));
-const configPool = [...CONFIGS].sort((a, b) => rank(a.config.img + a.config.year) - rank(b.config.img + b.config.year)).slice(0, 64);
-const modelPool = mixed.slice(0, 32);
+const configPool = [...CONFIGS].sort((a, b) => rank(a.config.img + a.config.year) - rank(b.config.img + b.config.year)).slice(0, 96);
+const modelPool = mixed.slice(0, 72);
 const makes = [...new Set(CATALOG.map((c) => c.make))].sort();
 // Hero slides: one large photo each, with the message over it.
 // The first slide asks "Looking for a new car? truck? SUV?" and pulls up a matching photo for each word.
@@ -51,7 +51,7 @@ const steps = [
           ? looking.map((l, k) => <img class={`bg pull${k === 0 ? " on" : ""}`} data-look={l.word} src={`/img/hero/${l.img}.webp`} alt={l.car} width="1448" height="1086" loading={k === 0 ? "eager" : "lazy"} />)
           : <img class="bg" src={`/img/hero/${s.img}.webp`} alt={s.car} width="1448" height="1086" loading="lazy" />}
         <div class="shade" aria-hidden="true"></div>
-        <div class="wrap copy">
+        <div class="wrap wide copy">
           {i === 0
             ? <h1><span class="ask">Looking for a new <span class="word" data-word>car</span>?</span> <span class="grad">All your options, one easy place.</span></h1>
             : <h2 class="h">{s.h[0]} <span class="grad">{s.h[1]}</span></h2>}
@@ -71,7 +71,7 @@ const steps = [
   </section>
 
   <!-- Search sits right on top of the listings, the same layout search results use on /explore -->
-  <section class="wrap listings" id="cars">
+  <section class="wrap wide listings" id="cars">
     <SearchBar />
     <nav class="brands" aria-label="Browse by brand">
       {makes.map((mk) => <a class="brand" href={`/explore?make=${encodeURIComponent(mk)}`}>{mk}</a>)}
@@ -195,7 +195,7 @@ const steps = [
   .pause { width: 44px; height: 44px; border: 0; background: none; cursor: pointer; display: grid; place-items: center; }
   .pause span { width: 12px; height: 14px; border-left: 4px solid #fff; border-right: 4px solid #fff; }
   .pause[aria-pressed="true"] span { width: 0; height: 0; border: 0; border-top: 8px solid transparent; border-bottom: 8px solid transparent; border-left: 13px solid #fff; }
-  @media (max-width: 1240px) { .copy { padding-left: 72px; padding-right: 72px; } }
+  .copy { padding-left: 84px; padding-right: 84px; }
 
   /* Browser window */
   .window { border-radius: 16px; overflow: hidden; border: 1px solid rgba(160, 230, 205, 0.22); background: var(--ground); box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6), 0 0 80px rgba(92, 235, 196, 0.12); }
@@ -228,7 +228,7 @@ const steps = [
   .list-head h2 { font-size: clamp(26px, 3vw, 34px); }
   .tally { margin: 6px 0 0; color: var(--sub); font-size: 15px; }
   .list-head .btn { height: 48px; border-radius: 999px; }
-  .car-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px 16px; }
+  .car-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 22px 16px; }
   .brands { display: flex; flex-wrap: wrap; gap: 8px; }
   .brand { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(232, 243, 238, 0.22); color: var(--text); font-size: 15px; font-weight: 600; }
   .brand:hover { border-color: rgba(92, 235, 196, 0.6); text-decoration: none; }
@@ -286,7 +286,7 @@ const steps = [
   .cta { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 56px 28px; }
   .cta .hero-cta { justify-content: center; }
 
-  @media (max-width: 1000px) { .car-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
   @media (max-width: 900px) {
     .app-grid { grid-template-columns: 1fr; gap: 28px; }
     .viewport { height: 260px; }
@@ -370,7 +370,9 @@ const steps = [
   //    at a time.
   const grid = document.querySelector<HTMLElement>("[data-home-grid]");
   if (grid) {
-    const PAGE = 16;
+    // Four rows at a time, however many cards fit across the screen.
+    const perPage = () => getComputedStyle(grid).gridTemplateColumns.split(" ").length * 4;
+    let rows = 1;
     const more = document.querySelector<HTMLButtonElement>("[data-more]")!;
     const views = [...document.querySelectorAll<HTMLButtonElement>("[data-view]")];
     let kind = "config";
@@ -383,13 +385,14 @@ const steps = [
       }
       list.forEach((t) => grid.appendChild(t));
     }
-    let shown = PAGE;
     const draw = () => {
+      const shown = perPage() * rows;
       for (const [k, list] of Object.entries(pools)) list.forEach((t, i) => (t.hidden = k !== kind || i >= shown));
       more.hidden = shown >= pools[kind].length;
     };
-    more.addEventListener("click", () => { shown += PAGE; draw(); });
-    views.forEach((v) => v.addEventListener("click", () => { kind = v.dataset.view!; views.forEach((o) => o.setAttribute("aria-pressed", String(o === v))); shown = PAGE; draw(); }));
+    more.addEventListener("click", () => { rows++; draw(); });
+    window.addEventListener("resize", draw);
+    views.forEach((v) => v.addEventListener("click", () => { kind = v.dataset.view!; views.forEach((o) => o.setAttribute("aria-pressed", String(o === v))); rows = 1; draw(); }));
     draw();
   }
 

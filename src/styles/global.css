@@ -34,6 +34,9 @@ a:hover { text-decoration: underline; }
 :focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; border-radius: 6px; }
 
 .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+/* Shopping pages use the full width of the screen, so the cars spread across it. */
+.wrap.wide { max-width: 1840px; padding: 0 32px; }
+@media (max-width: 720px) { .wrap.wide { padding: 0 16px; } }
 .section { padding: 96px 0; }
 .section.tight { padding: 64px 0; }
 .eyebrow { color: var(--mint); font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 14px; }
