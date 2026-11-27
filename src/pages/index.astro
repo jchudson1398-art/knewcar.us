@@ -14,6 +14,12 @@ const configPool = [...CONFIGS].sort((a, b) => rank(a.config.img + a.config.year
 const modelPool = mixed.slice(0, 32);
 const makes = [...new Set(CATALOG.map((c) => c.make))].sort();
 // Hero slides: one large photo each, with the message over it.
+// The first slide asks "Looking for a new car? truck? SUV?" and pulls up a matching photo for each word.
+const looking = [
+  { word: "car", img: "camry", car: "2026 Toyota Camry XSE" },
+  { word: "truck", img: "f-150", car: "2026 Ford F-150 Lariat" },
+  { word: "SUV", img: "rav4", car: "2026 Toyota RAV4 Limited" },
+];
 const slides = [
   { img: "rav4", car: "2026 Toyota RAV4 Limited", h: ["All your new car options,", "One easy place."], lead: `${CONFIGS.length.toLocaleString("en-US")} configurations from ${new Set(CATALOG.map((c) => c.make)).size} brands. Free to browse.`, cta: "Explore your options", href: "/explore" },
   { img: "telluride", car: "2027 Kia Telluride SX Prestige", h: ["Every trim.", "Real MSRP."], lead: "See every trim of every model with its manufacturer price, and search by what you want to spend.", cta: "Search by price", href: "/explore?sort=low" },
@@ -41,10 +47,14 @@ const steps = [
   <section class="hero" aria-roledescription="carousel" aria-label="What KnewCar does" data-hero>
     {slides.map((s, i) => (
       <div class="slide" data-slide aria-hidden={i === 0 ? "false" : "true"}>
-        <img class="bg" src={`/img/hero/${s.img}.webp`} alt={s.car} width="1448" height="1086" loading={i === 0 ? "eager" : "lazy"} />
+        {i === 0
+          ? looking.map((l, k) => <img class={`bg pull${k === 0 ? " on" : ""}`} data-look={l.word} src={`/img/hero/${l.img}.webp`} alt={l.car} width="1448" height="1086" loading={k === 0 ? "eager" : "lazy"} />)
+          : <img class="bg" src={`/img/hero/${s.img}.webp`} alt={s.car} width="1448" height="1086" loading="lazy" />}
         <div class="shade" aria-hidden="true"></div>
         <div class="wrap copy">
-          {i === 0 ? <h1>{s.h[0]} <span class="grad">{s.h[1]}</span></h1> : <h2 class="h">{s.h[0]} <span class="grad">{s.h[1]}</span></h2>}
+          {i === 0
+            ? <h1><span class="ask">Looking for a new <span class="word" data-word>car</span>?</span> <span class="grad">All your options, one easy place.</span></h1>
+            : <h2 class="h">{s.h[0]} <span class="grad">{s.h[1]}</span></h2>}
           <p class="lead">{s.lead}</p>
           <a class="btn btn-primary" href={s.href}>{s.cta} <span aria-hidden="true">→</span></a>
         </div>
@@ -158,11 +168,20 @@ const steps = [
   .slide[aria-hidden="false"] { opacity: 1; visibility: visible; transition: opacity .7s ease; }
   /* The photo fills the right two thirds and fades into the dark ground on the left, so the whole car stays in view. */
   .bg { position: absolute; top: 0; right: 0; width: 68%; height: 100%; object-fit: cover; object-position: center 60%; }
+  /* First slide: each photo pulls up from the right as its word appears. */
+  .pull { opacity: 0; transform: translateX(9%) scale(1.03); }
+  .pull.on { opacity: 1; transform: none; transition: opacity .5s ease, transform 1.3s cubic-bezier(.16, .84, .3, 1); }
+  .pull.out { opacity: 0; transform: translateX(-3%); transition: opacity .45s ease, transform .45s ease; }
+  .ask { display: block; }
+  .word { display: inline-block; color: var(--mint); }
+  .word.swap { animation: word-in .5s ease; }
+  @keyframes word-in { from { opacity: 0; transform: translateY(0.35em); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .pull, .pull.on, .pull.out { transition: none; transform: none; } .word.swap { animation: none; } }
   .shade { position: absolute; inset: 0; background: linear-gradient(90deg, #04140f 0%, #04140f 32%, rgba(4, 20, 15, 0.55) 46%, rgba(4, 20, 15, 0) 62%), linear-gradient(0deg, rgba(4, 20, 15, 0.75) 0%, rgba(4, 20, 15, 0) 24%); }
   .copy { position: relative; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 14px; padding-bottom: 28px; }
-  .hero h1, .hero .h { font-size: clamp(34px, 4.6vw, 60px); line-height: 1.04; letter-spacing: -0.035em; font-weight: 800; max-width: 12.5em; text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5); }
+  .hero h1, .hero .h { font-size: clamp(32px, 3.9vw, 52px); line-height: 1.06; letter-spacing: -0.035em; font-weight: 800; max-width: min(100%, 540px); text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5); }
   .hero h1 .grad, .hero .h .grad { display: block; }
-  .hero .lead { max-width: 30em; margin: 0; font-size: clamp(16px, 1.5vw, 19px); color: #e8f3ee; text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6); }
+  .hero .lead { max-width: min(100%, 460px); margin: 0; font-size: clamp(16px, 1.5vw, 19px); color: #e8f3ee; text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6); }
   .hero .btn { margin-top: 6px; }
   .arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(232, 243, 238, 0.35); background: rgba(4, 20, 15, 0.7); color: var(--text); font-size: 24px; line-height: 1; cursor: pointer; z-index: 2; }
   .arrow:hover { border-color: var(--mint); color: var(--mint); }
@@ -315,11 +334,36 @@ const steps = [
     let x0 = 0;
     heroEl.addEventListener("touchstart", (e) => (x0 = e.touches[0].clientX), { passive: true });
     heroEl.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) { setStopped(true); go(i + (dx < 0 ? 1 : -1)); } }, { passive: true });
+    // First slide: car, truck, SUV. The word changes and the matching photo pulls up. One pass, then the slideshow moves on.
+    const looks = [...heroEl.querySelectorAll<HTMLElement>("[data-look]")];
+    const word = heroEl.querySelector<HTMLElement>("[data-word]")!;
+    let look = 0;
+    const showLook = (n: number) => {
+      looks.forEach((el, k) => { el.classList.toggle("out", k === look && k !== n); el.classList.toggle("on", k === n); });
+      look = n;
+      word.textContent = looks[n].dataset.look!;
+      word.classList.remove("swap");
+      void word.offsetWidth;
+      word.classList.add("swap");
+    };
     const pause = heroEl.querySelector<HTMLButtonElement>("[data-hpause]")!;
     const setStopped = (v: boolean) => { stopped = v; pause.setAttribute("aria-pressed", String(v)); pause.setAttribute("aria-label", v ? "Play the slideshow" : "Pause the slideshow"); };
     pause.addEventListener("click", () => setStopped(!stopped));
     go(0);
-    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => { if (!hold && !stopped && !document.hidden) go(i + 1); }, 6000);
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      // Every 2 seconds: on the first slide step through car, truck, SUV; after the last one, and on every other
+      // slide after three ticks, move to the next slide.
+      let ticks = 0;
+      setInterval(() => {
+        if (hold || stopped || document.hidden) return;
+        ticks++;
+        if (i === 0 && look < looks.length - 1) { showLook(look + 1); ticks = 0; return; }
+        if (ticks < 3) return;
+        ticks = 0;
+        go(i + 1);
+        if (i === 0) showLook(0);
+      }, 2000);
+    }
   }
 
   // 1) Home grid: every configuration by default, or one card per model with the toggle. Shuffled on every visit; four rows
