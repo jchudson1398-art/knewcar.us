@@ -17,14 +17,14 @@ const makes = [...new Set(CATALOG.map((c) => c.make))].sort();
 // The first slide asks "Looking for a new car? truck? SUV?" and pulls up a matching photo for each word.
 const looking = [
   { word: "car", img: "camry", car: "2026 Toyota Camry XSE" },
-  { word: "truck", img: "f-150", car: "2026 Ford F-150 Lariat" },
-  { word: "SUV", img: "rav4", car: "2026 Toyota RAV4 Limited" },
+  { word: "truck", img: "f-150", car: "2026 Ford F-150 King Ranch" },
+  { word: "SUV", img: "tahoe", car: "2027 Chevrolet Tahoe High Country" },
 ];
 const slides = [
   { img: "rav4", car: "2026 Toyota RAV4 Limited", h: ["All your new car options,", "One easy place."], lead: `${CONFIGS.length.toLocaleString("en-US")} configurations from ${new Set(CATALOG.map((c) => c.make)).size} brands. Free to browse.`, cta: "Explore your options", href: "/explore" },
   { img: "telluride", car: "2027 Kia Telluride SX Prestige", h: ["Every trim.", "Real MSRP."], lead: "See every trim of every model with its manufacturer price, and search by what you want to spend.", cta: "Search by price", href: "/explore?sort=low" },
   { img: "cx-50", car: "2026 Mazda CX-50 2.5 Turbo", h: ["Know the real cost", "in your state."], lead: `Upgrade to save cars, compare them side by side, and estimate tax, fees and your payment. ${WEB_PLAN.monthly} a month or ${WEB_PLAN.yearly} a year.`, cta: "See the upgrade", href: "/upgrade" },
-  { img: "f-150", car: "2026 Ford F-150 Lariat", h: ["Live in Texas?", "Get the app."], lead: "Browse offers, incentives, special rates and rebates before making your final decision. Find options you may not have thought you could afford.", cta: "Download on the App Store", href: APP_STORE_URL },
+  { img: "rav4", car: "2026 Toyota RAV4 Limited", h: ["Live in Texas?", "Get the app."], lead: "Browse offers, incentives, special rates and rebates before making your final decision. Find options you may not have thought you could afford.", cta: "Download on the App Store", href: APP_STORE_URL },
 ];
 // Three priced models of different types for the MSRP slide.
 const spotlight = ["Truck", "SUV", "Sedan"].map((t) => mixed.find((c) => c.type === t && c.msrpFrom)!).filter(Boolean);
