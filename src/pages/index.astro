@@ -14,11 +14,12 @@ const configPool = [...CONFIGS].sort((a, b) => rank(a.config.img + a.config.year
 const modelPool = mixed.slice(0, 72);
 const makes = [...new Set(CATALOG.map((c) => c.make))].sort();
 // Hero slides: one large photo each, with the message over it.
-// The first slide asks "Looking for a new car? truck? SUV?" and pulls up a matching photo for each word.
+// The first slide plays a short video of a car, a truck and an SUV pulling in (made by Jacob, 2026-11-27). The word
+// in "Looking for a new ...?" changes as each one arrives; `at` is the second in the video when it does.
 const looking = [
-  { word: "car", img: "camry", car: "2026 Toyota Camry XSE" },
-  { word: "truck", img: "f-150", car: "2026 Ford F-150 Platinum" },
-  { word: "SUV", img: "tahoe", car: "2027 Chevrolet Tahoe High Country" },
+  { word: "car", at: 0 },
+  { word: "truck", at: 1.0 },
+  { word: "SUV", at: 2.1 },
 ];
 const slides = [
   { img: "rav4", car: "2026 Toyota RAV4 Limited", h: ["All your new car options,", "One easy place."], lead: `${CONFIGS.length.toLocaleString("en-US")} configurations from ${new Set(CATALOG.map((c) => c.make)).size} brands. Free to browse.`, cta: "Explore your options", href: "/explore" },
@@ -48,12 +49,15 @@ const steps = [
     {slides.map((s, i) => (
       <div class="slide" data-slide aria-hidden={i === 0 ? "false" : "true"}>
         {i === 0
-          ? looking.map((l, k) => <img class={`bg pull${k === 0 ? " on" : ""}`} data-look={l.word} src={`/img/hero/${l.img}.webp`} alt={l.car} width="1448" height="1086" loading={k === 0 ? "eager" : "lazy"} />)
+          ? <Fragment>
+              <img class="bg end" src="/video/intro-end.jpg" alt="A sedan, a pickup truck and an SUV parked side by side" width="1280" height="720" loading="eager" />
+              <video class="bg" data-intro data-times={JSON.stringify(looking)} muted playsinline preload="auto" poster="/video/intro-start.jpg" aria-hidden="true"><source src="/video/intro.mp4" type="video/mp4" /></video>
+            </Fragment>
           : <img class="bg" src={`/img/hero/${s.img}.webp`} alt={s.car} width="1448" height="1086" loading="lazy" />}
         <div class="shade" aria-hidden="true"></div>
         <div class="wrap wide copy">
           {i === 0
-            ? <h1><span class="ask">Looking for a new <span class="word" data-word>car</span>?</span> <span class="grad">All your options, one easy place.</span></h1>
+            ? <h1><span class="ask">Looking for a new <span class="pick"><span class="word" data-word>car</span>?</span></span> <span class="grad">All your options, one easy place.</span></h1>
             : <h2 class="h">{s.h[0]} <span class="grad">{s.h[1]}</span></h2>}
           <p class="lead">{s.lead}</p>
           <a class="btn btn-primary" href={s.href}>{s.cta} <span aria-hidden="true">→</span></a>
@@ -168,15 +172,17 @@ const steps = [
   .slide[aria-hidden="false"] { opacity: 1; visibility: visible; transition: opacity .7s ease; }
   /* The photo fills the right two thirds and fades into the dark ground on the left, so the whole car stays in view. */
   .bg { position: absolute; top: 0; right: 0; width: 68%; height: 100%; object-fit: cover; object-position: center 60%; }
-  /* First slide: each photo pulls up from the right as its word appears. */
-  .pull { opacity: 0; transform: translateX(9%) scale(1.03); }
-  .pull.on { opacity: 1; transform: none; transition: opacity .5s ease, transform 1.3s cubic-bezier(.16, .84, .3, 1); }
-  .pull.out { opacity: 0; transform: translateX(-3%); transition: opacity .45s ease, transform .45s ease; }
+  /* First slide: a video of the cars pulling in. Its last frame sits underneath, so there is always a picture. */
+  video.bg { background: #04140f; }
+  .slide:first-child .bg { object-position: center; }
+  .slide:first-child .shade { background: linear-gradient(90deg, #04140f 0%, #04140f 30%, rgba(4, 20, 15, 0) 40%), linear-gradient(0deg, rgba(4, 20, 15, 0.6) 0%, rgba(4, 20, 15, 0) 20%); }
   .ask { display: block; }
+  /* The changing word sits on its own line, so the headline never re-wraps as the word changes. */
+  .pick { display: block; white-space: nowrap; }
   .word { display: inline-block; color: var(--mint); }
   .word.swap { animation: word-in .5s ease; }
   @keyframes word-in { from { opacity: 0; transform: translateY(0.35em); } to { opacity: 1; transform: none; } }
-  @media (prefers-reduced-motion: reduce) { .pull, .pull.on, .pull.out { transition: none; transform: none; } .word.swap { animation: none; } }
+  @media (prefers-reduced-motion: reduce) { video.bg { display: none; } .word.swap { animation: none; } }
   .shade { position: absolute; inset: 0; background: linear-gradient(90deg, #04140f 0%, #04140f 32%, rgba(4, 20, 15, 0.55) 46%, rgba(4, 20, 15, 0) 62%), linear-gradient(0deg, rgba(4, 20, 15, 0.75) 0%, rgba(4, 20, 15, 0) 24%); }
   .copy { position: relative; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 14px; padding-bottom: 28px; }
   .hero h1, .hero .h { font-size: clamp(32px, 3.9vw, 52px); line-height: 1.06; letter-spacing: -0.035em; font-weight: 800; max-width: min(100%, 540px); text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5); }
@@ -295,11 +301,13 @@ const steps = [
     .ph { width: 140px; }
   }
   @media (max-width: 640px) {
-    .hero { margin-top: 64px; height: 440px; }
+    .hero { margin-top: 64px; height: 530px; }
     .shade { background: linear-gradient(0deg, rgba(4, 20, 15, 0.95) 0%, rgba(4, 20, 15, 0.82) 46%, rgba(4, 20, 15, 0.1) 78%); }
     .bg { width: 100%; height: 62%; object-position: center 55%; }
+    .slide:first-child .bg { height: auto; aspect-ratio: 16 / 9; top: 12px; }
+    .slide:first-child .shade { background: linear-gradient(0deg, rgba(4, 20, 15, 0.95) 0%, rgba(4, 20, 15, 0.9) 42%, rgba(4, 20, 15, 0) 56%); }
     .copy { justify-content: flex-end; padding: 0 16px 52px; gap: 8px; }
-    .hero h1, .hero .h { font-size: 30px; }
+    .hero h1, .hero .h { font-size: 28px; }
     .hero .lead { font-size: 15px; }
     .arrow { top: 28%; width: 40px; height: 40px; }
     .arrow.prev { left: 8px; }
@@ -319,10 +327,12 @@ const steps = [
     let i = 0;
     let hold = false;
     let stopped = false;
+    let started = false;
     const go = (n: number) => {
       i = (n + slides.length) % slides.length;
       slides.forEach((s, k) => { s.setAttribute("aria-hidden", String(k !== i)); s.toggleAttribute("inert", k !== i); });
       pips.forEach((b, k) => b.setAttribute("aria-current", String(k === i)));
+      if (i === 0 && started) playIntro();
     };
     pips.forEach((b, k) => b.addEventListener("click", () => { setStopped(true); go(k); }));
     heroEl.querySelector("[data-hprev]")!.addEventListener("click", () => { setStopped(true); go(i - 1); });
@@ -334,34 +344,41 @@ const steps = [
     let x0 = 0;
     heroEl.addEventListener("touchstart", (e) => (x0 = e.touches[0].clientX), { passive: true });
     heroEl.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) { setStopped(true); go(i + (dx < 0 ? 1 : -1)); } }, { passive: true });
-    // First slide: car, truck, SUV. The word changes and the matching photo pulls up. One pass, then the slideshow moves on.
-    const looks = [...heroEl.querySelectorAll<HTMLElement>("[data-look]")];
+    // First slide: the video plays once and holds on its last frame. The word follows the video.
+    const intro = heroEl.querySelector<HTMLVideoElement>("[data-intro]")!;
+    const times = JSON.parse(intro.dataset.times!) as { word: string; at: number }[];
     const word = heroEl.querySelector<HTMLElement>("[data-word]")!;
-    let look = 0;
-    const showLook = (n: number) => {
-      looks.forEach((el, k) => { el.classList.toggle("out", k === look && k !== n); el.classList.toggle("on", k === n); });
-      look = n;
-      word.textContent = looks[n].dataset.look!;
+    const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const setWord = (w: string) => {
+      if (word.textContent === w) return;
+      word.textContent = w;
       word.classList.remove("swap");
       void word.offsetWidth;
       word.classList.add("swap");
+    };
+    intro.addEventListener("timeupdate", () => setWord([...times].reverse().find((t) => intro.currentTime >= t.at)!.word));
+    const playIntro = () => {
+      if (still) return;
+      intro.currentTime = 0;
+      setWord(times[0].word);
+      intro.play().catch(() => {});
     };
     const pause = heroEl.querySelector<HTMLButtonElement>("[data-hpause]")!;
     const setStopped = (v: boolean) => { stopped = v; pause.setAttribute("aria-pressed", String(v)); pause.setAttribute("aria-label", v ? "Play the slideshow" : "Pause the slideshow"); };
     pause.addEventListener("click", () => setStopped(!stopped));
     go(0);
-    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      // Every 2 seconds: on the first slide step through car, truck, SUV; after the last one, and on every other
-      // slide after three ticks, move to the next slide.
+    started = true;
+    playIntro();
+    if (!still) {
+      // Every 2 seconds. The first slide waits for its video to finish; then, as on every slide, three ticks pass
+      // before the next one.
       let ticks = 0;
       setInterval(() => {
         if (hold || stopped || document.hidden) return;
-        ticks++;
-        if (i === 0 && look < looks.length - 1) { showLook(look + 1); ticks = 0; return; }
-        if (ticks < 3) return;
+        if (i === 0 && !intro.ended) { ticks = 0; return; }
+        if (++ticks < 3) return;
         ticks = 0;
         go(i + 1);
-        if (i === 0) showLook(0);
       }, 2000);
     }
   }
