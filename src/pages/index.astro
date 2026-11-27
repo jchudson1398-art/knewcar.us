@@ -15,7 +15,8 @@ const modelPool = mixed.slice(0, 72);
 const makes = [...new Set(CATALOG.map((c) => c.make))].sort();
 // Hero slides: one large photo each, with the message over it.
 // The first slide is a short video of a car, a truck and an SUV pulling in (Jacob's clip, 2026-11-27). The headline
-// is part of the picture: "Looking for a new car? truck? SUV?" on the back wall behind the cars, and "All your
+// is part of the picture: "Looking for a new" and the words CAR? TRUCK? SUV? building into one line on the back wall
+// as each one pulls in, and "All your
 // options. One easy place." on the floor in front. The same words are in the page as a hidden heading for screen
 // readers and search engines.
 const slides = [
@@ -47,7 +48,7 @@ const steps = [
       <div class="slide" data-slide aria-hidden={i === 0 ? "false" : "true"}>
         {i === 0
           ? <div class="intro-stage">
-              <img class="end" src="/video/intro-end.jpg" alt="A sedan, a pickup truck and an SUV parked side by side under the words: Looking for a new SUV? All your options. One easy place." width="1920" height="1080" loading="eager" />
+              <img class="end" src="/video/intro-end.jpg" alt="A sedan, a pickup truck and an SUV parked side by side under the words: Looking for a new car? truck? SUV? All your options. One easy place." width="1920" height="1080" loading="eager" />
               <video data-intro muted playsinline preload="auto" poster="/video/intro-start.jpg" aria-hidden="true"><source src="/video/intro.mp4" type="video/mp4" /></video>
             </div>
           : <img class="bg" src={`/img/hero/${s.img}.webp`} alt={s.car} width="1448" height="1086" loading="lazy" />}
