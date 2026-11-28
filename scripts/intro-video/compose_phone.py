@@ -2,7 +2,7 @@
 
 "LOOKING FOR A NEW" and CAR? TRUCK? SUV? build into one line on the back wall behind the cars, then "ALL YOUR
 OPTIONS. ONE EASY PLACE." is laid on the floor in front of them (two lines here, so it stays readable on a phone).
-The clip is enlarged to 1080 wide and kept whole at 1080x1890 (an earlier version cropped it): the empty black above the set and some bare floor below
+The clip is enlarged to 1080 wide and cropped to 1080x1040: the empty black above the set and some bare floor below
 it are trimmed so the scene fills a phone screen without pushing the rest of the page too far down.
 
 usage: python3 compose_phone.py out.mp4 [preview]      (frames of the source clip must be in fr_phone/)"""
@@ -14,7 +14,7 @@ from scipy import ndimage
 SW, SH = 768, 1344                 # source size
 SCALE = 1080 / SW
 W, FULL_H = 1080, round(SH * SCALE)  # enlarged size before cropping
-Y0, H = 0, FULL_H                  # no crop: the whole clip, so it can fill a phone screen
+Y0, H = 520, 1040                  # crop: rows Y0..Y0+H of the enlarged frame
 FPS, N = 24, 121
 FONT = "/usr/share/fonts/opentype/inter/InterDisplay-Black.otf"
 FONT_B = "/usr/share/fonts/opentype/inter/InterDisplay-Bold.otf"
@@ -48,9 +48,9 @@ def ramp(t, a, b):
 def ease(k):
     return k * k * (3 - 2 * k)
 
-# ---- back wall. In the enlarged picture the lit frame's top edge is at y=634, the car roofs at about y=837 and the
-# floor line at about y=990.
-WALL_TOP = 658
+# ---- back wall. In the cropped picture the lit frame's top edge is at y=114, the car roofs at about y=317 and the
+# floor line at about y=470.
+WALL_TOP = 138
 small = ImageFont.truetype(FONT_B, 34)
 WORDS = ["CAR?", "TRUCK?", "SUV?"]
 WALL_RGB = np.array([196, 255, 236], np.float32)
@@ -68,7 +68,7 @@ def fit(words, size, max_w):
         xs.append(x); x += w + gap
     return size, xs
 # (font size, left x of each word, baseline y): the line shrinks and rises as each one pulls in
-STEPS = [fit(WORDS[:1], 230, 800) + (892,), fit(WORDS[:2], 200, 930) + (856,), fit(WORDS[:3], 200, 970) + (824,)]
+STEPS = [fit(WORDS[:1], 230, 800) + (372,), fit(WORDS[:2], 200, 930) + (336,), fit(WORDS[:3], 200, 970) + (304,)]
 STEP_AT = [(1.2, 1.75), (2.9, 3.45)]  # when the truck and the SUV roll in on this clip
 
 def wall(t):
@@ -94,7 +94,7 @@ def wall(t):
         if alpha > 0: d.text((wx, base), word, font=font, fill=int(255 * alpha), anchor="ls")
     glow = im.filter(ImageFilter.GaussianBlur(18))
     a = np.asarray(im).astype(np.float32) / 255 * 0.78 + np.asarray(glow).astype(np.float32) / 255 * 0.42
-    fade = np.clip((990 - np.arange(H)) / 170.0, 0, 1)[:, None]  # sinks into the haze near the floor
+    fade = np.clip((470 - np.arange(H)) / 170.0, 0, 1)[:, None]  # sinks into the haze near the floor
     return np.clip(a, 0, 1) * (0.35 + 0.65 * fade)
 
 # ---- floor: the tagline in two lines, laid flat in front of the cars
@@ -106,7 +106,7 @@ def floor():
     d = ImageDraw.Draw(flat)
     d.text((FW / 2, 105), lines[0], font=font, fill=255, anchor="mm")
     d.text((FW / 2, 295), lines[1], font=font, fill=255, anchor="mm")
-    top_y, bot_y = 1150, 1372  # kept clear of the button and dots that sit over the bottom of the clip
+    top_y, bot_y = 668, 900
     quad = [(150, top_y), (W - 150, top_y), (W - 60, bot_y), (60, bot_y)]
     src = [(0, 0), (FW, 0), (FW, 400), (0, 400)]
     A = []
@@ -116,41 +116,6 @@ def floor():
     laid = flat.transform((W, H), Image.PERSPECTIVE, tuple(coef), Image.BICUBIC)
     return np.asarray(laid).astype(np.float32) / 255, np.asarray(laid.filter(ImageFilter.GaussianBlur(8))).astype(np.float32) / 255
 FLOOR, FLOOR_GLOW = floor()
-
-# ---- the KnewCar wordmark in the empty black space above the set, built the way the site draws it: the logo's K,
-# then "new" in white and "Car" in mint.
-def logo():
-    size = 150
-    font = ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf", size)
-    k = Image.open("../../public/img/logo-k-letter.png").convert("RGBA")
-    kh = int(size * 0.8)
-    k = k.resize((int(k.width * kh / k.height), kh), Image.LANCZOS)
-    track = -0.03 * size
-    w_new = sum(font.getlength(c) + track for c in "new")
-    w_car = sum(font.getlength(c) + track for c in "Car")
-    total = k.width + w_new + w_car
-    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(layer)
-    x, base = (W - total) / 2, 372  # centred in the black band (the lit frame starts at y=634)
-    layer.alpha_composite(k, (int(x), int(base - kh + size * 0.035)))
-    x += k.width
-    for text, colour in (("new", (255, 255, 255, 255)), ("Car", (92, 235, 196, 255))):
-        for ch in text:
-            d.text((x, base), ch, font=font, fill=colour, anchor="ls")
-            x += font.getlength(ch) + track
-    arr = np.asarray(layer).astype(np.float32)
-    return arr[..., :3], arr[..., 3:] / 255.0
-LOGO_RGB, LOGO_A = logo()
-
-# ---- the band above the set: the site's midnight green instead of black, a little brighter behind the logo. It
-# fades out just above the lit frame so the frame's own glow is untouched.
-def green_band():
-    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
-    glow = np.clip(1 - np.hypot((xx - W / 2) / 620.0, (yy - 330) / 360.0), 0, 1) ** 1.6
-    rgb = np.array([4, 20, 15], np.float32) + glow[..., None] * np.array([10, 58, 46], np.float32)
-    mask = np.clip((622 - yy) / 70.0, 0, 1)[..., None]
-    return rgb * mask
-BAND = green_band()
 
 def compose(i):
     t = (i - 1) / FPS
@@ -165,9 +130,6 @@ def compose(i):
         ga = (FLOOR_GLOW * 0.25 * wipe)[..., None]
         f = f + (255 - f) * ga * 0.6
         f = f * (1 - fa) + (255 * 0.78 + f * 0.35) * fa
-    f = f + BAND * (1 - f / 255.0)  # screen, so anything already lit stays lit
-    la = LOGO_A * ramp(t, 0.0, 0.5)
-    f = f * (1 - la) + LOGO_RGB * la
     return np.clip(f, 0, 255).astype(np.uint8)
 
 if preview:
