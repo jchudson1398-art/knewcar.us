@@ -8,9 +8,10 @@ a phone. The lettering is drawn here, never by the image tool.
 Every number comes from the website's own estimator: this script runs numbers.mjs, which calls src/lib/estimate.ts.
 Nothing is typed in by hand. Run this again whenever the RAV4's MSRP, the destination charge or a state rule changes.
 
-Texas, Florida and California are shown (Jacob's choice, 2026-11-28). No county is chosen, so the figures are state
-tax and state fees only, and the receipt says so. That matters most for California: 7.25% is the statewide rate, and
-many places add district tax on top, so its tax line is labelled "statewide rate".
+Texas, Florida and California are shown (Jacob's choice, 2026-11-28). Texas and Florida have no county chosen, so
+they are state tax and state fees only. California is shown for Los Angeles County at the county's combined rate from
+the state's own rate table, because the statewide 7.25% alone understates what most Californians pay; the tax line
+names the county and the note says cities may differ. The sales tax line is yellow so it stands out.
 
 On a wide screen the car sits to the left and the headline and a large receipt fill the right, so this slide does
 not look like slide 2 (car in the middle, words around it). On a phone the receipt is on the floor in front of the car.
@@ -32,8 +33,12 @@ MINT = np.array([196, 255, 236], np.float32)
 
 DATA = json.loads(subprocess.run(["node", "scripts/cost-video/numbers.mjs", "TX", "FL", "CA"], cwd="../..", capture_output=True, text=True, check=True).stdout)
 STATES = DATA["states"]
-TAX_LABEL = {"CA": "Sales tax, statewide rate"}                    # everywhere else: "Sales tax"
-NOTE = "Local taxes and fees not included."
+# A state shown for one county says so on its tax line, and its note explains what the county rate covers.
+def tax_label(s):
+    return f"Sales tax, {s['county']} County" if s["county"] else "Sales tax"
+def note(s):
+    return "County rate outside city limits. Cities and local fees may differ." if s["county"] else "Local taxes and fees not included."
+YELLOW = np.array([255, 196, 92], np.float32)                           # the site's warm accent, for the tax line
 money = lambda cents: f"${cents / 100:,.2f}"
 for s in STATES:
     assert s["gross"] + s["tax"] + s["fees"] == s["total"], s["name"]
@@ -133,7 +138,6 @@ def fixed_text():
     d = ImageDraw.Draw(im)
     d.line([(BOX[0] + PAD, ROWS[2] + RULE), (BOX[2] - PAD, ROWS[2] + RULE)], fill=110, width=2)
     d.text((BOX[0] + PAD, TOTAL_Y), "Estimated total", font=F_LABEL, fill=255, anchor="ls")
-    d.text((BOX[0] + PAD, NOTE_Y), NOTE, font=F_NOTE, fill=150, anchor="ls")
     rows.append(arr(im))
     head = Image.new("L", (W, H), 0)
     d = ImageDraw.Draw(head)
@@ -153,13 +157,15 @@ def state_text(s):
     else: d.text((BOX[0] + PAD, 478), s["name"].upper(), font=ImageFont.truetype(INTER, 70), fill=255, anchor="ls")
     tax = Image.new("L", (W, H), 0)
     d = ImageDraw.Draw(tax)
-    d.text((BOX[0] + PAD, ROWS[1]), TAX_LABEL.get(s["code"], "Sales tax"), font=F_LABEL, fill=200, anchor="ls")
+    d.text((BOX[0] + PAD, ROWS[1]), tax_label(s), font=F_LABEL, fill=235, anchor="ls")
     d.text((BOX[2] - PAD, ROWS[1]), money(s["tax"]), font=F_AMT, fill=255, anchor="rs")
     fees = Image.new("L", (W, H), 0)
     ImageDraw.Draw(fees).text((BOX[2] - PAD, ROWS[2]), money(s["fees"]), font=F_AMT, fill=255, anchor="rs")
     total = Image.new("L", (W, H), 0)
     ImageDraw.Draw(total).text((BOX[2] - PAD, TOTAL_Y), money(s["total"]), font=F_TOTAL, fill=255, anchor="rs")
-    return lit(name, 16, 0.3), [arr(tax), arr(fees)], lit(total, 12, 0.25)
+    foot = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(foot).text((BOX[0] + PAD, NOTE_Y), note(s), font=F_NOTE, fill=150, anchor="ls")
+    return lit(name, 16, 0.3), [arr(tax), arr(fees), arr(foot)], lit(total, 12, 0.25)
 PER_STATE = [state_text(s) for s in STATES]
 
 # ---- timing: the receipt writes itself for the first state, then the state changes twice
@@ -191,7 +197,9 @@ def compose(i):
         if k < len(PER_STATE) - 1: w *= 1 - ramp(pos, k + 0.05, k + 0.45)
         if w <= 0: continue
         f = mint(f, name_a * w * ramp(t, 0.2, 0.6))
-        f = white(f, rows[0] * w * ramp(t, ROW_IN[1], ROW_IN[1] + 0.3))
+        ta = (rows[0] * w * ramp(t, ROW_IN[1], ROW_IN[1] + 0.3))[..., None]
+        f = f * (1 - ta) + YELLOW * ta                                   # the tax line, in yellow
+        f = white(f, rows[2] * w * ramp(t, ROW_IN[3], ROW_IN[3] + 0.3))
         f = white(f, rows[1] * w * ramp(t, ROW_IN[2], ROW_IN[2] + 0.3))
         f = mint(f, total_a * w * ramp(t, ROW_IN[3], ROW_IN[3] + 0.3))
     return np.clip(f, 0, 255).astype(np.uint8)
