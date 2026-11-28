@@ -1,4 +1,4 @@
-"""Slide 2, "Every trim. Real MSRP.": one Jeep Wrangler on a display stage, changing through four trims while the
+"""Slide 2, "Every model, every trim. Real MSRP.": one Jeep Wrangler on a display stage, changing through four trims while the
 trim name and its MSRP change with it.
 
 The four pictures in src/ are Jacob's (2026-11-28): our own catalog photos of each trim, re-set by an image tool on
@@ -76,20 +76,21 @@ def headline():
     im = Image.new("L", (W, H), 0)
     d = ImageDraw.Draw(im)
     if PHONE:
+        lines, tall = ["EVERY MODEL,", "EVERY TRIM."], 138
         size = 250
-        while ImageFont.truetype(NARROW, size).getlength("EVERY TRIM.") > 940: size -= 2
+        while max(ImageFont.truetype(NARROW, size).getlength(l) for l in lines) > 900: size -= 2
         font = ImageFont.truetype(NARROW, size)
         cap = -font.getbbox("E", anchor="ls")[1]
-        tall, base = 235, 468
-        line = Image.new("L", (W, cap + 80), 0)
-        ImageDraw.Draw(line).text((W / 2, 40 + cap), "EVERY TRIM.", font=font, fill=255, anchor="ms")
         k = tall / cap
-        line = line.resize((W, int(line.height * k)), Image.LANCZOS)
-        im.paste(line, (0, int(base - (40 + cap) * k)))
-        spaced(d, (W / 2, base - tall - 44), f"{YEAR} JEEP WRANGLER", ImageFont.truetype(INTER_B, 46), 14)
+        for text, base in zip(lines, (318, 486)):
+            line = Image.new("L", (W, cap + 80), 0)
+            ImageDraw.Draw(line).text((W / 2, 40 + cap), text, font=font, fill=255, anchor="ms")
+            line = line.resize((W, int(line.height * k)), Image.LANCZOS)
+            im.paste(line, (0, int(base - (40 + cap) * k)), line)
     else:
-        font = ImageFont.truetype(INTER, 188)
-        d.text((W / 2, 386), "EVERY TRIM.", font=font, fill=255, anchor="ms")
+        text, size = "EVERY MODEL, EVERY TRIM.", 188
+        while ImageFont.truetype(INTER, size).getlength(text) > 1620: size -= 2
+        d.text((W / 2, 380), text, font=ImageFont.truetype(INTER, size), fill=255, anchor="ms")
     return lit(im, 20, 0.35)
 HEAD = headline()
 
@@ -99,12 +100,13 @@ def tag(k):
     im_name, im_price = Image.new("L", (W, H), 0), Image.new("L", (W, H), 0)
     name, price = TRIMS[k][1].upper(), f"${PRICES[k]:,}"
     if PHONE:
-        spaced(ImageDraw.Draw(im_name), (W / 2, 696), name, ImageFont.truetype(INTER_B, 44), 9)
-        pf, sf = ImageFont.truetype(INTER, 92), ImageFont.truetype(INTER_B, 34)
+        spaced(ImageDraw.Draw(im_name), (W / 2, 662), f"{YEAR} JEEP WRANGLER", ImageFont.truetype(INTER_B, 30), 10)
+        spaced(ImageDraw.Draw(im_name), (W / 2, 716), name, ImageFont.truetype(INTER_B, 44), 9)
+        pf, sf = ImageFont.truetype(INTER, 86), ImageFont.truetype(INTER_B, 34)
         total = pf.getlength(price) + 18 + sf.getlength("MSRP")
         x = (W - total) / 2
-        ImageDraw.Draw(im_price).text((x, 800), price, font=pf, fill=255, anchor="ls")
-        ImageDraw.Draw(im_name).text((x + pf.getlength(price) + 18, 800), "MSRP", font=sf, fill=255, anchor="ls")
+        ImageDraw.Draw(im_price).text((x, 806), price, font=pf, fill=255, anchor="ls")
+        ImageDraw.Draw(im_name).text((x + pf.getlength(price) + 18, 806), "MSRP", font=sf, fill=255, anchor="ls")
     else:
         # the description stands on the wall left of the car and the price on the right, level with each other
         lx, rx = 285, 1635
