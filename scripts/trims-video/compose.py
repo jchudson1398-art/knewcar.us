@@ -93,7 +93,8 @@ def headline():
     return lit(im, 20, 0.35)
 HEAD = headline()
 
-# ---- the tag: trim name and MSRP. Under the light on a phone; on the wall to the right of the car on a wide screen.
+# ---- the tag: trim name and MSRP. Under the light on a phone; on a wide screen, the name on the wall to the left
+# of the car and the price to the right.
 def tag(k):
     im_name, im_price = Image.new("L", (W, H), 0), Image.new("L", (W, H), 0)
     name, price = TRIMS[k][1].upper(), f"${PRICES[k]:,}"
@@ -105,12 +106,13 @@ def tag(k):
         ImageDraw.Draw(im_price).text((x, 800), price, font=pf, fill=255, anchor="ls")
         ImageDraw.Draw(im_name).text((x + pf.getlength(price) + 18, 800), "MSRP", font=sf, fill=255, anchor="ls")
     else:
-        cx = 1630
+        # the description stands on the wall left of the car and the price on the right, level with each other
+        lx, rx = 285, 1635
         d = ImageDraw.Draw(im_name)
-        spaced(d, (cx, 436), f"{YEAR} JEEP WRANGLER", ImageFont.truetype(INTER_B, 24), 7)
-        spaced(d, (cx, 492), name, ImageFont.truetype(INTER, 40), 3)
-        spaced(d, (cx, 622), "MSRP", ImageFont.truetype(INTER_B, 24), 9)
-        ImageDraw.Draw(im_price).text((cx, 584), price, font=ImageFont.truetype(INTER, 88), fill=255, anchor="ms")
+        spaced(d, (lx, 498), f"{YEAR} JEEP WRANGLER", ImageFont.truetype(INTER_B, 24), 7)
+        spaced(d, (lx, 554), name, ImageFont.truetype(INTER, 36), 3)
+        spaced(d, (rx, 590), "MSRP", ImageFont.truetype(INTER_B, 24), 9)
+        ImageDraw.Draw(im_price).text((rx, 552), price, font=ImageFont.truetype(INTER, 88), fill=255, anchor="ms")
     return np.asarray(im_name).astype(np.float32) / 255 * 0.9, lit(im_price, 16, 0.3)
 TAGS = [tag(k) for k in range(len(TRIMS))]
 
