@@ -1,15 +1,15 @@
 """The phone version of the intro: Jacob's tall (768x1344) clip of the same scene, used whole so it fills a phone.
 
-Design (2026-11-28): the clip has empty black above the set. That space becomes a dark ceiling running from the top
-of the lit frame toward the viewer, and the headline is lifted onto it: "LOOKING FOR A NEW" with CAR? TRUCK? SUV?
-building into one line, standing just behind the top edge of the lit frame like a sign above the set. The back wall
-is left clear so the cars read cleanly. "ALL YOUR OPTIONS. ONE EASY PLACE." is laid on the floor in front of the
-cars, in two lines.
+Design (2026-11-28): the clip has empty black above the set. That space becomes a dark warehouse ceiling, and the
+headline fills it: "LOOKING FOR A NEW" with CAR? TRUCK? SUV? building into one line of tall letters standing on the
+top of the lit frame. The KnewCar wordmark is on the back wall, behind the cars. "ALL YOUR OPTIONS. ONE EASY PLACE."
+is laid on the floor in front of the cars, in two lines.
 
 usage: python3 compose_phone.py out.mp4 [preview]      (frames of the source clip must be in fr_phone/)"""
 import subprocess, sys
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from scipy import ndimage
 
 SW, SH = 768, 1344
 W = 1080
@@ -35,55 +35,102 @@ def ramp(t, a, b):
 def ease(k):
     return k * k * (3 - 2 * k)
 
-# ---- the ceiling: dark panels in perspective, with two faint light channels and the frame's warm light spilling
-# onto the part nearest the wall. Drawn once; it never moves.
+# ---- the ceiling: a dark warehouse ceiling in the style of the photo Jacob sent (2026-11-28): ribbed metal deck,
+# steel cross beams, a round duct down the middle and pairs of hanging light bars. Drawn here, not copied from the
+# photo. Worked out per pixel from the room's perspective. Drawn once; it never moves.
 def ceiling():
-    S = 2  # draw at double size, then shrink, for smooth lines
-    im = Image.new("L", (W * S, H * S), 0)
-    d = ImageDraw.Draw(im)
+    S = 2
+    yy, xx = np.mgrid[0:H * S, 0:W * S].astype(np.float32) / S
     vx, vy = VP
-    def ray(x_at_wall, width, value):
-        # a line from the vanishing point through (x_at_wall, FRAME_TOP), continued up to the top of the picture
-        x_top = vx + (x_at_wall - vx) * (vy - 0) / (vy - FRAME_TOP)
-        d.line([(x_at_wall * S, FRAME_TOP * S), (x_top * S, 0)], fill=value, width=width * S)
-    for k in range(-2, 15):                     # panel seams running away from the viewer
-        ray(FRAME_L + (FRAME_R - FRAME_L) * k / 12, 2, 70)
-    depth = 1.0
-    while True:                                 # cross seams, further apart the nearer they are
-        depth *= 1.34
-        y = vy - (vy - FRAME_TOP) * depth
-        if y < -40: break
-        x0 = vx + (FRAME_L - vx) * depth
-        x1 = vx + (FRAME_R - vx) * depth
-        d.line([(x0 * S - 400, y * S), (x1 * S + 400, y * S)], fill=70, width=max(2, int(1.5 * depth)) * S)
-    seams = np.asarray(im.resize((W, H), Image.LANCZOS)).astype(np.float32) / 255
-    lights = Image.new("L", (W * S, H * S), 0)
-    d = ImageDraw.Draw(lights)
-    for frac in (0.25, 0.75):                   # two recessed light channels
-        ray(FRAME_L + (FRAME_R - FRAME_L) * frac, 7, 255)
-    lights = lights.resize((W, H), Image.LANCZOS)
-    core = np.asarray(lights).astype(np.float32) / 255
-    halo = np.asarray(lights.filter(ImageFilter.GaussianBlur(26))).astype(np.float32) / 255
-    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
-    near = np.clip((FRAME_TOP - yy) / FRAME_TOP, 0, 1)        # 0 at the wall, 1 at the top of the picture
-    base = np.array([11, 26, 23], np.float32) * (1.15 - 0.75 * near)[..., None]             # darker toward the viewer
-    rgb = base + seams[..., None] * np.array([26, 46, 40], np.float32) * (1 - 0.5 * near)[..., None]
-    rgb += (core[..., None] * 0.55 + halo[..., None] * 0.9) * np.array([95, 160, 142], np.float32) * (1 - 0.45 * near)[..., None]
-    spill = np.clip(1 - (FRAME_TOP - yy) / 210.0, 0, 1) ** 2.2 * np.clip(1 - np.abs(xx - 540) / 760.0, 0, 1)
-    rgb += spill[..., None] * np.array([120, 84, 46], np.float32)                           # the frame's warm light
-    mask = np.clip((FRAME_TOP - 6 - yy) / 26.0, 0, 1)[..., None]                            # ends just above the frame
+    s = np.maximum((vy - yy) / (vy - FRAME_TOP), 0.05)   # 1 at the back wall, bigger toward the viewer
+    xw = vx + (xx - vx) / s                              # where this spot would be, measured along the back wall
+    D = 1 / s                                            # distance: 1 at the back wall, smaller toward the viewer
+    ribs = 0.5 + 0.5 * np.cos(2 * np.pi * xw / 15.0)
+    lum = 10 + 17 * ribs ** 2                             # ribbed deck
+    beams_at = [1.0 - 0.115 * k for k in range(0, 7)]
+    lights = np.zeros_like(lum)
+    for k, d0 in enumerate(beams_at):
+        face = np.clip(1 - np.abs(D - d0) / 0.016, 0, 1)                      # a cross beam
+        lum = lum * (1 - np.minimum(face * 3, 1)) + np.minimum(face * 3, 1) * (5 + 9 * np.clip((d0 - D) / 0.016, 0, 1))
+        dl = d0 - 0.058                                                        # light bars hang between beams
+        bar = (np.abs(D - dl) < 0.004) & (((xw > 215) & (xw < 425)) | ((xw > 655) & (xw < 865)))
+        if k < 5: lights = np.maximum(lights, bar.astype(np.float32))
+    for px in (28, 284, 796, 1052):                                           # long beams running front to back
+        g = np.clip(1 - np.abs(xw - px) / 7.0, 0, 1)
+        lum = lum * (1 - np.minimum(g * 3, 1)) + np.minimum(g * 3, 1) * 8
+    r = np.clip(np.abs(xw - vx) / 44.0, 0, 1)                                 # the duct
+    duct = r < 1
+    rings = 0.75 + 0.25 * np.cos(2 * np.pi * D / 0.018)
+    lum = np.where(duct, (10 + 34 * np.sqrt(1 - r ** 2)) * rings, lum)
+    def small(a):
+        return np.asarray(Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)).resize((W, H), Image.LANCZOS)).astype(np.float32)
+    lum, lights = small(lum), small(lights * 255)
+    L = Image.fromarray(lights.astype(np.uint8))
+    halo = np.asarray(L.filter(ImageFilter.GaussianBlur(14))).astype(np.float32) / 255
+    wash = np.asarray(L.filter(ImageFilter.GaussianBlur(70))).astype(np.float32) / 255
+    lum = lum * (0.85 + 4.0 * wash) + 45 * halo + 0.38 * lights              # the bars light the deck around them
+    y1 = np.arange(H, dtype=np.float32)[:, None]
+    x1 = np.arange(W, dtype=np.float32)[None, :]
+    rgb = lum[..., None] * np.array([0.88, 1.0, 0.96], np.float32)            # a touch of the site's green
+    spill = np.clip(1 - (FRAME_TOP - y1) / 150.0, 0, 1) ** 2.2 * np.clip(1 - np.abs(x1 - 540) / 760.0, 0, 1)
+    rgb = rgb + spill[..., None] * np.array([110, 78, 42], np.float32)        # the frame's warm light
+    mask = np.clip((FRAME_TOP - 6 - y1) / 22.0, 0, 1)[..., None]              # ends just above the frame
     return rgb * mask
 CEILING = ceiling()
 
-# ---- the headline, standing above the frame. Each step is (font size, left x of each word, baseline y, label y).
+# ---- cars: the camera never moves, so anything that differs from the first frame is a car
+plate_small = np.asarray(Image.open("fr_phone/001.png").convert("RGB")).astype(np.int16)
+def car_matte(i):
+    f = np.asarray(Image.open(f"fr_phone/{i:03d}.png").convert("RGB")).astype(np.int16)
+    m = np.abs(f - plate_small).max(axis=2) > 11
+    m = ndimage.binary_opening(m, iterations=1)
+    m = ndimage.binary_closing(m, iterations=5)
+    m = ndimage.binary_fill_holes(m)
+    m = ndimage.binary_opening(m, iterations=2)
+    lab, n = ndimage.label(m)
+    if n:
+        sizes = ndimage.sum(m, lab, range(1, n + 1))
+        m = np.isin(lab, [k + 1 for k, sz in enumerate(sizes) if sz > 3000])
+    big = Image.fromarray((m * 255).astype(np.uint8)).resize((W, H), Image.BILINEAR).filter(ImageFilter.GaussianBlur(1.8))
+    return np.asarray(big).astype(np.float32) / 255.0
+
+# ---- the KnewCar wordmark on the back wall, behind the cars, built the way the site draws it: the logo's K, then
+# "new" in white and "Car" in mint.
+def logo():
+    size = 176
+    font = ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf", size)
+    k = Image.open("../../public/img/logo-k-letter.png").convert("RGBA")
+    kh = int(size * 0.8)
+    k = k.resize((int(k.width * kh / k.height), kh), Image.LANCZOS)
+    track = -0.03 * size
+    total = k.width + sum(font.getlength(c) + track for c in "newCar")
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    x, base = (W - total) / 2, LOGO_BASE
+    layer.alpha_composite(k, (int(x), int(base - kh + size * 0.035)))
+    x += k.width
+    for text, colour in (("new", (255, 255, 255, 255)), ("Car", (92, 235, 196, 255))):
+        for ch in text:
+            d.text((x, base), ch, font=font, fill=colour, anchor="ls")
+            x += font.getlength(ch) + track
+    arr = np.asarray(layer).astype(np.float32)
+    glow = np.asarray(layer.getchannel("A").filter(ImageFilter.GaussianBlur(22))).astype(np.float32) / 255
+    return arr[..., :3], arr[..., 3] / 255.0, glow
+LOGO_BASE = 792
+LOGO_RGB, LOGO_A, LOGO_GLOW = logo()
+
+# ---- the headline, filling the ceiling above the frame. Tall narrow letters (Barlow Condensed Black, open licence),
+# stretched taller still so one line fills the space. Each step is (font size, left x of each word, letter height).
 WORDS = ["CAR?", "TRUCK?", "SUV?"]
 SIGN_RGB = np.array([196, 255, 236], np.float32)
-small = ImageFont.truetype(FONT_B, 42)
+SIGN_FONT = "BarlowCondensed-Black.woff"
+small = ImageFont.truetype(FONT_B, 54)
+BASE_Y = 604                                    # the letters stand on the top of the lit frame
 
 def fit(words, size, max_w):
     while True:
-        f = ImageFont.truetype(FONT, size)
-        gap = size * 0.22
+        f = ImageFont.truetype(SIGN_FONT, size)
+        gap = size * 0.2
         widths = [f.getlength(w) for w in words]
         total = sum(widths) + gap * (len(words) - 1)
         if total <= max_w or size <= 40: break
@@ -92,35 +139,44 @@ def fit(words, size, max_w):
     for w in widths:
         xs.append(x); x += w + gap
     return size, xs
-STEPS = [fit(WORDS[:1], 330, 900) + (612, 286), fit(WORDS[:2], 300, 1000) + (606, 372), fit(WORDS[:3], 300, 1010) + (600, 428)]
+STEPS = [fit(WORDS[:1], 520, 860) + (390,), fit(WORDS[:2], 400, 1000) + (310,), fit(WORDS[:3], 400, 1020) + (255,)]
 STEP_AT = [(1.2, 1.75), (2.9, 3.45)]            # when the truck and the SUV roll in on this clip
 
 def sign(t):
     pos = ease(ramp(t, *STEP_AT[0])) + ease(ramp(t, *STEP_AT[1]))
     lo, frac = min(int(pos), 1), pos - min(int(pos), 1)
-    (s0, x0, y0, l0), (s1, x1, y1, l1) = STEPS[lo], STEPS[lo + 1]
-    size, base, label_y = s0 + (s1 - s0) * frac, y0 + (y1 - y0) * frac, l0 + (l1 - l0) * frac
-    font = ImageFont.truetype(FONT, max(10, int(round(size))))
-    im = Image.new("L", (W, H), 0)
-    d = ImageDraw.Draw(im)
-    label = "LOOKING FOR A NEW"
-    x = (W - (small.getlength(label) + 13 * (len(label) - 1))) / 2
-    lab = int(255 * ramp(t, 0.0, 0.35))
-    for ch in label:
-        d.text((x, label_y), ch, font=small, fill=lab, anchor="ls")
-        x += small.getlength(ch) + 13
+    (s0, x0, h0), (s1, x1, h1) = STEPS[lo], STEPS[lo + 1]
+    size, tall = s0 + (s1 - s0) * frac, h0 + (h1 - h0) * frac
+    font = ImageFont.truetype(SIGN_FONT, max(10, int(round(size))))
+    cap = font.getbbox("C", anchor="ls")
+    cap_h = -cap[1]
+    stretch = tall / cap_h
+    pad = 40
+    line = Image.new("L", (W, int(cap_h + 2 * pad)), 0)
+    d = ImageDraw.Draw(line)
     for n, word in enumerate(WORDS[: lo + 2]):
         if n < len(x0):
             wx, alpha = x0[n] + (x1[n] - x0[n]) * frac, 1.0
         else:
             wx, alpha = x1[n] + (1 - frac) * 40, ramp(frac, 0.6, 1.0)
         if n == 0: alpha *= ramp(t, 0.05, 0.45)
-        if alpha > 0: d.text((wx, base), word, font=font, fill=int(255 * alpha), anchor="ls")
+        if alpha > 0: d.text((wx, pad + cap_h), word, font=font, fill=int(255 * alpha), anchor="ls")
+    line = line.resize((W, int(round(line.height * stretch))), Image.LANCZOS)
+    im = Image.new("L", (W, H), 0)
+    im.paste(line, (0, int(round(BASE_Y - (pad + cap_h) * stretch))))
+    d = ImageDraw.Draw(im)
+    label = "LOOKING FOR A NEW"
+    label_y = BASE_Y - tall - 44
+    x = (W - (small.getlength(label) + 16 * (len(label) - 1))) / 2
+    lab = int(255 * ramp(t, 0.0, 0.35))
+    for ch in label:
+        d.text((x, label_y), ch, font=small, fill=lab, anchor="ls")
+        x += small.getlength(ch) + 16
     glow = im.filter(ImageFilter.GaussianBlur(20))
-    a = np.asarray(im).astype(np.float32) / 255 * 0.86 + np.asarray(glow).astype(np.float32) / 255 * 0.4
-    # the sign stands behind the lit frame: where the frame's own line is bright, the frame wins
-    behind = 1 - np.clip((PLATE_LUM - 70) / 90.0, 0, 1)
-    return np.clip(a, 0, 1) * behind
+    shadow = np.asarray(im.filter(ImageFilter.GaussianBlur(34))).astype(np.float32) / 255
+    a = np.asarray(im).astype(np.float32) / 255 * 0.9 + np.asarray(glow).astype(np.float32) / 255 * 0.35
+    behind = 1 - np.clip((PLATE_LUM - 70) / 90.0, 0, 1)   # the frame's own bright line stays in front
+    return np.clip(a, 0, 1) * behind, np.clip(shadow * 1.6, 0, 1)
 
 # ---- floor: the tagline in two lines, laid flat in front of the cars
 def floor():
@@ -131,7 +187,7 @@ def floor():
     d = ImageDraw.Draw(flat)
     d.text((FW / 2, 105), lines[0], font=font, fill=255, anchor="mm")
     d.text((FW / 2, 295), lines[1], font=font, fill=255, anchor="mm")
-    top_y, bot_y = 1150, 1372                   # kept clear of the button and dots that sit over the bottom of the clip
+    top_y, bot_y = 1092, 1292                   # kept clear of the button and dots that sit over the bottom of the clip
     quad = [(150, top_y), (W - 150, top_y), (W - 60, bot_y), (60, bot_y)]
     src = [(0, 0), (FW, 0), (FW, 400), (0, 400)]
     A = []
@@ -146,8 +202,14 @@ def compose(i):
     t = (i - 1) / FPS
     f = frame(i)
     f = f + CEILING * (1 - f / 255.0)                         # the ceiling, wherever the clip is dark
-    a = sign(t)[..., None]
-    f = f + (SIGN_RGB - f * SIGN_RGB / 255.0) * a             # the sign, as light
+    keep = 1 - car_matte(i)
+    show = ramp(t, 0.0, 0.5) * keep                           # the logo on the back wall, behind the cars
+    f = f + (255 - f) * (LOGO_GLOW * 0.10 * show)[..., None]
+    la = (LOGO_A * 0.74 * show)[..., None]
+    f = f * (1 - la) + LOGO_RGB * la
+    a, shadow = sign(t)
+    f = f * (1 - 0.85 * shadow[..., None])                     # the ceiling dims behind the letters so they read
+    f = f + (SIGN_RGB - f * SIGN_RGB / 255.0) * a[..., None]  # the letters, as light
     k = ramp(t, 3.7, 4.6)
     if k > 0:
         wipe = np.clip((k * 1.25 * W - np.arange(W)) / 130.0, 0, 1)[None, :]
