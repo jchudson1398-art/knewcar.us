@@ -2,14 +2,13 @@
 
 Design (2026-11-28): the clip has empty black above the set. That space becomes a dark warehouse ceiling, and the
 headline fills it: "LOOKING FOR A NEW" with CAR? TRUCK? SUV? building into one line of tall letters standing on the
-top of the lit frame. The KnewCar wordmark is on the back wall, behind the cars. "ALL YOUR OPTIONS. ONE EASY PLACE."
+centred on the ceiling. The back wall is left clear. "ALL YOUR OPTIONS. ONE EASY PLACE."
 is laid on the floor in front of the cars, in two lines.
 
 usage: python3 compose_phone.py out.mp4 [preview]      (frames of the source clip must be in fr_phone/)"""
 import subprocess, sys
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
-from scipy import ndimage
 
 SW, SH = 768, 1344
 W = 1080
@@ -77,47 +76,6 @@ def ceiling():
     mask = np.clip((FRAME_TOP - 6 - y1) / 22.0, 0, 1)[..., None]              # ends just above the frame
     return rgb * mask
 CEILING = ceiling()
-
-# ---- cars: the camera never moves, so anything that differs from the first frame is a car
-plate_small = np.asarray(Image.open("fr_phone/001.png").convert("RGB")).astype(np.int16)
-def car_matte(i):
-    f = np.asarray(Image.open(f"fr_phone/{i:03d}.png").convert("RGB")).astype(np.int16)
-    m = np.abs(f - plate_small).max(axis=2) > 11
-    m = ndimage.binary_opening(m, iterations=1)
-    m = ndimage.binary_closing(m, iterations=5)
-    m = ndimage.binary_fill_holes(m)
-    m = ndimage.binary_opening(m, iterations=2)
-    lab, n = ndimage.label(m)
-    if n:
-        sizes = ndimage.sum(m, lab, range(1, n + 1))
-        m = np.isin(lab, [k + 1 for k, sz in enumerate(sizes) if sz > 3000])
-    big = Image.fromarray((m * 255).astype(np.uint8)).resize((W, H), Image.BILINEAR).filter(ImageFilter.GaussianBlur(1.8))
-    return np.asarray(big).astype(np.float32) / 255.0
-
-# ---- the KnewCar wordmark on the back wall, behind the cars, built the way the site draws it: the logo's K, then
-# "new" in white and "Car" in mint.
-def logo():
-    size = 176
-    font = ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf", size)
-    k = Image.open("../../public/img/logo-k-letter.png").convert("RGBA")
-    kh = int(size * 0.8)
-    k = k.resize((int(k.width * kh / k.height), kh), Image.LANCZOS)
-    track = -0.03 * size
-    total = k.width + sum(font.getlength(c) + track for c in "newCar")
-    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(layer)
-    x, base = (W - total) / 2, LOGO_BASE
-    layer.alpha_composite(k, (int(x), int(base - kh + size * 0.035)))
-    x += k.width
-    for text, colour in (("new", (255, 255, 255, 255)), ("Car", (92, 235, 196, 255))):
-        for ch in text:
-            d.text((x, base), ch, font=font, fill=colour, anchor="ls")
-            x += font.getlength(ch) + track
-    arr = np.asarray(layer).astype(np.float32)
-    glow = np.asarray(layer.getchannel("A").filter(ImageFilter.GaussianBlur(22))).astype(np.float32) / 255
-    return arr[..., :3], arr[..., 3] / 255.0, glow
-LOGO_BASE = 792
-LOGO_RGB, LOGO_A, LOGO_GLOW = logo()
 
 # ---- the headline, filling the ceiling above the frame. Tall narrow letters (Barlow Condensed Black, open licence),
 # stretched taller still so one line fills the space. Each step is (font size, left x of each word, letter height).
@@ -203,11 +161,6 @@ def compose(i):
     t = (i - 1) / FPS
     f = frame(i)
     f = f + CEILING * (1 - f / 255.0)                         # the ceiling, wherever the clip is dark
-    keep = 1 - car_matte(i)
-    show = ramp(t, 0.0, 0.5) * keep                           # the logo on the back wall, behind the cars
-    f = f + (255 - f) * (LOGO_GLOW * 0.10 * show)[..., None]
-    la = (LOGO_A * 0.74 * show)[..., None]
-    f = f * (1 - la) + LOGO_RGB * la
     a, shadow = sign(t)
     f = f * (1 - 0.85 * shadow[..., None])                     # the ceiling dims behind the letters so they read
     f = f + (SIGN_RGB - f * SIGN_RGB / 255.0) * a[..., None]  # the letters, as light
