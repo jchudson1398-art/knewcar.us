@@ -19,9 +19,11 @@ const makes = [...new Set(CATALOG.map((c) => c.make))].sort();
 // as each one pulls in, and "All your
 // options. One easy place." on the floor in front. The same words are in the page as a hidden heading for screen
 // readers and search engines.
+// A slide with `clip` is a short video with its headline drawn into the picture (a wide file and a phone file in
+// public/video); `alt` describes its last frame. The other slides are a photo with the headline beside it.
 const slides = [
-  { img: "rav4", car: "2026 Toyota RAV4 Limited", h: ["All your new car options,", "One easy place."], lead: `${CONFIGS.length.toLocaleString("en-US")} configurations from ${new Set(CATALOG.map((c) => c.make)).size} brands. Free to browse.`, cta: "Explore your options", href: "/explore" },
-  { img: "telluride", car: "2027 Kia Telluride SX Prestige", h: ["Every trim.", "Real MSRP."], lead: "See every trim of every model with its manufacturer price, and search by what you want to spend.", cta: "Search by price", href: "/explore?sort=low" },
+  { clip: "intro", alt: "A sedan, a pickup truck and an SUV parked side by side under the words: Looking for a new car? truck? SUV? All your options. One easy place.", img: "rav4", car: "2026 Toyota RAV4 Limited", h: ["All your new car options,", "One easy place."], lead: `${CONFIGS.length.toLocaleString("en-US")} configurations from ${new Set(CATALOG.map((c) => c.make)).size} brands. Free to browse.`, cta: "Explore your options", href: "/explore" },
+  { clip: "trims", alt: "A Jeep Wrangler on a display stage under the words Every trim, changing through four trims with each one's MSRP. Real MSRP.", img: "telluride", car: "2027 Kia Telluride SX Prestige", h: ["Every trim.", "Real MSRP."], lead: "Every trim of every model, with its manufacturer price.", cta: "Search by price", href: "/explore?sort=low" },
   { img: "cx-50", car: "2026 Mazda CX-50 2.5 Turbo", h: ["Know the real cost", "in your state."], lead: `Upgrade to save cars, compare them side by side, and estimate tax, fees and your payment. ${WEB_PLAN.monthly} a month or ${WEB_PLAN.yearly} a year.`, cta: "See the upgrade", href: "/upgrade" },
   { img: "rav4", car: "2026 Toyota RAV4 Limited", h: ["Live in Texas?", "Get the app."], lead: "Browse offers, incentives, special rates and rebates before making your final decision. Find options you may not have thought you could afford.", cta: "Download on the App Store", href: APP_STORE_URL },
 ];
@@ -45,21 +47,23 @@ const steps = [
   <!-- Hero: a slideshow. The shopping tool starts a short scroll below it. -->
   <section class="hero" aria-roledescription="carousel" aria-label="What KnewCar does" data-hero>
     {slides.map((s, i) => (
-      <div class="slide" data-slide aria-hidden={i === 0 ? "false" : "true"}>
-        {i === 0
+      <div class={s.clip ? "slide clip" : "slide"} data-slide aria-hidden={i === 0 ? "false" : "true"}>
+        {s.clip
           ? <div class="intro-stage">
               {/* Wide clip for computers and tablets, tall clip for phones. Each has its last frame underneath. */}
-              <img class="end wide" src="/video/intro-end.jpg" alt="A sedan, a pickup truck and an SUV parked side by side under the words: Looking for a new car? truck? SUV? All your options. One easy place." width="1920" height="1080" loading="eager" />
-              <video class="wide" data-intro muted playsinline preload="metadata" poster="/video/intro-start.jpg" aria-hidden="true"><source src="/video/intro.mp4" type="video/mp4" /></video>
-              <img class="end phone" src="/video/intro-phone-end.jpg" alt="A sedan, a pickup truck and an SUV parked side by side under the words: Looking for a new car? truck? SUV? All your options. One easy place." width="1080" height="1890" loading="eager" />
-              <video class="phone" data-intro muted playsinline preload="metadata" poster="/video/intro-phone-start.jpg" aria-hidden="true"><source src="/video/intro-phone.mp4" type="video/mp4" /></video>
+              <img class="end wide" src={`/video/${s.clip}-end.jpg`} alt={s.alt} width="1920" height="1080" loading={i === 0 ? "eager" : "lazy"} />
+              <video class="wide" data-clip muted playsinline preload={i === 0 ? "metadata" : "none"} poster={`/video/${s.clip}-start.jpg`} aria-hidden="true"><source src={`/video/${s.clip}.mp4`} type="video/mp4" /></video>
+              <img class="end phone" src={`/video/${s.clip}-phone-end.jpg`} alt={s.alt} width="1080" height="1890" loading={i === 0 ? "eager" : "lazy"} />
+              <video class="phone" data-clip muted playsinline preload={i === 0 ? "metadata" : "none"} poster={`/video/${s.clip}-phone-start.jpg`} aria-hidden="true"><source src={`/video/${s.clip}-phone.mp4`} type="video/mp4" /></video>
             </div>
           : <img class="bg" src={`/img/hero/${s.img}.webp`} alt={s.car} width="1448" height="1086" loading="lazy" />}
         <div class="shade" aria-hidden="true"></div>
         <div class="wrap wide copy">
           {i === 0
             ? <h1 class="sr">Looking for a new car, truck or SUV? All your options, one easy place.</h1>
-            : <h2 class="h">{s.h[0]} <span class="grad">{s.h[1]}</span></h2>}
+            : s.clip
+              ? <h2 class="sr">{s.h[0]} {s.h[1]}</h2>
+              : <h2 class="h">{s.h[0]} <span class="grad">{s.h[1]}</span></h2>}
           <p class="lead">{s.lead}</p>
           <a class="btn btn-primary" href={s.href}>{s.cta} <span aria-hidden="true">→</span></a>
         </div>
@@ -180,11 +184,11 @@ const steps = [
   .intro-stage { position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: calc(100% - 92px); aspect-ratio: 2.16; max-width: 100%; overflow: hidden; background: #000; }
   .intro-stage img, .intro-stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .intro-stage .phone { display: none; }
-  .slide:first-child .shade { display: none; }
-  .slide:first-child .copy { justify-content: flex-end; flex-direction: row; align-items: flex-end; gap: 22px; padding-bottom: 20px; height: 100%; }
-  .slide:first-child .lead { padding-bottom: 14px; }
-  .slide:first-child .lead { max-width: none; margin-right: auto; }
-  .slide:first-child .btn { margin: 0; }
+  .slide.clip .shade { display: none; }
+  .slide.clip .copy { justify-content: flex-end; flex-direction: row; align-items: flex-end; gap: 22px; padding-bottom: 20px; height: 100%; }
+  .slide.clip .lead { padding-bottom: 14px; }
+  .slide.clip .lead { max-width: none; margin-right: auto; }
+  .slide.clip .btn { margin: 0; }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   @media (prefers-reduced-motion: reduce) { .intro-stage video { display: none !important; } }
   .shade { position: absolute; inset: 0; background: linear-gradient(90deg, #04140f 0%, #04140f 32%, rgba(4, 20, 15, 0.55) 46%, rgba(4, 20, 15, 0) 62%), linear-gradient(0deg, rgba(4, 20, 15, 0.75) 0%, rgba(4, 20, 15, 0) 24%); }
@@ -316,9 +320,9 @@ const steps = [
     .intro-stage img, .intro-stage video { object-position: center 45%; }
     .intro-stage .wide { display: none; }
     .intro-stage .phone { display: block; }
-    .slide:first-child .copy { flex-direction: column; align-items: stretch; justify-content: flex-end; gap: 8px; padding: 0 16px 76px; background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.55) 18%, rgba(0, 0, 0, 0) 32%); }
-    .slide:first-child .lead { margin: 0; padding: 0; font-size: 14px; text-align: center; }
-    .slide:first-child .btn { justify-content: center; }
+    .slide.clip .copy { flex-direction: column; align-items: stretch; justify-content: flex-end; gap: 8px; padding: 0 16px 76px; background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.55) 18%, rgba(0, 0, 0, 0) 32%); }
+    .slide.clip .lead { margin: 0; padding: 0; font-size: 14px; text-align: center; }
+    .slide.clip .btn { justify-content: center; }
     .copy { justify-content: flex-end; padding: 0 16px 78px; gap: 8px; }
     .hero-nav { bottom: 24px; }
     .scroll-hint { bottom: 2px; padding: 8px 16px; }
@@ -331,7 +335,7 @@ const steps = [
   }
   /* Short phones: drop the one-line pitch so it never sits on top of the lettering in the clip. */
   @media (max-width: 640px) and (max-height: 700px) {
-    .slide:first-child .lead { display: none; }
+    .slide.clip .lead { display: none; }
   }
   @media (max-width: 720px) { .car-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px; } }
   @media (max-width: 420px) { .car-grid { grid-template-columns: 1fr; } .viewport.tall { height: 560px; } }
@@ -352,7 +356,7 @@ const steps = [
       i = (n + slides.length) % slides.length;
       slides.forEach((s, k) => { s.setAttribute("aria-hidden", String(k !== i)); s.toggleAttribute("inert", k !== i); });
       pips.forEach((b, k) => b.setAttribute("aria-current", String(k === i)));
-      if (i === 0 && started) playIntro();
+      if (started) playClip();
     };
     pips.forEach((b, k) => b.addEventListener("click", () => { setStopped(true); go(k); }));
     heroEl.querySelector("[data-hprev]")!.addEventListener("click", () => { setStopped(true); go(i - 1); });
@@ -364,28 +368,30 @@ const steps = [
     let x0 = 0;
     heroEl.addEventListener("touchstart", (e) => (x0 = e.touches[0].clientX), { passive: true });
     heroEl.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) { setStopped(true); go(i + (dx < 0 ? 1 : -1)); } }, { passive: true });
-    // First slide: the video plays once and holds on its last frame.
-    // Two clips are in the page (wide and phone); only the one the screen shows is played.
-    const intro = [...heroEl.querySelectorAll<HTMLVideoElement>("[data-intro]")].find((v) => v.offsetParent !== null) ?? heroEl.querySelector<HTMLVideoElement>("[data-intro]")!;
+    // Slides that are clips: the video plays once each time its slide comes up, and holds on its last frame.
+    // Two clips are in each such slide (wide and phone); only the one the screen shows is played.
     const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const playIntro = () => {
-      if (still) return;
-      intro.currentTime = 0;
-      intro.play().catch(() => {});
+    const clipOf = (n: number) => [...slides[n].querySelectorAll<HTMLVideoElement>("[data-clip]")].find((v) => v.offsetParent !== null) ?? null;
+    const playClip = () => {
+      const v = clipOf(i);
+      if (still || !v) return;
+      v.currentTime = 0;
+      v.play().catch(() => {});
     };
     const pause = heroEl.querySelector<HTMLButtonElement>("[data-hpause]")!;
     const setStopped = (v: boolean) => { stopped = v; pause.setAttribute("aria-pressed", String(v)); pause.setAttribute("aria-label", v ? "Play the slideshow" : "Pause the slideshow"); };
     pause.addEventListener("click", () => setStopped(!stopped));
     go(0);
     started = true;
-    playIntro();
+    playClip();
     if (!still) {
-      // Every 2 seconds. The first slide waits for its video to finish; then, as on every slide, three ticks pass
+      // Every 2 seconds. A clip slide waits for its video to finish; then, as on every slide, three ticks pass
       // before the next one.
       let ticks = 0;
       setInterval(() => {
         if (hold || stopped || document.hidden) return;
-        if (i === 0 && !intro.ended) { ticks = 0; return; }
+        const v = clipOf(i);
+        if (v && !v.ended && !v.error) { ticks = 0; return; }
         if (++ticks < 3) return;
         ticks = 0;
         go(i + 1);
