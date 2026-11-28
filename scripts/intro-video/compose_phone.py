@@ -125,7 +125,7 @@ WORDS = ["CAR?", "TRUCK?", "SUV?"]
 SIGN_RGB = np.array([196, 255, 236], np.float32)
 SIGN_FONT = "BarlowCondensed-Black.woff"
 small = ImageFont.truetype(FONT_B, 54)
-BASE_Y = 604                                    # the letters stand on the top of the lit frame
+MID_Y = 385                                     # the label and the line together stay centred on the ceiling
 
 def fit(words, size, max_w):
     while True:
@@ -139,7 +139,7 @@ def fit(words, size, max_w):
     for w in widths:
         xs.append(x); x += w + gap
     return size, xs
-STEPS = [fit(WORDS[:1], 520, 860) + (390,), fit(WORDS[:2], 400, 1000) + (310,), fit(WORDS[:3], 400, 1020) + (255,)]
+STEPS = [fit(WORDS[:1], 520, 760) + (330,), fit(WORDS[:2], 400, 960) + (262,), fit(WORDS[:3], 400, 980) + (200,)]
 STEP_AT = [(1.2, 1.75), (2.9, 3.45)]            # when the truck and the SUV roll in on this clip
 
 def sign(t):
@@ -148,6 +148,7 @@ def sign(t):
     (s0, x0, h0), (s1, x1, h1) = STEPS[lo], STEPS[lo + 1]
     size, tall = s0 + (s1 - s0) * frac, h0 + (h1 - h0) * frac
     font = ImageFont.truetype(SIGN_FONT, max(10, int(round(size))))
+    BASE_Y = MID_Y + (tall + 98) / 2
     cap = font.getbbox("C", anchor="ls")
     cap_h = -cap[1]
     stretch = tall / cap_h
@@ -187,7 +188,7 @@ def floor():
     d = ImageDraw.Draw(flat)
     d.text((FW / 2, 105), lines[0], font=font, fill=255, anchor="mm")
     d.text((FW / 2, 295), lines[1], font=font, fill=255, anchor="mm")
-    top_y, bot_y = 1092, 1292                   # kept clear of the button and dots that sit over the bottom of the clip
+    top_y, bot_y = 1150, 1372                   # kept clear of the button and dots that sit over the bottom of the clip
     quad = [(150, top_y), (W - 150, top_y), (W - 60, bot_y), (60, bot_y)]
     src = [(0, 0), (FW, 0), (FW, 400), (0, 400)]
     A = []
