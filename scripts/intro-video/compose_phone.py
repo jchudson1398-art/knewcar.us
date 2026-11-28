@@ -117,6 +117,41 @@ def floor():
     return np.asarray(laid).astype(np.float32) / 255, np.asarray(laid.filter(ImageFilter.GaussianBlur(8))).astype(np.float32) / 255
 FLOOR, FLOOR_GLOW = floor()
 
+# ---- the KnewCar wordmark in the empty black space above the set, built the way the site draws it: the logo's K,
+# then "new" in white and "Car" in mint.
+def logo():
+    size = 150
+    font = ImageFont.truetype("/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf", size)
+    k = Image.open("../../public/img/logo-k-letter.png").convert("RGBA")
+    kh = int(size * 0.8)
+    k = k.resize((int(k.width * kh / k.height), kh), Image.LANCZOS)
+    track = -0.03 * size
+    w_new = sum(font.getlength(c) + track for c in "new")
+    w_car = sum(font.getlength(c) + track for c in "Car")
+    total = k.width + w_new + w_car
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    x, base = (W - total) / 2, 372  # centred in the black band (the lit frame starts at y=634)
+    layer.alpha_composite(k, (int(x), int(base - kh + size * 0.035)))
+    x += k.width
+    for text, colour in (("new", (255, 255, 255, 255)), ("Car", (92, 235, 196, 255))):
+        for ch in text:
+            d.text((x, base), ch, font=font, fill=colour, anchor="ls")
+            x += font.getlength(ch) + track
+    arr = np.asarray(layer).astype(np.float32)
+    return arr[..., :3], arr[..., 3:] / 255.0
+LOGO_RGB, LOGO_A = logo()
+
+# ---- the band above the set: the site's midnight green instead of black, a little brighter behind the logo. It
+# fades out just above the lit frame so the frame's own glow is untouched.
+def green_band():
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    glow = np.clip(1 - np.hypot((xx - W / 2) / 620.0, (yy - 330) / 360.0), 0, 1) ** 1.6
+    rgb = np.array([4, 20, 15], np.float32) + glow[..., None] * np.array([10, 58, 46], np.float32)
+    mask = np.clip((622 - yy) / 70.0, 0, 1)[..., None]
+    return rgb * mask
+BAND = green_band()
+
 def compose(i):
     t = (i - 1) / FPS
     f = frame(i)
@@ -130,6 +165,9 @@ def compose(i):
         ga = (FLOOR_GLOW * 0.25 * wipe)[..., None]
         f = f + (255 - f) * ga * 0.6
         f = f * (1 - fa) + (255 * 0.78 + f * 0.35) * fa
+    f = f + BAND * (1 - f / 255.0)  # screen, so anything already lit stays lit
+    la = LOGO_A * ramp(t, 0.0, 0.5)
+    f = f * (1 - la) + LOGO_RGB * la
     return np.clip(f, 0, 255).astype(np.uint8)
 
 if preview:
