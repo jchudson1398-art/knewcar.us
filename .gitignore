@@ -4,3 +4,4 @@ dist/
 .env
 .DS_Store
 scripts/intro-video/fr/
+scripts/intro-video/fr_phone/

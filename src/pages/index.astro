@@ -48,8 +48,11 @@ const steps = [
       <div class="slide" data-slide aria-hidden={i === 0 ? "false" : "true"}>
         {i === 0
           ? <div class="intro-stage">
-              <img class="end" src="/video/intro-end.jpg" alt="A sedan, a pickup truck and an SUV parked side by side under the words: Looking for a new car? truck? SUV? All your options. One easy place." width="1920" height="1080" loading="eager" />
-              <video data-intro muted playsinline preload="auto" poster="/video/intro-start.jpg" aria-hidden="true"><source src="/video/intro.mp4" type="video/mp4" /></video>
+              {/* Wide clip for computers and tablets, tall clip for phones. Each has its last frame underneath. */}
+              <img class="end wide" src="/video/intro-end.jpg" alt="A sedan, a pickup truck and an SUV parked side by side under the words: Looking for a new car? truck? SUV? All your options. One easy place." width="1920" height="1080" loading="eager" />
+              <video class="wide" data-intro muted playsinline preload="metadata" poster="/video/intro-start.jpg" aria-hidden="true"><source src="/video/intro.mp4" type="video/mp4" /></video>
+              <img class="end phone" src="/video/intro-phone-end.jpg" alt="A sedan, a pickup truck and an SUV parked side by side under the words: Looking for a new car? truck? SUV? All your options. One easy place." width="1080" height="1040" loading="eager" />
+              <video class="phone" data-intro muted playsinline preload="metadata" poster="/video/intro-phone-start.jpg" aria-hidden="true"><source src="/video/intro-phone.mp4" type="video/mp4" /></video>
             </div>
           : <img class="bg" src={`/img/hero/${s.img}.webp`} alt={s.car} width="1448" height="1086" loading="lazy" />}
         <div class="shade" aria-hidden="true"></div>
@@ -174,13 +177,14 @@ const steps = [
      cropped a little at the top and bottom on wide screens; the lettering in the video is placed inside that. */
   .intro-stage { position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: calc(100% - 92px); aspect-ratio: 2.16; max-width: 100%; overflow: hidden; background: #000; }
   .intro-stage img, .intro-stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .intro-stage .phone { display: none; }
   .slide:first-child .shade { display: none; }
   .slide:first-child .copy { justify-content: flex-end; flex-direction: row; align-items: flex-end; gap: 22px; padding-bottom: 20px; height: 100%; }
   .slide:first-child .lead { padding-bottom: 14px; }
   .slide:first-child .lead { max-width: none; margin-right: auto; }
   .slide:first-child .btn { margin: 0; }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-  @media (prefers-reduced-motion: reduce) { .intro-stage video { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .intro-stage video { display: none !important; } }
   .shade { position: absolute; inset: 0; background: linear-gradient(90deg, #04140f 0%, #04140f 32%, rgba(4, 20, 15, 0.55) 46%, rgba(4, 20, 15, 0) 62%), linear-gradient(0deg, rgba(4, 20, 15, 0.75) 0%, rgba(4, 20, 15, 0) 24%); }
   .copy { position: relative; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 14px; padding-bottom: 28px; }
   .hero h1, .hero .h { font-size: clamp(32px, 3.9vw, 52px); line-height: 1.06; letter-spacing: -0.035em; font-weight: 800; max-width: min(100%, 540px); text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5); }
@@ -299,10 +303,12 @@ const steps = [
     .ph { width: 140px; }
   }
   @media (max-width: 640px) {
-    .hero { margin-top: 64px; height: calc(56.25vw + 190px); }
+    .hero { margin-top: 64px; height: calc(96.3vw + 180px); }
     .shade { background: linear-gradient(0deg, rgba(4, 20, 15, 0.95) 0%, rgba(4, 20, 15, 0.82) 46%, rgba(4, 20, 15, 0.1) 78%); }
-    .bg { width: 100%; height: 56.25vw; object-position: center 55%; }
-    .intro-stage { height: auto; width: 100%; aspect-ratio: 16 / 9; }
+    .bg { width: 100%; height: 78vw; object-position: center 55%; }
+    .intro-stage { height: auto; width: 100%; aspect-ratio: 1080 / 1040; }
+    .intro-stage .wide { display: none; }
+    .intro-stage .phone { display: block; }
     .slide:first-child .copy { flex-direction: column; align-items: stretch; justify-content: flex-end; gap: 10px; padding: 0 16px 50px; }
     .slide:first-child .lead { margin: 0; }
     .slide:first-child .btn { justify-content: center; }
@@ -345,7 +351,8 @@ const steps = [
     heroEl.addEventListener("touchstart", (e) => (x0 = e.touches[0].clientX), { passive: true });
     heroEl.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) { setStopped(true); go(i + (dx < 0 ? 1 : -1)); } }, { passive: true });
     // First slide: the video plays once and holds on its last frame.
-    const intro = heroEl.querySelector<HTMLVideoElement>("[data-intro]")!;
+    // Two clips are in the page (wide and phone); only the one the screen shows is played.
+    const intro = [...heroEl.querySelectorAll<HTMLVideoElement>("[data-intro]")].find((v) => v.offsetParent !== null) ?? heroEl.querySelector<HTMLVideoElement>("[data-intro]")!;
     const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const playIntro = () => {
       if (still) return;
